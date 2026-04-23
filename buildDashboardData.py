@@ -1,5 +1,5 @@
 """
-Builds a single dashboard/data.json from the scraped CSVs for a given league.
+Builds a single docs/data.json from the scraped CSVs for a given league.
 
 Usage:
     python buildDashboardData.py [leagueID]
@@ -9,7 +9,7 @@ The script reads:
     ./output/<leagueID>-history-standings/<year>.csv
     ./output/<leagueID>-history-teamgamecenter/<year>/<week>.csv
 and writes:
-    ./dashboard/data.json
+    ./docs/data.json
 """
 
 import csv
@@ -334,7 +334,7 @@ def main():
         "nailBiters": nail_biters,
     }
 
-    out_dir = "dashboard"
+    out_dir = "docs"
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, "data.json")
     with open(out_path, "w") as f:
