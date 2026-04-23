@@ -1,0 +1,7265 @@
+{
+  "leagueId": "7527965",
+  "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "seasons": [
+    {
+      "year": 2019,
+      "numTeams": 8,
+      "champion": "Alex",
+      "sacko": "Sean",
+      "playoffCutoff": 4,
+      "standings": [
+        {
+          "manager": "Justin",
+          "team": "Team Justin",
+          "regularSeasonRank": 1,
+          "playoffRank": 2,
+          "wins": 9,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1871.0,
+          "pointsAgainst": 1700.54,
+          "moves": 25,
+          "trades": 1,
+          "draftPosition": 2,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Alex",
+          "team": "Team GOAT",
+          "regularSeasonRank": 2,
+          "playoffRank": 1,
+          "wins": 9,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1736.92,
+          "pointsAgainst": 1598.88,
+          "moves": 34,
+          "trades": 2,
+          "draftPosition": 1,
+          "madePlayoffs": true,
+          "champion": true,
+          "sacko": false
+        },
+        {
+          "manager": "Howard",
+          "team": "beaners",
+          "regularSeasonRank": 3,
+          "playoffRank": 6,
+          "wins": 8,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1665.62,
+          "pointsAgainst": 1654.78,
+          "moves": 55,
+          "trades": 2,
+          "draftPosition": 7,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Ethan",
+          "team": "Scummy wummy",
+          "regularSeasonRank": 4,
+          "playoffRank": 7,
+          "wins": 2,
+          "losses": 12,
+          "ties": 0,
+          "pointsFor": 1307.8,
+          "pointsAgainst": 1713.8,
+          "moves": 0,
+          "trades": 0,
+          "draftPosition": 5,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Aiden",
+          "team": "Beefcakes",
+          "regularSeasonRank": 1,
+          "playoffRank": 3,
+          "wins": 11,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 1737.58,
+          "pointsAgainst": 1482.46,
+          "moves": 12,
+          "trades": 4,
+          "draftPosition": 6,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Ulises",
+          "team": "The Booty Clappers",
+          "regularSeasonRank": 2,
+          "playoffRank": 4,
+          "wins": 10,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 1659.86,
+          "pointsAgainst": 1558.6,
+          "moves": 38,
+          "trades": 3,
+          "draftPosition": 3,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Sean",
+          "team": "Houston Stars",
+          "regularSeasonRank": 3,
+          "playoffRank": 8,
+          "wins": 5,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1618.5,
+          "pointsAgainst": 1696.68,
+          "moves": 77,
+          "trades": 6,
+          "draftPosition": 8,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": true
+        },
+        {
+          "manager": "Luke",
+          "team": "Hate minorities",
+          "regularSeasonRank": 4,
+          "playoffRank": 5,
+          "wins": 2,
+          "losses": 12,
+          "ties": 0,
+          "pointsFor": 1529.86,
+          "pointsAgainst": 1721.4,
+          "moves": 9,
+          "trades": 0,
+          "draftPosition": 4,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        }
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 164.5,
+              "away": "Justin",
+              "awayPts": 113.62
+            },
+            {
+              "home": "Sean",
+              "homePts": 146.02,
+              "away": "Luke",
+              "awayPts": 103.4
+            },
+            {
+              "home": "Ethan",
+              "homePts": 104.1,
+              "away": "Howard",
+              "awayPts": 135.82
+            },
+            {
+              "home": "Aiden ",
+              "homePts": 81.34,
+              "away": "Ulises",
+              "awayPts": 122.9
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 114.96,
+              "away": "Ethan",
+              "awayPts": 103.5
+            },
+            {
+              "home": "Sean",
+              "homePts": 104.86,
+              "away": "Aiden ",
+              "awayPts": 104.52
+            },
+            {
+              "home": "Justin",
+              "homePts": 154.58,
+              "away": "Howard",
+              "awayPts": 129.3
+            },
+            {
+              "home": "Luke",
+              "homePts": 121.54,
+              "away": "Ulises",
+              "awayPts": 122.56
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 149.84,
+              "away": "Howard",
+              "awayPts": 91.94
+            },
+            {
+              "home": "Sean",
+              "homePts": 93.26,
+              "away": "Ulises",
+              "awayPts": 125.34
+            },
+            {
+              "home": "Justin",
+              "homePts": 141.08,
+              "away": "Ethan",
+              "awayPts": 98.4
+            },
+            {
+              "home": "Luke",
+              "homePts": 111.96,
+              "away": "Aiden ",
+              "awayPts": 154.84
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 93.88,
+              "away": "Sean",
+              "awayPts": 85.9
+            },
+            {
+              "home": "Justin",
+              "homePts": 138.5,
+              "away": "Luke",
+              "awayPts": 116.48
+            },
+            {
+              "home": "Ethan",
+              "homePts": 95.2,
+              "away": "Aiden ",
+              "awayPts": 126.9
+            },
+            {
+              "home": "Howard",
+              "homePts": 140.0,
+              "away": "Ulises",
+              "awayPts": 97.22
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 139.0,
+              "away": "Ulises",
+              "awayPts": 150.12
+            },
+            {
+              "home": "Sean",
+              "homePts": 105.44,
+              "away": "Justin",
+              "awayPts": 163.78
+            },
+            {
+              "home": "Luke",
+              "homePts": 177.96,
+              "away": "Ethan",
+              "awayPts": 125.7
+            },
+            {
+              "home": "Aiden ",
+              "homePts": 121.62,
+              "away": "Howard",
+              "awayPts": 148.44
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 82.64,
+              "away": "Aiden ",
+              "awayPts": 144.9
+            },
+            {
+              "home": "Sean",
+              "homePts": 117.42,
+              "away": "Ethan",
+              "awayPts": 118.7
+            },
+            {
+              "home": "Justin",
+              "homePts": 141.04,
+              "away": "Ulises",
+              "awayPts": 125.92
+            },
+            {
+              "home": "Luke",
+              "homePts": 131.24,
+              "away": "Howard",
+              "awayPts": 146.7
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 108.26,
+              "away": "Luke",
+              "awayPts": 104.32
+            },
+            {
+              "home": "Sean",
+              "homePts": 93.64,
+              "away": "Howard",
+              "awayPts": 107.52
+            },
+            {
+              "home": "Justin",
+              "homePts": 99.62,
+              "away": "Aiden ",
+              "awayPts": 105.64
+            },
+            {
+              "home": "Ethan",
+              "homePts": 78.4,
+              "away": "Ulises",
+              "awayPts": 108.36
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 122.86,
+              "away": "Justin",
+              "awayPts": 143.08
+            },
+            {
+              "home": "Sean",
+              "homePts": 135.82,
+              "away": "Luke",
+              "awayPts": 140.38
+            },
+            {
+              "home": "Ethan",
+              "homePts": 123.7,
+              "away": "Howard",
+              "awayPts": 129.86
+            },
+            {
+              "home": "Aiden ",
+              "homePts": 119.48,
+              "away": "Ulises",
+              "awayPts": 109.4
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 120.1,
+              "away": "Ethan",
+              "awayPts": 85.6
+            },
+            {
+              "home": "Sean",
+              "homePts": 103.0,
+              "away": "Aiden ",
+              "awayPts": 137.12
+            },
+            {
+              "home": "Justin",
+              "homePts": 112.74,
+              "away": "Howard",
+              "awayPts": 126.24
+            },
+            {
+              "home": "Luke",
+              "homePts": 80.14,
+              "away": "Ulises",
+              "awayPts": 101.14
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 128.88,
+              "away": "Howard",
+              "awayPts": 116.4
+            },
+            {
+              "home": "Sean",
+              "homePts": 119.68,
+              "away": "Ulises",
+              "awayPts": 126.98
+            },
+            {
+              "home": "Justin",
+              "homePts": 134.02,
+              "away": "Ethan",
+              "awayPts": 93.1
+            },
+            {
+              "home": "Luke",
+              "homePts": 124.56,
+              "away": "Aiden ",
+              "awayPts": 125.78
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 139.12,
+              "away": "Sean",
+              "awayPts": 139.24
+            },
+            {
+              "home": "Justin",
+              "homePts": 111.88,
+              "away": "Luke",
+              "awayPts": 96.6
+            },
+            {
+              "home": "Ethan",
+              "homePts": 80.4,
+              "away": "Aiden ",
+              "awayPts": 127.58
+            },
+            {
+              "home": "Howard",
+              "homePts": 90.88,
+              "away": "Ulises",
+              "awayPts": 122.46
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 144.24,
+              "away": "Ulises",
+              "awayPts": 95.46
+            },
+            {
+              "home": "Sean",
+              "homePts": 132.74,
+              "away": "Justin",
+              "awayPts": 194.16
+            },
+            {
+              "home": "Luke",
+              "homePts": 46.0,
+              "away": "Ethan",
+              "awayPts": 54.1
+            },
+            {
+              "home": "Aiden ",
+              "homePts": 99.9,
+              "away": "Howard",
+              "awayPts": 86.42
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 102.86,
+              "away": "Aiden ",
+              "awayPts": 134.84
+            },
+            {
+              "home": "Sean",
+              "homePts": 111.94,
+              "away": "Ethan",
+              "awayPts": 50.0
+            },
+            {
+              "home": "Justin",
+              "homePts": 112.7,
+              "away": "Ulises",
+              "awayPts": 130.2
+            },
+            {
+              "home": "Luke",
+              "homePts": 85.32,
+              "away": "Howard",
+              "awayPts": 124.32
+            }
+          ]
+        },
+        {
+          "week": 14,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 125.78,
+              "away": "Luke",
+              "awayPts": 89.96
+            },
+            {
+              "home": "Sean",
+              "homePts": 129.54,
+              "away": "Howard",
+              "awayPts": 91.78
+            },
+            {
+              "home": "Justin",
+              "homePts": 110.2,
+              "away": "Aiden ",
+              "awayPts": 153.12
+            },
+            {
+              "home": "Ethan",
+              "homePts": 96.9,
+              "away": "Ulises",
+              "awayPts": 121.8
+            }
+          ]
+        },
+        {
+          "week": 15,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 165.58,
+              "away": "Aiden ",
+              "awayPts": 122.0
+            },
+            {
+              "home": "Sean",
+              "homePts": 106.5,
+              "away": "Luke",
+              "awayPts": 127.26
+            },
+            {
+              "home": "Justin",
+              "homePts": 143.28,
+              "away": "Ulises",
+              "awayPts": 133.18
+            },
+            {
+              "home": "Ethan",
+              "homePts": 100.6,
+              "away": "Howard",
+              "awayPts": 108.72
+            }
+          ]
+        },
+        {
+          "week": 16,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 137.86,
+              "away": "Justin",
+              "awayPts": 110.52
+            },
+            {
+              "home": "Sean",
+              "homePts": 112.88,
+              "away": "Ethan",
+              "awayPts": 116.1
+            },
+            {
+              "home": "Luke",
+              "homePts": 154.32,
+              "away": "Howard",
+              "awayPts": 105.56
+            },
+            {
+              "home": "Aiden ",
+              "homePts": 116.14,
+              "away": "Ulises",
+              "awayPts": 80.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "numTeams": 8,
+      "champion": "Aiden",
+      "sacko": "Sean",
+      "playoffCutoff": 4,
+      "standings": [
+        {
+          "manager": "Matthew",
+          "team": "The Labbers",
+          "regularSeasonRank": 1,
+          "playoffRank": 2,
+          "wins": 11,
+          "losses": 3,
+          "ties": 0,
+          "pointsFor": 2012.46,
+          "pointsAgainst": 1630.78,
+          "moves": 40,
+          "trades": 3,
+          "draftPosition": 7,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Justin",
+          "team": "Team Justin",
+          "regularSeasonRank": 2,
+          "playoffRank": 4,
+          "wins": 9,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1797.2,
+          "pointsAgainst": 1740.14,
+          "moves": 20,
+          "trades": 0,
+          "draftPosition": 4,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Howard",
+          "team": "beaners",
+          "regularSeasonRank": 3,
+          "playoffRank": 3,
+          "wins": 7,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1681.64,
+          "pointsAgainst": 1768.72,
+          "moves": 34,
+          "trades": 1,
+          "draftPosition": 1,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Alex",
+          "team": "Team Cruz",
+          "regularSeasonRank": 4,
+          "playoffRank": 5,
+          "wins": 5,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1693.9,
+          "pointsAgainst": 1846.32,
+          "moves": 28,
+          "trades": 0,
+          "draftPosition": 8,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Aiden",
+          "team": "Beefcakes",
+          "regularSeasonRank": 1,
+          "playoffRank": 1,
+          "wins": 10,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 1980.44,
+          "pointsAgainst": 1744.4,
+          "moves": 5,
+          "trades": 0,
+          "draftPosition": 6,
+          "madePlayoffs": true,
+          "champion": true,
+          "sacko": false
+        },
+        {
+          "manager": "Luke",
+          "team": "Jeanfreau Strange",
+          "regularSeasonRank": 2,
+          "playoffRank": 6,
+          "wins": 6,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1763.02,
+          "pointsAgainst": 1804.74,
+          "moves": 32,
+          "trades": 0,
+          "draftPosition": 3,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Ulises",
+          "team": "The Booty Clappers",
+          "regularSeasonRank": 3,
+          "playoffRank": 7,
+          "wins": 5,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1696.78,
+          "pointsAgainst": 1934.76,
+          "moves": 35,
+          "trades": 3,
+          "draftPosition": 5,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Sean",
+          "team": "Houston Stars",
+          "regularSeasonRank": 4,
+          "playoffRank": 8,
+          "wins": 3,
+          "losses": 11,
+          "ties": 0,
+          "pointsFor": 1609.42,
+          "pointsAgainst": 1765.0,
+          "moves": 56,
+          "trades": 1,
+          "draftPosition": 2,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": true
+        }
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 158.1,
+              "away": "Justin",
+              "awayPts": 139.62
+            },
+            {
+              "home": "Sean",
+              "homePts": 116.54,
+              "away": "Luke",
+              "awayPts": 135.88
+            },
+            {
+              "home": "Matthew",
+              "homePts": 115.06,
+              "away": "Howard",
+              "awayPts": 124.2
+            },
+            {
+              "home": "Aiden ",
+              "homePts": 138.7,
+              "away": "Ulises",
+              "awayPts": 129.24
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 110.78,
+              "away": "Matthew",
+              "awayPts": 154.7
+            },
+            {
+              "home": "Sean",
+              "homePts": 115.08,
+              "away": "Aiden ",
+              "awayPts": 128.16
+            },
+            {
+              "home": "Justin",
+              "homePts": 102.2,
+              "away": "Howard",
+              "awayPts": 136.34
+            },
+            {
+              "home": "Luke",
+              "homePts": 127.82,
+              "away": "Ulises",
+              "awayPts": 156.1
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 131.42,
+              "away": "Howard",
+              "awayPts": 129.4
+            },
+            {
+              "home": "Sean",
+              "homePts": 135.2,
+              "away": "Ulises",
+              "awayPts": 144.48
+            },
+            {
+              "home": "Justin",
+              "homePts": 124.58,
+              "away": "Matthew",
+              "awayPts": 194.02
+            },
+            {
+              "home": "Luke",
+              "homePts": 134.0,
+              "away": "Aiden ",
+              "awayPts": 155.38
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 125.94,
+              "away": "Sean",
+              "awayPts": 128.04
+            },
+            {
+              "home": "Justin",
+              "homePts": 150.9,
+              "away": "Luke",
+              "awayPts": 118.9
+            },
+            {
+              "home": "Matthew",
+              "homePts": 142.68,
+              "away": "Aiden ",
+              "awayPts": 91.72
+            },
+            {
+              "home": "Howard",
+              "homePts": 152.46,
+              "away": "Ulises",
+              "awayPts": 141.78
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 174.3,
+              "away": "Ulises",
+              "awayPts": 130.44
+            },
+            {
+              "home": "Sean",
+              "homePts": 91.8,
+              "away": "Justin",
+              "awayPts": 122.66
+            },
+            {
+              "home": "Luke",
+              "homePts": 126.58,
+              "away": "Matthew",
+              "awayPts": 145.46
+            },
+            {
+              "home": "Aiden ",
+              "homePts": 145.52,
+              "away": "Howard",
+              "awayPts": 157.3
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 140.22,
+              "away": "Aiden ",
+              "awayPts": 173.06
+            },
+            {
+              "home": "Sean",
+              "homePts": 137.4,
+              "away": "Matthew",
+              "awayPts": 87.9
+            },
+            {
+              "home": "Justin",
+              "homePts": 126.0,
+              "away": "Ulises",
+              "awayPts": 101.78
+            },
+            {
+              "home": "Luke",
+              "homePts": 93.92,
+              "away": "Howard",
+              "awayPts": 116.52
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 126.82,
+              "away": "Luke",
+              "awayPts": 155.72
+            },
+            {
+              "home": "Sean",
+              "homePts": 115.44,
+              "away": "Howard",
+              "awayPts": 117.5
+            },
+            {
+              "home": "Justin",
+              "homePts": 116.66,
+              "away": "Aiden ",
+              "awayPts": 111.78
+            },
+            {
+              "home": "Matthew",
+              "homePts": 196.22,
+              "away": "Ulises",
+              "awayPts": 97.02
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 103.32,
+              "away": "Justin",
+              "awayPts": 121.24
+            },
+            {
+              "home": "Sean",
+              "homePts": 135.54,
+              "away": "Luke",
+              "awayPts": 143.14
+            },
+            {
+              "home": "Matthew",
+              "homePts": 132.44,
+              "away": "Howard",
+              "awayPts": 99.26
+            },
+            {
+              "home": "Aiden ",
+              "homePts": 157.06,
+              "away": "Ulises",
+              "awayPts": 78.12
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 119.18,
+              "away": "Matthew",
+              "awayPts": 122.0
+            },
+            {
+              "home": "Sean",
+              "homePts": 149.08,
+              "away": "Aiden ",
+              "awayPts": 153.3
+            },
+            {
+              "home": "Justin",
+              "homePts": 156.74,
+              "away": "Howard",
+              "awayPts": 101.22
+            },
+            {
+              "home": "Luke",
+              "homePts": 117.8,
+              "away": "Ulises",
+              "awayPts": 99.14
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 121.04,
+              "away": "Howard",
+              "awayPts": 114.3
+            },
+            {
+              "home": "Sean",
+              "homePts": 105.96,
+              "away": "Ulises",
+              "awayPts": 115.78
+            },
+            {
+              "home": "Justin",
+              "homePts": 91.72,
+              "away": "Matthew",
+              "awayPts": 116.9
+            },
+            {
+              "home": "Luke",
+              "homePts": 125.32,
+              "away": "Aiden ",
+              "awayPts": 86.66
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 82.58,
+              "away": "Sean",
+              "awayPts": 110.22
+            },
+            {
+              "home": "Justin",
+              "homePts": 143.56,
+              "away": "Luke",
+              "awayPts": 124.48
+            },
+            {
+              "home": "Matthew",
+              "homePts": 145.14,
+              "away": "Aiden ",
+              "awayPts": 161.0
+            },
+            {
+              "home": "Howard",
+              "homePts": 108.76,
+              "away": "Ulises",
+              "awayPts": 137.34
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 77.14,
+              "away": "Ulises",
+              "awayPts": 130.64
+            },
+            {
+              "home": "Sean",
+              "homePts": 89.08,
+              "away": "Justin",
+              "awayPts": 141.72
+            },
+            {
+              "home": "Luke",
+              "homePts": 126.9,
+              "away": "Matthew",
+              "awayPts": 154.34
+            },
+            {
+              "home": "Aiden ",
+              "homePts": 164.38,
+              "away": "Howard",
+              "awayPts": 102.7
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 107.3,
+              "away": "Aiden ",
+              "awayPts": 127.4
+            },
+            {
+              "home": "Sean",
+              "homePts": 91.62,
+              "away": "Matthew",
+              "awayPts": 146.3
+            },
+            {
+              "home": "Justin",
+              "homePts": 158.04,
+              "away": "Ulises",
+              "awayPts": 106.1
+            },
+            {
+              "home": "Luke",
+              "homePts": 123.02,
+              "away": "Howard",
+              "awayPts": 102.02
+            }
+          ]
+        },
+        {
+          "week": 14,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 115.76,
+              "away": "Luke",
+              "awayPts": 109.54
+            },
+            {
+              "home": "Sean",
+              "homePts": 88.42,
+              "away": "Howard",
+              "awayPts": 119.66
+            },
+            {
+              "home": "Justin",
+              "homePts": 101.56,
+              "away": "Aiden ",
+              "awayPts": 186.32
+            },
+            {
+              "home": "Matthew",
+              "homePts": 159.3,
+              "away": "Ulises",
+              "awayPts": 128.82
+            }
+          ]
+        },
+        {
+          "week": 15,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 162.82,
+              "away": "Ulises",
+              "awayPts": 137.86
+            },
+            {
+              "home": "Sean",
+              "homePts": 66.26,
+              "away": "Luke",
+              "awayPts": 137.74
+            },
+            {
+              "home": "Justin",
+              "homePts": 123.02,
+              "away": "Aiden ",
+              "awayPts": 169.06
+            },
+            {
+              "home": "Matthew",
+              "homePts": 130.52,
+              "away": "Howard",
+              "awayPts": 123.34
+            }
+          ]
+        },
+        {
+          "week": 16,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 126.14,
+              "away": "Luke",
+              "awayPts": 115.4
+            },
+            {
+              "home": "Sean",
+              "homePts": 72.42,
+              "away": "Ulises",
+              "awayPts": 134.52
+            },
+            {
+              "home": "Justin",
+              "homePts": 104.46,
+              "away": "Howard",
+              "awayPts": 146.38
+            },
+            {
+              "home": "Matthew",
+              "homePts": 152.94,
+              "away": "Aiden ",
+              "awayPts": 159.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "numTeams": 8,
+      "champion": "Ulises",
+      "sacko": "Justin",
+      "playoffCutoff": 4,
+      "standings": [
+        {
+          "manager": "Alex",
+          "team": "Team Cruz",
+          "regularSeasonRank": 1,
+          "playoffRank": 4,
+          "wins": 13,
+          "losses": 2,
+          "ties": 0,
+          "pointsFor": 2024.5,
+          "pointsAgainst": 1721.4,
+          "moves": 28,
+          "trades": 0,
+          "draftPosition": 3,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Ulises",
+          "team": "The Booty Clappers",
+          "regularSeasonRank": 2,
+          "playoffRank": 1,
+          "wins": 7,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 2005.36,
+          "pointsAgainst": 1797.44,
+          "moves": 17,
+          "trades": 1,
+          "draftPosition": 5,
+          "madePlayoffs": true,
+          "champion": true,
+          "sacko": false
+        },
+        {
+          "manager": "Luke",
+          "team": "Greek Freak Fan Brook Lopez",
+          "regularSeasonRank": 3,
+          "playoffRank": 5,
+          "wins": 6,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1788.2,
+          "pointsAgainst": 1889.72,
+          "moves": 31,
+          "trades": 0,
+          "draftPosition": 2,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Howard",
+          "team": "beaners",
+          "regularSeasonRank": 4,
+          "playoffRank": 6,
+          "wins": 5,
+          "losses": 10,
+          "ties": 0,
+          "pointsFor": 1478.18,
+          "pointsAgainst": 1939.74,
+          "moves": 28,
+          "trades": 4,
+          "draftPosition": 7,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Sean",
+          "team": "Houston Stars",
+          "regularSeasonRank": 1,
+          "playoffRank": 2,
+          "wins": 11,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 2103.24,
+          "pointsAgainst": 1939.06,
+          "moves": 38,
+          "trades": 5,
+          "draftPosition": 1,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Matthew",
+          "team": "The Labbers",
+          "regularSeasonRank": 2,
+          "playoffRank": 3,
+          "wins": 7,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 2091.2,
+          "pointsAgainst": 1941.98,
+          "moves": 40,
+          "trades": 5,
+          "draftPosition": 8,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Justin",
+          "team": "Team Justin",
+          "regularSeasonRank": 3,
+          "playoffRank": 8,
+          "wins": 6,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1793.22,
+          "pointsAgainst": 1827.6,
+          "moves": 14,
+          "trades": 2,
+          "draftPosition": 4,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": true
+        },
+        {
+          "manager": "Aiden",
+          "team": "Beefcakes",
+          "regularSeasonRank": 4,
+          "playoffRank": 7,
+          "wins": 5,
+          "losses": 10,
+          "ties": 0,
+          "pointsFor": 1735.58,
+          "pointsAgainst": 1962.54,
+          "moves": 15,
+          "trades": 1,
+          "draftPosition": 6,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        }
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 136.98,
+              "away": "Luke",
+              "awayPts": 129.78
+            },
+            {
+              "home": "Sean",
+              "homePts": 136.2,
+              "away": "Justin",
+              "awayPts": 132.3
+            },
+            {
+              "home": "Matthew",
+              "homePts": 109.62,
+              "away": "Aiden",
+              "awayPts": 145.96
+            },
+            {
+              "home": "Howard",
+              "homePts": 144.5,
+              "away": "Ulises",
+              "awayPts": 131.72
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 100.42,
+              "away": "Howard",
+              "awayPts": 96.9
+            },
+            {
+              "home": "Sean",
+              "homePts": 133.06,
+              "away": "Matthew",
+              "awayPts": 153.4
+            },
+            {
+              "home": "Justin",
+              "homePts": 112.26,
+              "away": "Aiden",
+              "awayPts": 178.62
+            },
+            {
+              "home": "Luke",
+              "homePts": 134.32,
+              "away": "Ulises",
+              "awayPts": 129.68
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 141.44,
+              "away": "Ulises",
+              "awayPts": 127.02
+            },
+            {
+              "home": "Sean",
+              "homePts": 150.82,
+              "away": "Aiden",
+              "awayPts": 121.22
+            },
+            {
+              "home": "Justin",
+              "homePts": 143.78,
+              "away": "Matthew",
+              "awayPts": 110.14
+            },
+            {
+              "home": "Luke",
+              "homePts": 95.8,
+              "away": "Howard",
+              "awayPts": 118.74
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 169.18,
+              "away": "Sean",
+              "awayPts": 109.92
+            },
+            {
+              "home": "Justin",
+              "homePts": 117.24,
+              "away": "Luke",
+              "awayPts": 135.32
+            },
+            {
+              "home": "Matthew",
+              "homePts": 125.32,
+              "away": "Howard",
+              "awayPts": 126.12
+            },
+            {
+              "home": "Aiden",
+              "homePts": 81.46,
+              "away": "Ulises",
+              "awayPts": 183.12
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 173.72,
+              "away": "Aiden",
+              "awayPts": 89.88
+            },
+            {
+              "home": "Sean",
+              "homePts": 175.2,
+              "away": "Luke",
+              "awayPts": 164.68
+            },
+            {
+              "home": "Justin",
+              "homePts": 121.28,
+              "away": "Howard",
+              "awayPts": 128.56
+            },
+            {
+              "home": "Matthew",
+              "homePts": 154.56,
+              "away": "Ulises",
+              "awayPts": 151.78
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 150.2,
+              "away": "Matthew",
+              "awayPts": 145.48
+            },
+            {
+              "home": "Sean",
+              "homePts": 154.32,
+              "away": "Howard",
+              "awayPts": 86.66
+            },
+            {
+              "home": "Justin",
+              "homePts": 153.28,
+              "away": "Ulises",
+              "awayPts": 101.2
+            },
+            {
+              "home": "Luke",
+              "homePts": 136.38,
+              "away": "Aiden",
+              "awayPts": 134.24
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 96.68,
+              "away": "Justin",
+              "awayPts": 142.48
+            },
+            {
+              "home": "Sean",
+              "homePts": 181.54,
+              "away": "Ulises",
+              "awayPts": 147.36
+            },
+            {
+              "home": "Luke",
+              "homePts": 163.14,
+              "away": "Matthew",
+              "awayPts": 113.74
+            },
+            {
+              "home": "Aiden",
+              "homePts": 103.84,
+              "away": "Howard",
+              "awayPts": 117.24
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 108.52,
+              "away": "Luke",
+              "awayPts": 84.4
+            },
+            {
+              "home": "Sean",
+              "homePts": 142.46,
+              "away": "Justin",
+              "awayPts": 122.82
+            },
+            {
+              "home": "Matthew",
+              "homePts": 116.1,
+              "away": "Aiden",
+              "awayPts": 137.86
+            },
+            {
+              "home": "Howard",
+              "homePts": 73.86,
+              "away": "Ulises",
+              "awayPts": 156.7
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 114.14,
+              "away": "Howard",
+              "awayPts": 87.5
+            },
+            {
+              "home": "Sean",
+              "homePts": 107.16,
+              "away": "Matthew",
+              "awayPts": 143.74
+            },
+            {
+              "home": "Justin",
+              "homePts": 108.78,
+              "away": "Aiden",
+              "awayPts": 74.28
+            },
+            {
+              "home": "Luke",
+              "homePts": 64.34,
+              "away": "Ulises",
+              "awayPts": 114.56
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 155.6,
+              "away": "Ulises",
+              "awayPts": 138.24
+            },
+            {
+              "home": "Sean",
+              "homePts": 131.04,
+              "away": "Aiden",
+              "awayPts": 109.7
+            },
+            {
+              "home": "Justin",
+              "homePts": 77.76,
+              "away": "Matthew",
+              "awayPts": 128.52
+            },
+            {
+              "home": "Luke",
+              "homePts": 104.24,
+              "away": "Howard",
+              "awayPts": 45.7
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 171.98,
+              "away": "Sean",
+              "awayPts": 128.76
+            },
+            {
+              "home": "Justin",
+              "homePts": 131.48,
+              "away": "Luke",
+              "awayPts": 114.2
+            },
+            {
+              "home": "Matthew",
+              "homePts": 209.4,
+              "away": "Howard",
+              "awayPts": 93.58
+            },
+            {
+              "home": "Aiden",
+              "homePts": 93.12,
+              "away": "Ulises",
+              "awayPts": 153.04
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 122.72,
+              "away": "Aiden",
+              "awayPts": 72.7
+            },
+            {
+              "home": "Sean",
+              "homePts": 123.26,
+              "away": "Luke",
+              "awayPts": 112.22
+            },
+            {
+              "home": "Justin",
+              "homePts": 153.46,
+              "away": "Howard",
+              "awayPts": 86.02
+            },
+            {
+              "home": "Matthew",
+              "homePts": 89.1,
+              "away": "Ulises",
+              "awayPts": 115.4
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 130.18,
+              "away": "Matthew",
+              "awayPts": 189.02
+            },
+            {
+              "home": "Sean",
+              "homePts": 149.1,
+              "away": "Howard",
+              "awayPts": 85.0
+            },
+            {
+              "home": "Justin",
+              "homePts": 96.22,
+              "away": "Ulises",
+              "awayPts": 137.12
+            },
+            {
+              "home": "Luke",
+              "homePts": 128.46,
+              "away": "Aiden",
+              "awayPts": 128.0
+            }
+          ]
+        },
+        {
+          "week": 14,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 128.3,
+              "away": "Justin",
+              "awayPts": 81.72
+            },
+            {
+              "home": "Sean",
+              "homePts": 150.42,
+              "away": "Ulises",
+              "awayPts": 120.44
+            },
+            {
+              "home": "Luke",
+              "homePts": 123.32,
+              "away": "Matthew",
+              "awayPts": 187.94
+            },
+            {
+              "home": "Aiden",
+              "homePts": 122.02,
+              "away": "Howard",
+              "awayPts": 104.12
+            }
+          ]
+        },
+        {
+          "week": 15,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 124.44,
+              "away": "Luke",
+              "awayPts": 97.6
+            },
+            {
+              "home": "Sean",
+              "homePts": 129.98,
+              "away": "Justin",
+              "awayPts": 98.36
+            },
+            {
+              "home": "Matthew",
+              "homePts": 115.12,
+              "away": "Aiden",
+              "awayPts": 142.68
+            },
+            {
+              "home": "Howard",
+              "homePts": 83.68,
+              "away": "Ulises",
+              "awayPts": 97.98
+            }
+          ]
+        },
+        {
+          "week": 16,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 103.94,
+              "away": "Ulises",
+              "awayPts": 150.0
+            },
+            {
+              "home": "Sean",
+              "homePts": 153.96,
+              "away": "Matthew",
+              "awayPts": 114.38
+            },
+            {
+              "home": "Justin",
+              "homePts": 95.98,
+              "away": "Howard",
+              "awayPts": 97.7
+            },
+            {
+              "home": "Luke",
+              "homePts": 125.52,
+              "away": "Aiden",
+              "awayPts": 85.5
+            }
+          ]
+        },
+        {
+          "week": 17,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 83.08,
+              "away": "Matthew",
+              "awayPts": 127.02
+            },
+            {
+              "home": "Sean",
+              "homePts": 113.4,
+              "away": "Ulises",
+              "awayPts": 152.34
+            },
+            {
+              "home": "Justin",
+              "homePts": 90.2,
+              "away": "Aiden",
+              "awayPts": 92.84
+            },
+            {
+              "home": "Luke",
+              "homePts": 121.16,
+              "away": "Howard",
+              "awayPts": 97.82
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "numTeams": 8,
+      "champion": "Ulises",
+      "sacko": "Aiden",
+      "playoffCutoff": 4,
+      "standings": [
+        {
+          "manager": "Alex",
+          "team": "Team GOAT",
+          "regularSeasonRank": 1,
+          "playoffRank": 3,
+          "wins": 10,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 2027.54,
+          "pointsAgainst": 1879.76,
+          "moves": 31,
+          "trades": 1,
+          "draftPosition": 1,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Ulises",
+          "team": "The Booty Clappers",
+          "regularSeasonRank": 2,
+          "playoffRank": 1,
+          "wins": 8,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1908.62,
+          "pointsAgainst": 1812.2,
+          "moves": 30,
+          "trades": 2,
+          "draftPosition": 8,
+          "madePlayoffs": true,
+          "champion": true,
+          "sacko": false
+        },
+        {
+          "manager": "Luke",
+          "team": "Greek Freak Fan Brook Lopez",
+          "regularSeasonRank": 3,
+          "playoffRank": 5,
+          "wins": 7,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1909.72,
+          "pointsAgainst": 1933.56,
+          "moves": 35,
+          "trades": 1,
+          "draftPosition": 4,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Howard",
+          "team": "beaners",
+          "regularSeasonRank": 4,
+          "playoffRank": 7,
+          "wins": 4,
+          "losses": 11,
+          "ties": 0,
+          "pointsFor": 1616.58,
+          "pointsAgainst": 1786.08,
+          "moves": 51,
+          "trades": 4,
+          "draftPosition": 7,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Matthew",
+          "team": "The Labbers",
+          "regularSeasonRank": 1,
+          "playoffRank": 2,
+          "wins": 14,
+          "losses": 1,
+          "ties": 0,
+          "pointsFor": 2186.32,
+          "pointsAgainst": 1864.2,
+          "moves": 44,
+          "trades": 5,
+          "draftPosition": 5,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Justin",
+          "team": "Team Buzz",
+          "regularSeasonRank": 2,
+          "playoffRank": 4,
+          "wins": 8,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1893.86,
+          "pointsAgainst": 1905.32,
+          "moves": 37,
+          "trades": 1,
+          "draftPosition": 3,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Joshua",
+          "team": "Bad news bombers",
+          "regularSeasonRank": 3,
+          "playoffRank": 6,
+          "wins": 5,
+          "losses": 10,
+          "ties": 0,
+          "pointsFor": 1692.74,
+          "pointsAgainst": 1897.72,
+          "moves": 28,
+          "trades": 3,
+          "draftPosition": 2,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Aiden",
+          "team": "Beefcakes",
+          "regularSeasonRank": 4,
+          "playoffRank": 8,
+          "wins": 4,
+          "losses": 11,
+          "ties": 0,
+          "pointsFor": 1797.18,
+          "pointsAgainst": 1953.72,
+          "moves": 13,
+          "trades": 1,
+          "draftPosition": 6,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": true
+        }
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 107.74,
+              "away": "Luke",
+              "awayPts": 138.1
+            },
+            {
+              "home": "Joshua",
+              "homePts": 121.6,
+              "away": "Justin",
+              "awayPts": 169.46
+            },
+            {
+              "home": "Matthew",
+              "homePts": 130.9,
+              "away": "Aiden",
+              "awayPts": 122.98
+            },
+            {
+              "home": "Howard",
+              "homePts": 102.9,
+              "away": "Ulises",
+              "awayPts": 138.32
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 136.86,
+              "away": "Howard",
+              "awayPts": 135.46
+            },
+            {
+              "home": "Joshua",
+              "homePts": 131.98,
+              "away": "Matthew",
+              "awayPts": 210.72
+            },
+            {
+              "home": "Justin",
+              "homePts": 104.36,
+              "away": "Aiden",
+              "awayPts": 92.98
+            },
+            {
+              "home": "Luke",
+              "homePts": 101.3,
+              "away": "Ulises",
+              "awayPts": 169.68
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 125.2,
+              "away": "Ulises",
+              "awayPts": 110.56
+            },
+            {
+              "home": "Joshua",
+              "homePts": 101.76,
+              "away": "Aiden",
+              "awayPts": 107.7
+            },
+            {
+              "home": "Justin",
+              "homePts": 106.78,
+              "away": "Matthew",
+              "awayPts": 128.8
+            },
+            {
+              "home": "Luke",
+              "homePts": 108.68,
+              "away": "Howard",
+              "awayPts": 115.92
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 147.18,
+              "away": "Joshua",
+              "awayPts": 102.06
+            },
+            {
+              "home": "Justin",
+              "homePts": 151.6,
+              "away": "Luke",
+              "awayPts": 136.26
+            },
+            {
+              "home": "Matthew",
+              "homePts": 139.16,
+              "away": "Howard",
+              "awayPts": 118.3
+            },
+            {
+              "home": "Aiden",
+              "homePts": 134.72,
+              "away": "Ulises",
+              "awayPts": 113.58
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 137.28,
+              "away": "Aiden",
+              "awayPts": 123.26
+            },
+            {
+              "home": "Joshua",
+              "homePts": 132.64,
+              "away": "Luke",
+              "awayPts": 117.68
+            },
+            {
+              "home": "Justin",
+              "homePts": 88.68,
+              "away": "Howard",
+              "awayPts": 93.16
+            },
+            {
+              "home": "Matthew",
+              "homePts": 160.38,
+              "away": "Ulises",
+              "awayPts": 119.5
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 164.5,
+              "away": "Matthew",
+              "awayPts": 109.5
+            },
+            {
+              "home": "Joshua",
+              "homePts": 102.6,
+              "away": "Howard",
+              "awayPts": 89.46
+            },
+            {
+              "home": "Justin",
+              "homePts": 97.32,
+              "away": "Ulises",
+              "awayPts": 87.38
+            },
+            {
+              "home": "Luke",
+              "homePts": 136.02,
+              "away": "Aiden",
+              "awayPts": 110.86
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 167.44,
+              "away": "Justin",
+              "awayPts": 135.22
+            },
+            {
+              "home": "Joshua",
+              "homePts": 103.2,
+              "away": "Ulises",
+              "awayPts": 86.68
+            },
+            {
+              "home": "Luke",
+              "homePts": 138.12,
+              "away": "Matthew",
+              "awayPts": 142.0
+            },
+            {
+              "home": "Aiden",
+              "homePts": 80.4,
+              "away": "Howard",
+              "awayPts": 127.58
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 107.98,
+              "away": "Luke",
+              "awayPts": 139.98
+            },
+            {
+              "home": "Joshua",
+              "homePts": 118.32,
+              "away": "Justin",
+              "awayPts": 131.64
+            },
+            {
+              "home": "Matthew",
+              "homePts": 157.1,
+              "away": "Aiden",
+              "awayPts": 147.32
+            },
+            {
+              "home": "Howard",
+              "homePts": 145.92,
+              "away": "Ulises",
+              "awayPts": 176.14
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 115.44,
+              "away": "Howard",
+              "awayPts": 110.12
+            },
+            {
+              "home": "Joshua",
+              "homePts": 110.82,
+              "away": "Matthew",
+              "awayPts": 124.12
+            },
+            {
+              "home": "Justin",
+              "homePts": 152.42,
+              "away": "Aiden",
+              "awayPts": 168.5
+            },
+            {
+              "home": "Luke",
+              "homePts": 161.44,
+              "away": "Ulises",
+              "awayPts": 111.0
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 123.82,
+              "away": "Ulises",
+              "awayPts": 124.2
+            },
+            {
+              "home": "Joshua",
+              "homePts": 120.56,
+              "away": "Aiden",
+              "awayPts": 109.7
+            },
+            {
+              "home": "Justin",
+              "homePts": 117.98,
+              "away": "Matthew",
+              "awayPts": 144.0
+            },
+            {
+              "home": "Luke",
+              "homePts": 116.64,
+              "away": "Howard",
+              "awayPts": 103.3
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 155.6,
+              "away": "Joshua",
+              "awayPts": 125.46
+            },
+            {
+              "home": "Justin",
+              "homePts": 133.98,
+              "away": "Luke",
+              "awayPts": 158.96
+            },
+            {
+              "home": "Matthew",
+              "homePts": 116.5,
+              "away": "Howard",
+              "awayPts": 90.1
+            },
+            {
+              "home": "Aiden",
+              "homePts": 80.28,
+              "away": "Ulises",
+              "awayPts": 120.14
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 156.1,
+              "away": "Aiden",
+              "awayPts": 133.32
+            },
+            {
+              "home": "Joshua",
+              "homePts": 126.46,
+              "away": "Luke",
+              "awayPts": 135.3
+            },
+            {
+              "home": "Justin",
+              "homePts": 132.3,
+              "away": "Howard",
+              "awayPts": 99.04
+            },
+            {
+              "home": "Matthew",
+              "homePts": 157.66,
+              "away": "Ulises",
+              "awayPts": 110.94
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 135.24,
+              "away": "Matthew",
+              "awayPts": 156.4
+            },
+            {
+              "home": "Joshua",
+              "homePts": 90.74,
+              "away": "Howard",
+              "awayPts": 64.74
+            },
+            {
+              "home": "Justin",
+              "homePts": 121.56,
+              "away": "Ulises",
+              "awayPts": 169.9
+            },
+            {
+              "home": "Luke",
+              "homePts": 113.82,
+              "away": "Aiden",
+              "awayPts": 136.62
+            }
+          ]
+        },
+        {
+          "week": 14,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 113.06,
+              "away": "Justin",
+              "awayPts": 134.38
+            },
+            {
+              "home": "Joshua",
+              "homePts": 98.62,
+              "away": "Ulises",
+              "awayPts": 131.56
+            },
+            {
+              "home": "Luke",
+              "homePts": 105.68,
+              "away": "Matthew",
+              "awayPts": 149.68
+            },
+            {
+              "home": "Aiden",
+              "homePts": 104.58,
+              "away": "Howard",
+              "awayPts": 122.7
+            }
+          ]
+        },
+        {
+          "week": 15,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 134.1,
+              "away": "Luke",
+              "awayPts": 101.74
+            },
+            {
+              "home": "Joshua",
+              "homePts": 105.92,
+              "away": "Justin",
+              "awayPts": 116.18
+            },
+            {
+              "home": "Matthew",
+              "homePts": 159.4,
+              "away": "Aiden",
+              "awayPts": 143.96
+            },
+            {
+              "home": "Howard",
+              "homePts": 97.88,
+              "away": "Ulises",
+              "awayPts": 139.04
+            }
+          ]
+        },
+        {
+          "week": 16,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 146.6,
+              "away": "Ulises",
+              "awayPts": 160.18
+            },
+            {
+              "home": "Joshua",
+              "homePts": 145.36,
+              "away": "Aiden",
+              "awayPts": 137.48
+            },
+            {
+              "home": "Justin",
+              "homePts": 69.66,
+              "away": "Matthew",
+              "awayPts": 119.36
+            },
+            {
+              "home": "Luke",
+              "homePts": 116.16,
+              "away": "Howard",
+              "awayPts": 97.24
+            }
+          ]
+        },
+        {
+          "week": 17,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 108.9,
+              "away": "Justin",
+              "awayPts": 64.1
+            },
+            {
+              "home": "Joshua",
+              "homePts": 98.08,
+              "away": "Luke",
+              "awayPts": 129.12
+            },
+            {
+              "home": "Matthew",
+              "homePts": 73.0,
+              "away": "Ulises",
+              "awayPts": 145.58
+            },
+            {
+              "home": "Aiden",
+              "homePts": 57.4,
+              "away": "Howard",
+              "awayPts": 103.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "numTeams": 8,
+      "champion": "Matthew",
+      "sacko": "Joshua",
+      "playoffCutoff": 4,
+      "standings": [
+        {
+          "manager": "Matthew",
+          "team": "The Labbers",
+          "regularSeasonRank": 1,
+          "playoffRank": 1,
+          "wins": 11,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 1964.16,
+          "pointsAgainst": 1737.02,
+          "moves": 29,
+          "trades": 4,
+          "draftPosition": 8,
+          "madePlayoffs": true,
+          "champion": true,
+          "sacko": false
+        },
+        {
+          "manager": "Alex",
+          "team": "Team GOAT",
+          "regularSeasonRank": 2,
+          "playoffRank": 4,
+          "wins": 10,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1980.88,
+          "pointsAgainst": 1645.64,
+          "moves": 36,
+          "trades": 3,
+          "draftPosition": 7,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Howard",
+          "team": "beaners",
+          "regularSeasonRank": 3,
+          "playoffRank": 3,
+          "wins": 8,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1936.28,
+          "pointsAgainst": 1851.02,
+          "moves": 56,
+          "trades": 11,
+          "draftPosition": 4,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Joshua",
+          "team": "Bad news bombers",
+          "regularSeasonRank": 4,
+          "playoffRank": 8,
+          "wins": 6,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1678.08,
+          "pointsAgainst": 1774.28,
+          "moves": 12,
+          "trades": 2,
+          "draftPosition": 5,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": true
+        },
+        {
+          "manager": "Ulises",
+          "team": "The Booty Clappers",
+          "regularSeasonRank": 1,
+          "playoffRank": 2,
+          "wins": 10,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1922.12,
+          "pointsAgainst": 1819.88,
+          "moves": 23,
+          "trades": 2,
+          "draftPosition": 1,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Justin",
+          "team": "Team Buzz",
+          "regularSeasonRank": 2,
+          "playoffRank": 7,
+          "wins": 7,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 1742.1,
+          "pointsAgainst": 1854.52,
+          "moves": 25,
+          "trades": 2,
+          "draftPosition": 2,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Luke",
+          "team": "Greek Freak Fan Damian Lillard",
+          "regularSeasonRank": 3,
+          "playoffRank": 5,
+          "wins": 6,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1739.96,
+          "pointsAgainst": 1933.84,
+          "moves": 28,
+          "trades": 2,
+          "draftPosition": 6,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Aiden",
+          "team": "Beefcakes",
+          "regularSeasonRank": 4,
+          "playoffRank": 6,
+          "wins": 2,
+          "losses": 13,
+          "ties": 0,
+          "pointsFor": 1745.68,
+          "pointsAgainst": 2093.06,
+          "moves": 12,
+          "trades": 2,
+          "draftPosition": 3,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        }
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 108.06,
+              "away": "Joshua",
+              "awayPts": 84.24
+            },
+            {
+              "home": "Justin",
+              "homePts": 116.98,
+              "away": "Luke",
+              "awayPts": 103.74
+            },
+            {
+              "home": "Matthew",
+              "homePts": 108.6,
+              "away": "Howard",
+              "awayPts": 137.34
+            },
+            {
+              "home": "Aiden",
+              "homePts": 119.04,
+              "away": "Ulises",
+              "awayPts": 154.76
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 131.66,
+              "away": "Matthew",
+              "awayPts": 143.82
+            },
+            {
+              "home": "Joshua",
+              "homePts": 157.5,
+              "away": "Howard",
+              "awayPts": 129.6
+            },
+            {
+              "home": "Justin",
+              "homePts": 148.78,
+              "away": "Aiden",
+              "awayPts": 75.74
+            },
+            {
+              "home": "Luke",
+              "homePts": 129.34,
+              "away": "Ulises",
+              "awayPts": 124.7
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 120.98,
+              "away": "Howard",
+              "awayPts": 143.08
+            },
+            {
+              "home": "Joshua",
+              "homePts": 109.08,
+              "away": "Matthew",
+              "awayPts": 132.34
+            },
+            {
+              "home": "Justin",
+              "homePts": 134.76,
+              "away": "Ulises",
+              "awayPts": 101.1
+            },
+            {
+              "home": "Luke",
+              "homePts": 192.66,
+              "away": "Aiden",
+              "awayPts": 147.76
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 174.3,
+              "away": "Justin",
+              "awayPts": 88.5
+            },
+            {
+              "home": "Joshua",
+              "homePts": 79.52,
+              "away": "Luke",
+              "awayPts": 89.34
+            },
+            {
+              "home": "Matthew",
+              "homePts": 117.36,
+              "away": "Aiden",
+              "awayPts": 84.96
+            },
+            {
+              "home": "Howard",
+              "homePts": 166.24,
+              "away": "Ulises",
+              "awayPts": 166.08
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 139.96,
+              "away": "Ulises",
+              "awayPts": 111.54
+            },
+            {
+              "home": "Joshua",
+              "homePts": 141.24,
+              "away": "Justin",
+              "awayPts": 88.38
+            },
+            {
+              "home": "Luke",
+              "homePts": 94.02,
+              "away": "Matthew",
+              "awayPts": 146.02
+            },
+            {
+              "home": "Aiden",
+              "homePts": 147.06,
+              "away": "Howard",
+              "awayPts": 131.26
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 140.46,
+              "away": "Aiden",
+              "awayPts": 113.04
+            },
+            {
+              "home": "Joshua",
+              "homePts": 102.54,
+              "away": "Ulises",
+              "awayPts": 107.78
+            },
+            {
+              "home": "Justin",
+              "homePts": 92.3,
+              "away": "Matthew",
+              "awayPts": 111.3
+            },
+            {
+              "home": "Luke",
+              "homePts": 116.92,
+              "away": "Howard",
+              "awayPts": 139.58
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 171.7,
+              "away": "Luke",
+              "awayPts": 123.36
+            },
+            {
+              "home": "Joshua",
+              "homePts": 145.26,
+              "away": "Aiden",
+              "awayPts": 109.32
+            },
+            {
+              "home": "Justin",
+              "homePts": 109.8,
+              "away": "Howard",
+              "awayPts": 160.48
+            },
+            {
+              "home": "Matthew",
+              "homePts": 109.76,
+              "away": "Ulises",
+              "awayPts": 120.56
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 173.76,
+              "away": "Joshua",
+              "awayPts": 81.0
+            },
+            {
+              "home": "Justin",
+              "homePts": 153.66,
+              "away": "Luke",
+              "awayPts": 89.36
+            },
+            {
+              "home": "Matthew",
+              "homePts": 139.96,
+              "away": "Howard",
+              "awayPts": 120.88
+            },
+            {
+              "home": "Aiden",
+              "homePts": 133.86,
+              "away": "Ulises",
+              "awayPts": 139.92
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 133.22,
+              "away": "Matthew",
+              "awayPts": 112.56
+            },
+            {
+              "home": "Joshua",
+              "homePts": 102.5,
+              "away": "Howard",
+              "awayPts": 122.08
+            },
+            {
+              "home": "Justin",
+              "homePts": 112.22,
+              "away": "Aiden",
+              "awayPts": 109.9
+            },
+            {
+              "home": "Luke",
+              "homePts": 97.18,
+              "away": "Ulises",
+              "awayPts": 117.84
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 65.78,
+              "away": "Howard",
+              "awayPts": 118.72
+            },
+            {
+              "home": "Joshua",
+              "homePts": 132.46,
+              "away": "Matthew",
+              "awayPts": 145.66
+            },
+            {
+              "home": "Justin",
+              "homePts": 132.08,
+              "away": "Ulises",
+              "awayPts": 158.72
+            },
+            {
+              "home": "Luke",
+              "homePts": 133.22,
+              "away": "Aiden",
+              "awayPts": 117.1
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 98.0,
+              "away": "Justin",
+              "awayPts": 123.7
+            },
+            {
+              "home": "Joshua",
+              "homePts": 139.18,
+              "away": "Luke",
+              "awayPts": 97.0
+            },
+            {
+              "home": "Matthew",
+              "homePts": 153.36,
+              "away": "Aiden",
+              "awayPts": 115.04
+            },
+            {
+              "home": "Howard",
+              "homePts": 111.86,
+              "away": "Ulises",
+              "awayPts": 125.9
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 110.36,
+              "away": "Ulises",
+              "awayPts": 112.48
+            },
+            {
+              "home": "Joshua",
+              "homePts": 122.52,
+              "away": "Justin",
+              "awayPts": 107.4
+            },
+            {
+              "home": "Luke",
+              "homePts": 149.1,
+              "away": "Matthew",
+              "awayPts": 120.78
+            },
+            {
+              "home": "Aiden",
+              "homePts": 131.56,
+              "away": "Howard",
+              "awayPts": 111.18
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 149.86,
+              "away": "Aiden",
+              "awayPts": 121.02
+            },
+            {
+              "home": "Joshua",
+              "homePts": 93.9,
+              "away": "Ulises",
+              "awayPts": 123.98
+            },
+            {
+              "home": "Justin",
+              "homePts": 116.1,
+              "away": "Matthew",
+              "awayPts": 180.86
+            },
+            {
+              "home": "Luke",
+              "homePts": 128.52,
+              "away": "Howard",
+              "awayPts": 125.18
+            }
+          ]
+        },
+        {
+          "week": 14,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 128.62,
+              "away": "Luke",
+              "awayPts": 92.68
+            },
+            {
+              "home": "Joshua",
+              "homePts": 111.24,
+              "away": "Aiden",
+              "awayPts": 105.42
+            },
+            {
+              "home": "Justin",
+              "homePts": 112.22,
+              "away": "Howard",
+              "awayPts": 123.74
+            },
+            {
+              "home": "Matthew",
+              "homePts": 124.14,
+              "away": "Ulises",
+              "awayPts": 105.24
+            }
+          ]
+        },
+        {
+          "week": 15,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 134.16,
+              "away": "Joshua",
+              "awayPts": 75.9
+            },
+            {
+              "home": "Justin",
+              "homePts": 105.22,
+              "away": "Luke",
+              "awayPts": 103.52
+            },
+            {
+              "home": "Matthew",
+              "homePts": 117.64,
+              "away": "Howard",
+              "awayPts": 95.06
+            },
+            {
+              "home": "Aiden",
+              "homePts": 114.86,
+              "away": "Ulises",
+              "awayPts": 151.52
+            }
+          ]
+        },
+        {
+          "week": 16,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 117.78,
+              "away": "Ulises",
+              "awayPts": 155.32
+            },
+            {
+              "home": "Joshua",
+              "homePts": 90.5,
+              "away": "Luke",
+              "awayPts": 107.44
+            },
+            {
+              "home": "Justin",
+              "homePts": 118.32,
+              "away": "Aiden",
+              "awayPts": 156.44
+            },
+            {
+              "home": "Matthew",
+              "homePts": 145.48,
+              "away": "Howard",
+              "awayPts": 131.32
+            }
+          ]
+        },
+        {
+          "week": 17,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 126.06,
+              "away": "Howard",
+              "awayPts": 152.6
+            },
+            {
+              "home": "Joshua",
+              "homePts": 72.3,
+              "away": "Justin",
+              "awayPts": 121.58
+            },
+            {
+              "home": "Luke",
+              "homePts": 147.78,
+              "away": "Aiden",
+              "awayPts": 115.4
+            },
+            {
+              "home": "Matthew",
+              "homePts": 129.04,
+              "away": "Ulises",
+              "awayPts": 126.76
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "numTeams": 8,
+      "champion": "Sean",
+      "sacko": "Howard",
+      "playoffCutoff": 4,
+      "standings": [
+        {
+          "manager": "Luke",
+          "team": "The Crooglefuggs",
+          "regularSeasonRank": 1,
+          "playoffRank": 2,
+          "wins": 8,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1868.62,
+          "pointsAgainst": 1722.46,
+          "moves": 15,
+          "trades": 3,
+          "draftPosition": 8,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Matthew",
+          "team": "Nelk Brothers",
+          "regularSeasonRank": 2,
+          "playoffRank": 4,
+          "wins": 8,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1836.96,
+          "pointsAgainst": 1936.16,
+          "moves": 49,
+          "trades": 4,
+          "draftPosition": 1,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Alex",
+          "team": "Team Cruz",
+          "regularSeasonRank": 3,
+          "playoffRank": 7,
+          "wins": 7,
+          "losses": 8,
+          "ties": 0,
+          "pointsFor": 2039.02,
+          "pointsAgainst": 2003.56,
+          "moves": 29,
+          "trades": 6,
+          "draftPosition": 2,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Joshua",
+          "team": "Bad news bombers",
+          "regularSeasonRank": 4,
+          "playoffRank": 5,
+          "wins": 4,
+          "losses": 11,
+          "ties": 0,
+          "pointsFor": 1746.4,
+          "pointsAgainst": 2040.94,
+          "moves": 11,
+          "trades": 3,
+          "draftPosition": 6,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Sean",
+          "team": "Houston Stars",
+          "regularSeasonRank": 1,
+          "playoffRank": 1,
+          "wins": 11,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 1975.22,
+          "pointsAgainst": 1681.74,
+          "moves": 47,
+          "trades": 2,
+          "draftPosition": 4,
+          "madePlayoffs": true,
+          "champion": true,
+          "sacko": false
+        },
+        {
+          "manager": "Justin",
+          "team": "Team Buzz",
+          "regularSeasonRank": 2,
+          "playoffRank": 3,
+          "wins": 10,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 2019.96,
+          "pointsAgainst": 1869.4,
+          "moves": 15,
+          "trades": 1,
+          "draftPosition": 3,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Aiden",
+          "team": "Beefcakes",
+          "regularSeasonRank": 3,
+          "playoffRank": 6,
+          "wins": 6,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1827.52,
+          "pointsAgainst": 1945.98,
+          "moves": 13,
+          "trades": 2,
+          "draftPosition": 5,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Howard",
+          "team": "beaners",
+          "regularSeasonRank": 4,
+          "playoffRank": 8,
+          "wins": 6,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1806.34,
+          "pointsAgainst": 1919.8,
+          "moves": 25,
+          "trades": 1,
+          "draftPosition": 7,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": true
+        }
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 158.28,
+              "away": "Joshua",
+              "awayPts": 121.76
+            },
+            {
+              "home": "Justin",
+              "homePts": 126.14,
+              "away": "Aiden",
+              "awayPts": 125.38
+            },
+            {
+              "home": "Luke",
+              "homePts": 97.82,
+              "away": "Matthew",
+              "awayPts": 108.44
+            },
+            {
+              "home": "Howard",
+              "homePts": 79.42,
+              "away": "Sean",
+              "awayPts": 131.72
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 83.26,
+              "away": "Luke",
+              "awayPts": 137.32
+            },
+            {
+              "home": "Joshua",
+              "homePts": 139.7,
+              "away": "Matthew",
+              "awayPts": 108.54
+            },
+            {
+              "home": "Justin",
+              "homePts": 162.5,
+              "away": "Howard",
+              "awayPts": 112.74
+            },
+            {
+              "home": "Aiden",
+              "homePts": 112.96,
+              "away": "Sean",
+              "awayPts": 108.68
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 119.22,
+              "away": "Matthew",
+              "awayPts": 161.58
+            },
+            {
+              "home": "Joshua",
+              "homePts": 125.36,
+              "away": "Luke",
+              "awayPts": 116.24
+            },
+            {
+              "home": "Justin",
+              "homePts": 91.82,
+              "away": "Sean",
+              "awayPts": 125.68
+            },
+            {
+              "home": "Aiden",
+              "homePts": 82.88,
+              "away": "Howard",
+              "awayPts": 149.1
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 95.7,
+              "away": "Justin",
+              "awayPts": 134.4
+            },
+            {
+              "home": "Joshua",
+              "homePts": 76.78,
+              "away": "Aiden",
+              "awayPts": 133.6
+            },
+            {
+              "home": "Luke",
+              "homePts": 157.6,
+              "away": "Howard",
+              "awayPts": 160.32
+            },
+            {
+              "home": "Matthew",
+              "homePts": 103.1,
+              "away": "Sean",
+              "awayPts": 122.34
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 128.84,
+              "away": "Sean",
+              "awayPts": 131.12
+            },
+            {
+              "home": "Joshua",
+              "homePts": 91.66,
+              "away": "Justin",
+              "awayPts": 132.8
+            },
+            {
+              "home": "Luke",
+              "homePts": 93.16,
+              "away": "Aiden",
+              "awayPts": 105.56
+            },
+            {
+              "home": "Matthew",
+              "homePts": 111.78,
+              "away": "Howard",
+              "awayPts": 170.42
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 113.5,
+              "away": "Howard",
+              "awayPts": 127.26
+            },
+            {
+              "home": "Joshua",
+              "homePts": 98.72,
+              "away": "Sean",
+              "awayPts": 164.72
+            },
+            {
+              "home": "Justin",
+              "homePts": 97.6,
+              "away": "Luke",
+              "awayPts": 121.06
+            },
+            {
+              "home": "Matthew",
+              "homePts": 123.72,
+              "away": "Aiden",
+              "awayPts": 101.7
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 149.52,
+              "away": "Aiden",
+              "awayPts": 113.44
+            },
+            {
+              "home": "Joshua",
+              "homePts": 114.94,
+              "away": "Howard",
+              "awayPts": 119.24
+            },
+            {
+              "home": "Justin",
+              "homePts": 122.4,
+              "away": "Matthew",
+              "awayPts": 105.88
+            },
+            {
+              "home": "Luke",
+              "homePts": 93.26,
+              "away": "Sean",
+              "awayPts": 142.34
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 139.82,
+              "away": "Joshua",
+              "awayPts": 114.58
+            },
+            {
+              "home": "Justin",
+              "homePts": 174.3,
+              "away": "Aiden",
+              "awayPts": 137.8
+            },
+            {
+              "home": "Luke",
+              "homePts": 108.94,
+              "away": "Matthew",
+              "awayPts": 123.22
+            },
+            {
+              "home": "Howard",
+              "homePts": 106.18,
+              "away": "Sean",
+              "awayPts": 135.06
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 109.3,
+              "away": "Luke",
+              "awayPts": 123.7
+            },
+            {
+              "home": "Joshua",
+              "homePts": 159.84,
+              "away": "Matthew",
+              "awayPts": 100.5
+            },
+            {
+              "home": "Justin",
+              "homePts": 169.1,
+              "away": "Howard",
+              "awayPts": 108.86
+            },
+            {
+              "home": "Aiden",
+              "homePts": 101.9,
+              "away": "Sean",
+              "awayPts": 122.1
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 125.7,
+              "away": "Matthew",
+              "awayPts": 130.62
+            },
+            {
+              "home": "Joshua",
+              "homePts": 116.62,
+              "away": "Luke",
+              "awayPts": 119.08
+            },
+            {
+              "home": "Justin",
+              "homePts": 100.84,
+              "away": "Sean",
+              "awayPts": 152.6
+            },
+            {
+              "home": "Aiden",
+              "homePts": 160.24,
+              "away": "Howard",
+              "awayPts": 126.14
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 165.08,
+              "away": "Justin",
+              "awayPts": 142.38
+            },
+            {
+              "home": "Joshua",
+              "homePts": 89.44,
+              "away": "Aiden",
+              "awayPts": 160.54
+            },
+            {
+              "home": "Luke",
+              "homePts": 130.34,
+              "away": "Howard",
+              "awayPts": 98.74
+            },
+            {
+              "home": "Matthew",
+              "homePts": 148.76,
+              "away": "Sean",
+              "awayPts": 112.98
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 170.42,
+              "away": "Sean",
+              "awayPts": 123.08
+            },
+            {
+              "home": "Joshua",
+              "homePts": 124.56,
+              "away": "Justin",
+              "awayPts": 152.26
+            },
+            {
+              "home": "Luke",
+              "homePts": 135.56,
+              "away": "Aiden",
+              "awayPts": 96.2
+            },
+            {
+              "home": "Matthew",
+              "homePts": 83.36,
+              "away": "Howard",
+              "awayPts": 136.8
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 136.92,
+              "away": "Howard",
+              "awayPts": 124.5
+            },
+            {
+              "home": "Joshua",
+              "homePts": 118.04,
+              "away": "Sean",
+              "awayPts": 161.08
+            },
+            {
+              "home": "Justin",
+              "homePts": 127.3,
+              "away": "Luke",
+              "awayPts": 115.82
+            },
+            {
+              "home": "Matthew",
+              "homePts": 142.24,
+              "away": "Aiden",
+              "awayPts": 114.2
+            }
+          ]
+        },
+        {
+          "week": 14,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 171.38,
+              "away": "Aiden",
+              "awayPts": 172.08
+            },
+            {
+              "home": "Joshua",
+              "homePts": 108.66,
+              "away": "Howard",
+              "awayPts": 102.16
+            },
+            {
+              "home": "Justin",
+              "homePts": 128.4,
+              "away": "Matthew",
+              "awayPts": 177.54
+            },
+            {
+              "home": "Luke",
+              "homePts": 143.02,
+              "away": "Sean",
+              "awayPts": 120.52
+            }
+          ]
+        },
+        {
+          "week": 15,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 172.08,
+              "away": "Joshua",
+              "awayPts": 145.74
+            },
+            {
+              "home": "Justin",
+              "homePts": 157.72,
+              "away": "Aiden",
+              "awayPts": 109.04
+            },
+            {
+              "home": "Luke",
+              "homePts": 175.7,
+              "away": "Matthew",
+              "awayPts": 107.68
+            },
+            {
+              "home": "Howard",
+              "homePts": 84.46,
+              "away": "Sean",
+              "awayPts": 121.2
+            }
+          ]
+        },
+        {
+          "week": 16,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 124.46,
+              "away": "Joshua",
+              "awayPts": 138.78
+            },
+            {
+              "home": "Justin",
+              "homePts": 121.62,
+              "away": "Luke",
+              "awayPts": 125.54
+            },
+            {
+              "home": "Matthew",
+              "homePts": 135.04,
+              "away": "Sean",
+              "awayPts": 172.68
+            },
+            {
+              "home": "Aiden",
+              "homePts": 157.94,
+              "away": "Howard",
+              "awayPts": 140.42
+            }
+          ]
+        },
+        {
+          "week": 17,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 171.78,
+              "away": "Howard",
+              "awayPts": 163.88
+            },
+            {
+              "home": "Joshua",
+              "homePts": 124.08,
+              "away": "Aiden",
+              "awayPts": 112.78
+            },
+            {
+              "home": "Justin",
+              "homePts": 129.76,
+              "away": "Matthew",
+              "awayPts": 110.66
+            },
+            {
+              "home": "Luke",
+              "homePts": 106.6,
+              "away": "Sean",
+              "awayPts": 211.02
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "numTeams": 10,
+      "champion": "Ulises",
+      "sacko": "Howard",
+      "playoffCutoff": 5,
+      "standings": [
+        {
+          "manager": "Ulises",
+          "team": "The Booty Clappers",
+          "regularSeasonRank": 1,
+          "playoffRank": 1,
+          "wins": 10,
+          "losses": 5,
+          "ties": 0,
+          "pointsFor": 1879.26,
+          "pointsAgainst": 1778.46,
+          "moves": 16,
+          "trades": 0,
+          "draftPosition": 6,
+          "madePlayoffs": true,
+          "champion": true,
+          "sacko": false
+        },
+        {
+          "manager": "Sean",
+          "team": "Houston Stars",
+          "regularSeasonRank": 2,
+          "playoffRank": 3,
+          "wins": 9,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1944.6,
+          "pointsAgainst": 1812.66,
+          "moves": 39,
+          "trades": 3,
+          "draftPosition": 4,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Luke",
+          "team": "The Crooglefuggs",
+          "regularSeasonRank": 3,
+          "playoffRank": 6,
+          "wins": 8,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1908.26,
+          "pointsAgainst": 1816.22,
+          "moves": 15,
+          "trades": 2,
+          "draftPosition": 9,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Aiden",
+          "team": "Beefcakes",
+          "regularSeasonRank": 4,
+          "playoffRank": 8,
+          "wins": 6,
+          "losses": 9,
+          "ties": 0,
+          "pointsFor": 1616.32,
+          "pointsAgainst": 1771.16,
+          "moves": 10,
+          "trades": 5,
+          "draftPosition": 10,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Joshua",
+          "team": "Bad news bombers",
+          "regularSeasonRank": 5,
+          "playoffRank": 9,
+          "wins": 3,
+          "losses": 12,
+          "ties": 0,
+          "pointsFor": 1524.1,
+          "pointsAgainst": 1741.94,
+          "moves": 17,
+          "trades": 5,
+          "draftPosition": 1,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Alex",
+          "team": "Team Cruz",
+          "regularSeasonRank": 1,
+          "playoffRank": 4,
+          "wins": 11,
+          "losses": 4,
+          "ties": 0,
+          "pointsFor": 1812.52,
+          "pointsAgainst": 1612.94,
+          "moves": 38,
+          "trades": 6,
+          "draftPosition": 5,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Justin",
+          "team": "Team Buzz",
+          "regularSeasonRank": 2,
+          "playoffRank": 2,
+          "wins": 9,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1772.08,
+          "pointsAgainst": 1675.12,
+          "moves": 32,
+          "trades": 2,
+          "draftPosition": 3,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Todd",
+          "team": "Wet Grandma",
+          "regularSeasonRank": 3,
+          "playoffRank": 5,
+          "wins": 9,
+          "losses": 6,
+          "ties": 0,
+          "pointsFor": 1738.46,
+          "pointsAgainst": 1691.44,
+          "moves": 29,
+          "trades": 2,
+          "draftPosition": 2,
+          "madePlayoffs": true,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Matthew",
+          "team": "Mr Locked In",
+          "regularSeasonRank": 4,
+          "playoffRank": 7,
+          "wins": 8,
+          "losses": 7,
+          "ties": 0,
+          "pointsFor": 1913.5,
+          "pointsAgainst": 1842.16,
+          "moves": 42,
+          "trades": 7,
+          "draftPosition": 8,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": false
+        },
+        {
+          "manager": "Howard",
+          "team": "beaners",
+          "regularSeasonRank": 5,
+          "playoffRank": 10,
+          "wins": 2,
+          "losses": 13,
+          "ties": 0,
+          "pointsFor": 1572.36,
+          "pointsAgainst": 1939.36,
+          "moves": 41,
+          "trades": 4,
+          "draftPosition": 7,
+          "madePlayoffs": false,
+          "champion": false,
+          "sacko": true
+        }
+      ],
+      "weeks": [
+        {
+          "week": 1,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 105.46,
+              "away": "Joshua",
+              "awayPts": 70.86
+            },
+            {
+              "home": "Justin",
+              "homePts": 85.42,
+              "away": "Todd",
+              "awayPts": 99.28
+            },
+            {
+              "home": "Luke",
+              "homePts": 117.32,
+              "away": "Ulises",
+              "awayPts": 104.22
+            },
+            {
+              "home": "Matthew",
+              "homePts": 133.88,
+              "away": "Howard",
+              "awayPts": 121.82
+            },
+            {
+              "home": "Aiden",
+              "homePts": 132.62,
+              "away": "Sean",
+              "awayPts": 113.56
+            }
+          ]
+        },
+        {
+          "week": 2,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 123.6,
+              "away": "Matthew",
+              "awayPts": 149.3
+            },
+            {
+              "home": "Joshua",
+              "homePts": 113.3,
+              "away": "Aiden",
+              "awayPts": 86.28
+            },
+            {
+              "home": "Justin",
+              "homePts": 110.68,
+              "away": "Luke",
+              "awayPts": 130.44
+            },
+            {
+              "home": "Howard",
+              "homePts": 109.9,
+              "away": "Todd",
+              "awayPts": 150.14
+            },
+            {
+              "home": "Sean",
+              "homePts": 109.52,
+              "away": "Ulises",
+              "awayPts": 155.68
+            }
+          ]
+        },
+        {
+          "week": 3,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 117.02,
+              "away": "Todd",
+              "awayPts": 87.54
+            },
+            {
+              "home": "Joshua",
+              "homePts": 103.14,
+              "away": "Ulises",
+              "awayPts": 127.3
+            },
+            {
+              "home": "Justin",
+              "homePts": 133.12,
+              "away": "Howard",
+              "awayPts": 53.76
+            },
+            {
+              "home": "Luke",
+              "homePts": 101.94,
+              "away": "Sean",
+              "awayPts": 141.22
+            },
+            {
+              "home": "Matthew",
+              "homePts": 126.52,
+              "away": "Aiden",
+              "awayPts": 101.06
+            }
+          ]
+        },
+        {
+          "week": 4,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 123.28,
+              "away": "Justin",
+              "awayPts": 127.54
+            },
+            {
+              "home": "Joshua",
+              "homePts": 114.78,
+              "away": "Luke",
+              "awayPts": 181.48
+            },
+            {
+              "home": "Matthew",
+              "homePts": 122.66,
+              "away": "Todd",
+              "awayPts": 112.9
+            },
+            {
+              "home": "Aiden",
+              "homePts": 98.3,
+              "away": "Ulises",
+              "awayPts": 120.42
+            },
+            {
+              "home": "Howard",
+              "homePts": 126.84,
+              "away": "Sean",
+              "awayPts": 135.06
+            }
+          ]
+        },
+        {
+          "week": 5,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 101.78,
+              "away": "Howard",
+              "awayPts": 132.42
+            },
+            {
+              "home": "Joshua",
+              "homePts": 124.24,
+              "away": "Sean",
+              "awayPts": 117.12
+            },
+            {
+              "home": "Justin",
+              "homePts": 152.62,
+              "away": "Matthew",
+              "awayPts": 126.16
+            },
+            {
+              "home": "Luke",
+              "homePts": 128.28,
+              "away": "Aiden",
+              "awayPts": 129.84
+            },
+            {
+              "home": "Todd",
+              "homePts": 110.3,
+              "away": "Ulises",
+              "awayPts": 158.14
+            }
+          ]
+        },
+        {
+          "week": 6,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 145.26,
+              "away": "Luke",
+              "awayPts": 95.64
+            },
+            {
+              "home": "Joshua",
+              "homePts": 102.54,
+              "away": "Todd",
+              "awayPts": 110.72
+            },
+            {
+              "home": "Justin",
+              "homePts": 94.8,
+              "away": "Aiden",
+              "awayPts": 157.6
+            },
+            {
+              "home": "Matthew",
+              "homePts": 116.54,
+              "away": "Sean",
+              "awayPts": 116.9
+            },
+            {
+              "home": "Howard",
+              "homePts": 93.24,
+              "away": "Ulises",
+              "awayPts": 122.56
+            }
+          ]
+        },
+        {
+          "week": 7,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 134.36,
+              "away": "Aiden",
+              "awayPts": 100.34
+            },
+            {
+              "home": "Joshua",
+              "homePts": 149.98,
+              "away": "Howard",
+              "awayPts": 113.54
+            },
+            {
+              "home": "Justin",
+              "homePts": 126.52,
+              "away": "Sean",
+              "awayPts": 127.36
+            },
+            {
+              "home": "Luke",
+              "homePts": 103.76,
+              "away": "Todd",
+              "awayPts": 124.92
+            },
+            {
+              "home": "Matthew",
+              "homePts": 127.72,
+              "away": "Ulises",
+              "awayPts": 166.3
+            }
+          ]
+        },
+        {
+          "week": 8,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 112.12,
+              "away": "Sean",
+              "awayPts": 86.52
+            },
+            {
+              "home": "Joshua",
+              "homePts": 115.78,
+              "away": "Matthew",
+              "awayPts": 126.68
+            },
+            {
+              "home": "Justin",
+              "homePts": 151.28,
+              "away": "Ulises",
+              "awayPts": 121.08
+            },
+            {
+              "home": "Luke",
+              "homePts": 124.92,
+              "away": "Howard",
+              "awayPts": 123.04
+            },
+            {
+              "home": "Aiden",
+              "homePts": 103.36,
+              "away": "Todd",
+              "awayPts": 139.72
+            }
+          ]
+        },
+        {
+          "week": 9,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 132.96,
+              "away": "Ulises",
+              "awayPts": 114.8
+            },
+            {
+              "home": "Joshua",
+              "homePts": 102.02,
+              "away": "Sean",
+              "awayPts": 112.52
+            },
+            {
+              "home": "Justin",
+              "homePts": 97.88,
+              "away": "Todd",
+              "awayPts": 79.14
+            },
+            {
+              "home": "Luke",
+              "homePts": 145.4,
+              "away": "Aiden",
+              "awayPts": 115.6
+            },
+            {
+              "home": "Matthew",
+              "homePts": 162.72,
+              "away": "Howard",
+              "awayPts": 84.56
+            }
+          ]
+        },
+        {
+          "week": 10,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 155.24,
+              "away": "Matthew",
+              "awayPts": 120.72
+            },
+            {
+              "home": "Joshua",
+              "homePts": 100.1,
+              "away": "Justin",
+              "awayPts": 118.52
+            },
+            {
+              "home": "Luke",
+              "homePts": 111.5,
+              "away": "Ulises",
+              "awayPts": 111.7
+            },
+            {
+              "home": "Aiden",
+              "homePts": 120.4,
+              "away": "Sean",
+              "awayPts": 150.14
+            },
+            {
+              "home": "Howard",
+              "homePts": 121.8,
+              "away": "Todd",
+              "awayPts": 139.88
+            }
+          ]
+        },
+        {
+          "week": 11,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 120.82,
+              "away": "Todd",
+              "awayPts": 102.8
+            },
+            {
+              "home": "Joshua",
+              "homePts": 74.7,
+              "away": "Aiden",
+              "awayPts": 77.04
+            },
+            {
+              "home": "Justin",
+              "homePts": 104.36,
+              "away": "Howard",
+              "awayPts": 93.54
+            },
+            {
+              "home": "Luke",
+              "homePts": 122.52,
+              "away": "Matthew",
+              "awayPts": 103.9
+            },
+            {
+              "home": "Sean",
+              "homePts": 185.08,
+              "away": "Ulises",
+              "awayPts": 98.44
+            }
+          ]
+        },
+        {
+          "week": 12,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 104.22,
+              "away": "Justin",
+              "awayPts": 83.34
+            },
+            {
+              "home": "Joshua",
+              "homePts": 108.32,
+              "away": "Ulises",
+              "awayPts": 120.82
+            },
+            {
+              "home": "Luke",
+              "homePts": 150.56,
+              "away": "Sean",
+              "awayPts": 162.02
+            },
+            {
+              "home": "Matthew",
+              "homePts": 159.94,
+              "away": "Todd",
+              "awayPts": 105.18
+            },
+            {
+              "home": "Aiden",
+              "homePts": 98.58,
+              "away": "Howard",
+              "awayPts": 92.46
+            }
+          ]
+        },
+        {
+          "week": 13,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 82.74,
+              "away": "Howard",
+              "awayPts": 120.08
+            },
+            {
+              "home": "Joshua",
+              "homePts": 74.04,
+              "away": "Luke",
+              "awayPts": 117.7
+            },
+            {
+              "home": "Justin",
+              "homePts": 141.06,
+              "away": "Matthew",
+              "awayPts": 109.96
+            },
+            {
+              "home": "Aiden",
+              "homePts": 91.24,
+              "away": "Ulises",
+              "awayPts": 115.84
+            },
+            {
+              "home": "Sean",
+              "homePts": 105.12,
+              "away": "Todd",
+              "awayPts": 105.7
+            }
+          ]
+        },
+        {
+          "week": 14,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 105.56,
+              "away": "Joshua",
+              "awayPts": 87.18
+            },
+            {
+              "home": "Justin",
+              "homePts": 106.9,
+              "away": "Luke",
+              "awayPts": 142.94
+            },
+            {
+              "home": "Matthew",
+              "homePts": 83.62,
+              "away": "Aiden",
+              "awayPts": 97.8
+            },
+            {
+              "home": "Howard",
+              "homePts": 95.86,
+              "away": "Sean",
+              "awayPts": 157.64
+            },
+            {
+              "home": "Todd",
+              "homePts": 149.04,
+              "away": "Ulises",
+              "awayPts": 99.96
+            }
+          ]
+        },
+        {
+          "week": 15,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 148.1,
+              "away": "Luke",
+              "awayPts": 133.86
+            },
+            {
+              "home": "Joshua",
+              "homePts": 83.12,
+              "away": "Todd",
+              "awayPts": 121.2
+            },
+            {
+              "home": "Justin",
+              "homePts": 138.04,
+              "away": "Aiden",
+              "awayPts": 106.26
+            },
+            {
+              "home": "Matthew",
+              "homePts": 143.18,
+              "away": "Sean",
+              "awayPts": 124.82
+            },
+            {
+              "home": "Howard",
+              "homePts": 89.5,
+              "away": "Ulises",
+              "awayPts": 142.0
+            }
+          ]
+        },
+        {
+          "week": 16,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 78.14,
+              "away": "Justin",
+              "awayPts": 111.86
+            },
+            {
+              "home": "Luke",
+              "homePts": 177.96,
+              "away": "Matthew",
+              "awayPts": 148.9
+            },
+            {
+              "home": "Aiden",
+              "homePts": 96.06,
+              "away": "Todd",
+              "awayPts": 153.5
+            },
+            {
+              "home": "Sean",
+              "homePts": 142.8,
+              "away": "Ulises",
+              "awayPts": 146.6
+            }
+          ]
+        },
+        {
+          "week": 17,
+          "matchups": [
+            {
+              "home": "Alex",
+              "homePts": 98.22,
+              "away": "Sean",
+              "awayPts": 102.48
+            },
+            {
+              "home": "Justin",
+              "homePts": 109.32,
+              "away": "Ulises",
+              "awayPts": 151.72
+            },
+            {
+              "home": "Luke",
+              "homePts": 89.48,
+              "away": "Todd",
+              "awayPts": 145.1
+            },
+            {
+              "home": "Matthew",
+              "homePts": 169.44,
+              "away": "Aiden",
+              "awayPts": 60.88
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "owners": [
+    {
+      "name": "Justin",
+      "seasons": 7,
+      "wins": 58,
+      "losses": 45,
+      "ties": 0,
+      "pointsFor": 12889.42,
+      "pointsAgainst": 12572.64,
+      "moves": 168,
+      "trades": 9,
+      "championships": 0,
+      "playoffs": 5,
+      "sackos": 1,
+      "finishes": [
+        {
+          "year": 2019,
+          "rank": 2,
+          "numTeams": 8
+        },
+        {
+          "year": 2020,
+          "rank": 4,
+          "numTeams": 8
+        },
+        {
+          "year": 2021,
+          "rank": 8,
+          "numTeams": 8
+        },
+        {
+          "year": 2022,
+          "rank": 4,
+          "numTeams": 8
+        },
+        {
+          "year": 2023,
+          "rank": 7,
+          "numTeams": 8
+        },
+        {
+          "year": 2024,
+          "rank": 3,
+          "numTeams": 8
+        },
+        {
+          "year": 2025,
+          "rank": 2,
+          "numTeams": 10
+        }
+      ],
+      "regSeasonFinishes": [
+        {
+          "year": 2019,
+          "rank": 1
+        },
+        {
+          "year": 2020,
+          "rank": 2
+        },
+        {
+          "year": 2021,
+          "rank": 3
+        },
+        {
+          "year": 2022,
+          "rank": 2
+        },
+        {
+          "year": 2023,
+          "rank": 2
+        },
+        {
+          "year": 2024,
+          "rank": 2
+        },
+        {
+          "year": 2025,
+          "rank": 2
+        }
+      ],
+      "seasonsPlayed": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "teamNames": [
+        {
+          "year": 2019,
+          "team": "Team Justin"
+        },
+        {
+          "year": 2020,
+          "team": "Team Justin"
+        },
+        {
+          "year": 2021,
+          "team": "Team Justin"
+        },
+        {
+          "year": 2022,
+          "team": "Team Buzz"
+        },
+        {
+          "year": 2023,
+          "team": "Team Buzz"
+        },
+        {
+          "year": 2024,
+          "team": "Team Buzz"
+        },
+        {
+          "year": 2025,
+          "team": "Team Buzz"
+        }
+      ],
+      "draftPositions": [
+        {
+          "year": 2019,
+          "pick": 2
+        },
+        {
+          "year": 2020,
+          "pick": 4
+        },
+        {
+          "year": 2021,
+          "pick": 4
+        },
+        {
+          "year": 2022,
+          "pick": 3
+        },
+        {
+          "year": 2023,
+          "pick": 2
+        },
+        {
+          "year": 2024,
+          "pick": 3
+        },
+        {
+          "year": 2025,
+          "pick": 3
+        }
+      ],
+      "games": 103,
+      "winPct": 0.5631,
+      "avgPointsPerGame": 125.14,
+      "avgPointsAgainstPerGame": 122.06,
+      "avgFinish": 4.29,
+      "bestFinish": 2,
+      "worstFinish": 8
+    },
+    {
+      "name": "Alex",
+      "seasons": 7,
+      "wins": 65,
+      "losses": 38,
+      "ties": 0,
+      "pointsFor": 13315.28,
+      "pointsAgainst": 12308.5,
+      "moves": 224,
+      "trades": 18,
+      "championships": 1,
+      "playoffs": 5,
+      "sackos": 0,
+      "finishes": [
+        {
+          "year": 2019,
+          "rank": 1,
+          "numTeams": 8
+        },
+        {
+          "year": 2020,
+          "rank": 5,
+          "numTeams": 8
+        },
+        {
+          "year": 2021,
+          "rank": 4,
+          "numTeams": 8
+        },
+        {
+          "year": 2022,
+          "rank": 3,
+          "numTeams": 8
+        },
+        {
+          "year": 2023,
+          "rank": 4,
+          "numTeams": 8
+        },
+        {
+          "year": 2024,
+          "rank": 7,
+          "numTeams": 8
+        },
+        {
+          "year": 2025,
+          "rank": 4,
+          "numTeams": 10
+        }
+      ],
+      "regSeasonFinishes": [
+        {
+          "year": 2019,
+          "rank": 2
+        },
+        {
+          "year": 2020,
+          "rank": 4
+        },
+        {
+          "year": 2021,
+          "rank": 1
+        },
+        {
+          "year": 2022,
+          "rank": 1
+        },
+        {
+          "year": 2023,
+          "rank": 2
+        },
+        {
+          "year": 2024,
+          "rank": 3
+        },
+        {
+          "year": 2025,
+          "rank": 1
+        }
+      ],
+      "seasonsPlayed": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "teamNames": [
+        {
+          "year": 2019,
+          "team": "Team GOAT"
+        },
+        {
+          "year": 2020,
+          "team": "Team Cruz"
+        },
+        {
+          "year": 2021,
+          "team": "Team Cruz"
+        },
+        {
+          "year": 2022,
+          "team": "Team GOAT"
+        },
+        {
+          "year": 2023,
+          "team": "Team GOAT"
+        },
+        {
+          "year": 2024,
+          "team": "Team Cruz"
+        },
+        {
+          "year": 2025,
+          "team": "Team Cruz"
+        }
+      ],
+      "draftPositions": [
+        {
+          "year": 2019,
+          "pick": 1
+        },
+        {
+          "year": 2020,
+          "pick": 8
+        },
+        {
+          "year": 2021,
+          "pick": 3
+        },
+        {
+          "year": 2022,
+          "pick": 1
+        },
+        {
+          "year": 2023,
+          "pick": 7
+        },
+        {
+          "year": 2024,
+          "pick": 2
+        },
+        {
+          "year": 2025,
+          "pick": 5
+        }
+      ],
+      "games": 103,
+      "winPct": 0.6311,
+      "avgPointsPerGame": 129.27,
+      "avgPointsAgainstPerGame": 119.5,
+      "avgFinish": 4.0,
+      "bestFinish": 1,
+      "worstFinish": 7
+    },
+    {
+      "name": "Howard",
+      "seasons": 7,
+      "wins": 40,
+      "losses": 63,
+      "ties": 0,
+      "pointsFor": 11757.0,
+      "pointsAgainst": 12859.5,
+      "moves": 290,
+      "trades": 27,
+      "championships": 0,
+      "playoffs": 2,
+      "sackos": 2,
+      "finishes": [
+        {
+          "year": 2019,
+          "rank": 6,
+          "numTeams": 8
+        },
+        {
+          "year": 2020,
+          "rank": 3,
+          "numTeams": 8
+        },
+        {
+          "year": 2021,
+          "rank": 6,
+          "numTeams": 8
+        },
+        {
+          "year": 2022,
+          "rank": 7,
+          "numTeams": 8
+        },
+        {
+          "year": 2023,
+          "rank": 3,
+          "numTeams": 8
+        },
+        {
+          "year": 2024,
+          "rank": 8,
+          "numTeams": 8
+        },
+        {
+          "year": 2025,
+          "rank": 10,
+          "numTeams": 10
+        }
+      ],
+      "regSeasonFinishes": [
+        {
+          "year": 2019,
+          "rank": 3
+        },
+        {
+          "year": 2020,
+          "rank": 3
+        },
+        {
+          "year": 2021,
+          "rank": 4
+        },
+        {
+          "year": 2022,
+          "rank": 4
+        },
+        {
+          "year": 2023,
+          "rank": 3
+        },
+        {
+          "year": 2024,
+          "rank": 4
+        },
+        {
+          "year": 2025,
+          "rank": 5
+        }
+      ],
+      "seasonsPlayed": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "teamNames": [
+        {
+          "year": 2019,
+          "team": "beaners"
+        },
+        {
+          "year": 2020,
+          "team": "beaners"
+        },
+        {
+          "year": 2021,
+          "team": "beaners"
+        },
+        {
+          "year": 2022,
+          "team": "beaners"
+        },
+        {
+          "year": 2023,
+          "team": "beaners"
+        },
+        {
+          "year": 2024,
+          "team": "beaners"
+        },
+        {
+          "year": 2025,
+          "team": "beaners"
+        }
+      ],
+      "draftPositions": [
+        {
+          "year": 2019,
+          "pick": 7
+        },
+        {
+          "year": 2020,
+          "pick": 1
+        },
+        {
+          "year": 2021,
+          "pick": 7
+        },
+        {
+          "year": 2022,
+          "pick": 7
+        },
+        {
+          "year": 2023,
+          "pick": 4
+        },
+        {
+          "year": 2024,
+          "pick": 7
+        },
+        {
+          "year": 2025,
+          "pick": 7
+        }
+      ],
+      "games": 103,
+      "winPct": 0.3883,
+      "avgPointsPerGame": 114.15,
+      "avgPointsAgainstPerGame": 124.85,
+      "avgFinish": 6.14,
+      "bestFinish": 3,
+      "worstFinish": 10
+    },
+    {
+      "name": "Ethan",
+      "seasons": 1,
+      "wins": 2,
+      "losses": 12,
+      "ties": 0,
+      "pointsFor": 1307.8,
+      "pointsAgainst": 1713.8,
+      "moves": 0,
+      "trades": 0,
+      "championships": 0,
+      "playoffs": 0,
+      "sackos": 0,
+      "finishes": [
+        {
+          "year": 2019,
+          "rank": 7,
+          "numTeams": 8
+        }
+      ],
+      "regSeasonFinishes": [
+        {
+          "year": 2019,
+          "rank": 4
+        }
+      ],
+      "seasonsPlayed": [
+        2019
+      ],
+      "teamNames": [
+        {
+          "year": 2019,
+          "team": "Scummy wummy"
+        }
+      ],
+      "draftPositions": [
+        {
+          "year": 2019,
+          "pick": 5
+        }
+      ],
+      "games": 14,
+      "winPct": 0.1429,
+      "avgPointsPerGame": 93.41,
+      "avgPointsAgainstPerGame": 122.41,
+      "avgFinish": 7.0,
+      "bestFinish": 7,
+      "worstFinish": 7
+    },
+    {
+      "name": "Aiden",
+      "seasons": 7,
+      "wins": 44,
+      "losses": 59,
+      "ties": 0,
+      "pointsFor": 12440.3,
+      "pointsAgainst": 12953.32,
+      "moves": 80,
+      "trades": 15,
+      "championships": 1,
+      "playoffs": 2,
+      "sackos": 1,
+      "finishes": [
+        {
+          "year": 2019,
+          "rank": 3,
+          "numTeams": 8
+        },
+        {
+          "year": 2020,
+          "rank": 1,
+          "numTeams": 8
+        },
+        {
+          "year": 2021,
+          "rank": 7,
+          "numTeams": 8
+        },
+        {
+          "year": 2022,
+          "rank": 8,
+          "numTeams": 8
+        },
+        {
+          "year": 2023,
+          "rank": 6,
+          "numTeams": 8
+        },
+        {
+          "year": 2024,
+          "rank": 6,
+          "numTeams": 8
+        },
+        {
+          "year": 2025,
+          "rank": 8,
+          "numTeams": 10
+        }
+      ],
+      "regSeasonFinishes": [
+        {
+          "year": 2019,
+          "rank": 1
+        },
+        {
+          "year": 2020,
+          "rank": 1
+        },
+        {
+          "year": 2021,
+          "rank": 4
+        },
+        {
+          "year": 2022,
+          "rank": 4
+        },
+        {
+          "year": 2023,
+          "rank": 4
+        },
+        {
+          "year": 2024,
+          "rank": 3
+        },
+        {
+          "year": 2025,
+          "rank": 4
+        }
+      ],
+      "seasonsPlayed": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "teamNames": [
+        {
+          "year": 2019,
+          "team": "Beefcakes"
+        },
+        {
+          "year": 2020,
+          "team": "Beefcakes"
+        },
+        {
+          "year": 2021,
+          "team": "Beefcakes"
+        },
+        {
+          "year": 2022,
+          "team": "Beefcakes"
+        },
+        {
+          "year": 2023,
+          "team": "Beefcakes"
+        },
+        {
+          "year": 2024,
+          "team": "Beefcakes"
+        },
+        {
+          "year": 2025,
+          "team": "Beefcakes"
+        }
+      ],
+      "draftPositions": [
+        {
+          "year": 2019,
+          "pick": 6
+        },
+        {
+          "year": 2020,
+          "pick": 6
+        },
+        {
+          "year": 2021,
+          "pick": 6
+        },
+        {
+          "year": 2022,
+          "pick": 6
+        },
+        {
+          "year": 2023,
+          "pick": 3
+        },
+        {
+          "year": 2024,
+          "pick": 5
+        },
+        {
+          "year": 2025,
+          "pick": 10
+        }
+      ],
+      "games": 103,
+      "winPct": 0.4272,
+      "avgPointsPerGame": 120.78,
+      "avgPointsAgainstPerGame": 125.76,
+      "avgFinish": 5.57,
+      "bestFinish": 1,
+      "worstFinish": 8
+    },
+    {
+      "name": "Ulises",
+      "seasons": 6,
+      "wins": 50,
+      "losses": 38,
+      "ties": 0,
+      "pointsFor": 11072.0,
+      "pointsAgainst": 10701.34,
+      "moves": 159,
+      "trades": 11,
+      "championships": 3,
+      "playoffs": 5,
+      "sackos": 0,
+      "finishes": [
+        {
+          "year": 2019,
+          "rank": 4,
+          "numTeams": 8
+        },
+        {
+          "year": 2020,
+          "rank": 7,
+          "numTeams": 8
+        },
+        {
+          "year": 2021,
+          "rank": 1,
+          "numTeams": 8
+        },
+        {
+          "year": 2022,
+          "rank": 1,
+          "numTeams": 8
+        },
+        {
+          "year": 2023,
+          "rank": 2,
+          "numTeams": 8
+        },
+        {
+          "year": 2025,
+          "rank": 1,
+          "numTeams": 10
+        }
+      ],
+      "regSeasonFinishes": [
+        {
+          "year": 2019,
+          "rank": 2
+        },
+        {
+          "year": 2020,
+          "rank": 3
+        },
+        {
+          "year": 2021,
+          "rank": 2
+        },
+        {
+          "year": 2022,
+          "rank": 2
+        },
+        {
+          "year": 2023,
+          "rank": 1
+        },
+        {
+          "year": 2025,
+          "rank": 1
+        }
+      ],
+      "seasonsPlayed": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2025
+      ],
+      "teamNames": [
+        {
+          "year": 2019,
+          "team": "The Booty Clappers"
+        },
+        {
+          "year": 2020,
+          "team": "The Booty Clappers"
+        },
+        {
+          "year": 2021,
+          "team": "The Booty Clappers"
+        },
+        {
+          "year": 2022,
+          "team": "The Booty Clappers"
+        },
+        {
+          "year": 2023,
+          "team": "The Booty Clappers"
+        },
+        {
+          "year": 2025,
+          "team": "The Booty Clappers"
+        }
+      ],
+      "draftPositions": [
+        {
+          "year": 2019,
+          "pick": 3
+        },
+        {
+          "year": 2020,
+          "pick": 5
+        },
+        {
+          "year": 2021,
+          "pick": 5
+        },
+        {
+          "year": 2022,
+          "pick": 8
+        },
+        {
+          "year": 2023,
+          "pick": 1
+        },
+        {
+          "year": 2025,
+          "pick": 6
+        }
+      ],
+      "games": 88,
+      "winPct": 0.5682,
+      "avgPointsPerGame": 125.82,
+      "avgPointsAgainstPerGame": 121.61,
+      "avgFinish": 2.67,
+      "bestFinish": 1,
+      "worstFinish": 7
+    },
+    {
+      "name": "Sean",
+      "seasons": 5,
+      "wins": 39,
+      "losses": 34,
+      "ties": 0,
+      "pointsFor": 9250.98,
+      "pointsAgainst": 8895.14,
+      "moves": 257,
+      "trades": 17,
+      "championships": 1,
+      "playoffs": 3,
+      "sackos": 2,
+      "finishes": [
+        {
+          "year": 2019,
+          "rank": 8,
+          "numTeams": 8
+        },
+        {
+          "year": 2020,
+          "rank": 8,
+          "numTeams": 8
+        },
+        {
+          "year": 2021,
+          "rank": 2,
+          "numTeams": 8
+        },
+        {
+          "year": 2024,
+          "rank": 1,
+          "numTeams": 8
+        },
+        {
+          "year": 2025,
+          "rank": 3,
+          "numTeams": 10
+        }
+      ],
+      "regSeasonFinishes": [
+        {
+          "year": 2019,
+          "rank": 3
+        },
+        {
+          "year": 2020,
+          "rank": 4
+        },
+        {
+          "year": 2021,
+          "rank": 1
+        },
+        {
+          "year": 2024,
+          "rank": 1
+        },
+        {
+          "year": 2025,
+          "rank": 2
+        }
+      ],
+      "seasonsPlayed": [
+        2019,
+        2020,
+        2021,
+        2024,
+        2025
+      ],
+      "teamNames": [
+        {
+          "year": 2019,
+          "team": "Houston Stars"
+        },
+        {
+          "year": 2020,
+          "team": "Houston Stars"
+        },
+        {
+          "year": 2021,
+          "team": "Houston Stars"
+        },
+        {
+          "year": 2024,
+          "team": "Houston Stars"
+        },
+        {
+          "year": 2025,
+          "team": "Houston Stars"
+        }
+      ],
+      "draftPositions": [
+        {
+          "year": 2019,
+          "pick": 8
+        },
+        {
+          "year": 2020,
+          "pick": 2
+        },
+        {
+          "year": 2021,
+          "pick": 1
+        },
+        {
+          "year": 2024,
+          "pick": 4
+        },
+        {
+          "year": 2025,
+          "pick": 4
+        }
+      ],
+      "games": 73,
+      "winPct": 0.5342,
+      "avgPointsPerGame": 126.73,
+      "avgPointsAgainstPerGame": 121.85,
+      "avgFinish": 4.4,
+      "bestFinish": 1,
+      "worstFinish": 8
+    },
+    {
+      "name": "Luke",
+      "seasons": 7,
+      "wins": 43,
+      "losses": 60,
+      "ties": 0,
+      "pointsFor": 12507.64,
+      "pointsAgainst": 12821.94,
+      "moves": 165,
+      "trades": 8,
+      "championships": 0,
+      "playoffs": 1,
+      "sackos": 0,
+      "finishes": [
+        {
+          "year": 2019,
+          "rank": 5,
+          "numTeams": 8
+        },
+        {
+          "year": 2020,
+          "rank": 6,
+          "numTeams": 8
+        },
+        {
+          "year": 2021,
+          "rank": 5,
+          "numTeams": 8
+        },
+        {
+          "year": 2022,
+          "rank": 5,
+          "numTeams": 8
+        },
+        {
+          "year": 2023,
+          "rank": 5,
+          "numTeams": 8
+        },
+        {
+          "year": 2024,
+          "rank": 2,
+          "numTeams": 8
+        },
+        {
+          "year": 2025,
+          "rank": 6,
+          "numTeams": 10
+        }
+      ],
+      "regSeasonFinishes": [
+        {
+          "year": 2019,
+          "rank": 4
+        },
+        {
+          "year": 2020,
+          "rank": 2
+        },
+        {
+          "year": 2021,
+          "rank": 3
+        },
+        {
+          "year": 2022,
+          "rank": 3
+        },
+        {
+          "year": 2023,
+          "rank": 3
+        },
+        {
+          "year": 2024,
+          "rank": 1
+        },
+        {
+          "year": 2025,
+          "rank": 3
+        }
+      ],
+      "seasonsPlayed": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "teamNames": [
+        {
+          "year": 2019,
+          "team": "Hate minorities"
+        },
+        {
+          "year": 2020,
+          "team": "Jeanfreau Strange"
+        },
+        {
+          "year": 2021,
+          "team": "Greek Freak Fan Brook Lopez"
+        },
+        {
+          "year": 2022,
+          "team": "Greek Freak Fan Brook Lopez"
+        },
+        {
+          "year": 2023,
+          "team": "Greek Freak Fan Damian Lillard"
+        },
+        {
+          "year": 2024,
+          "team": "The Crooglefuggs"
+        },
+        {
+          "year": 2025,
+          "team": "The Crooglefuggs"
+        }
+      ],
+      "draftPositions": [
+        {
+          "year": 2019,
+          "pick": 4
+        },
+        {
+          "year": 2020,
+          "pick": 3
+        },
+        {
+          "year": 2021,
+          "pick": 2
+        },
+        {
+          "year": 2022,
+          "pick": 4
+        },
+        {
+          "year": 2023,
+          "pick": 6
+        },
+        {
+          "year": 2024,
+          "pick": 8
+        },
+        {
+          "year": 2025,
+          "pick": 9
+        }
+      ],
+      "games": 103,
+      "winPct": 0.4175,
+      "avgPointsPerGame": 121.43,
+      "avgPointsAgainstPerGame": 124.48,
+      "avgFinish": 4.86,
+      "bestFinish": 2,
+      "worstFinish": 6
+    },
+    {
+      "name": "Matthew",
+      "seasons": 6,
+      "wins": 59,
+      "losses": 30,
+      "ties": 0,
+      "pointsFor": 12004.6,
+      "pointsAgainst": 10952.3,
+      "moves": 244,
+      "trades": 28,
+      "championships": 1,
+      "playoffs": 5,
+      "sackos": 0,
+      "finishes": [
+        {
+          "year": 2020,
+          "rank": 2,
+          "numTeams": 8
+        },
+        {
+          "year": 2021,
+          "rank": 3,
+          "numTeams": 8
+        },
+        {
+          "year": 2022,
+          "rank": 2,
+          "numTeams": 8
+        },
+        {
+          "year": 2023,
+          "rank": 1,
+          "numTeams": 8
+        },
+        {
+          "year": 2024,
+          "rank": 4,
+          "numTeams": 8
+        },
+        {
+          "year": 2025,
+          "rank": 7,
+          "numTeams": 10
+        }
+      ],
+      "regSeasonFinishes": [
+        {
+          "year": 2020,
+          "rank": 1
+        },
+        {
+          "year": 2021,
+          "rank": 2
+        },
+        {
+          "year": 2022,
+          "rank": 1
+        },
+        {
+          "year": 2023,
+          "rank": 1
+        },
+        {
+          "year": 2024,
+          "rank": 2
+        },
+        {
+          "year": 2025,
+          "rank": 4
+        }
+      ],
+      "seasonsPlayed": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "teamNames": [
+        {
+          "year": 2020,
+          "team": "The Labbers"
+        },
+        {
+          "year": 2021,
+          "team": "The Labbers"
+        },
+        {
+          "year": 2022,
+          "team": "The Labbers"
+        },
+        {
+          "year": 2023,
+          "team": "The Labbers"
+        },
+        {
+          "year": 2024,
+          "team": "Nelk Brothers"
+        },
+        {
+          "year": 2025,
+          "team": "Mr Locked In"
+        }
+      ],
+      "draftPositions": [
+        {
+          "year": 2020,
+          "pick": 7
+        },
+        {
+          "year": 2021,
+          "pick": 8
+        },
+        {
+          "year": 2022,
+          "pick": 5
+        },
+        {
+          "year": 2023,
+          "pick": 8
+        },
+        {
+          "year": 2024,
+          "pick": 1
+        },
+        {
+          "year": 2025,
+          "pick": 8
+        }
+      ],
+      "games": 89,
+      "winPct": 0.6629,
+      "avgPointsPerGame": 134.88,
+      "avgPointsAgainstPerGame": 123.06,
+      "avgFinish": 3.17,
+      "bestFinish": 1,
+      "worstFinish": 7
+    },
+    {
+      "name": "Joshua",
+      "seasons": 4,
+      "wins": 18,
+      "losses": 42,
+      "ties": 0,
+      "pointsFor": 6641.32,
+      "pointsAgainst": 7454.88,
+      "moves": 68,
+      "trades": 13,
+      "championships": 0,
+      "playoffs": 0,
+      "sackos": 1,
+      "finishes": [
+        {
+          "year": 2022,
+          "rank": 6,
+          "numTeams": 8
+        },
+        {
+          "year": 2023,
+          "rank": 8,
+          "numTeams": 8
+        },
+        {
+          "year": 2024,
+          "rank": 5,
+          "numTeams": 8
+        },
+        {
+          "year": 2025,
+          "rank": 9,
+          "numTeams": 10
+        }
+      ],
+      "regSeasonFinishes": [
+        {
+          "year": 2022,
+          "rank": 3
+        },
+        {
+          "year": 2023,
+          "rank": 4
+        },
+        {
+          "year": 2024,
+          "rank": 4
+        },
+        {
+          "year": 2025,
+          "rank": 5
+        }
+      ],
+      "seasonsPlayed": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "teamNames": [
+        {
+          "year": 2022,
+          "team": "Bad news bombers"
+        },
+        {
+          "year": 2023,
+          "team": "Bad news bombers"
+        },
+        {
+          "year": 2024,
+          "team": "Bad news bombers"
+        },
+        {
+          "year": 2025,
+          "team": "Bad news bombers"
+        }
+      ],
+      "draftPositions": [
+        {
+          "year": 2022,
+          "pick": 2
+        },
+        {
+          "year": 2023,
+          "pick": 5
+        },
+        {
+          "year": 2024,
+          "pick": 6
+        },
+        {
+          "year": 2025,
+          "pick": 1
+        }
+      ],
+      "games": 60,
+      "winPct": 0.3,
+      "avgPointsPerGame": 110.69,
+      "avgPointsAgainstPerGame": 124.25,
+      "avgFinish": 7.0,
+      "bestFinish": 5,
+      "worstFinish": 9
+    },
+    {
+      "name": "Todd",
+      "seasons": 1,
+      "wins": 9,
+      "losses": 6,
+      "ties": 0,
+      "pointsFor": 1738.46,
+      "pointsAgainst": 1691.44,
+      "moves": 29,
+      "trades": 2,
+      "championships": 0,
+      "playoffs": 1,
+      "sackos": 0,
+      "finishes": [
+        {
+          "year": 2025,
+          "rank": 5,
+          "numTeams": 10
+        }
+      ],
+      "regSeasonFinishes": [
+        {
+          "year": 2025,
+          "rank": 3
+        }
+      ],
+      "seasonsPlayed": [
+        2025
+      ],
+      "teamNames": [
+        {
+          "year": 2025,
+          "team": "Wet Grandma"
+        }
+      ],
+      "draftPositions": [
+        {
+          "year": 2025,
+          "pick": 2
+        }
+      ],
+      "games": 15,
+      "winPct": 0.6,
+      "avgPointsPerGame": 115.9,
+      "avgPointsAgainstPerGame": 112.76,
+      "avgFinish": 5.0,
+      "bestFinish": 5,
+      "worstFinish": 5
+    }
+  ],
+  "headToHead": {
+    "Alex": {
+      "Justin": {
+        "wins": 9,
+        "losses": 8,
+        "ties": 0,
+        "pointsFor": 2139.74,
+        "pointsAgainst": 1997.7,
+        "games": 17
+      },
+      "Ethan": {
+        "wins": 2,
+        "losses": 0,
+        "ties": 0,
+        "pointsFor": 235.06,
+        "pointsAgainst": 189.1,
+        "games": 2
+      },
+      "Howard": {
+        "wins": 10,
+        "losses": 6,
+        "ties": 0,
+        "pointsFor": 1917.58,
+        "pointsAgainst": 1964.56,
+        "games": 16
+      },
+      "Sean": {
+        "wins": 5,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 1292.28,
+        "pointsAgainst": 1145.28,
+        "games": 10
+      },
+      "Ulises": {
+        "wins": 8,
+        "losses": 7,
+        "ties": 0,
+        "pointsFor": 1995.16,
+        "pointsAgainst": 1948.86,
+        "games": 15
+      },
+      "Aiden ": {
+        "wins": 1,
+        "losses": 4,
+        "ties": 0,
+        "pointsFor": 598.6,
+        "pointsAgainst": 702.2,
+        "games": 5
+      },
+      "Luke": {
+        "wins": 12,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 2108.76,
+        "pointsAgainst": 1973.1,
+        "games": 17
+      },
+      "Matthew": {
+        "wins": 4,
+        "losses": 9,
+        "ties": 0,
+        "pointsFor": 1681.8,
+        "pointsAgainst": 1822.72,
+        "games": 13
+      },
+      "Aiden": {
+        "wins": 8,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 1335.4,
+        "pointsAgainst": 1039.08,
+        "games": 9
+      },
+      "Joshua": {
+        "wins": 10,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 1524.42,
+        "pointsAgainst": 1147.56,
+        "games": 11
+      },
+      "Todd": {
+        "wins": 2,
+        "losses": 0,
+        "ties": 0,
+        "pointsFor": 237.84,
+        "pointsAgainst": 190.34,
+        "games": 2
+      }
+    },
+    "Justin": {
+      "Alex": {
+        "wins": 8,
+        "losses": 9,
+        "ties": 0,
+        "pointsFor": 1997.7,
+        "pointsAgainst": 2139.74,
+        "games": 17
+      },
+      "Howard": {
+        "wins": 8,
+        "losses": 8,
+        "ties": 0,
+        "pointsFor": 2013.52,
+        "pointsAgainst": 1797.08,
+        "games": 16
+      },
+      "Ethan": {
+        "wins": 2,
+        "losses": 0,
+        "ties": 0,
+        "pointsFor": 275.1,
+        "pointsAgainst": 191.5,
+        "games": 2
+      },
+      "Luke": {
+        "wins": 10,
+        "losses": 6,
+        "ties": 0,
+        "pointsFor": 2019.1,
+        "pointsAgainst": 1933.62,
+        "games": 16
+      },
+      "Sean": {
+        "wins": 4,
+        "losses": 6,
+        "ties": 0,
+        "pointsFor": 1294.98,
+        "pointsAgainst": 1233.34,
+        "games": 10
+      },
+      "Ulises": {
+        "wins": 8,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 1676.88,
+        "pointsAgainst": 1625.4,
+        "games": 13
+      },
+      "Aiden ": {
+        "wins": 1,
+        "losses": 4,
+        "ties": 0,
+        "pointsFor": 551.06,
+        "pointsAgainst": 725.92,
+        "games": 5
+      },
+      "Matthew": {
+        "wins": 5,
+        "losses": 9,
+        "ties": 0,
+        "pointsFor": 1614.9,
+        "pointsAgainst": 1864.1,
+        "games": 14
+      },
+      "Aiden": {
+        "wins": 8,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 1638.34,
+        "pointsAgainst": 1585.38,
+        "games": 13
+      },
+      "Joshua": {
+        "wins": 7,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 1138.22,
+        "pointsAgainst": 998.22,
+        "games": 9
+      },
+      "Todd": {
+        "wins": 1,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 183.3,
+        "pointsAgainst": 178.42,
+        "games": 2
+      }
+    },
+    "Sean": {
+      "Luke": {
+        "wins": 7,
+        "losses": 6,
+        "ties": 0,
+        "pointsFor": 1782.26,
+        "pointsAgainst": 1660.08,
+        "games": 13
+      },
+      "Aiden ": {
+        "wins": 1,
+        "losses": 3,
+        "ties": 0,
+        "pointsFor": 472.02,
+        "pointsAgainst": 523.1,
+        "games": 4
+      },
+      "Ulises": {
+        "wins": 3,
+        "losses": 8,
+        "ties": 0,
+        "pointsFor": 1409.28,
+        "pointsAgainst": 1467.96,
+        "games": 11
+      },
+      "Alex": {
+        "wins": 5,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 1145.28,
+        "pointsAgainst": 1292.28,
+        "games": 10
+      },
+      "Justin": {
+        "wins": 6,
+        "losses": 4,
+        "ties": 0,
+        "pointsFor": 1233.34,
+        "pointsAgainst": 1294.98,
+        "games": 10
+      },
+      "Ethan": {
+        "wins": 1,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 342.24,
+        "pointsAgainst": 284.8,
+        "games": 3
+      },
+      "Howard": {
+        "wins": 8,
+        "losses": 3,
+        "ties": 0,
+        "pointsFor": 1411.14,
+        "pointsAgainst": 1100.88,
+        "games": 11
+      },
+      "Matthew": {
+        "wins": 5,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 1272.92,
+        "pointsAgainst": 1292.34,
+        "games": 10
+      },
+      "Aiden": {
+        "wins": 4,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 776.34,
+        "pointsAgainst": 698.8,
+        "games": 6
+      },
+      "Joshua": {
+        "wins": 3,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 555.44,
+        "pointsAgainst": 443.02,
+        "games": 4
+      },
+      "Todd": {
+        "wins": 0,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 105.12,
+        "pointsAgainst": 105.7,
+        "games": 1
+      }
+    },
+    "Luke": {
+      "Sean": {
+        "wins": 6,
+        "losses": 7,
+        "ties": 0,
+        "pointsFor": 1660.08,
+        "pointsAgainst": 1782.26,
+        "games": 13
+      },
+      "Ulises": {
+        "wins": 5,
+        "losses": 7,
+        "ties": 0,
+        "pointsFor": 1364.04,
+        "pointsAgainst": 1462.32,
+        "games": 12
+      },
+      "Aiden ": {
+        "wins": 1,
+        "losses": 3,
+        "ties": 0,
+        "pointsFor": 495.84,
+        "pointsAgainst": 522.66,
+        "games": 4
+      },
+      "Justin": {
+        "wins": 6,
+        "losses": 10,
+        "ties": 0,
+        "pointsFor": 1933.62,
+        "pointsAgainst": 2019.1,
+        "games": 16
+      },
+      "Ethan": {
+        "wins": 1,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 223.96,
+        "pointsAgainst": 179.8,
+        "games": 2
+      },
+      "Howard": {
+        "wins": 9,
+        "losses": 7,
+        "ties": 0,
+        "pointsFor": 1908.8,
+        "pointsAgainst": 1820.7,
+        "games": 16
+      },
+      "Alex": {
+        "wins": 5,
+        "losses": 12,
+        "ties": 0,
+        "pointsFor": 1973.1,
+        "pointsAgainst": 2108.76,
+        "games": 17
+      },
+      "Matthew": {
+        "wins": 5,
+        "losses": 8,
+        "ties": 0,
+        "pointsFor": 1709.8,
+        "pointsAgainst": 1752.1,
+        "games": 13
+      },
+      "Aiden": {
+        "wins": 9,
+        "losses": 3,
+        "ties": 0,
+        "pointsFor": 1616.26,
+        "pointsAgainst": 1422.68,
+        "games": 12
+      },
+      "Joshua": {
+        "wins": 7,
+        "losses": 3,
+        "ties": 0,
+        "pointsFor": 1210.38,
+        "pointsAgainst": 1097.18,
+        "games": 10
+      },
+      "Todd": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 193.24,
+        "pointsAgainst": 270.02,
+        "games": 2
+      }
+    },
+    "Ethan": {
+      "Howard": {
+        "wins": 0,
+        "losses": 3,
+        "ties": 0,
+        "pointsFor": 328.4,
+        "pointsAgainst": 374.4,
+        "games": 3
+      },
+      "Alex": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 189.1,
+        "pointsAgainst": 235.06,
+        "games": 2
+      },
+      "Justin": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 191.5,
+        "pointsAgainst": 275.1,
+        "games": 2
+      },
+      "Aiden ": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 175.6,
+        "pointsAgainst": 254.48,
+        "games": 2
+      },
+      "Luke": {
+        "wins": 1,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 179.8,
+        "pointsAgainst": 223.96,
+        "games": 2
+      },
+      "Sean": {
+        "wins": 2,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 284.8,
+        "pointsAgainst": 342.24,
+        "games": 3
+      },
+      "Ulises": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 175.3,
+        "pointsAgainst": 230.16,
+        "games": 2
+      }
+    },
+    "Howard": {
+      "Ethan": {
+        "wins": 3,
+        "losses": 0,
+        "ties": 0,
+        "pointsFor": 374.4,
+        "pointsAgainst": 328.4,
+        "games": 3
+      },
+      "Justin": {
+        "wins": 8,
+        "losses": 8,
+        "ties": 0,
+        "pointsFor": 1797.08,
+        "pointsAgainst": 2013.52,
+        "games": 16
+      },
+      "Alex": {
+        "wins": 6,
+        "losses": 10,
+        "ties": 0,
+        "pointsFor": 1964.56,
+        "pointsAgainst": 1917.58,
+        "games": 16
+      },
+      "Ulises": {
+        "wins": 4,
+        "losses": 10,
+        "ties": 0,
+        "pointsFor": 1601.68,
+        "pointsAgainst": 1895.24,
+        "games": 14
+      },
+      "Aiden ": {
+        "wins": 2,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 494.86,
+        "pointsAgainst": 531.42,
+        "games": 4
+      },
+      "Luke": {
+        "wins": 7,
+        "losses": 9,
+        "ties": 0,
+        "pointsFor": 1820.7,
+        "pointsAgainst": 1908.8,
+        "games": 16
+      },
+      "Sean": {
+        "wins": 3,
+        "losses": 8,
+        "ties": 0,
+        "pointsFor": 1100.88,
+        "pointsAgainst": 1411.14,
+        "games": 11
+      },
+      "Matthew": {
+        "wins": 5,
+        "losses": 10,
+        "ties": 0,
+        "pointsFor": 1773.1,
+        "pointsAgainst": 1971.82,
+        "games": 15
+      },
+      "Aiden": {
+        "wins": 5,
+        "losses": 6,
+        "ties": 0,
+        "pointsFor": 1325.3,
+        "pointsAgainst": 1246.5,
+        "games": 11
+      },
+      "Joshua": {
+        "wins": 2,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 740.82,
+        "pointsAgainst": 826.92,
+        "games": 7
+      },
+      "Todd": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 231.7,
+        "pointsAgainst": 290.02,
+        "games": 2
+      }
+    },
+    "Aiden ": {
+      "Ulises": {
+        "wins": 4,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 612.72,
+        "pointsAgainst": 520.16,
+        "games": 5
+      },
+      "Sean": {
+        "wins": 3,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 523.1,
+        "pointsAgainst": 472.02,
+        "games": 4
+      },
+      "Luke": {
+        "wins": 3,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 522.66,
+        "pointsAgainst": 495.84,
+        "games": 4
+      },
+      "Ethan": {
+        "wins": 2,
+        "losses": 0,
+        "ties": 0,
+        "pointsFor": 254.48,
+        "pointsAgainst": 175.6,
+        "games": 2
+      },
+      "Howard": {
+        "wins": 2,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 531.42,
+        "pointsAgainst": 494.86,
+        "games": 4
+      },
+      "Alex": {
+        "wins": 4,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 702.2,
+        "pointsAgainst": 598.6,
+        "games": 5
+      },
+      "Justin": {
+        "wins": 4,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 725.92,
+        "pointsAgainst": 551.06,
+        "games": 5
+      },
+      "Matthew": {
+        "wins": 2,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 412.02,
+        "pointsAgainst": 440.76,
+        "games": 3
+      }
+    },
+    "Ulises": {
+      "Aiden ": {
+        "wins": 1,
+        "losses": 4,
+        "ties": 0,
+        "pointsFor": 520.16,
+        "pointsAgainst": 612.72,
+        "games": 5
+      },
+      "Luke": {
+        "wins": 7,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 1462.32,
+        "pointsAgainst": 1364.04,
+        "games": 12
+      },
+      "Sean": {
+        "wins": 8,
+        "losses": 3,
+        "ties": 0,
+        "pointsFor": 1467.96,
+        "pointsAgainst": 1409.28,
+        "games": 11
+      },
+      "Howard": {
+        "wins": 10,
+        "losses": 4,
+        "ties": 0,
+        "pointsFor": 1895.24,
+        "pointsAgainst": 1601.68,
+        "games": 14
+      },
+      "Alex": {
+        "wins": 7,
+        "losses": 8,
+        "ties": 0,
+        "pointsFor": 1948.86,
+        "pointsAgainst": 1995.16,
+        "games": 15
+      },
+      "Justin": {
+        "wins": 5,
+        "losses": 8,
+        "ties": 0,
+        "pointsFor": 1625.4,
+        "pointsAgainst": 1676.88,
+        "games": 13
+      },
+      "Ethan": {
+        "wins": 2,
+        "losses": 0,
+        "ties": 0,
+        "pointsFor": 230.16,
+        "pointsAgainst": 175.3,
+        "games": 2
+      },
+      "Matthew": {
+        "wins": 4,
+        "losses": 7,
+        "ties": 0,
+        "pointsFor": 1387.9,
+        "pointsAgainst": 1480.88,
+        "games": 11
+      },
+      "Aiden": {
+        "wins": 8,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 1252.34,
+        "pointsAgainst": 946.88,
+        "games": 9
+      },
+      "Joshua": {
+        "wins": 5,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 698.12,
+        "pointsAgainst": 609.72,
+        "games": 6
+      },
+      "Todd": {
+        "wins": 1,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 258.1,
+        "pointsAgainst": 259.34,
+        "games": 2
+      }
+    },
+    "Matthew": {
+      "Howard": {
+        "wins": 10,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 1971.82,
+        "pointsAgainst": 1773.1,
+        "games": 15
+      },
+      "Alex": {
+        "wins": 9,
+        "losses": 4,
+        "ties": 0,
+        "pointsFor": 1822.72,
+        "pointsAgainst": 1681.8,
+        "games": 13
+      },
+      "Justin": {
+        "wins": 9,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 1864.1,
+        "pointsAgainst": 1614.9,
+        "games": 14
+      },
+      "Aiden ": {
+        "wins": 1,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 440.76,
+        "pointsAgainst": 412.02,
+        "games": 3
+      },
+      "Luke": {
+        "wins": 8,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 1752.1,
+        "pointsAgainst": 1709.8,
+        "games": 13
+      },
+      "Sean": {
+        "wins": 5,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 1292.34,
+        "pointsAgainst": 1272.92,
+        "games": 10
+      },
+      "Ulises": {
+        "wins": 7,
+        "losses": 4,
+        "ties": 0,
+        "pointsFor": 1480.88,
+        "pointsAgainst": 1387.9,
+        "games": 11
+      },
+      "Aiden": {
+        "wins": 9,
+        "losses": 4,
+        "ties": 0,
+        "pointsFor": 1704.5,
+        "pointsAgainst": 1516.4,
+        "games": 13
+      },
+      "Joshua": {
+        "wins": 5,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 948.56,
+        "pointsAgainst": 899.66,
+        "games": 7
+      },
+      "Todd": {
+        "wins": 2,
+        "losses": 0,
+        "ties": 0,
+        "pointsFor": 282.6,
+        "pointsAgainst": 218.08,
+        "games": 2
+      }
+    },
+    "Aiden": {
+      "Matthew": {
+        "wins": 4,
+        "losses": 9,
+        "ties": 0,
+        "pointsFor": 1516.4,
+        "pointsAgainst": 1704.5,
+        "games": 13
+      },
+      "Justin": {
+        "wins": 5,
+        "losses": 8,
+        "ties": 0,
+        "pointsFor": 1585.38,
+        "pointsAgainst": 1638.34,
+        "games": 13
+      },
+      "Sean": {
+        "wins": 2,
+        "losses": 4,
+        "ties": 0,
+        "pointsFor": 698.8,
+        "pointsAgainst": 776.34,
+        "games": 6
+      },
+      "Ulises": {
+        "wins": 1,
+        "losses": 8,
+        "ties": 0,
+        "pointsFor": 946.88,
+        "pointsAgainst": 1252.34,
+        "games": 9
+      },
+      "Alex": {
+        "wins": 1,
+        "losses": 8,
+        "ties": 0,
+        "pointsFor": 1039.08,
+        "pointsAgainst": 1335.4,
+        "games": 9
+      },
+      "Luke": {
+        "wins": 3,
+        "losses": 9,
+        "ties": 0,
+        "pointsFor": 1422.68,
+        "pointsAgainst": 1616.26,
+        "games": 12
+      },
+      "Howard": {
+        "wins": 6,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 1246.5,
+        "pointsAgainst": 1325.3,
+        "games": 11
+      },
+      "Joshua": {
+        "wins": 4,
+        "losses": 6,
+        "ties": 0,
+        "pointsFor": 1139.86,
+        "pointsAgainst": 1102.48,
+        "games": 10
+      },
+      "Todd": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 199.42,
+        "pointsAgainst": 293.22,
+        "games": 2
+      }
+    },
+    "Joshua": {
+      "Justin": {
+        "wins": 2,
+        "losses": 7,
+        "ties": 0,
+        "pointsFor": 998.22,
+        "pointsAgainst": 1138.22,
+        "games": 9
+      },
+      "Matthew": {
+        "wins": 2,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 899.66,
+        "pointsAgainst": 948.56,
+        "games": 7
+      },
+      "Aiden": {
+        "wins": 6,
+        "losses": 4,
+        "ties": 0,
+        "pointsFor": 1102.48,
+        "pointsAgainst": 1139.86,
+        "games": 10
+      },
+      "Alex": {
+        "wins": 1,
+        "losses": 10,
+        "ties": 0,
+        "pointsFor": 1147.56,
+        "pointsAgainst": 1524.42,
+        "games": 11
+      },
+      "Luke": {
+        "wins": 3,
+        "losses": 7,
+        "ties": 0,
+        "pointsFor": 1097.18,
+        "pointsAgainst": 1210.38,
+        "games": 10
+      },
+      "Howard": {
+        "wins": 5,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 826.92,
+        "pointsAgainst": 740.82,
+        "games": 7
+      },
+      "Ulises": {
+        "wins": 1,
+        "losses": 5,
+        "ties": 0,
+        "pointsFor": 609.72,
+        "pointsAgainst": 698.12,
+        "games": 6
+      },
+      "Sean": {
+        "wins": 1,
+        "losses": 3,
+        "ties": 0,
+        "pointsFor": 443.02,
+        "pointsAgainst": 555.44,
+        "games": 4
+      },
+      "Todd": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 185.66,
+        "pointsAgainst": 231.92,
+        "games": 2
+      }
+    },
+    "Todd": {
+      "Justin": {
+        "wins": 1,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 178.42,
+        "pointsAgainst": 183.3,
+        "games": 2
+      },
+      "Howard": {
+        "wins": 2,
+        "losses": 0,
+        "ties": 0,
+        "pointsFor": 290.02,
+        "pointsAgainst": 231.7,
+        "games": 2
+      },
+      "Alex": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 190.34,
+        "pointsAgainst": 237.84,
+        "games": 2
+      },
+      "Matthew": {
+        "wins": 0,
+        "losses": 2,
+        "ties": 0,
+        "pointsFor": 218.08,
+        "pointsAgainst": 282.6,
+        "games": 2
+      },
+      "Ulises": {
+        "wins": 1,
+        "losses": 1,
+        "ties": 0,
+        "pointsFor": 259.34,
+        "pointsAgainst": 258.1,
+        "games": 2
+      },
+      "Joshua": {
+        "wins": 2,
+        "losses": 0,
+        "ties": 0,
+        "pointsFor": 231.92,
+        "pointsAgainst": 185.66,
+        "games": 2
+      },
+      "Luke": {
+        "wins": 2,
+        "losses": 0,
+        "ties": 0,
+        "pointsFor": 270.02,
+        "pointsAgainst": 193.24,
+        "games": 2
+      },
+      "Aiden": {
+        "wins": 2,
+        "losses": 0,
+        "ties": 0,
+        "pointsFor": 293.22,
+        "pointsAgainst": 199.42,
+        "games": 2
+      },
+      "Sean": {
+        "wins": 1,
+        "losses": 0,
+        "ties": 0,
+        "pointsFor": 105.7,
+        "pointsAgainst": 105.12,
+        "games": 1
+      }
+    }
+  },
+  "weeklyHighs": [
+    {
+      "year": 2024,
+      "week": 17,
+      "owner": "Sean",
+      "points": 211.02,
+      "opponent": "Luke",
+      "opponentPoints": 106.6
+    },
+    {
+      "year": 2022,
+      "week": 2,
+      "owner": "Matthew",
+      "points": 210.72,
+      "opponent": "Joshua",
+      "opponentPoints": 131.98
+    },
+    {
+      "year": 2021,
+      "week": 11,
+      "owner": "Matthew",
+      "points": 209.4,
+      "opponent": "Howard",
+      "opponentPoints": 93.58
+    },
+    {
+      "year": 2020,
+      "week": 7,
+      "owner": "Matthew",
+      "points": 196.22,
+      "opponent": "Ulises",
+      "opponentPoints": 97.02
+    },
+    {
+      "year": 2019,
+      "week": 12,
+      "owner": "Justin",
+      "points": 194.16,
+      "opponent": "Sean",
+      "opponentPoints": 132.74
+    },
+    {
+      "year": 2020,
+      "week": 3,
+      "owner": "Matthew",
+      "points": 194.02,
+      "opponent": "Justin",
+      "opponentPoints": 124.58
+    },
+    {
+      "year": 2023,
+      "week": 3,
+      "owner": "Luke",
+      "points": 192.66,
+      "opponent": "Aiden",
+      "opponentPoints": 147.76
+    },
+    {
+      "year": 2021,
+      "week": 13,
+      "owner": "Matthew",
+      "points": 189.02,
+      "opponent": "Alex",
+      "opponentPoints": 130.18
+    },
+    {
+      "year": 2021,
+      "week": 14,
+      "owner": "Matthew",
+      "points": 187.94,
+      "opponent": "Luke",
+      "opponentPoints": 123.32
+    },
+    {
+      "year": 2020,
+      "week": 14,
+      "owner": "Aiden ",
+      "points": 186.32,
+      "opponent": "Justin",
+      "opponentPoints": 101.56
+    }
+  ],
+  "weeklyLows": [
+    {
+      "year": 2021,
+      "week": 10,
+      "owner": "Howard",
+      "points": 45.7,
+      "opponent": "Luke",
+      "opponentPoints": 104.24
+    },
+    {
+      "year": 2019,
+      "week": 12,
+      "owner": "Luke",
+      "points": 46.0,
+      "opponent": "Ethan",
+      "opponentPoints": 54.1
+    },
+    {
+      "year": 2019,
+      "week": 13,
+      "owner": "Ethan",
+      "points": 50.0,
+      "opponent": "Sean",
+      "opponentPoints": 111.94
+    },
+    {
+      "year": 2025,
+      "week": 3,
+      "owner": "Howard",
+      "points": 53.76,
+      "opponent": "Justin",
+      "opponentPoints": 133.12
+    },
+    {
+      "year": 2019,
+      "week": 12,
+      "owner": "Ethan",
+      "points": 54.1,
+      "opponent": "Luke",
+      "opponentPoints": 46.0
+    },
+    {
+      "year": 2022,
+      "week": 17,
+      "owner": "Aiden",
+      "points": 57.4,
+      "opponent": "Howard",
+      "opponentPoints": 103.1
+    },
+    {
+      "year": 2025,
+      "week": 17,
+      "owner": "Aiden",
+      "points": 60.88,
+      "opponent": "Matthew",
+      "opponentPoints": 169.44
+    },
+    {
+      "year": 2022,
+      "week": 17,
+      "owner": "Justin",
+      "points": 64.1,
+      "opponent": "Alex",
+      "opponentPoints": 108.9
+    },
+    {
+      "year": 2021,
+      "week": 9,
+      "owner": "Luke",
+      "points": 64.34,
+      "opponent": "Ulises",
+      "opponentPoints": 114.56
+    },
+    {
+      "year": 2022,
+      "week": 13,
+      "owner": "Howard",
+      "points": 64.74,
+      "opponent": "Joshua",
+      "opponentPoints": 90.74
+    }
+  ],
+  "blowouts": [
+    {
+      "year": 2021,
+      "week": 11,
+      "winner": "Matthew",
+      "loser": "Howard",
+      "winnerPoints": 209.4,
+      "loserPoints": 93.58,
+      "margin": 115.82
+    },
+    {
+      "year": 2025,
+      "week": 17,
+      "winner": "Matthew",
+      "loser": "Aiden",
+      "winnerPoints": 169.44,
+      "loserPoints": 60.88,
+      "margin": 108.56
+    },
+    {
+      "year": 2024,
+      "week": 17,
+      "winner": "Sean",
+      "loser": "Luke",
+      "winnerPoints": 211.02,
+      "loserPoints": 106.6,
+      "margin": 104.42
+    },
+    {
+      "year": 2021,
+      "week": 4,
+      "winner": "Ulises",
+      "loser": "Aiden",
+      "winnerPoints": 183.12,
+      "loserPoints": 81.46,
+      "margin": 101.66
+    },
+    {
+      "year": 2020,
+      "week": 7,
+      "winner": "Matthew",
+      "loser": "Ulises",
+      "winnerPoints": 196.22,
+      "loserPoints": 97.02,
+      "margin": 99.2
+    },
+    {
+      "year": 2023,
+      "week": 8,
+      "winner": "Alex",
+      "loser": "Joshua",
+      "winnerPoints": 173.76,
+      "loserPoints": 81.0,
+      "margin": 92.76
+    },
+    {
+      "year": 2025,
+      "week": 11,
+      "winner": "Sean",
+      "loser": "Ulises",
+      "winnerPoints": 185.08,
+      "loserPoints": 98.44,
+      "margin": 86.64
+    },
+    {
+      "year": 2023,
+      "week": 4,
+      "winner": "Alex",
+      "loser": "Justin",
+      "winnerPoints": 174.3,
+      "loserPoints": 88.5,
+      "margin": 85.8
+    },
+    {
+      "year": 2020,
+      "week": 14,
+      "winner": "Aiden ",
+      "loser": "Justin",
+      "winnerPoints": 186.32,
+      "loserPoints": 101.56,
+      "margin": 84.76
+    },
+    {
+      "year": 2021,
+      "week": 5,
+      "winner": "Alex",
+      "loser": "Aiden",
+      "winnerPoints": 173.72,
+      "loserPoints": 89.88,
+      "margin": 83.84
+    }
+  ],
+  "nailBiters": [
+    {
+      "year": 2019,
+      "week": 11,
+      "winner": "Sean",
+      "loser": "Alex",
+      "winnerPoints": 139.24,
+      "loserPoints": 139.12,
+      "margin": 0.12
+    },
+    {
+      "year": 2023,
+      "week": 4,
+      "winner": "Howard",
+      "loser": "Ulises",
+      "winnerPoints": 166.24,
+      "loserPoints": 166.08,
+      "margin": 0.16
+    },
+    {
+      "year": 2025,
+      "week": 10,
+      "winner": "Ulises",
+      "loser": "Luke",
+      "winnerPoints": 111.7,
+      "loserPoints": 111.5,
+      "margin": 0.2
+    },
+    {
+      "year": 2019,
+      "week": 2,
+      "winner": "Sean",
+      "loser": "Aiden ",
+      "winnerPoints": 104.86,
+      "loserPoints": 104.52,
+      "margin": 0.34
+    },
+    {
+      "year": 2025,
+      "week": 6,
+      "winner": "Sean",
+      "loser": "Matthew",
+      "winnerPoints": 116.9,
+      "loserPoints": 116.54,
+      "margin": 0.36
+    },
+    {
+      "year": 2022,
+      "week": 10,
+      "winner": "Ulises",
+      "loser": "Alex",
+      "winnerPoints": 124.2,
+      "loserPoints": 123.82,
+      "margin": 0.38
+    },
+    {
+      "year": 2021,
+      "week": 13,
+      "winner": "Luke",
+      "loser": "Aiden",
+      "winnerPoints": 128.46,
+      "loserPoints": 128.0,
+      "margin": 0.46
+    },
+    {
+      "year": 2025,
+      "week": 13,
+      "winner": "Todd",
+      "loser": "Sean",
+      "winnerPoints": 105.7,
+      "loserPoints": 105.12,
+      "margin": 0.58
+    },
+    {
+      "year": 2024,
+      "week": 14,
+      "winner": "Aiden",
+      "loser": "Alex",
+      "winnerPoints": 172.08,
+      "loserPoints": 171.38,
+      "margin": 0.7
+    },
+    {
+      "year": 2024,
+      "week": 1,
+      "winner": "Justin",
+      "loser": "Aiden",
+      "winnerPoints": 126.14,
+      "loserPoints": 125.38,
+      "margin": 0.76
+    }
+  ]
+}

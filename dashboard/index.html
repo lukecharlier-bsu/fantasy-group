@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>League History Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <h1>League History</h1>
+            <p class="subtitle" id="subtitle">Loading...</p>
+        </div>
+        <nav class="tabs" id="tabs">
+            <button class="tab active" data-tab="owners">Owner Career Stats</button>
+            <button class="tab" data-tab="seasons">Seasons &amp; Champions</button>
+            <button class="tab" data-tab="h2h">Head-to-Head</button>
+            <button class="tab" data-tab="weekly">Weekly Trends</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- OWNER CAREER STATS -->
+        <section class="panel active" id="panel-owners">
+            <div class="panel-controls">
+                <label>Sort by
+                    <select id="owner-sort">
+                        <option value="winPct">Win %</option>
+                        <option value="championships">Championships</option>
+                        <option value="playoffs">Playoff Appearances</option>
+                        <option value="pointsFor">Total Points</option>
+                        <option value="avgPointsPerGame">Avg PPG</option>
+                        <option value="avgFinish">Avg Finish</option>
+                        <option value="seasons">Seasons Played</option>
+                        <option value="moves">Moves</option>
+                        <option value="trades">Trades</option>
+                    </select>
+                </label>
+            </div>
+            <div class="card-grid" id="owner-cards"></div>
+
+            <div class="grid-two">
+                <div class="card">
+                    <h3>Total Points For (career)</h3>
+                    <canvas id="chart-points-for"></canvas>
+                </div>
+                <div class="card">
+                    <h3>Career Win %</h3>
+                    <canvas id="chart-winpct"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Owner Detail</h3>
+                <label>Pick an owner
+                    <select id="owner-detail-select"></select>
+                </label>
+                <div id="owner-detail-body"></div>
+            </div>
+        </section>
+
+        <!-- SEASONS & CHAMPIONS -->
+        <section class="panel" id="panel-seasons">
+            <div class="card">
+                <h3>Champions &amp; Sackos</h3>
+                <table id="champions-table" class="data-table"></table>
+            </div>
+            <div class="card">
+                <h3>Season Detail</h3>
+                <label>Year
+                    <select id="season-year"></select>
+                </label>
+                <div id="season-body"></div>
+            </div>
+        </section>
+
+        <!-- HEAD TO HEAD -->
+        <section class="panel" id="panel-h2h">
+            <div class="card">
+                <h3>All-Time Head-to-Head Win % (row vs column)</h3>
+                <p class="muted">Cell value: row owner's win % against column owner. Hover for record.</p>
+                <div class="scroll-x">
+                    <table id="h2h-matrix" class="data-table h2h"></table>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Owner Matchup Detail</h3>
+                <div class="row">
+                    <label>Owner A <select id="h2h-a"></select></label>
+                    <label>Owner B <select id="h2h-b"></select></label>
+                </div>
+                <div id="h2h-detail"></div>
+            </div>
+        </section>
+
+        <!-- WEEKLY TRENDS -->
+        <section class="panel" id="panel-weekly">
+            <div class="grid-two">
+                <div class="card">
+                    <h3>Top 10 Weekly High Scores</h3>
+                    <table id="highs-table" class="data-table"></table>
+                </div>
+                <div class="card">
+                    <h3>Bottom 10 Weekly Scores</h3>
+                    <table id="lows-table" class="data-table"></table>
+                </div>
+            </div>
+            <div class="grid-two">
+                <div class="card">
+                    <h3>Biggest Blowouts</h3>
+                    <table id="blowouts-table" class="data-table"></table>
+                </div>
+                <div class="card">
+                    <h3>Closest Games</h3>
+                    <table id="nailbiters-table" class="data-table"></table>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Weekly Score Distribution</h3>
+                <div class="row">
+                    <label>Year <select id="weekly-year"></select></label>
+                </div>
+                <canvas id="chart-weekly"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footnote">
+        <span id="data-stamp"></span>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
