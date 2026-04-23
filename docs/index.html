@@ -18,6 +18,7 @@
             <button class="tab" data-tab="seasons">Seasons &amp; Champions</button>
             <button class="tab" data-tab="h2h">Head-to-Head</button>
             <button class="tab" data-tab="weekly">Weekly Trends</button>
+            <button class="tab" data-tab="drafts">Drafts</button>
         </nav>
     </header>
 
@@ -123,6 +124,38 @@
                     <label>Year <select id="weekly-year"></select></label>
                 </div>
                 <canvas id="chart-weekly"></canvas>
+            </div>
+        </section>
+
+        <!-- DRAFTS -->
+        <section class="panel" id="panel-drafts">
+            <div class="card">
+                <h3>Draft Board</h3>
+                <div class="row">
+                    <label>Year <select id="draft-year"></select></label>
+                    <label>Filter by owner <select id="draft-owner-filter"><option value="">All owners</option></select></label>
+                </div>
+                <div id="draft-board"></div>
+            </div>
+
+            <div class="grid-two">
+                <div class="card">
+                    <h3>1st-Round Picks Over Time</h3>
+                    <p class="muted">Every owner's first pick, every year.</p>
+                    <div class="scroll-x">
+                        <table id="round1-table" class="data-table"></table>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Position Drafted (career, by owner)</h3>
+                    <canvas id="chart-draft-positions"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Owner Drafting Profile</h3>
+                <label>Owner <select id="draft-owner-detail"></select></label>
+                <div id="draft-owner-body"></div>
             </div>
         </section>
     </main>

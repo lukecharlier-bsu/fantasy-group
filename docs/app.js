@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initSeasonsPanel();
     initH2HPanel();
     initWeeklyPanel();
+    initDraftsPanel();
 });
 
 // ---------- Tabs ----------
@@ -396,3 +397,188 @@ function renderWeeklyChart(year) {
         },
     });
 }
+
+// ---------- Drafts ----------
+function initDraftsPanel() {
+    const drafts = STATE.data.drafts || {};
+    const years = Object.keys(drafts).map(Number).sort((a, b) => b - a);
+    if (!years.length) {
+        document.getElementById("panel-drafts").innerHTML =
+            `<div class="card"><h3>No draft data found</h3><p class="muted">Run <code>python3 scrapeDraft.py</code> then rebuild data.json.</p></div>`;
+        return;
+    }
+
+    const owners = [...STATE.data.owners].map(o => o.name).sort();
+
+    // Year + owner-filter selectors for the draft board
+    const yearSel = document.getElementById("draft-year");
+    yearSel.innerHTML = years.map(y => `<option value="${y}">${y}</option>`).join("");
+    const ownerFilterSel = document.getElementById("draft-owner-filter");
+    ownerFilterSel.innerHTML = `<option value="">All owners</option>` +
+        owners.map(n => `<option value="${n}">${n}</option>`).join("");
+    [yearSel, ownerFilterSel].forEach(s => s.addEventListener("change", renderDraftBoard));
+    renderDraftBoard();
+
+    // Round 1 history table
+    renderRound1Table();
+    renderDraftPositionsChart();
+
+    // Owner detail
+    const detailSel = document.getElementById("draft-owner-detail");
+    detailSel.innerHTML = owners.map(n => `<option value="${n}">${n}</option>`).join("");
+    detailSel.addEventListener("change", () => renderDraftOwnerDetail(detailSel.value));
+    renderDraftOwnerDetail(owners[0]);
+}
+
+function renderDraftBoard() {
+    const year = parseInt(document.getElementById("draft-year").value);
+    const filterOwner = document.getElementById("draft-owner-filter").value;
+    const picks = STATE.data.drafts[year] || [];
+    const byRound = {};
+    for (const p of picks) (byRound[p.round] = byRound[p.round] || []).push(p);
+    const rounds = Object.keys(byRound).map(Number).sort((a, b) => a - b);
+
+    const out = document.getElementById("draft-board");
+    out.innerHTML = rounds.map(r => `
+        <h4 style="margin: 1rem 0 .4rem; color: var(--accent);">Round ${r}</h4>
+        <table class="data-table">
+            <thead><tr><th>#</th><th>Player</th><th>Pos</th><th>NFL</th><th>Owner</th><th>Fantasy Team</th></tr></thead>
+            <tbody>
+            ${byRound[r].map(p => {
+                const dim = filterOwner && p.manager !== filterOwner;
+                const style = dim ? "opacity:0.25" : "";
+                return `<tr style="${style}">
+                    <td>${p.pick}</td>
+                    <td><strong>${p.player}</strong></td>
+                    <td>${p.position}</td>
+                    <td>${p.nflTeam}</td>
+                    <td>${p.manager}</td>
+                    <td class="muted">${p.fantasyTeam}</td>
+                </tr>`;
+            }).join("")}
+            </tbody>
+        </table>
+    `).join("");
+}
+
+function renderRound1Table() {
+    const drafts = STATE.data.drafts;
+    const years = Object.keys(drafts).map(Number).sort((a, b) => a - b);
+    const owners = [...new Set([].concat(...years.map(y => drafts[y].map(p => p.manager))))].sort();
+    // Build {owner: {year: pick}}
+    const board = {};
+    for (const y of years) {
+        for (const p of drafts[y]) {
+            if (p.round !== 1) continue;
+            (board[p.manager] = board[p.manager] || {})[y] = p;
+        }
+    }
+    const t = document.getElementById("round1-table");
+    t.innerHTML = `
+        <thead><tr><th>Owner</th>${years.map(y => `<th>${y}</th>`).join("")}</tr></thead>
+        <tbody>
+        ${owners.map(o => `
+            <tr>
+                <td><strong>${o}</strong></td>
+                ${years.map(y => {
+                    const p = board[o]?.[y];
+                    if (!p) return `<td class="muted">—</td>`;
+                    return `<td title="Pick ${p.pick} (${p.position} - ${p.nflTeam})">
+                        <span class="badge">#${p.pick}</span><br>
+                        <small>${p.player}</small>
+                    </td>`;
+                }).join("")}
+            </tr>
+        `).join("")}
+        </tbody>
+    `;
+}
+
+function renderDraftPositionsChart() {
+    const stats = STATE.data.draftOwnerStats || {};
+    const owners = Object.keys(stats).sort();
+    // Top positions across the league
+    const allPositions = new Set();
+    owners.forEach(o => Object.keys(stats[o].positionCounts || {}).forEach(p => allPositions.add(p)));
+    const standardOrder = ["QB", "RB", "WR", "TE", "K", "DEF"];
+    const positions = standardOrder.filter(p => allPositions.has(p))
+        .concat([...allPositions].filter(p => !standardOrder.includes(p)));
+    const palette = {
+        QB: "#38bdf8", RB: "#4ade80", WR: "#fbbf24", TE: "#a78bfa",
+        K: "#fb923c", DEF: "#f87171"
+    };
+    const datasets = positions.map(pos => ({
+        label: pos,
+        data: owners.map(o => stats[o].positionCounts[pos] || 0),
+        backgroundColor: palette[pos] || "#94a3b8",
+        stack: "pos",
+    }));
+    const id = "chart-draft-positions";
+    if (STATE.charts[id]) STATE.charts[id].destroy();
+    STATE.charts[id] = new Chart(document.getElementById(id), {
+        type: "bar",
+        data: { labels: owners, datasets },
+        options: {
+            responsive: true,
+            plugins: { legend: { position: "bottom" } },
+            scales: {
+                x: { stacked: true, grid: { display: false } },
+                y: { stacked: true, grid: { color: "#1f2937" } },
+            },
+        },
+    });
+}
+
+function renderDraftOwnerDetail(name) {
+    const stats = (STATE.data.draftOwnerStats || {})[name];
+    const body = document.getElementById("draft-owner-body");
+    if (!stats) { body.innerHTML = `<p class="muted">No draft data for ${name}.</p>`; return; }
+
+    const round1Rows = stats.round1Picks.map(p =>
+        `<tr><td>${p.year}</td><td>#${p.pick}</td><td><strong>${p.player}</strong></td><td>${p.position} - ${p.nflTeam}</td></tr>`
+    ).join("");
+
+    const recurringRows = stats.recurringPlayers.length
+        ? stats.recurringPlayers.map(r => {
+            const summary = r.picks.map(p => `${p.year} (R${p.round}, #${p.pick})`).join(" · ");
+            return `<tr><td><strong>${r.player}</strong></td><td>${r.times}×</td><td class="muted">${summary}</td></tr>`;
+          }).join("")
+        : `<tr><td colspan="3" class="muted">No players drafted more than once.</td></tr>`;
+
+    const posRows = Object.entries(stats.positionCounts)
+        .sort((a, b) => b[1] - a[1])
+        .map(([pos, n]) => {
+            const avg = stats.avgPickByPosition[pos];
+            return `<tr><td>${pos}</td><td>${n}</td><td>${avg != null ? avg : "-"}</td></tr>`;
+        }).join("");
+
+    body.innerHTML = `
+        <div class="season-summary">
+            <div class="tile"><div class="lbl">Total Picks</div><div class="val">${stats.totalPicks}</div></div>
+            <div class="tile"><div class="lbl">Round 1 Picks</div><div class="val">${stats.round1Picks.length}</div></div>
+            <div class="tile"><div class="lbl">Repeat Players</div><div class="val">${stats.recurringPlayers.length}</div></div>
+        </div>
+        <div class="grid-two">
+            <div>
+                <h4>1st-Round Picks</h4>
+                <table class="data-table">
+                    <thead><tr><th>Year</th><th>Pick</th><th>Player</th><th>Pos / NFL</th></tr></thead>
+                    <tbody>${round1Rows}</tbody>
+                </table>
+            </div>
+            <div>
+                <h4>Position Tendencies</h4>
+                <table class="data-table">
+                    <thead><tr><th>Pos</th><th>Total drafted</th><th>Avg overall pick</th></tr></thead>
+                    <tbody>${posRows}</tbody>
+                </table>
+            </div>
+        </div>
+        <h4 style="margin-top:1rem">Players drafted in multiple seasons</h4>
+        <table class="data-table">
+            <thead><tr><th>Player</th><th>Times</th><th>When</th></tr></thead>
+            <tbody>${recurringRows}</tbody>
+        </table>
+    `;
+}
+

@@ -1,0 +1,121 @@
+Round,Pick,PlayerId,Player,Position,NFLTeam,FantasyTeam,ManagerName
+1,1,2557997,Christian McCaffrey,RB,CAR,Houston Stars,Sean
+1,2,2556075,Derrick Henry,RB,TEN,Greek Freak Fan Brook Lopez,Luke
+1,3,2557991,Dalvin Cook,RB,MIN,Team Cruz,Alex
+1,4,2560968,Saquon Barkley,RB,NYG,Team Justin,Justin
+1,5,2558019,Alvin Kamara,RB,NO,The Booty Clappers,Ulises
+1,6,2540258,Travis Kelce,TE,KC,Beefcakes,Aiden
+1,7,2564148,Jonathan Taylor,RB,IND,beaners,Howard
+1,8,2561021,Nick Chubb,RB,CLE,The Labbers,Matthew
+2,9,2543495,Davante Adams,WR,LV,The Labbers,Matthew
+2,10,2564271,Clyde Edwards-Helaire,RB,KC,beaners,Howard
+2,11,2558116,Aaron Jones,RB,GB,Beefcakes,Aiden
+2,12,2559169,Austin Ekeler,RB,LAC,The Booty Clappers,Ulises
+2,13,2558266,George Kittle,TE,SF,Team Justin,Justin
+2,14,2552608,Stefon Diggs,WR,BUF,Team Cruz,Alex
+2,15,2558125,Patrick Mahomes,QB,KC,Greek Freak Fan Brook Lopez,Luke
+2,16,2562685,DK Metcalf,WR,SEA,Houston Stars,Sean
+3,17,2540165,DeAndre Hopkins,WR,ARI,Houston Stars,Sean
+3,18,2562238,A.J. Brown,WR,PHI,Greek Freak Fan Brook Lopez,Luke
+3,19,2556214,Tyreek Hill,WR,MIA,Team Cruz,Alex
+3,20,2555224,Ezekiel Elliott,RB,DAL,Team Justin,Justin
+3,21,2566448,Najee Harris,RB,PIT,The Booty Clappers,Ulises
+3,22,2495454,Julio Jones,WR,TEN,Beefcakes,Aiden
+3,23,2562382,Kyler Murray,QB,ARI,beaners,Howard
+3,24,2560854,Calvin Ridley,WR,ATL,The Labbers,Matthew
+4,25,2556370,Michael Thomas,WR,NO,The Labbers,Matthew
+4,26,2564556,Justin Jefferson,WR,MIN,beaners,Howard
+4,27,2558865,Chris Carson,RB,SEA,Beefcakes,Aiden
+4,28,2552408,Darren Waller,TE,LV,The Booty Clappers,Ulises
+4,29,2541785,Adam Thielen,WR,MIN,Team Justin,Justin
+4,30,2563965,D'Andre Swift,RB,DET,Team Cruz,Alex
+4,31,2543468,Mike Evans,WR,TB,Greek Freak Fan Brook Lopez,Luke
+4,32,2560955,Josh Allen,QB,BUF,Houston Stars,Sean
+5,33,2563848,CeeDee Lamb,WR,DAL,Houston Stars,Sean
+5,34,2565830,Kyle Pitts,TE,ATL,Greek Freak Fan Brook Lopez,Luke
+5,35,2565276,Antonio Gibson,RB,WAS,Team Cruz,Alex
+5,36,2560757,Lamar Jackson,QB,BAL,Team Justin,Justin
+5,37,2543509,Allen Robinson,WR,LA,The Booty Clappers,Ulises
+5,38,2532975,Russell Wilson,QB,DEN,Beefcakes,Aiden
+5,39,2555341,Hunter Henry,TE,NE,beaners,Howard
+5,40,2563548,J.K. Dobbins,RB,BAL,The Labbers,Matthew
+6,41,2506363,Aaron Rodgers,QB,GB,The Labbers,Matthew
+6,42,2566409,DeVonta Smith,WR,PHI,beaners,Howard
+6,43,2536340,Justin Tucker,K,BAL,Beefcakes,Aiden
+6,44,2562489,Terry McLaurin,WR,WAS,The Booty Clappers,Ulises
+6,45,2540154,Keenan Allen,WR,LAC,Team Justin,Justin
+6,46,2560957,Mark Andrews,TE,BAL,Team Cruz,Alex
+6,47,2562502,David Montgomery,RB,CHI,Greek Freak Fan Brook Lopez,Luke
+6,48,2562574,Darrell Henderson,RB,LA,Houston Stars,Sean
+7,49,2565941,Ja'Marr Chase,WR,CIN,Houston Stars,Sean
+7,50,2552487,Amari Cooper,WR,CLE,Greek Freak Fan Brook Lopez,Luke
+7,51,2565045,Justin Herbert,QB,LAC,Team Cruz,Alex
+7,52,2557976,Joe Mixon,RB,CIN,Team Justin,Justin
+7,53,2555260,Dak Prescott,QB,DAL,The Booty Clappers,Ulises
+7,54,2552430,Tyler Lockett,WR,SEA,Beefcakes,Aiden
+7,55,2566157,Travis Etienne,RB,JAX,beaners,Howard
+7,56,2553439,Mike Davis,RB,ATL,The Labbers,Matthew
+8,57,2562378,T.J. Hockenson,TE,DET,The Labbers,Matthew
+8,58,2560995,Dallas Goedert,TE,PHI,beaners,Howard
+8,59,100027,Pittsburgh Steelers,DEF,,Beefcakes,Aiden
+8,60,2559205,Younghoe Koo,K,ATL,The Booty Clappers,Ulises
+8,61,100017,Los Angeles Rams,DEF,,Team Justin,Justin
+8,62,2565093,Brandon Aiyuk,WR,SF,Team Cruz,Alex
+8,63,2543496,Odell Beckham Jr.,WR,LA,Greek Freak Fan Brook Lopez,Luke
+8,64,2562383,Noah Fant,TE,SEA,Houston Stars,Sean
+9,65,2558245,Harrison Butker,K,KC,Houston Stars,Sean
+9,66,100031,Tampa Bay Buccaneers,DEF,,Greek Freak Fan Brook Lopez,Luke
+9,67,100014,Indianapolis Colts,DEF,,Team Cruz,Alex
+9,68,2540169,Robert Woods,WR,TEN,Team Justin,Justin
+9,69,100019,Miami Dolphins,DEF,,The Booty Clappers,Ulises
+9,70,2558105,Chris Godwin,WR,TB,Beefcakes,Aiden
+9,71,2563896,Jerry Jeudy,WR,DEN,beaners,Howard
+9,72,2504211,Tom Brady,QB,TB,The Labbers,Matthew
+10,73,100002,Baltimore Ravens,DEF,,The Labbers,Matthew
+10,74,2564136,Michael Pittman,WR,IND,beaners,Howard
+10,75,2543498,Brandin Cooks,WR,HOU,Beefcakes,Aiden
+10,76,2564319,Cam Akers,RB,LA,The Booty Clappers,Ulises
+10,77,2564106,Rodrigo Blankenship,K,IND,Team Justin,Justin
+10,78,2563722,Joe Burrow,QB,CIN,Team Cruz,Alex
+10,79,2532956,Ryan Tannehill,QB,TEN,Greek Freak Fan Brook Lopez,Luke
+10,80,2557898,Cooper Kupp,WR,LA,Houston Stars,Sean
+11,81,2557917,Kareem Hunt,RB,CLE,Houston Stars,Sean
+11,82,2553435,David Johnson,RB,HOU,Greek Freak Fan Brook Lopez,Luke
+11,83,2561153,Jason Sanders,K,MIA,Team Cruz,Alex
+11,84,2566163,Trevor Lawrence,QB,JAX,Team Justin,Justin
+11,85,2562722,Miles Sanders,RB,PHI,The Booty Clappers,Ulises
+11,86,2558063,Deshaun Watson,QB,CLE,Beefcakes,Aiden
+11,87,2564832,Jalen Hurts,QB,PHI,beaners,Howard
+11,88,2562674,Diontae Johnson,WR,PIT,The Labbers,Matthew
+12,89,2562377,Josh Jacobs,RB,LV,The Labbers,Matthew
+12,90,2566148,Jalen Camp,WR,HOU,beaners,Howard
+12,91,2552409,DeVante Parker,WR,NE,Beefcakes,Aiden
+12,92,2564970,Chase Claypool,WR,PIT,The Booty Clappers,Ulises
+12,93,2562270,Myles Gaskin,RB,MIA,Team Justin,Justin
+12,94,2560813,D.J. Moore,WR,CAR,Team Cruz,Alex
+12,95,2559270,Robert Tonyan,TE,GB,Greek Freak Fan Brook Lopez,Luke
+12,96,2564223,James Robinson,RB,JAX,Houston Stars,Sean
+13,97,2553728,Raheem Mostert,RB,MIA,Houston Stars,Sean
+13,98,2507232,Mason Crosby,K,GB,Greek Freak Fan Brook Lopez,Luke
+13,99,497240,Rob Gronkowski,TE,TB,Team Cruz,Alex
+13,100,2558149,JuJu Smith-Schuster,WR,KC,Team Justin,Justin
+13,101,2558052,Kenny Golladay,WR,NYG,The Booty Clappers,Ulises
+13,102,2561018,D.J. Chark,WR,DET,Beefcakes,Aiden
+13,103,100026,Arizona Cardinals,DEF,,beaners,Howard
+13,104,2563704,Cole Kmet,TE,CHI,The Labbers,Matthew
+14,105,2566544,Trey Sermon,RB,SF,The Labbers,Matthew
+14,106,2541556,Brandon McManus,K,DEN,beaners,Howard
+14,107,2562738,Irv Smith,TE,MIN,Beefcakes,Aiden
+14,108,2563617,Zack Moss,RB,BUF,The Booty Clappers,Ulises
+14,109,2560994,Mike Gesicki,TE,MIA,Team Justin,Justin
+14,110,2566049,Javonte Williams,RB,DEN,Team Cruz,Alex
+14,111,2557973,Leonard Fournette,RB,TB,Greek Freak Fan Brook Lopez,Luke
+14,112,2562721,Deebo Samuel,WR,SF,Houston Stars,Sean
+15,113,100003,Buffalo Bills,DEF,,Houston Stars,Sean
+15,114,2563986,AJ Dillon,RB,GB,Greek Freak Fan Brook Lopez,Luke
+15,115,100029,San Francisco 49ers,DEF,,Team Cruz,Alex
+15,116,2560888,Courtland Sutton,WR,DEN,Team Justin,Justin
+15,117,79860,Matthew Stafford,QB,LA,The Booty Clappers,Ulises
+15,118,2543488,Jarvis Landry,WR,CLE,Beefcakes,Aiden
+15,119,2563731,Tee Higgins,WR,CIN,beaners,Howard
+15,120,2560993,Daniel Carlson,K,LV,The Labbers,Matthew

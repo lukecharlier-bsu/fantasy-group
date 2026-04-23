@@ -1,0 +1,121 @@
+Round,Pick,PlayerId,Player,Position,NFLTeam,FantasyTeam,ManagerName
+1,1,2557997,Christian McCaffrey,RB,SF,Nelk Brothers,Matthew
+1,2,2556214,Tyreek Hill,WR,MIA,Team Cruz,Alex
+1,3,2563848,CeeDee Lamb,WR,DAL,Team Buzz,Justin
+1,4,2569558,Bijan Robinson,RB,ATL,Houston Stars,Sean
+1,5,2565941,Ja'Marr Chase,WR,CIN,Beefcakes,Aiden
+1,6,2564556,Justin Jefferson,WR,MIN,Bad news bombers,Joshua
+1,7,2556075,Derrick Henry,RB,BAL,beaners,Howard
+1,8,2566073,Amon-Ra St. Brown,WR,DET,The Crooglefuggs,Luke
+2,9,2570026,Puka Nacua,WR,LAR,The Crooglefuggs,Luke
+2,10,2560957,Mark Andrews,TE,BAL,beaners,Howard
+2,11,2568030,Breece Hall,RB,NYJ,Bad news bombers,Joshua
+2,12,2562238,A.J. Brown,WR,PHI,Beefcakes,Aiden
+2,13,2564148,Jonathan Taylor,RB,IND,Houston Stars,Sean
+2,14,2560968,Saquon Barkley,RB,PHI,Team Buzz,Justin
+2,15,2560955,Josh Allen,QB,BUF,Team Cruz,Alex
+2,16,2569747,Jahmyr Gibbs,RB,DET,Nelk Brothers,Matthew
+3,17,2568048,Garrett Wilson,WR,NYJ,Nelk Brothers,Matthew
+3,18,2567862,Kyren Williams,RB,LAR,Team Cruz,Alex
+3,19,2543495,Davante Adams,WR,LAR,Team Buzz,Justin
+3,20,2558266,George Kittle,TE,SF,Houston Stars,Sean
+3,21,2572411,Marvin Harrison Jr.,WR,ARI,Beefcakes,Aiden
+3,22,2570062,De'Von Achane,RB,MIA,Bad news bombers,Joshua
+3,23,2563707,Darnell Mooney,WR,ATL,beaners,Howard
+3,24,2569726,Sam LaPorta,TE,DET,The Crooglefuggs,Luke
+4,25,2567808,Isiah Pacheco,RB,KC,The Crooglefuggs,Luke
+4,26,2552608,Stefon Diggs,WR,NE,beaners,Howard
+4,27,2566292,Jaylen Waddle,WR,MIA,Bad news bombers,Joshua
+4,28,2566157,Travis Etienne,RB,JAX,Beefcakes,Aiden
+4,29,2552487,Amari Cooper,WR,BUF,Houston Stars,Sean
+4,30,2540258,Travis Kelce,TE,KC,Team Buzz,Justin
+4,31,2568315,Rachaad White,RB,TB,Team Cruz,Alex
+4,32,2543468,Mike Evans,WR,TB,Nelk Brothers,Matthew
+5,33,2565093,Brandon Aiyuk,WR,SF,Nelk Brothers,Matthew
+5,34,2557898,Cooper Kupp,WR,SEA,Team Cruz,Alex
+5,35,2558019,Alvin Kamara,RB,NO,Team Buzz,Justin
+5,36,2540154,Keenan Allen,WR,CHI,Houston Stars,Sean
+5,37,2568117,Trey McBride,TE,ARI,Beefcakes,Aiden
+5,38,2562721,Deebo Samuel Sr.,WR,WAS,Bad news bombers,Joshua
+5,39,2562377,Josh Jacobs,RB,GB,beaners,Howard
+5,40,2564832,Jalen Hurts,QB,PHI,The Crooglefuggs,Luke
+6,41,2567250,Drake London,WR,ATL,The Crooglefuggs,Luke
+6,42,2562674,Diontae Johnson,WR,CLE,beaners,Howard
+6,43,2567328,James Cook,RB,BUF,Bad news bombers,Joshua
+6,44,2568282,Kenneth Walker III,RB,SEA,Beefcakes,Aiden
+6,45,2560757,Lamar Jackson,QB,BAL,Houston Stars,Sean
+6,46,2564136,Michael Pittman,WR,IND,Team Buzz,Justin
+6,47,2560813,DJ Moore,WR,CHI,Team Cruz,Alex
+6,48,2567973,Chris Olave,WR,NO,Nelk Brothers,Matthew
+7,49,2558125,Patrick Mahomes,QB,KC,Nelk Brothers,Matthew
+7,50,2569594,Dalton Kincaid,TE,BUF,Team Cruz,Alex
+7,51,2569819,C.J. Stroud,QB,HOU,Team Buzz,Justin
+7,52,2558105,Chris Godwin,WR,TB,Houston Stars,Sean
+7,53,2569864,Anthony Richardson,QB,IND,Beefcakes,Aiden
+7,54,2565830,Kyle Pitts,TE,ATL,Bad news bombers,Joshua
+7,55,2562382,Kyler Murray,QB,ARI,beaners,Howard
+7,56,2566127,Nico Collins,WR,HOU,The Crooglefuggs,Luke
+8,57,2558116,Aaron Jones,RB,MIN,The Crooglefuggs,Luke
+8,58,2572477,Ladd McConkey,WR,LAC,beaners,Howard
+8,59,2566409,DeVonta Smith,WR,PHI,Bad news bombers,Joshua
+8,60,2539227,Dustin Hopkins,K,CLE,Beefcakes,Aiden
+8,61,100029,San Francisco 49ers,DEF,,Houston Stars,Sean
+8,62,2569813,Tank Dell,WR,HOU,Team Buzz,Justin
+8,63,2569573,Zay Flowers,WR,BAL,Team Cruz,Alex
+8,64,2557976,Joe Mixon,RB,HOU,Nelk Brothers,Matthew
+9,65,2553728,Raheem Mostert,RB,LV,Nelk Brothers,Matthew
+9,66,2557978,James Conner,RB,ARI,Team Cruz,Alex
+9,67,2562502,David Montgomery,RB,DET,Team Buzz,Justin
+9,68,2571750,Brandon Aubrey,K,DAL,Houston Stars,Sean
+9,69,100005,Chicago Bears,DEF,,Beefcakes,Aiden
+9,70,2557858,Evan Engram,TE,DEN,Bad news bombers,Joshua
+9,71,2563965,D'Andre Swift,RB,CHI,beaners,Howard
+9,72,2562685,DK Metcalf,WR,PIT,The Crooglefuggs,Luke
+10,73,2562734,Devin Singletary,RB,NYG,The Crooglefuggs,Luke
+10,74,2572342,Malik Nabers,WR,NYG,beaners,Howard
+10,75,2559169,Austin Ekeler,RB,WAS,Bad news bombers,Joshua
+10,76,2563731,Tee Higgins,WR,CIN,Beefcakes,Aiden
+10,77,2572186,Xavier Worthy,WR,KC,Houston Stars,Sean
+10,78,2566343,Rhamondre Stevenson,RB,NE,Team Buzz,Justin
+10,79,2562489,Terry McLaurin,WR,WAS,Team Cruz,Alex
+10,80,2567496,Jake Ferguson,TE,DAL,Nelk Brothers,Matthew
+11,81,2562699,Tony Pollard,RB,TEN,Nelk Brothers,Matthew
+11,82,2571883,Jonathon Brooks,RB,CAR,Team Cruz,Alex
+11,83,2558245,Harrison Butker,K,KC,Team Buzz,Justin
+11,84,2566448,Najee Harris,RB,LAC,Houston Stars,Sean
+11,85,2560781,Christian Kirk,WR,HOU,Beefcakes,Aiden
+11,86,2563722,Joe Burrow,QB,CIN,Bad news bombers,Joshua
+11,87,2572219,Brock Bowers,TE,LV,beaners,Howard
+11,88,2569765,Jayden Reed,WR,GB,The Crooglefuggs,Luke
+12,89,2568493,Jaylen Warren,RB,PIT,The Crooglefuggs,Luke
+12,90,2571913,Caleb Williams,QB,CHI,beaners,Howard
+12,91,2565045,Justin Herbert,QB,LAC,Bad news bombers,Joshua
+12,92,2560854,Calvin Ridley,WR,TEN,Beefcakes,Aiden
+12,93,100007,Cleveland Browns,DEF,,Houston Stars,Sean
+12,94,2562379,Marquise Brown,WR,KC,Team Buzz,Justin
+12,95,2555260,Dak Prescott,QB,DAL,Team Cruz,Alex
+12,96,2564007,Jordan Love,QB,GB,Nelk Brothers,Matthew
+13,97,100003,Buffalo Bills,DEF,,Nelk Brothers,Matthew
+13,98,2568159,George Pickens,WR,DAL,Team Cruz,Alex
+13,99,2572564,Jayden Daniels,QB,WAS,Team Buzz,Justin
+13,100,2568216,Brock Purdy,QB,SF,Houston Stars,Sean
+13,101,2567883,Zamir White,RB,LV,Beefcakes,Aiden
+13,102,2536340,Justin Tucker,K,BAL,Bad news bombers,Joshua
+13,103,2568435,Cameron Dicker,K,LAC,beaners,Howard
+13,104,2555334,Jared Goff,QB,DET,The Crooglefuggs,Luke
+14,105,100002,Baltimore Ravens,DEF,,The Crooglefuggs,Luke
+14,106,100001,Atlanta Falcons,DEF,,beaners,Howard
+14,107,2562378,T.J. Hockenson,TE,MIN,Bad news bombers,Joshua
+14,108,2557986,David Njoku,TE,CLE,Beefcakes,Aiden
+14,109,2563596,Tyler Bass,K,BUF,Houston Stars,Sean
+14,110,2566442,Pat Freiermuth,TE,PIT,Team Buzz,Justin
+14,111,100024,New York Jets,DEF,,Team Cruz,Alex
+14,112,2552430,Tyler Lockett,WR,TEN,Nelk Brothers,Matthew
+15,113,2565953,Evan McPherson,K,CIN,Nelk Brothers,Matthew
+15,114,2570308,Jake Moody,K,SF,Team Cruz,Alex
+15,115,100027,Pittsburgh Steelers,DEF,,Team Buzz,Justin
+15,116,2561027,Tyler Conklin,TE,LAC,Houston Stars,Sean
+15,117,2561324,Gus Edwards,RB,LAC,Beefcakes,Aiden
+15,118,100006,Cincinnati Bengals,DEF,,Bad news bombers,Joshua
+15,119,2555224,Ezekiel Elliott,RB,LAC,beaners,Howard
+15,120,2559205,Younghoe Koo,K,ATL,The Crooglefuggs,Luke

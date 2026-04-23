@@ -1,0 +1,121 @@
+Round,Pick,PlayerId,Player,Position,NFLTeam,FantasyTeam,ManagerName
+1,1,2557997,Christian McCaffrey,RB,SF,The Booty Clappers,Ulises
+1,2,2564556,Justin Jefferson,WR,MIN,Team Buzz,Justin
+1,3,2559169,Austin Ekeler,RB,WAS,Beefcakes,Aiden
+1,4,2556214,Tyreek Hill,WR,MIA,beaners,Howard
+1,5,2557898,Cooper Kupp,WR,LA,Bad news bombers,Joshua
+1,6,2540258,Travis Kelce,TE,KC,Greek Freak Fan Damian Lillard,Luke
+1,7,2552608,Stefon Diggs,WR,HOU,Team GOAT,Alex
+1,8,2569558,Bijan Robinson,RB,ATL,The Labbers,Matthew
+2,9,2565941,Ja'Marr Chase,WR,CIN,The Labbers,Matthew
+2,10,2562238,A.J. Brown,WR,PHI,Team GOAT,Alex
+2,11,2543495,Davante Adams,WR,LV,Greek Freak Fan Damian Lillard,Luke
+2,12,2560968,Saquon Barkley,RB,PHI,Bad news bombers,Joshua
+2,13,2556075,Derrick Henry,RB,BAL,beaners,Howard
+2,14,2562377,Josh Jacobs,RB,GB,Beefcakes,Aiden
+2,15,2562699,Tony Pollard,RB,TEN,Team Buzz,Justin
+2,16,2566292,Jaylen Waddle,WR,MIA,The Booty Clappers,Ulises
+3,17,2561021,Nick Chubb,RB,CLE,The Booty Clappers,Ulises
+3,18,2563848,CeeDee Lamb,WR,DAL,Team Buzz,Justin
+3,19,2566073,Amon-Ra St. Brown,WR,DET,Beefcakes,Aiden
+3,20,2560957,Mark Andrews,TE,BAL,beaners,Howard
+3,21,2558125,Patrick Mahomes,QB,KC,Bad news bombers,Joshua
+3,22,2568048,Garrett Wilson,WR,NYJ,Greek Freak Fan Damian Lillard,Luke
+3,23,2568030,Breece Hall,RB,NYJ,Team GOAT,Alex
+3,24,2564832,Jalen Hurts,QB,PHI,The Labbers,Matthew
+4,25,2564148,Jonathan Taylor,RB,IND,The Labbers,Matthew
+4,26,2560955,Josh Allen,QB,BUF,Team GOAT,Alex
+4,27,2558116,Aaron Jones,RB,MIN,Greek Freak Fan Damian Lillard,Luke
+4,28,2566157,Travis Etienne,RB,JAX,Bad news bombers,Joshua
+4,29,2566448,Najee Harris,RB,PIT,beaners,Howard
+4,30,2558266,George Kittle,TE,SF,Beefcakes,Aiden
+4,31,2563722,Joe Burrow,QB,CIN,Team Buzz,Justin
+4,32,2566343,Rhamondre Stevenson,RB,NE,The Booty Clappers,Ulises
+5,33,2567973,Chris Olave,WR,NO,The Booty Clappers,Ulises
+5,34,2562378,T.J. Hockenson,TE,MIN,Team Buzz,Justin
+5,35,2552487,Amari Cooper,WR,CLE,Beefcakes,Aiden
+5,36,2569747,Jahmyr Gibbs,RB,DET,beaners,Howard
+5,37,2563731,Tee Higgins,WR,CIN,Bad news bombers,Joshua
+5,38,2565920,Justin Fields,QB,PIT,Greek Freak Fan Damian Lillard,Luke
+5,39,2562685,DK Metcalf,WR,SEA,Team GOAT,Alex
+5,40,2566409,DeVonta Smith,WR,PHI,The Labbers,Matthew
+6,41,2562722,Miles Sanders,RB,CAR,The Labbers,Matthew
+6,42,2560757,Lamar Jackson,QB,BAL,Team GOAT,Alex
+6,43,2558846,Mike Williams,WR,NYJ,Greek Freak Fan Damian Lillard,Luke
+6,44,2552408,Darren Waller,TE,NYG,Bad news bombers,Joshua
+6,45,2564499,Tua Tagovailoa,QB,MIA,beaners,Howard
+6,46,2566163,Trevor Lawrence,QB,JAX,Beefcakes,Aiden
+6,47,2560854,Calvin Ridley,WR,TEN,Team Buzz,Justin
+6,48,2565045,Justin Herbert,QB,LAC,The Booty Clappers,Ulises
+7,49,2567250,Drake London,WR,ATL,The Booty Clappers,Ulises
+7,50,2557976,Joe Mixon,RB,HOU,Team Buzz,Justin
+7,51,2560781,Christian Kirk,WR,JAX,Beefcakes,Aiden
+7,52,2540165,DeAndre Hopkins,WR,TEN,beaners,Howard
+7,53,2562489,Terry McLaurin,WR,WAS,Bad news bombers,Joshua
+7,54,2568282,Kenneth Walker III,RB,SEA,Greek Freak Fan Damian Lillard,Luke
+7,55,2562721,Deebo Samuel Sr.,WR,SF,Team GOAT,Alex
+7,56,2540154,Keenan Allen,WR,CHI,The Labbers,Matthew
+8,57,2557991,Dalvin Cook,RB,BAL,The Labbers,Matthew
+8,58,2567685,Dameon Pierce,RB,HOU,Team GOAT,Alex
+8,59,2562682,Alexander Mattison,RB,LV,Greek Freak Fan Damian Lillard,Luke
+8,60,2565830,Kyle Pitts,TE,ATL,Bad news bombers,Joshua
+8,61,2539335,Geno Smith,QB,SEA,beaners,Howard
+8,62,2567808,Isiah Pacheco,RB,KC,Beefcakes,Aiden
+8,63,2564319,Cam Akers,RB,MIN,Team Buzz,Justin
+8,64,2562502,David Montgomery,RB,DET,The Booty Clappers,Ulises
+9,65,2563896,Jerry Jeudy,WR,CLE,The Booty Clappers,Ulises
+9,66,2568159,George Pickens,WR,PIT,Team Buzz,Justin
+9,67,2558105,Chris Godwin,WR,TB,Beefcakes,Aiden
+9,68,2557858,Evan Engram,TE,JAX,beaners,Howard
+9,69,2563965,D'Andre Swift,RB,CHI,Bad news bombers,Joshua
+9,70,2560813,DJ Moore,WR,CHI,Greek Freak Fan Damian Lillard,Luke
+9,71,2568315,Rachaad White,RB,TB,Team GOAT,Alex
+9,72,2567637,Christian Watson,WR,GB,The Labbers,Matthew
+10,73,2560995,Dallas Goedert,TE,PHI,The Labbers,Matthew
+10,74,2557986,David Njoku,TE,CLE,Team GOAT,Alex
+10,75,2566049,Javonte Williams,RB,DEN,Greek Freak Fan Damian Lillard,Luke
+10,76,2565093,Brandon Aiyuk,WR,SF,Bad news bombers,Joshua
+10,77,2543496,Odell Beckham Jr.,WR,BAL,beaners,Howard
+10,78,2567658,Chigoziem Okonkwo,TE,TEN,Beefcakes,Aiden
+10,79,2563548,J.K. Dobbins,RB,LAC,Team Buzz,Justin
+10,80,2558019,Alvin Kamara,RB,NO,The Booty Clappers,Ulises
+11,81,2569573,Zay Flowers,WR,BAL,The Booty Clappers,Ulises
+11,82,2536340,Justin Tucker,K,BAL,Team Buzz,Justin
+11,83,100029,San Francisco 49ers,DEF,,Beefcakes,Aiden
+11,84,2560993,Daniel Carlson,K,LV,beaners,Howard
+11,85,100025,Philadelphia Eagles,DEF,,Bad news bombers,Joshua
+11,86,2543468,Mike Evans,WR,TB,Greek Freak Fan Damian Lillard,Luke
+11,87,2557978,James Conner,RB,ARI,Team GOAT,Alex
+11,88,2552430,Tyler Lockett,WR,SEA,The Labbers,Matthew
+12,89,2567328,James Cook,RB,BUF,The Labbers,Matthew
+12,90,2570074,Jordan Addison,WR,MIN,Team GOAT,Alex
+12,91,100021,New England Patriots,DEF,,Greek Freak Fan Damian Lillard,Luke
+12,92,2566376,Kadarius Toney,WR,KC,Bad news bombers,Joshua
+12,93,2565926,Khalil Herbert,RB,CHI,beaners,Howard
+12,94,2564136,Michael Pittman,WR,IND,Beefcakes,Aiden
+12,95,100003,Buffalo Bills,DEF,,Team Buzz,Justin
+12,96,2560866,Dalton Schultz,TE,HOU,The Booty Clappers,Ulises
+13,97,100008,Dallas Cowboys,DEF,,The Booty Clappers,Ulises
+13,98,2566442,Pat Freiermuth,TE,PIT,Team Buzz,Justin
+13,99,2558204,Jamaal Williams,RB,NO,Beefcakes,Aiden
+13,100,100016,Kansas City Chiefs,DEF,,beaners,Howard
+13,101,2506363,Aaron Rodgers,QB,NYJ,Bad news bombers,Joshua
+13,102,2555260,Dak Prescott,QB,DAL,Greek Freak Fan Damian Lillard,Luke
+13,103,2562674,Diontae Johnson,WR,CAR,Team GOAT,Alex
+13,104,2570341,Jaxon Smith-Njigba,WR,SEA,The Labbers,Matthew
+14,105,100024,New York Jets,DEF,,The Labbers,Matthew
+14,106,100015,Jacksonville Jaguars,DEF,,Team GOAT,Alex
+14,107,2557889,Gerald Everett,TE,CHI,Greek Freak Fan Damian Lillard,Luke
+14,108,2559205,Younghoe Koo,K,ATL,Bad news bombers,Joshua
+14,109,2560938,Jeff Wilson,RB,MIA,beaners,Howard
+14,110,2563596,Tyler Bass,K,BUF,Beefcakes,Aiden
+14,111,2569864,Anthony Richardson,QB,IND,Team Buzz,Justin
+14,112,2567805,Skyy Moore,WR,KC,The Booty Clappers,Ulises
+15,113,2570062,De'Von Achane,RB,MIA,The Booty Clappers,Ulises
+15,114,2568321,Jahan Dotson,WR,WAS,Team Buzz,Justin
+15,115,2543498,Brandin Cooks,WR,DAL,Beefcakes,Aiden
+15,116,2569813,Tank Dell,WR,HOU,beaners,Howard
+15,117,2563986,AJ Dillon,RB,GB,Bad news bombers,Joshua
+15,118,2553112,Jason Myers,K,SEA,Greek Freak Fan Damian Lillard,Luke
+15,119,2534797,Greg Zuerlein,K,NYJ,Team GOAT,Alex
+15,120,2567013,Riley Patterson,K,JAX,The Labbers,Matthew

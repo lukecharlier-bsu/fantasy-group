@@ -298,6 +298,87 @@ def build_weekly_extremes(seasons, n=10):
     return highs, lows, blowouts, nail_biters
 
 
+def load_drafts(draft_dir):
+    """Return {year: [pick_dict, ...]}."""
+    drafts = {}
+    if not os.path.isdir(draft_dir):
+        return drafts
+    for filename in sorted(os.listdir(draft_dir)):
+        if not filename.endswith(".csv"):
+            continue
+        year = int(filename[:-4])
+        picks = []
+        with open(os.path.join(draft_dir, filename), newline="") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                picks.append({
+                    "round": int(row["Round"]),
+                    "pick": int(row["Pick"]),
+                    "playerId": row["PlayerId"],
+                    "player": row["Player"],
+                    "position": row["Position"],
+                    "nflTeam": row["NFLTeam"],
+                    "fantasyTeam": row["FantasyTeam"],
+                    "manager": row["ManagerName"],
+                })
+        drafts[year] = picks
+    return drafts
+
+
+def build_draft_analytics(drafts):
+    """Per-owner aggregates: position counts, recurring players, avg pick by position."""
+    by_owner = defaultdict(lambda: {
+        "totalPicks": 0,
+        "positionCounts": defaultdict(int),
+        "round1Picks": [],
+        "playerYears": defaultdict(list),
+        "avgPickByPosition": defaultdict(list),
+    })
+    for year, picks in drafts.items():
+        for p in picks:
+            o = by_owner[p["manager"]]
+            o["totalPicks"] += 1
+            o["positionCounts"][p["position"]] += 1
+            if p["round"] == 1:
+                o["round1Picks"].append({
+                    "year": year, "pick": p["pick"],
+                    "player": p["player"], "position": p["position"],
+                    "nflTeam": p["nflTeam"],
+                })
+            o["playerYears"][p["player"]].append({
+                "year": year, "round": p["round"], "pick": p["pick"],
+                "position": p["position"],
+            })
+            if p["position"]:
+                o["avgPickByPosition"][p["position"]].append(p["pick"])
+
+    out = {}
+    for owner, data in by_owner.items():
+        recurring = []
+        for player, years in data["playerYears"].items():
+            if len(years) >= 2:
+                recurring.append({
+                    "player": player,
+                    "times": len(years),
+                    "picks": sorted(years, key=lambda x: x["year"]),
+                })
+        recurring.sort(key=lambda r: (-r["times"], r["player"]))
+
+        avg_by_pos = {}
+        for pos, picks in data["avgPickByPosition"].items():
+            if picks:
+                avg_by_pos[pos] = round(sum(picks) / len(picks), 1)
+
+        out[owner] = {
+            "totalPicks": data["totalPicks"],
+            "positionCounts": dict(data["positionCounts"]),
+            "round1Picks": sorted(data["round1Picks"], key=lambda x: x["year"]),
+            "recurringPlayers": recurring[:25],
+            "avgPickByPosition": avg_by_pos,
+        }
+    return out
+
+
 def main():
     league_id = sys.argv[1] if len(sys.argv) > 1 else None
     if league_id is None:
@@ -309,6 +390,7 @@ def main():
 
     standings_dir = os.path.join("output", f"{league_id}-history-standings")
     gamecenter_dir = os.path.join("output", f"{league_id}-history-teamgamecenter")
+    draft_dir = os.path.join("output", f"{league_id}-history-draft")
     if not os.path.isdir(standings_dir) or not os.path.isdir(gamecenter_dir):
         print(f"Could not find data for league {league_id}.")
         print(f"  Looked in: {standings_dir} and {gamecenter_dir}")
@@ -321,6 +403,8 @@ def main():
     owners = build_owner_stats(seasons)
     h2h = build_head_to_head(seasons)
     highs, lows, blowouts, nail_biters = build_weekly_extremes(seasons)
+    drafts = load_drafts(draft_dir)
+    draft_owner_stats = build_draft_analytics(drafts)
 
     payload = {
         "leagueId": str(league_id),
@@ -332,6 +416,8 @@ def main():
         "weeklyLows": lows,
         "blowouts": blowouts,
         "nailBiters": nail_biters,
+        "drafts": drafts,
+        "draftOwnerStats": draft_owner_stats,
     }
 
     out_dir = "docs"
@@ -341,7 +427,7 @@ def main():
         json.dump(payload, f, indent=2)
 
     print(f"Wrote {out_path}")
-    print(f"  Seasons: {len(seasons)}  Owners: {len(owners)}")
+    print(f"  Seasons: {len(seasons)}  Owners: {len(owners)}  Drafts: {len(drafts)}")
 
 
 if __name__ == "__main__":

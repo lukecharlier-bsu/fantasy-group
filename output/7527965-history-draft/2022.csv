@@ -1,0 +1,121 @@
+Round,Pick,PlayerId,Player,Position,NFLTeam,FantasyTeam,ManagerName
+1,1,2559169,Austin Ekeler,RB,LAC,Team GOAT,Alex
+1,2,2564148,Jonathan Taylor,RB,IND,Bad news bombers,Joshua
+1,3,2556075,Derrick Henry,RB,TEN,Team Buzz,Justin
+1,4,2566448,Najee Harris,RB,PIT,Greek Freak Fan Brook Lopez,Luke
+1,5,2557898,Cooper Kupp,WR,LA,The Labbers,Matthew
+1,6,2557991,Dalvin Cook,RB,MIN,Beefcakes,Aiden
+1,7,2558019,Alvin Kamara,RB,NO,beaners,Howard
+1,8,2557997,Christian McCaffrey,RB,SF,The Booty Clappers,Ulises
+2,9,2561021,Nick Chubb,RB,CLE,The Booty Clappers,Ulises
+2,10,2556214,Tyreek Hill,WR,MIA,beaners,Howard
+2,11,2557976,Joe Mixon,RB,CIN,Beefcakes,Aiden
+2,12,2564556,Justin Jefferson,WR,MIN,The Labbers,Matthew
+2,13,2543495,Davante Adams,WR,LV,Greek Freak Fan Brook Lopez,Luke
+2,14,2565941,Ja'Marr Chase,WR,CIN,Team Buzz,Justin
+2,15,2540258,Travis Kelce,TE,KC,Bad news bombers,Joshua
+2,16,2552608,Stefon Diggs,WR,BUF,Team GOAT,Alex
+3,17,2562721,Deebo Samuel,WR,SF,Team GOAT,Alex
+3,18,2565276,Antonio Gibson,RB,WAS,Bad news bombers,Joshua
+3,19,2563965,D'Andre Swift,RB,PHI,Team Buzz,Justin
+3,20,2557973,Leonard Fournette,RB,TB,Greek Freak Fan Brook Lopez,Luke
+3,21,2560957,Mark Andrews,TE,BAL,The Labbers,Matthew
+3,22,2560955,Josh Allen,QB,BUF,Beefcakes,Aiden
+3,23,2562502,David Montgomery,RB,DET,beaners,Howard
+3,24,2563848,CeeDee Lamb,WR,DAL,The Booty Clappers,Ulises
+4,25,2566049,Javonte Williams,RB,DEN,The Booty Clappers,Ulises
+4,26,2565830,Kyle Pitts,TE,ATL,beaners,Howard
+4,27,2562238,A.J. Brown,WR,PHI,Beefcakes,Aiden
+4,28,2558116,Aaron Jones,RB,GB,The Labbers,Matthew
+4,29,2540154,Keenan Allen,WR,LAC,Greek Freak Fan Brook Lopez,Luke
+4,30,2543468,Mike Evans,WR,TB,Team Buzz,Justin
+4,31,2563731,Tee Higgins,WR,CIN,Bad news bombers,Joshua
+4,32,2558266,George Kittle,TE,SF,Team GOAT,Alex
+5,33,2560968,Saquon Barkley,RB,NYG,Team GOAT,Alex
+5,34,2555224,Ezekiel Elliott,RB,DAL,Bad news bombers,Joshua
+5,35,2565045,Justin Herbert,QB,LAC,Team Buzz,Justin
+5,36,2558125,Patrick Mahomes,QB,KC,Greek Freak Fan Brook Lopez,Luke
+5,37,2562674,Diontae Johnson,WR,PIT,The Labbers,Matthew
+5,38,2562685,DK Metcalf,WR,SEA,Beefcakes,Aiden
+5,39,2563896,Jerry Jeudy,WR,DEN,beaners,Howard
+5,40,2562382,Kyler Murray,QB,ARI,The Booty Clappers,Ulises
+6,41,2566292,Jaylen Waddle,WR,MIA,The Booty Clappers,Ulises
+6,42,2532975,Russell Wilson,QB,DEN,beaners,Howard
+6,43,2563548,J.K. Dobbins,RB,BAL,Beefcakes,Aiden
+6,44,2506363,Aaron Rodgers,QB,NYJ,The Labbers,Matthew
+6,45,2552408,Darren Waller,TE,NYG,Greek Freak Fan Brook Lopez,Luke
+6,46,2560995,Dallas Goedert,TE,PHI,Team Buzz,Justin
+6,47,2540165,DeAndre Hopkins,WR,ARI,Bad news bombers,Joshua
+6,48,2562489,Terry McLaurin,WR,WAS,Team GOAT,Alex
+7,49,2563722,Joe Burrow,QB,CIN,Team GOAT,Alex
+7,50,2558105,Chris Godwin,WR,TB,Bad news bombers,Joshua
+7,51,2566538,Elijah Mitchell,RB,SF,Team Buzz,Justin
+7,52,2552487,Amari Cooper,WR,CLE,Greek Freak Fan Brook Lopez,Luke
+7,53,2562377,Josh Jacobs,RB,LV,The Labbers,Matthew
+7,54,2562378,T.J. Hockenson,TE,MIN,Beefcakes,Aiden
+7,55,2564271,Clyde Edwards-Helaire,RB,KC,beaners,Howard
+7,56,2560813,D.J. Moore,WR,CHI,The Booty Clappers,Ulises
+8,57,2562681,Dawson Knox,TE,BUF,The Booty Clappers,Ulises
+8,58,2566157,Travis Etienne,RB,JAX,beaners,Howard
+8,59,100014,Indianapolis Colts,DEF,,Beefcakes,Aiden
+8,60,2552430,Tyler Lockett,WR,SEA,The Labbers,Matthew
+8,61,2564970,Chase Claypool,WR,CHI,Greek Freak Fan Brook Lopez,Luke
+8,62,2541785,Adam Thielen,WR,CAR,Team Buzz,Justin
+8,63,2558846,Mike Williams,WR,LAC,Bad news bombers,Joshua
+8,64,2562712,Hunter Renfrow,WR,LV,Team GOAT,Alex
+9,65,2540158,Zach Ertz,TE,ARI,Team GOAT,Alex
+9,66,2564319,Cam Akers,RB,LA,Bad news bombers,Joshua
+9,67,2566442,Pat Freiermuth,TE,PIT,Team Buzz,Justin
+9,68,2563986,AJ Dillon,RB,GB,Greek Freak Fan Brook Lopez,Luke
+9,69,2560835,Rashaad Penny,RB,PHI,The Labbers,Matthew
+9,70,2536340,Justin Tucker,K,BAL,Beefcakes,Aiden
+9,71,2560866,Dalton Schultz,TE,HOU,beaners,Howard
+9,72,2564136,Michael Pittman,WR,IND,The Booty Clappers,Ulises
+10,73,2564223,James Robinson,RB,NE,The Booty Clappers,Ulises
+10,74,2560757,Lamar Jackson,QB,BAL,beaners,Howard
+10,75,2562281,Damien Harris,RB,BUF,Beefcakes,Aiden
+10,76,2557917,Kareem Hunt,RB,CLE,The Labbers,Matthew
+10,77,2558149,JuJu Smith-Schuster,WR,NE,Greek Freak Fan Brook Lopez,Luke
+10,78,89802,Ryan Succop,K,TB,Team Buzz,Justin
+10,79,100003,Buffalo Bills,DEF,,Bad news bombers,Joshua
+10,80,2540145,Cordarrelle Patterson,RB,ATL,Team GOAT,Alex
+11,81,2555260,Dak Prescott,QB,DAL,Team GOAT,Alex
+11,82,79860,Matthew Stafford,QB,LA,Bad news bombers,Joshua
+11,83,100027,Pittsburgh Steelers,DEF,,Team Buzz,Justin
+11,84,2504211,Tom Brady,QB,TB,Greek Freak Fan Brook Lopez,Luke
+11,85,100017,Los Angeles Rams,DEF,,The Labbers,Matthew
+11,86,2557978,James Conner,RB,ARI,Beefcakes,Aiden
+11,87,100026,Arizona Cardinals,DEF,,beaners,Howard
+11,88,100031,Tampa Bay Buccaneers,DEF,,The Booty Clappers,Ulises
+12,89,2559205,Younghoe Koo,K,ATL,The Booty Clappers,Ulises
+12,90,2566409,DeVonta Smith,WR,PHI,beaners,Howard
+12,91,2566385,Elijah Moore,WR,CLE,Beefcakes,Aiden
+12,92,2543498,Brandin Cooks,WR,DAL,The Labbers,Matthew
+12,93,2562379,Marquise Brown,WR,ARI,Greek Freak Fan Brook Lopez,Luke
+12,94,2562722,Miles Sanders,RB,CAR,Team Buzz,Justin
+12,95,2560994,Mike Gesicki,TE,NE,Bad news bombers,Joshua
+12,96,2568030,Breece Hall,RB,NYJ,Team GOAT,Alex
+13,97,2560888,Courtland Sutton,WR,DEN,Team GOAT,Alex
+13,98,2558245,Harrison Butker,K,KC,Bad news bombers,Joshua
+13,99,2565093,Brandon Aiyuk,WR,SF,Team Buzz,Justin
+13,100,2562734,Devin Singletary,RB,HOU,Greek Freak Fan Brook Lopez,Luke
+13,101,2564832,Jalen Hurts,QB,PHI,The Labbers,Matthew
+13,102,2540169,Robert Woods,WR,HOU,Beefcakes,Aiden
+13,103,2567250,Drake London,WR,ATL,beaners,Howard
+13,104,2562699,Tony Pollard,RB,DAL,The Booty Clappers,Ulises
+14,105,2558063,Deshaun Watson,QB,CLE,The Booty Clappers,Ulises
+14,106,2563596,Tyler Bass,K,BUF,beaners,Howard
+14,107,2566382,Michael Carter,RB,NYJ,Beefcakes,Aiden
+14,108,2560993,Daniel Carlson,K,LV,The Labbers,Matthew
+14,109,100021,New England Patriots,DEF,,Greek Freak Fan Brook Lopez,Luke
+14,110,2564499,Tua Tagovailoa,QB,MIA,Team Buzz,Justin
+14,111,2558865,Chris Carson,RB,,Bad news bombers,Joshua
+14,112,100011,Green Bay Packers,DEF,,Team GOAT,Alex
+15,113,2507225,Nick Folk,K,NE,Team GOAT,Alex
+15,114,2552409,DeVante Parker,WR,NE,Bad news bombers,Joshua
+15,115,2562383,Noah Fant,TE,SEA,Team Buzz,Justin
+15,116,2539227,Dustin Hopkins,K,LAC,Greek Freak Fan Brook Lopez,Luke
+15,117,2562574,Darrell Henderson,RB,,The Labbers,Matthew
+15,118,2566532,Trey Lance,QB,SF,Beefcakes,Aiden
+15,119,2560735,Michael Gallup,WR,DAL,beaners,Howard
+15,120,2543509,Allen Robinson,WR,PIT,The Booty Clappers,Ulises

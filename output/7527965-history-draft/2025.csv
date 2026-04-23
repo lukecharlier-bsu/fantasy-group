@@ -1,0 +1,151 @@
+Round,Pick,PlayerId,Player,Position,NFLTeam,FantasyTeam,ManagerName
+1,1,2565941,Ja'Marr Chase,WR,CIN,Bad news bombers,Joshua
+1,2,2563848,CeeDee Lamb,WR,DAL,Wet Grandma,Todd
+1,3,2560968,Saquon Barkley,RB,PHI,Team Buzz,Justin
+1,4,2569747,Jahmyr Gibbs,RB,DET,Houston Stars,Sean
+1,5,2564556,Justin Jefferson,WR,MIN,Team Cruz,Alex
+1,6,2569558,Bijan Robinson,RB,ATL,The Booty Clappers,Ulises
+1,7,2558019,Alvin Kamara,RB,NO,beaners,Howard
+1,8,2566073,Amon-Ra St. Brown,WR,DET,Mr Locked In,Matthew
+1,9,2574298,Ashton Jeanty,RB,LV,The Crooglefuggs,Luke
+1,10,2556075,Derrick Henry,RB,BAL,Beefcakes,Aiden
+2,11,2572162,Brian Thomas Jr.,WR,JAX,Beefcakes,Aiden
+2,12,2570026,Puka Nacua,WR,LAR,The Crooglefuggs,Luke
+2,13,2557997,Christian McCaffrey,RB,SF,Mr Locked In,Matthew
+2,14,2572219,Brock Bowers,TE,LV,beaners,Howard
+2,15,2572342,Malik Nabers,WR,NYG,The Booty Clappers,Ulises
+2,16,2566127,Nico Collins,WR,HOU,Team Cruz,Alex
+2,17,2560955,Josh Allen,QB,BUF,Houston Stars,Sean
+2,18,2562238,A.J. Brown,WR,PHI,Team Buzz,Justin
+2,19,2570062,De'Von Achane,RB,MIA,Wet Grandma,Todd
+2,20,2567250,Drake London,WR,ATL,Bad news bombers,Joshua
+3,21,2562377,Josh Jacobs,RB,GB,Bad news bombers,Joshua
+3,22,2572477,Ladd McConkey,WR,LAC,Wet Grandma,Todd
+3,23,2564148,Jonathan Taylor,RB,IND,Team Buzz,Justin
+3,24,2572546,Bucky Irving,RB,TB,Houston Stars,Sean
+3,25,2568117,Trey McBride,TE,ARI,Team Cruz,Alex
+3,26,2570341,Jaxon Smith-Njigba,WR,SEA,The Booty Clappers,Ulises
+3,27,2574217,Travis Hunter,WR,JAX,beaners,Howard
+3,28,2567862,Kyren Williams,RB,LAR,Mr Locked In,Matthew
+3,29,2567328,James Cook,RB,BUF,The Crooglefuggs,Luke
+3,30,2543495,Davante Adams,WR,LAR,Beefcakes,Aiden
+4,31,2569726,Sam LaPorta,TE,DET,Beefcakes,Aiden
+4,32,2563731,Tee Higgins,WR,CIN,The Crooglefuggs,Luke
+4,33,2568030,Breece Hall,RB,NYJ,Mr Locked In,Matthew
+4,34,2572564,Jayden Daniels,QB,WAS,beaners,Howard
+4,35,2556214,Tyreek Hill,WR,MIA,The Booty Clappers,Ulises
+4,36,2560757,Lamar Jackson,QB,BAL,Team Cruz,Alex
+4,37,2558266,George Kittle,TE,SF,Houston Stars,Sean
+4,38,2568048,Garrett Wilson,WR,NYJ,Team Buzz,Justin
+4,39,2562489,Terry McLaurin,WR,WAS,Wet Grandma,Todd
+4,40,2543468,Mike Evans,WR,TB,Bad news bombers,Joshua
+5,41,2569642,Chase Brown,RB,CIN,Bad news bombers,Joshua
+5,42,2564832,Jalen Hurts,QB,PHI,Wet Grandma,Todd
+5,43,2563722,Joe Burrow,QB,CIN,Team Buzz,Justin
+5,44,2572411,Marvin Harrison Jr.,WR,ARI,Houston Stars,Sean
+5,45,2568282,Kenneth Walker III,RB,SEA,Team Cruz,Alex
+5,46,2563965,D'Andre Swift,RB,CHI,The Booty Clappers,Ulises
+5,47,2574427,Cam Skattebo,RB,NYG,beaners,Howard
+5,48,2562685,DK Metcalf,WR,PIT,Mr Locked In,Matthew
+5,49,2560888,Courtland Sutton,WR,DEN,The Crooglefuggs,Luke
+5,50,2562502,David Montgomery,RB,DET,Beefcakes,Aiden
+6,51,2558125,Patrick Mahomes,QB,KC,Beefcakes,Aiden
+6,52,2557978,James Conner,RB,ARI,The Crooglefuggs,Luke
+6,53,2569921,Rashee Rice,WR,KC,Mr Locked In,Matthew
+6,54,2560854,Calvin Ridley,WR,TEN,beaners,Howard
+6,55,2562378,T.J. Hockenson,TE,MIN,The Booty Clappers,Ulises
+6,56,2560813,DJ Moore,WR,CHI,Team Cruz,Alex
+6,57,2572186,Xavier Worthy,WR,KC,Houston Stars,Sean
+6,58,2567565,Jameson Williams,WR,DET,Team Buzz,Justin
+6,59,2557976,Joe Mixon,RB,HOU,Wet Grandma,Todd
+6,60,2560957,Mark Andrews,TE,BAL,Bad news bombers,Joshua
+7,61,2565920,Justin Fields,QB,NYJ,Bad news bombers,Joshua
+7,62,2558207,Jonnu Smith,TE,PIT,Wet Grandma,Todd
+7,63,2540258,Travis Kelce,TE,KC,Team Buzz,Justin
+7,64,2573992,Tetairoa McMillan,WR,CAR,Houston Stars,Sean
+7,65,2567808,Isiah Pacheco,RB,KC,Team Cruz,Alex
+7,66,2566409,DeVonta Smith,WR,PHI,The Booty Clappers,Ulises
+7,67,2540165,DeAndre Hopkins,WR,BAL,beaners,Howard
+7,68,2565899,Chuba Hubbard,RB,CAR,Mr Locked In,Matthew
+7,69,2574514,Omarion Hampton,RB,LAC,The Crooglefuggs,Luke
+7,70,2568159,George Pickens,WR,DAL,Beefcakes,Aiden
+8,71,2562699,Tony Pollard,RB,TEN,Beefcakes,Aiden
+8,72,2569573,Zay Flowers,WR,BAL,The Crooglefuggs,Luke
+8,73,2557858,Evan Engram,TE,DEN,Mr Locked In,Matthew
+8,74,2550545,Chris Boswell,K,PIT,beaners,Howard
+8,75,2565045,Justin Herbert,QB,LAC,The Booty Clappers,Ulises
+8,76,2574374,TreVeyon Henderson,RB,NE,Team Cruz,Alex
+8,77,2563896,Jerry Jeudy,WR,CLE,Houston Stars,Sean
+8,78,2574496,Kaleb Johnson,RB,PIT,Team Buzz,Justin
+8,79,2571750,Brandon Aubrey,K,DAL,Wet Grandma,Todd
+8,80,2568435,Cameron Dicker,K,LAC,Bad news bombers,Joshua
+9,81,100029,San Francisco 49ers,DEF,,Bad news bombers,Joshua
+9,82,100005,Chicago Bears,DEF,,Wet Grandma,Todd
+9,83,2567973,Chris Olave,WR,NO,Team Buzz,Justin
+9,84,100027,Pittsburgh Steelers,DEF,,Houston Stars,Sean
+9,85,2558116,Aaron Jones,RB,MIN,Team Cruz,Alex
+9,86,2562382,Kyler Murray,QB,ARI,The Booty Clappers,Ulises
+9,87,100006,Cincinnati Bengals,DEF,,beaners,Howard
+9,88,2560800,Baker Mayfield,QB,TB,Mr Locked In,Matthew
+9,89,2557986,David Njoku,TE,CLE,The Crooglefuggs,Luke
+9,90,2557898,Cooper Kupp,WR,SEA,Beefcakes,Aiden
+10,91,2560995,Dallas Goedert,TE,PHI,Beefcakes,Aiden
+10,92,2555260,Dak Prescott,QB,DAL,The Crooglefuggs,Luke
+10,93,2566292,Jaylen Waddle,WR,MIA,Mr Locked In,Matthew
+10,94,2562379,Marquise Brown,WR,KC,beaners,Howard
+10,95,2569257,Jordan Mason,RB,MIN,The Booty Clappers,Ulises
+10,96,2574090,RJ Harvey,RB,DEN,Team Cruz,Alex
+10,97,2569765,Jayden Reed,WR,GB,Houston Stars,Sean
+10,98,2568348,Brian Robinson,RB,SF,Team Buzz,Justin
+10,99,2558105,Chris Godwin Jr.,WR,TB,Wet Grandma,Todd
+10,100,2571907,Rome Odunze,WR,CHI,Bad news bombers,Joshua
+11,101,2574053,Quinshon Judkins,RB,CLE,Bad news bombers,Joshua
+11,102,2570074,Jordan Addison,WR,MIN,Wet Grandma,Todd
+11,103,2567334,Khalil Shakir,WR,BUF,Team Buzz,Justin
+11,104,2566157,Travis Etienne,RB,JAX,Houston Stars,Sean
+11,105,2562492,Jakobi Meyers,WR,JAX,Team Cruz,Alex
+11,106,2566049,Javonte Williams,RB,DAL,The Booty Clappers,Ulises
+11,107,2574204,Tyler Warren,TE,IND,beaners,Howard
+11,108,2552608,Stefon Diggs,WR,NE,Mr Locked In,Matthew
+11,109,2574130,Matthew Golden,WR,GB,The Crooglefuggs,Luke
+11,110,2555334,Jared Goff,QB,DET,Beefcakes,Aiden
+12,111,100009,Denver Broncos,DEF,,Beefcakes,Aiden
+12,112,2564007,Jordan Love,QB,GB,The Crooglefuggs,Luke
+12,113,100003,Buffalo Bills,DEF,,Mr Locked In,Matthew
+12,114,2572270,J.J. McCarthy,QB,MIN,beaners,Howard
+12,115,2562721,Deebo Samuel Sr.,WR,WAS,The Booty Clappers,Ulises
+12,116,2572003,Bo Nix,QB,DEN,Team Cruz,Alex
+12,117,2556521,Ka'imi Fairbairn,K,HOU,Houston Stars,Sean
+12,118,2565830,Kyle Pitts,TE,ATL,Team Buzz,Justin
+12,119,2572351,Tyrone Tracy Jr.,RB,NYG,Wet Grandma,Todd
+12,120,2565114,Jauan Jennings,WR,SF,Bad news bombers,Joshua
+13,121,2566448,Najee Harris,RB,LAC,Bad news bombers,Joshua
+13,122,2572507,Ricky Pearsall,WR,SF,Wet Grandma,Todd
+13,123,100007,Cleveland Browns,DEF,,Team Buzz,Justin
+13,124,2563707,Darnell Mooney,WR,ATL,Houston Stars,Sean
+13,125,2565093,Brandon Aiyuk,WR,,Team Cruz,Alex
+13,126,100008,Dallas Cowboys,DEF,,The Booty Clappers,Ulises
+13,127,2574585,Emeka Egbuka,WR,TB,beaners,Howard
+13,128,2569768,Tucker Kraft,TE,GB,Mr Locked In,Matthew
+13,129,2574014,Colston Loveland,TE,CHI,The Crooglefuggs,Luke
+13,130,2563596,Tyler Bass,K,BUF,Beefcakes,Aiden
+14,131,2560781,Christian Kirk,WR,HOU,Beefcakes,Aiden
+14,132,100025,Philadelphia Eagles,DEF,,The Crooglefuggs,Luke
+14,133,2571913,Caleb Williams,QB,CHI,Mr Locked In,Matthew
+14,134,2574142,Elic Ayomanor,WR,TEN,beaners,Howard
+14,135,2566343,Rhamondre Stevenson,RB,NE,The Booty Clappers,Ulises
+14,136,100028,Los Angeles Chargers,DEF,,Team Cruz,Alex
+14,137,2571859,Keon Coleman,WR,BUF,Houston Stars,Sean
+14,138,2568493,Jaylen Warren,RB,PIT,Team Buzz,Justin
+14,139,2568216,Brock Purdy,QB,SF,Wet Grandma,Todd
+14,140,2569861,Josh Downs,WR,IND,Bad news bombers,Joshua
+15,141,2569594,Dalton Kincaid,TE,BUF,Bad news bombers,Joshua
+15,142,2568315,Rachaad White,RB,TB,Wet Grandma,Todd
+15,143,2561153,Jason Sanders,K,MIA,Team Buzz,Justin
+15,144,2568312,Cade Otton,TE,TB,Houston Stars,Sean
+15,145,2558172,Jake Elliott,K,PHI,Team Cruz,Alex
+15,146,2553112,Jason Myers,K,SEA,The Booty Clappers,Ulises
+15,147,2574235,Bhayshul Tuten,RB,JAX,beaners,Howard
+15,148,2560993,Daniel Carlson,K,LV,Mr Locked In,Matthew
+15,149,2558245,Harrison Butker,K,KC,The Crooglefuggs,Luke
+15,150,2574068,Jaydon Blue,RB,DAL,Beefcakes,Aiden

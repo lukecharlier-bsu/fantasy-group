@@ -5,3 +5,4 @@ output/~$*
 output/combined.csv
 output/combined.xlsx
 .claude/
+.ipynb_checkpoints/
