@@ -1,6 +1,7 @@
 .DS_Store
 __pycache__/
 cookieString.py
+espnCookies.py
 output/~$*
 output/combined.csv
 output/combined.xlsx

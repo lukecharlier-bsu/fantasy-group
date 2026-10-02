@@ -298,6 +298,234 @@ def build_weekly_extremes(seasons, n=10):
     return highs, lows, blowouts, nail_biters
 
 
+_PLAYER_RE = __import__("re").compile(r"^(.+?)\s+(QB|RB|WR|TE|K)\s+-\s+([A-Z]{2,3})")
+_NAME_SUFFIXES = {"jr", "sr", "ii", "iii", "iv"}
+
+
+def _norm_last(parts):
+    """Drop common suffixes from last-name token list, lowercase, strip dots."""
+    cleaned = [p for p in parts if p.lower().rstrip(".") not in _NAME_SUFFIXES]
+    return "".join(cleaned).lower().replace(".", "")
+
+
+def parse_gc_player(text):
+    """Parse a gamecenter player cell into structured fields, or None if empty/bye.
+
+    The key intentionally OMITS the NFL team so a player who switches teams
+    (e.g. A. Jones GB -> MIN) still aggregates as one entity. The current team
+    is kept on the record and we collect every team the player has appeared on.
+    DEF entries DO key on team (mascot), since a defense IS the team.
+    """
+    text = (text or "").strip()
+    if not text or text == "-":
+        return None
+    if text.endswith("DEF") or " DEF " in text:
+        name = text.split(" DEF")[0].strip()
+        return {"display": f"{name} DEF", "key": f"DEF||{name.lower()}",
+                "pos": "DEF", "team": "", "last": name.lower(), "fi": ""}
+    m = _PLAYER_RE.match(text)
+    if not m:
+        return None
+    name, pos, team = m.group(1).strip(), m.group(2), m.group(3)
+    parts = name.split()
+    if len(parts) >= 2:
+        fi = parts[0].rstrip(".").upper()[:1]
+        last = _norm_last(parts[1:])
+    else:
+        fi, last = "", _norm_last(parts)
+    return {"display": name, "key": f"{pos}|{last}|{fi}",
+            "pos": pos, "team": team, "last": last, "fi": fi}
+
+
+def draft_match_key(player_name, position, nfl_team):
+    """Build the same key used by parse_gc_player from a draft pick.
+    Team is omitted to allow players-changed-teams to merge."""
+    if position == "DEF":
+        return f"DEF||{player_name.lower()}"
+    parts = player_name.split()
+    if len(parts) >= 2:
+        fi = parts[0][:1].upper()
+        last = _norm_last(parts[1:])
+    else:
+        fi, last = "", _norm_last(parts)
+    return f"{position}|{last}|{fi}"
+
+
+def load_player_scoring(gamecenter_dirs):
+    """Aggregate player scoring across all weeks/years from gamecenter CSVs.
+
+    gamecenter_dirs: a path, or a list of paths — each a <leagueID>-history-
+    teamgamecenter directory. Years are expected to be non-overlapping across
+    the given dirs (e.g. NFL ≤2025, ESPN ≥2026).
+
+    Returns:
+        per_year: {year: {key: {display, pos, team, totalPoints, starts,
+                                benchApps, weekHigh, weekHighInfo, owners}}}
+        career: same shape but aggregated over all years
+    """
+    if isinstance(gamecenter_dirs, str):
+        gamecenter_dirs = [gamecenter_dirs]
+    year_paths = {}
+    for d in gamecenter_dirs:
+        if not os.path.isdir(d):
+            continue
+        for year_name in sorted(os.listdir(d)):
+            yp = os.path.join(d, year_name)
+            if os.path.isdir(yp):
+                year_paths[year_name] = yp
+    BENCH_SLOTS = {"BN", "RES"}
+    per_year = {}
+    career = {}
+
+    for year_name in sorted(year_paths):
+        year_path = year_paths[year_name]
+        year = int(year_name)
+        season_players = {}
+        for filename in sorted(os.listdir(year_path),
+                               key=lambda n: int(n[:-4]) if n.endswith(".csv") else 999):
+            if not filename.endswith(".csv"):
+                continue
+            week = int(filename[:-4])
+            with open(os.path.join(year_path, filename), newline="") as f:
+                reader = csv.reader(f)
+                header = next(reader, None)
+                if not header:
+                    continue
+                # Pair each non-Owner/Rank/Total/Opponent column with the
+                # following Points column so we can iterate (slot, name, pts)
+                slot_indexes = []  # list of (slot_label, name_idx, points_idx)
+                i = 0
+                while i < len(header):
+                    h = header[i]
+                    if h in {"Owner", "Rank", "Total", "Opponent", "Opponent Total"}:
+                        i += 1
+                        continue
+                    if h == "Points":
+                        i += 1
+                        continue
+                    # h is a slot label (QB, RB, WR, TE, K, DEF, W/R, BN, RES)
+                    if i + 1 < len(header) and header[i + 1] == "Points":
+                        slot_indexes.append((h, i, i + 1))
+                        i += 2
+                    else:
+                        i += 1
+                for row in reader:
+                    if not row or len(row) < 2:
+                        continue
+                    owner = row[0]
+                    for slot, ni, pi in slot_indexes:
+                        if ni >= len(row) or pi >= len(row):
+                            continue
+                        info = parse_gc_player(row[ni])
+                        if not info:
+                            continue
+                        try:
+                            pts = float((row[pi] or "0").replace(",", ""))
+                        except ValueError:
+                            pts = 0.0
+                        rec = season_players.setdefault(info["key"], {
+                            "display": info["display"], "pos": info["pos"],
+                            "team": info["team"], "totalPoints": 0.0,
+                            "starts": 0, "benchApps": 0,
+                            "weekHigh": 0.0, "weekHighInfo": None,
+                            "owners": set(),
+                        })
+                        if slot in BENCH_SLOTS:
+                            rec["benchApps"] += 1
+                        else:
+                            rec["totalPoints"] += pts
+                            rec["starts"] += 1
+                            rec["owners"].add(owner)
+                            if pts > rec["weekHigh"]:
+                                rec["weekHigh"] = pts
+                                rec["weekHighInfo"] = {"year": year, "week": week,
+                                                        "owner": owner, "points": pts}
+                        # Always update display to most-recent (catches name changes)
+                        rec["display"] = info["display"]
+                        rec["team"] = info["team"]
+        # Finalize season
+        for k, r in season_players.items():
+            r["owners"] = sorted(r["owners"])
+            r["totalPoints"] = round(r["totalPoints"], 2)
+            r["weekHigh"] = round(r["weekHigh"], 2)
+            r["avgPerStart"] = round(r["totalPoints"] / r["starts"], 2) if r["starts"] else 0.0
+            # Roll into career
+            c = career.setdefault(k, {
+                "display": r["display"], "pos": r["pos"], "team": r["team"],
+                "totalPoints": 0.0, "starts": 0, "benchApps": 0,
+                "weekHigh": 0.0, "weekHighInfo": None,
+                "owners": set(), "seasons": set(),
+            })
+            c["display"] = r["display"]
+            c["team"] = r["team"]
+            c["totalPoints"] += r["totalPoints"]
+            c["starts"] += r["starts"]
+            c["benchApps"] += r["benchApps"]
+            c["seasons"].add(year)
+            c["owners"].update(r["owners"])
+            if r["weekHigh"] > c["weekHigh"]:
+                c["weekHigh"] = r["weekHigh"]
+                c["weekHighInfo"] = r["weekHighInfo"]
+        per_year[year] = season_players
+
+    # Finalize career
+    career_out = {}
+    for k, c in career.items():
+        career_out[k] = {
+            "display": c["display"], "pos": c["pos"], "team": c["team"],
+            "totalPoints": round(c["totalPoints"], 2),
+            "starts": c["starts"], "benchApps": c["benchApps"],
+            "weekHigh": round(c["weekHigh"], 2),
+            "weekHighInfo": c["weekHighInfo"],
+            "avgPerStart": round(c["totalPoints"] / c["starts"], 2) if c["starts"] else 0.0,
+            "owners": sorted(c["owners"]),
+            "seasons": sorted(c["seasons"]),
+        }
+    return per_year, career_out
+
+
+def compute_busts_and_risers(drafts, players_by_year, n=10):
+    """For each season, match drafted players to their actual season points.
+    Bust = high pick that finished low among drafted players.
+    Riser = late pick that finished high.
+    Returns {year: {busts: [...], risers: [...]}}.
+    """
+    out = {}
+    for year, picks in drafts.items():
+        season_stats = players_by_year.get(year, {})
+        rows = []
+        for p in picks:
+            key = draft_match_key(p["player"], p["position"], p["nflTeam"])
+            stats = season_stats.get(key)
+            actual = stats["totalPoints"] if stats else 0.0
+            starts = stats["starts"] if stats else 0
+            rows.append({
+                "year": year, "pick": p["pick"], "round": p["round"],
+                "player": p["player"], "position": p["position"],
+                "nflTeam": p["nflTeam"], "manager": p["manager"],
+                "actualPoints": actual, "starts": starts,
+                "matched": stats is not None,
+            })
+        # Rank by actualPoints
+        ranked = sorted(rows, key=lambda r: -r["actualPoints"])
+        for i, r in enumerate(ranked, start=1):
+            r["actualRank"] = i
+        # Reattach actualRank
+        rank_by_pick = {(r["year"], r["pick"]): r["actualRank"] for r in ranked}
+        for r in rows:
+            r["actualRank"] = rank_by_pick[(r["year"], r["pick"])]
+            r["delta"] = r["pick"] - r["actualRank"]   # positive = riser
+        # Bust: matched, drafted in top half, dropped most rank slots
+        top_half = max(1, len(rows) // 2)
+        bust_pool = [r for r in rows if r["matched"] and r["pick"] <= top_half]
+        busts = sorted(bust_pool, key=lambda r: r["delta"])[:n]
+        # Riser: matched, drafted outside top quarter, jumped most rank slots
+        late_pool = [r for r in rows if r["matched"] and r["pick"] > max(1, len(rows) // 4)]
+        risers = sorted(late_pool, key=lambda r: -r["delta"])[:n]
+        out[year] = {"busts": busts, "risers": risers}
+    return out
+
+
 def load_drafts(draft_dir):
     """Return {year: [pick_dict, ...]}."""
     drafts = {}
@@ -380,34 +608,55 @@ def build_draft_analytics(drafts):
 
 
 def main():
-    league_id = sys.argv[1] if len(sys.argv) > 1 else None
-    if league_id is None:
+    # Accept one or more league IDs on the command line; default to the
+    # NFL + ESPN pair from constants so historical and current seasons merge.
+    args = sys.argv[1:]
+    if args:
+        league_ids = args
+    else:
         try:
-            from constants import leagueID as league_id
+            from constants import leagueID, espnLeagueID
+            league_ids = [leagueID, espnLeagueID]
         except Exception:
-            print("Provide a leagueID as the first argument.")
-            sys.exit(1)
+            try:
+                from constants import leagueID
+                league_ids = [leagueID]
+            except Exception:
+                print("Provide a leagueID as the first argument.")
+                sys.exit(1)
 
-    standings_dir = os.path.join("output", f"{league_id}-history-standings")
-    gamecenter_dir = os.path.join("output", f"{league_id}-history-teamgamecenter")
-    draft_dir = os.path.join("output", f"{league_id}-history-draft")
-    if not os.path.isdir(standings_dir) or not os.path.isdir(gamecenter_dir):
-        print(f"Could not find data for league {league_id}.")
-        print(f"  Looked in: {standings_dir} and {gamecenter_dir}")
+    standings_dirs = [os.path.join("output", f"{lid}-history-standings") for lid in league_ids]
+    gamecenter_dirs = [os.path.join("output", f"{lid}-history-teamgamecenter") for lid in league_ids]
+    draft_dirs = [os.path.join("output", f"{lid}-history-draft") for lid in league_ids]
+    present = [d for d in standings_dirs + gamecenter_dirs if os.path.isdir(d)]
+    if not present:
+        print(f"Could not find any data for leagues {league_ids}.")
         sys.exit(1)
 
-    print(f"Building dashboard data for league {league_id}...")
-    standings = load_standings(standings_dir)
-    weekly = load_weekly(gamecenter_dir)
+    print(f"Building dashboard data for leagues {league_ids}...")
+    standings = {}
+    for d in standings_dirs:
+        if os.path.isdir(d):
+            standings.update(load_standings(d))
+    weekly = {}
+    for d in gamecenter_dirs:
+        if os.path.isdir(d):
+            weekly.update(load_weekly(d))
     seasons = build_seasons(standings, weekly)
     owners = build_owner_stats(seasons)
     h2h = build_head_to_head(seasons)
     highs, lows, blowouts, nail_biters = build_weekly_extremes(seasons)
-    drafts = load_drafts(draft_dir)
+    drafts = {}
+    for d in draft_dirs:
+        if os.path.isdir(d):
+            drafts.update(load_drafts(d))
     draft_owner_stats = build_draft_analytics(drafts)
+    players_by_year, players_career = load_player_scoring(gamecenter_dirs)
+    bust_riser = compute_busts_and_risers(drafts, players_by_year)
 
     payload = {
-        "leagueId": str(league_id),
+        "leagueIds": [str(x) for x in league_ids],
+        "leagueId": str(league_ids[0]),
         "years": [s["year"] for s in seasons],
         "seasons": seasons,
         "owners": owners,
@@ -418,6 +667,9 @@ def main():
         "nailBiters": nail_biters,
         "drafts": drafts,
         "draftOwnerStats": draft_owner_stats,
+        "playersCareer": players_career,
+        "playersByYear": players_by_year,
+        "draftBustsRisers": bust_riser,
     }
 
     out_dir = "docs"
