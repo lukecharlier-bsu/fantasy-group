@@ -558,6 +558,78 @@ def load_player_scoring(gamecenter_dirs):
     return per_year, career_out, by_owner_out
 
 
+def enrich_with_espn_ids(players_by_owner, players_career, drafts):
+    """Attach espnId to each franchise-player and career-player record by
+    cross-referencing our normalized (first-initial, last) key against ESPN's
+    name-to-id dict (dumped by scrapeESPN). Ambiguous matches on first-initial
+    (e.g. "K. Murray" -> Kyler vs Kenneth) are resolved by looking the player
+    up in the draft history, which carries full names."""
+    import json as _json
+    try:
+        from constants import espnLeagueID
+    except Exception:
+        return
+    pm_path = os.path.join("output", f"{espnLeagueID}-players.json")
+    if not os.path.isfile(pm_path):
+        return
+    with open(pm_path) as f:
+        name_to_id = _json.load(f).get("nameToId", {})
+    # Reverse index: (fi, normalized-last) -> list of (espnId, full_name)
+    rev = {}
+    for name, pid in name_to_id.items():
+        parts = name.split()
+        if len(parts) < 2:
+            continue
+        fi = parts[0][:1].upper()
+        last = _norm_last(parts[1:])
+        rev.setdefault((fi, last), []).append((pid, name))
+    # Draft-based disambiguator: our player_key -> full name from drafts
+    #   (same key the scoring loader uses). Last write wins; near-duplicates
+    #   collapse because draft_match_key already strips suffixes.
+    key_to_drafted_name = {}
+    for picks in drafts.values():
+        for p in picks:
+            k = draft_match_key(p["player"], p["position"], p["nflTeam"])
+            key_to_drafted_name[k] = p["player"]
+
+    def resolve(key):
+        # key is "POS|last|FI" or "DEF||mascot"
+        parts = key.split("|")
+        if len(parts) != 3:
+            return None, None
+        pos, last, fi = parts
+        if pos == "DEF" or not fi or not last:
+            return None, None
+        matches = rev.get((fi, last), [])
+        if len(matches) == 1:
+            return matches[0]
+        if len(matches) > 1:
+            # Use draft history to pick the correct candidate by exact name.
+            drafted_name = key_to_drafted_name.get(key)
+            if drafted_name:
+                drafted_last = _norm_last(drafted_name.split()[1:])
+                for pid, full in matches:
+                    if full == drafted_name:
+                        return pid, full
+                    # Loose match: same normalized last-name tokens
+                    full_last = _norm_last(full.split()[1:])
+                    if drafted_last == full_last and full.split()[0] == drafted_name.split()[0]:
+                        return pid, full
+        return None, None
+
+    for owner, players in players_by_owner.items():
+        for p in players:
+            pid, full = resolve(p["key"])
+            if pid is not None:
+                p["espnId"] = pid
+                p["fullName"] = full
+    for key, c in players_career.items():
+        pid, full = resolve(key)
+        if pid is not None:
+            c["espnId"] = pid
+            c["fullName"] = full
+
+
 def compute_busts_and_risers(drafts, players_by_year, n=10):
     """For each season, match drafted players to their actual season points.
     Bust = high pick that finished low among drafted players.
@@ -727,6 +799,7 @@ def main():
     draft_owner_stats = build_draft_analytics(drafts)
     players_by_year, players_career, players_by_owner = load_player_scoring(gamecenter_dirs)
     bust_riser = compute_busts_and_risers(drafts, players_by_year)
+    enrich_with_espn_ids(players_by_owner, players_career, drafts)
 
     payload = {
         "leagueIds": [str(x) for x in league_ids],

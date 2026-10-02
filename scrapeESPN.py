@@ -252,6 +252,19 @@ def write_draft(league, year):
     print(f"  draft: wrote {out} ({len(rows)} picks)")
 
 
+def write_player_map(league):
+    """Dump ESPN's name <-> playerId dict so the dashboard build can look up
+    headshots for historical players we only know by first-initial name."""
+    import json
+    os.makedirs("output", exist_ok=True)
+    out = os.path.join("output", f"{espnLeagueID}-players.json")
+    # player_map is bidirectional; keep only name -> id entries (strings keys).
+    name_to_id = {k: v for k, v in league.player_map.items() if isinstance(k, str)}
+    with open(out, "w") as f:
+        json.dump({"nameToId": name_to_id}, f)
+    print(f"  player_map: wrote {out} ({len(name_to_id)} players)")
+
+
 def scrape_year(year):
     print(f"[{year}] connecting...")
     league = League(league_id=int(espnLeagueID), year=year,
@@ -260,6 +273,7 @@ def scrape_year(year):
     write_standings(league, year)
     write_draft(league, year)
     write_gamecenter(league, year)
+    write_player_map(league)
 
 
 def main():

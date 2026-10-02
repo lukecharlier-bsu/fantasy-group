@@ -232,3 +232,59 @@ select, input {
 }
 
 canvas { max-height: 360px; }
+
+/* Franchise GOATs grid */
+.goat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+.goat-card {
+    background: #0f172a;
+    border: 1px solid #1f2937;
+    border-radius: 10px;
+    padding: 0.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.15s, border-color 0.15s;
+}
+.goat-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.goat-card .owner {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+}
+.goat-card .photo {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    background: #1e293b;
+    object-fit: cover;
+    object-position: top center;
+    margin-bottom: 0.5rem;
+}
+.goat-card .player {
+    font-weight: 600;
+    color: var(--text);
+    font-size: 1rem;
+}
+.goat-card .meta {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin: 0.1rem 0 0.4rem;
+}
+.goat-card .pts {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+.goat-card .sub {
+    color: var(--muted);
+    font-size: 0.75rem;
+    margin-top: 0.15rem;
+}

@@ -598,6 +598,7 @@ function initFranchisePanel() {
     const byOwner = STATE.data.playersByOwner || {};
     const owners = Object.keys(byOwner).sort();
     if (!owners.length) return;
+    renderFranchiseGoats(owners, byOwner);
     const sel = document.getElementById("franchise-owner");
     sel.innerHTML = owners.map(n => `<option value="${n}">${n}</option>`).join("");
     FRANCHISE_STATE.owner = owners[0];
@@ -611,6 +612,33 @@ function initFranchisePanel() {
         renderFranchise();
     });
     renderFranchise();
+}
+
+const ESPN_HEADSHOT = id => `https://a.espncdn.com/i/headshots/nfl/players/full/${id}.png`;
+const PLAYER_PLACEHOLDER = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='38' r='18' fill='%23334155'/><rect x='22' y='60' width='56' height='40' rx='22' fill='%23334155'/></svg>";
+
+function renderFranchiseGoats(owners, byOwner) {
+    const host = document.getElementById("franchise-goats");
+    const cards = owners.map(owner => {
+        const top = (byOwner[owner] || [])[0];
+        if (!top) return "";
+        const name = top.fullName || top.display;
+        const img = top.espnId ? ESPN_HEADSHOT(top.espnId) : PLAYER_PLACEHOLDER;
+        const years = top.seasons.length === 1
+            ? top.seasons[0]
+            : `${top.seasons[0]}–${top.seasons[top.seasons.length - 1]}`;
+        return `
+            <div class="goat-card" title="Click a manager below for the full roster of scorers">
+                <div class="owner">${owner}</div>
+                <img class="photo" src="${img}" alt="${name}"
+                     onerror="this.onerror=null;this.src='${PLAYER_PLACEHOLDER}';">
+                <div class="player">${name}</div>
+                <div class="meta">${top.pos} · ${years}</div>
+                <div class="pts">${fmt(top.startPts)}</div>
+                <div class="sub">${top.starts} starts · ${fmt(top.avgPerStart)} avg</div>
+            </div>`;
+    }).join("");
+    host.innerHTML = cards;
 }
 
 function renderFranchise() {
