@@ -19,6 +19,7 @@
             <button class="tab" data-tab="h2h">Head-to-Head</button>
             <button class="tab" data-tab="weekly">Weekly Trends</button>
             <button class="tab" data-tab="drafts">Drafts</button>
+            <button class="tab" data-tab="franchise">Franchise Leaders</button>
         </nav>
     </header>
 
@@ -156,6 +157,31 @@
                 <h3>Owner Drafting Profile</h3>
                 <label>Owner <select id="draft-owner-detail"></select></label>
                 <div id="draft-owner-body"></div>
+            </div>
+        </section>
+
+        <!-- FRANCHISE LEADERS -->
+        <section class="panel" id="panel-franchise">
+            <div class="card">
+                <h3>Franchise Leaders</h3>
+                <p class="muted">Points scored and benched while on each manager's roster. Click a column to re-sort.</p>
+                <div class="row">
+                    <label>Manager <select id="franchise-owner"></select></label>
+                    <label>Position
+                        <select id="franchise-pos">
+                            <option value="">All</option>
+                            <option>QB</option>
+                            <option>RB</option>
+                            <option>WR</option>
+                            <option>TE</option>
+                            <option>K</option>
+                            <option>DEF</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="scroll-x">
+                    <table id="franchise-table" class="data-table"></table>
+                </div>
             </div>
         </section>
     </main>

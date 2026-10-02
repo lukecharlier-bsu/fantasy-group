@@ -312,10 +312,23 @@ _PLAYER_RE = __import__("re").compile(r"^(.+?)\s+(QB|RB|WR|TE|K)\s+-\s+([A-Z]{2,
 _NAME_SUFFIXES = {"jr", "sr", "ii", "iii", "iv"}
 
 
+def _strip_suffix_tokens(parts):
+    """Return name tokens with trailing Jr/Sr/II/III/IV removed."""
+    return [p for p in parts if p.lower().rstrip(".") not in _NAME_SUFFIXES]
+
+
 def _norm_last(parts):
     """Drop common suffixes from last-name token list, lowercase, strip dots."""
-    cleaned = [p for p in parts if p.lower().rstrip(".") not in _NAME_SUFFIXES]
+    cleaned = _strip_suffix_tokens(parts)
     return "".join(cleaned).lower().replace(".", "")
+
+
+def _display_name(name):
+    """Strip name suffixes (Jr/Sr/III) from a display name so historical
+    'J. Cook' and current 'J. Cook III' render as the same label."""
+    parts = name.split()
+    kept = _strip_suffix_tokens(parts)
+    return " ".join(kept) if kept else name
 
 
 def parse_gc_player(text):
@@ -343,7 +356,7 @@ def parse_gc_player(text):
         last = _norm_last(parts[1:])
     else:
         fi, last = "", _norm_last(parts)
-    return {"display": name, "key": f"{pos}|{last}|{fi}",
+    return {"display": _display_name(name), "key": f"{pos}|{last}|{fi}",
             "pos": pos, "team": team, "last": last, "fi": fi}
 
 
@@ -386,6 +399,10 @@ def load_player_scoring(gamecenter_dirs):
     BENCH_SLOTS = {"BN", "RES"}
     per_year = {}
     career = {}
+    # Ownership-aware per-player stats, for the Franchise Leaders tab.
+    #   by_owner[owner][player_key] = {display, pos, startPts, benchPts,
+    #                                  starts, benchApps, seasons, bestWeek}
+    by_owner = {}
 
     for year_name in sorted(year_paths):
         year_path = year_paths[year_name]
@@ -404,6 +421,7 @@ def load_player_scoring(gamecenter_dirs):
                 # Pair each non-Owner/Rank/Total/Opponent column with the
                 # following Points column so we can iterate (slot, name, pts)
                 slot_indexes = []  # list of (slot_label, name_idx, points_idx)
+                opp_idx = header.index("Opponent") if "Opponent" in header else -1
                 i = 0
                 while i < len(header):
                     h = header[i]
@@ -422,7 +440,8 @@ def load_player_scoring(gamecenter_dirs):
                 for row in reader:
                     if not row or len(row) < 2:
                         continue
-                    owner = row[0]
+                    owner = (row[0] or "").strip()
+                    opp = (row[opp_idx] if 0 <= opp_idx < len(row) else "").strip()
                     for slot, ni, pi in slot_indexes:
                         if ni >= len(row) or pi >= len(row):
                             continue
@@ -453,6 +472,26 @@ def load_player_scoring(gamecenter_dirs):
                         # Always update display to most-recent (catches name changes)
                         rec["display"] = info["display"]
                         rec["team"] = info["team"]
+                        # Per-owner split for Franchise Leaders.
+                        owner_bucket = by_owner.setdefault(owner, {})
+                        orec = owner_bucket.setdefault(info["key"], {
+                            "display": info["display"], "pos": info["pos"],
+                            "startPts": 0.0, "benchPts": 0.0,
+                            "starts": 0, "benchApps": 0,
+                            "seasons": set(),
+                            "bestWeek": None,  # {points, year, week, opponent}
+                        })
+                        orec["display"] = info["display"]
+                        orec["seasons"].add(year)
+                        if slot in BENCH_SLOTS:
+                            orec["benchPts"] += pts
+                            orec["benchApps"] += 1
+                        else:
+                            orec["startPts"] += pts
+                            orec["starts"] += 1
+                            if orec["bestWeek"] is None or pts > orec["bestWeek"]["points"]:
+                                orec["bestWeek"] = {"points": pts, "year": year,
+                                                     "week": week, "opponent": opp}
         # Finalize season
         for k, r in season_players.items():
             r["owners"] = sorted(r["owners"])
@@ -491,7 +530,32 @@ def load_player_scoring(gamecenter_dirs):
             "owners": sorted(c["owners"]),
             "seasons": sorted(c["seasons"]),
         }
-    return per_year, career_out
+
+    # Finalize per-owner records.
+    by_owner_out = {}
+    for owner, players in by_owner.items():
+        out_players = []
+        for key, r in players.items():
+            start_pts = round(r["startPts"], 2)
+            starts = r["starts"]
+            bw = r["bestWeek"]
+            if bw is not None:
+                bw = {**bw, "points": round(bw["points"], 2)}
+            out_players.append({
+                "key": key,
+                "display": r["display"],
+                "pos": r["pos"],
+                "startPts": start_pts,
+                "benchPts": round(r["benchPts"], 2),
+                "starts": starts,
+                "benchApps": r["benchApps"],
+                "avgPerStart": round(start_pts / starts, 2) if starts else 0.0,
+                "seasons": sorted(r["seasons"]),
+                "bestWeek": bw,
+            })
+        out_players.sort(key=lambda p: -p["startPts"])
+        by_owner_out[owner] = out_players
+    return per_year, career_out, by_owner_out
 
 
 def compute_busts_and_risers(drafts, players_by_year, n=10):
@@ -661,12 +725,13 @@ def main():
         if os.path.isdir(d):
             drafts.update(load_drafts(d))
     draft_owner_stats = build_draft_analytics(drafts)
-    players_by_year, players_career = load_player_scoring(gamecenter_dirs)
+    players_by_year, players_career, players_by_owner = load_player_scoring(gamecenter_dirs)
     bust_riser = compute_busts_and_risers(drafts, players_by_year)
 
     payload = {
         "leagueIds": [str(x) for x in league_ids],
         "leagueId": str(league_ids[0]),
+        "playersByOwner": players_by_owner,
         "years": [s["year"] for s in seasons],
         "seasons": seasons,
         "owners": owners,

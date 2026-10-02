@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initH2HPanel();
     initWeeklyPanel();
     initDraftsPanel();
+    initFranchisePanel();
 });
 
 // ---------- Tabs ----------
@@ -588,5 +589,93 @@ function renderDraftOwnerDetail(name) {
             <tbody>${recurringRows}</tbody>
         </table>
     `;
+}
+
+// ---------- Franchise Leaders ----------
+const FRANCHISE_STATE = { owner: null, pos: "", sortField: "startPts", sortDir: "desc" };
+
+function initFranchisePanel() {
+    const byOwner = STATE.data.playersByOwner || {};
+    const owners = Object.keys(byOwner).sort();
+    if (!owners.length) return;
+    const sel = document.getElementById("franchise-owner");
+    sel.innerHTML = owners.map(n => `<option value="${n}">${n}</option>`).join("");
+    FRANCHISE_STATE.owner = owners[0];
+    sel.addEventListener("change", () => {
+        FRANCHISE_STATE.owner = sel.value;
+        renderFranchise();
+    });
+    const posSel = document.getElementById("franchise-pos");
+    posSel.addEventListener("change", () => {
+        FRANCHISE_STATE.pos = posSel.value;
+        renderFranchise();
+    });
+    renderFranchise();
+}
+
+function renderFranchise() {
+    const t = document.getElementById("franchise-table");
+    const owner = FRANCHISE_STATE.owner;
+    const posFilter = FRANCHISE_STATE.pos;
+    const all = STATE.data.playersByOwner[owner] || [];
+    const rows = posFilter ? all.filter(p => p.pos === posFilter) : all;
+    const { sortField, sortDir } = FRANCHISE_STATE;
+    const sortVal = (p, field) => {
+        if (field === "seasonsLen") return p.seasons.length;
+        if (field === "bestWeek") return p.bestWeek ? p.bestWeek.points : 0;
+        if (field === "seasons") return p.seasons[p.seasons.length - 1] || 0;
+        return p[field];
+    };
+    const sorted = [...rows].sort((a, b) => {
+        const av = sortVal(a, sortField), bv = sortVal(b, sortField);
+        if (typeof av === "number") return sortDir === "desc" ? bv - av : av - bv;
+        return sortDir === "desc" ? String(bv).localeCompare(String(av)) : String(av).localeCompare(String(bv));
+    });
+    const cols = [
+        { field: "display",     label: "Name" },
+        { field: "pos",         label: "Pos" },
+        { field: "startPts",    label: "Pts Scored",   align: "right", fmt: v => fmt(v) },
+        { field: "benchPts",    label: "Bench Pts",    align: "right", fmt: v => fmt(v) },
+        { field: "starts",      label: "Started",      align: "right" },
+        { field: "benchApps",   label: "Benched",      align: "right" },
+        { field: "avgPerStart", label: "Avg / Start",  align: "right", fmt: v => fmt(v) },
+        { field: "bestWeek",    label: "Best Week",    render: p => {
+            const bw = p.bestWeek;
+            if (!bw) return "-";
+            const opp = bw.opponent ? ` vs ${bw.opponent}` : "";
+            return `${fmt(bw.points)} <span class="muted">(wk ${bw.week}, ${bw.year}${opp})</span>`;
+        }},
+        { field: "seasonsLen",  label: "Seasons",      align: "right", render: p => p.seasons.length },
+        { field: "seasons",     label: "Years",        render: p => p.seasons.join(" ") },
+    ];
+    t.innerHTML = `
+        <thead><tr>${cols.map(c => {
+            const arrow = c.field === sortField ? (sortDir === "desc" ? " ↓" : " ↑") : "";
+            const align = c.align === "right" ? ' class="right"' : "";
+            return `<th${align} data-sort="${c.field}" style="cursor:pointer">${c.label}${arrow}</th>`;
+        }).join("")}</tr></thead>
+        <tbody>
+            ${sorted.map(p => `<tr>${cols.map(c => {
+                const align = c.align === "right" ? ' class="right"' : "";
+                let val;
+                if (c.render) val = c.render(p);
+                else if (c.fmt) val = c.fmt(p[c.field]);
+                else val = p[c.field];
+                return `<td${align}>${val}</td>`;
+            }).join("")}</tr>`).join("")}
+        </tbody>
+    `;
+    t.querySelectorAll("th[data-sort]").forEach(th => {
+        th.addEventListener("click", () => {
+            const field = th.dataset.sort;
+            if (FRANCHISE_STATE.sortField === field) {
+                FRANCHISE_STATE.sortDir = FRANCHISE_STATE.sortDir === "desc" ? "asc" : "desc";
+            } else {
+                FRANCHISE_STATE.sortField = field;
+                FRANCHISE_STATE.sortDir = (field === "display" || field === "pos") ? "asc" : "desc";
+            }
+            renderFranchise();
+        });
+    });
 }
 
