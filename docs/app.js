@@ -5,7 +5,7 @@ const STATE = { data: null, charts: {} };
 document.addEventListener("DOMContentLoaded", async () => {
     setupTabs();
     try {
-        const res = await fetch("./data.json");
+        const res = await fetch("./data.json?v=" + Date.now());
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         STATE.data = await res.json();
     } catch (err) {

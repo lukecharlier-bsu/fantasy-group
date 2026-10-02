@@ -209,9 +209,12 @@ def build_owner_stats(seasons):
         o["avgPointsPerGame"] = (o["pointsFor"] / games) if games else 0.0
         o["avgPointsAgainstPerGame"] = (o["pointsAgainst"] / games) if games else 0.0
         finishes = o["finishes"]
-        o["avgFinish"] = (sum(f["rank"] for f in finishes) / len(finishes)) if finishes else 0
-        o["bestFinish"] = min((f["rank"] for f in finishes), default=None)
-        o["worstFinish"] = max((f["rank"] for f in finishes), default=None)
+        # Rank 0 means the season is still in progress (no final rank yet) —
+        # don't let it drag down averages or masquerade as the "best finish".
+        completed = [f for f in finishes if f["rank"] > 0]
+        o["avgFinish"] = (sum(f["rank"] for f in completed) / len(completed)) if completed else 0
+        o["bestFinish"] = min((f["rank"] for f in completed), default=None)
+        o["worstFinish"] = max((f["rank"] for f in completed), default=None)
         # Round floats
         o["pointsFor"] = round(o["pointsFor"], 2)
         o["pointsAgainst"] = round(o["pointsAgainst"], 2)
@@ -825,6 +828,19 @@ def main():
     out_path = os.path.join(out_dir, "data.json")
     with open(out_path, "w") as f:
         json.dump(payload, f, indent=2)
+
+    # Stamp a fresh version string into index.html so browsers pick up new
+    # app.js / styles.css instead of serving a stale cached copy.
+    import time, re
+    build_tag = str(int(time.time()))
+    index_path = os.path.join(out_dir, "index.html")
+    if os.path.isfile(index_path):
+        with open(index_path) as f:
+            html = f.read()
+        html = re.sub(r'(app\.js|styles\.css)\?v=\d+', rf'\1?v={build_tag}', html)
+        html = html.replace("__BUILD__", build_tag)
+        with open(index_path, "w") as f:
+            f.write(html)
 
     print(f"Wrote {out_path}")
     print(f"  Seasons: {len(seasons)}  Owners: {len(owners)}  Drafts: {len(drafts)}")
