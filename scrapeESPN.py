@@ -130,8 +130,10 @@ def write_gamecenter(league, year):
     year_dir = os.path.join(espn_gamecenter_directory, str(year))
     os.makedirs(year_dir, exist_ok=True)
     reg = league.settings.reg_season_count or 14
-    # Determine the last completed week we can safely pull.
-    last_week = min(league.current_week, reg + 3)  # reg season + playoff weeks
+    # Only pull FULLY-COMPLETED weeks. ESPN advances current_week once the week
+    # is done, so current_week itself is in-progress — skip it, or the dashboard
+    # will show mid-week zeros as real low scores.
+    last_week = min(league.current_week - 1, reg + 3)  # reg season + playoff weeks
     header = build_gamecenter_header()
     written = []
     for week in range(1, last_week + 1):
@@ -141,10 +143,6 @@ def write_gamecenter(league, year):
             print(f"  week {week}: skip ({exc})")
             continue
         if not scores:
-            continue
-        # Skip weeks that have no actual points posted yet.
-        any_points = any((m.home_score or 0) + (m.away_score or 0) > 0 for m in scores)
-        if not any_points:
             continue
         rows = []
         # Compute team ranks within the week (1 = highest total).

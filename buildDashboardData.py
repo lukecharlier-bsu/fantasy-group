@@ -108,18 +108,27 @@ def build_seasons(standings, weekly):
         num_teams = len(teams)
         last_rank = max(t["playoffRank"] for t in teams)
         playoff_cutoff = num_teams // 2  # top half makes the playoffs
+        # If every team has playoffRank == 0 the playoffs haven't been played
+        # yet (season still in progress) — don't crown a champion, don't call
+        # everyone the sacko, and don't flag anyone as having made it.
+        in_progress = last_rank == 0
 
         team_data = []
         champion = None
         sacko = None
         for t in teams:
-            made_playoffs = t["playoffRank"] <= playoff_cutoff
-            is_champion = t["playoffRank"] == 1
-            is_sacko = t["playoffRank"] == last_rank
-            if is_champion:
-                champion = t["manager"]
-            if is_sacko:
-                sacko = t["manager"]
+            if in_progress:
+                made_playoffs = False
+                is_champion = False
+                is_sacko = False
+            else:
+                made_playoffs = t["playoffRank"] <= playoff_cutoff
+                is_champion = t["playoffRank"] == 1
+                is_sacko = t["playoffRank"] == last_rank
+                if is_champion:
+                    champion = t["manager"]
+                if is_sacko:
+                    sacko = t["manager"]
             team_data.append({**t, "madePlayoffs": made_playoffs,
                               "champion": is_champion, "sacko": is_sacko})
 
@@ -147,6 +156,7 @@ def build_seasons(standings, weekly):
             "champion": champion,
             "sacko": sacko,
             "playoffCutoff": playoff_cutoff,
+            "inProgress": in_progress,
             "standings": team_data,
             "weeks": weeks,
         })

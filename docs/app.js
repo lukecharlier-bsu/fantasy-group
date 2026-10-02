@@ -152,10 +152,13 @@ function renderOwnerDetail(name) {
                     const season = STATE.data.seasons.find(s => s.year === f.year);
                     const t = season.standings.find(x => x.manager === name);
                     const finishMark = t.champion ? " 🏆" : (t.sacko ? " 💩" : (t.madePlayoffs ? " ✓" : ""));
+                    const finishCell = season.inProgress
+                        ? `In progress (reg #${t.regularSeasonRank})`
+                        : `${t.playoffRank} of ${season.numTeams}${finishMark}`;
                     return `<tr>
                         <td>${f.year}</td>
                         <td>${t.team}</td>
-                        <td>${t.playoffRank} of ${season.numTeams}${finishMark}</td>
+                        <td>${finishCell}</td>
                         <td>${t.regularSeasonRank}</td>
                         <td>${t.wins}-${t.losses}-${t.ties}</td>
                         <td class="right">${fmt(t.pointsFor)}</td>
@@ -177,10 +180,12 @@ function initSeasonsPanel() {
         <tbody>
         ${seasons.map(s => {
             const top = [...s.standings].sort((a, b) => b.pointsFor - a.pointsFor)[0];
+            const champCell = s.inProgress ? "In progress" : `🏆 ${s.champion ?? "-"}`;
+            const sackoCell = s.inProgress ? "-" : (s.sacko ?? "-");
             return `<tr>
                 <td><strong>${s.year}</strong></td>
-                <td>🏆 ${s.champion ?? "-"}</td>
-                <td>${s.sacko ?? "-"}</td>
+                <td>${champCell}</td>
+                <td>${sackoCell}</td>
                 <td>${s.numTeams}</td>
                 <td>${top.manager} (${top.team})</td>
                 <td class="right">${fmt(top.pointsFor)}</td>
@@ -199,16 +204,19 @@ function renderSeason(year) {
     const s = STATE.data.seasons.find(x => x.year === year);
     if (!s) return;
     const body = document.getElementById("season-body");
-    const standings = [...s.standings].sort((a, b) => a.playoffRank - b.playoffRank);
+    const standings = s.inProgress
+        ? [...s.standings].sort((a, b) => a.regularSeasonRank - b.regularSeasonRank)
+        : [...s.standings].sort((a, b) => a.playoffRank - b.playoffRank);
     body.innerHTML = `
-        <h4>Final Standings</h4>
+        <h4>${s.inProgress ? "Current Standings (season in progress)" : "Final Standings"}</h4>
         <table class="data-table">
             <thead><tr><th>#</th><th>Owner</th><th>Team</th><th>Record</th><th class="right">PF</th><th class="right">PA</th><th>Reg Rank</th><th>Draft</th></tr></thead>
             <tbody>
             ${standings.map(t => {
                 const mark = t.champion ? "🏆" : (t.sacko ? "💩" : (t.madePlayoffs ? "✓" : ""));
+                const rankCell = s.inProgress ? `${t.regularSeasonRank}` : `${t.playoffRank} ${mark}`;
                 return `<tr>
-                    <td><strong>${t.playoffRank}</strong> ${mark}</td>
+                    <td><strong>${rankCell}</strong></td>
                     <td>${t.manager}</td>
                     <td>${t.team}</td>
                     <td>${t.wins}-${t.losses}-${t.ties}</td>

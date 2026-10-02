@@ -21,6 +21,7 @@
       "champion": "Alex",
       "sacko": "Sean",
       "playoffCutoff": 4,
+      "inProgress": false,
       "standings": [
         {
           "manager": "Justin",
@@ -632,6 +633,7 @@
       "champion": "Aiden",
       "sacko": "Sean",
       "playoffCutoff": 4,
+      "inProgress": false,
       "standings": [
         {
           "manager": "Matthew",
@@ -1243,6 +1245,7 @@
       "champion": "Ulises",
       "sacko": "Justin",
       "playoffCutoff": 4,
+      "inProgress": false,
       "standings": [
         {
           "manager": "Alex",
@@ -1883,6 +1886,7 @@
       "champion": "Ulises",
       "sacko": "Aiden",
       "playoffCutoff": 4,
+      "inProgress": false,
       "standings": [
         {
           "manager": "Alex",
@@ -2523,6 +2527,7 @@
       "champion": "Matthew",
       "sacko": "Joshua",
       "playoffCutoff": 4,
+      "inProgress": false,
       "standings": [
         {
           "manager": "Matthew",
@@ -3163,6 +3168,7 @@
       "champion": "Sean",
       "sacko": "Howard",
       "playoffCutoff": 4,
+      "inProgress": false,
       "standings": [
         {
           "manager": "Luke",
@@ -3803,6 +3809,7 @@
       "champion": "Ulises",
       "sacko": "Howard",
       "playoffCutoff": 5,
+      "inProgress": false,
       "standings": [
         {
           "manager": "Ulises",
@@ -4565,8 +4572,9 @@
       "year": 2026,
       "numTeams": 10,
       "champion": null,
-      "sacko": "Howard",
+      "sacko": null,
       "playoffCutoff": 5,
+      "inProgress": true,
       "standings": [
         {
           "manager": "Matthew",
@@ -4581,9 +4589,9 @@
           "moves": 28,
           "trades": 1,
           "draftPosition": 1,
-          "madePlayoffs": true,
+          "madePlayoffs": false,
           "champion": false,
-          "sacko": true
+          "sacko": false
         },
         {
           "manager": "Justin",
@@ -4598,9 +4606,9 @@
           "moves": 8,
           "trades": 0,
           "draftPosition": 2,
-          "madePlayoffs": true,
+          "madePlayoffs": false,
           "champion": false,
-          "sacko": true
+          "sacko": false
         },
         {
           "manager": "Aiden",
@@ -4615,9 +4623,9 @@
           "moves": 4,
           "trades": 1,
           "draftPosition": 4,
-          "madePlayoffs": true,
+          "madePlayoffs": false,
           "champion": false,
-          "sacko": true
+          "sacko": false
         },
         {
           "manager": "Alex",
@@ -4632,9 +4640,9 @@
           "moves": 18,
           "trades": 1,
           "draftPosition": 6,
-          "madePlayoffs": true,
+          "madePlayoffs": false,
           "champion": false,
-          "sacko": true
+          "sacko": false
         },
         {
           "manager": "Sean",
@@ -4649,9 +4657,9 @@
           "moves": 30,
           "trades": 0,
           "draftPosition": 10,
-          "madePlayoffs": true,
+          "madePlayoffs": false,
           "champion": false,
-          "sacko": true
+          "sacko": false
         },
         {
           "manager": "Ulises",
@@ -4666,9 +4674,9 @@
           "moves": 2,
           "trades": 0,
           "draftPosition": 8,
-          "madePlayoffs": true,
+          "madePlayoffs": false,
           "champion": false,
-          "sacko": true
+          "sacko": false
         },
         {
           "manager": "Todd",
@@ -4683,9 +4691,9 @@
           "moves": 6,
           "trades": 0,
           "draftPosition": 5,
-          "madePlayoffs": true,
+          "madePlayoffs": false,
           "champion": false,
-          "sacko": true
+          "sacko": false
         },
         {
           "manager": "Joshua",
@@ -4700,9 +4708,9 @@
           "moves": 4,
           "trades": 1,
           "draftPosition": 3,
-          "madePlayoffs": true,
+          "madePlayoffs": false,
           "champion": false,
-          "sacko": true
+          "sacko": false
         },
         {
           "manager": "Luke",
@@ -4717,9 +4725,9 @@
           "moves": 2,
           "trades": 0,
           "draftPosition": 7,
-          "madePlayoffs": true,
+          "madePlayoffs": false,
           "champion": false,
-          "sacko": true
+          "sacko": false
         },
         {
           "manager": "Howard",
@@ -4734,9 +4742,9 @@
           "moves": 8,
           "trades": 0,
           "draftPosition": 9,
-          "madePlayoffs": true,
+          "madePlayoffs": false,
           "champion": false,
-          "sacko": true
+          "sacko": false
         }
       ],
       "weeks": [
@@ -4844,41 +4852,6 @@
               "awayPts": 108.14
             }
           ]
-        },
-        {
-          "week": 4,
-          "matchups": [
-            {
-              "home": "Howard",
-              "homePts": 0.0,
-              "away": "Sean",
-              "awayPts": 15.6
-            },
-            {
-              "home": "Todd",
-              "homePts": 12.9,
-              "away": "Alex",
-              "awayPts": 0.0
-            },
-            {
-              "home": "Ulises",
-              "homePts": 0.0,
-              "away": "Joshua",
-              "awayPts": 0.0
-            },
-            {
-              "home": "Matthew",
-              "homePts": 0.0,
-              "away": "Justin",
-              "awayPts": 22.5
-            },
-            {
-              "home": "Luke",
-              "homePts": 0.0,
-              "away": "Aiden",
-              "awayPts": 0.0
-            }
-          ]
         }
       ]
     }
@@ -4895,8 +4868,8 @@
       "moves": 176,
       "trades": 9,
       "championships": 0,
-      "playoffs": 6,
-      "sackos": 2,
+      "playoffs": 5,
+      "sackos": 1,
       "finishes": [
         {
           "year": 2019,
@@ -5070,8 +5043,8 @@
       "moves": 242,
       "trades": 19,
       "championships": 1,
-      "playoffs": 6,
-      "sackos": 1,
+      "playoffs": 5,
+      "sackos": 0,
       "finishes": [
         {
           "year": 2019,
@@ -5245,8 +5218,8 @@
       "moves": 298,
       "trades": 27,
       "championships": 0,
-      "playoffs": 3,
-      "sackos": 3,
+      "playoffs": 2,
+      "sackos": 2,
       "finishes": [
         {
           "year": 2019,
@@ -5469,8 +5442,8 @@
       "moves": 84,
       "trades": 16,
       "championships": 1,
-      "playoffs": 3,
-      "sackos": 2,
+      "playoffs": 2,
+      "sackos": 1,
       "finishes": [
         {
           "year": 2019,
@@ -5644,8 +5617,8 @@
       "moves": 161,
       "trades": 11,
       "championships": 3,
-      "playoffs": 6,
-      "sackos": 1,
+      "playoffs": 5,
+      "sackos": 0,
       "finishes": [
         {
           "year": 2019,
@@ -5801,8 +5774,8 @@
       "moves": 287,
       "trades": 17,
       "championships": 1,
-      "playoffs": 4,
-      "sackos": 3,
+      "playoffs": 3,
+      "sackos": 2,
       "finishes": [
         {
           "year": 2019,
@@ -5940,8 +5913,8 @@
       "moves": 167,
       "trades": 8,
       "championships": 0,
-      "playoffs": 2,
-      "sackos": 1,
+      "playoffs": 1,
+      "sackos": 0,
       "finishes": [
         {
           "year": 2019,
@@ -6115,8 +6088,8 @@
       "moves": 272,
       "trades": 29,
       "championships": 1,
-      "playoffs": 6,
-      "sackos": 1,
+      "playoffs": 5,
+      "sackos": 0,
       "finishes": [
         {
           "year": 2020,
@@ -6272,8 +6245,8 @@
       "moves": 72,
       "trades": 14,
       "championships": 0,
-      "playoffs": 1,
-      "sackos": 2,
+      "playoffs": 0,
+      "sackos": 1,
       "finishes": [
         {
           "year": 2022,
@@ -6393,8 +6366,8 @@
       "moves": 35,
       "trades": 2,
       "championships": 0,
-      "playoffs": 2,
-      "sackos": 1,
+      "playoffs": 1,
+      "sackos": 0,
       "finishes": [
         {
           "year": 2025,
@@ -6534,11 +6507,11 @@
       },
       "Todd": {
         "wins": 2,
-        "losses": 1,
+        "losses": 0,
         "ties": 0,
         "pointsFor": 237.84,
-        "pointsAgainst": 203.24,
-        "games": 3
+        "pointsAgainst": 190.34,
+        "games": 2
       }
     },
     "Justin": {
@@ -6599,12 +6572,12 @@
         "games": 5
       },
       "Matthew": {
-        "wins": 6,
+        "wins": 5,
         "losses": 9,
         "ties": 0,
-        "pointsFor": 1637.4,
+        "pointsFor": 1614.9,
         "pointsAgainst": 1864.1,
-        "games": 15
+        "games": 14
       },
       "Aiden": {
         "wins": 8,
@@ -6681,12 +6654,12 @@
         "games": 3
       },
       "Howard": {
-        "wins": 9,
+        "wins": 8,
         "losses": 3,
         "ties": 0,
-        "pointsFor": 1426.74,
+        "pointsFor": 1411.14,
         "pointsAgainst": 1100.88,
-        "games": 12
+        "games": 11
       },
       "Matthew": {
         "wins": 5,
@@ -6789,10 +6762,10 @@
       "Aiden": {
         "wins": 9,
         "losses": 3,
-        "ties": 1,
+        "ties": 0,
         "pointsFor": 1616.26,
         "pointsAgainst": 1422.68,
-        "games": 13
+        "games": 12
       },
       "Joshua": {
         "wins": 8,
@@ -6920,11 +6893,11 @@
       },
       "Sean": {
         "wins": 3,
-        "losses": 9,
+        "losses": 8,
         "ties": 0,
         "pointsFor": 1100.88,
-        "pointsAgainst": 1426.74,
-        "games": 12
+        "pointsAgainst": 1411.14,
+        "games": 11
       },
       "Matthew": {
         "wins": 5,
@@ -7101,10 +7074,10 @@
       "Joshua": {
         "wins": 5,
         "losses": 1,
-        "ties": 1,
+        "ties": 0,
         "pointsFor": 698.12,
         "pointsAgainst": 609.72,
-        "games": 7
+        "games": 6
       },
       "Todd": {
         "wins": 1,
@@ -7134,11 +7107,11 @@
       },
       "Justin": {
         "wins": 9,
-        "losses": 6,
+        "losses": 5,
         "ties": 0,
         "pointsFor": 1864.1,
-        "pointsAgainst": 1637.4,
-        "games": 15
+        "pointsAgainst": 1614.9,
+        "games": 14
       },
       "Aiden ": {
         "wins": 1,
@@ -7241,10 +7214,10 @@
       "Luke": {
         "wins": 3,
         "losses": 9,
-        "ties": 1,
+        "ties": 0,
         "pointsFor": 1422.68,
         "pointsAgainst": 1616.26,
-        "games": 13
+        "games": 12
       },
       "Howard": {
         "wins": 6,
@@ -7323,10 +7296,10 @@
       "Ulises": {
         "wins": 1,
         "losses": 5,
-        "ties": 1,
+        "ties": 0,
         "pointsFor": 609.72,
         "pointsAgainst": 698.12,
-        "games": 7
+        "games": 6
       },
       "Sean": {
         "wins": 1,
@@ -7363,12 +7336,12 @@
         "games": 3
       },
       "Alex": {
-        "wins": 1,
+        "wins": 0,
         "losses": 2,
         "ties": 0,
-        "pointsFor": 203.24,
+        "pointsFor": 190.34,
         "pointsAgainst": 237.84,
-        "games": 3
+        "games": 2
       },
       "Matthew": {
         "wins": 0,
@@ -7504,84 +7477,84 @@
   ],
   "weeklyLows": [
     {
-      "year": 2026,
-      "week": 4,
+      "year": 2021,
+      "week": 10,
       "owner": "Howard",
-      "points": 0.0,
-      "opponent": "Sean",
-      "opponentPoints": 15.6
-    },
-    {
-      "year": 2026,
-      "week": 4,
-      "owner": "Alex",
-      "points": 0.0,
-      "opponent": "Todd",
-      "opponentPoints": 12.9
-    },
-    {
-      "year": 2026,
-      "week": 4,
-      "owner": "Ulises",
-      "points": 0.0,
-      "opponent": "Joshua",
-      "opponentPoints": 0.0
-    },
-    {
-      "year": 2026,
-      "week": 4,
-      "owner": "Joshua",
-      "points": 0.0,
-      "opponent": "Ulises",
-      "opponentPoints": 0.0
-    },
-    {
-      "year": 2026,
-      "week": 4,
-      "owner": "Matthew",
-      "points": 0.0,
-      "opponent": "Justin",
-      "opponentPoints": 22.5
-    },
-    {
-      "year": 2026,
-      "week": 4,
-      "owner": "Luke",
-      "points": 0.0,
-      "opponent": "Aiden",
-      "opponentPoints": 0.0
-    },
-    {
-      "year": 2026,
-      "week": 4,
-      "owner": "Aiden",
-      "points": 0.0,
+      "points": 45.7,
       "opponent": "Luke",
-      "opponentPoints": 0.0
+      "opponentPoints": 104.24
     },
     {
-      "year": 2026,
-      "week": 4,
-      "owner": "Todd",
-      "points": 12.9,
-      "opponent": "Alex",
-      "opponentPoints": 0.0
+      "year": 2019,
+      "week": 12,
+      "owner": "Luke",
+      "points": 46.0,
+      "opponent": "Ethan",
+      "opponentPoints": 54.1
     },
     {
-      "year": 2026,
-      "week": 4,
-      "owner": "Sean",
-      "points": 15.6,
+      "year": 2019,
+      "week": 13,
+      "owner": "Ethan",
+      "points": 50.0,
+      "opponent": "Sean",
+      "opponentPoints": 111.94
+    },
+    {
+      "year": 2025,
+      "week": 3,
+      "owner": "Howard",
+      "points": 53.76,
+      "opponent": "Justin",
+      "opponentPoints": 133.12
+    },
+    {
+      "year": 2019,
+      "week": 12,
+      "owner": "Ethan",
+      "points": 54.1,
+      "opponent": "Luke",
+      "opponentPoints": 46.0
+    },
+    {
+      "year": 2022,
+      "week": 17,
+      "owner": "Aiden",
+      "points": 57.4,
       "opponent": "Howard",
-      "opponentPoints": 0.0
+      "opponentPoints": 103.1
     },
     {
       "year": 2026,
-      "week": 4,
-      "owner": "Justin",
-      "points": 22.5,
+      "week": 2,
+      "owner": "Howard",
+      "points": 60.0,
+      "opponent": "Todd",
+      "opponentPoints": 135.08
+    },
+    {
+      "year": 2025,
+      "week": 17,
+      "owner": "Aiden",
+      "points": 60.88,
       "opponent": "Matthew",
-      "opponentPoints": 0.0
+      "opponentPoints": 169.44
+    },
+    {
+      "year": 2022,
+      "week": 17,
+      "owner": "Justin",
+      "points": 64.1,
+      "opponent": "Alex",
+      "opponentPoints": 108.9
+    },
+    {
+      "year": 2021,
+      "week": 9,
+      "owner": "Luke",
+      "points": 64.34,
+      "opponent": "Ulises",
+      "opponentPoints": 114.56
     }
   ],
   "blowouts": [
@@ -21520,7 +21493,7 @@
       "pos": "RB",
       "team": "BAL",
       "totalPoints": 1766.46,
-      "starts": 95,
+      "starts": 94,
       "benchApps": 26,
       "weekHigh": 47.7,
       "weekHighInfo": {
@@ -21529,7 +21502,7 @@
         "owner": "Luke",
         "points": 47.7
       },
-      "avgPerStart": 18.59,
+      "avgPerStart": 18.79,
       "owners": [
         "Aiden",
         "Aiden ",
@@ -21556,7 +21529,7 @@
       "pos": "RB",
       "team": "PHI",
       "totalPoints": 1385.6,
-      "starts": 85,
+      "starts": 84,
       "benchApps": 22,
       "weekHigh": 46.2,
       "weekHighInfo": {
@@ -21565,7 +21538,7 @@
         "owner": "Justin",
         "points": 46.2
       },
-      "avgPerStart": 16.3,
+      "avgPerStart": 16.5,
       "owners": [
         "Alex",
         "Joshua",
@@ -21586,10 +21559,10 @@
     "WR|allen|K": {
       "display": "K. Allen",
       "pos": "WR",
-      "team": "IND",
+      "team": "LAC",
       "totalPoints": 1137.96,
       "starts": 72,
-      "benchApps": 39,
+      "benchApps": 38,
       "weekHigh": 45.46,
       "weekHighInfo": {
         "year": 2023,
@@ -21615,8 +21588,7 @@
         2022,
         2023,
         2024,
-        2025,
-        2026
+        2025
       ]
     },
     "WR|robinson|A": {
@@ -21650,7 +21622,7 @@
       "pos": "TE",
       "team": "SF",
       "totalPoints": 1238.0,
-      "starts": 85,
+      "starts": 84,
       "benchApps": 36,
       "weekHigh": 40.1,
       "weekHighInfo": {
@@ -21659,7 +21631,7 @@
         "owner": "Alex",
         "points": 40.1
       },
-      "avgPerStart": 14.56,
+      "avgPerStart": 14.74,
       "owners": [
         "Aiden",
         "Alex",
@@ -21740,7 +21712,7 @@
       "pos": "DEF",
       "team": "",
       "totalPoints": 468.0,
-      "starts": 62,
+      "starts": 61,
       "benchApps": 22,
       "weekHigh": 26.0,
       "weekHighInfo": {
@@ -21749,7 +21721,7 @@
         "owner": "Alex",
         "points": 26.0
       },
-      "avgPerStart": 7.55,
+      "avgPerStart": 7.67,
       "owners": [
         "Alex",
         "Luke",
@@ -22315,7 +22287,7 @@
       "pos": "QB",
       "team": "KC",
       "totalPoints": 2104.86,
-      "starts": 100,
+      "starts": 99,
       "benchApps": 20,
       "weekHigh": 40.0,
       "weekHighInfo": {
@@ -22324,7 +22296,7 @@
         "owner": "Sean",
         "points": 40.0
       },
-      "avgPerStart": 21.05,
+      "avgPerStart": 21.26,
       "owners": [
         "Aiden",
         "Aiden ",
@@ -22379,7 +22351,7 @@
       "team": "NO",
       "totalPoints": 1582.12,
       "starts": 88,
-      "benchApps": 27,
+      "benchApps": 26,
       "weekHigh": 56.2,
       "weekHighInfo": {
         "year": 2020,
@@ -22556,8 +22528,8 @@
       "display": "Steelers DEF",
       "pos": "DEF",
       "team": "",
-      "totalPoints": 598.0,
-      "starts": 73,
+      "totalPoints": 592.0,
+      "starts": 72,
       "benchApps": 9,
       "weekHigh": 25.0,
       "weekHighInfo": {
@@ -22566,7 +22538,7 @@
         "owner": "Justin",
         "points": 25.0
       },
-      "avgPerStart": 8.19,
+      "avgPerStart": 8.22,
       "owners": [
         "Aiden",
         "Aiden ",
@@ -22616,7 +22588,7 @@
       "pos": "WR",
       "team": "WSH",
       "totalPoints": 1538.02,
-      "starts": 93,
+      "starts": 92,
       "benchApps": 18,
       "weekHigh": 44.8,
       "weekHighInfo": {
@@ -22625,7 +22597,7 @@
         "owner": "Alex",
         "points": 44.8
       },
-      "avgPerStart": 16.54,
+      "avgPerStart": 16.72,
       "owners": [
         "Aiden",
         "Aiden ",
@@ -22707,7 +22679,7 @@
       "pos": "QB",
       "team": "MIN",
       "totalPoints": 1120.96,
-      "starts": 58,
+      "starts": 57,
       "benchApps": 36,
       "weekHigh": 37.92,
       "weekHighInfo": {
@@ -22716,7 +22688,7 @@
         "owner": "Howard",
         "points": 37.92
       },
-      "avgPerStart": 19.33,
+      "avgPerStart": 19.67,
       "owners": [
         "Howard",
         "Joshua",
@@ -22856,7 +22828,7 @@
       "pos": "WR",
       "team": "LAR",
       "totalPoints": 1903.9,
-      "starts": 101,
+      "starts": 100,
       "benchApps": 20,
       "weekHigh": 44.6,
       "weekHighInfo": {
@@ -22865,7 +22837,7 @@
         "owner": "Luke",
         "points": 44.6
       },
-      "avgPerStart": 18.85,
+      "avgPerStart": 19.04,
       "owners": [
         "Aiden",
         "Alex",
@@ -22997,7 +22969,7 @@
       "pos": "DEF",
       "team": "",
       "totalPoints": 103.0,
-      "starts": 17,
+      "starts": 16,
       "benchApps": 9,
       "weekHigh": 18.0,
       "weekHighInfo": {
@@ -23006,7 +22978,7 @@
         "owner": "Matthew",
         "points": 18.0
       },
-      "avgPerStart": 6.06,
+      "avgPerStart": 6.44,
       "owners": [
         "Alex",
         "Justin",
@@ -23017,8 +22989,7 @@
         2019,
         2020,
         2024,
-        2025,
-        2026
+        2025
       ]
     },
     "WR|sanu|M": {
@@ -23076,7 +23047,7 @@
       "pos": "RB",
       "team": "MIN",
       "totalPoints": 1305.7,
-      "starts": 83,
+      "starts": 82,
       "benchApps": 38,
       "weekHigh": 49.2,
       "weekHighInfo": {
@@ -23085,7 +23056,7 @@
         "owner": "Luke",
         "points": 49.2
       },
-      "avgPerStart": 15.73,
+      "avgPerStart": 15.92,
       "owners": [
         "Aiden",
         "Alex",
@@ -23216,7 +23187,7 @@
       "pos": "RB",
       "team": "SF",
       "totalPoints": 1899.56,
-      "starts": 86,
+      "starts": 85,
       "benchApps": 26,
       "weekHigh": 48.7,
       "weekHighInfo": {
@@ -23225,7 +23196,7 @@
         "owner": "Ulises",
         "points": 48.7
       },
-      "avgPerStart": 22.09,
+      "avgPerStart": 22.35,
       "owners": [
         "Ethan",
         "Matthew",
@@ -23276,7 +23247,7 @@
       "team": "NE",
       "totalPoints": 317.1,
       "starts": 35,
-      "benchApps": 27,
+      "benchApps": 26,
       "weekHigh": 30.0,
       "weekHighInfo": {
         "year": 2019,
@@ -23366,7 +23337,7 @@
       "pos": "DEF",
       "team": "",
       "totalPoints": 154.0,
-      "starts": 30,
+      "starts": 29,
       "benchApps": 0,
       "weekHigh": 14.0,
       "weekHighInfo": {
@@ -23375,7 +23346,7 @@
         "owner": "Ethan",
         "points": 14.0
       },
-      "avgPerStart": 5.13,
+      "avgPerStart": 5.31,
       "owners": [
         "Alex",
         "Ethan",
@@ -23534,7 +23505,7 @@
       "team": "GB",
       "totalPoints": 1181.7,
       "starts": 73,
-      "benchApps": 48,
+      "benchApps": 47,
       "weekHigh": 48.3,
       "weekHighInfo": {
         "year": 2022,
@@ -23663,7 +23634,7 @@
       "team": "SF",
       "totalPoints": 1084.8,
       "starts": 67,
-      "benchApps": 47,
+      "benchApps": 46,
       "weekHigh": 45.0,
       "weekHighInfo": {
         "year": 2019,
@@ -23786,7 +23757,7 @@
       "pos": "DEF",
       "team": "",
       "totalPoints": 476.0,
-      "starts": 67,
+      "starts": 66,
       "benchApps": 3,
       "weekHigh": 35.0,
       "weekHighInfo": {
@@ -23795,7 +23766,7 @@
         "owner": "Aiden ",
         "points": 35.0
       },
-      "avgPerStart": 7.1,
+      "avgPerStart": 7.21,
       "owners": [
         "Aiden ",
         "Alex",
@@ -24135,7 +24106,7 @@
       "pos": "K",
       "team": "KC",
       "totalPoints": 686.0,
-      "starts": 81,
+      "starts": 80,
       "benchApps": 5,
       "weekHigh": 21.0,
       "weekHighInfo": {
@@ -24144,7 +24115,7 @@
         "owner": "Ulises",
         "points": 21.0
       },
-      "avgPerStart": 8.47,
+      "avgPerStart": 8.57,
       "owners": [
         "Alex",
         "Howard",
@@ -24302,7 +24273,7 @@
       "team": "BUF",
       "totalPoints": 824.48,
       "starts": 57,
-      "benchApps": 54,
+      "benchApps": 53,
       "weekHigh": 31.9,
       "weekHighInfo": {
         "year": 2021,
@@ -24336,7 +24307,7 @@
       "pos": "RB",
       "team": "HOU",
       "totalPoints": 665.74,
-      "starts": 53,
+      "starts": 52,
       "benchApps": 56,
       "weekHigh": 29.4,
       "weekHighInfo": {
@@ -24345,7 +24316,7 @@
         "owner": "Aiden",
         "points": 29.4
       },
-      "avgPerStart": 12.56,
+      "avgPerStart": 12.8,
       "owners": [
         "Aiden",
         "Aiden ",
@@ -24372,7 +24343,7 @@
       "pos": "QB",
       "team": "DAL",
       "totalPoints": 1431.98,
-      "starts": 73,
+      "starts": 72,
       "benchApps": 19,
       "weekHigh": 39.8,
       "weekHighInfo": {
@@ -24381,7 +24352,7 @@
         "owner": "Ulises",
         "points": 39.8
       },
-      "avgPerStart": 19.62,
+      "avgPerStart": 19.89,
       "owners": [
         "Aiden",
         "Alex",
@@ -24528,7 +24499,7 @@
       "pos": "TE",
       "team": "KC",
       "totalPoints": 1670.06,
-      "starts": 105,
+      "starts": 104,
       "benchApps": 16,
       "weekHigh": 41.1,
       "weekHighInfo": {
@@ -24537,11 +24508,10 @@
         "owner": "Aiden",
         "points": 41.1
       },
-      "avgPerStart": 15.91,
+      "avgPerStart": 16.06,
       "owners": [
         "Aiden",
         "Aiden ",
-        "Howard",
         "Joshua",
         "Justin",
         "Luke",
@@ -24770,8 +24740,8 @@
       "display": "D. Metcalf",
       "pos": "WR",
       "team": "PIT",
-      "totalPoints": 1036.6,
-      "starts": 76,
+      "totalPoints": 1020.1,
+      "starts": 75,
       "benchApps": 39,
       "weekHigh": 40.1,
       "weekHighInfo": {
@@ -24780,7 +24750,7 @@
         "owner": "Aiden ",
         "points": 40.1
       },
-      "avgPerStart": 13.64,
+      "avgPerStart": 13.6,
       "owners": [
         "Aiden",
         "Aiden ",
@@ -24807,7 +24777,7 @@
       "team": "MIN",
       "totalPoints": 693.8,
       "starts": 61,
-      "benchApps": 30,
+      "benchApps": 29,
       "weekHigh": 35.9,
       "weekHighInfo": {
         "year": 2022,
@@ -24843,7 +24813,7 @@
       "pos": "QB",
       "team": "BAL",
       "totalPoints": 1782.24,
-      "starts": 82,
+      "starts": 81,
       "benchApps": 37,
       "weekHigh": 41.88,
       "weekHighInfo": {
@@ -24852,7 +24822,7 @@
         "owner": "Justin",
         "points": 41.88
       },
-      "avgPerStart": 21.73,
+      "avgPerStart": 22.0,
       "owners": [
         "Aiden ",
         "Alex",
@@ -24932,7 +24902,7 @@
       "pos": "DEF",
       "team": "",
       "totalPoints": 678.0,
-      "starts": 65,
+      "starts": 64,
       "benchApps": 15,
       "weekHigh": 37.0,
       "weekHighInfo": {
@@ -24941,7 +24911,7 @@
         "owner": "Justin",
         "points": 37.0
       },
-      "avgPerStart": 10.43,
+      "avgPerStart": 10.59,
       "owners": [
         "Aiden",
         "Howard",
@@ -25124,10 +25094,10 @@
     "TE|waller|D": {
       "display": "D. Waller",
       "pos": "TE",
-      "team": "CAR",
+      "team": "MIA",
       "totalPoints": 604.2,
       "starts": 47,
-      "benchApps": 36,
+      "benchApps": 35,
       "weekHigh": 45.0,
       "weekHighInfo": {
         "year": 2020,
@@ -25149,8 +25119,7 @@
         2021,
         2022,
         2023,
-        2025,
-        2026
+        2025
       ]
     },
     "DEF||49ers": {
@@ -25194,7 +25163,7 @@
       "pos": "QB",
       "team": "BUF",
       "totalPoints": 2157.36,
-      "starts": 91,
+      "starts": 90,
       "benchApps": 17,
       "weekHigh": 51.88,
       "weekHighInfo": {
@@ -25203,7 +25172,7 @@
         "owner": "Alex",
         "points": 51.88
       },
-      "avgPerStart": 23.71,
+      "avgPerStart": 23.97,
       "owners": [
         "Aiden",
         "Aiden ",
@@ -25467,7 +25436,7 @@
       "pos": "WR",
       "team": "WSH",
       "totalPoints": 859.8,
-      "starts": 64,
+      "starts": 63,
       "benchApps": 48,
       "weekHigh": 30.3,
       "weekHighInfo": {
@@ -25476,7 +25445,7 @@
         "owner": "Ulises",
         "points": 30.3
       },
-      "avgPerStart": 13.43,
+      "avgPerStart": 13.65,
       "owners": [
         "Alex",
         "Howard",
@@ -25801,7 +25770,7 @@
       "team": "DEN",
       "totalPoints": 336.32,
       "starts": 28,
-      "benchApps": 47,
+      "benchApps": 46,
       "weekHigh": 29.7,
       "weekHighInfo": {
         "year": 2024,
@@ -25860,7 +25829,7 @@
       "pos": "K",
       "team": "SF",
       "totalPoints": 119.0,
-      "starts": 20,
+      "starts": 19,
       "benchApps": 0,
       "weekHigh": 17.0,
       "weekHighInfo": {
@@ -25869,7 +25838,7 @@
         "owner": "Sean",
         "points": 17.0
       },
-      "avgPerStart": 5.95,
+      "avgPerStart": 6.26,
       "owners": [
         "Alex",
         "Luke",
@@ -26208,7 +26177,7 @@
       "team": "PHI",
       "totalPoints": 562.8,
       "starts": 46,
-      "benchApps": 41,
+      "benchApps": 40,
       "weekHigh": 28.5,
       "weekHighInfo": {
         "year": 2021,
@@ -26437,7 +26406,7 @@
       "pos": "DEF",
       "team": "",
       "totalPoints": 166.0,
-      "starts": 22,
+      "starts": 21,
       "benchApps": 3,
       "weekHigh": 30.0,
       "weekHighInfo": {
@@ -26446,7 +26415,7 @@
         "owner": "Justin",
         "points": 30.0
       },
-      "avgPerStart": 7.55,
+      "avgPerStart": 7.9,
       "owners": [
         "Howard",
         "Joshua",
@@ -26728,7 +26697,7 @@
       "pos": "WR",
       "team": "SF",
       "totalPoints": 874.2,
-      "starts": 59,
+      "starts": 58,
       "benchApps": 45,
       "weekHigh": 35.8,
       "weekHighInfo": {
@@ -26737,7 +26706,7 @@
         "owner": "Joshua",
         "points": 35.8
       },
-      "avgPerStart": 14.82,
+      "avgPerStart": 15.07,
       "owners": [
         "Alex",
         "Howard",
@@ -26895,7 +26864,7 @@
       "pos": "DEF",
       "team": "",
       "totalPoints": 177.0,
-      "starts": 28,
+      "starts": 27,
       "benchApps": 0,
       "weekHigh": 19.0,
       "weekHighInfo": {
@@ -26904,7 +26873,7 @@
         "owner": "Ulises",
         "points": 19.0
       },
-      "avgPerStart": 6.32,
+      "avgPerStart": 6.56,
       "owners": [
         "Aiden",
         "Alex",
@@ -27128,7 +27097,7 @@
       "team": "NE",
       "totalPoints": 1240.7,
       "starts": 78,
-      "benchApps": 33,
+      "benchApps": 32,
       "weekHigh": 39.6,
       "weekHighInfo": {
         "year": 2022,
@@ -27162,7 +27131,7 @@
       "pos": "DEF",
       "team": "",
       "totalPoints": 246.0,
-      "starts": 35,
+      "starts": 34,
       "benchApps": 4,
       "weekHigh": 22.0,
       "weekHighInfo": {
@@ -27171,7 +27140,7 @@
         "owner": "Matthew",
         "points": 22.0
       },
-      "avgPerStart": 7.03,
+      "avgPerStart": 7.24,
       "owners": [
         "Aiden",
         "Alex",
@@ -27274,7 +27243,7 @@
       "team": "DEN",
       "totalPoints": 150.3,
       "starts": 11,
-      "benchApps": 37,
+      "benchApps": 36,
       "weekHigh": 24.5,
       "weekHighInfo": {
         "year": 2024,
@@ -27410,7 +27379,7 @@
       "pos": "WR",
       "team": "DAL",
       "totalPoints": 1344.9,
-      "starts": 77,
+      "starts": 76,
       "benchApps": 26,
       "weekHigh": 41.0,
       "weekHighInfo": {
@@ -27419,7 +27388,7 @@
         "owner": "Justin",
         "points": 41.0
       },
-      "avgPerStart": 17.47,
+      "avgPerStart": 17.7,
       "owners": [
         "Howard",
         "Joshua",
@@ -27483,7 +27452,7 @@
       "pos": "K",
       "team": "SEA",
       "totalPoints": 421.0,
-      "starts": 46,
+      "starts": 45,
       "benchApps": 1,
       "weekHigh": 22.0,
       "weekHighInfo": {
@@ -27492,7 +27461,7 @@
         "owner": "Sean",
         "points": 22.0
       },
-      "avgPerStart": 9.15,
+      "avgPerStart": 9.36,
       "owners": [
         "Alex",
         "Howard",
@@ -27562,7 +27531,7 @@
       "pos": "RB",
       "team": "IND",
       "totalPoints": 1331.6,
-      "starts": 71,
+      "starts": 70,
       "benchApps": 31,
       "weekHigh": 53.4,
       "weekHighInfo": {
@@ -27571,7 +27540,7 @@
         "owner": "Matthew",
         "points": 53.4
       },
-      "avgPerStart": 18.75,
+      "avgPerStart": 19.02,
       "owners": [
         "Howard",
         "Joshua",
@@ -27650,7 +27619,7 @@
       "team": "CIN",
       "totalPoints": 901.36,
       "starts": 46,
-      "benchApps": 28,
+      "benchApps": 27,
       "weekHigh": 39.24,
       "weekHighInfo": {
         "year": 2022,
@@ -27940,7 +27909,7 @@
       "pos": "WR",
       "team": "MIN",
       "totalPoints": 1322.14,
-      "starts": 74,
+      "starts": 73,
       "benchApps": 28,
       "weekHigh": 39.6,
       "weekHighInfo": {
@@ -27949,7 +27918,7 @@
         "owner": "Sean",
         "points": 39.6
       },
-      "avgPerStart": 17.87,
+      "avgPerStart": 18.11,
       "owners": [
         "Alex",
         "Howard",
@@ -28103,7 +28072,7 @@
       "pos": "QB",
       "team": "LAC",
       "totalPoints": 1226.62,
-      "starts": 65,
+      "starts": 64,
       "benchApps": 24,
       "weekHigh": 42.82,
       "weekHighInfo": {
@@ -28112,7 +28081,7 @@
         "owner": "Alex",
         "points": 42.82
       },
-      "avgPerStart": 18.87,
+      "avgPerStart": 19.17,
       "owners": [
         "Alex",
         "Howard",
@@ -28292,7 +28261,7 @@
       "pos": "RB",
       "team": "CHI",
       "totalPoints": 781.6,
-      "starts": 55,
+      "starts": 54,
       "benchApps": 44,
       "weekHigh": 32.4,
       "weekHighInfo": {
@@ -28301,7 +28270,7 @@
         "owner": "Sean",
         "points": 32.4
       },
-      "avgPerStart": 14.21,
+      "avgPerStart": 14.47,
       "owners": [
         "Alex",
         "Howard",
@@ -28352,7 +28321,7 @@
       "pos": "WR",
       "team": "CIN",
       "totalPoints": 555.0,
-      "starts": 43,
+      "starts": 42,
       "benchApps": 46,
       "weekHigh": 40.1,
       "weekHighInfo": {
@@ -28361,7 +28330,7 @@
         "owner": "Sean",
         "points": 40.1
       },
-      "avgPerStart": 12.91,
+      "avgPerStart": 13.21,
       "owners": [
         "Howard",
         "Joshua",
@@ -28384,7 +28353,7 @@
       "pos": "K",
       "team": "CHI",
       "totalPoints": 51.0,
-      "starts": 7,
+      "starts": 6,
       "benchApps": 0,
       "weekHigh": 13.0,
       "weekHighInfo": {
@@ -28393,7 +28362,7 @@
         "owner": "Alex",
         "points": 13.0
       },
-      "avgPerStart": 7.29,
+      "avgPerStart": 8.5,
       "owners": [
         "Alex",
         "Howard",
@@ -28460,7 +28429,7 @@
       "pos": "RB",
       "team": "DAL",
       "totalPoints": 533.0,
-      "starts": 41,
+      "starts": 40,
       "benchApps": 33,
       "weekHigh": 29.8,
       "weekHighInfo": {
@@ -28469,7 +28438,7 @@
         "owner": "Matthew",
         "points": 29.8
       },
-      "avgPerStart": 13.0,
+      "avgPerStart": 13.32,
       "owners": [
         "Aiden",
         "Howard",
@@ -28843,7 +28812,7 @@
       "team": "JAX",
       "totalPoints": 189.2,
       "starts": 18,
-      "benchApps": 31,
+      "benchApps": 30,
       "weekHigh": 22.1,
       "weekHighInfo": {
         "year": 2024,
@@ -28901,7 +28870,7 @@
       "pos": "DEF",
       "team": "",
       "totalPoints": 152.0,
-      "starts": 21,
+      "starts": 20,
       "benchApps": 6,
       "weekHigh": 16.0,
       "weekHighInfo": {
@@ -28910,14 +28879,13 @@
         "owner": "Howard",
         "points": 16.0
       },
-      "avgPerStart": 7.24,
+      "avgPerStart": 7.6,
       "owners": [
         "Aiden",
         "Alex",
         "Howard",
         "Justin",
-        "Matthew",
-        "Sean"
+        "Matthew"
       ],
       "seasons": [
         2020,
@@ -29051,7 +29019,7 @@
       "pos": "WR",
       "team": "CIN",
       "totalPoints": 1294.82,
-      "starts": 68,
+      "starts": 67,
       "benchApps": 19,
       "weekHigh": 55.4,
       "weekHighInfo": {
@@ -29060,7 +29028,7 @@
         "owner": "Aiden",
         "points": 55.4
       },
-      "avgPerStart": 19.04,
+      "avgPerStart": 19.33,
       "owners": [
         "Aiden",
         "Alex",
@@ -29085,7 +29053,7 @@
       "team": "JAX",
       "totalPoints": 266.84,
       "starts": 16,
-      "benchApps": 18,
+      "benchApps": 17,
       "weekHigh": 33.42,
       "weekHighInfo": {
         "year": 2022,
@@ -29114,7 +29082,7 @@
       "team": "ATL",
       "totalPoints": 431.8,
       "starts": 44,
-      "benchApps": 32,
+      "benchApps": 31,
       "weekHigh": 26.9,
       "weekHighInfo": {
         "year": 2021,
@@ -29220,7 +29188,7 @@
       "team": "PHI",
       "totalPoints": 518.4,
       "starts": 39,
-      "benchApps": 44,
+      "benchApps": 43,
       "weekHigh": 33.3,
       "weekHighInfo": {
         "year": 2025,
@@ -29321,7 +29289,7 @@
       "team": "DEN",
       "totalPoints": 576.42,
       "starts": 41,
-      "benchApps": 33,
+      "benchApps": 32,
       "weekHigh": 40.1,
       "weekHighInfo": {
         "year": 2022,
@@ -29408,7 +29376,7 @@
       "pos": "RB",
       "team": "CAR",
       "totalPoints": 308.6,
-      "starts": 21,
+      "starts": 20,
       "benchApps": 22,
       "weekHigh": 32.5,
       "weekHighInfo": {
@@ -29417,7 +29385,7 @@
         "owner": "Aiden",
         "points": 32.5
       },
-      "avgPerStart": 14.7,
+      "avgPerStart": 15.43,
       "owners": [
         "Aiden",
         "Joshua",
@@ -29462,7 +29430,7 @@
       "pos": "K",
       "team": "BUF",
       "totalPoints": 221.0,
-      "starts": 28,
+      "starts": 27,
       "benchApps": 22,
       "weekHigh": 16.0,
       "weekHighInfo": {
@@ -29471,7 +29439,7 @@
         "owner": "Aiden",
         "points": 16.0
       },
-      "avgPerStart": 7.89,
+      "avgPerStart": 8.19,
       "owners": [
         "Aiden",
         "Alex",
@@ -29529,7 +29497,7 @@
       "pos": "QB",
       "team": "PHI",
       "totalPoints": 1279.04,
-      "starts": 60,
+      "starts": 59,
       "benchApps": 24,
       "weekHigh": 35.14,
       "weekHighInfo": {
@@ -29538,7 +29506,7 @@
         "owner": "Luke",
         "points": 35.14
       },
-      "avgPerStart": 21.32,
+      "avgPerStart": 21.68,
       "owners": [
         "Justin",
         "Luke",
@@ -29632,7 +29600,7 @@
       "team": "TB",
       "totalPoints": 9.5,
       "starts": 2,
-      "benchApps": 11,
+      "benchApps": 10,
       "weekHigh": 6.8,
       "weekHighInfo": {
         "year": 2025,
@@ -29681,7 +29649,7 @@
       "pos": "QB",
       "team": "GB",
       "totalPoints": 161.56,
-      "starts": 11,
+      "starts": 10,
       "benchApps": 30,
       "weekHigh": 26.28,
       "weekHighInfo": {
@@ -29690,7 +29658,7 @@
         "owner": "Luke",
         "points": 26.28
       },
-      "avgPerStart": 14.69,
+      "avgPerStart": 16.16,
       "owners": [
         "Aiden",
         "Justin",
@@ -30032,7 +30000,7 @@
       "team": "TEN",
       "totalPoints": 501.6,
       "starts": 39,
-      "benchApps": 30,
+      "benchApps": 29,
       "weekHigh": 33.7,
       "weekHighInfo": {
         "year": 2022,
@@ -30085,7 +30053,7 @@
       "pos": "WR",
       "team": "DET",
       "totalPoints": 1201.18,
-      "starts": 63,
+      "starts": 62,
       "benchApps": 10,
       "weekHigh": 41.4,
       "weekHighInfo": {
@@ -30094,7 +30062,7 @@
         "owner": "Matthew",
         "points": 41.4
       },
-      "avgPerStart": 19.07,
+      "avgPerStart": 19.37,
       "owners": [
         "Aiden",
         "Luke",
@@ -30115,7 +30083,7 @@
       "pos": "WR",
       "team": "NO",
       "totalPoints": 540.1,
-      "starts": 39,
+      "starts": 38,
       "benchApps": 28,
       "weekHigh": 36.8,
       "weekHighInfo": {
@@ -30124,7 +30092,7 @@
         "owner": "Sean",
         "points": 36.8
       },
-      "avgPerStart": 13.85,
+      "avgPerStart": 14.21,
       "owners": [
         "Alex",
         "Justin",
@@ -30146,7 +30114,7 @@
       "team": "NYJ",
       "totalPoints": 587.46,
       "starts": 39,
-      "benchApps": 23,
+      "benchApps": 22,
       "weekHigh": 32.86,
       "weekHighInfo": {
         "year": 2025,
@@ -30309,7 +30277,7 @@
       "team": "NO",
       "totalPoints": 641.7,
       "starts": 44,
-      "benchApps": 18,
+      "benchApps": 17,
       "weekHigh": 36.4,
       "weekHighInfo": {
         "year": 2023,
@@ -30340,7 +30308,7 @@
       "pos": "WR",
       "team": "ATL",
       "totalPoints": 307.4,
-      "starts": 22,
+      "starts": 21,
       "benchApps": 28,
       "weekHigh": 31.8,
       "weekHighInfo": {
@@ -30349,7 +30317,7 @@
         "owner": "Joshua",
         "points": 31.8
       },
-      "avgPerStart": 13.97,
+      "avgPerStart": 14.64,
       "owners": [
         "Alex",
         "Howard",
@@ -30465,7 +30433,7 @@
       "team": "MIN",
       "totalPoints": 157.2,
       "starts": 12,
-      "benchApps": 21,
+      "benchApps": 20,
       "weekHigh": 24.0,
       "weekHighInfo": {
         "year": 2024,
@@ -30491,7 +30459,7 @@
       "pos": "WR",
       "team": "NYJ",
       "totalPoints": 605.1,
-      "starts": 45,
+      "starts": 44,
       "benchApps": 19,
       "weekHigh": 30.0,
       "weekHighInfo": {
@@ -30500,7 +30468,7 @@
         "owner": "Joshua",
         "points": 30.0
       },
-      "avgPerStart": 13.45,
+      "avgPerStart": 13.75,
       "owners": [
         "Joshua",
         "Justin",
@@ -30521,7 +30489,7 @@
       "team": "BAL",
       "totalPoints": 5.9,
       "starts": 1,
-      "benchApps": 3,
+      "benchApps": 2,
       "weekHigh": 5.9,
       "weekHighInfo": {
         "year": 2022,
@@ -30705,7 +30673,7 @@
       "pos": "RB",
       "team": "KC",
       "totalPoints": 627.2,
-      "starts": 43,
+      "starts": 42,
       "benchApps": 24,
       "weekHigh": 34.1,
       "weekHighInfo": {
@@ -30714,7 +30682,7 @@
         "owner": "Sean",
         "points": 34.1
       },
-      "avgPerStart": 14.59,
+      "avgPerStart": 14.93,
       "owners": [
         "Aiden",
         "Joshua",
@@ -30735,7 +30703,7 @@
       "team": "NE",
       "totalPoints": 269.0,
       "starts": 20,
-      "benchApps": 46,
+      "benchApps": 45,
       "weekHigh": 25.1,
       "weekHighInfo": {
         "year": 2022,
@@ -30831,7 +30799,7 @@
       "pos": "WR",
       "team": "DAL",
       "totalPoints": 402.4,
-      "starts": 28,
+      "starts": 27,
       "benchApps": 29,
       "weekHigh": 31.8,
       "weekHighInfo": {
@@ -30840,7 +30808,7 @@
         "owner": "Sean",
         "points": 31.8
       },
-      "avgPerStart": 14.37,
+      "avgPerStart": 14.9,
       "owners": [
         "Howard",
         "Justin",
@@ -30860,7 +30828,7 @@
       "pos": "RB",
       "team": "ATL",
       "totalPoints": 1118.4,
-      "starts": 67,
+      "starts": 66,
       "benchApps": 29,
       "weekHigh": 39.9,
       "weekHighInfo": {
@@ -30869,7 +30837,7 @@
         "owner": "Ulises",
         "points": 39.9
       },
-      "avgPerStart": 16.69,
+      "avgPerStart": 16.95,
       "owners": [
         "Aiden",
         "Alex",
@@ -30985,7 +30953,7 @@
       "pos": "TE",
       "team": "NYG",
       "totalPoints": 48.5,
-      "starts": 7,
+      "starts": 6,
       "benchApps": 8,
       "weekHigh": 19.3,
       "weekHighInfo": {
@@ -30994,7 +30962,7 @@
         "owner": "Howard",
         "points": 19.3
       },
-      "avgPerStart": 6.93,
+      "avgPerStart": 8.08,
       "owners": [
         "Aiden",
         "Howard",
@@ -31067,7 +31035,7 @@
       "pos": "WR",
       "team": "GB",
       "totalPoints": 110.7,
-      "starts": 8,
+      "starts": 7,
       "benchApps": 11,
       "weekHigh": 24.4,
       "weekHighInfo": {
@@ -31076,7 +31044,7 @@
         "owner": "Justin",
         "points": 24.4
       },
-      "avgPerStart": 13.84,
+      "avgPerStart": 15.81,
       "owners": [
         "Justin",
         "Ulises"
@@ -31093,7 +31061,7 @@
       "pos": "TE",
       "team": "NO",
       "totalPoints": 62.5,
-      "starts": 10,
+      "starts": 9,
       "benchApps": 12,
       "weekHigh": 13.7,
       "weekHighInfo": {
@@ -31102,7 +31070,7 @@
         "owner": "Justin",
         "points": 13.7
       },
-      "avgPerStart": 6.25,
+      "avgPerStart": 6.94,
       "owners": [
         "Aiden",
         "Joshua",
@@ -31121,7 +31089,7 @@
       "team": "WSH",
       "totalPoints": 330.4,
       "starts": 23,
-      "benchApps": 36,
+      "benchApps": 35,
       "weekHigh": 27.9,
       "weekHighInfo": {
         "year": 2023,
@@ -31406,7 +31374,7 @@
       "team": "SF",
       "totalPoints": 244.88,
       "starts": 11,
-      "benchApps": 20,
+      "benchApps": 19,
       "weekHigh": 36.92,
       "weekHighInfo": {
         "year": 2025,
@@ -31436,7 +31404,7 @@
       "team": "MIN",
       "totalPoints": 122.9,
       "starts": 9,
-      "benchApps": 33,
+      "benchApps": 32,
       "weekHigh": 31.3,
       "weekHighInfo": {
         "year": 2023,
@@ -31484,7 +31452,7 @@
       "pos": "RB",
       "team": "BUF",
       "totalPoints": 657.5,
-      "starts": 43,
+      "starts": 42,
       "benchApps": 12,
       "weekHigh": 33.6,
       "weekHighInfo": {
@@ -31493,7 +31461,7 @@
         "owner": "Luke",
         "points": 33.6
       },
-      "avgPerStart": 15.29,
+      "avgPerStart": 15.65,
       "owners": [
         "Joshua",
         "Luke",
@@ -31526,7 +31494,7 @@
       "pos": "RB",
       "team": "DET",
       "totalPoints": 968.7,
-      "starts": 49,
+      "starts": 48,
       "benchApps": 5,
       "weekHigh": 55.4,
       "weekHighInfo": {
@@ -31535,7 +31503,7 @@
         "owner": "Sean",
         "points": 55.4
       },
-      "avgPerStart": 19.77,
+      "avgPerStart": 20.18,
       "owners": [
         "Alex",
         "Howard",
@@ -31580,7 +31548,7 @@
       "pos": "WR",
       "team": "BAL",
       "totalPoints": 106.0,
-      "starts": 12,
+      "starts": 11,
       "benchApps": 43,
       "weekHigh": 26.0,
       "weekHighInfo": {
@@ -31589,7 +31557,7 @@
         "owner": "Matthew",
         "points": 26.0
       },
-      "avgPerStart": 8.83,
+      "avgPerStart": 9.64,
       "owners": [
         "Alex",
         "Luke",
@@ -31608,7 +31576,7 @@
       "team": "MIA",
       "totalPoints": 715.1,
       "starts": 39,
-      "benchApps": 16,
+      "benchApps": 15,
       "weekHigh": 40.5,
       "weekHighInfo": {
         "year": 2025,
@@ -31660,7 +31628,7 @@
       "pos": "WR",
       "team": "HOU",
       "totalPoints": 622.6,
-      "starts": 38,
+      "starts": 37,
       "benchApps": 16,
       "weekHigh": 35.8,
       "weekHighInfo": {
@@ -31669,7 +31637,7 @@
         "owner": "Howard",
         "points": 35.8
       },
-      "avgPerStart": 16.38,
+      "avgPerStart": 16.83,
       "owners": [
         "Alex",
         "Howard",
@@ -31689,7 +31657,7 @@
       "pos": "WR",
       "team": "LAR",
       "totalPoints": 758.4,
-      "starts": 40,
+      "starts": 39,
       "benchApps": 14,
       "weekHigh": 46.5,
       "weekHighInfo": {
@@ -31698,7 +31666,7 @@
         "owner": "Luke",
         "points": 46.5
       },
-      "avgPerStart": 18.96,
+      "avgPerStart": 19.45,
       "owners": [
         "Joshua",
         "Luke",
@@ -31716,7 +31684,7 @@
       "pos": "RB",
       "team": "LAR",
       "totalPoints": 748.5,
-      "starts": 45,
+      "starts": 44,
       "benchApps": 8,
       "weekHigh": 31.6,
       "weekHighInfo": {
@@ -31725,7 +31693,7 @@
         "owner": "Alex",
         "points": 31.6
       },
-      "avgPerStart": 16.63,
+      "avgPerStart": 17.01,
       "owners": [
         "Alex",
         "Justin",
@@ -31793,7 +31761,7 @@
       "pos": "K",
       "team": "DAL",
       "totalPoints": 464.6,
-      "starts": 45,
+      "starts": 44,
       "benchApps": 3,
       "weekHigh": 22.0,
       "weekHighInfo": {
@@ -31802,7 +31770,7 @@
         "owner": "Todd",
         "points": 22.0
       },
-      "avgPerStart": 10.32,
+      "avgPerStart": 10.56,
       "owners": [
         "Howard",
         "Justin",
@@ -31822,7 +31790,7 @@
       "pos": "TE",
       "team": "DET",
       "totalPoints": 406.6,
-      "starts": 36,
+      "starts": 35,
       "benchApps": 16,
       "weekHigh": 29.0,
       "weekHighInfo": {
@@ -31831,7 +31799,7 @@
         "owner": "Alex",
         "points": 29.0
       },
-      "avgPerStart": 11.29,
+      "avgPerStart": 11.62,
       "owners": [
         "Aiden",
         "Alex",
@@ -31972,7 +31940,7 @@
       "team": "DAL",
       "totalPoints": 173.7,
       "starts": 15,
-      "benchApps": 17,
+      "benchApps": 16,
       "weekHigh": 23.9,
       "weekHighInfo": {
         "year": 2025,
@@ -32039,7 +32007,7 @@
       "team": "BUF",
       "totalPoints": 212.2,
       "starts": 21,
-      "benchApps": 22,
+      "benchApps": 21,
       "weekHigh": 17.6,
       "weekHighInfo": {
         "year": 2025,
@@ -32067,7 +32035,7 @@
       "team": "IND",
       "totalPoints": 69.0,
       "starts": 7,
-      "benchApps": 9,
+      "benchApps": 8,
       "weekHigh": 19.4,
       "weekHighInfo": {
         "year": 2024,
@@ -32140,7 +32108,7 @@
       "team": "BUF",
       "totalPoints": 59.4,
       "starts": 6,
-      "benchApps": 29,
+      "benchApps": 28,
       "weekHigh": 17.9,
       "weekHighInfo": {
         "year": 2025,
@@ -32165,7 +32133,7 @@
       "pos": "TE",
       "team": "ARI",
       "totalPoints": 621.7,
-      "starts": 37,
+      "starts": 36,
       "benchApps": 7,
       "weekHigh": 37.4,
       "weekHighInfo": {
@@ -32174,7 +32142,7 @@
         "owner": "Alex",
         "points": 37.4
       },
-      "avgPerStart": 16.8,
+      "avgPerStart": 17.27,
       "owners": [
         "Aiden",
         "Alex",
@@ -32207,17 +32175,17 @@
       "display": "J. Warren",
       "pos": "RB",
       "team": "PIT",
-      "totalPoints": 78.8,
-      "starts": 7,
+      "totalPoints": 63.2,
+      "starts": 6,
       "benchApps": 20,
-      "weekHigh": 15.6,
+      "weekHigh": 15.2,
       "weekHighInfo": {
-        "year": 2026,
-        "week": 4,
+        "year": 2025,
+        "week": 14,
         "owner": "Sean",
-        "points": 15.6
+        "points": 15.2
       },
-      "avgPerStart": 11.26,
+      "avgPerStart": 10.53,
       "owners": [
         "Justin",
         "Sean"
@@ -32234,7 +32202,7 @@
       "team": "SEA",
       "totalPoints": 126.1,
       "starts": 7,
-      "benchApps": 26,
+      "benchApps": 25,
       "weekHigh": 38.3,
       "weekHighInfo": {
         "year": 2024,
@@ -32260,7 +32228,7 @@
       "pos": "WR",
       "team": "KC",
       "totalPoints": 261.0,
-      "starts": 17,
+      "starts": 16,
       "benchApps": 17,
       "weekHigh": 29.4,
       "weekHighInfo": {
@@ -32269,7 +32237,7 @@
         "owner": "Matthew",
         "points": 29.4
       },
-      "avgPerStart": 15.35,
+      "avgPerStart": 16.31,
       "owners": [
         "Alex",
         "Matthew",
@@ -32329,7 +32297,7 @@
       "team": "CAR",
       "totalPoints": 0.0,
       "starts": 0,
-      "benchApps": 17,
+      "benchApps": 16,
       "weekHigh": 0.0,
       "weekHighInfo": null,
       "avgPerStart": 0.0,
@@ -32369,7 +32337,7 @@
       "team": "CHI",
       "totalPoints": 59.7,
       "starts": 8,
-      "benchApps": 13,
+      "benchApps": 12,
       "weekHigh": 18.4,
       "weekHighInfo": {
         "year": 2025,
@@ -32419,7 +32387,7 @@
       "pos": "K",
       "team": "CIN",
       "totalPoints": 117.0,
-      "starts": 18,
+      "starts": 17,
       "benchApps": 0,
       "weekHigh": 15.0,
       "weekHighInfo": {
@@ -32428,7 +32396,7 @@
         "owner": "Matthew",
         "points": 15.0
       },
-      "avgPerStart": 6.5,
+      "avgPerStart": 6.88,
       "owners": [
         "Aiden",
         "Matthew",
@@ -32472,7 +32440,7 @@
       "team": "CHI",
       "totalPoints": 77.3,
       "starts": 4,
-      "benchApps": 17,
+      "benchApps": 16,
       "weekHigh": 37.26,
       "weekHighInfo": {
         "year": 2026,
@@ -32524,7 +32492,7 @@
       "team": "NYJ",
       "totalPoints": 0.0,
       "starts": 0,
-      "benchApps": 4,
+      "benchApps": 3,
       "weekHigh": 0.0,
       "weekHighInfo": null,
       "avgPerStart": 0.0,
@@ -32539,7 +32507,7 @@
       "pos": "TE",
       "team": "LV",
       "totalPoints": 366.5,
-      "starts": 26,
+      "starts": 25,
       "benchApps": 12,
       "weekHigh": 43.3,
       "weekHighInfo": {
@@ -32548,13 +32516,12 @@
         "owner": "Luke",
         "points": 43.3
       },
-      "avgPerStart": 14.1,
+      "avgPerStart": 14.66,
       "owners": [
         "Aiden",
         "Howard",
         "Luke",
-        "Matthew",
-        "Ulises"
+        "Matthew"
       ],
       "seasons": [
         2024,
@@ -32567,7 +32534,7 @@
       "pos": "WR",
       "team": "NYG",
       "totalPoints": 207.0,
-      "starts": 16,
+      "starts": 15,
       "benchApps": 12,
       "weekHigh": 37.7,
       "weekHighInfo": {
@@ -32576,7 +32543,7 @@
         "owner": "Ulises",
         "points": 37.7
       },
-      "avgPerStart": 12.94,
+      "avgPerStart": 13.8,
       "owners": [
         "Howard",
         "Luke",
@@ -32594,7 +32561,7 @@
       "team": "LAC",
       "totalPoints": 243.4,
       "starts": 18,
-      "benchApps": 11,
+      "benchApps": 10,
       "weekHigh": 29.4,
       "weekHighInfo": {
         "year": 2024,
@@ -32621,7 +32588,7 @@
       "team": "KC",
       "totalPoints": 78.8,
       "starts": 8,
-      "benchApps": 23,
+      "benchApps": 22,
       "weekHigh": 20.8,
       "weekHighInfo": {
         "year": 2024,
@@ -32690,7 +32657,7 @@
       "team": "DET",
       "totalPoints": 124.1,
       "starts": 12,
-      "benchApps": 14,
+      "benchApps": 13,
       "weekHigh": 26.4,
       "weekHighInfo": {
         "year": 2025,
@@ -32740,7 +32707,7 @@
       "pos": "WR",
       "team": "SEA",
       "totalPoints": 499.36,
-      "starts": 23,
+      "starts": 22,
       "benchApps": 6,
       "weekHigh": 42.5,
       "weekHighInfo": {
@@ -32749,7 +32716,7 @@
         "owner": "Aiden",
         "points": 42.5
       },
-      "avgPerStart": 21.71,
+      "avgPerStart": 22.7,
       "owners": [
         "Aiden",
         "Matthew",
@@ -32767,7 +32734,7 @@
       "team": "WSH",
       "totalPoints": 255.48,
       "starts": 13,
-      "benchApps": 22,
+      "benchApps": 21,
       "weekHigh": 34.42,
       "weekHighInfo": {
         "year": 2024,
@@ -32816,7 +32783,7 @@
       "team": "LAC",
       "totalPoints": 50.9,
       "starts": 4,
-      "benchApps": 17,
+      "benchApps": 16,
       "weekHigh": 23.8,
       "weekHighInfo": {
         "year": 2025,
@@ -32887,7 +32854,7 @@
       "team": "GB",
       "totalPoints": 196.5,
       "starts": 18,
-      "benchApps": 7,
+      "benchApps": 6,
       "weekHigh": 33.3,
       "weekHighInfo": {
         "year": 2025,
@@ -32912,7 +32879,7 @@
       "pos": "RB",
       "team": "TB",
       "totalPoints": 212.9,
-      "starts": 15,
+      "starts": 14,
       "benchApps": 18,
       "weekHigh": 27.5,
       "weekHighInfo": {
@@ -32921,7 +32888,7 @@
         "owner": "Sean",
         "points": 27.5
       },
-      "avgPerStart": 14.19,
+      "avgPerStart": 15.21,
       "owners": [
         "Luke",
         "Sean"
@@ -32937,7 +32904,7 @@
       "pos": "RB",
       "team": "CIN",
       "totalPoints": 368.1,
-      "starts": 22,
+      "starts": 21,
       "benchApps": 10,
       "weekHigh": 32.9,
       "weekHighInfo": {
@@ -32946,7 +32913,7 @@
         "owner": "Todd",
         "points": 32.9
       },
-      "avgPerStart": 16.73,
+      "avgPerStart": 17.53,
       "owners": [
         "Aiden",
         "Alex",
@@ -33049,7 +33016,7 @@
       "team": "TEN",
       "totalPoints": 103.9,
       "starts": 8,
-      "benchApps": 14,
+      "benchApps": 13,
       "weekHigh": 30.6,
       "weekHighInfo": {
         "year": 2025,
@@ -33120,7 +33087,7 @@
       "pos": "K",
       "team": "DET",
       "totalPoints": 212.0,
-      "starts": 27,
+      "starts": 26,
       "benchApps": 1,
       "weekHigh": 14.0,
       "weekHighInfo": {
@@ -33129,7 +33096,7 @@
         "owner": "Aiden",
         "points": 14.0
       },
-      "avgPerStart": 7.85,
+      "avgPerStart": 8.15,
       "owners": [
         "Aiden",
         "Joshua",
@@ -33170,7 +33137,7 @@
       "team": "DEN",
       "totalPoints": 196.44,
       "starts": 10,
-      "benchApps": 16,
+      "benchApps": 15,
       "weekHigh": 39.96,
       "weekHighInfo": {
         "year": 2025,
@@ -33259,7 +33226,7 @@
       "team": "TB",
       "totalPoints": 23.0,
       "starts": 1,
-      "benchApps": 4,
+      "benchApps": 3,
       "weekHigh": 23.0,
       "weekHighInfo": {
         "year": 2024,
@@ -33326,7 +33293,7 @@
       "pos": "RB",
       "team": "NE",
       "totalPoints": 163.3,
-      "starts": 14,
+      "starts": 13,
       "benchApps": 7,
       "weekHigh": 32.3,
       "weekHighInfo": {
@@ -33335,7 +33302,7 @@
         "owner": "Alex",
         "points": 32.3
       },
-      "avgPerStart": 11.66,
+      "avgPerStart": 12.56,
       "owners": [
         "Aiden",
         "Alex"
@@ -33351,7 +33318,7 @@
       "team": "DEN",
       "totalPoints": 118.5,
       "starts": 6,
-      "benchApps": 15,
+      "benchApps": 14,
       "weekHigh": 24.1,
       "weekHighInfo": {
         "year": 2025,
@@ -33375,7 +33342,7 @@
       "team": "NE",
       "totalPoints": 238.44,
       "starts": 12,
-      "benchApps": 6,
+      "benchApps": 5,
       "weekHigh": 32.44,
       "weekHighInfo": {
         "year": 2025,
@@ -33399,7 +33366,7 @@
       "team": "CLE",
       "totalPoints": 169.9,
       "starts": 15,
-      "benchApps": 6,
+      "benchApps": 5,
       "weekHigh": 26.4,
       "weekHighInfo": {
         "year": 2025,
@@ -33421,7 +33388,7 @@
       "pos": "RB",
       "team": "LV",
       "totalPoints": 288.0,
-      "starts": 20,
+      "starts": 19,
       "benchApps": 1,
       "weekHigh": 33.5,
       "weekHighInfo": {
@@ -33430,7 +33397,7 @@
         "owner": "Luke",
         "points": 33.5
       },
-      "avgPerStart": 14.4,
+      "avgPerStart": 15.16,
       "owners": [
         "Luke",
         "Matthew"
@@ -33445,7 +33412,7 @@
       "pos": "TE",
       "team": "CHI",
       "totalPoints": 10.8,
-      "starts": 4,
+      "starts": 3,
       "benchApps": 3,
       "weekHigh": 9.5,
       "weekHighInfo": {
@@ -33454,7 +33421,7 @@
         "owner": "Todd",
         "points": 9.5
       },
-      "avgPerStart": 2.7,
+      "avgPerStart": 3.6,
       "owners": [
         "Sean",
         "Todd"
@@ -33470,7 +33437,7 @@
       "team": "GB",
       "totalPoints": 11.3,
       "starts": 1,
-      "benchApps": 17,
+      "benchApps": 16,
       "weekHigh": 11.3,
       "weekHighInfo": {
         "year": 2025,
@@ -33493,7 +33460,7 @@
       "team": "LAC",
       "totalPoints": 98.4,
       "starts": 7,
-      "benchApps": 14,
+      "benchApps": 13,
       "weekHigh": 27.5,
       "weekHighInfo": {
         "year": 2025,
@@ -33554,7 +33521,7 @@
       "pos": "WR",
       "team": "TB",
       "totalPoints": 191.1,
-      "starts": 17,
+      "starts": 16,
       "benchApps": 4,
       "weekHigh": 31.3,
       "weekHighInfo": {
@@ -33563,7 +33530,7 @@
         "owner": "Howard",
         "points": 31.3
       },
-      "avgPerStart": 11.24,
+      "avgPerStart": 11.94,
       "owners": [
         "Howard",
         "Joshua",
@@ -33579,7 +33546,7 @@
       "pos": "TE",
       "team": "IND",
       "totalPoints": 204.0,
-      "starts": 18,
+      "starts": 17,
       "benchApps": 3,
       "weekHigh": 18.3,
       "weekHighInfo": {
@@ -33588,7 +33555,7 @@
         "owner": "Howard",
         "points": 18.3
       },
-      "avgPerStart": 11.33,
+      "avgPerStart": 12.0,
       "owners": [
         "Howard",
         "Luke"
@@ -33625,7 +33592,7 @@
       "pos": "WR",
       "team": "CAR",
       "totalPoints": 111.6,
-      "starts": 12,
+      "starts": 11,
       "benchApps": 9,
       "weekHigh": 17.9,
       "weekHighInfo": {
@@ -33634,7 +33601,7 @@
         "owner": "Sean",
         "points": 17.9
       },
-      "avgPerStart": 9.3,
+      "avgPerStart": 10.15,
       "owners": [
         "Sean",
         "Ulises"
@@ -33650,7 +33617,7 @@
       "team": "WSH",
       "totalPoints": 12.5,
       "starts": 3,
-      "benchApps": 13,
+      "benchApps": 12,
       "weekHigh": 5.8,
       "weekHighInfo": {
         "year": 2025,
@@ -33764,7 +33731,7 @@
       "team": "CLE",
       "totalPoints": 103.5,
       "starts": 8,
-      "benchApps": 12,
+      "benchApps": 11,
       "weekHigh": 25.4,
       "weekHighInfo": {
         "year": 2025,
@@ -33786,7 +33753,7 @@
       "pos": "RB",
       "team": "JAX",
       "totalPoints": 26.8,
-      "starts": 3,
+      "starts": 2,
       "benchApps": 3,
       "weekHigh": 17.0,
       "weekHighInfo": {
@@ -33795,7 +33762,7 @@
         "owner": "Joshua",
         "points": 17.0
       },
-      "avgPerStart": 8.93,
+      "avgPerStart": 13.4,
       "owners": [
         "Joshua"
       ],
@@ -33831,7 +33798,7 @@
       "pos": "RB",
       "team": "NYG",
       "totalPoints": 79.4,
-      "starts": 7,
+      "starts": 6,
       "benchApps": 3,
       "weekHigh": 18.4,
       "weekHighInfo": {
@@ -33840,7 +33807,7 @@
         "owner": "Justin",
         "points": 18.4
       },
-      "avgPerStart": 11.34,
+      "avgPerStart": 13.23,
       "owners": [
         "Howard",
         "Justin"
@@ -33900,7 +33867,7 @@
       "team": "LV",
       "totalPoints": 10.2,
       "starts": 2,
-      "benchApps": 14,
+      "benchApps": 13,
       "weekHigh": 5.8,
       "weekHighInfo": {
         "year": 2025,
@@ -34255,7 +34222,7 @@
       "team": "CHI",
       "totalPoints": 60.3,
       "starts": 5,
-      "benchApps": 5,
+      "benchApps": 4,
       "weekHigh": 22.8,
       "weekHighInfo": {
         "year": 2025,
@@ -34278,7 +34245,7 @@
       "pos": "K",
       "team": "JAX",
       "totalPoints": 93.0,
-      "starts": 11,
+      "starts": 10,
       "benchApps": 0,
       "weekHigh": 13.0,
       "weekHighInfo": {
@@ -34287,7 +34254,7 @@
         "owner": "Luke",
         "points": 13.0
       },
-      "avgPerStart": 8.45,
+      "avgPerStart": 9.3,
       "owners": [
         "Justin",
         "Luke"
@@ -34302,7 +34269,7 @@
       "pos": "WR",
       "team": "JAX",
       "totalPoints": 70.6,
-      "starts": 6,
+      "starts": 5,
       "benchApps": 2,
       "weekHigh": 19.3,
       "weekHighInfo": {
@@ -34311,7 +34278,7 @@
         "owner": "Sean",
         "points": 19.3
       },
-      "avgPerStart": 11.77,
+      "avgPerStart": 14.12,
       "owners": [
         "Sean"
       ],
@@ -34385,7 +34352,7 @@
       "pos": "TE",
       "team": "SEA",
       "totalPoints": 17.1,
-      "starts": 3,
+      "starts": 2,
       "benchApps": 0,
       "weekHigh": 13.3,
       "weekHighInfo": {
@@ -34394,13 +34361,12 @@
         "owner": "Matthew",
         "points": 13.3
       },
-      "avgPerStart": 5.7,
+      "avgPerStart": 8.55,
       "owners": [
         "Matthew"
       ],
       "seasons": [
-        2025,
-        2026
+        2025
       ]
     },
     "WR|pierce|A": {
@@ -34409,7 +34375,7 @@
       "team": "IND",
       "totalPoints": 2.1,
       "starts": 1,
-      "benchApps": 6,
+      "benchApps": 5,
       "weekHigh": 2.1,
       "weekHighInfo": {
         "year": 2026,
@@ -34431,7 +34397,7 @@
       "pos": "WR",
       "team": "ARI",
       "totalPoints": 125.7,
-      "starts": 8,
+      "starts": 7,
       "benchApps": 2,
       "weekHigh": 37.2,
       "weekHighInfo": {
@@ -34440,7 +34406,7 @@
         "owner": "Todd",
         "points": 37.2
       },
-      "avgPerStart": 15.71,
+      "avgPerStart": 17.96,
       "owners": [
         "Aiden",
         "Todd"
@@ -34507,7 +34473,7 @@
       "pos": "QB",
       "team": "NO",
       "totalPoints": 45.72,
-      "starts": 3,
+      "starts": 2,
       "benchApps": 0,
       "weekHigh": 23.8,
       "weekHighInfo": {
@@ -34516,7 +34482,7 @@
         "owner": "Sean",
         "points": 23.8
       },
-      "avgPerStart": 15.24,
+      "avgPerStart": 22.86,
       "owners": [
         "Alex",
         "Sean"
@@ -34532,7 +34498,7 @@
       "team": "CHI",
       "totalPoints": 6.2,
       "starts": 1,
-      "benchApps": 3,
+      "benchApps": 2,
       "weekHigh": 6.2,
       "weekHighInfo": {
         "year": 2026,
@@ -34553,7 +34519,7 @@
       "pos": "K",
       "team": "GB",
       "totalPoints": 22.0,
-      "starts": 4,
+      "starts": 3,
       "benchApps": 0,
       "weekHigh": 12.0,
       "weekHighInfo": {
@@ -34562,7 +34528,7 @@
         "owner": "Luke",
         "points": 12.0
       },
-      "avgPerStart": 5.5,
+      "avgPerStart": 7.33,
       "owners": [
         "Luke"
       ],
@@ -34576,7 +34542,7 @@
       "team": "NO",
       "totalPoints": 0.0,
       "starts": 0,
-      "benchApps": 4,
+      "benchApps": 3,
       "weekHigh": 0.0,
       "weekHighInfo": null,
       "avgPerStart": 0.0,
@@ -34628,7 +34594,7 @@
       "team": "TEN",
       "totalPoints": 0.0,
       "starts": 0,
-      "benchApps": 4,
+      "benchApps": 3,
       "weekHigh": 0.0,
       "weekHighInfo": null,
       "avgPerStart": 0.0,
@@ -34643,7 +34609,7 @@
       "team": "SEA",
       "totalPoints": 12.8,
       "starts": 2,
-      "benchApps": 2,
+      "benchApps": 1,
       "weekHigh": 7.8,
       "weekHighInfo": {
         "year": 2026,
@@ -34664,7 +34630,7 @@
       "pos": "RB",
       "team": "ARI",
       "totalPoints": 29.4,
-      "starts": 3,
+      "starts": 2,
       "benchApps": 1,
       "weekHigh": 21.9,
       "weekHighInfo": {
@@ -34673,7 +34639,7 @@
         "owner": "Howard",
         "points": 21.9
       },
-      "avgPerStart": 9.8,
+      "avgPerStart": 14.7,
       "owners": [
         "Howard"
       ],
@@ -34702,7 +34668,7 @@
       "team": "SF",
       "totalPoints": 0.0,
       "starts": 0,
-      "benchApps": 4,
+      "benchApps": 3,
       "weekHigh": 0.0,
       "weekHighInfo": null,
       "avgPerStart": 0.0,
@@ -34747,7 +34713,7 @@
       "team": "NYJ",
       "totalPoints": 3.7,
       "starts": 1,
-      "benchApps": 2,
+      "benchApps": 1,
       "weekHigh": 3.7,
       "weekHighInfo": {
         "year": 2026,
@@ -34768,7 +34734,7 @@
       "pos": "WR",
       "team": "NO",
       "totalPoints": 11.4,
-      "starts": 2,
+      "starts": 1,
       "benchApps": 1,
       "weekHigh": 11.4,
       "weekHighInfo": {
@@ -34777,7 +34743,7 @@
         "owner": "Sean",
         "points": 11.4
       },
-      "avgPerStart": 5.7,
+      "avgPerStart": 11.4,
       "owners": [
         "Sean"
       ],
@@ -34835,7 +34801,7 @@
       "team": "DEN",
       "totalPoints": 0.0,
       "starts": 0,
-      "benchApps": 2,
+      "benchApps": 1,
       "weekHigh": 0.0,
       "weekHighInfo": null,
       "avgPerStart": 0.0,
@@ -34848,17 +34814,17 @@
       "display": "D. Boston",
       "pos": "WR",
       "team": "CLE",
-      "totalPoints": 21.0,
-      "starts": 2,
+      "totalPoints": 8.1,
+      "starts": 1,
       "benchApps": 0,
-      "weekHigh": 12.9,
+      "weekHigh": 8.1,
       "weekHighInfo": {
         "year": 2026,
-        "week": 4,
+        "week": 3,
         "owner": "Todd",
-        "points": 12.9
+        "points": 8.1
       },
-      "avgPerStart": 10.5,
+      "avgPerStart": 8.1,
       "owners": [
         "Todd"
       ],
@@ -34871,14 +34837,12 @@
       "pos": "QB",
       "team": "CAR",
       "totalPoints": 0.0,
-      "starts": 1,
+      "starts": 0,
       "benchApps": 1,
       "weekHigh": 0.0,
       "weekHighInfo": null,
       "avgPerStart": 0.0,
-      "owners": [
-        "Todd"
-      ],
+      "owners": [],
       "seasons": [
         2026
       ]
@@ -34887,68 +34851,6 @@
       "display": "D. Wicks",
       "pos": "WR",
       "team": "PHI",
-      "totalPoints": 0.0,
-      "starts": 0,
-      "benchApps": 2,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [],
-      "seasons": [
-        2026
-      ]
-    },
-    "RB|washington|M": {
-      "display": "M. Washington Jr.",
-      "pos": "RB",
-      "team": "LV",
-      "totalPoints": 0.0,
-      "starts": 0,
-      "benchApps": 1,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [],
-      "seasons": [
-        2026
-      ]
-    },
-    "RB|allen|B": {
-      "display": "B. Allen",
-      "pos": "RB",
-      "team": "NYJ",
-      "totalPoints": 0.0,
-      "starts": 0,
-      "benchApps": 1,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [],
-      "seasons": [
-        2026
-      ]
-    },
-    "RB|gordon|O": {
-      "display": "O. Gordon II",
-      "pos": "RB",
-      "team": "MIA",
-      "totalPoints": 0.0,
-      "starts": 1,
-      "benchApps": 0,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [
-        "Justin"
-      ],
-      "seasons": [
-        2026
-      ]
-    },
-    "WR|raymond|K": {
-      "display": "K. Raymond",
-      "pos": "WR",
-      "team": "CHI",
       "totalPoints": 0.0,
       "starts": 0,
       "benchApps": 1,
@@ -62882,7 +62784,7 @@
         "pos": "QB",
         "team": "BAL",
         "totalPoints": 60.2,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 24.96,
         "weekHighInfo": {
@@ -62894,14 +62796,14 @@
         "owners": [
           "Matthew"
         ],
-        "avgPerStart": 15.05
+        "avgPerStart": 20.07
       },
       "RB|gibbs|J": {
         "display": "J. Gibbs",
         "pos": "RB",
         "team": "DET",
         "totalPoints": 98.3,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 41.4,
         "weekHighInfo": {
@@ -62913,14 +62815,14 @@
         "owners": [
           "Matthew"
         ],
-        "avgPerStart": 24.57
+        "avgPerStart": 32.77
       },
       "RB|brown|C": {
         "display": "C. Brown",
         "pos": "RB",
         "team": "CIN",
         "totalPoints": 38.9,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 18.8,
         "weekHighInfo": {
@@ -62932,14 +62834,14 @@
         "owners": [
           "Matthew"
         ],
-        "avgPerStart": 9.72
+        "avgPerStart": 12.97
       },
       "WR|wilson|G": {
         "display": "G. Wilson",
         "pos": "WR",
         "team": "NYJ",
         "totalPoints": 57.3,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 26.7,
         "weekHighInfo": {
@@ -62952,14 +62854,14 @@
           "Joshua",
           "Matthew"
         ],
-        "avgPerStart": 14.32
+        "avgPerStart": 19.1
       },
       "WR|flowers|Z": {
         "display": "Z. Flowers",
         "pos": "WR",
         "team": "BAL",
         "totalPoints": 41.4,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 26.0,
         "weekHighInfo": {
@@ -62971,7 +62873,7 @@
         "owners": [
           "Matthew"
         ],
-        "avgPerStart": 13.8
+        "avgPerStart": 20.7
       },
       "TE|kraft|T": {
         "display": "T. Kraft",
@@ -62979,7 +62881,7 @@
         "team": "GB",
         "totalPoints": 19.6,
         "starts": 3,
-        "benchApps": 1,
+        "benchApps": 0,
         "weekHigh": 9.5,
         "weekHighInfo": {
           "year": 2026,
@@ -62997,7 +62899,7 @@
         "pos": "RB",
         "team": "LV",
         "totalPoints": 55.3,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 32.7,
         "weekHighInfo": {
@@ -63009,14 +62911,14 @@
         "owners": [
           "Matthew"
         ],
-        "avgPerStart": 13.82
+        "avgPerStart": 18.43
       },
       "K|butker|H": {
         "display": "H. Butker",
         "pos": "K",
         "team": "KC",
         "totalPoints": 28.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 15.0,
         "weekHighInfo": {
@@ -63028,14 +62930,14 @@
         "owners": [
           "Matthew"
         ],
-        "avgPerStart": 7.0
+        "avgPerStart": 9.33
       },
       "DEF||lions": {
         "display": "Lions DEF",
         "pos": "DEF",
         "team": "",
         "totalPoints": 16.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 10.0,
         "weekHighInfo": {
@@ -63047,7 +62949,7 @@
         "owners": [
           "Matthew"
         ],
-        "avgPerStart": 4.0
+        "avgPerStart": 5.33
       },
       "WR|burden|L": {
         "display": "L. Burden III",
@@ -63055,7 +62957,7 @@
         "team": "CHI",
         "totalPoints": 6.2,
         "starts": 1,
-        "benchApps": 3,
+        "benchApps": 2,
         "weekHigh": 6.2,
         "weekHighInfo": {
           "year": 2026,
@@ -63074,7 +62976,7 @@
         "team": "DEN",
         "totalPoints": 5.5,
         "starts": 1,
-        "benchApps": 3,
+        "benchApps": 2,
         "weekHigh": 5.5,
         "weekHighInfo": {
           "year": 2026,
@@ -63092,7 +62994,7 @@
         "pos": "RB",
         "team": "CAR",
         "totalPoints": 29.4,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 15.0,
         "weekHighInfo": {
@@ -63104,7 +63006,7 @@
         "owners": [
           "Joshua"
         ],
-        "avgPerStart": 9.8
+        "avgPerStart": 14.7
       },
       "RB|stevenson|R": {
         "display": "R. Stevenson",
@@ -63112,7 +63014,7 @@
         "team": "NE",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -63148,7 +63050,7 @@
         "team": "SEA",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -63160,7 +63062,7 @@
         "team": "CHI",
         "totalPoints": 44.98,
         "starts": 2,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 37.26,
         "weekHighInfo": {
           "year": 2026,
@@ -63178,7 +63080,7 @@
         "pos": "RB",
         "team": "BUF",
         "totalPoints": 50.2,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 20.9,
         "weekHighInfo": {
@@ -63190,7 +63092,7 @@
         "owners": [
           "Luke"
         ],
-        "avgPerStart": 12.55
+        "avgPerStart": 16.73
       },
       "RB|pollard|T": {
         "display": "T. Pollard",
@@ -63198,7 +63100,7 @@
         "team": "TEN",
         "totalPoints": 4.4,
         "starts": 1,
-        "benchApps": 3,
+        "benchApps": 2,
         "weekHigh": 4.4,
         "weekHighInfo": {
           "year": 2026,
@@ -63216,7 +63118,7 @@
         "pos": "WR",
         "team": "DET",
         "totalPoints": 75.8,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 35.2,
         "weekHighInfo": {
@@ -63228,14 +63130,14 @@
         "owners": [
           "Luke"
         ],
-        "avgPerStart": 18.95
+        "avgPerStart": 25.27
       },
       "WR|pickens|G": {
         "display": "G. Pickens",
         "pos": "WR",
         "team": "DAL",
         "totalPoints": 31.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 15.2,
         "weekHighInfo": {
@@ -63247,14 +63149,14 @@
         "owners": [
           "Luke"
         ],
-        "avgPerStart": 7.75
+        "avgPerStart": 10.33
       },
       "TE|warren|T": {
         "display": "T. Warren",
         "pos": "TE",
         "team": "IND",
         "totalPoints": 39.4,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 14.7,
         "weekHighInfo": {
@@ -63266,14 +63168,14 @@
         "owners": [
           "Luke"
         ],
-        "avgPerStart": 9.85
+        "avgPerStart": 13.13
       },
       "WR|nabers|M": {
         "display": "M. Nabers",
         "pos": "WR",
         "team": "NYG",
         "totalPoints": 21.6,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 12.9,
         "weekHighInfo": {
@@ -63285,14 +63187,14 @@
         "owners": [
           "Luke"
         ],
-        "avgPerStart": 5.4
+        "avgPerStart": 7.2
       },
       "K|smack|T": {
         "display": "T. Smack",
         "pos": "K",
         "team": "GB",
         "totalPoints": 22.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 12.0,
         "weekHighInfo": {
@@ -63304,14 +63206,14 @@
         "owners": [
           "Luke"
         ],
-        "avgPerStart": 5.5
+        "avgPerStart": 7.33
       },
       "DEF||eagles": {
         "display": "Eagles DEF",
         "pos": "DEF",
         "team": "",
         "totalPoints": 4.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 3.0,
         "weekHighInfo": {
@@ -63323,14 +63225,14 @@
         "owners": [
           "Luke"
         ],
-        "avgPerStart": 1.0
+        "avgPerStart": 1.33
       },
       "RB|irving|B": {
         "display": "B. Irving",
         "pos": "RB",
         "team": "TB",
         "totalPoints": 20.8,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 13.0,
         "weekHighInfo": {
@@ -63342,7 +63244,7 @@
         "owners": [
           "Luke"
         ],
-        "avgPerStart": 6.93
+        "avgPerStart": 10.4
       },
       "WR|golden|M": {
         "display": "M. Golden",
@@ -63350,7 +63252,7 @@
         "team": "GB",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -63362,7 +63264,7 @@
         "team": "CHI",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -63374,7 +63276,7 @@
         "team": "BUF",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -63385,7 +63287,7 @@
         "pos": "QB",
         "team": "GB",
         "totalPoints": 18.48,
-        "starts": 2,
+        "starts": 1,
         "benchApps": 2,
         "weekHigh": 18.48,
         "weekHighInfo": {
@@ -63397,7 +63299,7 @@
         "owners": [
           "Luke"
         ],
-        "avgPerStart": 9.24
+        "avgPerStart": 18.48
       },
       "WR|reed|J": {
         "display": "J. Reed",
@@ -63417,7 +63319,7 @@
         "team": "NO",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -63429,7 +63331,7 @@
         "team": "NE",
         "totalPoints": 9.82,
         "starts": 1,
-        "benchApps": 3,
+        "benchApps": 2,
         "weekHigh": 9.82,
         "weekHighInfo": {
           "year": 2026,
@@ -63447,7 +63349,7 @@
         "pos": "RB",
         "team": "IND",
         "totalPoints": 63.5,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 29.2,
         "weekHighInfo": {
@@ -63459,14 +63361,14 @@
         "owners": [
           "Todd"
         ],
-        "avgPerStart": 15.88
+        "avgPerStart": 21.17
       },
       "RB|williams|K": {
         "display": "K. Williams",
         "pos": "RB",
         "team": "LAR",
         "totalPoints": 53.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 21.8,
         "weekHighInfo": {
@@ -63478,14 +63380,14 @@
         "owners": [
           "Todd"
         ],
-        "avgPerStart": 13.25
+        "avgPerStart": 17.67
       },
       "WR|rice|R": {
         "display": "R. Rice",
         "pos": "WR",
         "team": "KC",
         "totalPoints": 38.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 15.8,
         "weekHighInfo": {
@@ -63497,7 +63399,7 @@
         "owners": [
           "Todd"
         ],
-        "avgPerStart": 9.5
+        "avgPerStart": 12.67
       },
       "WR|moore|D": {
         "display": "D. Moore",
@@ -63505,7 +63407,7 @@
         "team": "BUF",
         "totalPoints": 20.9,
         "starts": 2,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 21.0,
         "weekHighInfo": {
           "year": 2026,
@@ -63523,7 +63425,7 @@
         "pos": "TE",
         "team": "ARI",
         "totalPoints": 59.1,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 24.5,
         "weekHighInfo": {
@@ -63535,14 +63437,14 @@
         "owners": [
           "Todd"
         ],
-        "avgPerStart": 14.78
+        "avgPerStart": 19.7
       },
       "WR|higgins|T": {
         "display": "T. Higgins",
         "pos": "WR",
         "team": "CIN",
         "totalPoints": 29.9,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 21.0,
         "weekHighInfo": {
@@ -63554,14 +63456,14 @@
         "owners": [
           "Todd"
         ],
-        "avgPerStart": 9.97
+        "avgPerStart": 14.95
       },
       "K|aubrey|B": {
         "display": "B. Aubrey",
         "pos": "K",
         "team": "DAL",
         "totalPoints": 29.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 16.0,
         "weekHighInfo": {
@@ -63573,14 +63475,14 @@
         "owners": [
           "Todd"
         ],
-        "avgPerStart": 7.25
+        "avgPerStart": 9.67
       },
       "DEF||seahawks": {
         "display": "Seahawks DEF",
         "pos": "DEF",
         "team": "",
         "totalPoints": 21.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 12.0,
         "weekHighInfo": {
@@ -63592,7 +63494,7 @@
         "owners": [
           "Todd"
         ],
-        "avgPerStart": 5.25
+        "avgPerStart": 7.0
       },
       "WR|evans|M": {
         "display": "M. Evans",
@@ -63600,7 +63502,7 @@
         "team": "SF",
         "totalPoints": 8.4,
         "starts": 1,
-        "benchApps": 3,
+        "benchApps": 2,
         "weekHigh": 8.4,
         "weekHighInfo": {
           "year": 2026,
@@ -63619,7 +63521,7 @@
         "team": "CLE",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -63631,7 +63533,7 @@
         "team": "DEN",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -63655,7 +63557,7 @@
         "team": "WSH",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -63678,7 +63580,7 @@
         "pos": "QB",
         "team": "PHI",
         "totalPoints": 53.5,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 24.72,
         "weekHighInfo": {
@@ -63690,14 +63592,14 @@
         "owners": [
           "Justin"
         ],
-        "avgPerStart": 13.38
+        "avgPerStart": 17.83
       },
       "RB|robinson|B": {
         "display": "B. Robinson",
         "pos": "RB",
         "team": "ATL",
         "totalPoints": 77.7,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 35.3,
         "weekHighInfo": {
@@ -63709,7 +63611,7 @@
         "owners": [
           "Justin"
         ],
-        "avgPerStart": 19.43
+        "avgPerStart": 25.9
       },
       "RB|etienne|T": {
         "display": "T. Etienne Jr.",
@@ -63717,7 +63619,7 @@
         "team": "NO",
         "totalPoints": 14.8,
         "starts": 1,
-        "benchApps": 3,
+        "benchApps": 2,
         "weekHigh": 14.8,
         "weekHighInfo": {
           "year": 2026,
@@ -63735,7 +63637,7 @@
         "pos": "WR",
         "team": "NO",
         "totalPoints": 70.5,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 28.2,
         "weekHighInfo": {
@@ -63747,26 +63649,26 @@
         "owners": [
           "Justin"
         ],
-        "avgPerStart": 17.62
+        "avgPerStart": 23.5
       },
       "WR|metcalf|D": {
         "display": "D. Metcalf",
         "pos": "WR",
         "team": "PIT",
-        "totalPoints": 43.3,
-        "starts": 4,
+        "totalPoints": 26.8,
+        "starts": 3,
         "benchApps": 0,
-        "weekHigh": 16.5,
+        "weekHigh": 12.1,
         "weekHighInfo": {
           "year": 2026,
-          "week": 4,
+          "week": 3,
           "owner": "Justin",
-          "points": 16.5
+          "points": 12.1
         },
         "owners": [
           "Justin"
         ],
-        "avgPerStart": 10.82
+        "avgPerStart": 8.93
       },
       "TE|goedert|D": {
         "display": "D. Goedert",
@@ -63774,7 +63676,7 @@
         "team": "PHI",
         "totalPoints": 25.1,
         "starts": 2,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 23.7,
         "weekHighInfo": {
           "year": 2026,
@@ -63793,7 +63695,7 @@
         "team": "NYJ",
         "totalPoints": 42.5,
         "starts": 3,
-        "benchApps": 1,
+        "benchApps": 0,
         "weekHigh": 19.8,
         "weekHighInfo": {
           "year": 2026,
@@ -63829,8 +63731,8 @@
         "display": "Steelers DEF",
         "pos": "DEF",
         "team": "",
-        "totalPoints": 36.0,
-        "starts": 4,
+        "totalPoints": 30.0,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 17.0,
         "weekHighInfo": {
@@ -63842,14 +63744,14 @@
         "owners": [
           "Justin"
         ],
-        "avgPerStart": 9.0
+        "avgPerStart": 10.0
       },
       "WR|london|D": {
         "display": "D. London",
         "pos": "WR",
         "team": "ATL",
         "totalPoints": 37.3,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 28.4,
         "weekHighInfo": {
@@ -63861,7 +63763,7 @@
         "owners": [
           "Justin"
         ],
-        "avgPerStart": 12.43
+        "avgPerStart": 18.65
       },
       "WR|tate|C": {
         "display": "C. Tate",
@@ -63869,7 +63771,7 @@
         "team": "TEN",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -63880,13 +63782,11 @@
         "pos": "TE",
         "team": "SF",
         "totalPoints": 0.0,
-        "starts": 1,
+        "starts": 0,
         "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
-        "owners": [
-          "Justin"
-        ],
+        "owners": [],
         "avgPerStart": 0.0
       },
       "RB|dowdle|R": {
@@ -63907,7 +63807,7 @@
         "team": "MIN",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -63919,7 +63819,7 @@
         "team": "LAC",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -63930,7 +63830,7 @@
         "pos": "QB",
         "team": "LAC",
         "totalPoints": 33.88,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 13.26,
         "weekHighInfo": {
@@ -63942,14 +63842,14 @@
         "owners": [
           "Ulises"
         ],
-        "avgPerStart": 8.47
+        "avgPerStart": 11.29
       },
       "RB|mccaffrey|C": {
         "display": "C. McCaffrey",
         "pos": "RB",
         "team": "SF",
         "totalPoints": 58.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 22.6,
         "weekHighInfo": {
@@ -63961,14 +63861,14 @@
         "owners": [
           "Ulises"
         ],
-        "avgPerStart": 14.5
+        "avgPerStart": 19.33
       },
       "RB|williams|J": {
         "display": "J. Williams",
         "pos": "RB",
         "team": "DAL",
         "totalPoints": 50.5,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 24.2,
         "weekHighInfo": {
@@ -63980,14 +63880,14 @@
         "owners": [
           "Ulises"
         ],
-        "avgPerStart": 12.62
+        "avgPerStart": 16.83
       },
       "WR|mcmillan|T": {
         "display": "T. McMillan",
         "pos": "WR",
         "team": "CAR",
         "totalPoints": 29.3,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 15.1,
         "weekHighInfo": {
@@ -63999,14 +63899,14 @@
         "owners": [
           "Ulises"
         ],
-        "avgPerStart": 7.33
+        "avgPerStart": 9.77
       },
       "WR|mclaurin|T": {
         "display": "T. McLaurin",
         "pos": "WR",
         "team": "WSH",
         "totalPoints": 10.4,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 7.0,
         "weekHighInfo": {
@@ -64018,7 +63918,7 @@
         "owners": [
           "Ulises"
         ],
-        "avgPerStart": 3.47
+        "avgPerStart": 5.2
       },
       "RB|price|J": {
         "display": "J. Price",
@@ -64026,7 +63926,7 @@
         "team": "SEA",
         "totalPoints": 12.8,
         "starts": 2,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 7.8,
         "weekHighInfo": {
           "year": 2026,
@@ -64044,7 +63944,7 @@
         "pos": "K",
         "team": "CHI",
         "totalPoints": 25.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 11.0,
         "weekHighInfo": {
@@ -64056,14 +63956,14 @@
         "owners": [
           "Ulises"
         ],
-        "avgPerStart": 6.25
+        "avgPerStart": 8.33
       },
       "DEF||ravens": {
         "display": "Ravens DEF",
         "pos": "DEF",
         "team": "",
         "totalPoints": 11.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 6.0,
         "weekHighInfo": {
@@ -64075,20 +63975,18 @@
         "owners": [
           "Ulises"
         ],
-        "avgPerStart": 2.75
+        "avgPerStart": 3.67
       },
       "TE|bowers|B": {
         "display": "B. Bowers",
         "pos": "TE",
         "team": "LV",
         "totalPoints": 0.0,
-        "starts": 1,
+        "starts": 0,
         "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
-        "owners": [
-          "Ulises"
-        ],
+        "owners": [],
         "avgPerStart": 0.0
       },
       "WR|williams|J": {
@@ -64097,7 +63995,7 @@
         "team": "DET",
         "totalPoints": 8.9,
         "starts": 1,
-        "benchApps": 3,
+        "benchApps": 2,
         "weekHigh": 8.9,
         "weekHighInfo": {
           "year": 2026,
@@ -64115,7 +64013,7 @@
         "pos": "WR",
         "team": "GB",
         "totalPoints": 22.6,
-        "starts": 2,
+        "starts": 1,
         "benchApps": 2,
         "weekHigh": 22.6,
         "weekHighInfo": {
@@ -64127,7 +64025,7 @@
         "owners": [
           "Ulises"
         ],
-        "avgPerStart": 11.3
+        "avgPerStart": 22.6
       },
       "RB|brooks|J": {
         "display": "J. Brooks",
@@ -64135,7 +64033,7 @@
         "team": "CAR",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -64159,7 +64057,7 @@
         "team": "WSH",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -64170,7 +64068,7 @@
         "pos": "QB",
         "team": "DAL",
         "totalPoints": 63.1,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 29.76,
         "weekHighInfo": {
@@ -64182,7 +64080,7 @@
         "owners": [
           "Aiden"
         ],
-        "avgPerStart": 15.78
+        "avgPerStart": 21.03
       },
       "RB|achane|D": {
         "display": "D. Achane",
@@ -64190,7 +64088,7 @@
         "team": "MIA",
         "totalPoints": 24.6,
         "starts": 3,
-        "benchApps": 1,
+        "benchApps": 0,
         "weekHigh": 12.3,
         "weekHighInfo": {
           "year": 2026,
@@ -64227,7 +64125,7 @@
         "pos": "WR",
         "team": "SEA",
         "totalPoints": 104.06,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 42.5,
         "weekHighInfo": {
@@ -64239,7 +64137,7 @@
         "owners": [
           "Aiden"
         ],
-        "avgPerStart": 26.02
+        "avgPerStart": 34.69
       },
       "WR|smith|D": {
         "display": "D. Smith",
@@ -64247,7 +64145,7 @@
         "team": "PHI",
         "totalPoints": 48.5,
         "starts": 3,
-        "benchApps": 1,
+        "benchApps": 0,
         "weekHigh": 27.7,
         "weekHighInfo": {
           "year": 2026,
@@ -64265,7 +64163,7 @@
         "pos": "TE",
         "team": "DET",
         "totalPoints": 17.2,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 9.8,
         "weekHighInfo": {
@@ -64278,14 +64176,14 @@
           "Aiden",
           "Alex"
         ],
-        "avgPerStart": 5.73
+        "avgPerStart": 8.6
       },
       "WR|wilson|M": {
         "display": "M. Wilson",
         "pos": "WR",
         "team": "ARI",
         "totalPoints": 10.6,
-        "starts": 2,
+        "starts": 1,
         "benchApps": 2,
         "weekHigh": 10.6,
         "weekHighInfo": {
@@ -64297,7 +64195,7 @@
         "owners": [
           "Aiden"
         ],
-        "avgPerStart": 5.3
+        "avgPerStart": 10.6
       },
       "K|dicker|C": {
         "display": "C. Dicker",
@@ -64323,7 +64221,7 @@
         "pos": "DEF",
         "team": "",
         "totalPoints": 23.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 18.0,
         "weekHighInfo": {
@@ -64335,14 +64233,14 @@
         "owners": [
           "Aiden"
         ],
-        "avgPerStart": 5.75
+        "avgPerStart": 7.67
       },
       "RB|henderson|T": {
         "display": "T. Henderson",
         "pos": "RB",
         "team": "NE",
         "totalPoints": 17.5,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 13.6,
         "weekHighInfo": {
@@ -64354,14 +64252,14 @@
         "owners": [
           "Aiden"
         ],
-        "avgPerStart": 5.83
+        "avgPerStart": 8.75
       },
       "TE|likely|I": {
         "display": "I. Likely",
         "pos": "TE",
         "team": "NYG",
         "totalPoints": 11.6,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 8.3,
         "weekHighInfo": {
@@ -64373,7 +64271,7 @@
         "owners": [
           "Aiden"
         ],
-        "avgPerStart": 3.87
+        "avgPerStart": 5.8
       },
       "WR|worthy|X": {
         "display": "X. Worthy",
@@ -64381,7 +64279,7 @@
         "team": "KC",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -64393,7 +64291,7 @@
         "team": "DEN",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -64405,7 +64303,7 @@
         "team": "TEN",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 3,
+        "benchApps": 2,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -64416,7 +64314,7 @@
         "pos": "WR",
         "team": "WSH",
         "totalPoints": 21.7,
-        "starts": 2,
+        "starts": 1,
         "benchApps": 2,
         "weekHigh": 21.7,
         "weekHighInfo": {
@@ -64428,7 +64326,7 @@
         "owners": [
           "Aiden"
         ],
-        "avgPerStart": 10.85
+        "avgPerStart": 21.7
       },
       "RB|jacobs|J": {
         "display": "J. Jacobs",
@@ -64436,7 +64334,7 @@
         "team": "GB",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -64447,7 +64345,7 @@
         "pos": "QB",
         "team": "MIN",
         "totalPoints": 10.04,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 10.42,
         "weekHighInfo": {
@@ -64459,14 +64357,14 @@
         "owners": [
           "Howard"
         ],
-        "avgPerStart": 3.35
+        "avgPerStart": 5.02
       },
       "RB|skattebo|C": {
         "display": "C. Skattebo",
         "pos": "RB",
         "team": "NYG",
         "totalPoints": 36.6,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 14.1,
         "weekHighInfo": {
@@ -64478,7 +64376,7 @@
         "owners": [
           "Howard"
         ],
-        "avgPerStart": 9.15
+        "avgPerStart": 12.2
       },
       "RB|mason|J": {
         "display": "J. Mason",
@@ -64486,7 +64384,7 @@
         "team": "MIN",
         "totalPoints": 11.9,
         "starts": 1,
-        "benchApps": 3,
+        "benchApps": 2,
         "weekHigh": 11.9,
         "weekHighInfo": {
           "year": 2026,
@@ -64504,7 +64402,7 @@
         "pos": "WR",
         "team": "MIN",
         "totalPoints": 44.9,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 31.2,
         "weekHighInfo": {
@@ -64516,7 +64414,7 @@
         "owners": [
           "Howard"
         ],
-        "avgPerStart": 11.22
+        "avgPerStart": 14.97
       },
       "WR|brown|A": {
         "display": "A. Brown",
@@ -64524,7 +64422,7 @@
         "team": "NE",
         "totalPoints": 5.6,
         "starts": 1,
-        "benchApps": 3,
+        "benchApps": 2,
         "weekHigh": 5.6,
         "weekHighInfo": {
           "year": 2026,
@@ -64543,7 +64441,7 @@
         "team": "MIN",
         "totalPoints": 22.6,
         "starts": 3,
-        "benchApps": 1,
+        "benchApps": 0,
         "weekHigh": 13.6,
         "weekHighInfo": {
           "year": 2026,
@@ -64580,7 +64478,7 @@
         "pos": "K",
         "team": "SEA",
         "totalPoints": 23.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 9.0,
         "weekHighInfo": {
@@ -64592,14 +64490,14 @@
         "owners": [
           "Howard"
         ],
-        "avgPerStart": 5.75
+        "avgPerStart": 7.67
       },
       "DEF||chargers": {
         "display": "Chargers DEF",
         "pos": "DEF",
         "team": "",
         "totalPoints": 19.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 14.0,
         "weekHighInfo": {
@@ -64611,14 +64509,14 @@
         "owners": [
           "Howard"
         ],
-        "avgPerStart": 4.75
+        "avgPerStart": 6.33
       },
       "RB|love|J": {
         "display": "J. Love",
         "pos": "RB",
         "team": "ARI",
         "totalPoints": 29.4,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 21.9,
         "weekHighInfo": {
@@ -64630,14 +64528,14 @@
         "owners": [
           "Howard"
         ],
-        "avgPerStart": 9.8
+        "avgPerStart": 14.7
       },
       "WR|egbuka|E": {
         "display": "E. Egbuka",
         "pos": "WR",
         "team": "TB",
         "totalPoints": 21.5,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 11.2,
         "weekHighInfo": {
@@ -64649,20 +64547,18 @@
         "owners": [
           "Howard"
         ],
-        "avgPerStart": 7.17
+        "avgPerStart": 10.75
       },
       "TE|kelce|T": {
         "display": "T. Kelce",
         "pos": "TE",
         "team": "KC",
         "totalPoints": 0.0,
-        "starts": 1,
+        "starts": 0,
         "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
-        "owners": [
-          "Howard"
-        ],
+        "owners": [],
         "avgPerStart": 0.0
       },
       "QB|dart|J": {
@@ -64701,7 +64597,7 @@
         "pos": "WR",
         "team": "SF",
         "totalPoints": 21.9,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 15.4,
         "weekHighInfo": {
@@ -64713,14 +64609,14 @@
         "owners": [
           "Howard"
         ],
-        "avgPerStart": 7.3
+        "avgPerStart": 10.95
       },
       "QB|mahomes|P": {
         "display": "P. Mahomes",
         "pos": "QB",
         "team": "KC",
         "totalPoints": 66.58,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 28.98,
         "weekHighInfo": {
@@ -64732,14 +64628,14 @@
         "owners": [
           "Alex"
         ],
-        "avgPerStart": 16.64
+        "avgPerStart": 22.19
       },
       "RB|barkley|S": {
         "display": "S. Barkley",
         "pos": "RB",
         "team": "PHI",
         "totalPoints": 21.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 9.0,
         "weekHighInfo": {
@@ -64751,14 +64647,14 @@
         "owners": [
           "Alex"
         ],
-        "avgPerStart": 5.25
+        "avgPerStart": 7.0
       },
       "RB|henry|D": {
         "display": "D. Henry",
         "pos": "RB",
         "team": "BAL",
         "totalPoints": 74.9,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 35.3,
         "weekHighInfo": {
@@ -64770,14 +64666,14 @@
         "owners": [
           "Alex"
         ],
-        "avgPerStart": 18.73
+        "avgPerStart": 24.97
       },
       "WR|chase|J": {
         "display": "J. Chase",
         "pos": "WR",
         "team": "CIN",
         "totalPoints": 54.5,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 26.5,
         "weekHighInfo": {
@@ -64789,14 +64685,14 @@
         "owners": [
           "Alex"
         ],
-        "avgPerStart": 13.62
+        "avgPerStart": 18.17
       },
       "WR|adams|D": {
         "display": "D. Adams",
         "pos": "WR",
         "team": "LAR",
         "totalPoints": 65.8,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 39.5,
         "weekHighInfo": {
@@ -64808,7 +64704,7 @@
         "owners": [
           "Alex"
         ],
-        "avgPerStart": 16.45
+        "avgPerStart": 21.93
       },
       "TE|ferguson|J": {
         "display": "J. Ferguson",
@@ -64816,7 +64712,7 @@
         "team": "DAL",
         "totalPoints": 32.2,
         "starts": 3,
-        "benchApps": 1,
+        "benchApps": 0,
         "weekHigh": 20.3,
         "weekHighInfo": {
           "year": 2026,
@@ -64836,7 +64732,7 @@
         "team": "DEN",
         "totalPoints": 7.6,
         "starts": 2,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 6.4,
         "weekHighInfo": {
           "year": 2026,
@@ -64854,7 +64750,7 @@
         "pos": "K",
         "team": "SF",
         "totalPoints": 24.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 11.0,
         "weekHighInfo": {
@@ -64866,7 +64762,7 @@
         "owners": [
           "Alex"
         ],
-        "avgPerStart": 6.0
+        "avgPerStart": 8.0
       },
       "DEF||jaguars": {
         "display": "Jaguars DEF",
@@ -64893,7 +64789,7 @@
         "team": "CHI",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -64904,7 +64800,7 @@
         "pos": "RB",
         "team": "HOU",
         "totalPoints": 11.2,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 6.8,
         "weekHighInfo": {
@@ -64917,7 +64813,7 @@
           "Aiden",
           "Alex"
         ],
-        "avgPerStart": 3.73
+        "avgPerStart": 5.6
       },
       "WR|thomas|B": {
         "display": "B. Thomas Jr.",
@@ -64949,7 +64845,7 @@
         "team": "DEN",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -64973,7 +64869,7 @@
         "team": "CIN",
         "totalPoints": 14.16,
         "starts": 1,
-        "benchApps": 3,
+        "benchApps": 2,
         "weekHigh": 14.16,
         "weekHighInfo": {
           "year": 2026,
@@ -64992,7 +64888,7 @@
         "team": "LAC",
         "totalPoints": 13.9,
         "starts": 2,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 8.3,
         "weekHighInfo": {
           "year": 2026,
@@ -65010,7 +64906,7 @@
         "pos": "RB",
         "team": "KC",
         "totalPoints": 79.2,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 34.1,
         "weekHighInfo": {
@@ -65022,7 +64918,7 @@
         "owners": [
           "Sean"
         ],
-        "avgPerStart": 19.8
+        "avgPerStart": 26.4
       },
       "WR|mcconkey|L": {
         "display": "L. McConkey",
@@ -65030,7 +64926,7 @@
         "team": "LAC",
         "totalPoints": 29.8,
         "starts": 2,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 19.2,
         "weekHighInfo": {
           "year": 2026,
@@ -65048,7 +64944,7 @@
         "pos": "WR",
         "team": "JAX",
         "totalPoints": 49.1,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 19.3,
         "weekHighInfo": {
@@ -65060,14 +64956,14 @@
         "owners": [
           "Sean"
         ],
-        "avgPerStart": 12.28
+        "avgPerStart": 16.37
       },
       "TE|loveland|C": {
         "display": "C. Loveland",
         "pos": "TE",
         "team": "CHI",
         "totalPoints": 1.3,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 1.3,
         "weekHighInfo": {
@@ -65079,14 +64975,14 @@
         "owners": [
           "Sean"
         ],
-        "avgPerStart": 0.43
+        "avgPerStart": 0.65
       },
       "RB|swift|D": {
         "display": "D. Swift",
         "pos": "RB",
         "team": "CHI",
         "totalPoints": 45.3,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 32.4,
         "weekHighInfo": {
@@ -65098,7 +64994,7 @@
         "owners": [
           "Sean"
         ],
-        "avgPerStart": 15.1
+        "avgPerStart": 22.65
       },
       "K|fairbairn|K": {
         "display": "K. Fairbairn",
@@ -65139,7 +65035,7 @@
         "team": "SF",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -65161,20 +65057,13 @@
         "display": "J. Warren",
         "pos": "RB",
         "team": "PIT",
-        "totalPoints": 15.6,
-        "starts": 1,
+        "totalPoints": 0.0,
+        "starts": 0,
         "benchApps": 3,
-        "weekHigh": 15.6,
-        "weekHighInfo": {
-          "year": 2026,
-          "week": 4,
-          "owner": "Sean",
-          "points": 15.6
-        },
-        "owners": [
-          "Sean"
-        ],
-        "avgPerStart": 15.6
+        "weekHigh": 0.0,
+        "weekHighInfo": null,
+        "owners": [],
+        "avgPerStart": 0.0
       },
       "DEF||rams": {
         "display": "Rams DEF",
@@ -65217,7 +65106,7 @@
         "pos": "QB",
         "team": "BUF",
         "totalPoints": 93.94,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 40.82,
         "weekHighInfo": {
@@ -65229,7 +65118,7 @@
         "owners": [
           "Joshua"
         ],
-        "avgPerStart": 23.48
+        "avgPerStart": 31.31
       },
       "RB|judkins|Q": {
         "display": "Q. Judkins",
@@ -65237,7 +65126,7 @@
         "team": "CLE",
         "totalPoints": 26.7,
         "starts": 3,
-        "benchApps": 1,
+        "benchApps": 0,
         "weekHigh": 9.9,
         "weekHighInfo": {
           "year": 2026,
@@ -65255,7 +65144,7 @@
         "pos": "RB",
         "team": "JAX",
         "totalPoints": 26.8,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 1,
         "weekHigh": 17.0,
         "weekHighInfo": {
@@ -65267,14 +65156,14 @@
         "owners": [
           "Joshua"
         ],
-        "avgPerStart": 8.93
+        "avgPerStart": 13.4
       },
       "WR|nacua|P": {
         "display": "P. Nacua",
         "pos": "WR",
         "team": "LAR",
         "totalPoints": 12.4,
-        "starts": 2,
+        "starts": 1,
         "benchApps": 2,
         "weekHigh": 12.4,
         "weekHighInfo": {
@@ -65286,14 +65175,14 @@
         "owners": [
           "Joshua"
         ],
-        "avgPerStart": 6.2
+        "avgPerStart": 12.4
       },
       "WR|lamb|C": {
         "display": "C. Lamb",
         "pos": "WR",
         "team": "DAL",
         "totalPoints": 70.9,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 35.3,
         "weekHighInfo": {
@@ -65306,7 +65195,7 @@
           "Joshua",
           "Matthew"
         ],
-        "avgPerStart": 17.73
+        "avgPerStart": 23.63
       },
       "TE|pitts|K": {
         "display": "K. Pitts Sr.",
@@ -65314,7 +65203,7 @@
         "team": "ATL",
         "totalPoints": 4.0,
         "starts": 3,
-        "benchApps": 1,
+        "benchApps": 0,
         "weekHigh": 2.5,
         "weekHighInfo": {
           "year": 2026,
@@ -65332,7 +65221,7 @@
         "pos": "WR",
         "team": "HOU",
         "totalPoints": 21.2,
-        "starts": 2,
+        "starts": 1,
         "benchApps": 2,
         "weekHigh": 21.2,
         "weekHighInfo": {
@@ -65344,14 +65233,14 @@
         "owners": [
           "Joshua"
         ],
-        "avgPerStart": 10.6
+        "avgPerStart": 21.2
       },
       "K|bates|J": {
         "display": "J. Bates",
         "pos": "K",
         "team": "DET",
         "totalPoints": 21.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 7.0,
         "weekHighInfo": {
@@ -65363,14 +65252,14 @@
         "owners": [
           "Joshua"
         ],
-        "avgPerStart": 5.25
+        "avgPerStart": 7.0
       },
       "DEF||broncos": {
         "display": "Broncos DEF",
         "pos": "DEF",
         "team": "",
         "totalPoints": 24.0,
-        "starts": 4,
+        "starts": 3,
         "benchApps": 0,
         "weekHigh": 14.0,
         "weekHighInfo": {
@@ -65382,7 +65271,7 @@
         "owners": [
           "Joshua"
         ],
-        "avgPerStart": 6.0
+        "avgPerStart": 8.0
       },
       "QB|daniels|J": {
         "display": "J. Daniels",
@@ -65390,7 +65279,7 @@
         "team": "WSH",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -65402,7 +65291,7 @@
         "team": "IND",
         "totalPoints": 2.1,
         "starts": 1,
-        "benchApps": 3,
+        "benchApps": 2,
         "weekHigh": 2.1,
         "weekHighInfo": {
           "year": 2026,
@@ -65421,7 +65310,7 @@
         "team": "JAX",
         "totalPoints": 6.16,
         "starts": 1,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 6.16,
         "weekHighInfo": {
           "year": 2026,
@@ -65440,7 +65329,7 @@
         "team": "JAX",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -65452,7 +65341,7 @@
         "team": "TB",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 4,
+        "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -65463,13 +65352,11 @@
         "pos": "RB",
         "team": "MIN",
         "totalPoints": 0.0,
-        "starts": 1,
+        "starts": 0,
         "benchApps": 3,
         "weekHigh": 0.0,
         "weekHighInfo": null,
-        "owners": [
-          "Alex"
-        ],
+        "owners": [],
         "avgPerStart": 0.0
       },
       "K|little|C": {
@@ -65477,7 +65364,7 @@
         "pos": "K",
         "team": "JAX",
         "totalPoints": 12.0,
-        "starts": 3,
+        "starts": 2,
         "benchApps": 0,
         "weekHigh": 7.0,
         "weekHighInfo": {
@@ -65489,7 +65376,7 @@
         "owners": [
           "Justin"
         ],
-        "avgPerStart": 4.0
+        "avgPerStart": 6.0
       },
       "TE|sadiq|K": {
         "display": "K. Sadiq",
@@ -65497,7 +65384,7 @@
         "team": "NYJ",
         "totalPoints": 3.7,
         "starts": 1,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 3.7,
         "weekHighInfo": {
           "year": 2026,
@@ -65515,13 +65402,11 @@
         "pos": "TE",
         "team": "NO",
         "totalPoints": 0.0,
-        "starts": 1,
+        "starts": 0,
         "benchApps": 2,
         "weekHigh": 0.0,
         "weekHighInfo": null,
-        "owners": [
-          "Joshua"
-        ],
+        "owners": [],
         "avgPerStart": 0.0
       },
       "QB|purdy|B": {
@@ -65530,7 +65415,7 @@
         "team": "SF",
         "totalPoints": 59.76,
         "starts": 2,
-        "benchApps": 1,
+        "benchApps": 0,
         "weekHigh": 31.28,
         "weekHighInfo": {
           "year": 2026,
@@ -65548,7 +65433,7 @@
         "pos": "WR",
         "team": "NO",
         "totalPoints": 11.4,
-        "starts": 2,
+        "starts": 1,
         "benchApps": 1,
         "weekHigh": 11.4,
         "weekHighInfo": {
@@ -65560,7 +65445,7 @@
         "owners": [
           "Sean"
         ],
-        "avgPerStart": 5.7
+        "avgPerStart": 11.4
       },
       "WR|williams|A": {
         "display": "A. Williams",
@@ -65625,7 +65510,7 @@
         "team": "BUF",
         "totalPoints": 3.8,
         "starts": 1,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 3.8,
         "weekHighInfo": {
           "year": 2026,
@@ -65644,7 +65529,7 @@
         "team": "TB",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 3,
+        "benchApps": 2,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -65675,7 +65560,7 @@
         "team": "NO",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -65687,7 +65572,7 @@
         "team": "IND",
         "totalPoints": 12.7,
         "starts": 1,
-        "benchApps": 1,
+        "benchApps": 0,
         "weekHigh": 12.7,
         "weekHighInfo": {
           "year": 2026,
@@ -65725,7 +65610,7 @@
         "team": "LV",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -65737,7 +65622,7 @@
         "team": "NYJ",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -65748,7 +65633,7 @@
         "pos": "K",
         "team": "BUF",
         "totalPoints": 6.0,
-        "starts": 2,
+        "starts": 1,
         "benchApps": 0,
         "weekHigh": 6.0,
         "weekHighInfo": {
@@ -65760,7 +65645,7 @@
         "owners": [
           "Aiden"
         ],
-        "avgPerStart": 3.0
+        "avgPerStart": 6.0
       },
       "WR|bateman|R": {
         "display": "R. Bateman",
@@ -65768,7 +65653,7 @@
         "team": "BAL",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -65780,7 +65665,7 @@
         "team": "NE",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -65791,7 +65676,7 @@
         "pos": "QB",
         "team": "NO",
         "totalPoints": 23.8,
-        "starts": 2,
+        "starts": 1,
         "benchApps": 0,
         "weekHigh": 23.8,
         "weekHighInfo": {
@@ -65803,14 +65688,14 @@
         "owners": [
           "Sean"
         ],
-        "avgPerStart": 11.9
+        "avgPerStart": 23.8
       },
       "K|mcpherson|E": {
         "display": "E. McPherson",
         "pos": "K",
         "team": "CIN",
         "totalPoints": 11.0,
-        "starts": 2,
+        "starts": 1,
         "benchApps": 0,
         "weekHigh": 11.0,
         "weekHighInfo": {
@@ -65822,7 +65707,7 @@
         "owners": [
           "Sean"
         ],
-        "avgPerStart": 5.5
+        "avgPerStart": 11.0
       },
       "DEF||bengals": {
         "display": "Bengals DEF",
@@ -65848,13 +65733,11 @@
         "pos": "DEF",
         "team": "",
         "totalPoints": 0.0,
-        "starts": 1,
+        "starts": 0,
         "benchApps": 1,
         "weekHigh": 0.0,
         "weekHighInfo": null,
-        "owners": [
-          "Sean"
-        ],
+        "owners": [],
         "avgPerStart": 0.0
       },
       "RB|coleman|J": {
@@ -65863,7 +65746,7 @@
         "team": "DEN",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -65873,141 +65756,37 @@
         "display": "D. Boston",
         "pos": "WR",
         "team": "CLE",
-        "totalPoints": 21.0,
-        "starts": 2,
+        "totalPoints": 8.1,
+        "starts": 1,
         "benchApps": 0,
-        "weekHigh": 12.9,
+        "weekHigh": 8.1,
         "weekHighInfo": {
           "year": 2026,
-          "week": 4,
+          "week": 3,
           "owner": "Todd",
-          "points": 12.9
+          "points": 8.1
         },
         "owners": [
           "Todd"
         ],
-        "avgPerStart": 10.5
+        "avgPerStart": 8.1
       },
       "QB|young|B": {
         "display": "B. Young",
         "pos": "QB",
         "team": "CAR",
         "totalPoints": 0.0,
-        "starts": 1,
+        "starts": 0,
         "benchApps": 1,
         "weekHigh": 0.0,
         "weekHighInfo": null,
-        "owners": [
-          "Todd"
-        ],
+        "owners": [],
         "avgPerStart": 0.0
       },
       "WR|wicks|D": {
         "display": "D. Wicks",
         "pos": "WR",
         "team": "PHI",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 2,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
-      "RB|washington|M": {
-        "display": "M. Washington Jr.",
-        "pos": "RB",
-        "team": "LV",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
-      "TE|waller|D": {
-        "display": "D. Waller",
-        "pos": "TE",
-        "team": "CAR",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
-      "DEF||bears": {
-        "display": "Bears DEF",
-        "pos": "DEF",
-        "team": "",
-        "totalPoints": 0.0,
-        "starts": 1,
-        "benchApps": 0,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [
-          "Alex"
-        ],
-        "avgPerStart": 0.0
-      },
-      "WR|allen|K": {
-        "display": "K. Allen",
-        "pos": "WR",
-        "team": "IND",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
-      "TE|barner|A": {
-        "display": "A. Barner",
-        "pos": "TE",
-        "team": "SEA",
-        "totalPoints": 0.0,
-        "starts": 1,
-        "benchApps": 0,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [
-          "Matthew"
-        ],
-        "avgPerStart": 0.0
-      },
-      "RB|allen|B": {
-        "display": "B. Allen",
-        "pos": "RB",
-        "team": "NYJ",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
-      "RB|gordon|O": {
-        "display": "O. Gordon II",
-        "pos": "RB",
-        "team": "MIA",
-        "totalPoints": 0.0,
-        "starts": 1,
-        "benchApps": 0,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [
-          "Justin"
-        ],
-        "avgPerStart": 0.0
-      },
-      "WR|raymond|K": {
-        "display": "K. Raymond",
-        "pos": "WR",
-        "team": "CHI",
         "totalPoints": 0.0,
         "starts": 0,
         "benchApps": 1,
@@ -68032,7 +67811,7 @@
           "nflTeam": "DET",
           "manager": "Matthew",
           "actualPoints": 98.3,
-          "starts": 4,
+          "starts": 3,
           "matched": true,
           "actualRank": 148,
           "delta": -147
@@ -68046,7 +67825,7 @@
           "nflTeam": "BUF",
           "manager": "Luke",
           "actualPoints": 50.2,
-          "starts": 4,
+          "starts": 3,
           "matched": true,
           "actualRank": 148,
           "delta": -147
@@ -68060,7 +67839,7 @@
           "nflTeam": "LV",
           "manager": "Matthew",
           "actualPoints": 55.3,
-          "starts": 4,
+          "starts": 3,
           "matched": true,
           "actualRank": 148,
           "delta": -147
@@ -68074,7 +67853,7 @@
           "nflTeam": "NYG",
           "manager": "Luke",
           "actualPoints": 21.6,
-          "starts": 4,
+          "starts": 3,
           "matched": true,
           "actualRank": 148,
           "delta": -147
@@ -68088,7 +67867,7 @@
           "nflTeam": "BAL",
           "manager": "Matthew",
           "actualPoints": 41.4,
-          "starts": 3,
+          "starts": 2,
           "matched": true,
           "actualRank": 148,
           "delta": -147
@@ -68102,7 +67881,7 @@
           "nflTeam": "IND",
           "manager": "Luke",
           "actualPoints": 39.4,
-          "starts": 4,
+          "starts": 3,
           "matched": true,
           "actualRank": 148,
           "delta": -147
