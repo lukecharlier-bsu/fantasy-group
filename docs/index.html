@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League History Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1791565948" />
+    <link rel="stylesheet" href="styles.css?v=1791566106" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -195,9 +195,16 @@
         <section class="panel" id="panel-frivolities">
             <div class="card">
                 <h3>Biggest Upsets</h3>
-                <p class="muted">Ranked by how heavily the loser was favored going in — composite of season-to-date PPG gap plus win-% gap (both measured BEFORE the game).</p>
+                <p class="muted">Ranked by how heavily the loser was favored going in — composite of season-to-date PPG gap plus win-% gap (both measured BEFORE the game). Week 7 onwards only.</p>
                 <div class="scroll-x">
                     <table id="upsets-table" class="data-table"></table>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Biggest Carry Jobs</h3>
+                <p class="muted">Wins where a single starter made up the largest share of their team's total points.</p>
+                <div class="scroll-x">
+                    <table id="carries-table" class="data-table"></table>
                 </div>
             </div>
         </section>
@@ -207,6 +214,6 @@
         <span id="data-stamp"></span>
     </footer>
 
-    <script src="app.js?v=1791565948"></script>
+    <script src="app.js?v=1791566106"></script>
 </body>
 </html>

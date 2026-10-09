@@ -710,6 +710,11 @@ function renderFranchise() {
 
 // ---------- Frivolities ----------
 function initFrivolitiesPanel() {
+    renderBiggestUpsets();
+    renderBiggestCarries();
+}
+
+function renderBiggestUpsets() {
     const t = document.getElementById("upsets-table");
     const upsets = STATE.data.biggestUpsets || [];
     if (!upsets.length) {
@@ -742,3 +747,36 @@ function initFrivolitiesPanel() {
     `;
 }
 
+
+function renderBiggestCarries() {
+    const t = document.getElementById("carries-table");
+    const carries = STATE.data.biggestCarries || [];
+    if (!carries.length) {
+        t.innerHTML = `<tbody><tr><td class="muted">No carry jobs yet.</td></tr></tbody>`;
+        return;
+    }
+    const rows = carries.map((c, i) => `
+        <tr>
+            <td class="right">${i + 1}</td>
+            <td>${c.year}</td>
+            <td>${c.week}</td>
+            <td><strong>${c.owner}</strong></td>
+            <td>${c.player} <span class="muted">${c.pos}</span></td>
+            <td class="right">${fmt(c.playerPts)}</td>
+            <td class="right">${fmt(c.teamPts)}</td>
+            <td class="right"><strong>${(c.pct * 100).toFixed(1)}%</strong></td>
+            <td>${c.opponent} <span class="muted">(${fmt(c.opponentPts)})</span></td>
+        </tr>`).join("");
+    t.innerHTML = `
+        <thead><tr>
+            <th class="right">#</th><th>Year</th><th>Wk</th>
+            <th>Owner</th>
+            <th>Carrier</th>
+            <th class="right">Player Pts</th>
+            <th class="right">Team Pts</th>
+            <th class="right">Share</th>
+            <th>Opponent</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+    `;
+}

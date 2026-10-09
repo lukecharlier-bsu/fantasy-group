@@ -340,6 +340,109 @@ def build_biggest_upsets(seasons, n=20):
     return out[:n]
 
 
+def build_biggest_carries(gamecenter_dirs, seasons, n=20):
+    """Wins where a single starter made up the largest share of the team's
+    total points. Only wins count — a 'carry' in a loss isn't a carry."""
+    if isinstance(gamecenter_dirs, str):
+        gamecenter_dirs = [gamecenter_dirs]
+    BENCH_SLOTS = {"BN", "RES"}
+
+    # Index results: (year, week, owner) -> {opponent, won}
+    results = {}
+    for s in seasons:
+        for wk in s["weeks"]:
+            for m in wk["matchups"]:
+                h, hp, a, ap = m["home"], m["homePts"], m["away"], m["awayPts"]
+                if hp == ap:
+                    continue
+                h_won = hp > ap
+                results[(s["year"], wk["week"], h)] = {"opp": a, "won": h_won,
+                                                      "ownPts": hp, "oppPts": ap}
+                results[(s["year"], wk["week"], a)] = {"opp": h, "won": not h_won,
+                                                      "ownPts": ap, "oppPts": hp}
+
+    year_paths = {}
+    for d in gamecenter_dirs:
+        if not os.path.isdir(d):
+            continue
+        for year_name in sorted(os.listdir(d)):
+            yp = os.path.join(d, year_name)
+            if os.path.isdir(yp):
+                year_paths[year_name] = yp
+
+    out = []
+    for year_name in sorted(year_paths):
+        year_path = year_paths[year_name]
+        year = int(year_name)
+        for filename in sorted(os.listdir(year_path),
+                               key=lambda n: int(n[:-4]) if n.endswith(".csv") else 999):
+            if not filename.endswith(".csv"):
+                continue
+            week = int(filename[:-4])
+            with open(os.path.join(year_path, filename), newline="") as f:
+                reader = csv.reader(f)
+                header = next(reader, None)
+                if not header:
+                    continue
+                slot_indexes = []
+                i = 0
+                while i < len(header):
+                    h = header[i]
+                    if h in {"Owner", "Rank", "Total", "Opponent", "Opponent Total"}:
+                        i += 1
+                        continue
+                    if h == "Points":
+                        i += 1
+                        continue
+                    if i + 1 < len(header) and header[i + 1] == "Points":
+                        slot_indexes.append((h, i, i + 1))
+                        i += 2
+                    else:
+                        i += 1
+                for row in reader:
+                    if not row or len(row) < 2:
+                        continue
+                    owner = (row[0] or "").strip()
+                    res = results.get((year, week, owner))
+                    if not res or not res["won"]:
+                        continue  # losses don't count; also skip teams we can't match
+                    starter_total = 0.0
+                    best_pts = -1.0
+                    best_name = ""
+                    best_pos = ""
+                    for slot, ni, pi in slot_indexes:
+                        if ni >= len(row) or pi >= len(row):
+                            continue
+                        info = parse_gc_player(row[ni])
+                        try:
+                            pts = float((row[pi] or "0").replace(",", ""))
+                        except ValueError:
+                            pts = 0.0
+                        if slot in BENCH_SLOTS:
+                            continue
+                        starter_total += pts
+                        if pts > best_pts and info:
+                            best_pts = pts
+                            best_name = info["display"]
+                            best_pos = info["pos"]
+                    if starter_total <= 0 or best_pts < 0:
+                        continue
+                    pct = best_pts / starter_total
+                    out.append({
+                        "year": year, "week": week,
+                        "owner": owner,
+                        "teamPts": round(starter_total, 2),
+                        "player": best_name,
+                        "pos": best_pos,
+                        "playerPts": round(best_pts, 2),
+                        "pct": round(pct, 4),
+                        "opponent": res["opp"],
+                        "opponentPts": round(res["oppPts"], 2),
+                    })
+    out.sort(key=lambda r: -r["pct"])
+    return out[:n]
+
+
 def build_weekly_extremes(seasons, n=10):
     """Top N highest and lowest scoring weeks."""
     all_scores = []
@@ -869,6 +972,7 @@ def main():
     h2h = build_head_to_head(seasons)
     highs, lows, blowouts, nail_biters = build_weekly_extremes(seasons)
     biggest_upsets = build_biggest_upsets(seasons)
+    biggest_carries = build_biggest_carries(gamecenter_dirs, seasons)
     drafts = {}
     for d in draft_dirs:
         if os.path.isdir(d):
@@ -891,6 +995,7 @@ def main():
         "blowouts": blowouts,
         "nailBiters": nail_biters,
         "biggestUpsets": biggest_upsets,
+        "biggestCarries": biggest_carries,
         "drafts": drafts,
         "draftOwnerStats": draft_owner_stats,
         "playersCareer": players_career,
