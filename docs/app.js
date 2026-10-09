@@ -822,6 +822,10 @@ function renderTrades() {
         const winner = d > 0 ? r.teamA : r.teamB;
         return `<strong>${winner}</strong> <span class="muted">+${fmt(Math.abs(d))}</span>`;
     };
+    const scoreTitle = (side) =>
+        `Concentration-weighted score: top player 100%, next 50%, next 25%, …\n` +
+        `Raw starter pts received: ${fmt(side.total)} across ${side.count} player${side.count === 1 ? "" : "s"} ` +
+        `(avg ${fmt(side.per)}/player)`;
     t.innerHTML = `
         <thead><tr>
             <th>Year</th><th>Wk</th>
@@ -831,20 +835,23 @@ function renderTrades() {
             <th>Conf</th>
         </tr></thead>
         <tbody>
-            ${rows.map(r => `
+            ${rows.map(r => {
+                const aSide = { total: r.aTotal, per: r.aPerPlayer, count: r.bGave.length };
+                const bSide = { total: r.bTotal, per: r.bPerPlayer, count: r.aGave.length };
+                return `
                 <tr>
                     <td>${r.year}</td>
                     <td>${r.week}</td>
                     <td><strong>${r.teamA}</strong></td>
                     <td>${playersCell(r.aGave)}</td>
-                    <td class="right" title="Post-trade starter pts A got from B's players (avg ${fmt(r.aPerPlayer)}/player)">${fmt(r.aScore)}</td>
+                    <td class="right" title="${scoreTitle(aSide)}">${fmt(r.aScore)} <span class="muted">(${fmt(r.aTotal)})</span></td>
                     <td><strong>${r.teamB}</strong></td>
                     <td>${playersCell(r.bGave)}</td>
-                    <td class="right" title="Post-trade starter pts B got from A's players (avg ${fmt(r.bPerPlayer)}/player)">${fmt(r.bScore)}</td>
+                    <td class="right" title="${scoreTitle(bSide)}">${fmt(r.bScore)} <span class="muted">(${fmt(r.bTotal)})</span></td>
                     <td>${verdict(r)}</td>
                     <td><span class="conf-badge conf-${r.confidence}">${r.confidence}</span></td>
                 </tr>
-            `).join("")}
+            `;}).join("")}
         </tbody>
     `;
 }

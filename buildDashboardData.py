@@ -429,18 +429,26 @@ def detect_trades(gamecenter_dirs, standings):
             display[(year, k)] = {"display": v["display"], "pos": v["pos"]}
             starter_pts[(year, week, owner, k)] = v["starterPts"]
 
-    def post_trade_score(year, from_week, owner, keys):
-        """Starter pts the acquiring owner got from these players from the
-        trade week onward through the end of the season (and playoffs)."""
-        if not keys:
-            return 0.0
+    def post_trade_player_pts(year, from_week, owner, keys):
+        """Dict of {player_key: starter_pts_after_trade} for the acquiring owner."""
         season_weeks = sorted(by_year.get(year, {}).keys())
-        total = 0.0
+        out = {k: 0.0 for k in keys}
         for w in season_weeks:
             if w < from_week:
                 continue
             for k in keys:
-                total += starter_pts.get((year, w, owner, k), 0.0)
+                out[k] += starter_pts.get((year, w, owner, k), 0.0)
+        return out
+
+    def concentration_score(player_pts_dict):
+        """Diminishing-returns composite: rewards concentration, since fantasy
+        rosters only start a few guys per week. Sort players best-to-worst,
+        weight them 1, 1/2, 1/4, 1/8, ... — a lone 150-pt superstar outranks
+        three 50-pt role players."""
+        vals = sorted(player_pts_dict.values(), reverse=True)
+        total = 0.0
+        for i, v in enumerate(vals):
+            total += v * (0.5 ** i)
         return round(total, 2)
 
     trades = []
@@ -466,9 +474,16 @@ def detect_trades(gamecenter_dirs, standings):
                     a_to_b = lost[a] & gained[b]
                     b_to_a = lost[b] & gained[a]
                     if a_to_b and b_to_a:
-                        # Post-trade starter pts earned by what each side received
-                        a_score = post_trade_score(year, w_to, a, b_to_a)
-                        b_score = post_trade_score(year, w_to, b, a_to_b)
+                        # Per-player post-trade starter pts for both sides
+                        a_player_pts = post_trade_player_pts(year, w_to, a, b_to_a)
+                        b_player_pts = post_trade_player_pts(year, w_to, b, a_to_b)
+                        a_total = round(sum(a_player_pts.values()), 2)
+                        b_total = round(sum(b_player_pts.values()), 2)
+                        # Concentration-weighted score — the metric that drives
+                        # the Winner verdict. Rewards getting one great player
+                        # over several role players.
+                        a_score = concentration_score(a_player_pts)
+                        b_score = concentration_score(b_player_pts)
                         trades.append({
                             "year": year,
                             "week": w_to,  # trade first visible this week
@@ -477,10 +492,12 @@ def detect_trades(gamecenter_dirs, standings):
                                              for k in a_to_b], key=lambda d: d["display"]),
                             "bGave": sorted([display.get((year, k), {"display": k, "pos": "?"})
                                              for k in b_to_a], key=lambda d: d["display"]),
-                            "aScore": a_score,  # points A got from what B gave
-                            "bScore": b_score,  # points B got from what A gave
-                            "aPerPlayer": round(a_score / len(b_to_a), 2),
-                            "bPerPlayer": round(b_score / len(a_to_b), 2),
+                            "aScore": a_score,  # concentration-weighted (A's haul)
+                            "bScore": b_score,  # concentration-weighted (B's haul)
+                            "aTotal": a_total,  # raw sum of starter pts received
+                            "bTotal": b_total,
+                            "aPerPlayer": round(a_total / len(b_to_a), 2),
+                            "bPerPlayer": round(b_total / len(a_to_b), 2),
                             "scoreDelta": round(a_score - b_score, 2),
                         })
 

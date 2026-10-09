@@ -44265,10 +44265,12 @@
         }
       ],
       "aScore": 248.54,
-      "bScore": 127.0,
+      "bScore": 97.35,
+      "aTotal": 248.54,
+      "bTotal": 127.0,
       "aPerPlayer": 248.54,
       "bPerPlayer": 63.5,
-      "scoreDelta": 121.54,
+      "scoreDelta": 151.19,
       "confidence": "high"
     },
     {
@@ -44297,10 +44299,12 @@
         }
       ],
       "aScore": 125.6,
-      "bScore": 94.96,
+      "bScore": 92.71,
+      "aTotal": 125.6,
+      "bTotal": 94.96,
       "aPerPlayer": 62.8,
       "bPerPlayer": 47.48,
-      "scoreDelta": 30.64,
+      "scoreDelta": 32.89,
       "confidence": "high"
     },
     {
@@ -44332,11 +44336,13 @@
           "pos": "WR"
         }
       ],
-      "aScore": 303.38,
+      "aScore": 174.47,
       "bScore": 103.5,
+      "aTotal": 303.38,
+      "bTotal": 103.5,
       "aPerPlayer": 75.84,
       "bPerPlayer": 103.5,
-      "scoreDelta": 199.88,
+      "scoreDelta": 70.97,
       "confidence": "high"
     },
     {
@@ -44365,10 +44371,12 @@
         }
       ],
       "aScore": 0.0,
-      "bScore": 50.82,
+      "bScore": 39.71,
+      "aTotal": 0.0,
+      "bTotal": 50.82,
       "aPerPlayer": 0.0,
       "bPerPlayer": 25.41,
-      "scoreDelta": -50.82,
+      "scoreDelta": -39.71,
       "confidence": "high"
     },
     {
@@ -44393,10 +44401,12 @@
         }
       ],
       "aScore": 121.3,
-      "bScore": 137.7,
+      "bScore": 104.0,
+      "aTotal": 121.3,
+      "bTotal": 137.7,
       "aPerPlayer": 121.3,
       "bPerPlayer": 68.85,
-      "scoreDelta": -16.4,
+      "scoreDelta": 17.3,
       "confidence": "high"
     },
     {
@@ -44428,11 +44438,13 @@
           "pos": "TE"
         }
       ],
-      "aScore": 203.44,
+      "aScore": 150.24,
       "bScore": 82.8,
+      "aTotal": 203.44,
+      "bTotal": 82.8,
       "aPerPlayer": 67.81,
       "bPerPlayer": 41.4,
-      "scoreDelta": 120.64,
+      "scoreDelta": 67.44,
       "confidence": "high"
     },
     {
@@ -44458,6 +44470,8 @@
       ],
       "aScore": 43.7,
       "bScore": 113.1,
+      "aTotal": 43.7,
+      "bTotal": 113.1,
       "aPerPlayer": 43.7,
       "bPerPlayer": 56.55,
       "scoreDelta": -69.4,
@@ -44482,6 +44496,8 @@
       ],
       "aScore": 41.7,
       "bScore": 336.7,
+      "aTotal": 41.7,
+      "bTotal": 336.7,
       "aPerPlayer": 41.7,
       "bPerPlayer": 336.7,
       "scoreDelta": -295.0,
@@ -44509,10 +44525,12 @@
         }
       ],
       "aScore": 162.5,
-      "bScore": 414.0,
+      "bScore": 338.0,
+      "aTotal": 162.5,
+      "bTotal": 414.0,
       "aPerPlayer": 162.5,
       "bPerPlayer": 207.0,
-      "scoreDelta": -251.5,
+      "scoreDelta": -175.5,
       "confidence": "high"
     },
     {
@@ -44540,11 +44558,13 @@
           "pos": "TE"
         }
       ],
-      "aScore": 110.5,
-      "bScore": 135.1,
+      "aScore": 89.8,
+      "bScore": 116.15,
+      "aTotal": 110.5,
+      "bTotal": 135.1,
       "aPerPlayer": 55.25,
       "bPerPlayer": 67.55,
-      "scoreDelta": -24.6,
+      "scoreDelta": -26.35,
       "confidence": "high"
     },
     {
@@ -44566,6 +44586,8 @@
       ],
       "aScore": 103.6,
       "bScore": 0.0,
+      "aTotal": 103.6,
+      "bTotal": 0.0,
       "aPerPlayer": 103.6,
       "bPerPlayer": 0.0,
       "scoreDelta": 103.6,
@@ -44593,10 +44615,12 @@
         }
       ],
       "aScore": 43.2,
-      "bScore": 91.9,
+      "bScore": 77.05,
+      "aTotal": 43.2,
+      "bTotal": 91.9,
       "aPerPlayer": 43.2,
       "bPerPlayer": 45.95,
-      "scoreDelta": -48.7,
+      "scoreDelta": -33.85,
       "confidence": "high"
     },
     {
@@ -44618,6 +44642,8 @@
       ],
       "aScore": 17.8,
       "bScore": 92.3,
+      "aTotal": 17.8,
+      "bTotal": 92.3,
       "aPerPlayer": 17.8,
       "bPerPlayer": 92.3,
       "scoreDelta": -74.5,
@@ -44648,11 +44674,13 @@
           "pos": "QB"
         }
       ],
-      "aScore": 172.86,
-      "bScore": 222.48,
+      "aScore": 154.71,
+      "bScore": 185.94,
+      "aTotal": 172.86,
+      "bTotal": 222.48,
       "aPerPlayer": 86.43,
       "bPerPlayer": 111.24,
-      "scoreDelta": -49.62,
+      "scoreDelta": -31.23,
       "confidence": "high"
     },
     {
@@ -44674,6 +44702,8 @@
       ],
       "aScore": 75.9,
       "bScore": 30.1,
+      "aTotal": 75.9,
+      "bTotal": 30.1,
       "aPerPlayer": 75.9,
       "bPerPlayer": 30.1,
       "scoreDelta": 45.8,
@@ -44700,11 +44730,13 @@
           "pos": "RB"
         }
       ],
-      "aScore": 19.4,
+      "aScore": 18.4,
       "bScore": 152.66,
+      "aTotal": 19.4,
+      "bTotal": 152.66,
       "aPerPlayer": 9.7,
       "bPerPlayer": 152.66,
-      "scoreDelta": -133.26,
+      "scoreDelta": -134.26,
       "confidence": "high"
     },
     {
@@ -44726,6 +44758,8 @@
       ],
       "aScore": 58.2,
       "bScore": 10.0,
+      "aTotal": 58.2,
+      "bTotal": 10.0,
       "aPerPlayer": 58.2,
       "bPerPlayer": 10.0,
       "scoreDelta": 48.2,
@@ -44752,11 +44786,13 @@
           "pos": "RB"
         }
       ],
-      "aScore": 99.9,
+      "aScore": 84.75,
       "bScore": 22.3,
+      "aTotal": 99.9,
+      "bTotal": 22.3,
       "aPerPlayer": 49.95,
       "bPerPlayer": 22.3,
-      "scoreDelta": 77.6,
+      "scoreDelta": 62.45,
       "confidence": "high"
     },
     {
@@ -44784,11 +44820,13 @@
           "pos": "RB"
         }
       ],
-      "aScore": 143.2,
-      "bScore": 137.1,
+      "aScore": 115.4,
+      "bScore": 121.55,
+      "aTotal": 143.2,
+      "bTotal": 137.1,
       "aPerPlayer": 71.6,
       "bPerPlayer": 68.55,
-      "scoreDelta": 6.1,
+      "scoreDelta": -6.15,
       "confidence": "high"
     },
     {
@@ -44812,11 +44850,13 @@
           "pos": "QB"
         }
       ],
-      "aScore": 88.04,
+      "aScore": 87.04,
       "bScore": 209.0,
+      "aTotal": 88.04,
+      "bTotal": 209.0,
       "aPerPlayer": 44.02,
       "bPerPlayer": 209.0,
-      "scoreDelta": -120.96,
+      "scoreDelta": -121.96,
       "confidence": "high"
     },
     {
@@ -44845,10 +44885,12 @@
         }
       ],
       "aScore": 139.2,
-      "bScore": 252.0,
+      "bScore": 176.72,
+      "aTotal": 139.2,
+      "bTotal": 252.0,
       "aPerPlayer": 139.2,
       "bPerPlayer": 84.0,
-      "scoreDelta": -112.8,
+      "scoreDelta": -37.52,
       "confidence": "high"
     },
     {
@@ -44870,6 +44912,8 @@
       ],
       "aScore": 81.3,
       "bScore": 0.0,
+      "aTotal": 81.3,
+      "bTotal": 0.0,
       "aPerPlayer": 81.3,
       "bPerPlayer": 0.0,
       "scoreDelta": 81.3,
@@ -44901,10 +44945,12 @@
         }
       ],
       "aScore": 149.3,
-      "bScore": 135.1,
+      "bScore": 111.35,
+      "aTotal": 149.3,
+      "bTotal": 135.1,
       "aPerPlayer": 74.65,
       "bPerPlayer": 67.55,
-      "scoreDelta": 14.2,
+      "scoreDelta": 37.95,
       "confidence": "high"
     },
     {
@@ -44928,11 +44974,13 @@
           "pos": "WR"
         }
       ],
-      "aScore": 117.3,
+      "aScore": 95.3,
       "bScore": 139.1,
+      "aTotal": 117.3,
+      "bTotal": 139.1,
       "aPerPlayer": 58.65,
       "bPerPlayer": 139.1,
-      "scoreDelta": -21.8,
+      "scoreDelta": -43.8,
       "confidence": "high"
     },
     {
@@ -44960,11 +45008,13 @@
           "pos": "RB"
         }
       ],
-      "aScore": 45.5,
+      "aScore": 29.48,
       "bScore": 64.1,
+      "aTotal": 45.5,
+      "bTotal": 64.1,
       "aPerPlayer": 15.17,
       "bPerPlayer": 64.1,
-      "scoreDelta": -18.6,
+      "scoreDelta": -34.62,
       "confidence": "high"
     },
     {
@@ -44988,11 +45038,13 @@
           "pos": "DEF"
         }
       ],
-      "aScore": 278.0,
+      "aScore": 255.5,
       "bScore": 30.5,
+      "aTotal": 278.0,
+      "bTotal": 30.5,
       "aPerPlayer": 139.0,
       "bPerPlayer": 30.5,
-      "scoreDelta": 247.5,
+      "scoreDelta": 225.0,
       "confidence": "high"
     },
     {
@@ -45017,10 +45069,12 @@
         }
       ],
       "aScore": 79.04,
-      "bScore": 99.6,
+      "bScore": 81.9,
+      "aTotal": 79.04,
+      "bTotal": 99.6,
       "aPerPlayer": 79.04,
       "bPerPlayer": 49.8,
-      "scoreDelta": -20.56,
+      "scoreDelta": -2.86,
       "confidence": "high"
     },
     {
@@ -45046,6 +45100,8 @@
       ],
       "aScore": 48.5,
       "bScore": 9.4,
+      "aTotal": 48.5,
+      "bTotal": 9.4,
       "aPerPlayer": 24.25,
       "bPerPlayer": 9.4,
       "scoreDelta": 39.1,
@@ -45080,11 +45136,13 @@
           "pos": "TE"
         }
       ],
-      "aScore": 89.8,
-      "bScore": 92.7,
+      "aScore": 71.8,
+      "bScore": 78.85,
+      "aTotal": 89.8,
+      "bTotal": 92.7,
       "aPerPlayer": 44.9,
       "bPerPlayer": 30.9,
-      "scoreDelta": -2.9,
+      "scoreDelta": -7.05,
       "confidence": "high"
     },
     {
@@ -45113,10 +45171,12 @@
         }
       ],
       "aScore": 6.7,
-      "bScore": 182.4,
+      "bScore": 135.05,
+      "aTotal": 6.7,
+      "bTotal": 182.4,
       "aPerPlayer": 6.7,
       "bPerPlayer": 60.8,
-      "scoreDelta": -175.7,
+      "scoreDelta": -128.35,
       "confidence": "high"
     },
     {
@@ -45164,11 +45224,13 @@
           "pos": "TE"
         }
       ],
-      "aScore": 222.8,
-      "bScore": 276.78,
+      "aScore": 134.95,
+      "bScore": 188.33,
+      "aTotal": 222.8,
+      "bTotal": 276.78,
       "aPerPlayer": 44.56,
       "bPerPlayer": 69.19,
-      "scoreDelta": -53.98,
+      "scoreDelta": -53.38,
       "confidence": "high"
     },
     {
@@ -45193,10 +45255,12 @@
         }
       ],
       "aScore": 235.8,
-      "bScore": 176.5,
+      "bScore": 172.25,
+      "aTotal": 235.8,
+      "bTotal": 176.5,
       "aPerPlayer": 235.8,
       "bPerPlayer": 88.25,
-      "scoreDelta": 59.3,
+      "scoreDelta": 63.55,
       "confidence": "low"
     },
     {
@@ -45220,11 +45284,13 @@
           "pos": "TE"
         }
       ],
-      "aScore": 79.0,
+      "aScore": 77.2,
       "bScore": 140.6,
+      "aTotal": 79.0,
+      "bTotal": 140.6,
       "aPerPlayer": 39.5,
       "bPerPlayer": 140.6,
-      "scoreDelta": -61.6,
+      "scoreDelta": -63.4,
       "confidence": "high"
     },
     {
@@ -45248,11 +45314,13 @@
           "pos": "RB"
         }
       ],
-      "aScore": 54.6,
+      "aScore": 44.75,
       "bScore": 167.22,
+      "aTotal": 54.6,
+      "bTotal": 167.22,
       "aPerPlayer": 27.3,
       "bPerPlayer": 167.22,
-      "scoreDelta": -112.62,
+      "scoreDelta": -122.47,
       "confidence": "low"
     },
     {
@@ -45278,6 +45346,8 @@
       ],
       "aScore": 0.0,
       "bScore": 16.2,
+      "aTotal": 0.0,
+      "bTotal": 16.2,
       "aPerPlayer": 0.0,
       "bPerPlayer": 16.2,
       "scoreDelta": -16.2,
@@ -45312,11 +45382,13 @@
           "pos": "WR"
         }
       ],
-      "aScore": 433.9,
-      "bScore": 161.6,
+      "aScore": 332.75,
+      "bScore": 154.25,
+      "aTotal": 433.9,
+      "bTotal": 161.6,
       "aPerPlayer": 144.63,
       "bPerPlayer": 80.8,
-      "scoreDelta": 272.3,
+      "scoreDelta": 178.5,
       "confidence": "low"
     },
     {
@@ -45348,11 +45420,13 @@
           "pos": "WR"
         }
       ],
-      "aScore": 122.3,
-      "bScore": 153.5,
+      "aScore": 108.45,
+      "bScore": 147.8,
+      "aTotal": 122.3,
+      "bTotal": 153.5,
       "aPerPlayer": 61.15,
       "bPerPlayer": 51.17,
-      "scoreDelta": -31.2,
+      "scoreDelta": -39.35,
       "confidence": "high"
     },
     {
@@ -45374,6 +45448,8 @@
       ],
       "aScore": 1.4,
       "bScore": 0.0,
+      "aTotal": 1.4,
+      "bTotal": 0.0,
       "aPerPlayer": 1.4,
       "bPerPlayer": 0.0,
       "scoreDelta": 1.4,
@@ -45398,6 +45474,8 @@
       ],
       "aScore": 110.5,
       "bScore": 82.1,
+      "aTotal": 110.5,
+      "bTotal": 82.1,
       "aPerPlayer": 110.5,
       "bPerPlayer": 82.1,
       "scoreDelta": 28.4,
@@ -45424,11 +45502,13 @@
           "pos": "WR"
         }
       ],
-      "aScore": 243.5,
+      "aScore": 185.5,
       "bScore": 173.18,
+      "aTotal": 243.5,
+      "bTotal": 173.18,
       "aPerPlayer": 121.75,
       "bPerPlayer": 173.18,
-      "scoreDelta": 70.32,
+      "scoreDelta": 12.32,
       "confidence": "low"
     },
     {
@@ -45450,6 +45530,8 @@
       ],
       "aScore": 0.0,
       "bScore": 0.0,
+      "aTotal": 0.0,
+      "bTotal": 0.0,
       "aPerPlayer": 0.0,
       "bPerPlayer": 0.0,
       "scoreDelta": 0.0,
@@ -45484,11 +45566,13 @@
           "pos": "RB"
         }
       ],
-      "aScore": 120.5,
+      "aScore": 108.55,
       "bScore": 113.9,
+      "aTotal": 120.5,
+      "bTotal": 113.9,
       "aPerPlayer": 40.17,
       "bPerPlayer": 56.95,
-      "scoreDelta": 6.6,
+      "scoreDelta": -5.35,
       "confidence": "high"
     },
     {
@@ -45510,6 +45594,8 @@
       ],
       "aScore": 0.0,
       "bScore": 59.7,
+      "aTotal": 0.0,
+      "bTotal": 59.7,
       "aPerPlayer": 0.0,
       "bPerPlayer": 59.7,
       "scoreDelta": -59.7,
@@ -45534,6 +45620,8 @@
       ],
       "aScore": 0.0,
       "bScore": 81.7,
+      "aTotal": 0.0,
+      "bTotal": 81.7,
       "aPerPlayer": 0.0,
       "bPerPlayer": 81.7,
       "scoreDelta": -81.7,
@@ -45565,10 +45653,12 @@
         }
       ],
       "aScore": 16.3,
-      "bScore": 113.7,
+      "bScore": 90.7,
+      "aTotal": 16.3,
+      "bTotal": 113.7,
       "aPerPlayer": 8.15,
       "bPerPlayer": 56.85,
-      "scoreDelta": -97.4,
+      "scoreDelta": -74.4,
       "confidence": "high"
     },
     {
@@ -45596,11 +45686,13 @@
           "pos": "RB"
         }
       ],
-      "aScore": 19.5,
-      "bScore": 277.7,
+      "aScore": 14.7,
+      "bScore": 251.2,
+      "aTotal": 19.5,
+      "bTotal": 277.7,
       "aPerPlayer": 9.75,
       "bPerPlayer": 138.85,
-      "scoreDelta": -258.2,
+      "scoreDelta": -236.5,
       "confidence": "high"
     },
     {
@@ -45622,6 +45714,8 @@
       ],
       "aScore": 44.3,
       "bScore": 22.1,
+      "aTotal": 44.3,
+      "bTotal": 22.1,
       "aPerPlayer": 44.3,
       "bPerPlayer": 22.1,
       "scoreDelta": 22.2,
@@ -45660,11 +45754,13 @@
           "pos": "RB"
         }
       ],
-      "aScore": 295.5,
-      "bScore": 91.5,
+      "aScore": 241.6,
+      "bScore": 87.0,
+      "aTotal": 295.5,
+      "bTotal": 91.5,
       "aPerPlayer": 98.5,
       "bPerPlayer": 30.5,
-      "scoreDelta": 204.0,
+      "scoreDelta": 154.6,
       "confidence": "high"
     },
     {
@@ -45689,10 +45785,12 @@
         }
       ],
       "aScore": 161.3,
-      "bScore": 173.1,
+      "bScore": 130.85,
+      "aTotal": 161.3,
+      "bTotal": 173.1,
       "aPerPlayer": 161.3,
       "bPerPlayer": 86.55,
-      "scoreDelta": -11.8,
+      "scoreDelta": 30.45,
       "confidence": "high"
     },
     {
@@ -45716,11 +45814,13 @@
           "pos": "WR"
         }
       ],
-      "aScore": 62.9,
+      "aScore": 57.8,
       "bScore": 118.4,
+      "aTotal": 62.9,
+      "bTotal": 118.4,
       "aPerPlayer": 31.45,
       "bPerPlayer": 118.4,
-      "scoreDelta": -55.5,
+      "scoreDelta": -60.6,
       "confidence": "high"
     },
     {
@@ -45744,11 +45844,13 @@
           "pos": "WR"
         }
       ],
-      "aScore": 217.12,
+      "aScore": 170.37,
       "bScore": 7.9,
+      "aTotal": 217.12,
+      "bTotal": 7.9,
       "aPerPlayer": 108.56,
       "bPerPlayer": 7.9,
-      "scoreDelta": 209.22,
+      "scoreDelta": 162.47,
       "confidence": "high"
     },
     {
@@ -45778,6 +45880,8 @@
       ],
       "aScore": 0.0,
       "bScore": 66.1,
+      "aTotal": 0.0,
+      "bTotal": 66.1,
       "aPerPlayer": 0.0,
       "bPerPlayer": 33.05,
       "scoreDelta": -66.1,
@@ -45804,11 +45908,13 @@
           "pos": "RB"
         }
       ],
-      "aScore": 150.5,
+      "aScore": 144.9,
       "bScore": 6.5,
+      "aTotal": 150.5,
+      "bTotal": 6.5,
       "aPerPlayer": 75.25,
       "bPerPlayer": 6.5,
-      "scoreDelta": 144.0,
+      "scoreDelta": 138.4,
       "confidence": "high"
     },
     {
@@ -45840,11 +45946,13 @@
           "pos": "TE"
         }
       ],
-      "aScore": 51.1,
+      "aScore": 47.9,
       "bScore": 74.6,
+      "aTotal": 51.1,
+      "bTotal": 74.6,
       "aPerPlayer": 25.55,
       "bPerPlayer": 24.87,
-      "scoreDelta": -23.5,
+      "scoreDelta": -26.7,
       "confidence": "high"
     },
     {
@@ -45868,11 +45976,13 @@
           "pos": "WR"
         }
       ],
-      "aScore": 38.1,
+      "aScore": 36.85,
       "bScore": 49.0,
+      "aTotal": 38.1,
+      "bTotal": 49.0,
       "aPerPlayer": 19.05,
       "bPerPlayer": 49.0,
-      "scoreDelta": -10.9,
+      "scoreDelta": -12.15,
       "confidence": "high"
     },
     {
@@ -45912,11 +46022,13 @@
           "pos": "RB"
         }
       ],
-      "aScore": 225.1,
-      "bScore": 204.7,
+      "aScore": 150.31,
+      "bScore": 162.05,
+      "aTotal": 225.1,
+      "bTotal": 204.7,
       "aPerPlayer": 56.27,
       "bPerPlayer": 68.23,
-      "scoreDelta": 20.4,
+      "scoreDelta": -11.74,
       "confidence": "high"
     },
     {
@@ -45941,10 +46053,12 @@
         }
       ],
       "aScore": 19.2,
-      "bScore": 112.2,
+      "bScore": 103.3,
+      "aTotal": 19.2,
+      "bTotal": 112.2,
       "aPerPlayer": 19.2,
       "bPerPlayer": 56.1,
-      "scoreDelta": -93.0,
+      "scoreDelta": -84.1,
       "confidence": "high"
     },
     {
@@ -45977,10 +46091,12 @@
         }
       ],
       "aScore": 109.3,
-      "bScore": 292.8,
+      "bScore": 212.68,
+      "aTotal": 109.3,
+      "bTotal": 292.8,
       "aPerPlayer": 54.65,
       "bPerPlayer": 97.6,
-      "scoreDelta": -183.5,
+      "scoreDelta": -103.38,
       "confidence": "high"
     },
     {
@@ -46012,11 +46128,13 @@
           "pos": "WR"
         }
       ],
-      "aScore": 110.6,
+      "aScore": 81.4,
       "bScore": 96.8,
+      "aTotal": 110.6,
+      "bTotal": 96.8,
       "aPerPlayer": 36.87,
       "bPerPlayer": 48.4,
-      "scoreDelta": 13.8,
+      "scoreDelta": -15.4,
       "confidence": "high"
     },
     {
@@ -46038,6 +46156,8 @@
       ],
       "aScore": 11.1,
       "bScore": 29.8,
+      "aTotal": 11.1,
+      "bTotal": 29.8,
       "aPerPlayer": 11.1,
       "bPerPlayer": 29.8,
       "scoreDelta": -18.7,
