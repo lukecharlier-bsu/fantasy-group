@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League History Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1791566106" />
+    <link rel="stylesheet" href="styles.css?v=1791567126" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -21,6 +21,7 @@
             <button class="tab" data-tab="drafts">Drafts</button>
             <button class="tab" data-tab="franchise">Franchise Leaders</button>
             <button class="tab" data-tab="frivolities">Frivolities</button>
+            <button class="tab" data-tab="trades">Trades</button>
         </nav>
     </header>
 
@@ -208,12 +209,35 @@
                 </div>
             </div>
         </section>
+
+        <!-- TRADES -->
+        <section class="panel" id="panel-trades">
+            <div class="card">
+                <h3>Trade History</h3>
+                <p class="muted">Reconstructed by diffing weekly rosters: when players move both ways between two teams across consecutive weeks, we flag it as a trade. High-confidence = detected count ≤ official season trade count for both sides; low-confidence = we may be picking up coincident waiver churn.</p>
+                <div class="row">
+                    <label>Season <select id="trades-year"></select></label>
+                    <label>Manager <select id="trades-owner"><option value="">All</option></select></label>
+                    <label>Confidence
+                        <select id="trades-conf">
+                            <option value="">All</option>
+                            <option value="high">High only</option>
+                            <option value="low">Low only</option>
+                        </select>
+                    </label>
+                </div>
+                <div id="trades-summary" class="muted" style="margin-bottom:0.5rem"></div>
+                <div class="scroll-x">
+                    <table id="trades-table" class="data-table"></table>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footnote">
         <span id="data-stamp"></span>
     </footer>
 
-    <script src="app.js?v=1791566106"></script>
+    <script src="app.js?v=1791567126"></script>
 </body>
 </html>

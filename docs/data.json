@@ -44242,6 +44242,1508 @@
       "opponentPts": 108.6
     }
   ],
+  "trades": [
+    {
+      "year": 2019,
+      "week": 3,
+      "teamA": "Howard",
+      "teamB": "Sean",
+      "aGave": [
+        {
+          "display": "C. Ridley",
+          "pos": "WR"
+        },
+        {
+          "display": "N. Chubb",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "D. Watson",
+          "pos": "QB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "week": 3,
+      "teamA": "Justin",
+      "teamB": "Sean",
+      "aGave": [
+        {
+          "display": "J. Smith-Schuster",
+          "pos": "WR"
+        },
+        {
+          "display": "P. Mahomes",
+          "pos": "QB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "E. Ebron",
+          "pos": "TE"
+        },
+        {
+          "display": "L. Bell",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "week": 9,
+      "teamA": "Aiden",
+      "teamB": "Sean",
+      "aGave": [
+        {
+          "display": "J. Landry",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "D. Hopkins",
+          "pos": "WR"
+        },
+        {
+          "display": "N. Chubb",
+          "pos": "RB"
+        },
+        {
+          "display": "P. Mahomes",
+          "pos": "QB"
+        },
+        {
+          "display": "T. Hill",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "week": 9,
+      "teamA": "Alex",
+      "teamB": "Sean",
+      "aGave": [
+        {
+          "display": "E. Sanders",
+          "pos": "WR"
+        },
+        {
+          "display": "M. Ryan",
+          "pos": "QB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "J. Smith-Schuster",
+          "pos": "WR"
+        },
+        {
+          "display": "L. Murray",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "week": 10,
+      "teamA": "Aiden",
+      "teamB": "Ulises",
+      "aGave": [
+        {
+          "display": "N. Chubb",
+          "pos": "RB"
+        },
+        {
+          "display": "S. Diggs",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "T. Kelce",
+          "pos": "TE"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2019,
+      "week": 10,
+      "teamA": "Alex",
+      "teamB": "Ulises",
+      "aGave": [
+        {
+          "display": "D. Waller",
+          "pos": "TE"
+        },
+        {
+          "display": "J. Smith-Schuster",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "D. Brees",
+          "pos": "QB"
+        },
+        {
+          "display": "J. Mixon",
+          "pos": "RB"
+        },
+        {
+          "display": "M. Andrews",
+          "pos": "TE"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2020,
+      "week": 9,
+      "teamA": "Matthew",
+      "teamB": "Ulises",
+      "aGave": [
+        {
+          "display": "J. Mixon",
+          "pos": "RB"
+        },
+        {
+          "display": "N. Chubb",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "E. Elliott",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "week": 3,
+      "teamA": "Howard",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "J. Taylor",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "C. Ridley",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "week": 3,
+      "teamA": "Sean",
+      "teamB": "Ulises",
+      "aGave": [
+        {
+          "display": "D. Metcalf",
+          "pos": "WR"
+        },
+        {
+          "display": "D. Samuel",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "A. Kamara",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "week": 4,
+      "teamA": "Matthew",
+      "teamB": "Sean",
+      "aGave": [
+        {
+          "display": "N. Chubb",
+          "pos": "RB"
+        },
+        {
+          "display": "T. Hockenson",
+          "pos": "TE"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "C. McCaffrey",
+          "pos": "RB"
+        },
+        {
+          "display": "N. Fant",
+          "pos": "TE"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "week": 5,
+      "teamA": "Howard",
+      "teamB": "Sean",
+      "aGave": [
+        {
+          "display": "C. Edwards-Helaire",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "M. Williams",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "week": 6,
+      "teamA": "Justin",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "K. Allen",
+          "pos": "WR"
+        },
+        {
+          "display": "S. Barkley",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "J. Robinson",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "week": 9,
+      "teamA": "Howard",
+      "teamB": "Sean",
+      "aGave": [
+        {
+          "display": "D. Schultz",
+          "pos": "TE"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "D. Harris",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "week": 9,
+      "teamA": "Justin",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "G. Kittle",
+          "pos": "TE"
+        },
+        {
+          "display": "L. Jackson",
+          "pos": "QB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "N. Fant",
+          "pos": "TE"
+        },
+        {
+          "display": "T. Brady",
+          "pos": "QB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "week": 10,
+      "teamA": "Aiden",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "T. Lockett",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "K. Allen",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2021,
+      "week": 11,
+      "teamA": "Howard",
+      "teamB": "Sean",
+      "aGave": [
+        {
+          "display": "J. Jefferson",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "E. Mitchell",
+          "pos": "RB"
+        },
+        {
+          "display": "K. Hunt",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "week": 2,
+      "teamA": "Aiden",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "M. Carter",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "B. Cooks",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "week": 2,
+      "teamA": "Joshua",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "E. Elliott",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "D. Johnson",
+          "pos": "WR"
+        },
+        {
+          "display": "J. Jacobs",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "week": 6,
+      "teamA": "Howard",
+      "teamB": "Joshua",
+      "aGave": [
+        {
+          "display": "K. Pitts",
+          "pos": "TE"
+        },
+        {
+          "display": "L. Jackson",
+          "pos": "QB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "D. Hopkins",
+          "pos": "WR"
+        },
+        {
+          "display": "J. Jacobs",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "week": 7,
+      "teamA": "Howard",
+      "teamB": "Ulises",
+      "aGave": [
+        {
+          "display": "T. Hill",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "B. Robinson",
+          "pos": "RB"
+        },
+        {
+          "display": "K. Murray",
+          "pos": "QB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "week": 7,
+      "teamA": "Matthew",
+      "teamB": "Ulises",
+      "aGave": [
+        {
+          "display": "A. St. Brown",
+          "pos": "WR"
+        },
+        {
+          "display": "E. Elliott",
+          "pos": "RB"
+        },
+        {
+          "display": "M. Andrews",
+          "pos": "TE"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "N. Chubb",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "week": 9,
+      "teamA": "Luke",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "N. Harris",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "A. Cooper",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "week": 10,
+      "teamA": "Alex",
+      "teamB": "Howard",
+      "aGave": [
+        {
+          "display": "C. Patterson",
+          "pos": "RB"
+        },
+        {
+          "display": "T. McLaurin",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "J. Jacobs",
+          "pos": "RB"
+        },
+        {
+          "display": "J. Jeudy",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "week": 10,
+      "teamA": "Joshua",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "T. Kelce",
+          "pos": "TE"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "N. Harris",
+          "pos": "RB"
+        },
+        {
+          "display": "T. Lockett",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2022,
+      "week": 11,
+      "teamA": "Howard",
+      "teamB": "Justin",
+      "aGave": [
+        {
+          "display": "D. Hopkins",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "J. Herbert",
+          "pos": "QB"
+        },
+        {
+          "display": "J. Smith-Schuster",
+          "pos": "WR"
+        },
+        {
+          "display": "J. Wilson",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "week": 3,
+      "teamA": "Howard",
+      "teamB": "Ulises",
+      "aGave": [
+        {
+          "display": "D. Henry",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "A. Kamara",
+          "pos": "RB"
+        },
+        {
+          "display": "Cowboys DEF",
+          "pos": "DEF"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "week": 4,
+      "teamA": "Aiden",
+      "teamB": "Howard",
+      "aGave": [
+        {
+          "display": "C. Kirk",
+          "pos": "WR"
+        },
+        {
+          "display": "J. Jacobs",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "K. Cousins",
+          "pos": "QB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "week": 8,
+      "teamA": "Aiden",
+      "teamB": "Alex",
+      "aGave": [
+        {
+          "display": "C. Godwin",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "C. Watson",
+          "pos": "WR"
+        },
+        {
+          "display": "J. Conner",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "week": 9,
+      "teamA": "Howard",
+      "teamB": "Justin",
+      "aGave": [
+        {
+          "display": "Cowboys DEF",
+          "pos": "DEF"
+        },
+        {
+          "display": "J. Meyers",
+          "pos": "WR"
+        },
+        {
+          "display": "M. Andrews",
+          "pos": "TE"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "Steelers DEF",
+          "pos": "DEF"
+        },
+        {
+          "display": "T. Hockenson",
+          "pos": "TE"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "week": 12,
+      "teamA": "Howard",
+      "teamB": "Luke",
+      "aGave": [
+        {
+          "display": "C. Kirk",
+          "pos": "WR"
+        },
+        {
+          "display": "N. Collins",
+          "pos": "WR"
+        },
+        {
+          "display": "T. Etienne",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "A. Thielen",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2023,
+      "week": 12,
+      "teamA": "Howard",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "J. Williams",
+          "pos": "RB"
+        },
+        {
+          "display": "L. Jackson",
+          "pos": "QB"
+        },
+        {
+          "display": "R. White",
+          "pos": "RB"
+        },
+        {
+          "display": "T. Hockenson",
+          "pos": "TE"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "C. Ridley",
+          "pos": "WR"
+        },
+        {
+          "display": "D. Prescott",
+          "pos": "QB"
+        },
+        {
+          "display": "J. Chase",
+          "pos": "WR"
+        },
+        {
+          "display": "J. Taylor",
+          "pos": "RB"
+        },
+        {
+          "display": "T. McBride",
+          "pos": "TE"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "week": 3,
+      "teamA": "Alex",
+      "teamB": "Howard",
+      "aGave": [
+        {
+          "display": "D. Moore",
+          "pos": "WR"
+        },
+        {
+          "display": "R. White",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "J. Jacobs",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "year": 2024,
+      "week": 3,
+      "teamA": "Joshua",
+      "teamB": "Sean",
+      "aGave": [
+        {
+          "display": "B. Hall",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "A. Cooper",
+          "pos": "WR"
+        },
+        {
+          "display": "I. Likely",
+          "pos": "TE"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "week": 3,
+      "teamA": "Justin",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "D. Montgomery",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "C. Olave",
+          "pos": "WR"
+        },
+        {
+          "display": "T. Pollard",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "year": 2024,
+      "week": 4,
+      "teamA": "Alex",
+      "teamB": "Joshua",
+      "aGave": [
+        {
+          "display": "J. Williams",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "A. Ekeler",
+          "pos": "RB"
+        },
+        {
+          "display": "J. Waddle",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "week": 5,
+      "teamA": "Alex",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "M. Pittman",
+          "pos": "WR"
+        },
+        {
+          "display": "T. Hill",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "B. Aiyuk",
+          "pos": "WR"
+        },
+        {
+          "display": "J. Gibbs",
+          "pos": "RB"
+        },
+        {
+          "display": "M. Evans",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "year": 2024,
+      "week": 6,
+      "teamA": "Alex",
+      "teamB": "Luke",
+      "aGave": [
+        {
+          "display": "J. Conner",
+          "pos": "RB"
+        },
+        {
+          "display": "N. Chubb",
+          "pos": "RB"
+        },
+        {
+          "display": "Z. Flowers",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "D. London",
+          "pos": "WR"
+        },
+        {
+          "display": "D. Metcalf",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "week": 6,
+      "teamA": "Howard",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "D. Johnson",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "J. Ford",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "year": 2024,
+      "week": 8,
+      "teamA": "Aiden",
+      "teamB": "Sean",
+      "aGave": [
+        {
+          "display": "T. Higgins",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "C. Hubbard",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "week": 9,
+      "teamA": "Joshua",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "J. Jefferson",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "G. Wilson",
+          "pos": "WR"
+        },
+        {
+          "display": "T. McLaurin",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "year": 2024,
+      "week": 10,
+      "teamA": "Howard",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "R. White",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "D. Johnson",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "year": 2024,
+      "week": 11,
+      "teamA": "Aiden",
+      "teamB": "Alex",
+      "aGave": [
+        {
+          "display": "C. Stroud",
+          "pos": "QB"
+        },
+        {
+          "display": "T. McBride",
+          "pos": "TE"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "C. Brown",
+          "pos": "RB"
+        },
+        {
+          "display": "D. Metcalf",
+          "pos": "WR"
+        },
+        {
+          "display": "T. Tracy",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "week": 11,
+      "teamA": "Alex",
+      "teamB": "Luke",
+      "aGave": [
+        {
+          "display": "T. Kraft",
+          "pos": "TE"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "T. Dell",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2024,
+      "week": 11,
+      "teamA": "Luke",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "S. LaPorta",
+          "pos": "TE"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "K. Shakir",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "low"
+    },
+    {
+      "year": 2025,
+      "week": 3,
+      "teamA": "Aiden",
+      "teamB": "Alex",
+      "aGave": [
+        {
+          "display": "B. Thomas",
+          "pos": "WR"
+        },
+        {
+          "display": "T. Pollard",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "D. Moore",
+          "pos": "WR"
+        },
+        {
+          "display": "J. Meyers",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "week": 4,
+      "teamA": "Aiden",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "D. Henry",
+          "pos": "RB"
+        },
+        {
+          "display": "S. LaPorta",
+          "pos": "TE"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "B. Bowers",
+          "pos": "TE"
+        },
+        {
+          "display": "C. Hubbard",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "week": 4,
+      "teamA": "Joshua",
+      "teamB": "Sean",
+      "aGave": [
+        {
+          "display": "R. Odunze",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "T. Etienne",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "week": 4,
+      "teamA": "Justin",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "J. Addison",
+          "pos": "WR"
+        },
+        {
+          "display": "J. Dobbins",
+          "pos": "RB"
+        },
+        {
+          "display": "S. Barkley",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "C. Skattebo",
+          "pos": "RB"
+        },
+        {
+          "display": "G. Wilson",
+          "pos": "WR"
+        },
+        {
+          "display": "K. Williams",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "week": 4,
+      "teamA": "Luke",
+      "teamB": "Todd",
+      "aGave": [
+        {
+          "display": "C. Sutton",
+          "pos": "WR"
+        },
+        {
+          "display": "O. Hampton",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "C. Lamb",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "week": 6,
+      "teamA": "Aiden",
+      "teamB": "Luke",
+      "aGave": [
+        {
+          "display": "B. Bowers",
+          "pos": "TE"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "R. White",
+          "pos": "RB"
+        },
+        {
+          "display": "T. Tucker",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "week": 6,
+      "teamA": "Aiden",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "D. Adams",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "J. Waddle",
+          "pos": "WR"
+        },
+        {
+          "display": "K. Allen",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "week": 7,
+      "teamA": "Alex",
+      "teamB": "Howard",
+      "aGave": [
+        {
+          "display": "J. Williams",
+          "pos": "WR"
+        },
+        {
+          "display": "T. Pollard",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "N. Chubb",
+          "pos": "RB"
+        },
+        {
+          "display": "Z. Ertz",
+          "pos": "TE"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "week": 7,
+      "teamA": "Howard",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "E. Egbuka",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "D. Adams",
+          "pos": "WR"
+        },
+        {
+          "display": "Z. Charbonnet",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "week": 8,
+      "teamA": "Alex",
+      "teamB": "Joshua",
+      "aGave": [
+        {
+          "display": "B. Nix",
+          "pos": "QB"
+        },
+        {
+          "display": "N. Chubb",
+          "pos": "RB"
+        },
+        {
+          "display": "Z. Ertz",
+          "pos": "TE"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "C. Brown",
+          "pos": "RB"
+        },
+        {
+          "display": "M. Andrews",
+          "pos": "TE"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "week": 8,
+      "teamA": "Joshua",
+      "teamB": "Sean",
+      "aGave": [
+        {
+          "display": "D. London",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "J. Croskey-Merritt",
+          "pos": "RB"
+        },
+        {
+          "display": "R. Odunze",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "week": 9,
+      "teamA": "Joshua",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "J. Chase",
+          "pos": "WR"
+        },
+        {
+          "display": "J. Croskey-Merritt",
+          "pos": "RB"
+        },
+        {
+          "display": "T. Etienne",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "E. Egbuka",
+          "pos": "WR"
+        },
+        {
+          "display": "J. Addison",
+          "pos": "WR"
+        },
+        {
+          "display": "J. Dobbins",
+          "pos": "RB"
+        },
+        {
+          "display": "S. Barkley",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "week": 11,
+      "teamA": "Alex",
+      "teamB": "Howard",
+      "aGave": [
+        {
+          "display": "M. Andrews",
+          "pos": "TE"
+        },
+        {
+          "display": "R. Harvey",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "K. Shakir",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2025,
+      "week": 11,
+      "teamA": "Alex",
+      "teamB": "Todd",
+      "aGave": [
+        {
+          "display": "A. Jones",
+          "pos": "RB"
+        },
+        {
+          "display": "C. Brown",
+          "pos": "RB"
+        },
+        {
+          "display": "N. Collins",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "D. Achane",
+          "pos": "RB"
+        },
+        {
+          "display": "E. Demercado",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "week": 2,
+      "teamA": "Joshua",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "C. Lamb",
+          "pos": "WR"
+        },
+        {
+          "display": "J. Meyers",
+          "pos": "WR"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "C. Hubbard",
+          "pos": "RB"
+        },
+        {
+          "display": "G. Wilson",
+          "pos": "WR"
+        },
+        {
+          "display": "L. Burden",
+          "pos": "WR"
+        }
+      ],
+      "confidence": "high"
+    },
+    {
+      "year": 2026,
+      "week": 3,
+      "teamA": "Aiden",
+      "teamB": "Alex",
+      "aGave": [
+        {
+          "display": "S. LaPorta",
+          "pos": "TE"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "D. Montgomery",
+          "pos": "RB"
+        }
+      ],
+      "confidence": "high"
+    }
+  ],
   "drafts": {
     "2019": [
       {

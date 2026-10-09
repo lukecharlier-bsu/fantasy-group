@@ -340,6 +340,132 @@ def build_biggest_upsets(seasons, n=20):
     return out[:n]
 
 
+def load_weekly_rosters(gamecenter_dirs):
+    """{(year, week, owner): {player_key: {display, pos}}} across every gamecenter CSV."""
+    if isinstance(gamecenter_dirs, str):
+        gamecenter_dirs = [gamecenter_dirs]
+    year_paths = {}
+    for d in gamecenter_dirs:
+        if not os.path.isdir(d):
+            continue
+        for year_name in sorted(os.listdir(d)):
+            yp = os.path.join(d, year_name)
+            if os.path.isdir(yp):
+                year_paths[year_name] = yp
+    rosters = {}
+    for year_name in sorted(year_paths):
+        year_path = year_paths[year_name]
+        year = int(year_name)
+        for filename in sorted(os.listdir(year_path),
+                               key=lambda n: int(n[:-4]) if n.endswith(".csv") else 999):
+            if not filename.endswith(".csv"):
+                continue
+            week = int(filename[:-4])
+            with open(os.path.join(year_path, filename), newline="") as f:
+                reader = csv.reader(f)
+                header = next(reader, None)
+                if not header:
+                    continue
+                name_cols = []
+                i = 0
+                while i < len(header):
+                    h = header[i]
+                    if h in {"Owner", "Rank", "Total", "Opponent", "Opponent Total", "Points"}:
+                        i += 1
+                        continue
+                    if i + 1 < len(header) and header[i + 1] == "Points":
+                        name_cols.append(i)
+                        i += 2
+                    else:
+                        i += 1
+                for row in reader:
+                    if not row or len(row) < 2:
+                        continue
+                    owner = (row[0] or "").strip()
+                    bucket = rosters.setdefault((year, week, owner), {})
+                    for ni in name_cols:
+                        if ni >= len(row):
+                            continue
+                        info = parse_gc_player(row[ni])
+                        if not info:
+                            continue
+                        bucket[info["key"]] = {"display": info["display"],
+                                               "pos": info["pos"]}
+    return rosters
+
+
+def detect_trades(gamecenter_dirs, standings):
+    """Look for bidirectional roster swaps between pairs of teams across
+    consecutive weeks and infer a trade. Confidence is 'high' when the
+    detected count for a team matches the official per-season Trades total
+    from the standings, 'low' when we're over-counting (likely including
+    coincident waiver churn).
+    """
+    rosters = load_weekly_rosters(gamecenter_dirs)
+    # year -> week -> owner -> set(player_key)
+    by_year = {}
+    display = {}
+    for (year, week, owner), players in rosters.items():
+        by_year.setdefault(year, {}).setdefault(week, {})[owner] = set(players.keys())
+        for k, v in players.items():
+            display[(year, k)] = v  # most-recent display wins
+
+    trades = []
+    for year, weeks in by_year.items():
+        wnums = sorted(weeks.keys())
+        for i in range(len(wnums) - 1):
+            w_from, w_to = wnums[i], wnums[i + 1]
+            owners = sorted(set(weeks[w_from]) & set(weeks[w_to]))
+            # Build per-owner "lost" and "gained" sets
+            lost = {}
+            gained = {}
+            for o in owners:
+                before, after = weeks[w_from][o], weeks[w_to][o]
+                lost[o] = before - after
+                gained[o] = after - before
+            # For each pair (A, B), players that moved A -> B are:
+            #   lost by A AND gained by B
+            seen_pairs = set()
+            for a in owners:
+                for b in owners:
+                    if a >= b:
+                        continue  # unordered pair, do each once
+                    a_to_b = lost[a] & gained[b]
+                    b_to_a = lost[b] & gained[a]
+                    if a_to_b and b_to_a:
+                        trades.append({
+                            "year": year,
+                            "week": w_to,  # trade first visible this week
+                            "teamA": a, "teamB": b,
+                            "aGave": sorted([display.get((year, k), {"display": k, "pos": "?"})
+                                             for k in a_to_b], key=lambda d: d["display"]),
+                            "bGave": sorted([display.get((year, k), {"display": k, "pos": "?"})
+                                             for k in b_to_a], key=lambda d: d["display"]),
+                        })
+
+    # Confidence per team: compare detected trade count to standings Trades
+    official = {}  # (year, owner) -> trades count
+    for year, teams in standings.items():
+        for t in teams:
+            key = (year, t["manager"])
+            # multiple team rows can exist (duplicates filter earlier); keep max
+            official[key] = max(official.get(key, 0), t.get("trades", 0))
+    detected_count = {}
+    for t in trades:
+        for who in (t["teamA"], t["teamB"]):
+            detected_count[(t["year"], who)] = detected_count.get((t["year"], who), 0) + 1
+    for t in trades:
+        y, a, b = t["year"], t["teamA"], t["teamB"]
+        oa, ob = official.get((y, a), 0), official.get((y, b), 0)
+        da, db = detected_count.get((y, a), 0), detected_count.get((y, b), 0)
+        # If both teams' detected count ≤ official count, likely all real
+        both_ok = (oa == 0 or da <= oa) and (ob == 0 or db <= ob)
+        t["confidence"] = "high" if both_ok else "low"
+
+    trades.sort(key=lambda t: (t["year"], t["week"]))
+    return trades
+
+
 def build_biggest_carries(gamecenter_dirs, seasons, n=20):
     """Wins where a single starter made up the largest share of the team's
     total points. Only wins count — a 'carry' in a loss isn't a carry."""
@@ -973,6 +1099,7 @@ def main():
     highs, lows, blowouts, nail_biters = build_weekly_extremes(seasons)
     biggest_upsets = build_biggest_upsets(seasons)
     biggest_carries = build_biggest_carries(gamecenter_dirs, seasons)
+    trades_detected = detect_trades(gamecenter_dirs, standings)
     drafts = {}
     for d in draft_dirs:
         if os.path.isdir(d):
@@ -996,6 +1123,7 @@ def main():
         "nailBiters": nail_biters,
         "biggestUpsets": biggest_upsets,
         "biggestCarries": biggest_carries,
+        "trades": trades_detected,
         "drafts": drafts,
         "draftOwnerStats": draft_owner_stats,
         "playersCareer": players_career,

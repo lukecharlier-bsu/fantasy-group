@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initDraftsPanel();
     initFranchisePanel();
     initFrivolitiesPanel();
+    initTradesPanel();
 });
 
 // ---------- Tabs ----------
@@ -778,5 +779,70 @@ function renderBiggestCarries() {
             <th>Opponent</th>
         </tr></thead>
         <tbody>${rows}</tbody>
+    `;
+}
+
+// ---------- Trades ----------
+const TRADES_STATE = { year: "all", owner: "", conf: "" };
+
+function initTradesPanel() {
+    const trades = STATE.data.trades || [];
+    const years = Array.from(new Set(trades.map(t => t.year))).sort((a, b) => b - a);
+    const owners = Array.from(new Set(trades.flatMap(t => [t.teamA, t.teamB]))).sort();
+    const yearSel = document.getElementById("trades-year");
+    yearSel.innerHTML = `<option value="all">All years</option>` +
+        years.map(y => `<option value="${y}">${y}</option>`).join("");
+    const ownerSel = document.getElementById("trades-owner");
+    ownerSel.innerHTML = `<option value="">All</option>` +
+        owners.map(o => `<option value="${o}">${o}</option>`).join("");
+    const confSel = document.getElementById("trades-conf");
+    [yearSel, ownerSel, confSel].forEach(sel => sel.addEventListener("change", () => {
+        TRADES_STATE.year = yearSel.value;
+        TRADES_STATE.owner = ownerSel.value;
+        TRADES_STATE.conf = confSel.value;
+        renderTrades();
+    }));
+    renderTrades();
+}
+
+function renderTrades() {
+    const t = document.getElementById("trades-table");
+    const summary = document.getElementById("trades-summary");
+    const all = STATE.data.trades || [];
+    const { year, owner, conf } = TRADES_STATE;
+    let rows = all;
+    if (year && year !== "all") rows = rows.filter(r => r.year === parseInt(year));
+    if (owner) rows = rows.filter(r => r.teamA === owner || r.teamB === owner);
+    if (conf) rows = rows.filter(r => r.confidence === conf);
+    rows = [...rows].sort((a, b) => (b.year - a.year) || (b.week - a.week));
+    const hi = rows.filter(r => r.confidence === "high").length;
+    const lo = rows.length - hi;
+    summary.textContent = `${rows.length} trade${rows.length === 1 ? "" : "s"} — ${hi} high confidence, ${lo} low confidence.`;
+    if (!rows.length) {
+        t.innerHTML = `<tbody><tr><td class="muted">No trades match.</td></tr></tbody>`;
+        return;
+    }
+    const playersCell = (list) =>
+        `<div class="trade-cell">${list.map(p => `${p.display} <span class="pos">${p.pos}</span>`).join("<br>")}</div>`;
+    t.innerHTML = `
+        <thead><tr>
+            <th>Year</th><th>Wk</th>
+            <th>Team A</th><th>Gave</th>
+            <th>Team B</th><th>Gave</th>
+            <th>Confidence</th>
+        </tr></thead>
+        <tbody>
+            ${rows.map(r => `
+                <tr>
+                    <td>${r.year}</td>
+                    <td>${r.week}</td>
+                    <td><strong>${r.teamA}</strong></td>
+                    <td>${playersCell(r.aGave)}</td>
+                    <td><strong>${r.teamB}</strong></td>
+                    <td>${playersCell(r.bGave)}</td>
+                    <td><span class="conf-badge conf-${r.confidence}">${r.confidence}</span></td>
+                </tr>
+            `).join("")}
+        </tbody>
     `;
 }
