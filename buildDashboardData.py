@@ -341,9 +341,11 @@ def build_biggest_upsets(seasons, n=20):
 
 
 def load_weekly_rosters(gamecenter_dirs):
-    """{(year, week, owner): {player_key: {display, pos}}} across every gamecenter CSV."""
+    """{(year, week, owner): {player_key: {display, pos, starterPts}}}.
+    starterPts is 0 for bench/IR entries so callers can slice by lineup slot."""
     if isinstance(gamecenter_dirs, str):
         gamecenter_dirs = [gamecenter_dirs]
+    BENCH_SLOTS = {"BN", "RES"}
     year_paths = {}
     for d in gamecenter_dirs:
         if not os.path.isdir(d):
@@ -366,7 +368,8 @@ def load_weekly_rosters(gamecenter_dirs):
                 header = next(reader, None)
                 if not header:
                     continue
-                name_cols = []
+                # (slot_label, name_idx, points_idx) tuples
+                slot_cols = []
                 i = 0
                 while i < len(header):
                     h = header[i]
@@ -374,7 +377,7 @@ def load_weekly_rosters(gamecenter_dirs):
                         i += 1
                         continue
                     if i + 1 < len(header) and header[i + 1] == "Points":
-                        name_cols.append(i)
+                        slot_cols.append((h, i, i + 1))
                         i += 2
                     else:
                         i += 1
@@ -383,14 +386,27 @@ def load_weekly_rosters(gamecenter_dirs):
                         continue
                     owner = (row[0] or "").strip()
                     bucket = rosters.setdefault((year, week, owner), {})
-                    for ni in name_cols:
+                    for slot, ni, pi in slot_cols:
                         if ni >= len(row):
                             continue
                         info = parse_gc_player(row[ni])
                         if not info:
                             continue
-                        bucket[info["key"]] = {"display": info["display"],
-                                               "pos": info["pos"]}
+                        try:
+                            pts = float((row[pi] or "0").replace(",", "")) \
+                                if pi < len(row) else 0.0
+                        except ValueError:
+                            pts = 0.0
+                        starter_pts = 0.0 if slot in BENCH_SLOTS else pts
+                        rec = bucket.setdefault(info["key"], {
+                            "display": info["display"], "pos": info["pos"],
+                            "starterPts": 0.0,
+                        })
+                        # If a player somehow appears twice on one roster row
+                        # (shouldn't happen for a legit week), take the max.
+                        if starter_pts > rec["starterPts"]:
+                            rec["starterPts"] = starter_pts
+                        rec["display"] = info["display"]
     return rosters
 
 
@@ -405,10 +421,27 @@ def detect_trades(gamecenter_dirs, standings):
     # year -> week -> owner -> set(player_key)
     by_year = {}
     display = {}
+    # (year, week, owner, player_key) -> starter pts that week (0 if benched)
+    starter_pts = {}
     for (year, week, owner), players in rosters.items():
         by_year.setdefault(year, {}).setdefault(week, {})[owner] = set(players.keys())
         for k, v in players.items():
-            display[(year, k)] = v  # most-recent display wins
+            display[(year, k)] = {"display": v["display"], "pos": v["pos"]}
+            starter_pts[(year, week, owner, k)] = v["starterPts"]
+
+    def post_trade_score(year, from_week, owner, keys):
+        """Starter pts the acquiring owner got from these players from the
+        trade week onward through the end of the season (and playoffs)."""
+        if not keys:
+            return 0.0
+        season_weeks = sorted(by_year.get(year, {}).keys())
+        total = 0.0
+        for w in season_weeks:
+            if w < from_week:
+                continue
+            for k in keys:
+                total += starter_pts.get((year, w, owner, k), 0.0)
+        return round(total, 2)
 
     trades = []
     for year, weeks in by_year.items():
@@ -433,6 +466,9 @@ def detect_trades(gamecenter_dirs, standings):
                     a_to_b = lost[a] & gained[b]
                     b_to_a = lost[b] & gained[a]
                     if a_to_b and b_to_a:
+                        # Post-trade starter pts earned by what each side received
+                        a_score = post_trade_score(year, w_to, a, b_to_a)
+                        b_score = post_trade_score(year, w_to, b, a_to_b)
                         trades.append({
                             "year": year,
                             "week": w_to,  # trade first visible this week
@@ -441,6 +477,11 @@ def detect_trades(gamecenter_dirs, standings):
                                              for k in a_to_b], key=lambda d: d["display"]),
                             "bGave": sorted([display.get((year, k), {"display": k, "pos": "?"})
                                              for k in b_to_a], key=lambda d: d["display"]),
+                            "aScore": a_score,  # points A got from what B gave
+                            "bScore": b_score,  # points B got from what A gave
+                            "aPerPlayer": round(a_score / len(b_to_a), 2),
+                            "bPerPlayer": round(b_score / len(a_to_b), 2),
+                            "scoreDelta": round(a_score - b_score, 2),
                         })
 
     # Confidence per team: compare detected trade count to standings Trades

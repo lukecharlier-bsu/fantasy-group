@@ -824,12 +824,22 @@ function renderTrades() {
     }
     const playersCell = (list) =>
         `<div class="trade-cell">${list.map(p => `${p.display} <span class="pos">${p.pos}</span>`).join("<br>")}</div>`;
+    const verdict = (r) => {
+        if (r.aScore === 0 && r.bScore === 0) {
+            return `<span class="muted">no post-trade starts</span>`;
+        }
+        const d = r.scoreDelta;
+        if (Math.abs(d) < 0.05) return `<span class="muted">wash</span>`;
+        const winner = d > 0 ? r.teamA : r.teamB;
+        return `<strong>${winner}</strong> <span class="muted">+${fmt(Math.abs(d))}</span>`;
+    };
     t.innerHTML = `
         <thead><tr>
             <th>Year</th><th>Wk</th>
-            <th>Team A</th><th>Gave</th>
-            <th>Team B</th><th>Gave</th>
-            <th>Confidence</th>
+            <th>Team A</th><th>Gave</th><th class="right">Score</th>
+            <th>Team B</th><th>Gave</th><th class="right">Score</th>
+            <th>Winner</th>
+            <th>Conf</th>
         </tr></thead>
         <tbody>
             ${rows.map(r => `
@@ -838,8 +848,11 @@ function renderTrades() {
                     <td>${r.week}</td>
                     <td><strong>${r.teamA}</strong></td>
                     <td>${playersCell(r.aGave)}</td>
+                    <td class="right" title="Post-trade starter pts A got from B's players (avg ${fmt(r.aPerPlayer)}/player)">${fmt(r.aScore)}</td>
                     <td><strong>${r.teamB}</strong></td>
                     <td>${playersCell(r.bGave)}</td>
+                    <td class="right" title="Post-trade starter pts B got from A's players (avg ${fmt(r.bPerPlayer)}/player)">${fmt(r.bScore)}</td>
+                    <td>${verdict(r)}</td>
                     <td><span class="conf-badge conf-${r.confidence}">${r.confidence}</span></td>
                 </tr>
             `).join("")}
