@@ -702,6 +702,44 @@ function renderFranchise() {
 function initFrivolitiesPanel() {
     renderBiggestUpsets();
     renderBiggestCarries();
+    renderGoatTeams();
+}
+
+function renderGoatTeams() {
+    const t = document.getElementById("goat-teams-table");
+    const teams = STATE.data.goatTeams || [];
+    if (!teams.length) {
+        t.innerHTML = `<tbody><tr><td class="muted">No teams scored yet.</td></tr></tbody>`;
+        return;
+    }
+    const breakdown = (g) =>
+        `PPG ${fmt(g.ppgScore)} + AP ${fmt(g.allPlayScore)} + SS ${fmt(g.startSitScore)} + Elite ${fmt(g.eliteScore)}${g.champBonus ? " + Ring +15" : ""}`;
+    const rows = teams.map((g, i) => `
+        <tr>
+            <td class="right">${i + 1}</td>
+            <td>${g.year}</td>
+            <td><strong>${g.owner}</strong></td>
+            <td>${g.team}</td>
+            <td>${g.record}${g.champion ? " 🏆" : ""}</td>
+            <td class="right">${fmt(g.ppg)}</td>
+            <td class="right">${(g.allPlayWinPct * 100).toFixed(1)}%</td>
+            <td class="right">${(g.startSitEff * 100).toFixed(1)}%</td>
+            <td class="right">${g.elitePlayers}</td>
+            <td class="right" title="${breakdown(g)}"><strong>${fmt(g.composite, 1)}</strong></td>
+        </tr>`).join("");
+    t.innerHTML = `
+        <thead><tr>
+            <th class="right">#</th><th>Year</th>
+            <th>Owner</th><th>Team</th>
+            <th>Record</th>
+            <th class="right" title="Points per game">PPG</th>
+            <th class="right" title="Win % if you played every other team each week">All-Play %</th>
+            <th class="right" title="Starter pts / optimal lineup pts across the season">Start/Sit %</th>
+            <th class="right" title="Top-10 at QB/RB/WR/TE rostered this season">Elite</th>
+            <th class="right" title="Composite out of 100 (hover for breakdown)">Score</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+    `;
 }
 
 function renderBiggestUpsets() {

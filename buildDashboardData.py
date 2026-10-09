@@ -91,9 +91,9 @@ def load_weekly(gamecenter_dir):
                         continue
                     rows.append({
                         "week": week,
-                        "owner": row["Owner"],
+                        "owner": (row["Owner"] or "").strip(),
                         "total": total,
-                        "opponent": row["Opponent"],
+                        "opponent": (row.get("Opponent") or "").strip(),
                         "opponentTotal": opp_total,
                     })
         weekly[year] = rows
@@ -522,6 +522,208 @@ def detect_trades(gamecenter_dirs, standings):
 
     trades.sort(key=lambda t: (t["year"], t["week"]))
     return trades
+
+
+def _optimal_lineup_pts(players):
+    """Given a list of {pos, pts} on a roster, compute the best legal lineup
+    score for a 1 QB / 2 RB / 2 WR / 1 TE / 1 FLEX (RB-WR-TE) / 1 K / 1 DEF
+    starting slate. Greedy by position fills slots optimally for this slate."""
+    by_pos = {"QB": [], "RB": [], "WR": [], "TE": [], "K": [], "DEF": []}
+    for p in players:
+        if p["pos"] in by_pos:
+            by_pos[p["pos"]].append(p["pts"])
+    for v in by_pos.values():
+        v.sort(reverse=True)
+    def take(pos, n):
+        pool = by_pos[pos]
+        taken = pool[:n]
+        del pool[:n]
+        return taken
+    total = 0.0
+    total += sum(take("QB", 1))
+    total += sum(take("RB", 2))
+    total += sum(take("WR", 2))
+    total += sum(take("TE", 1))
+    # Flex: best remaining of RB/WR/TE
+    flex_pool = by_pos["RB"] + by_pos["WR"] + by_pos["TE"]
+    flex_pool.sort(reverse=True)
+    if flex_pool:
+        total += flex_pool[0]
+    total += sum(take("K", 1))
+    total += sum(take("DEF", 1))
+    return total
+
+
+def build_goat_teams(gamecenter_dirs, seasons, n=25):
+    """Rank team-seasons by a composite:
+      - PPG                  25 pts  (ppg/150, capped at 1.0, × 25)
+      - All-play win %       25 pts  (how often you'd beat the field each week)
+      - Start/sit efficiency 20 pts  (actual starter pts / optimal lineup pts)
+      - Elite players        15 pts  (top-10 per position rostered that year / 8, capped × 15)
+      - Championship bonus  +15      (added flat if you won it all)
+    In-progress seasons are skipped.
+    """
+    if isinstance(gamecenter_dirs, str):
+        gamecenter_dirs = [gamecenter_dirs]
+    BENCH_SLOTS = {"BN", "RES"}
+    year_paths = {}
+    for d in gamecenter_dirs:
+        if not os.path.isdir(d):
+            continue
+        for yn in sorted(os.listdir(d)):
+            yp = os.path.join(d, yn)
+            if os.path.isdir(yp):
+                year_paths[yn] = yp
+
+    # Walk CSVs: per (year, week, owner) build the roster, actual pts, optimal pts
+    weekly = {}
+    # Per-season per-player: starter pts for that player on any team that year
+    # Used for elite-player identification (position top-10).
+    season_player_pts = {}  # year -> {(pos, key): starter_pts}
+    # Which teams rostered which player at least once in which season
+    rostered_by = {}  # (year, pos, key) -> set(owner)
+
+    for yn in sorted(year_paths):
+        year = int(yn)
+        for fn in sorted(os.listdir(year_paths[yn]),
+                         key=lambda n: int(n[:-4]) if n.endswith(".csv") else 999):
+            if not fn.endswith(".csv"):
+                continue
+            week = int(fn[:-4])
+            with open(os.path.join(year_paths[yn], fn), newline="") as f:
+                reader = csv.reader(f)
+                header = next(reader, None)
+                if not header:
+                    continue
+                slot_cols = []
+                i = 0
+                while i < len(header):
+                    h = header[i]
+                    if h in {"Owner", "Rank", "Total", "Opponent", "Opponent Total", "Points"}:
+                        i += 1
+                        continue
+                    if i + 1 < len(header) and header[i + 1] == "Points":
+                        slot_cols.append((h, i, i + 1))
+                        i += 2
+                    else:
+                        i += 1
+                for row in reader:
+                    if not row or len(row) < 2:
+                        continue
+                    owner = (row[0] or "").strip()
+                    players = []
+                    actual = 0.0
+                    for slot, ni, pi in slot_cols:
+                        if ni >= len(row):
+                            continue
+                        info = parse_gc_player(row[ni])
+                        try:
+                            pts = float((row[pi] or "0").replace(",", "")) \
+                                if pi < len(row) else 0.0
+                        except ValueError:
+                            pts = 0.0
+                        is_starter = slot not in BENCH_SLOTS
+                        if is_starter:
+                            actual += pts
+                        if info:
+                            players.append({"pos": info["pos"], "pts": pts,
+                                            "key": info["key"]})
+                            rostered_by.setdefault((year, info["pos"], info["key"]), set()).add(owner)
+                            if is_starter:
+                                yr_bucket = season_player_pts.setdefault(year, {})
+                                k = (info["pos"], info["key"])
+                                yr_bucket[k] = yr_bucket.get(k, 0.0) + pts
+                    opt = _optimal_lineup_pts(players)
+                    weekly[(year, week, owner)] = {"actual": actual, "optimal": opt}
+
+    # Elite players per year: top 10 by position (QB/RB/WR/TE)
+    elite = {}  # year -> set((pos, key))
+    for year, pts in season_player_pts.items():
+        by_pos = {}
+        for (pos, key), total in pts.items():
+            by_pos.setdefault(pos, []).append((total, key))
+        s = set()
+        for pos in ("QB", "RB", "WR", "TE"):
+            top = sorted(by_pos.get(pos, []), reverse=True)[:10]
+            for _, key in top:
+                s.add((pos, key))
+        elite[year] = s
+
+    # Aggregate per (year, owner)
+    per_team = {}
+    for (year, week, owner), v in weekly.items():
+        t = per_team.setdefault((year, owner), {"actual": 0.0, "optimal": 0.0,
+                                                 "games": 0})
+        t["actual"] += v["actual"]
+        t["optimal"] += v["optimal"]
+        t["games"] += 1
+
+    # All-play record from seasons' weekly matchup totals
+    all_play = {}  # (year, owner) -> {"wins": X, "games": Y}
+    for s in seasons:
+        year = s["year"]
+        for wk in s["weeks"]:
+            scores = []  # (owner, pts)
+            for m in wk["matchups"]:
+                scores.append((m["home"], m["homePts"]))
+                scores.append((m["away"], m["awayPts"]))
+            for owner, pts in scores:
+                wins = sum(1 for o2, p2 in scores if o2 != owner and p2 < pts)
+                games = len(scores) - 1
+                a = all_play.setdefault((year, owner), {"wins": 0, "games": 0})
+                a["wins"] += wins
+                a["games"] += games
+
+    # Build final records
+    out = []
+    for s in seasons:
+        if s.get("inProgress"):
+            continue
+        year = s["year"]
+        for team in s["standings"]:
+            owner = team["manager"]
+            per = per_team.get((year, owner))
+            if not per or per["games"] == 0:
+                continue
+            games = team["wins"] + team["losses"] + team["ties"]
+            ppg = (team["pointsFor"] / games) if games else 0.0
+            ap = all_play.get((year, owner))
+            ap_wpct = (ap["wins"] / ap["games"]) if ap and ap["games"] else 0.0
+            ss_eff = (per["actual"] / per["optimal"]) if per["optimal"] else 0.0
+            # Elite players rostered: team must appear in rostered_by for the (pos, key)
+            elite_count = 0
+            for pos, key in elite.get(year, []):
+                if owner in rostered_by.get((year, pos, key), set()):
+                    elite_count += 1
+            champion = bool(team.get("champion"))
+
+            ppg_score = min(ppg / 150.0, 1.0) * 25
+            ap_score = ap_wpct * 25
+            ss_score = min(ss_eff, 1.0) * 20
+            elite_score = min(elite_count / 8.0, 1.0) * 15
+            champ_bonus = 15 if champion else 0
+
+            composite = ppg_score + ap_score + ss_score + elite_score + champ_bonus
+            out.append({
+                "year": year,
+                "owner": owner,
+                "team": team["team"],
+                "record": f'{team["wins"]}-{team["losses"]}'
+                    + (f'-{team["ties"]}' if team["ties"] else ''),
+                "ppg": round(ppg, 2),
+                "allPlayWinPct": round(ap_wpct, 3),
+                "startSitEff": round(ss_eff, 3),
+                "elitePlayers": elite_count,
+                "champion": champion,
+                "ppgScore": round(ppg_score, 2),
+                "allPlayScore": round(ap_score, 2),
+                "startSitScore": round(ss_score, 2),
+                "eliteScore": round(elite_score, 2),
+                "champBonus": champ_bonus,
+                "composite": round(composite, 2),
+            })
+    out.sort(key=lambda r: -r["composite"])
+    return out[:n]
 
 
 def build_biggest_carries(gamecenter_dirs, seasons, n=20):
@@ -1158,6 +1360,7 @@ def main():
     biggest_upsets = build_biggest_upsets(seasons)
     biggest_carries = build_biggest_carries(gamecenter_dirs, seasons)
     trades_detected = detect_trades(gamecenter_dirs, standings)
+    goat_teams = build_goat_teams(gamecenter_dirs, seasons)
     drafts = {}
     for d in draft_dirs:
         if os.path.isdir(d):
@@ -1182,6 +1385,7 @@ def main():
         "biggestUpsets": biggest_upsets,
         "biggestCarries": biggest_carries,
         "trades": trades_detected,
+        "goatTeams": goat_teams,
         "drafts": drafts,
         "draftOwnerStats": draft_owner_stats,
         "playersCareer": players_career,
