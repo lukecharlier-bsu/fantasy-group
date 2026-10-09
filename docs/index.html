@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League History Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1791313369" />
+    <link rel="stylesheet" href="styles.css?v=1791565863" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -20,6 +20,7 @@
             <button class="tab" data-tab="weekly">Weekly Trends</button>
             <button class="tab" data-tab="drafts">Drafts</button>
             <button class="tab" data-tab="franchise">Franchise Leaders</button>
+            <button class="tab" data-tab="frivolities">Frivolities</button>
         </nav>
     </header>
 
@@ -189,12 +190,23 @@
                 </div>
             </div>
         </section>
+
+        <!-- FRIVOLITIES -->
+        <section class="panel" id="panel-frivolities">
+            <div class="card">
+                <h3>Biggest Upsets</h3>
+                <p class="muted">Ranked by how heavily the loser was favored going in — composite of season-to-date PPG gap plus win-% gap (both measured BEFORE the game).</p>
+                <div class="scroll-x">
+                    <table id="upsets-table" class="data-table"></table>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footnote">
         <span id="data-stamp"></span>
     </footer>
 
-    <script src="app.js?v=1791313369"></script>
+    <script src="app.js?v=1791565863"></script>
 </body>
 </html>

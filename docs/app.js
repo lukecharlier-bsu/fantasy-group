@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initWeeklyPanel();
     initDraftsPanel();
     initFranchisePanel();
+    initFrivolitiesPanel();
 });
 
 // ---------- Tabs ----------
@@ -705,5 +706,39 @@ function renderFranchise() {
             renderFranchise();
         });
     });
+}
+
+// ---------- Frivolities ----------
+function initFrivolitiesPanel() {
+    const t = document.getElementById("upsets-table");
+    const upsets = STATE.data.biggestUpsets || [];
+    if (!upsets.length) {
+        t.innerHTML = `<tbody><tr><td class="muted">No upsets yet (need multiple weeks of data).</td></tr></tbody>`;
+        return;
+    }
+    const rows = upsets.map((u, i) => `
+        <tr>
+            <td class="right">${i + 1}</td>
+            <td>${u.year}</td>
+            <td>${u.week}</td>
+            <td><strong>${u.winner}</strong> <span class="muted">(${u.winnerPreRecord}, ${fmt(u.winnerPrePPG)} PPG)</span></td>
+            <td class="right">${fmt(u.winnerPts)} – ${fmt(u.loserPts)}</td>
+            <td>${u.loser} <span class="muted">(${u.loserPreRecord}, ${fmt(u.loserPrePPG)} PPG)</span></td>
+            <td class="right">${u.ppgDiff > 0 ? "+" : ""}${fmt(u.ppgDiff)}</td>
+            <td class="right">${u.winPctDiff > 0 ? "+" : ""}${(u.winPctDiff * 100).toFixed(1)}%</td>
+            <td class="right"><strong>${fmt(u.upsetScore, 1)}</strong></td>
+        </tr>`).join("");
+    t.innerHTML = `
+        <thead><tr>
+            <th class="right">#</th><th>Year</th><th>Wk</th>
+            <th>Winner <span class="muted">(pre)</span></th>
+            <th class="right">Score</th>
+            <th>Loser <span class="muted">(pre)</span></th>
+            <th class="right">PPG Gap</th>
+            <th class="right">Win% Gap</th>
+            <th class="right">Upset Score</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+    `;
 }
 

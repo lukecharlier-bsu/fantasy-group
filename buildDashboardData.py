@@ -267,6 +267,76 @@ def build_head_to_head(seasons):
     return out
 
 
+def build_biggest_upsets(seasons, n=20):
+    """For each completed matchup, measure how heavily the loser was favored
+    coming in (pre-matchup PPG + pre-matchup win %, both season-to-date). The
+    bigger that pre-game gap, the bigger the upset.
+    """
+    out = []
+    for s in seasons:
+        year = s["year"]
+        pre = {t["manager"]: {"wins": 0, "losses": 0, "ties": 0,
+                              "pf": 0.0, "games": 0}
+               for t in s["standings"]}
+        for week in s["weeks"]:
+            w_num = week["week"]
+            # Score the week's matchups against pre-week running stats first,
+            # then roll this week's results into pre.
+            for m in week["matchups"]:
+                h, hp, a, ap = m["home"], m["homePts"], m["away"], m["awayPts"]
+                if hp == ap or h not in pre or a not in pre:
+                    continue
+                winner, loser = (h, a) if hp > ap else (a, h)
+                winner_pts = max(hp, ap)
+                loser_pts = min(hp, ap)
+                wp, lp = pre[winner], pre[loser]
+                if wp["games"] == 0 or lp["games"] == 0:
+                    continue  # no prior data to compare
+                w_wpct = (wp["wins"] + 0.5 * wp["ties"]) / wp["games"]
+                l_wpct = (lp["wins"] + 0.5 * lp["ties"]) / lp["games"]
+                w_ppg = wp["pf"] / wp["games"]
+                l_ppg = lp["pf"] / lp["games"]
+                ppg_diff = l_ppg - w_ppg
+                wpct_diff = l_wpct - w_wpct
+                upset = ppg_diff + 100 * wpct_diff
+                if upset <= 0:
+                    continue  # loser wasn't actually favored
+                out.append({
+                    "year": year, "week": w_num,
+                    "winner": winner, "loser": loser,
+                    "winnerPts": round(winner_pts, 2),
+                    "loserPts": round(loser_pts, 2),
+                    "winnerPreRecord": f'{wp["wins"]}-{wp["losses"]}'
+                        + (f'-{wp["ties"]}' if wp["ties"] else ''),
+                    "loserPreRecord": f'{lp["wins"]}-{lp["losses"]}'
+                        + (f'-{lp["ties"]}' if lp["ties"] else ''),
+                    "winnerPrePPG": round(w_ppg, 2),
+                    "loserPrePPG": round(l_ppg, 2),
+                    "ppgDiff": round(ppg_diff, 2),
+                    "winPctDiff": round(wpct_diff, 3),
+                    "upsetScore": round(upset, 2),
+                })
+            for m in week["matchups"]:
+                h, hp, a, ap = m["home"], m["homePts"], m["away"], m["awayPts"]
+                if h not in pre or a not in pre:
+                    continue
+                pre[h]["pf"] += hp
+                pre[a]["pf"] += ap
+                pre[h]["games"] += 1
+                pre[a]["games"] += 1
+                if hp > ap:
+                    pre[h]["wins"] += 1
+                    pre[a]["losses"] += 1
+                elif ap > hp:
+                    pre[a]["wins"] += 1
+                    pre[h]["losses"] += 1
+                else:
+                    pre[h]["ties"] += 1
+                    pre[a]["ties"] += 1
+    out.sort(key=lambda g: -g["upsetScore"])
+    return out[:n]
+
+
 def build_weekly_extremes(seasons, n=10):
     """Top N highest and lowest scoring weeks."""
     all_scores = []
@@ -795,6 +865,7 @@ def main():
     owners = build_owner_stats(seasons)
     h2h = build_head_to_head(seasons)
     highs, lows, blowouts, nail_biters = build_weekly_extremes(seasons)
+    biggest_upsets = build_biggest_upsets(seasons)
     drafts = {}
     for d in draft_dirs:
         if os.path.isdir(d):
@@ -816,6 +887,7 @@ def main():
         "weeklyLows": lows,
         "blowouts": blowouts,
         "nailBiters": nail_biters,
+        "biggestUpsets": biggest_upsets,
         "drafts": drafts,
         "draftOwnerStats": draft_owner_stats,
         "playersCareer": players_career,
