@@ -281,10 +281,13 @@ def build_biggest_upsets(seasons, n=20):
         for week in s["weeks"]:
             w_num = week["week"]
             # Score the week's matchups against pre-week running stats first,
-            # then roll this week's results into pre.
+            # then roll this week's results into pre. Only count games played
+            # after week 6, so pre-game records have enough signal.
             for m in week["matchups"]:
                 h, hp, a, ap = m["home"], m["homePts"], m["away"], m["awayPts"]
                 if hp == ap or h not in pre or a not in pre:
+                    continue
+                if w_num <= 6:
                     continue
                 winner, loser = (h, a) if hp > ap else (a, h)
                 winner_pts = max(hp, ap)
