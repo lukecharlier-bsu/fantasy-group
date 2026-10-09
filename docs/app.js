@@ -680,9 +680,9 @@ function renderFranchise() {
     ];
     t.innerHTML = `
         <thead><tr>${cols.map(c => {
-            const arrow = c.field === sortField ? (sortDir === "desc" ? " ↓" : " ↑") : "";
             const align = c.align === "right" ? ' class="right"' : "";
-            return `<th${align} data-sort="${c.field}" style="cursor:pointer">${c.label}${arrow}</th>`;
+            const dirAttr = c.field === sortField ? ` data-sort-dir="${sortDir}"` : "";
+            return `<th${align}${dirAttr}>${c.label}</th>`;
         }).join("")}</tr></thead>
         <tbody>
             ${sorted.map(p => `<tr>${cols.map(c => {
@@ -695,18 +695,7 @@ function renderFranchise() {
             }).join("")}</tr>`).join("")}
         </tbody>
     `;
-    t.querySelectorAll("th[data-sort]").forEach(th => {
-        th.addEventListener("click", () => {
-            const field = th.dataset.sort;
-            if (FRANCHISE_STATE.sortField === field) {
-                FRANCHISE_STATE.sortDir = FRANCHISE_STATE.sortDir === "desc" ? "asc" : "desc";
-            } else {
-                FRANCHISE_STATE.sortField = field;
-                FRANCHISE_STATE.sortDir = (field === "display" || field === "pos") ? "asc" : "desc";
-            }
-            renderFranchise();
-        });
-    });
+    // Sorting is handled by the generic .data-table click delegate below.
 }
 
 // ---------- Frivolities ----------
@@ -859,3 +848,56 @@ function renderTrades() {
         </tbody>
     `;
 }
+
+// ---------- Generic click-to-sort for all .data-table tables ----------
+// Any <table class="data-table"> gets its columns click-sortable. Opt out
+// per-table by adding class "h2h" (used by the Head-to-Head matrix where
+// column ordering is semantic, not a sort axis). Cells can override the
+// sort value with a data-sort-value attribute; otherwise we pull the first
+// number out of the cell's text (stripping commas) and sort numerically,
+// falling back to a case-insensitive string compare when the column isn't
+// mostly numbers.
+document.addEventListener("click", (e) => {
+    const th = e.target.closest(".data-table:not(.h2h) thead th");
+    if (!th) return;
+    const table = th.closest("table");
+    if (!table || !table.tBodies[0]) return;
+    const header = th.parentElement;
+    const headerCells = Array.from(header.children);
+    const colIdx = headerCells.indexOf(th);
+    const prevDir = th.dataset.sortDir || "";
+    const dir = prevDir === "asc" ? "desc" : "asc";
+    headerCells.forEach(c => { if (c !== th) c.dataset.sortDir = ""; });
+    th.dataset.sortDir = dir;
+
+    const tbody = table.tBodies[0];
+    const rows = Array.from(tbody.querySelectorAll(":scope > tr"));
+    const extract = (row) => {
+        const cell = row.children[colIdx];
+        if (!cell) return { n: null, s: "" };
+        const explicit = cell.dataset.sortValue;
+        if (explicit != null && explicit !== "") {
+            const n = parseFloat(explicit);
+            return { n: isNaN(n) ? null : n, s: explicit.toLowerCase() };
+        }
+        const txt = cell.textContent.replace(/,/g, "").trim();
+        const m = txt.match(/-?\d+(?:\.\d+)?/);
+        return { n: m ? parseFloat(m[0]) : null, s: txt.toLowerCase() };
+    };
+    const vals = rows.map(extract);
+    const numericCount = vals.filter(v => v.n !== null).length;
+    const useNumeric = numericCount > vals.length / 2;
+    rows.sort((a, b) => {
+        const va = extract(a), vb = extract(b);
+        let cmp;
+        if (useNumeric) {
+            const av = va.n == null ? -Infinity : va.n;
+            const bv = vb.n == null ? -Infinity : vb.n;
+            cmp = av - bv;
+        } else {
+            cmp = va.s.localeCompare(vb.s);
+        }
+        return dir === "asc" ? cmp : -cmp;
+    });
+    rows.forEach(r => tbody.appendChild(r));
+});

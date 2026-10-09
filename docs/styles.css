@@ -303,3 +303,13 @@ canvas { max-height: 360px; }
 .conf-low { background: #3f2c04; color: #facc15; border: 1px solid #854d0e; }
 .trade-cell { line-height: 1.4; }
 .trade-cell .pos { color: var(--muted); font-size: 0.75rem; }
+
+/* Click-to-sort column headers (any .data-table except H2H matrix) */
+.data-table:not(.h2h) thead th { cursor: pointer; user-select: none; }
+.data-table:not(.h2h) thead th:hover { color: var(--text); }
+.data-table:not(.h2h) thead th[data-sort-dir="asc"]::after {
+    content: " ↑"; opacity: 0.75; color: var(--accent);
+}
+.data-table:not(.h2h) thead th[data-sort-dir="desc"]::after {
+    content: " ↓"; opacity: 0.75; color: var(--accent);
+}
