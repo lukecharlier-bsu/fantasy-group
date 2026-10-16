@@ -786,6 +786,33 @@ def build_goat_teams(gamecenter_dirs, seasons, n=25):
     return out[:n]
 
 
+def build_one_start_club(players_career, n=40):
+    """Players started exactly once by any manager in league history. We lean
+    on weekHighInfo from load_player_scoring — for a one-start player it IS
+    that one start. Ranked by points scored (highest = biggest one-week legend)."""
+    out = []
+    for key, c in players_career.items():
+        if c.get("starts") != 1:
+            continue
+        info = c.get("weekHighInfo")
+        if not info:
+            continue
+        out.append({
+            "key": key,
+            "display": c["display"],
+            "pos": c["pos"],
+            "year": info["year"],
+            "week": info["week"],
+            "owner": info["owner"],
+            "points": round(info["points"], 2),
+            "benchApps": c.get("benchApps", 0),
+            "seasons": c.get("seasons", []),
+            "espnId": c.get("espnId"),
+        })
+    out.sort(key=lambda r: -r["points"])
+    return out[:n]
+
+
 def build_most_efficient_wins(stats_dirs, seasons, n=20, min_touches=25):
     """Team-wide: highest team starter pts / total team touches, in a win.
     Touches sum across starters:
@@ -1645,6 +1672,7 @@ def main():
     players_by_year, players_career, players_by_owner = load_player_scoring(gamecenter_dirs)
     bust_riser = compute_busts_and_risers(drafts, players_by_year)
     enrich_with_espn_ids(players_by_owner, players_career, drafts)
+    one_start_club = build_one_start_club(players_career)
 
     payload = {
         "leagueIds": [str(x) for x in league_ids],
@@ -1664,6 +1692,7 @@ def main():
         "goatTeams": goat_teams,
         "mostEvenGames": most_even,
         "mostEfficientWins": most_efficient,
+        "oneStartClub": one_start_club,
         "drafts": drafts,
         "draftOwnerStats": draft_owner_stats,
         "playersCareer": players_career,

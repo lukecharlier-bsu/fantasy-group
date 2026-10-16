@@ -143080,6 +143080,576 @@
       "opponentPts": 96.06
     }
   ],
+  "oneStartClub": [
+    {
+      "key": "QB|sanders|S",
+      "display": "S. Sanders",
+      "pos": "QB",
+      "year": 2025,
+      "week": 14,
+      "owner": "Howard",
+      "points": 33.46,
+      "benchApps": 3,
+      "seasons": [
+        2025
+      ],
+      "espnId": 4432762
+    },
+    {
+      "key": "RB|guerendo|I",
+      "display": "I. Guerendo",
+      "pos": "RB",
+      "year": 2024,
+      "week": 14,
+      "owner": "Sean",
+      "points": 26.8,
+      "benchApps": 2,
+      "seasons": [
+        2024
+      ],
+      "espnId": 4372561
+    },
+    {
+      "key": "WR|mcmillan|J",
+      "display": "J. McMillan",
+      "pos": "WR",
+      "year": 2024,
+      "week": 17,
+      "owner": "Howard",
+      "points": 23.0,
+      "benchApps": 5,
+      "seasons": [
+        2024,
+        2026
+      ],
+      "espnId": 4430834
+    },
+    {
+      "key": "TE|otton|C",
+      "display": "C. Otton",
+      "pos": "TE",
+      "year": 2024,
+      "week": 9,
+      "owner": "Sean",
+      "points": 21.7,
+      "benchApps": 3,
+      "seasons": [
+        2024
+      ],
+      "espnId": 4243331
+    },
+    {
+      "key": "RB|lloyd|M",
+      "display": "M. Lloyd",
+      "pos": "RB",
+      "year": 2026,
+      "week": 5,
+      "owner": "Howard",
+      "points": 16.7,
+      "benchApps": 2,
+      "seasons": [
+        2026
+      ],
+      "espnId": 4429023
+    },
+    {
+      "key": "WR|cooper|D",
+      "display": "D. Cooper",
+      "pos": "WR",
+      "year": 2026,
+      "week": 5,
+      "owner": "Sean",
+      "points": 15.1,
+      "benchApps": 0,
+      "seasons": [
+        2026
+      ],
+      "espnId": 4715355
+    },
+    {
+      "key": "WR|franklin|T",
+      "display": "T. Franklin",
+      "pos": "WR",
+      "year": 2025,
+      "week": 10,
+      "owner": "Matthew",
+      "points": 15.0,
+      "benchApps": 10,
+      "seasons": [
+        2025
+      ],
+      "espnId": 4431280
+    },
+    {
+      "key": "RB|ogunbowale|D",
+      "display": "D. Ogunbowale",
+      "pos": "RB",
+      "year": 2021,
+      "week": 17,
+      "owner": "Luke",
+      "points": 14.8,
+      "benchApps": 0,
+      "seasons": [
+        2021
+      ],
+      "espnId": 2983509
+    },
+    {
+      "key": "TE|doyle|J",
+      "display": "J. Doyle",
+      "pos": "TE",
+      "year": 2019,
+      "week": 10,
+      "owner": "Sean",
+      "points": 13.4,
+      "benchApps": 4,
+      "seasons": [
+        2019
+      ],
+      "espnId": null
+    },
+    {
+      "key": "RB|demercado|E",
+      "display": "E. Demercado",
+      "pos": "RB",
+      "year": 2025,
+      "week": 10,
+      "owner": "Todd",
+      "points": 13.4,
+      "benchApps": 3,
+      "seasons": [
+        2023,
+        2025
+      ],
+      "espnId": 4362478
+    },
+    {
+      "key": "RB|gallman|W",
+      "display": "W. Gallman",
+      "pos": "RB",
+      "year": 2020,
+      "week": 8,
+      "owner": "Justin",
+      "points": 13.2,
+      "benchApps": 9,
+      "seasons": [
+        2019,
+        2020
+      ],
+      "espnId": null
+    },
+    {
+      "key": "RB|knight|B",
+      "display": "B. Knight",
+      "pos": "RB",
+      "year": 2025,
+      "week": 12,
+      "owner": "Alex",
+      "points": 13.2,
+      "benchApps": 9,
+      "seasons": [
+        2022,
+        2025
+      ],
+      "espnId": 4427728
+    },
+    {
+      "key": "RB|howard|J",
+      "display": "J. Howard",
+      "pos": "RB",
+      "year": 2019,
+      "week": 5,
+      "owner": "Alex",
+      "points": 12.2,
+      "benchApps": 2,
+      "seasons": [
+        2019
+      ],
+      "espnId": null
+    },
+    {
+      "key": "QB|pickett|K",
+      "display": "K. Pickett",
+      "pos": "QB",
+      "year": 2022,
+      "week": 5,
+      "owner": "Justin",
+      "points": 12.08,
+      "benchApps": 2,
+      "seasons": [
+        2022
+      ],
+      "espnId": 4240703
+    },
+    {
+      "key": "QB|ward|C",
+      "display": "C. Ward",
+      "pos": "QB",
+      "year": 2025,
+      "week": 3,
+      "owner": "Howard",
+      "points": 11.96,
+      "benchApps": 0,
+      "seasons": [
+        2025
+      ],
+      "espnId": null
+    },
+    {
+      "key": "RB|dallas|D",
+      "display": "D. Dallas",
+      "pos": "RB",
+      "year": 2020,
+      "week": 9,
+      "owner": "Matthew",
+      "points": 11.9,
+      "benchApps": 0,
+      "seasons": [
+        2020
+      ],
+      "espnId": 4240631
+    },
+    {
+      "key": "WR|golden|M",
+      "display": "M. Golden",
+      "pos": "WR",
+      "year": 2025,
+      "week": 4,
+      "owner": "Luke",
+      "points": 11.3,
+      "benchApps": 18,
+      "seasons": [
+        2025,
+        2026
+      ],
+      "espnId": 4701936
+    },
+    {
+      "key": "RB|cohen|T",
+      "display": "T. Cohen",
+      "pos": "RB",
+      "year": 2019,
+      "week": 5,
+      "owner": "Luke",
+      "points": 10.9,
+      "benchApps": 7,
+      "seasons": [
+        2019
+      ],
+      "espnId": null
+    },
+    {
+      "key": "WR|palmer|J",
+      "display": "J. Palmer",
+      "pos": "WR",
+      "year": 2022,
+      "week": 12,
+      "owner": "Matthew",
+      "points": 10.6,
+      "benchApps": 0,
+      "seasons": [
+        2022
+      ],
+      "espnId": 4242433
+    },
+    {
+      "key": "RB|bigsby|T",
+      "display": "T. Bigsby",
+      "pos": "RB",
+      "year": 2024,
+      "week": 8,
+      "owner": "Sean",
+      "points": 10.6,
+      "benchApps": 3,
+      "seasons": [
+        2024
+      ],
+      "espnId": 4429013
+    },
+    {
+      "key": "DEF||redskins",
+      "display": "Redskins DEF",
+      "pos": "DEF",
+      "year": 2019,
+      "week": 6,
+      "owner": "Sean",
+      "points": 10.0,
+      "benchApps": 0,
+      "seasons": [
+        2019
+      ],
+      "espnId": null
+    },
+    {
+      "key": "QB|flacco|J",
+      "display": "J. Flacco",
+      "pos": "QB",
+      "year": 2025,
+      "week": 11,
+      "owner": "Justin",
+      "points": 9.86,
+      "benchApps": 0,
+      "seasons": [
+        2025
+      ],
+      "espnId": 11252
+    },
+    {
+      "key": "RB|bernard|G",
+      "display": "G. Bernard",
+      "pos": "RB",
+      "year": 2020,
+      "week": 11,
+      "owner": "Ulises",
+      "points": 9.5,
+      "benchApps": 1,
+      "seasons": [
+        2020
+      ],
+      "espnId": 4685261
+    },
+    {
+      "key": "RB|akers|C",
+      "display": "C. Akers",
+      "pos": "RB",
+      "year": 2022,
+      "week": 14,
+      "owner": "Howard",
+      "points": 9.3,
+      "benchApps": 10,
+      "seasons": [
+        2022,
+        2023
+      ],
+      "espnId": 4240021
+    },
+    {
+      "key": "WR|hunter|T",
+      "display": "T. Hunter",
+      "pos": "WR",
+      "year": 2025,
+      "week": 1,
+      "owner": "Howard",
+      "points": 9.3,
+      "benchApps": 6,
+      "seasons": [
+        2025,
+        2026
+      ],
+      "espnId": 4685415
+    },
+    {
+      "key": "WR|johnson|T",
+      "display": "T. Johnson",
+      "pos": "WR",
+      "year": 2025,
+      "week": 8,
+      "owner": "Todd",
+      "points": 9.3,
+      "benchApps": 9,
+      "seasons": [
+        2025
+      ],
+      "espnId": null
+    },
+    {
+      "key": "RB|penny|R",
+      "display": "R. Penny",
+      "pos": "RB",
+      "year": 2022,
+      "week": 1,
+      "owner": "Matthew",
+      "points": 8.7,
+      "benchApps": 1,
+      "seasons": [
+        2022
+      ],
+      "espnId": null
+    },
+    {
+      "key": "WR|boutte|K",
+      "display": "K. Boutte",
+      "pos": "WR",
+      "year": 2025,
+      "week": 2,
+      "owner": "Sean",
+      "points": 8.6,
+      "benchApps": 2,
+      "seasons": [
+        2025
+      ],
+      "espnId": 4429022
+    },
+    {
+      "key": "WR|cole|K",
+      "display": "K. Cole",
+      "pos": "WR",
+      "year": 2020,
+      "week": 3,
+      "owner": "Sean",
+      "points": 8.3,
+      "benchApps": 0,
+      "seasons": [
+        2020
+      ],
+      "espnId": null
+    },
+    {
+      "key": "RB|shipley|W",
+      "display": "W. Shipley",
+      "pos": "RB",
+      "year": 2026,
+      "week": 5,
+      "owner": "Aiden",
+      "points": 8.3,
+      "benchApps": 0,
+      "seasons": [
+        2026
+      ],
+      "espnId": 4431545
+    },
+    {
+      "key": "TE|dwelley|R",
+      "display": "R. Dwelley",
+      "pos": "TE",
+      "year": 2020,
+      "week": 9,
+      "owner": "Sean",
+      "points": 8.2,
+      "benchApps": 0,
+      "seasons": [
+        2020
+      ],
+      "espnId": 3120303
+    },
+    {
+      "key": "TE|smith|I",
+      "display": "I. Smith",
+      "pos": "TE",
+      "year": 2022,
+      "week": 5,
+      "owner": "Howard",
+      "points": 8.2,
+      "benchApps": 2,
+      "seasons": [
+        2021,
+        2022
+      ],
+      "espnId": 4040980
+    },
+    {
+      "key": "TE|griffin|R",
+      "display": "R. Griffin",
+      "pos": "TE",
+      "year": 2019,
+      "week": 13,
+      "owner": "Sean",
+      "points": 8.0,
+      "benchApps": 1,
+      "seasons": [
+        2019
+      ],
+      "espnId": 16140
+    },
+    {
+      "key": "RB|barber|P",
+      "display": "P. Barber",
+      "pos": "RB",
+      "year": 2019,
+      "week": 4,
+      "owner": "Alex",
+      "points": 7.9,
+      "benchApps": 3,
+      "seasons": [
+        2019
+      ],
+      "espnId": null
+    },
+    {
+      "key": "WR|mccloud|R",
+      "display": "R. McCloud",
+      "pos": "WR",
+      "year": 2024,
+      "week": 2,
+      "owner": "Aiden",
+      "points": 7.5,
+      "benchApps": 0,
+      "seasons": [
+        2024
+      ],
+      "espnId": 3728262
+    },
+    {
+      "key": "RB|mcnichols|J",
+      "display": "J. McNichols",
+      "pos": "RB",
+      "year": 2021,
+      "week": 9,
+      "owner": "Luke",
+      "points": 6.5,
+      "benchApps": 1,
+      "seasons": [
+        2021
+      ],
+      "espnId": 3127586
+    },
+    {
+      "key": "WR|ayomanor|E",
+      "display": "E. Ayomanor",
+      "pos": "WR",
+      "year": 2025,
+      "week": 4,
+      "owner": "Howard",
+      "points": 6.4,
+      "benchApps": 1,
+      "seasons": [
+        2025
+      ],
+      "espnId": 4883647
+    },
+    {
+      "key": "WR|burden|L",
+      "display": "L. Burden",
+      "pos": "WR",
+      "year": 2026,
+      "week": 2,
+      "owner": "Joshua",
+      "points": 6.2,
+      "benchApps": 4,
+      "seasons": [
+        2026
+      ],
+      "espnId": 4685278
+    },
+    {
+      "key": "K|york|C",
+      "display": "C. York",
+      "pos": "K",
+      "year": 2022,
+      "week": 2,
+      "owner": "Joshua",
+      "points": 6.0,
+      "benchApps": 0,
+      "seasons": [
+        2022
+      ],
+      "espnId": 4428963
+    },
+    {
+      "key": "QB|mccarthy|J",
+      "display": "J. McCarthy",
+      "pos": "QB",
+      "year": 2025,
+      "week": 11,
+      "owner": "Matthew",
+      "points": 6.0,
+      "benchApps": 2,
+      "seasons": [
+        2025
+      ],
+      "espnId": 4433970
+    }
+  ],
   "drafts": {
     "2019": [
       {

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League History Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1792178103" />
+    <link rel="stylesheet" href="styles.css?v=1792180128" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -195,39 +195,38 @@
 
         <!-- FRIVOLITIES -->
         <section class="panel" id="panel-frivolities">
-            <div class="card">
-                <h3>Biggest Upsets</h3>
-                <p class="muted">Ranked by how heavily the loser was favored going in — composite of season-to-date PPG gap plus win-% gap (both measured BEFORE the game). Week 7 onwards only.</p>
-                <div class="scroll-x">
-                    <table id="upsets-table" class="data-table"></table>
+            <div id="frivolities-nav" class="friv-grid"></div>
+            <div id="frivolities-detail" style="display:none">
+                <button id="frivolities-back" class="back-btn">← All frivolities</button>
+                <div class="card friv-detail" id="friv-upsets" style="display:none">
+                    <h3>Biggest Upsets</h3>
+                    <p class="muted">Ranked by how heavily the loser was favored going in — composite of season-to-date PPG gap plus win-% gap (both measured BEFORE the game). Week 7 onwards only.</p>
+                    <div class="scroll-x"><table id="upsets-table" class="data-table"></table></div>
                 </div>
-            </div>
-            <div class="card">
-                <h3>Biggest Carry Jobs</h3>
-                <p class="muted">Wins where a single starter made up the largest share of their team's total points.</p>
-                <div class="scroll-x">
-                    <table id="carries-table" class="data-table"></table>
+                <div class="card friv-detail" id="friv-carries" style="display:none">
+                    <h3>Biggest Carry Jobs</h3>
+                    <p class="muted">Wins where a single starter made up the largest share of their team's total points.</p>
+                    <div class="scroll-x"><table id="carries-table" class="data-table"></table></div>
                 </div>
-            </div>
-            <div class="card">
-                <h3>Most Balanced Wins</h3>
-                <p class="muted">Lowest coefficient of variation (std ÷ mean) across the starting lineup — every slot contributed. Wins only, minimum 100 total pts to filter out "everyone was equally bad" blowouts.</p>
-                <div class="scroll-x">
-                    <table id="even-games-table" class="data-table"></table>
+                <div class="card friv-detail" id="friv-even" style="display:none">
+                    <h3>Most Balanced Wins</h3>
+                    <p class="muted">Lowest coefficient of variation (std ÷ mean) across the starting lineup — every slot contributed. Wins only, minimum 100 total pts to filter out "everyone was equally bad" blowouts.</p>
+                    <div class="scroll-x"><table id="even-games-table" class="data-table"></table></div>
                 </div>
-            </div>
-            <div class="card">
-                <h3>Most Efficient Wins</h3>
-                <p class="muted">Team-wide fantasy points per touch. Offensive pts = starter pts from QB/RB/WR/TE (K and DEF don't have touches, so they're excluded from both sides of the ratio). Touches sum across the offense: rush attempts + receptions, plus QB pass attempts. Wins only. Historical seasons use ESPN's NFL box-score API joined to the NFL.com fantasy data by player name.</p>
-                <div class="scroll-x">
-                    <table id="touches-table" class="data-table"></table>
+                <div class="card friv-detail" id="friv-touches" style="display:none">
+                    <h3>Most Efficient Wins</h3>
+                    <p class="muted">Team-wide fantasy points per touch. Offensive pts = starter pts from QB/RB/WR/TE (K and DEF don't have touches, so they're excluded from both sides of the ratio). Touches sum across the offense: rush attempts + receptions, plus QB pass attempts. Wins only. Historical seasons use ESPN's NFL box-score API joined to the NFL.com fantasy data by player name.</p>
+                    <div class="scroll-x"><table id="touches-table" class="data-table"></table></div>
                 </div>
-            </div>
-            <div class="card">
-                <h3>GOAT Teams</h3>
-                <p class="muted">All-time best team-seasons, scored out of 100: PPG (25), all-play win % (25), start/sit efficiency (20), elite players rostered — top 10 at each position (15), and a +15 championship bonus. In-progress seasons excluded.</p>
-                <div class="scroll-x">
-                    <table id="goat-teams-table" class="data-table"></table>
+                <div class="card friv-detail" id="friv-goat" style="display:none">
+                    <h3>GOAT Teams</h3>
+                    <p class="muted">All-time best team-seasons, scored out of 100: PPG (25), all-play win % (25), start/sit efficiency (20), elite players rostered — top 10 at each position (15), and a +15 championship bonus. In-progress seasons excluded.</p>
+                    <div class="scroll-x"><table id="goat-teams-table" class="data-table"></table></div>
+                </div>
+                <div class="card friv-detail" id="friv-onestart" style="display:none">
+                    <h3>The One Start Club</h3>
+                    <p class="muted">Players who were started exactly once by any manager in league history. Ranked by points in that one and only start — the biggest cup-of-coffee legends. Click a row to open the game.</p>
+                    <div class="scroll-x"><table id="onestart-table" class="data-table"></table></div>
                 </div>
             </div>
         </section>
@@ -276,6 +275,6 @@
         <span id="data-stamp"></span>
     </footer>
 
-    <script src="app.js?v=1792178103"></script>
+    <script src="app.js?v=1792180128"></script>
 </body>
 </html>

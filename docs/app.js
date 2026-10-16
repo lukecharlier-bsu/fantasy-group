@@ -700,12 +700,72 @@ function renderFranchise() {
 }
 
 // ---------- Frivolities ----------
+const FRIVOLITIES = [
+    { id: "upsets",   title: "Biggest Upsets",     icon: "🙃",
+      desc: "David vs Goliath games where the heavy favorite lost.",
+      preview: (d) => (d.biggestUpsets || [])[0],
+      previewText: (r) => `${r.year} wk${r.week}: <strong>${r.winner}</strong> beat ${r.loser} ${fmt(r.winnerPts)}–${fmt(r.loserPts)}` },
+    { id: "carries",  title: "Biggest Carry Jobs", icon: "💪",
+      desc: "Wins where one starter put the team on their back.",
+      preview: (d) => (d.biggestCarries || [])[0],
+      previewText: (r) => `${r.year} wk${r.week}: <strong>${r.player}</strong> = ${(r.pct * 100).toFixed(1)}% of ${r.owner}'s pts` },
+    { id: "even",     title: "Most Balanced Wins", icon: "⚖️",
+      desc: "Every starter contributed — low-variance team days.",
+      preview: (d) => (d.mostEvenGames || [])[0],
+      previewText: (r) => `${r.year} wk${r.week}: <strong>${r.owner}</strong> CV ${r.cv.toFixed(3)}, mean ${fmt(r.mean)}` },
+    { id: "touches",  title: "Most Efficient Wins", icon: "🎯",
+      desc: "Highest team-wide points per touch in a win.",
+      preview: (d) => (d.mostEfficientWins || [])[0],
+      previewText: (r) => `${r.year} wk${r.week}: <strong>${r.owner}</strong> ${fmt(r.offPts)} on ${r.touches} touches = ${fmt(r.ptsPerTouch)}/touch` },
+    { id: "goat",     title: "GOAT Teams",         icon: "🏆",
+      desc: "All-time best team-seasons by composite score.",
+      preview: (d) => (d.goatTeams || [])[0],
+      previewText: (r) => `${r.year} <strong>${r.owner}</strong> (${r.record}) — ${fmt(r.composite, 1)}` },
+    { id: "onestart", title: "The One Start Club", icon: "☕",
+      desc: "Players started exactly once in league history.",
+      preview: (d) => (d.oneStartClub || [])[0],
+      previewText: (r) => `<strong>${r.display}</strong> ${r.pos} — ${fmt(r.points)} pts, ${r.year} wk${r.week} (${r.owner})` },
+];
+
 function initFrivolitiesPanel() {
+    // Render each frivolity's content once (hidden by default)
     renderBiggestUpsets();
     renderBiggestCarries();
     renderMostEvenGames();
     renderMostEfficientWins();
     renderGoatTeams();
+    renderOneStartClub();
+
+    // Build the nav grid
+    const nav = document.getElementById("frivolities-nav");
+    nav.innerHTML = FRIVOLITIES.map(f => {
+        const p = f.preview(STATE.data);
+        const previewHTML = p ? `<div class="friv-preview">${f.previewText(p)}</div>` : "";
+        return `<div class="friv-card" data-friv="${f.id}">
+            <div class="friv-icon">${f.icon}</div>
+            <h4>${f.title}</h4>
+            <div class="friv-desc">${f.desc}</div>
+            ${previewHTML}
+        </div>`;
+    }).join("");
+    nav.querySelectorAll(".friv-card").forEach(card => {
+        card.addEventListener("click", () => showFrivolity(card.dataset.friv));
+    });
+    document.getElementById("frivolities-back").addEventListener("click", showFrivolityNav);
+}
+
+function showFrivolity(id) {
+    document.getElementById("frivolities-nav").style.display = "none";
+    document.getElementById("frivolities-detail").style.display = "block";
+    document.querySelectorAll("#frivolities-detail .friv-detail").forEach(el => {
+        el.style.display = el.id === `friv-${id}` ? "" : "none";
+    });
+    window.scrollTo({ top: document.getElementById("panel-frivolities").offsetTop - 20, behavior: "smooth" });
+}
+
+function showFrivolityNav() {
+    document.getElementById("frivolities-nav").style.display = "";
+    document.getElementById("frivolities-detail").style.display = "none";
 }
 
 function renderMostEvenGames() {
@@ -1188,3 +1248,31 @@ document.addEventListener("click", (e) => {
     e.preventDefault();
     openGameHistory(gameYear, gameWeek, gameA, gameB);
 });
+
+function renderOneStartClub() {
+    const t = document.getElementById("onestart-table");
+    const rows = STATE.data.oneStartClub || [];
+    if (!rows.length) { t.innerHTML = `<tbody><tr><td class="muted">no data</td></tr></tbody>`; return; }
+    const body = rows.map((r, i) => `
+        <tr data-goto-game data-game-year="${r.year}" data-game-week="${r.week}" data-game-a="${r.owner}">
+            <td class="right">${i + 1}</td>
+            <td>${r.display} <span class="muted">${r.pos}</span></td>
+            <td class="right"><strong>${fmt(r.points)}</strong></td>
+            <td>${r.year}</td>
+            <td>${r.week}</td>
+            <td>${r.owner}</td>
+            <td class="right">${r.benchApps}</td>
+        </tr>`).join("");
+    t.innerHTML = `
+        <thead><tr>
+            <th class="right">#</th>
+            <th>Player</th>
+            <th class="right">Pts</th>
+            <th>Year</th>
+            <th>Wk</th>
+            <th>Started by</th>
+            <th class="right" title="Weeks the player was on this owner's bench">Benched</th>
+        </tr></thead>
+        <tbody>${body}</tbody>
+    `;
+}
