@@ -703,7 +703,7 @@ function initFrivolitiesPanel() {
     renderBiggestUpsets();
     renderBiggestCarries();
     renderMostEvenGames();
-    renderLeastTouches();
+    renderMostEfficientWins();
     renderGoatTeams();
 }
 
@@ -739,38 +739,33 @@ function renderMostEvenGames() {
     `;
 }
 
-function renderLeastTouches() {
+function renderMostEfficientWins() {
     const t = document.getElementById("touches-table");
-    const rows = STATE.data.leastTouchesInWin || [];
+    const rows = STATE.data.mostEfficientWins || [];
     if (!rows.length) { t.innerHTML = `<tbody><tr><td class="muted">no data</td></tr></tbody>`; return; }
-    const statLine = (r) => {
-        const bits = [];
-        if (r.rushAtt) bits.push(`${r.rushAtt} rush / ${r.rushYds} yd${r.rushTds ? ` / ${r.rushTds} TD` : ""}`);
-        if (r.rec) bits.push(`${r.rec} rec / ${r.recYds} yd${r.recTds ? ` / ${r.recTds} TD` : ""}`);
-        if (r.passAtt) bits.push(`${r.passAtt} att / ${r.passYds} yd${r.passTds ? ` / ${r.passTds} TD` : ""}`);
-        return bits.join(" · ");
-    };
     const body = rows.map((r, i) => `
         <tr>
             <td class="right">${i + 1}</td>
             <td>${r.year}</td>
             <td>${r.week}</td>
             <td><strong>${r.owner}</strong></td>
-            <td>${r.player} <span class="muted">${r.pos}</span></td>
-            <td class="right">${fmt(r.points)}</td>
+            <td class="right" title="Starter pts from QB/RB/WR/TE only (K and DEF don't have touches)">${fmt(r.offPts)}</td>
             <td class="right">${r.touches}</td>
             <td class="right"><strong>${fmt(r.ptsPerTouch)}</strong></td>
-            <td class="muted">${statLine(r)}</td>
+            <td>${r.topPlayer} <span class="muted">${r.topPos} ${fmt(r.topPts)}</span></td>
+            <td class="right">${fmt(r.finalPts)}</td>
+            <td>${r.opponent} <span class="muted">(${fmt(r.opponentPts)})</span></td>
         </tr>`).join("");
     t.innerHTML = `
         <thead><tr>
             <th class="right">#</th><th>Year</th><th>Wk</th>
             <th>Owner</th>
-            <th>Player</th>
-            <th class="right">Pts</th>
+            <th class="right" title="Starter fantasy pts from QB/RB/WR/TE only">Off Pts</th>
             <th class="right">Touches</th>
-            <th class="right" title="Fantasy points per touch">Pts/Touch</th>
-            <th>Stat line</th>
+            <th class="right" title="Offensive pts ÷ touches">Pts/Touch</th>
+            <th>Top Scorer</th>
+            <th class="right">Final</th>
+            <th>Opponent</th>
         </tr></thead>
         <tbody>${body}</tbody>
     `;

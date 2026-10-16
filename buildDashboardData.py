@@ -726,26 +726,45 @@ def build_goat_teams(gamecenter_dirs, seasons, n=25):
     return out[:n]
 
 
-def build_least_touches_in_win(stats_dirs, seasons, n=20, min_touches=3):
-    """Highest fantasy pts/touch in a win. Touches:
-      RB: rushingAttempts + receivingReceptions
-      WR/TE: receivingReceptions
-      QB: passingAttempts + rushingAttempts
-    DEF/K excluded (no 'touches'). Only wins count. ESPN-era data only
+def build_most_efficient_wins(stats_dirs, seasons, n=20, min_touches=25):
+    """Team-wide: highest team starter pts / total team touches, in a win.
+    Touches sum across starters:
+      RB: rushAtt + rec   | WR/TE: rec   | QB: passAtt + rushAtt
+    K and DEF are excluded (no touches). Only wins count. ESPN-era data only
     (NFL.com historical never captured stat lines)."""
     if isinstance(stats_dirs, str):
         stats_dirs = [stats_dirs]
     # Build win index
-    wins = set()  # (year, week, owner)
+    win_info = {}  # (year, week, owner) -> {opp, oppPts, finalPts}
     for s in seasons:
         for wk in s["weeks"]:
             for m in wk["matchups"]:
                 h, hp, a, ap = m["home"], m["homePts"], m["away"], m["awayPts"]
                 if hp == ap:
                     continue
-                wins.add((s["year"], wk["week"], h if hp > ap else a))
+                if hp > ap:
+                    win_info[(s["year"], wk["week"], h)] = {
+                        "opp": a, "oppPts": ap, "finalPts": hp}
+                else:
+                    win_info[(s["year"], wk["week"], a)] = {
+                        "opp": h, "oppPts": hp, "finalPts": ap}
 
-    out = []
+    def touches_for(pos, row):
+        def _n(k):
+            try:
+                return float(row.get(k) or 0)
+            except ValueError:
+                return 0.0
+        if pos == "RB":
+            return _n("rushAtt") + _n("rec")
+        if pos in ("WR", "TE"):
+            return _n("rec")
+        if pos == "QB":
+            return _n("passAtt") + _n("rushAtt")
+        return None
+
+    # Aggregate team-wide pts + touches per (year, week, owner)
+    team = {}  # (year, week, owner) -> {pts, touches, topPlayer, topPts}
     for d in stats_dirs:
         if not os.path.isdir(d):
             continue
@@ -763,52 +782,49 @@ def build_least_touches_in_win(stats_dirs, seasons, n=20, min_touches=3):
                     reader = csv.DictReader(f)
                     for row in reader:
                         owner = (row.get("Owner") or "").strip()
-                        if (year, week, owner) not in wins:
-                            continue
                         slot = row.get("Slot") or ""
-                        # starters only
                         if slot in {"BE", "IR", "BN", "RES"}:
                             continue
                         pos = row.get("Position") or ""
+                        t = touches_for(pos, row)
+                        if t is None:
+                            continue  # K and DEF excluded entirely
                         try:
                             pts = float(row.get("Points") or 0)
                         except ValueError:
                             pts = 0.0
-                        if pts <= 0:
-                            continue
-                        def _n(key):
-                            try:
-                                return float(row.get(key) or 0)
-                            except ValueError:
-                                return 0.0
-                        if pos == "RB":
-                            touches = _n("rushAtt") + _n("rec")
-                        elif pos in ("WR", "TE"):
-                            touches = _n("rec")
-                        elif pos == "QB":
-                            touches = _n("passAtt") + _n("rushAtt")
-                        else:
-                            continue  # K, D/ST excluded
-                        if touches < min_touches:
-                            continue
-                        out.append({
-                            "year": year, "week": week,
-                            "owner": owner,
-                            "player": row.get("Player"),
-                            "pos": pos,
-                            "points": round(pts, 2),
-                            "touches": int(touches),
-                            "ptsPerTouch": round(pts / touches, 2),
-                            "rushAtt": int(_n("rushAtt")),
-                            "rushYds": int(_n("rushYds")),
-                            "rushTds": int(_n("rushTds")),
-                            "rec": int(_n("rec")),
-                            "recYds": int(_n("recYds")),
-                            "recTds": int(_n("recTds")),
-                            "passAtt": int(_n("passAtt")),
-                            "passYds": int(_n("passYds")),
-                            "passTds": int(_n("passTds")),
-                        })
+                        agg = team.setdefault((year, week, owner),
+                                              {"pts": 0.0, "touches": 0.0,
+                                               "topPlayer": "", "topPts": 0.0,
+                                               "topPos": ""})
+                        agg["pts"] += pts
+                        agg["touches"] += t
+                        if pts > agg["topPts"]:
+                            agg["topPts"] = pts
+                            agg["topPlayer"] = row.get("Player") or ""
+                            agg["topPos"] = pos
+
+    out = []
+    for key, agg in team.items():
+        year, week, owner = key
+        info = win_info.get(key)
+        if not info:
+            continue  # only wins count
+        if agg["touches"] < min_touches:
+            continue
+        out.append({
+            "year": year, "week": week,
+            "owner": owner,
+            "offPts": round(agg["pts"], 2),       # starter pts from QB/RB/WR/TE only
+            "finalPts": round(info["finalPts"], 2),  # full team score (incl K/DEF)
+            "touches": int(agg["touches"]),
+            "ptsPerTouch": round(agg["pts"] / agg["touches"], 2),
+            "topPlayer": agg["topPlayer"],
+            "topPos": agg["topPos"],
+            "topPts": round(agg["topPts"], 2),
+            "opponent": info["opp"],
+            "opponentPts": round(info["oppPts"], 2),
+        })
     out.sort(key=lambda r: -r["ptsPerTouch"])
     return out[:n]
 
@@ -1552,7 +1568,7 @@ def main():
     goat_teams = build_goat_teams(gamecenter_dirs, seasons)
     most_even = build_most_even_games(gamecenter_dirs, seasons)
     stats_dirs = [os.path.join("output", f"{lid}-history-stats") for lid in league_ids]
-    least_touches = build_least_touches_in_win(stats_dirs, seasons)
+    most_efficient = build_most_efficient_wins(stats_dirs, seasons)
     drafts = {}
     for d in draft_dirs:
         if os.path.isdir(d):
@@ -1579,7 +1595,7 @@ def main():
         "trades": trades_detected,
         "goatTeams": goat_teams,
         "mostEvenGames": most_even,
-        "leastTouchesInWin": least_touches,
+        "mostEfficientWins": most_efficient,
         "drafts": drafts,
         "draftOwnerStats": draft_owner_stats,
         "playersCareer": players_career,
