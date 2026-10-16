@@ -394,6 +394,7 @@ def load_lineups(gamecenter_dirs):
                                 "slot": slot,
                                 "player": info["display"] if info else "-",
                                 "pos": info["pos"] if info else "",
+                                "key": info["key"] if info else "",
                                 "pts": round(pts, 2),
                             })
                         out[(year, week, owner)] = lineup

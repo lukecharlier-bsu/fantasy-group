@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League History Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1792180128" />
+    <link rel="stylesheet" href="styles.css?v=1792183522" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -23,6 +23,7 @@
             <button class="tab" data-tab="frivolities">Frivolities</button>
             <button class="tab" data-tab="trades">Trades</button>
             <button class="tab" data-tab="games">Game History</button>
+            <button class="tab" data-tab="players">Players</button>
         </nav>
     </header>
 
@@ -231,6 +232,29 @@
             </div>
         </section>
 
+        <!-- PLAYERS -->
+        <section class="panel" id="panel-players">
+            <div class="card">
+                <h3>Player History</h3>
+                <p class="muted">Search any player who's appeared in the league. Shows career totals, every manager who rostered them, and a full game log — click any game to open its full lineup breakdown.</p>
+                <div class="row">
+                    <label>Player
+                        <input type="search" id="players-search" list="players-datalist" placeholder="Type a name..." autocomplete="off" style="min-width:260px">
+                        <datalist id="players-datalist"></datalist>
+                    </label>
+                    <label>Position
+                        <select id="players-pos">
+                            <option value="">All</option>
+                            <option>QB</option><option>RB</option><option>WR</option>
+                            <option>TE</option><option>K</option><option>DEF</option>
+                        </select>
+                    </label>
+                    <button id="players-reset" class="back-btn">Clear</button>
+                </div>
+                <div id="players-body"></div>
+            </div>
+        </section>
+
         <!-- GAME HISTORY -->
         <section class="panel" id="panel-games">
             <div class="card">
@@ -275,6 +299,6 @@
         <span id="data-stamp"></span>
     </footer>
 
-    <script src="app.js?v=1792180128"></script>
+    <script src="app.js?v=1792183522"></script>
 </body>
 </html>

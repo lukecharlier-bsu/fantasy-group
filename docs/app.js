@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initFrivolitiesPanel();
     initTradesPanel();
     initGameHistoryPanel();
+    initPlayersPanel();
 });
 
 // ---------- Tabs ----------
@@ -663,7 +664,8 @@ function renderFranchise() {
         return sortDir === "desc" ? String(bv).localeCompare(String(av)) : String(av).localeCompare(String(bv));
     });
     const cols = [
-        { field: "display",     label: "Name" },
+        { field: "display",     label: "Name",
+          render: p => `<span data-goto-player="${p.key}">${p.display}</span>` },
         { field: "pos",         label: "Pos" },
         { field: "startPts",    label: "Pts Scored",   align: "right", fmt: v => fmt(v) },
         { field: "benchPts",    label: "Bench Pts",    align: "right", fmt: v => fmt(v) },
@@ -1241,6 +1243,8 @@ function findTeam(year, manager) {
 // with the game pre-selected. Attributes: data-game-year, data-game-week,
 // data-game-a (first manager), data-game-b (second manager, optional).
 document.addEventListener("click", (e) => {
+    // Player links sit inside game rows; let them take precedence.
+    if (e.target.closest("[data-goto-player]")) return;
     const target = e.target.closest("[data-goto-game]");
     if (!target) return;
     const { gameYear, gameWeek, gameA, gameB } = target.dataset;
@@ -1256,7 +1260,7 @@ function renderOneStartClub() {
     const body = rows.map((r, i) => `
         <tr data-goto-game data-game-year="${r.year}" data-game-week="${r.week}" data-game-a="${r.owner}">
             <td class="right">${i + 1}</td>
-            <td>${r.display} <span class="muted">${r.pos}</span></td>
+            <td><span data-goto-player="${r.key}">${r.display}</span> <span class="muted">${r.pos}</span></td>
             <td class="right"><strong>${fmt(r.points)}</strong></td>
             <td>${r.year}</td>
             <td>${r.week}</td>
@@ -1276,3 +1280,201 @@ function renderOneStartClub() {
         <tbody>${body}</tbody>
     `;
 }
+
+// ---------- Players ----------
+let PLAYER_LIST = [];        // [{key, display, pos, totalPoints, starts, benchApps, seasons, owners, espnId, weekHighInfo}]
+let PLAYER_BY_LABEL = {};    // "D. Adams WR" -> key
+
+function initPlayersPanel() {
+    const career = STATE.data.playersCareer || {};
+    PLAYER_LIST = Object.entries(career).map(([key, v]) => ({ key, ...v }))
+        .filter(p => p.display && p.display !== "-")
+        .sort((a, b) => b.totalPoints - a.totalPoints);
+    const dl = document.getElementById("players-datalist");
+    PLAYER_BY_LABEL = {};
+    const seen = new Set();
+    const options = [];
+    for (const p of PLAYER_LIST) {
+        const niceName = p.fullName || p.display;
+        const label = `${niceName} (${p.pos})`;
+        if (seen.has(label)) continue;
+        seen.add(label);
+        PLAYER_BY_LABEL[label] = p.key;
+        PLAYER_BY_LABEL[niceName] = p.key;    // allow bare full name
+        PLAYER_BY_LABEL[p.display] = p.key;   // and the first-initial form
+        options.push(`<option value="${label}"></option>`);
+    }
+    dl.innerHTML = options.join("");
+    const search = document.getElementById("players-search");
+    const pos = document.getElementById("players-pos");
+    search.addEventListener("input", () => tryRenderPlayer(search.value));
+    search.addEventListener("change", () => tryRenderPlayer(search.value));
+    pos.addEventListener("change", () => filterDatalist(pos.value));
+    document.getElementById("players-reset").addEventListener("click", () => {
+        search.value = ""; pos.value = "";
+        filterDatalist("");
+        document.getElementById("players-body").innerHTML =
+            `<p class="muted">Start typing a player name above.</p>`;
+    });
+    document.getElementById("players-body").innerHTML =
+        `<p class="muted">Start typing a player name above. ${PLAYER_LIST.length} players in the index.</p>`;
+}
+
+function filterDatalist(posFilter) {
+    const dl = document.getElementById("players-datalist");
+    const seen = new Set();
+    const opts = [];
+    for (const p of PLAYER_LIST) {
+        if (posFilter && p.pos !== posFilter) continue;
+        const niceName = p.fullName || p.display;
+        const label = `${niceName} (${p.pos})`;
+        if (seen.has(label)) continue;
+        seen.add(label);
+        opts.push(`<option value="${label}"></option>`);
+    }
+    dl.innerHTML = opts.join("");
+}
+
+function tryRenderPlayer(value) {
+    const v = (value || "").trim();
+    if (!v) return;
+    const key = PLAYER_BY_LABEL[v];
+    if (!key) return;  // user still typing
+    const player = PLAYER_LIST.find(p => p.key === key);
+    if (player) renderPlayerDetail(player);
+}
+
+function openPlayer(key) {
+    const player = PLAYER_LIST.find(p => p.key === key);
+    if (!player) return;
+    const tab = document.querySelector('.tab[data-tab="players"]');
+    if (tab) tab.click();
+    const search = document.getElementById("players-search");
+    search.value = `${player.fullName || player.display} (${player.pos})`;
+    renderPlayerDetail(player);
+    document.getElementById("panel-players").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function renderPlayerDetail(player) {
+    const body = document.getElementById("players-body");
+    // Per-owner split from playersByOwner
+    const perOwner = [];
+    for (const [owner, playerList] of Object.entries(STATE.data.playersByOwner || {})) {
+        const rec = playerList.find(p => p.key === player.key);
+        if (rec) perOwner.push({ owner, ...rec });
+    }
+    perOwner.sort((a, b) => b.startPts - a.startPts);
+
+    // Game log — scan every matchup lineup for this player's key
+    const games = [];
+    for (const s of STATE.data.seasons) {
+        for (const wk of s.weeks) {
+            for (const m of wk.matchups) {
+                for (const [owner, lineup, opp, oppPts] of [
+                    [m.home, m.homeLineup, m.away, m.awayPts],
+                    [m.away, m.awayLineup, m.home, m.homePts],
+                ]) {
+                    for (const entry of lineup || []) {
+                        if (entry.key !== player.key) continue;
+                        games.push({
+                            year: s.year, week: wk.week,
+                            owner, opp, oppPts,
+                            slot: entry.slot, pts: entry.pts,
+                            started: !["BN", "RES"].includes(entry.slot),
+                        });
+                    }
+                }
+            }
+        }
+    }
+    games.sort((a, b) => (b.year - a.year) || (b.week - a.week));
+
+    const img = player.espnId
+        ? `https://a.espncdn.com/i/headshots/nfl/players/full/${player.espnId}.png`
+        : "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='38' r='18' fill='%23334155'/><rect x='22' y='60' width='56' height='40' rx='22' fill='%23334155'/></svg>";
+    const name = player.fullName || player.display;
+    const yrs = player.seasons.length
+        ? (player.seasons.length === 1
+            ? String(player.seasons[0])
+            : `${player.seasons[0]}–${player.seasons[player.seasons.length - 1]}`)
+        : "";
+    const avgPerStart = player.starts ? (player.totalPoints / player.starts) : 0;
+    // Totals for tiles
+    const totalBenchPts = games.filter(g => !g.started).reduce((s, g) => s + g.pts, 0);
+
+    const perOwnerRows = perOwner.map(o => `
+        <tr>
+            <td><strong data-goto-owner="${o.owner}">${o.owner}</strong></td>
+            <td class="right">${fmt(o.startPts)}</td>
+            <td class="right">${fmt(o.benchPts)}</td>
+            <td class="right">${o.starts}</td>
+            <td class="right">${o.benchApps}</td>
+            <td class="right">${fmt(o.avgPerStart)}</td>
+            <td>${o.seasons.join(" ")}</td>
+            <td>${o.bestWeek ? `${fmt(o.bestWeek.points)} <span class="muted">(wk ${o.bestWeek.week}, ${o.bestWeek.year}${o.bestWeek.opponent ? " vs " + o.bestWeek.opponent : ""})</span>` : "-"}</td>
+        </tr>`).join("");
+
+    const gameRows = games.map(g => `
+        <tr data-goto-game data-game-year="${g.year}" data-game-week="${g.week}" data-game-a="${g.owner}" data-game-b="${g.opp}">
+            <td>${g.year}</td>
+            <td>${g.week}</td>
+            <td>${g.owner}</td>
+            <td class="muted">${g.slot}</td>
+            <td class="right"><strong>${fmt(g.pts)}</strong></td>
+            <td>${g.opp} <span class="muted">(${fmt(g.oppPts)})</span></td>
+        </tr>`).join("");
+
+    body.innerHTML = `
+        <div class="player-header">
+            <img class="photo" src="${img}" alt="${name}" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2238%22 r=%2218%22 fill=%22%23334155%22/><rect x=%2222%22 y=%2260%22 width=%2256%22 height=%2240%22 rx=%2222%22 fill=%22%23334155%22/></svg>';">
+            <div class="meta">
+                <div class="name">${name}</div>
+                <div class="sub">${player.pos} · ${yrs}${player.team ? ` · last on ${player.team}` : ""}</div>
+            </div>
+        </div>
+        <div class="player-tiles">
+            <div class="tile"><div class="lbl">Career Pts</div><div class="val">${fmt(player.totalPoints)}</div></div>
+            <div class="tile"><div class="lbl">Starts</div><div class="val">${player.starts}</div></div>
+            <div class="tile"><div class="lbl">Bench Apps</div><div class="val">${player.benchApps}</div></div>
+            <div class="tile"><div class="lbl">Avg / Start</div><div class="val">${fmt(avgPerStart)}</div></div>
+            <div class="tile"><div class="lbl">Bench Pts</div><div class="val">${fmt(totalBenchPts)}</div></div>
+            <div class="tile"><div class="lbl">Best Week</div><div class="val">${player.weekHigh ? fmt(player.weekHigh) : "-"}</div></div>
+            <div class="tile"><div class="lbl">Seasons</div><div class="val">${player.seasons.length}</div></div>
+            <div class="tile"><div class="lbl">Managers</div><div class="val">${perOwner.length}</div></div>
+        </div>
+
+        <div class="player-section-title">By manager</div>
+        <div class="scroll-x"><table class="data-table">
+            <thead><tr>
+                <th>Owner</th>
+                <th class="right">Start Pts</th>
+                <th class="right">Bench Pts</th>
+                <th class="right">Started</th>
+                <th class="right">Benched</th>
+                <th class="right">Avg / Start</th>
+                <th>Years</th>
+                <th>Best Week</th>
+            </tr></thead>
+            <tbody>${perOwnerRows}</tbody>
+        </table></div>
+
+        <div class="player-section-title">Game log (${games.length})</div>
+        <div class="scroll-x"><table class="data-table">
+            <thead><tr>
+                <th>Year</th><th>Wk</th><th>Owner</th><th>Slot</th>
+                <th class="right">Pts</th><th>Opponent</th>
+            </tr></thead>
+            <tbody>${gameRows}</tbody>
+        </table></div>
+    `;
+}
+
+// Deep-link: any [data-goto-player] opens that player
+document.addEventListener("click", (e) => {
+    const target = e.target.closest("[data-goto-player]");
+    if (!target) return;
+    const key = target.dataset.gotoPlayer;
+    if (!key) return;
+    e.preventDefault();
+    openPlayer(key);
+});
