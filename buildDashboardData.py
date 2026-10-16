@@ -340,11 +340,15 @@ def build_biggest_upsets(seasons, n=20):
     return out[:n]
 
 
-def load_lineups(gamecenter_dirs):
-    """{(year, week, owner): [{slot, player, pos, pts}, ...]} — every roster slot
-    for every team-week in CSV order so renderers can replay the lineup."""
+def load_lineups(gamecenter_dirs, stats_dirs=None):
+    """{(year, week, owner): [{slot, player, pos, key, pts}, ...]} — every roster
+    slot for every team-week in CSV order so renderers can replay the lineup.
+    When a stats-CSV resolution is available for a cell, upgrades the key to
+    the canonical long form and the display to the full name."""
     if isinstance(gamecenter_dirs, str):
         gamecenter_dirs = [gamecenter_dirs]
+    resolution = load_player_name_resolution(stats_dirs or [])
+    short_to_long = _build_short_to_long(resolution)
     out = {}
     for d in gamecenter_dirs:
         if not os.path.isdir(d):
@@ -390,11 +394,23 @@ def load_lineups(gamecenter_dirs):
                                     if pi < len(row) else 0.0
                             except ValueError:
                                 pts = 0.0
+                            display = info["display"] if info else "-"
+                            key = info["key"] if info else ""
+                            pos = info["pos"] if info else ""
+                            # Upgrade via stats resolution when possible.
+                            if info and pos != "DEF":
+                                resolved = resolution.get((year, week, owner, slot, round(pts, 2)))
+                                if resolved:
+                                    full_name, _ = resolved
+                                    key = _canonical_key(pos, full_name)
+                                    display = _pretty_name(full_name)
+                                elif key in short_to_long and len(short_to_long[key]) == 1:
+                                    key = next(iter(short_to_long[key]))
                             lineup.append({
                                 "slot": slot,
-                                "player": info["display"] if info else "-",
-                                "pos": info["pos"] if info else "",
-                                "key": info["key"] if info else "",
+                                "player": display,
+                                "pos": pos,
+                                "key": key,
                                 "pts": round(pts, 2),
                             })
                         out[(year, week, owner)] = lineup
@@ -1219,33 +1235,131 @@ def parse_gc_player(text):
 
 
 def draft_match_key(player_name, position, nfl_team):
-    """Build the same key used by parse_gc_player from a draft pick.
-    Team is omitted to allow players-changed-teams to merge."""
-    if position == "DEF":
-        return f"DEF||{player_name.lower()}"
-    parts = player_name.split()
-    if len(parts) >= 2:
-        fi = parts[0][:1].upper()
-        last = _norm_last(parts[1:])
-    else:
-        fi, last = "", _norm_last(parts)
-    return f"{position}|{last}|{fi}"
+    """Build the canonical key for a draft pick. Prefers the long form
+    (pos|last|firstname) when we have a full first name — this disambiguates
+    pairs like Jayden Daniels vs Jalon Daniels that both key to J.Daniels in
+    the short form. Falls back to short form (pos|last|FI) when only an
+    initial is available."""
+    return _canonical_key(position, player_name)
 
 
-def load_player_scoring(gamecenter_dirs):
+def _canonical_key(pos, name):
+    """Full name 'Davante Adams' → pos|adams|davante
+       Short name 'D. Adams'     → pos|adams|D
+    DEF players key on the team mascot."""
+    if pos == "DEF":
+        return f"DEF||{name.lower()}"
+    parts = name.split()
+    if len(parts) < 2:
+        return f"{pos}||"
+    first = parts[0]
+    last_norm = _norm_last(parts[1:])
+    if first.endswith("."):
+        return f"{pos}|{last_norm}|{first.rstrip('.').upper()[:1]}"
+    # Full first name — strip suffixes just like last-name normalization
+    first_norm = _norm_last([first])
+    return f"{pos}|{last_norm}|{first_norm}"
+
+
+def _pretty_name(name):
+    """Strip Jr/Sr/II/III/IV from a display name."""
+    return _display_name(name)
+
+
+def load_player_name_resolution(stats_dirs):
+    """{(year, week, owner, slot, rounded_pts) -> (full_name, pos)} harvested
+    from all stats CSVs. Only entries with a FULL first name (not 'F.') count;
+    historical rows that failed the ESPN NFL join carry only initials and
+    would re-collide, so we skip them here and fall back to the short-key path."""
+    out = {}
+    for d in stats_dirs or []:
+        if not os.path.isdir(d):
+            continue
+        for yn in sorted(os.listdir(d)):
+            yp = os.path.join(d, yn)
+            if not os.path.isdir(yp):
+                continue
+            try:
+                year = int(yn)
+            except ValueError:
+                continue
+            for fn in sorted(os.listdir(yp)):
+                if not fn.endswith(".csv"):
+                    continue
+                try:
+                    week = int(fn[:-4])
+                except ValueError:
+                    continue
+                with open(os.path.join(yp, fn), newline="") as f:
+                    for row in csv.DictReader(f):
+                        name = (row.get("Player") or "").strip()
+                        if not name or name == "-":
+                            continue
+                        parts = name.split()
+                        if len(parts) < 2 or parts[0].endswith("."):
+                            continue  # not a full name
+                        owner = (row.get("Owner") or "").strip()
+                        slot = row.get("Slot") or ""
+                        try:
+                            pts = round(float(row.get("Points") or 0), 2)
+                        except ValueError:
+                            pts = 0.0
+                        pos = row.get("Position") or ""
+                        out[(year, week, owner, slot, pts)] = (name, pos)
+    return out
+
+
+def _build_short_to_long(resolution):
+    """{short_key -> set(long_keys)} so we can collapse unmatched gamecenter
+    rows to the canonical long key when the short-key has only one possible
+    long-key resolution across the whole dataset."""
+    out = {}
+    for _, (name, pos) in resolution.items():
+        parts = name.split()
+        if len(parts) < 2 or pos == "DEF":
+            continue
+        short = f"{pos}|{_norm_last(parts[1:])}|{parts[0][:1].upper()}"
+        long = _canonical_key(pos, name)
+        if short == long:
+            continue
+        out.setdefault(short, set()).add(long)
+    return out
+
+
+def _best_display_for_long_key(resolution, long_key):
+    """Pick a nice display name 'D. Adams' (or Full) for a long key by looking
+    up the most frequently seen full name attached to it."""
+    counts = {}
+    for _, (name, pos) in resolution.items():
+        if _canonical_key(pos, name) == long_key:
+            counts[name] = counts.get(name, 0) + 1
+    if not counts:
+        return None
+    return _pretty_name(max(counts, key=counts.get))
+
+
+def load_player_scoring(gamecenter_dirs, stats_dirs=None):
     """Aggregate player scoring across all weeks/years from gamecenter CSVs.
 
     gamecenter_dirs: a path, or a list of paths — each a <leagueID>-history-
     teamgamecenter directory. Years are expected to be non-overlapping across
     the given dirs (e.g. NFL ≤2025, ESPN ≥2026).
 
+    stats_dirs: optional list of <leagueID>-history-stats dirs. When present,
+    each (year, week, owner, slot, pts) in gamecenter is cross-referenced
+    against the stats CSV to upgrade from a first-initial key (which can
+    collide, e.g. Jayden vs Jalon Daniels) to the full-name canonical key.
+
     Returns:
         per_year: {year: {key: {display, pos, team, totalPoints, starts,
                                 benchApps, weekHigh, weekHighInfo, owners}}}
         career: same shape but aggregated over all years
+        by_owner: ownership-aware per-player stats
     """
     if isinstance(gamecenter_dirs, str):
         gamecenter_dirs = [gamecenter_dirs]
+    resolution = load_player_name_resolution(stats_dirs or [])
+    short_to_long = _build_short_to_long(resolution)
     year_paths = {}
     for d in gamecenter_dirs:
         if not os.path.isdir(d):
@@ -1310,6 +1424,15 @@ def load_player_scoring(gamecenter_dirs):
                             pts = float((row[pi] or "0").replace(",", ""))
                         except ValueError:
                             pts = 0.0
+                        # Upgrade identity when stats resolution is available.
+                        if info["pos"] != "DEF":
+                            resolved = resolution.get((year, week, owner, slot, round(pts, 2)))
+                            if resolved:
+                                full_name, _ = resolved
+                                info["key"] = _canonical_key(info["pos"], full_name)
+                                info["display"] = _pretty_name(full_name)
+                            elif info["key"] in short_to_long and len(short_to_long[info["key"]]) == 1:
+                                info["key"] = next(iter(short_to_long[info["key"]]))
                         rec = season_players.setdefault(info["key"], {
                             "display": info["display"], "pos": info["pos"],
                             "team": info["team"], "totalPoints": 0.0,
@@ -1432,18 +1555,21 @@ def enrich_with_espn_ids(players_by_owner, players_career, drafts):
         return
     with open(pm_path) as f:
         name_to_id = _json.load(f).get("nameToId", {})
-    # Reverse index: (fi, normalized-last) -> list of (espnId, full_name)
-    rev = {}
+    # Reverse indexes:
+    #   rev_short[(fi, last)]   -> [(espnId, full_name), ...]
+    #   rev_long[(first_norm, last_norm)] -> [(espnId, full_name), ...]
+    rev_short = {}
+    rev_long = {}
     for name, pid in name_to_id.items():
         parts = name.split()
         if len(parts) < 2:
             continue
         fi = parts[0][:1].upper()
-        last = _norm_last(parts[1:])
-        rev.setdefault((fi, last), []).append((pid, name))
-    # Draft-based disambiguator: our player_key -> full name from drafts
-    #   (same key the scoring loader uses). Last write wins; near-duplicates
-    #   collapse because draft_match_key already strips suffixes.
+        last_norm = _norm_last(parts[1:])
+        first_norm = _norm_last([parts[0]])
+        rev_short.setdefault((fi, last_norm), []).append((pid, name))
+        rev_long.setdefault((first_norm, last_norm), []).append((pid, name))
+    # Draft-based disambiguator for short keys.
     key_to_drafted_name = {}
     for picks in drafts.values():
         for p in picks:
@@ -1451,25 +1577,35 @@ def enrich_with_espn_ids(players_by_owner, players_career, drafts):
             key_to_drafted_name[k] = p["player"]
 
     def resolve(key):
-        # key is "POS|last|FI" or "DEF||mascot"
+        # key is "POS|last|FI" (short) or "POS|last|firstname" (long) or "DEF||mascot"
         parts = key.split("|")
         if len(parts) != 3:
             return None, None
-        pos, last, fi = parts
-        if pos == "DEF" or not fi or not last:
+        pos, last, suffix = parts
+        if pos == "DEF" or not suffix or not last:
             return None, None
-        matches = rev.get((fi, last), [])
+        # Long key — suffix is a full first name (lowercase, suffixes stripped)
+        if len(suffix) > 1:
+            matches = rev_long.get((suffix, last), [])
+            if len(matches) == 1:
+                return matches[0]
+            if len(matches) > 1:
+                drafted_name = key_to_drafted_name.get(key)
+                for pid, full in matches:
+                    if drafted_name and full == drafted_name:
+                        return pid, full
+            return None, None
+        # Short key — suffix is single-letter first initial
+        matches = rev_short.get((suffix, last), [])
         if len(matches) == 1:
             return matches[0]
         if len(matches) > 1:
-            # Use draft history to pick the correct candidate by exact name.
             drafted_name = key_to_drafted_name.get(key)
             if drafted_name:
                 drafted_last = _norm_last(drafted_name.split()[1:])
                 for pid, full in matches:
                     if full == drafted_name:
                         return pid, full
-                    # Loose match: same normalized last-name tokens
                     full_last = _norm_last(full.split()[1:])
                     if drafted_last == full_last and full.split()[0] == drafted_name.split()[0]:
                         return pid, full
@@ -1646,10 +1782,11 @@ def main():
     for d in gamecenter_dirs:
         if os.path.isdir(d):
             weekly.update(load_weekly(d))
+    stats_dirs = [os.path.join("output", f"{lid}-history-stats") for lid in league_ids]
     seasons = build_seasons(standings, weekly)
     # Attach per-team lineup detail to each matchup so the Game History tab
     # can show a full side-by-side breakdown without extra fetches.
-    lineups = load_lineups(gamecenter_dirs)
+    lineups = load_lineups(gamecenter_dirs, stats_dirs)
     for s in seasons:
         for wk in s["weeks"]:
             for m in wk["matchups"]:
@@ -1663,14 +1800,13 @@ def main():
     trades_detected = detect_trades(gamecenter_dirs, standings)
     goat_teams = build_goat_teams(gamecenter_dirs, seasons)
     most_even = build_most_even_games(gamecenter_dirs, seasons)
-    stats_dirs = [os.path.join("output", f"{lid}-history-stats") for lid in league_ids]
     most_efficient = build_most_efficient_wins(stats_dirs, seasons)
     drafts = {}
     for d in draft_dirs:
         if os.path.isdir(d):
             drafts.update(load_drafts(d))
     draft_owner_stats = build_draft_analytics(drafts)
-    players_by_year, players_career, players_by_owner = load_player_scoring(gamecenter_dirs)
+    players_by_year, players_career, players_by_owner = load_player_scoring(gamecenter_dirs, stats_dirs)
     bust_riser = compute_busts_and_risers(drafts, players_by_year)
     enrich_with_espn_ids(players_by_owner, players_career, drafts)
     one_start_club = build_one_start_club(players_career)
