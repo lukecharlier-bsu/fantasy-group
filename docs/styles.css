@@ -313,3 +313,56 @@ canvas { max-height: 360px; }
 .data-table:not(.h2h) thead th[data-sort-dir="desc"]::after {
     content: " ↓"; opacity: 0.75; color: var(--accent);
 }
+
+/* Game History: deep-link affordance + side-by-side lineup view */
+[data-goto-game] { cursor: pointer; }
+[data-goto-game]:hover { background: rgba(56, 189, 248, 0.08); }
+
+.game-detail-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #1f2937;
+    margin-bottom: 1rem;
+}
+.game-detail-header .side { text-align: center; min-width: 160px; }
+.game-detail-header .owner { font-size: 1.2rem; font-weight: 700; color: var(--text); }
+.game-detail-header .team { color: var(--muted); font-size: 0.85rem; }
+.game-detail-header .score {
+    font-size: 2rem; font-weight: 800; color: var(--accent);
+    font-variant-numeric: tabular-nums;
+}
+.game-detail-header .score.lost { color: var(--muted); }
+.game-detail-header .vs { color: var(--muted); font-size: 0.8rem; }
+.game-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+@media (max-width: 760px) {
+    .game-detail-grid { grid-template-columns: 1fr; }
+    .game-detail-header .side { min-width: 100px; }
+}
+.lineup-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.lineup-table th { text-align: left; color: var(--muted); font-weight: 500;
+    padding: 0.4rem 0.5rem; border-bottom: 1px solid #1f2937; }
+.lineup-table td { padding: 0.4rem 0.5rem; border-bottom: 1px solid #0f172a; }
+.lineup-table td.pts { text-align: right; font-variant-numeric: tabular-nums; }
+.lineup-table tr.section-header td {
+    color: var(--muted); text-transform: uppercase; font-size: 0.7rem;
+    letter-spacing: 0.08em; padding-top: 0.75rem; border-bottom: none;
+}
+.lineup-table .slot { color: var(--muted); font-size: 0.75rem; width: 44px; }
+.lineup-table .pos { color: var(--muted); font-size: 0.75rem; margin-left: 0.3rem; }
+.lineup-table tr.top-scorer td.pts { color: var(--accent); font-weight: 600; }
+.lineup-table tr.totals td {
+    border-top: 2px solid #1f2937; border-bottom: none; font-weight: 600; padding-top: 0.6rem;
+}
+.games-list-row:hover { background: rgba(56, 189, 248, 0.08); cursor: pointer; }
+#games-reset {
+    background: transparent; border: 1px solid #334155; color: var(--muted);
+    padding: 0.3rem 0.75rem; border-radius: 6px; cursor: pointer;
+}
+#games-reset:hover { border-color: var(--accent); color: var(--text); }

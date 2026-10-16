@@ -340,6 +340,66 @@ def build_biggest_upsets(seasons, n=20):
     return out[:n]
 
 
+def load_lineups(gamecenter_dirs):
+    """{(year, week, owner): [{slot, player, pos, pts}, ...]} — every roster slot
+    for every team-week in CSV order so renderers can replay the lineup."""
+    if isinstance(gamecenter_dirs, str):
+        gamecenter_dirs = [gamecenter_dirs]
+    out = {}
+    for d in gamecenter_dirs:
+        if not os.path.isdir(d):
+            continue
+        for year_name in sorted(os.listdir(d)):
+            yp = os.path.join(d, year_name)
+            if not os.path.isdir(yp):
+                continue
+            year = int(year_name)
+            for filename in sorted(os.listdir(yp),
+                                   key=lambda n: int(n[:-4]) if n.endswith(".csv") else 999):
+                if not filename.endswith(".csv"):
+                    continue
+                week = int(filename[:-4])
+                with open(os.path.join(yp, filename), newline="") as f:
+                    reader = csv.reader(f)
+                    header = next(reader, None)
+                    if not header:
+                        continue
+                    slot_cols = []
+                    i = 0
+                    while i < len(header):
+                        h = header[i]
+                        if h in {"Owner", "Rank", "Total", "Opponent", "Opponent Total", "Points"}:
+                            i += 1
+                            continue
+                        if i + 1 < len(header) and header[i + 1] == "Points":
+                            slot_cols.append((h, i, i + 1))
+                            i += 2
+                        else:
+                            i += 1
+                    for row in reader:
+                        if not row or len(row) < 2:
+                            continue
+                        owner = (row[0] or "").strip()
+                        lineup = []
+                        for slot, ni, pi in slot_cols:
+                            if ni >= len(row):
+                                continue
+                            info = parse_gc_player(row[ni])
+                            try:
+                                pts = float((row[pi] or "0").replace(",", "")) \
+                                    if pi < len(row) else 0.0
+                            except ValueError:
+                                pts = 0.0
+                            lineup.append({
+                                "slot": slot,
+                                "player": info["display"] if info else "-",
+                                "pos": info["pos"] if info else "",
+                                "pts": round(pts, 2),
+                            })
+                        out[(year, week, owner)] = lineup
+    return out
+
+
 def load_weekly_rosters(gamecenter_dirs):
     """{(year, week, owner): {player_key: {display, pos, starterPts}}}.
     starterPts is 0 for bench/IR entries so callers can slice by lineup slot."""
@@ -1559,6 +1619,14 @@ def main():
         if os.path.isdir(d):
             weekly.update(load_weekly(d))
     seasons = build_seasons(standings, weekly)
+    # Attach per-team lineup detail to each matchup so the Game History tab
+    # can show a full side-by-side breakdown without extra fetches.
+    lineups = load_lineups(gamecenter_dirs)
+    for s in seasons:
+        for wk in s["weeks"]:
+            for m in wk["matchups"]:
+                m["homeLineup"] = lineups.get((s["year"], wk["week"], m["home"]), [])
+                m["awayLineup"] = lineups.get((s["year"], wk["week"], m["away"]), [])
     owners = build_owner_stats(seasons)
     h2h = build_head_to_head(seasons)
     highs, lows, blowouts, nail_biters = build_weekly_extremes(seasons)

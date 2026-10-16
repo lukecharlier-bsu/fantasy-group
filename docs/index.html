@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League History Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1792177573" />
+    <link rel="stylesheet" href="styles.css?v=1792178103" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -22,6 +22,7 @@
             <button class="tab" data-tab="franchise">Franchise Leaders</button>
             <button class="tab" data-tab="frivolities">Frivolities</button>
             <button class="tab" data-tab="trades">Trades</button>
+            <button class="tab" data-tab="games">Game History</button>
         </nav>
     </header>
 
@@ -231,6 +232,22 @@
             </div>
         </section>
 
+        <!-- GAME HISTORY -->
+        <section class="panel" id="panel-games">
+            <div class="card">
+                <h3>Game History</h3>
+                <p class="muted">Pick two managers (and optionally a season / week) to pull up any matchup's full lineup breakdown. Clicking any linked game anywhere on the dashboard also opens it here.</p>
+                <div class="row">
+                    <label>Season <select id="games-year"><option value="">All</option></select></label>
+                    <label>Manager A <select id="games-a"><option value="">Any</option></select></label>
+                    <label>Manager B <select id="games-b"><option value="">Any</option></select></label>
+                    <label>Week <select id="games-week"><option value="">Any</option></select></label>
+                    <button id="games-reset" class="muted" style="margin-left:0.5rem">Reset</button>
+                </div>
+                <div id="games-body"></div>
+            </div>
+        </section>
+
         <!-- TRADES -->
         <section class="panel" id="panel-trades">
             <div class="card">
@@ -259,6 +276,6 @@
         <span id="data-stamp"></span>
     </footer>
 
-    <script src="app.js?v=1792177573"></script>
+    <script src="app.js?v=1792178103"></script>
 </body>
 </html>

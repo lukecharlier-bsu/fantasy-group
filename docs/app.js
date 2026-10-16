@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initFranchisePanel();
     initFrivolitiesPanel();
     initTradesPanel();
+    initGameHistoryPanel();
 });
 
 // ---------- Tabs ----------
@@ -237,7 +238,7 @@ function renderSeason(year) {
             <tbody>
             ${s.weeks.flatMap(w => w.matchups.map(m => {
                 const aWin = m.homePts > m.awayPts;
-                return `<tr>
+                return `<tr data-goto-game data-game-year="${s.year}" data-game-week="${w.week}" data-game-a="${m.home}" data-game-b="${m.away}">
                     <td>${w.week}</td>
                     <td class="${aWin ? "win" : "loss"}">${m.home}</td>
                     <td class="right ${aWin ? "win" : "loss"}">${fmt(m.homePts)}</td>
@@ -354,7 +355,7 @@ function fillExtremesTable(id, rows, key) {
     document.getElementById(id).innerHTML = `
         <thead><tr><th>Year</th><th>Wk</th><th>Owner</th><th class="right">Points</th><th>vs</th></tr></thead>
         <tbody>
-        ${rows.map(r => `<tr>
+        ${rows.map(r => `<tr data-goto-game data-game-year="${r.year}" data-game-week="${r.week}" data-game-a="${r.owner}" data-game-b="${r.opponent}">
             <td>${r.year}</td><td>${r.week}</td><td>${r.owner}</td>
             <td class="right"><strong>${fmt(r[key])}</strong></td>
             <td>${r.opponent} (${fmt(r.opponentPoints)})</td>
@@ -367,7 +368,7 @@ function fillBlowoutTable(id, rows) {
     document.getElementById(id).innerHTML = `
         <thead><tr><th>Year</th><th>Wk</th><th>Winner</th><th class="right">W</th><th class="right">L</th><th>Loser</th><th class="right">Margin</th></tr></thead>
         <tbody>
-        ${rows.map(r => `<tr>
+        ${rows.map(r => `<tr data-goto-game data-game-year="${r.year}" data-game-week="${r.week}" data-game-a="${r.winner}" data-game-b="${r.loser}">
             <td>${r.year}</td><td>${r.week}</td>
             <td class="win">${r.winner}</td>
             <td class="right">${fmt(r.winnerPoints)}</td>
@@ -712,7 +713,7 @@ function renderMostEvenGames() {
     const rows = STATE.data.mostEvenGames || [];
     if (!rows.length) { t.innerHTML = `<tbody><tr><td class="muted">no data</td></tr></tbody>`; return; }
     const body = rows.map((r, i) => `
-        <tr>
+        <tr data-goto-game data-game-year="${r.year}" data-game-week="${r.week}" data-game-a="${r.owner}" data-game-b="${r.opponent}">
             <td class="right">${i + 1}</td>
             <td>${r.year}</td>
             <td>${r.week}</td>
@@ -744,7 +745,7 @@ function renderMostEfficientWins() {
     const rows = STATE.data.mostEfficientWins || [];
     if (!rows.length) { t.innerHTML = `<tbody><tr><td class="muted">no data</td></tr></tbody>`; return; }
     const body = rows.map((r, i) => `
-        <tr>
+        <tr data-goto-game data-game-year="${r.year}" data-game-week="${r.week}" data-game-a="${r.owner}" data-game-b="${r.opponent}">
             <td class="right">${i + 1}</td>
             <td>${r.year}</td>
             <td>${r.week}</td>
@@ -816,7 +817,7 @@ function renderBiggestUpsets() {
         return;
     }
     const rows = upsets.map((u, i) => `
-        <tr>
+        <tr data-goto-game data-game-year="${u.year}" data-game-week="${u.week}" data-game-a="${u.winner}" data-game-b="${u.loser}">
             <td class="right">${i + 1}</td>
             <td>${u.year}</td>
             <td>${u.week}</td>
@@ -850,7 +851,7 @@ function renderBiggestCarries() {
         return;
     }
     const rows = carries.map((c, i) => `
-        <tr>
+        <tr data-goto-game data-game-year="${c.year}" data-game-week="${c.week}" data-game-a="${c.owner}" data-game-b="${c.opponent}">
             <td class="right">${i + 1}</td>
             <td>${c.year}</td>
             <td>${c.week}</td>
@@ -943,7 +944,7 @@ function renderTrades() {
                 const aSide = { total: r.aTotal, per: r.aPerPlayer, count: r.bGave.length };
                 const bSide = { total: r.bTotal, per: r.bPerPlayer, count: r.aGave.length };
                 return `
-                <tr>
+                <tr data-goto-game data-game-year="${r.year}" data-game-week="${r.week}" data-game-a="${r.teamA}" data-game-b="${r.teamB}">
                     <td>${r.year}</td>
                     <td>${r.week}</td>
                     <td><strong>${r.teamA}</strong></td>
@@ -1011,4 +1012,179 @@ document.addEventListener("click", (e) => {
         return dir === "asc" ? cmp : -cmp;
     });
     rows.forEach(r => tbody.appendChild(r));
+});
+
+// ---------- Game History ----------
+const GAMES_STATE = { year: "", a: "", b: "", week: "" };
+
+function initGameHistoryPanel() {
+    const years = STATE.data.seasons.map(s => s.year).sort((a, b) => b - a);
+    const owners = Array.from(new Set(STATE.data.seasons.flatMap(s => s.standings.map(t => t.manager)))).sort();
+    const weeks = Array.from(new Set(STATE.data.seasons.flatMap(s => s.weeks.map(w => w.week)))).sort((a, b) => a - b);
+    const yr = document.getElementById("games-year");
+    const aSel = document.getElementById("games-a");
+    const bSel = document.getElementById("games-b");
+    const wkSel = document.getElementById("games-week");
+    yr.innerHTML = `<option value="">All</option>` + years.map(y => `<option value="${y}">${y}</option>`).join("");
+    aSel.innerHTML = `<option value="">Any</option>` + owners.map(o => `<option value="${o}">${o}</option>`).join("");
+    bSel.innerHTML = `<option value="">Any</option>` + owners.map(o => `<option value="${o}">${o}</option>`).join("");
+    wkSel.innerHTML = `<option value="">Any</option>` + weeks.map(w => `<option value="${w}">${w}</option>`).join("");
+    [yr, aSel, bSel, wkSel].forEach(sel => sel.addEventListener("change", () => {
+        GAMES_STATE.year = yr.value;
+        GAMES_STATE.a = aSel.value;
+        GAMES_STATE.b = bSel.value;
+        GAMES_STATE.week = wkSel.value;
+        renderGameHistory();
+    }));
+    document.getElementById("games-reset").addEventListener("click", () => {
+        yr.value = ""; aSel.value = ""; bSel.value = ""; wkSel.value = "";
+        GAMES_STATE.year = GAMES_STATE.a = GAMES_STATE.b = GAMES_STATE.week = "";
+        renderGameHistory();
+    });
+    renderGameHistory();
+}
+
+function findMatchingGames() {
+    const { year, a, b, week } = GAMES_STATE;
+    const yearN = year ? parseInt(year) : null;
+    const weekN = week ? parseInt(week) : null;
+    const matches = [];
+    for (const s of STATE.data.seasons) {
+        if (yearN && s.year !== yearN) continue;
+        for (const wk of s.weeks) {
+            if (weekN && wk.week !== weekN) continue;
+            for (const m of wk.matchups) {
+                const pair = [m.home, m.away];
+                if (a && !pair.includes(a)) continue;
+                if (b && !pair.includes(b)) continue;
+                if (a && b && a === b) continue;
+                matches.push({ year: s.year, week: wk.week, matchup: m });
+            }
+        }
+    }
+    matches.sort((x, y) => (y.year - x.year) || (y.week - x.week));
+    return matches;
+}
+
+function openGameHistory(year, week, a, b) {
+    const tab = document.querySelector('.tab[data-tab="games"]');
+    if (tab) tab.click();
+    GAMES_STATE.year = year ? String(year) : "";
+    GAMES_STATE.week = week ? String(week) : "";
+    GAMES_STATE.a = a || "";
+    GAMES_STATE.b = b || "";
+    document.getElementById("games-year").value = GAMES_STATE.year;
+    document.getElementById("games-a").value = GAMES_STATE.a;
+    document.getElementById("games-b").value = GAMES_STATE.b;
+    document.getElementById("games-week").value = GAMES_STATE.week;
+    renderGameHistory();
+    document.getElementById("panel-games").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function renderGameHistory() {
+    const body = document.getElementById("games-body");
+    const matches = findMatchingGames();
+    if (!matches.length) {
+        body.innerHTML = `<p class="muted">No games match these filters.</p>`;
+        return;
+    }
+    if (matches.length === 1) {
+        body.innerHTML = renderGameDetail(matches[0]);
+        return;
+    }
+    // Multiple matches — show list
+    body.innerHTML = `
+        <p class="muted">${matches.length} games match. Click one for the full breakdown.</p>
+        <div class="scroll-x"><table class="data-table h2h">
+            <thead><tr><th>Year</th><th>Wk</th><th>Home</th><th class="right">Score</th><th>Away</th><th class="right">Score</th><th>Winner</th></tr></thead>
+            <tbody>
+                ${matches.map(g => {
+                    const m = g.matchup;
+                    const winner = m.homePts > m.awayPts ? m.home : (m.awayPts > m.homePts ? m.away : "tie");
+                    return `<tr class="games-list-row" data-goto-game data-game-year="${g.year}" data-game-week="${g.week}" data-game-a="${m.home}" data-game-b="${m.away}">
+                        <td>${g.year}</td>
+                        <td>${g.week}</td>
+                        <td>${m.home}</td>
+                        <td class="right">${fmt(m.homePts)}</td>
+                        <td>${m.away}</td>
+                        <td class="right">${fmt(m.awayPts)}</td>
+                        <td><strong>${winner}</strong></td>
+                    </tr>`;
+                }).join("")}
+            </tbody>
+        </table></div>
+    `;
+}
+
+function renderGameDetail(g) {
+    const m = g.matchup;
+    const homeWon = m.homePts > m.awayPts;
+    const awayWon = m.awayPts > m.homePts;
+    const homeTop = Math.max(0, ...m.homeLineup.filter(p => !["BN","RES"].includes(p.slot)).map(p => p.pts));
+    const awayTop = Math.max(0, ...m.awayLineup.filter(p => !["BN","RES"].includes(p.slot)).map(p => p.pts));
+    const lineupTable = (lineup, topStarterPts) => {
+        if (!lineup.length) return `<p class="muted">no lineup data</p>`;
+        const starters = lineup.filter(p => !["BN","RES"].includes(p.slot));
+        const bench = lineup.filter(p => p.slot === "BN");
+        const ir = lineup.filter(p => p.slot === "RES");
+        const starterTotal = starters.reduce((s, p) => s + p.pts, 0);
+        const benchTotal = bench.reduce((s, p) => s + p.pts, 0);
+        const row = (p) => {
+            const top = p.pts === topStarterPts && topStarterPts > 0 && !["BN","RES"].includes(p.slot);
+            return `<tr${top ? ' class="top-scorer"' : ''}>
+                <td class="slot">${p.slot}</td>
+                <td>${p.player} <span class="pos">${p.pos}</span></td>
+                <td class="pts">${fmt(p.pts)}</td>
+            </tr>`;
+        };
+        return `<table class="lineup-table">
+            <thead><tr><th>Slot</th><th>Player</th><th class="right">Pts</th></tr></thead>
+            <tbody>
+                ${starters.map(row).join("")}
+                <tr class="totals"><td></td><td>Starter total</td><td class="pts">${fmt(starterTotal)}</td></tr>
+                ${bench.length ? `<tr class="section-header"><td colspan="3">Bench</td></tr>` + bench.map(row).join("") : ""}
+                ${bench.length ? `<tr class="totals"><td></td><td>Bench total</td><td class="pts">${fmt(benchTotal)}</td></tr>` : ""}
+                ${ir.length ? `<tr class="section-header"><td colspan="3">IR</td></tr>` + ir.map(row).join("") : ""}
+            </tbody>
+        </table>`;
+    };
+    const homeTeam = findTeam(g.year, m.home);
+    const awayTeam = findTeam(g.year, m.away);
+    return `
+        <div class="game-detail-header">
+            <div class="side">
+                <div class="owner">${m.home}</div>
+                <div class="team">${homeTeam ? homeTeam.team : ""}</div>
+                <div class="score ${homeWon ? "" : (awayWon ? "lost" : "")}">${fmt(m.homePts)}</div>
+            </div>
+            <div class="vs">${g.year} · Week ${g.week}</div>
+            <div class="side">
+                <div class="owner">${m.away}</div>
+                <div class="team">${awayTeam ? awayTeam.team : ""}</div>
+                <div class="score ${awayWon ? "" : (homeWon ? "lost" : "")}">${fmt(m.awayPts)}</div>
+            </div>
+        </div>
+        <div class="game-detail-grid">
+            <div>${lineupTable(m.homeLineup, homeTop)}</div>
+            <div>${lineupTable(m.awayLineup, awayTop)}</div>
+        </div>
+    `;
+}
+
+function findTeam(year, manager) {
+    const s = STATE.data.seasons.find(x => x.year === year);
+    if (!s) return null;
+    return s.standings.find(t => t.manager === manager);
+}
+
+// Global deep-link: any element with [data-goto-game] opens Game History
+// with the game pre-selected. Attributes: data-game-year, data-game-week,
+// data-game-a (first manager), data-game-b (second manager, optional).
+document.addEventListener("click", (e) => {
+    const target = e.target.closest("[data-goto-game]");
+    if (!target) return;
+    const { gameYear, gameWeek, gameA, gameB } = target.dataset;
+    if (!gameYear) return;
+    e.preventDefault();
+    openGameHistory(gameYear, gameWeek, gameA, gameB);
 });
