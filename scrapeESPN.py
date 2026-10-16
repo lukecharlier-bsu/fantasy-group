@@ -22,6 +22,7 @@ from constants import (
     espn_standings_directory,
     espn_gamecenter_directory,
     espn_draft_directory,
+    espn_stats_directory,
     espnOwnerByTeamId,
 )
 from espnCookies import SWID, ESPN_S2
@@ -126,6 +127,47 @@ def _owner(team):
     return espnOwnerByTeamId.get(team.team_id, team.team_name)
 
 
+STAT_FIELDS = [
+    ("rushAtt", "rushingAttempts"), ("rushYds", "rushingYards"),
+    ("rushTds", "rushingTouchdowns"),
+    ("rec", "receivingReceptions"), ("recYds", "receivingYards"),
+    ("recTds", "receivingTouchdowns"), ("tgts", "receivingTargets"),
+    ("passAtt", "passingAttempts"), ("passCmp", "passingCompletions"),
+    ("passYds", "passingYards"), ("passTds", "passingTouchdowns"),
+    ("ints", "passingInterceptions"),
+]
+
+
+def _stat_line(player, week):
+    """Pull real stat line for `player` from their BoxPlayer.stats dict for `week`."""
+    stats = getattr(player, "stats", None) or {}
+    s = stats.get(week) or stats.get(str(week)) or {}
+    brk = s.get("breakdown") or {}
+    return [brk.get(key, 0) or 0 for _, key in STAT_FIELDS]
+
+
+def write_week_stats(scores, year, week):
+    year_dir = os.path.join(espn_stats_directory, str(year))
+    os.makedirs(year_dir, exist_ok=True)
+    header = ["Owner", "Player", "Position", "Slot", "Points"] + [k for k, _ in STAT_FIELDS]
+    rows = []
+    for m in scores:
+        for team, lineup in ((m.home_team, m.home_lineup),
+                             (m.away_team, m.away_lineup) if m.away_team else (None, [])):
+            if team is None:
+                continue
+            owner = _owner(team)
+            for p in lineup:
+                line = _stat_line(p, week)
+                rows.append([owner, p.name, p.position, p.slot_position,
+                             round(float(p.points or 0), 2)] + line)
+    out = os.path.join(year_dir, f"{week}.csv")
+    with open(out, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(header)
+        w.writerows(rows)
+
+
 def write_gamecenter(league, year):
     year_dir = os.path.join(espn_gamecenter_directory, str(year))
     os.makedirs(year_dir, exist_ok=True)
@@ -170,8 +212,9 @@ def write_gamecenter(league, year):
             w = csv.writer(f)
             w.writerow(header)
             w.writerows(rows)
+        write_week_stats(scores, year, week)
         written.append(week)
-    print(f"  gamecenter: wrote weeks {written}")
+    print(f"  gamecenter + stats: wrote weeks {written}")
 
 
 def write_standings(league, year):

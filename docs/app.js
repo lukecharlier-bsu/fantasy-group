@@ -702,7 +702,78 @@ function renderFranchise() {
 function initFrivolitiesPanel() {
     renderBiggestUpsets();
     renderBiggestCarries();
+    renderMostEvenGames();
+    renderLeastTouches();
     renderGoatTeams();
+}
+
+function renderMostEvenGames() {
+    const t = document.getElementById("even-games-table");
+    const rows = STATE.data.mostEvenGames || [];
+    if (!rows.length) { t.innerHTML = `<tbody><tr><td class="muted">no data</td></tr></tbody>`; return; }
+    const body = rows.map((r, i) => `
+        <tr>
+            <td class="right">${i + 1}</td>
+            <td>${r.year}</td>
+            <td>${r.week}</td>
+            <td><strong>${r.owner}</strong></td>
+            <td class="right">${fmt(r.teamPts)}</td>
+            <td class="right">${fmt(r.mean)}</td>
+            <td class="right">${fmt(r.std)}</td>
+            <td class="right"><strong>${r.cv.toFixed(3)}</strong></td>
+            <td>${r.topPlayer} <span class="muted">${r.topPos} ${fmt(r.topPts)}</span></td>
+            <td>${r.opponent} <span class="muted">(${fmt(r.opponentPts)})</span></td>
+        </tr>`).join("");
+    t.innerHTML = `
+        <thead><tr>
+            <th class="right">#</th><th>Year</th><th>Wk</th>
+            <th>Owner</th>
+            <th class="right">Team Pts</th>
+            <th class="right">Mean</th>
+            <th class="right">Std</th>
+            <th class="right" title="Coefficient of variation: std / mean. Lower = more even.">CV</th>
+            <th>Top Scorer</th>
+            <th>Opponent</th>
+        </tr></thead>
+        <tbody>${body}</tbody>
+    `;
+}
+
+function renderLeastTouches() {
+    const t = document.getElementById("touches-table");
+    const rows = STATE.data.leastTouchesInWin || [];
+    if (!rows.length) { t.innerHTML = `<tbody><tr><td class="muted">no data</td></tr></tbody>`; return; }
+    const statLine = (r) => {
+        const bits = [];
+        if (r.rushAtt) bits.push(`${r.rushAtt} rush / ${r.rushYds} yd${r.rushTds ? ` / ${r.rushTds} TD` : ""}`);
+        if (r.rec) bits.push(`${r.rec} rec / ${r.recYds} yd${r.recTds ? ` / ${r.recTds} TD` : ""}`);
+        if (r.passAtt) bits.push(`${r.passAtt} att / ${r.passYds} yd${r.passTds ? ` / ${r.passTds} TD` : ""}`);
+        return bits.join(" · ");
+    };
+    const body = rows.map((r, i) => `
+        <tr>
+            <td class="right">${i + 1}</td>
+            <td>${r.year}</td>
+            <td>${r.week}</td>
+            <td><strong>${r.owner}</strong></td>
+            <td>${r.player} <span class="muted">${r.pos}</span></td>
+            <td class="right">${fmt(r.points)}</td>
+            <td class="right">${r.touches}</td>
+            <td class="right"><strong>${fmt(r.ptsPerTouch)}</strong></td>
+            <td class="muted">${statLine(r)}</td>
+        </tr>`).join("");
+    t.innerHTML = `
+        <thead><tr>
+            <th class="right">#</th><th>Year</th><th>Wk</th>
+            <th>Owner</th>
+            <th>Player</th>
+            <th class="right">Pts</th>
+            <th class="right">Touches</th>
+            <th class="right" title="Fantasy points per touch">Pts/Touch</th>
+            <th>Stat line</th>
+        </tr></thead>
+        <tbody>${body}</tbody>
+    `;
 }
 
 function renderGoatTeams() {

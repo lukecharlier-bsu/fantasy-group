@@ -1,6 +1,6 @@
 Round,Pick,PlayerId,Player,Position,NFLTeam,FantasyTeam,ManagerName
 1,1,4429795,Jahmyr Gibbs,RB,DET,NoMercy Labbers,Matthew
-1,2,4362628,Ja'Marr Chase,WR,CIN,Biggest Buzz Fan,Alex
+1,2,4362628,Ja'Marr Chase,WR,CIN,Team Cruz,Alex
 1,3,4242335,Jonathan Taylor,RB,IND,Wet Grandma,Todd
 1,4,4262921,Justin Jefferson,WR,MIN,Fatboys,Howard
 1,5,4430807,Bijan Robinson,RB,ATL,Team Buzz,Justin
@@ -17,10 +17,10 @@ Round,Pick,PlayerId,Player,Position,NFLTeam,FantasyTeam,ManagerName
 2,6,4426502,Drake London,WR,ATL,Team Buzz,Justin
 2,7,4047646,A.J. Brown,WR,NE,Fatboys,Howard
 2,8,4361307,Trey McBride,TE,ARI,Wet Grandma,Todd
-2,9,3929630,Saquon Barkley,RB,PHI,Biggest Buzz Fan,Alex
+2,9,3929630,Saquon Barkley,RB,PHI,Team Cruz,Alex
 2,10,4362238,Chase Brown,RB,CIN,NoMercy Labbers,Matthew
 3,1,4890973,Ashton Jeanty,RB,LV,NoMercy Labbers,Matthew
-3,2,3043078,Derrick Henry,RB,BAL,Biggest Buzz Fan,Alex
+3,2,3043078,Derrick Henry,RB,BAL,Team Cruz,Alex
 3,3,4428331,Rashee Rice,WR,KC,Wet Grandma,Todd
 3,4,4870808,Jeremiyah Love,RB,ARI,Fatboys,Howard
 3,5,4427366,Breece Hall,RB,NYJ,Team Buzz,Justin
@@ -37,10 +37,10 @@ Round,Pick,PlayerId,Player,Position,NFLTeam,FantasyTeam,ManagerName
 4,6,4361370,Chris Olave,WR,NO,Team Buzz,Justin
 4,7,4567750,Emeka Egbuka,WR,TB,Fatboys,Howard
 4,8,4430737,Kyren Williams,RB,LAR,Wet Grandma,Todd
-4,9,16800,Davante Adams,WR,LAR,Biggest Buzz Fan,Alex
+4,9,16800,Davante Adams,WR,LAR,Team Cruz,Alex
 4,10,4569618,Garrett Wilson,WR,NYJ,NoMercy Labbers,Matthew
 5,1,4429615,Zay Flowers,WR,BAL,NoMercy Labbers,Matthew
-5,2,4372016,Jaylen Waddle,WR,DEN,Biggest Buzz Fan,Alex
+5,2,4372016,Jaylen Waddle,WR,DEN,Team Cruz,Alex
 5,3,3915416,DJ Moore,WR,BUF,Wet Grandma,Todd
 5,4,4696981,Cam Skattebo,RB,NYG,Fatboys,Howard
 5,5,4239996,Travis Etienne Jr.,RB,NO,Team Buzz,Justin
@@ -57,10 +57,10 @@ Round,Pick,PlayerId,Player,Position,NFLTeam,FantasyTeam,ManagerName
 6,6,4871023,Carnell Tate,WR,TEN,Team Buzz,Justin
 6,7,15847,Travis Kelce,TE,KC,Fatboys,Howard
 6,8,4239993,Tee Higgins,WR,CIN,Wet Grandma,Todd
-6,9,4431299,Rome Odunze,WR,CHI,Biggest Buzz Fan,Alex
+6,9,4431299,Rome Odunze,WR,CHI,Team Cruz,Alex
 6,10,3916387,Lamar Jackson,QB,BAL,NoMercy Labbers,Matthew
 7,1,4685278,Luther Burden III,WR,CHI,NoMercy Labbers,Matthew
-7,2,4035538,David Montgomery,RB,HOU,Biggest Buzz Fan,Alex
+7,2,4035538,David Montgomery,RB,HOU,Team Cruz,Alex
 7,3,4431452,Drake Maye,QB,NE,Wet Grandma,Todd
 7,4,4689114,Jaxson Dart,QB,NYG,Fatboys,Howard
 7,5,3040151,George Kittle,TE,SF,Team Buzz,Justin
@@ -77,10 +77,10 @@ Round,Pick,PlayerId,Player,Position,NFLTeam,FantasyTeam,ManagerName
 8,6,4040715,Jalen Hurts,QB,PHI,Team Buzz,Justin
 8,7,4432708,Marvin Harrison Jr.,WR,HOU,Fatboys,Howard
 8,8,16737,Mike Evans,WR,SF,Wet Grandma,Todd
-8,9,4432773,Brian Thomas Jr.,WR,JAX,Biggest Buzz Fan,Alex
+8,9,4432773,Brian Thomas Jr.,WR,JAX,Team Cruz,Alex
 8,10,4572680,Tucker Kraft,TE,GB,NoMercy Labbers,Matthew
 9,1,3128429,Courtland Sutton,WR,DEN,NoMercy Labbers,Matthew
-9,2,4035687,Michael Pittman Jr.,WR,PIT,Biggest Buzz Fan,Alex
+9,2,4035687,Michael Pittman Jr.,WR,PIT,Team Cruz,Alex
 9,3,5083076,Harold Fannin Jr.,TE,CLE,Wet Grandma,Todd
 9,4,4036133,T.J. Hockenson,TE,MIN,Fatboys,Howard
 9,5,4047650,DK Metcalf,WR,PIT,Team Buzz,Justin
@@ -97,10 +97,10 @@ Round,Pick,PlayerId,Player,Position,NFLTeam,FantasyTeam,ManagerName
 10,6,4038815,Rico Dowdle,RB,PIT,Team Buzz,Justin
 10,7,3042519,Aaron Jones Sr.,RB,MIN,Fatboys,Howard
 10,8,4241985,J.K. Dobbins,RB,DEN,Wet Grandma,Todd
-10,9,3139477,Patrick Mahomes,QB,KC,Biggest Buzz Fan,Alex
+10,9,3139477,Patrick Mahomes,QB,KC,Team Cruz,Alex
 10,10,4241416,Chuba Hubbard,RB,CAR,NoMercy Labbers,Matthew
 11,1,4569173,Rhamondre Stevenson,RB,NE,NoMercy Labbers,Matthew
-11,2,4242355,Jake Ferguson,TE,DAL,Biggest Buzz Fan,Alex
+11,2,4242355,Jake Ferguson,TE,DAL,Team Cruz,Alex
 11,3,4870795,Makai Lemon,WR,PHI,Wet Grandma,Todd
 11,4,3917315,Kyler Murray,QB,MIN,Fatboys,Howard
 11,5,4688813,Josh Downs,WR,IND,Team Buzz,Justin
@@ -117,10 +117,10 @@ Round,Pick,PlayerId,Player,Position,NFLTeam,FantasyTeam,ManagerName
 12,6,4429205,Jordan Addison,WR,MIN,Team Buzz,Justin
 12,7,3116165,Chris Godwin Jr.,WR,TB,Fatboys,Howard
 12,8,3953687,Brandon Aubrey,K,DAL,Wet Grandma,Todd
-12,9,4568490,RJ Harvey,RB,DEN,Biggest Buzz Fan,Alex
+12,9,4568490,RJ Harvey,RB,DEN,Team Cruz,Alex
 12,10,12483,Matthew Stafford,QB,LAR,NoMercy Labbers,Matthew
 13,1,4426385,Zach Charbonnet,RB,SEA,NoMercy Labbers,Matthew
-13,2,5083315,Kenyon Sadiq,TE,NYJ,Biggest Buzz Fan,Alex
+13,2,5083315,Kenyon Sadiq,TE,NYJ,Team Cruz,Alex
 13,3,-16026,Seahawks D/ST,D/ST,SEA,Wet Grandma,Todd
 13,4,3126486,Deebo Samuel Sr.,WR,SF,Fatboys,Howard
 13,5,-16023,Steelers D/ST,D/ST,PIT,Team Buzz,Justin
@@ -134,13 +134,13 @@ Round,Pick,PlayerId,Player,Position,NFLTeam,FantasyTeam,ManagerName
 14,3,-16017,Patriots D/ST,D/ST,NE,Beefcakes,Aiden
 14,4,4686361,Cam Little,K,JAX,Houston Stars,Sean
 14,5,-16033,Ravens D/ST,D/ST,BAL,The Booty Clappers,Ulises
-14,6,4574716,Harrison Mevis,K,LAR,Team Buzz,Justin
+14,6,4574716,Harrison Mevis,K,None,Team Buzz,Justin
 14,7,-16024,Chargers D/ST,D/ST,LAC,Fatboys,Howard
 14,8,4575131,Jacory Croskey-Merritt,RB,WSH,Wet Grandma,Todd
-14,9,-16005,Browns D/ST,D/ST,CLE,Biggest Buzz Fan,Alex
+14,9,-16005,Browns D/ST,D/ST,CLE,Team Cruz,Alex
 14,10,3055899,Harrison Butker,K,KC,NoMercy Labbers,Matthew
 15,1,-16012,Chiefs D/ST,D/ST,KC,NoMercy Labbers,Matthew
-15,2,4034949,Eddy Pineiro,K,SF,Biggest Buzz Fan,Alex
+15,2,4034949,Eddy Pineiro,K,SF,Team Cruz,Alex
 15,3,3052587,Baker Mayfield,QB,TB,Wet Grandma,Todd
 15,4,2473037,Jason Myers,K,SEA,Fatboys,Howard
 15,5,3121023,Dallas Goedert,TE,PHI,Team Buzz,Justin

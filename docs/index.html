@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League History Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1791906077" />
+    <link rel="stylesheet" href="styles.css?v=1792167886" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -209,6 +209,20 @@
                 </div>
             </div>
             <div class="card">
+                <h3>Most Balanced Wins</h3>
+                <p class="muted">Lowest coefficient of variation (std ÷ mean) across the starting lineup — every slot contributed. Wins only, minimum 100 total pts to filter out "everyone was equally bad" blowouts.</p>
+                <div class="scroll-x">
+                    <table id="even-games-table" class="data-table"></table>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Most Efficient Fantasy Days</h3>
+                <p class="muted">Highest fantasy points per touch in a win. Touches = rush attempts + receptions (QBs also count pass attempts). ESPN-era only — the historical NFL.com data didn't carry stat lines.</p>
+                <div class="scroll-x">
+                    <table id="touches-table" class="data-table"></table>
+                </div>
+            </div>
+            <div class="card">
                 <h3>GOAT Teams</h3>
                 <p class="muted">All-time best team-seasons, scored out of 100: PPG (25), all-play win % (25), start/sit efficiency (20), elite players rostered — top 10 at each position (15), and a +15 championship bonus. In-progress seasons excluded.</p>
                 <div class="scroll-x">
@@ -245,6 +259,6 @@
         <span id="data-stamp"></span>
     </footer>
 
-    <script src="app.js?v=1791906077"></script>
+    <script src="app.js?v=1792167886"></script>
 </body>
 </html>

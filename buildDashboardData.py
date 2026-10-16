@@ -726,6 +726,195 @@ def build_goat_teams(gamecenter_dirs, seasons, n=25):
     return out[:n]
 
 
+def build_least_touches_in_win(stats_dirs, seasons, n=20, min_touches=3):
+    """Highest fantasy pts/touch in a win. Touches:
+      RB: rushingAttempts + receivingReceptions
+      WR/TE: receivingReceptions
+      QB: passingAttempts + rushingAttempts
+    DEF/K excluded (no 'touches'). Only wins count. ESPN-era data only
+    (NFL.com historical never captured stat lines)."""
+    if isinstance(stats_dirs, str):
+        stats_dirs = [stats_dirs]
+    # Build win index
+    wins = set()  # (year, week, owner)
+    for s in seasons:
+        for wk in s["weeks"]:
+            for m in wk["matchups"]:
+                h, hp, a, ap = m["home"], m["homePts"], m["away"], m["awayPts"]
+                if hp == ap:
+                    continue
+                wins.add((s["year"], wk["week"], h if hp > ap else a))
+
+    out = []
+    for d in stats_dirs:
+        if not os.path.isdir(d):
+            continue
+        for yn in sorted(os.listdir(d)):
+            yp = os.path.join(d, yn)
+            if not os.path.isdir(yp):
+                continue
+            year = int(yn)
+            for fn in sorted(os.listdir(yp),
+                             key=lambda n: int(n[:-4]) if n.endswith(".csv") else 999):
+                if not fn.endswith(".csv"):
+                    continue
+                week = int(fn[:-4])
+                with open(os.path.join(yp, fn), newline="") as f:
+                    reader = csv.DictReader(f)
+                    for row in reader:
+                        owner = (row.get("Owner") or "").strip()
+                        if (year, week, owner) not in wins:
+                            continue
+                        slot = row.get("Slot") or ""
+                        # starters only
+                        if slot in {"BE", "IR", "BN", "RES"}:
+                            continue
+                        pos = row.get("Position") or ""
+                        try:
+                            pts = float(row.get("Points") or 0)
+                        except ValueError:
+                            pts = 0.0
+                        if pts <= 0:
+                            continue
+                        def _n(key):
+                            try:
+                                return float(row.get(key) or 0)
+                            except ValueError:
+                                return 0.0
+                        if pos == "RB":
+                            touches = _n("rushAtt") + _n("rec")
+                        elif pos in ("WR", "TE"):
+                            touches = _n("rec")
+                        elif pos == "QB":
+                            touches = _n("passAtt") + _n("rushAtt")
+                        else:
+                            continue  # K, D/ST excluded
+                        if touches < min_touches:
+                            continue
+                        out.append({
+                            "year": year, "week": week,
+                            "owner": owner,
+                            "player": row.get("Player"),
+                            "pos": pos,
+                            "points": round(pts, 2),
+                            "touches": int(touches),
+                            "ptsPerTouch": round(pts / touches, 2),
+                            "rushAtt": int(_n("rushAtt")),
+                            "rushYds": int(_n("rushYds")),
+                            "rushTds": int(_n("rushTds")),
+                            "rec": int(_n("rec")),
+                            "recYds": int(_n("recYds")),
+                            "recTds": int(_n("recTds")),
+                            "passAtt": int(_n("passAtt")),
+                            "passYds": int(_n("passYds")),
+                            "passTds": int(_n("passTds")),
+                        })
+    out.sort(key=lambda r: -r["ptsPerTouch"])
+    return out[:n]
+
+
+def build_most_even_games(gamecenter_dirs, seasons, n=20, min_team_pts=100):
+    """Starts-only coefficient of variation (std / mean) of starter scores.
+    Lower = more even. Wins only, and require min_team_pts so 'everyone sucked
+    equally' low-scoring games don't dominate the list."""
+    import statistics
+    if isinstance(gamecenter_dirs, str):
+        gamecenter_dirs = [gamecenter_dirs]
+    BENCH_SLOTS = {"BN", "RES"}
+    results = {}
+    for s in seasons:
+        for wk in s["weeks"]:
+            for m in wk["matchups"]:
+                h, hp, a, ap = m["home"], m["homePts"], m["away"], m["awayPts"]
+                if hp == ap:
+                    continue
+                results[(s["year"], wk["week"], h)] = {"opp": a, "won": hp > ap,
+                                                      "oppPts": ap}
+                results[(s["year"], wk["week"], a)] = {"opp": h, "won": ap > hp,
+                                                      "oppPts": hp}
+
+    year_paths = {}
+    for d in gamecenter_dirs:
+        if not os.path.isdir(d):
+            continue
+        for yn in sorted(os.listdir(d)):
+            yp = os.path.join(d, yn)
+            if os.path.isdir(yp):
+                year_paths[yn] = yp
+
+    out = []
+    for yn in sorted(year_paths):
+        year = int(yn)
+        for fn in sorted(os.listdir(year_paths[yn]),
+                         key=lambda n: int(n[:-4]) if n.endswith(".csv") else 999):
+            if not fn.endswith(".csv"):
+                continue
+            week = int(fn[:-4])
+            with open(os.path.join(year_paths[yn], fn), newline="") as f:
+                reader = csv.reader(f)
+                header = next(reader, None)
+                if not header:
+                    continue
+                slot_cols = []
+                i = 0
+                while i < len(header):
+                    h = header[i]
+                    if h in {"Owner", "Rank", "Total", "Opponent", "Opponent Total", "Points"}:
+                        i += 1
+                        continue
+                    if i + 1 < len(header) and header[i + 1] == "Points":
+                        slot_cols.append((h, i, i + 1))
+                        i += 2
+                    else:
+                        i += 1
+                for row in reader:
+                    if not row or len(row) < 2:
+                        continue
+                    owner = (row[0] or "").strip()
+                    res = results.get((year, week, owner))
+                    if not res or not res["won"]:
+                        continue
+                    starters = []  # (name, pos, pts)
+                    for slot, ni, pi in slot_cols:
+                        if slot in BENCH_SLOTS or ni >= len(row):
+                            continue
+                        info = parse_gc_player(row[ni])
+                        try:
+                            pts = float((row[pi] or "0").replace(",", "")) \
+                                if pi < len(row) else 0.0
+                        except ValueError:
+                            pts = 0.0
+                        starters.append((info["display"] if info else "-",
+                                         info["pos"] if info else "?", pts))
+                    if len(starters) < 3:
+                        continue
+                    pts_list = [p for _, _, p in starters]
+                    total = sum(pts_list)
+                    if total < min_team_pts:
+                        continue
+                    mean = total / len(pts_list)
+                    if mean <= 0:
+                        continue
+                    std = statistics.pstdev(pts_list)
+                    cv = std / mean
+                    top = max(starters, key=lambda s: s[2])
+                    out.append({
+                        "year": year, "week": week,
+                        "owner": owner,
+                        "teamPts": round(total, 2),
+                        "mean": round(mean, 2),
+                        "std": round(std, 2),
+                        "cv": round(cv, 3),
+                        "topPlayer": top[0],
+                        "topPos": top[1],
+                        "topPts": round(top[2], 2),
+                        "opponent": res["opp"],
+                        "opponentPts": round(res["oppPts"], 2),
+                    })
+    out.sort(key=lambda r: r["cv"])
+    return out[:n]
+
+
 def build_biggest_carries(gamecenter_dirs, seasons, n=20):
     """Wins where a single starter made up the largest share of the team's
     total points. Only wins count — a 'carry' in a loss isn't a carry."""
@@ -1361,6 +1550,9 @@ def main():
     biggest_carries = build_biggest_carries(gamecenter_dirs, seasons)
     trades_detected = detect_trades(gamecenter_dirs, standings)
     goat_teams = build_goat_teams(gamecenter_dirs, seasons)
+    most_even = build_most_even_games(gamecenter_dirs, seasons)
+    stats_dirs = [os.path.join("output", f"{lid}-history-stats") for lid in league_ids]
+    least_touches = build_least_touches_in_win(stats_dirs, seasons)
     drafts = {}
     for d in draft_dirs:
         if os.path.isdir(d):
@@ -1386,6 +1578,8 @@ def main():
         "biggestCarries": biggest_carries,
         "trades": trades_detected,
         "goatTeams": goat_teams,
+        "mostEvenGames": most_even,
+        "leastTouchesInWin": least_touches,
         "drafts": drafts,
         "draftOwnerStats": draft_owner_stats,
         "playersCareer": players_career,
