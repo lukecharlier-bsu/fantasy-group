@@ -23,6 +23,7 @@ from constants import (
     espn_gamecenter_directory,
     espn_draft_directory,
     espn_stats_directory,
+    espn_schedule_directory,
     espnOwnerByTeamId,
 )
 from espnCookies import SWID, ESPN_S2
@@ -295,6 +296,39 @@ def write_draft(league, year):
     print(f"  draft: wrote {out} ({len(rows)} picks)")
 
 
+def write_schedule(league, year):
+    """Full regular-season schedule (every pairing, played or not).
+    Writes output/<espnLeagueID>-schedule/<year>.csv so buildDashboardData can
+    simulate the remaining games for playoff odds."""
+    os.makedirs(espn_schedule_directory, exist_ok=True)
+    reg = league.settings.reg_season_count or 14
+    out_path = os.path.join(espn_schedule_directory, f"{year}.csv")
+    seen = set()
+    rows = []
+    for week in range(1, reg + 1):
+        try:
+            matchups = league.box_scores(week)
+        except Exception as exc:
+            print(f"    sched wk{week}: skip ({exc})")
+            continue
+        for m in matchups:
+            if not m.away_team:
+                continue  # bye week
+            home = _owner(m.home_team)
+            away = _owner(m.away_team)
+            # Dedupe pair direction isn't needed — each matchup lists each team once
+            key = (week, home, away)
+            if key in seen:
+                continue
+            seen.add(key)
+            rows.append([week, home, away])
+    with open(out_path, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["Week", "Home", "Away"])
+        w.writerows(rows)
+    print(f"  schedule: wrote {out_path} ({len(rows)} matchups)")
+
+
 def write_player_map(league):
     """Dump ESPN's name <-> playerId dict so the dashboard build can look up
     headshots for historical players we only know by first-initial name."""
@@ -316,6 +350,7 @@ def scrape_year(year):
     write_standings(league, year)
     write_draft(league, year)
     write_gamecenter(league, year)
+    write_schedule(league, year)
     write_player_map(league)
 
 

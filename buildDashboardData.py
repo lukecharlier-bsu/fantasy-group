@@ -803,6 +803,156 @@ def build_goat_teams(gamecenter_dirs, seasons, n=25):
     return out[:n]
 
 
+def build_playoff_odds(seasons, standings_dict, league_ids,
+                       playoff_count=4, sims=10000, seed=42):
+    """Monte Carlo playoff odds for the in-progress season.
+
+    For each team, model their weekly score as Normal(mean=season-to-date PPG,
+    std=season-to-date weekly std). Walk the remaining regular-season schedule,
+    roll each matchup, tally wins + PF. Rank teams by (wins DESC, PF DESC) at
+    end of regular season; top `playoff_count` make the playoffs.
+    """
+    import os as _os
+    import random
+    import statistics
+    try:
+        from constants import espnLeagueID
+    except Exception:
+        return None
+
+    sched_path = _os.path.join("output", f"{espnLeagueID}-schedule")
+    if not _os.path.isdir(sched_path):
+        return None
+    in_progress = next((s for s in seasons if s.get("inProgress")), None)
+    if not in_progress:
+        return None
+    year = in_progress["year"]
+    sched_file = _os.path.join(sched_path, f"{year}.csv")
+    if not _os.path.isfile(sched_file):
+        return None
+
+    # Current standings snapshot (W/L/PF per team)
+    teams = {t["manager"]: {
+        "wins": t["wins"], "losses": t["losses"], "ties": t["ties"],
+        "pf": t["pointsFor"],
+    } for t in in_progress["standings"]}
+    if not teams:
+        return None
+
+    # Per-team weekly scores so far — compute mean + std per team
+    scores_by_team = {m: [] for m in teams}
+    for wk in in_progress["weeks"]:
+        for m in wk["matchups"]:
+            if m["home"] in scores_by_team:
+                scores_by_team[m["home"]].append(m["homePts"])
+            if m["away"] in scores_by_team:
+                scores_by_team[m["away"]].append(m["awayPts"])
+    dist = {}
+    all_scores = []
+    for owner, scores in scores_by_team.items():
+        all_scores.extend(scores)
+    league_mean = statistics.fmean(all_scores) if all_scores else 110.0
+    league_std = statistics.pstdev(all_scores) if len(all_scores) >= 2 else 25.0
+    for owner in teams:
+        s = scores_by_team.get(owner) or []
+        if len(s) >= 2:
+            dist[owner] = (statistics.fmean(s), statistics.pstdev(s))
+        elif len(s) == 1:
+            dist[owner] = (s[0], league_std)
+        else:
+            dist[owner] = (league_mean, league_std)
+
+    # Remaining schedule — only weeks we haven't played yet
+    played_weeks = {wk["week"] for wk in in_progress["weeks"]}
+    remaining = []
+    with open(sched_file, newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            try:
+                wk = int(row["Week"])
+            except (TypeError, ValueError):
+                continue
+            if wk in played_weeks:
+                continue
+            home = (row["Home"] or "").strip()
+            away = (row["Away"] or "").strip()
+            if home in teams and away in teams:
+                remaining.append((wk, home, away))
+
+    rng = random.Random(seed)
+    N = len(teams)
+    owners = list(teams.keys())
+    playoff_counts = {o: 0 for o in owners}
+    sum_final_wins = {o: 0.0 for o in owners}
+    sum_final_pf = {o: 0.0 for o in owners}
+    best_seed_counts = {o: 0 for o in owners}
+
+    for _ in range(sims):
+        sim_wins = {o: teams[o]["wins"] for o in owners}
+        sim_losses = {o: teams[o]["losses"] for o in owners}
+        sim_ties = {o: teams[o]["ties"] for o in owners}
+        sim_pf = {o: teams[o]["pf"] for o in owners}
+        for (wk, h, a) in remaining:
+            mu_h, sd_h = dist[h]
+            mu_a, sd_a = dist[a]
+            score_h = rng.gauss(mu_h, max(sd_h, 5.0))
+            score_a = rng.gauss(mu_a, max(sd_a, 5.0))
+            # Clip to a sensible range
+            if score_h < 20: score_h = 20
+            if score_a < 20: score_a = 20
+            sim_pf[h] += score_h
+            sim_pf[a] += score_a
+            if score_h > score_a:
+                sim_wins[h] += 1
+                sim_losses[a] += 1
+            elif score_a > score_h:
+                sim_wins[a] += 1
+                sim_losses[h] += 1
+            else:
+                sim_ties[h] += 1
+                sim_ties[a] += 1
+        # Rank: wins desc (ties count 0.5), PF desc; random for exact ties
+        ranked = sorted(
+            owners,
+            key=lambda o: (-(sim_wins[o] + 0.5 * sim_ties[o]), -sim_pf[o], rng.random()),
+        )
+        for i, o in enumerate(ranked):
+            sum_final_wins[o] += sim_wins[o] + 0.5 * sim_ties[o]
+            sum_final_pf[o] += sim_pf[o]
+            if i < playoff_count:
+                playoff_counts[o] += 1
+            if i == 0:
+                best_seed_counts[o] += 1
+
+    rows = []
+    for o in owners:
+        rec = teams[o]
+        rows.append({
+            "owner": o,
+            "team": next((t["team"] for t in in_progress["standings"]
+                          if t["manager"] == o), ""),
+            "wins": rec["wins"],
+            "losses": rec["losses"],
+            "ties": rec["ties"],
+            "pf": round(rec["pf"], 2),
+            "ppg": round(dist[o][0], 2),
+            "ppgStd": round(dist[o][1], 2),
+            "playoffPct": round(playoff_counts[o] / sims, 4),
+            "oneSeedPct": round(best_seed_counts[o] / sims, 4),
+            "projWins": round(sum_final_wins[o] / sims, 2),
+            "projPF": round(sum_final_pf[o] / sims, 2),
+        })
+    rows.sort(key=lambda r: -r["playoffPct"])
+    return {
+        "year": year,
+        "playoffCount": playoff_count,
+        "sims": sims,
+        "regSeasonWeeks": max(played_weeks | {wk for wk, _, _ in remaining}, default=0),
+        "weeksPlayed": max(played_weeks, default=0),
+        "teams": rows,
+    }
+
+
 def build_one_start_club(players_career, n=40):
     """Players started exactly once by any manager in league history. We lean
     on weekHighInfo from load_player_scoring — for a one-start player it IS
@@ -1810,6 +1960,7 @@ def main():
     bust_riser = compute_busts_and_risers(drafts, players_by_year)
     enrich_with_espn_ids(players_by_owner, players_career, drafts)
     one_start_club = build_one_start_club(players_career)
+    playoff_odds = build_playoff_odds(seasons, standings, league_ids)
 
     payload = {
         "leagueIds": [str(x) for x in league_ids],
@@ -1830,6 +1981,7 @@ def main():
         "mostEvenGames": most_even,
         "mostEfficientWins": most_efficient,
         "oneStartClub": one_start_club,
+        "playoffOdds": playoff_odds,
         "drafts": drafts,
         "draftOwnerStats": draft_owner_stats,
         "playersCareer": players_career,

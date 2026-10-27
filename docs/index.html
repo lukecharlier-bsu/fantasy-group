@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League History Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1793128541" />
+    <link rel="stylesheet" href="styles.css?v=1793129520" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -224,6 +224,12 @@
                     <p class="muted">All-time best team-seasons, scored out of 100: PPG (25), all-play win % (25), start/sit efficiency (20), elite players rostered — top 10 at each position (15), and a +15 championship bonus. In-progress seasons excluded.</p>
                     <div class="scroll-x"><table id="goat-teams-table" class="data-table"></table></div>
                 </div>
+                <div class="card friv-detail" id="friv-odds" style="display:none">
+                    <h3>Playoff Odds</h3>
+                    <p class="muted">Monte Carlo projection for the in-progress season. Each team's remaining weeks are rolled from their season-to-date scoring distribution (mean + std) against the real schedule, 10,000 simulations. Top 4 by W-L (ties broken on PF) make the playoffs — probabilities sum to 400%.</p>
+                    <div id="odds-summary" class="muted" style="margin-bottom:0.5rem"></div>
+                    <div class="scroll-x"><table id="odds-table" class="data-table"></table></div>
+                </div>
                 <div class="card friv-detail" id="friv-onestart" style="display:none">
                     <h3>The One Start Club</h3>
                     <p class="muted">Players who were started exactly once by any manager in league history. Ranked by points in that one and only start — the biggest cup-of-coffee legends. Click a row to open the game.</p>
@@ -299,6 +305,6 @@
         <span id="data-stamp"></span>
     </footer>
 
-    <script src="app.js?v=1793128541"></script>
+    <script src="app.js?v=1793129520"></script>
 </body>
 </html>

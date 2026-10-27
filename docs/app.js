@@ -723,6 +723,10 @@ const FRIVOLITIES = [
       desc: "All-time best team-seasons by composite score.",
       preview: (d) => (d.goatTeams || [])[0],
       previewText: (r) => `${r.year} <strong>${r.owner}</strong> (${r.record}) — ${fmt(r.composite, 1)}` },
+    { id: "odds",     title: "Playoff Odds",       icon: "🎲",
+      desc: "Live Monte Carlo projection for the in-progress season.",
+      preview: (d) => (d.playoffOdds && d.playoffOdds.teams) ? d.playoffOdds.teams[0] : null,
+      previewText: (r) => `<strong>${r.owner}</strong> — ${(r.playoffPct * 100).toFixed(1)}% to make it` },
     { id: "onestart", title: "The One Start Club", icon: "☕",
       desc: "Players started exactly once in league history.",
       preview: (d) => (d.oneStartClub || [])[0],
@@ -737,6 +741,7 @@ function initFrivolitiesPanel() {
     renderMostEfficientWins();
     renderGoatTeams();
     renderOneStartClub();
+    renderPlayoffOdds();
 
     // Build the nav grid
     const nav = document.getElementById("frivolities-nav");
@@ -1478,3 +1483,50 @@ document.addEventListener("click", (e) => {
     e.preventDefault();
     openPlayer(key);
 });
+
+function renderPlayoffOdds() {
+    const t = document.getElementById("odds-table");
+    const summary = document.getElementById("odds-summary");
+    const odds = STATE.data.playoffOdds;
+    if (!odds || !odds.teams || !odds.teams.length) {
+        if (t) t.innerHTML = `<tbody><tr><td class="muted">No in-progress season — playoff odds don't apply until the regular season is live.</td></tr></tbody>`;
+        if (summary) summary.textContent = "";
+        return;
+    }
+    const total = odds.teams.reduce((s, r) => s + r.playoffPct, 0);
+    summary.textContent = `${odds.year} season, through week ${odds.weeksPlayed} of ${odds.regSeasonWeeks} · ${odds.sims.toLocaleString()} simulations · top ${odds.playoffCount} make playoffs · total odds = ${(total * 100).toFixed(1)}%`;
+    const bar = (pct) => {
+        const w = Math.max(0.8, Math.min(100, pct * 100));
+        const hue = Math.round(pct * 120); // 0 = red, 1 = green
+        return `<div style="position:relative;background:#1f2937;border-radius:4px;height:16px;min-width:70px"><div style="position:absolute;top:0;left:0;height:100%;width:${w}%;background:hsl(${hue},70%,45%);border-radius:4px"></div><div style="position:relative;text-align:center;line-height:16px;font-size:0.75rem;font-weight:600">${(pct * 100).toFixed(1)}%</div></div>`;
+    };
+    const body = odds.teams.map((r, i) => {
+        const rec = `${r.wins}-${r.losses}${r.ties ? "-" + r.ties : ""}`;
+        return `
+            <tr>
+                <td class="right">${i + 1}</td>
+                <td><strong>${r.owner}</strong></td>
+                <td>${rec}</td>
+                <td class="right">${fmt(r.pf)}</td>
+                <td class="right">${fmt(r.ppg)}</td>
+                <td class="right">${fmt(r.projWins)}</td>
+                <td class="right">${fmt(r.projPF)}</td>
+                <td style="min-width:120px">${bar(r.playoffPct)}</td>
+                <td class="right">${(r.oneSeedPct * 100).toFixed(1)}%</td>
+            </tr>`;
+    }).join("");
+    t.innerHTML = `
+        <thead><tr>
+            <th class="right">#</th>
+            <th>Owner</th>
+            <th>Record</th>
+            <th class="right">PF</th>
+            <th class="right" title="Season-to-date points per game">PPG</th>
+            <th class="right" title="Projected final wins (avg across sims)">Proj W</th>
+            <th class="right" title="Projected final points for (avg across sims)">Proj PF</th>
+            <th title="Share of simulations in which this team made the top 4">Playoff %</th>
+            <th class="right" title="Share of simulations in which this team finished #1">1-Seed %</th>
+        </tr></thead>
+        <tbody>${body}</tbody>
+    `;
+}

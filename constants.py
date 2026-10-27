@@ -13,6 +13,7 @@ espn_standings_directory = './output/' + espnLeagueID + '-history-standings/'
 espn_gamecenter_directory = './output/' + espnLeagueID + '-history-teamgamecenter/'
 espn_draft_directory = './output/' + espnLeagueID + '-history-draft/'
 espn_stats_directory = './output/' + espnLeagueID + '-history-stats/'
+espn_schedule_directory = './output/' + espnLeagueID + '-schedule/'
 
 # Map ESPN team_id -> ManagerName used in historical CSVs so aggregate stats
 # stay continuous across the platform switch.
