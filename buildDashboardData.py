@@ -1085,10 +1085,17 @@ def build_mia_khalifas(lineups, players_career, n=50):
     return out[:n]
 
 
-def build_worst_drops(lineups, trades, players_career, n=25):
+def build_worst_drops(lineups, trades, players_career, n=25, trade_window=2):
     """For each (year, player, dropping-owner), measure how many starter points
     the player went on to score for OTHER owners the rest of that season.
-    Trade departures are filtered out — this is pure drop/waiver regret."""
+    Trade departures are filtered out — this is pure drop/waiver regret.
+
+    Two trade filters are applied:
+    1. Direct match against the detected-trades list (exact week + key).
+    2. A smarter reciprocal check: if the dropping owner GAINED any player
+       from the receiving owner within +/- trade_window weeks of the drop,
+       the departure is almost certainly a trade we missed.
+    """
     # Build set of (year, departure_week, owner_losing, player_key) for trades
     trade_dep = set()
     for t in trades:
@@ -1110,6 +1117,32 @@ def build_worst_drops(lineups, trades, players_career, n=25):
                 "display": p["player"],
             })
 
+    # Reverse index: (year, from_owner, to_owner) -> {week when player moved}
+    # Used to detect missed trades: if A dropped X and gained something from B
+    # around the same time, that was likely a trade.
+    movement = {}  # (year, from_owner, to_owner) -> set of weeks any player moved
+    for (year, key), events in timeline.items():
+        if len(events) < 2:
+            continue
+        events_sorted = sorted(events, key=lambda e: e["week"])
+        prev = events_sorted[0]
+        for ev in events_sorted[1:]:
+            if ev["owner"] != prev["owner"]:
+                movement.setdefault((year, prev["owner"], ev["owner"]), set()).add(ev["week"])
+            prev = ev
+
+    def is_likely_trade(year, drop_week, giver, receiver, key):
+        # Hard match against detected trades
+        if (year, drop_week, giver, key) in trade_dep:
+            return True
+        # Reciprocal check: did `giver` gain any player from `receiver`
+        # within +/- trade_window weeks of the drop?
+        return_moves = movement.get((year, receiver, giver), set())
+        for w in return_moves:
+            if abs(w - drop_week) <= trade_window:
+                return True
+        return False
+
     BENCH = {"BN", "RES"}
     out = []
     for (year, key), events in timeline.items():
@@ -1128,8 +1161,9 @@ def build_worst_drops(lineups, trades, players_career, n=25):
             if not later:
                 continue
             next_run = runs[i + 1]
-            # Skip trade departures
-            if (year, next_run["start_week"], run["owner"], key) in trade_dep:
+            # Skip trade departures (direct match + reciprocal-movement heuristic)
+            if is_likely_trade(year, next_run["start_week"], run["owner"],
+                               next_run["owner"], key):
                 continue
             later_pts = sum(ev["pts"] for lr in later for ev in lr["events"] if ev["started"])
             later_starts = sum(1 for lr in later for ev in lr["events"] if ev["started"])
@@ -1649,12 +1683,14 @@ def load_player_name_resolution(stats_dirs):
                     continue
                 with open(os.path.join(yp, fn), newline="") as f:
                     for row in csv.DictReader(f):
-                        name = (row.get("Player") or "").strip()
+                        # Prefer FullName (added by scrapeHistoricalNFLStats so
+                        # Bijan vs Brian Robinson can be disambiguated by team).
+                        name = (row.get("FullName") or row.get("Player") or "").strip()
                         if not name or name == "-":
                             continue
                         parts = name.split()
                         if len(parts) < 2 or parts[0].endswith("."):
-                            continue  # not a full name
+                            continue  # still only have initials — can't help
                         owner = (row.get("Owner") or "").strip()
                         slot = row.get("Slot") or ""
                         try:
