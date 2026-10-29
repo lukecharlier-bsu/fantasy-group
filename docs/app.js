@@ -1517,6 +1517,13 @@ function renderPlayoffOdds() {
     };
     const body = odds.teams.map((r, i) => {
         const rec = `${r.wins}-${r.losses}${r.ties ? "-" + r.ties : ""}`;
+        const resSign = r.residualMean > 0 ? "+" : "";
+        const injChips = [];
+        if (r.outStarters) injChips.push(`<span title="OUT or IR starters">🚑 ${r.outStarters}</span>`);
+        if (r.injuredStarters > r.outStarters) {
+            injChips.push(`<span title="Questionable/doubtful starters">❓ ${r.injuredStarters - r.outStarters}</span>`);
+        }
+        if (r.byeStarters) injChips.push(`<span title="Starters on bye this week">💤 ${r.byeStarters}</span>`);
         return `
             <tr>
                 <td class="right">${i + 1}</td>
@@ -1524,9 +1531,12 @@ function renderPlayoffOdds() {
                 <td>${rec}</td>
                 <td class="right">${fmt(r.pf)}</td>
                 <td class="right">${fmt(r.ppg)}</td>
+                <td class="right">${fmt(r.projWeek)}</td>
+                <td class="right" style="color:${r.residualMean >= 0 ? 'var(--accent)' : '#f87171'}">${resSign}${fmt(r.residualMean)}</td>
+                <td class="right"><strong>${fmt(r.forecastMean)}</strong></td>
+                <td class="muted">${injChips.join(" ") || "—"}</td>
                 <td class="right">${fmt(r.projWins)}</td>
-                <td class="right">${fmt(r.projPF)}</td>
-                <td style="min-width:120px">${bar(r.playoffPct)}</td>
+                <td style="min-width:110px">${bar(r.playoffPct)}</td>
                 <td class="right">${(r.oneSeedPct * 100).toFixed(1)}%</td>
             </tr>`;
     }).join("");
@@ -1536,9 +1546,12 @@ function renderPlayoffOdds() {
             <th>Owner</th>
             <th>Record</th>
             <th class="right">PF</th>
-            <th class="right" title="Season-to-date points per game">PPG</th>
+            <th class="right" title="Season-to-date actual PPG">PPG</th>
+            <th class="right" title="ESPN's projection for the current week (reflects your current roster, bench, injuries)">ESPN Proj</th>
+            <th class="right" title="Historical mean (actual − projected). Positive = beats projections, negative = underperforms.">Residual</th>
+            <th class="right" title="Forecast weekly mean used in the sim = projection + residual adjustment">Forecast</th>
+            <th title="Current status for this week — hover for detail">Status</th>
             <th class="right" title="Projected final wins (avg across sims)">Proj W</th>
-            <th class="right" title="Projected final points for (avg across sims)">Proj PF</th>
             <th title="Share of simulations in which this team made the top 4">Playoff %</th>
             <th class="right" title="Share of simulations in which this team finished #1">1-Seed %</th>
         </tr></thead>

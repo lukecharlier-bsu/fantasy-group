@@ -24,6 +24,7 @@ from constants import (
     espn_draft_directory,
     espn_stats_directory,
     espn_schedule_directory,
+    espn_projections_directory,
     espnOwnerByTeamId,
 )
 from espnCookies import SWID, ESPN_S2
@@ -296,6 +297,48 @@ def write_draft(league, year):
     print(f"  draft: wrote {out} ({len(rows)} picks)")
 
 
+def write_projections(league, year):
+    """Per-team per-week ESPN projected totals + injury/bye context.
+    Writes output/<espnID>-projections/<year>.csv so buildDashboardData can
+    layer ESPN's actual-vs-projected residuals into the playoff odds model.
+    Also captures the latest 'current-week' projection per team which the
+    model uses as the forward-looking baseline for unplayed weeks."""
+    os.makedirs(espn_projections_directory, exist_ok=True)
+    out_path = os.path.join(espn_projections_directory, f"{year}.csv")
+    reg = league.settings.reg_season_count or 14
+    last_week = min(league.current_week, reg + 3)
+    header = ["Week", "Owner", "Actual", "Projected",
+              "StartersInjured", "StartersOnBye", "StartersOut"]
+    rows = []
+    for week in range(1, last_week + 1):
+        try:
+            scores = league.box_scores(week)
+        except Exception as exc:
+            print(f"    proj wk{week}: skip ({exc})")
+            continue
+        for m in scores:
+            for team, lineup, actual, projected in [
+                (m.home_team, m.home_lineup, m.home_score, getattr(m, "home_projected", 0)),
+                (m.away_team, m.away_lineup, m.away_score, getattr(m, "away_projected", 0)) if m.away_team else (None, [], 0, 0),
+            ]:
+                if team is None:
+                    continue
+                owner = _owner(team)
+                starters = [p for p in lineup if p.slot_position not in ("BE", "IR")]
+                injured = sum(1 for p in starters
+                              if (p.injuryStatus or "").upper() in ("QUESTIONABLE", "DOUBTFUL", "OUT", "IR"))
+                on_bye = sum(1 for p in starters if getattr(p, "on_bye_week", False))
+                out = sum(1 for p in starters
+                          if (p.injuryStatus or "").upper() in ("OUT", "IR"))
+                rows.append([week, owner, round(actual or 0, 2),
+                             round(projected or 0, 2), injured, on_bye, out])
+    with open(out_path, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(header)
+        w.writerows(rows)
+    print(f"  projections: wrote {out_path} ({len(rows)} rows)")
+
+
 def write_schedule(league, year):
     """Full regular-season schedule (every pairing, played or not).
     Writes output/<espnLeagueID>-schedule/<year>.csv so buildDashboardData can
@@ -351,6 +394,7 @@ def scrape_year(year):
     write_draft(league, year)
     write_gamecenter(league, year)
     write_schedule(league, year)
+    write_projections(league, year)
     write_player_map(league)
 
 

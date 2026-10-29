@@ -821,10 +821,18 @@ def build_playoff_odds(seasons, standings_dict, league_ids,
                        playoff_count=4, sims=10000, seed=42):
     """Monte Carlo playoff odds for the in-progress season.
 
-    For each team, model their weekly score as Normal(mean=season-to-date PPG,
-    std=season-to-date weekly std). Walk the remaining regular-season schedule,
-    roll each matchup, tally wins + PF. Rank teams by (wins DESC, PF DESC) at
-    end of regular season; top `playoff_count` make the playoffs.
+    Per-team forecast model (improved):
+      - Base weekly mean = ESPN's current-week team projection (reflects
+        current roster, injuries, star QB back from IR, etc.)
+      - Residual adjustment = team's historical mean (actual − projected),
+        so skilled lineup-setters get credit for consistently beating ESPN.
+      - Variance = std of (actual − projected) residuals, floored at 15 pts
+        to avoid overconfidence from a 7-game sample.
+      - Current-week injury/bye penalty: subtract 4 pts per OUT/IR starter
+        and 8 pts per starter on bye (the first game under the model), on
+        the assumption those will mostly be replaced by lower-tier plays.
+
+    Falls back to the old PPG+std model when projections data isn't present.
     """
     import os as _os
     import random
@@ -853,28 +861,75 @@ def build_playoff_odds(seasons, standings_dict, league_ids,
     if not teams:
         return None
 
-    # Per-team weekly scores so far — compute mean + std per team
-    scores_by_team = {m: [] for m in teams}
-    for wk in in_progress["weeks"]:
-        for m in wk["matchups"]:
-            if m["home"] in scores_by_team:
-                scores_by_team[m["home"]].append(m["homePts"])
-            if m["away"] in scores_by_team:
-                scores_by_team[m["away"]].append(m["awayPts"])
+    # Per-team weekly actuals + projections for played weeks + the current week
+    proj_path = _os.path.join("output", f"{espnLeagueID}-projections",
+                              f"{year}.csv")
+    actuals = {m: [] for m in teams}
+    projections = {m: [] for m in teams}
+    current_projection = {}  # last-seen projection per team (used as forecast base)
+    inj_now = {m: 0 for m in teams}
+    bye_now = {m: 0 for m in teams}
+    out_now = {m: 0 for m in teams}
+    if _os.path.isfile(proj_path):
+        with open(proj_path, newline="") as f:
+            # Group rows by week so we can grab the LATEST available week's state
+            all_rows = list(csv.DictReader(f))
+        all_rows.sort(key=lambda r: int(r.get("Week") or 0))
+        for row in all_rows:
+            owner = (row.get("Owner") or "").strip()
+            if owner not in teams:
+                continue
+            try:
+                wk = int(row["Week"])
+                actual = float(row.get("Actual") or 0)
+                proj = float(row.get("Projected") or 0)
+            except (TypeError, ValueError):
+                continue
+            if actual > 0:  # played game
+                actuals[owner].append(actual)
+                projections[owner].append(proj)
+            current_projection[owner] = proj  # the latest row wins
+            try:
+                inj_now[owner] = int(row.get("StartersInjured") or 0)
+                bye_now[owner] = int(row.get("StartersOnBye") or 0)
+                out_now[owner] = int(row.get("StartersOut") or 0)
+            except (TypeError, ValueError):
+                pass
+
+    # Fallback actuals from seasons payload for teams missing from projections
+    if not any(projections.values()):
+        scores_by_team = {m: [] for m in teams}
+        for wk in in_progress["weeks"]:
+            for m in wk["matchups"]:
+                if m["home"] in scores_by_team:
+                    scores_by_team[m["home"]].append(m["homePts"])
+                if m["away"] in scores_by_team:
+                    scores_by_team[m["away"]].append(m["awayPts"])
+        actuals = scores_by_team
+
     dist = {}
-    all_scores = []
-    for owner, scores in scores_by_team.items():
-        all_scores.extend(scores)
-    league_mean = statistics.fmean(all_scores) if all_scores else 110.0
-    league_std = statistics.pstdev(all_scores) if len(all_scores) >= 2 else 25.0
+    league_actuals = [v for scores in actuals.values() for v in scores]
+    league_mean = statistics.fmean(league_actuals) if league_actuals else 110.0
+    league_std = statistics.pstdev(league_actuals) if len(league_actuals) >= 2 else 25.0
     for owner in teams:
-        s = scores_by_team.get(owner) or []
-        if len(s) >= 2:
-            dist[owner] = (statistics.fmean(s), statistics.pstdev(s))
-        elif len(s) == 1:
-            dist[owner] = (s[0], league_std)
+        acts = actuals.get(owner) or []
+        projs = projections.get(owner) or []
+        base_projection = current_projection.get(owner) or (
+            statistics.fmean(acts) if acts else league_mean)
+        # Residual adjustment + variance from (actual − projected)
+        if len(acts) >= 2 and len(projs) == len(acts) and sum(projs) > 0:
+            residuals = [a - p for a, p in zip(acts, projs)]
+            res_mean = statistics.fmean(residuals)
+            res_std = max(statistics.pstdev(residuals), 15.0)
+        elif acts:
+            res_mean = 0.0
+            res_std = max(statistics.pstdev(acts) if len(acts) >= 2 else league_std, 15.0)
         else:
-            dist[owner] = (league_mean, league_std)
+            res_mean = 0.0
+            res_std = max(league_std, 15.0)
+        # First-remaining-week penalty for current injuries/byes (one-time)
+        penalty = 4.0 * out_now.get(owner, 0) + 8.0 * bye_now.get(owner, 0)
+        dist[owner] = (base_projection + res_mean, res_std, penalty)
 
     # Remaining schedule — only weeks we haven't played yet
     played_weeks = {wk["week"] for wk in in_progress["weeks"]}
@@ -901,17 +956,22 @@ def build_playoff_odds(seasons, standings_dict, league_ids,
     sum_final_pf = {o: 0.0 for o in owners}
     best_seed_counts = {o: 0 for o in owners}
 
+    first_remaining_week = min((wk for wk, _, _ in remaining), default=None)
     for _ in range(sims):
         sim_wins = {o: teams[o]["wins"] for o in owners}
         sim_losses = {o: teams[o]["losses"] for o in owners}
         sim_ties = {o: teams[o]["ties"] for o in owners}
         sim_pf = {o: teams[o]["pf"] for o in owners}
         for (wk, h, a) in remaining:
-            mu_h, sd_h = dist[h]
-            mu_a, sd_a = dist[a]
+            mu_h, sd_h, pen_h = dist[h]
+            mu_a, sd_a, pen_a = dist[a]
+            # Current-week-only injury/bye penalty (ESPN only gives us the
+            # current roster; we can't project out byes 8 weeks).
+            if wk == first_remaining_week:
+                mu_h -= pen_h
+                mu_a -= pen_a
             score_h = rng.gauss(mu_h, max(sd_h, 5.0))
             score_a = rng.gauss(mu_a, max(sd_a, 5.0))
-            # Clip to a sensible range
             if score_h < 20: score_h = 20
             if score_a < 20: score_a = 20
             sim_pf[h] += score_h
@@ -941,6 +1001,11 @@ def build_playoff_odds(seasons, standings_dict, league_ids,
     rows = []
     for o in owners:
         rec = teams[o]
+        actuals_list = actuals.get(o) or []
+        projs_list = projections.get(o) or []
+        residual_mean = (statistics.fmean([a - p for a, p in zip(actuals_list, projs_list)])
+                        if len(actuals_list) >= 1 and len(projs_list) == len(actuals_list)
+                           and sum(projs_list) > 0 else 0.0)
         rows.append({
             "owner": o,
             "team": next((t["team"] for t in in_progress["standings"]
@@ -949,8 +1014,15 @@ def build_playoff_odds(seasons, standings_dict, league_ids,
             "losses": rec["losses"],
             "ties": rec["ties"],
             "pf": round(rec["pf"], 2),
-            "ppg": round(dist[o][0], 2),
-            "ppgStd": round(dist[o][1], 2),
+            "ppg": round(statistics.fmean(actuals_list) if actuals_list else 0, 2),
+            "projWeek": round(current_projection.get(o, 0), 2),
+            "forecastMean": round(dist[o][0], 2),
+            "forecastStd": round(dist[o][1], 2),
+            "residualMean": round(residual_mean, 2),
+            "injuredStarters": inj_now.get(o, 0),
+            "outStarters": out_now.get(o, 0),
+            "byeStarters": bye_now.get(o, 0),
+            "penalty": round(dist[o][2], 2),
             "playoffPct": round(playoff_counts[o] / sims, 4),
             "oneSeedPct": round(best_seed_counts[o] / sims, 4),
             "projWins": round(sum_final_wins[o] / sims, 2),
