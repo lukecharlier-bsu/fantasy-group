@@ -723,6 +723,18 @@ const FRIVOLITIES = [
       desc: "All-time best team-seasons by composite score.",
       preview: (d) => (d.goatTeams || [])[0],
       previewText: (r) => `${r.year} <strong>${r.owner}</strong> (${r.record}) — ${fmt(r.composite, 1)}` },
+    { id: "winning",  title: "Winning Players",    icon: "🏆",
+      desc: "Championship-roster appearances & win % as a starter.",
+      preview: (d) => (d.winningPlayers || [])[0],
+      previewText: (r) => `<strong>${r.display}</strong> ${r.pos} — ${r.chipAppearances} chips, ${(r.winPct * 100).toFixed(1)}% win rate (${r.starts} starts)` },
+    { id: "mia",      title: "Mia Khalifa's",      icon: "💋",
+      desc: "The most passed-around players in league history.",
+      preview: (d) => (d.miaKhalifas || []).find(p => p.pos !== "K" && p.pos !== "DEF") || (d.miaKhalifas || [])[0],
+      previewText: (r) => `<strong>${r.display}</strong> ${r.pos} — ${r.uniqueOwners} different managers, ${r.transitions} transitions` },
+    { id: "drops",    title: "Worst Drops OAT",    icon: "🪣",
+      desc: "The ones you let get away for free. Trades excluded.",
+      preview: (d) => (d.worstDrops || [])[0],
+      previewText: (r) => `<strong>${r.droppedBy}</strong> cut ${r.display} ${r.year} wk${r.droppedAfterWeek} → ${fmt(r.laterPts)} pts elsewhere` },
     { id: "odds",     title: "Playoff Odds",       icon: "🎲",
       desc: "Live Monte Carlo projection for the in-progress season.",
       preview: (d) => (d.playoffOdds && d.playoffOdds.teams) ? d.playoffOdds.teams[0] : null,
@@ -742,6 +754,9 @@ function initFrivolitiesPanel() {
     renderGoatTeams();
     renderOneStartClub();
     renderPlayoffOdds();
+    renderWinningPlayers();
+    renderMiaKhalifas();
+    renderWorstDrops();
 
     // Build the nav grid
     const nav = document.getElementById("frivolities-nav");
@@ -1526,6 +1541,102 @@ function renderPlayoffOdds() {
             <th class="right" title="Projected final points for (avg across sims)">Proj PF</th>
             <th title="Share of simulations in which this team made the top 4">Playoff %</th>
             <th class="right" title="Share of simulations in which this team finished #1">1-Seed %</th>
+        </tr></thead>
+        <tbody>${body}</tbody>
+    `;
+}
+
+function renderWinningPlayers() {
+    const t = document.getElementById("winning-table");
+    const rows = STATE.data.winningPlayers || [];
+    if (!rows.length) { t.innerHTML = `<tbody><tr><td class="muted">no data</td></tr></tbody>`; return; }
+    const body = rows.map((r, i) => `
+        <tr>
+            <td class="right">${i + 1}</td>
+            <td><span data-goto-player="${r.key}">${r.display}</span> <span class="muted">${r.pos}</span></td>
+            <td class="right"><strong>${r.chipAppearances}</strong></td>
+            <td class="right muted">${r.chipYears.join(" ") || "-"}</td>
+            <td class="right">${r.starts}</td>
+            <td class="right"><strong>${(r.winPct * 100).toFixed(1)}%</strong></td>
+            <td class="right">${r.wins}-${r.losses}${r.ties ? "-" + r.ties : ""}</td>
+            <td class="right">${fmt(r.avgPerStart)}</td>
+        </tr>`).join("");
+    t.innerHTML = `
+        <thead><tr>
+            <th class="right">#</th>
+            <th>Player</th>
+            <th class="right" title="Seasons the player was on the champion's roster at any point">Chips</th>
+            <th class="right">Years</th>
+            <th class="right">Starts</th>
+            <th class="right" title="Owner's win % when this player was in the starting lineup">Win%</th>
+            <th class="right">Record</th>
+            <th class="right">Avg/Start</th>
+        </tr></thead>
+        <tbody>${body}</tbody>
+    `;
+}
+
+const MIA_STATE = { hideKD: true };
+function renderMiaKhalifas() {
+    const t = document.getElementById("mia-table");
+    const toggle = document.getElementById("mia-defk-off");
+    if (toggle && !toggle.dataset.wired) {
+        toggle.addEventListener("change", () => {
+            MIA_STATE.hideKD = toggle.checked;
+            renderMiaKhalifas();
+        });
+        toggle.dataset.wired = "1";
+    }
+    const all = STATE.data.miaKhalifas || [];
+    const rows = MIA_STATE.hideKD ? all.filter(r => r.pos !== "K" && r.pos !== "DEF") : all;
+    if (!rows.length) { t.innerHTML = `<tbody><tr><td class="muted">no data</td></tr></tbody>`; return; }
+    const body = rows.map((r, i) => `
+        <tr>
+            <td class="right">${i + 1}</td>
+            <td><span data-goto-player="${r.key}">${r.display}</span> <span class="muted">${r.pos}</span></td>
+            <td class="right"><strong>${r.uniqueOwners}</strong></td>
+            <td class="right">${r.transitions}</td>
+            <td class="muted">${r.owners.join(", ")}</td>
+            <td class="right">${fmt(r.totalPoints)}</td>
+        </tr>`).join("");
+    t.innerHTML = `
+        <thead><tr>
+            <th class="right">#</th>
+            <th>Player</th>
+            <th class="right" title="Number of different managers who've rostered the player">Owners</th>
+            <th class="right" title="Total ownership changes (same owner twice counts twice)">Transitions</th>
+            <th>Managers</th>
+            <th class="right">Career Pts</th>
+        </tr></thead>
+        <tbody>${body}</tbody>
+    `;
+}
+
+function renderWorstDrops() {
+    const t = document.getElementById("drops-table");
+    const rows = STATE.data.worstDrops || [];
+    if (!rows.length) { t.innerHTML = `<tbody><tr><td class="muted">no data</td></tr></tbody>`; return; }
+    const body = rows.map((r, i) => `
+        <tr>
+            <td class="right">${i + 1}</td>
+            <td>${r.year}</td>
+            <td class="right">${r.droppedAfterWeek}</td>
+            <td><strong>${r.droppedBy}</strong></td>
+            <td><span data-goto-player="${r.key}">${r.display}</span> <span class="muted">${r.pos}</span></td>
+            <td class="right"><strong>${fmt(r.laterPts)}</strong></td>
+            <td class="right">${r.laterStarts}</td>
+            <td>${r.pickedUpBy}</td>
+        </tr>`).join("");
+    t.innerHTML = `
+        <thead><tr>
+            <th class="right">#</th>
+            <th>Year</th>
+            <th class="right" title="Last week on the dropping owner's roster">After Wk</th>
+            <th>Dropped By</th>
+            <th>Player</th>
+            <th class="right" title="Starter pts the player went on to score for other owners that same season">Lost Pts</th>
+            <th class="right">Later Starts</th>
+            <th>Picked Up By</th>
         </tr></thead>
         <tbody>${body}</tbody>
     `;

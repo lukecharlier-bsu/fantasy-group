@@ -417,11 +417,15 @@ def load_lineups(gamecenter_dirs, stats_dirs=None):
     return out
 
 
-def load_weekly_rosters(gamecenter_dirs):
+def load_weekly_rosters(gamecenter_dirs, stats_dirs=None):
     """{(year, week, owner): {player_key: {display, pos, starterPts}}}.
-    starterPts is 0 for bench/IR entries so callers can slice by lineup slot."""
+    starterPts is 0 for bench/IR entries so callers can slice by lineup slot.
+    When stats_dirs is provided, uses the same name-resolution upgrade as
+    load_lineups so player keys match across trade detection and lineups."""
     if isinstance(gamecenter_dirs, str):
         gamecenter_dirs = [gamecenter_dirs]
+    resolution = load_player_name_resolution(stats_dirs or [])
+    short_to_long = _build_short_to_long(resolution)
     BENCH_SLOTS = {"BN", "RES"}
     year_paths = {}
     for d in gamecenter_dirs:
@@ -475,26 +479,34 @@ def load_weekly_rosters(gamecenter_dirs):
                         except ValueError:
                             pts = 0.0
                         starter_pts = 0.0 if slot in BENCH_SLOTS else pts
-                        rec = bucket.setdefault(info["key"], {
-                            "display": info["display"], "pos": info["pos"],
+                        key = info["key"]
+                        display = info["display"]
+                        if info["pos"] != "DEF":
+                            resolved = resolution.get((year, week, owner, slot, round(pts, 2)))
+                            if resolved:
+                                full_name, _ = resolved
+                                key = _canonical_key(info["pos"], full_name)
+                                display = _pretty_name(full_name)
+                            elif key in short_to_long and len(short_to_long[key]) == 1:
+                                key = next(iter(short_to_long[key]))
+                        rec = bucket.setdefault(key, {
+                            "display": display, "pos": info["pos"],
                             "starterPts": 0.0,
                         })
-                        # If a player somehow appears twice on one roster row
-                        # (shouldn't happen for a legit week), take the max.
                         if starter_pts > rec["starterPts"]:
                             rec["starterPts"] = starter_pts
-                        rec["display"] = info["display"]
+                        rec["display"] = display
     return rosters
 
 
-def detect_trades(gamecenter_dirs, standings):
+def detect_trades(gamecenter_dirs, standings, stats_dirs=None):
     """Look for bidirectional roster swaps between pairs of teams across
     consecutive weeks and infer a trade. Confidence is 'high' when the
     detected count for a team matches the official per-season Trades total
     from the standings, 'low' when we're over-counting (likely including
     coincident waiver churn).
     """
-    rosters = load_weekly_rosters(gamecenter_dirs)
+    rosters = load_weekly_rosters(gamecenter_dirs, stats_dirs)
     # year -> week -> owner -> set(player_key)
     by_year = {}
     display = {}
@@ -569,6 +581,8 @@ def detect_trades(gamecenter_dirs, standings):
                                              for k in a_to_b], key=lambda d: d["display"]),
                             "bGave": sorted([display.get((year, k), {"display": k, "pos": "?"})
                                              for k in b_to_a], key=lambda d: d["display"]),
+                            "aGaveKeys": sorted(a_to_b),
+                            "bGaveKeys": sorted(b_to_a),
                             "aScore": a_score,  # concentration-weighted (A's haul)
                             "bScore": b_score,  # concentration-weighted (B's haul)
                             "aTotal": a_total,  # raw sum of starter pts received
@@ -951,6 +965,199 @@ def build_playoff_odds(seasons, standings_dict, league_ids,
         "weeksPlayed": max(played_weeks, default=0),
         "teams": rows,
     }
+
+
+def build_winning_players(seasons, lineups, players_career, min_starts=5, n=40):
+    """Players ranked by championship appearances + win% as starter.
+    'On a championship team' = present on the champion's roster at any week
+    that season. Win% only computed when the player was in the starting
+    lineup; min_starts filter keeps the leaderboard meaningful."""
+    champ_by_year = {}
+    for s in seasons:
+        if s.get("inProgress") or not s.get("champion"):
+            continue
+        champ_by_year[s["year"]] = s["champion"]
+
+    # (year, week, owner) -> 1 (win) / 0 (loss) / 0.5 (tie)
+    outcome = {}
+    for s in seasons:
+        for wk in s["weeks"]:
+            for m in wk["matchups"]:
+                h, hp, a, ap = m["home"], m["homePts"], m["away"], m["awayPts"]
+                if hp > ap:
+                    outcome[(s["year"], wk["week"], h)] = 1.0
+                    outcome[(s["year"], wk["week"], a)] = 0.0
+                elif ap > hp:
+                    outcome[(s["year"], wk["week"], a)] = 1.0
+                    outcome[(s["year"], wk["week"], h)] = 0.0
+                else:
+                    outcome[(s["year"], wk["week"], h)] = 0.5
+                    outcome[(s["year"], wk["week"], a)] = 0.5
+
+    stats = {}  # key -> accumulator
+    BENCH = {"BN", "RES"}
+    for (year, week, owner), players in lineups.items():
+        for p in players:
+            key = p.get("key")
+            if not key:
+                continue
+            rec = stats.setdefault(key, {
+                "display": p["player"], "pos": p["pos"],
+                "chipYears": set(), "starts": 0, "wins": 0, "losses": 0, "ties": 0,
+                "startPts": 0.0,
+            })
+            if champ_by_year.get(year) == owner:
+                rec["chipYears"].add(year)
+            if p["slot"] in BENCH:
+                continue
+            res = outcome.get((year, week, owner))
+            if res is None:
+                continue
+            rec["starts"] += 1
+            rec["startPts"] += p["pts"]
+            if res == 1.0:
+                rec["wins"] += 1
+            elif res == 0.0:
+                rec["losses"] += 1
+            else:
+                rec["ties"] += 1
+
+    out = []
+    for key, r in stats.items():
+        if r["starts"] < min_starts:
+            continue
+        wpct = (r["wins"] + 0.5 * r["ties"]) / r["starts"]
+        career = players_career.get(key, {})
+        out.append({
+            "key": key,
+            "display": career.get("display") or r["display"],
+            "fullName": career.get("fullName"),
+            "pos": r["pos"],
+            "espnId": career.get("espnId"),
+            "chipAppearances": len(r["chipYears"]),
+            "chipYears": sorted(r["chipYears"]),
+            "starts": r["starts"],
+            "wins": r["wins"],
+            "losses": r["losses"],
+            "ties": r["ties"],
+            "winPct": round(wpct, 4),
+            "avgPerStart": round(r["startPts"] / r["starts"], 2),
+        })
+    out.sort(key=lambda r: (-r["chipAppearances"], -r["winPct"], -r["starts"]))
+    return out[:n]
+
+
+def build_mia_khalifas(lineups, players_career, n=50):
+    """Players rostered by the most different managers in league history, with
+    both unique-owner count and ownership-transition count."""
+    timeline = {}  # key -> [(year, week, owner), ...]
+    for (year, week, owner), players in lineups.items():
+        for p in players:
+            key = p.get("key")
+            if not key:
+                continue
+            timeline.setdefault(key, []).append((year, week, owner))
+
+    out = []
+    for key, events in timeline.items():
+        events.sort()
+        owners_set = sorted({o for _, _, o in events})
+        transitions = 0
+        prev_owner = None
+        for _, _, owner in events:
+            if prev_owner is not None and owner != prev_owner:
+                transitions += 1
+            prev_owner = owner
+        career = players_career.get(key, {})
+        out.append({
+            "key": key,
+            "display": career.get("display") or (events[0][2] if events else ""),
+            "fullName": career.get("fullName"),
+            "pos": career.get("pos", ""),
+            "espnId": career.get("espnId"),
+            "uniqueOwners": len(owners_set),
+            "transitions": transitions,
+            "owners": owners_set,
+            "seasons": career.get("seasons", []),
+            "totalPoints": career.get("totalPoints", 0.0),
+        })
+    out.sort(key=lambda r: (-r["uniqueOwners"], -r["transitions"]))
+    return out[:n]
+
+
+def build_worst_drops(lineups, trades, players_career, n=25):
+    """For each (year, player, dropping-owner), measure how many starter points
+    the player went on to score for OTHER owners the rest of that season.
+    Trade departures are filtered out — this is pure drop/waiver regret."""
+    # Build set of (year, departure_week, owner_losing, player_key) for trades
+    trade_dep = set()
+    for t in trades:
+        for key in t.get("aGaveKeys", []):
+            trade_dep.add((t["year"], t["week"], t["teamA"], key))
+        for key in t.get("bGaveKeys", []):
+            trade_dep.add((t["year"], t["week"], t["teamB"], key))
+
+    # (year, player_key) -> chronological [{week, owner, pts, started, display}]
+    timeline = {}
+    for (year, week, owner), players in lineups.items():
+        for p in players:
+            key = p.get("key")
+            if not key:
+                continue
+            timeline.setdefault((year, key), []).append({
+                "week": week, "owner": owner, "pts": p["pts"],
+                "started": p["slot"] not in ("BN", "RES"),
+                "display": p["player"],
+            })
+
+    BENCH = {"BN", "RES"}
+    out = []
+    for (year, key), events in timeline.items():
+        events.sort(key=lambda e: e["week"])
+        # Group consecutive weeks on same owner into runs
+        runs = []
+        for e in events:
+            if runs and runs[-1]["owner"] == e["owner"]:
+                runs[-1]["end_week"] = e["week"]
+                runs[-1]["events"].append(e)
+            else:
+                runs.append({"owner": e["owner"], "start_week": e["week"],
+                             "end_week": e["week"], "events": [e]})
+        for i, run in enumerate(runs):
+            later = runs[i + 1:]
+            if not later:
+                continue
+            next_run = runs[i + 1]
+            # Skip trade departures
+            if (year, next_run["start_week"], run["owner"], key) in trade_dep:
+                continue
+            later_pts = sum(ev["pts"] for lr in later for ev in lr["events"] if ev["started"])
+            later_starts = sum(1 for lr in later for ev in lr["events"] if ev["started"])
+            if later_pts <= 0:
+                continue
+            career = players_career.get(key, {})
+            out.append({
+                "key": key,
+                "display": career.get("display") or run["events"][0]["display"],
+                "fullName": career.get("fullName"),
+                "pos": career.get("pos", ""),
+                "espnId": career.get("espnId"),
+                "year": year,
+                "droppedBy": run["owner"],
+                "droppedAfterWeek": run["end_week"],
+                "pickedUpBy": next_run["owner"],
+                "laterPts": round(later_pts, 2),
+                "laterStarts": later_starts,
+                "laterOwners": sorted({lr["owner"] for lr in later}),
+            })
+    # Dedupe to one entry per (year, player) — keep the biggest regret
+    best = {}
+    for r in out:
+        k = (r["year"], r["key"])
+        if k not in best or r["laterPts"] > best[k]["laterPts"]:
+            best[k] = r
+    deduped = sorted(best.values(), key=lambda r: -r["laterPts"])
+    return deduped[:n]
 
 
 def build_one_start_club(players_career, n=40):
@@ -1947,7 +2154,7 @@ def main():
     highs, lows, blowouts, nail_biters = build_weekly_extremes(seasons)
     biggest_upsets = build_biggest_upsets(seasons)
     biggest_carries = build_biggest_carries(gamecenter_dirs, seasons)
-    trades_detected = detect_trades(gamecenter_dirs, standings)
+    trades_detected = detect_trades(gamecenter_dirs, standings, stats_dirs)
     goat_teams = build_goat_teams(gamecenter_dirs, seasons)
     most_even = build_most_even_games(gamecenter_dirs, seasons)
     most_efficient = build_most_efficient_wins(stats_dirs, seasons)
@@ -1960,6 +2167,9 @@ def main():
     bust_riser = compute_busts_and_risers(drafts, players_by_year)
     enrich_with_espn_ids(players_by_owner, players_career, drafts)
     one_start_club = build_one_start_club(players_career)
+    winning_players = build_winning_players(seasons, lineups, players_career)
+    mia_khalifas = build_mia_khalifas(lineups, players_career)
+    worst_drops = build_worst_drops(lineups, trades_detected, players_career)
     playoff_odds = build_playoff_odds(seasons, standings, league_ids)
 
     payload = {
@@ -1981,6 +2191,9 @@ def main():
         "mostEvenGames": most_even,
         "mostEfficientWins": most_efficient,
         "oneStartClub": one_start_club,
+        "winningPlayers": winning_players,
+        "miaKhalifas": mia_khalifas,
+        "worstDrops": worst_drops,
         "playoffOdds": playoff_odds,
         "drafts": drafts,
         "draftOwnerStats": draft_owner_stats,

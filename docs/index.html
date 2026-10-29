@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League History Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1793129520" />
+    <link rel="stylesheet" href="styles.css?v=1793288324" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -224,6 +224,24 @@
                     <p class="muted">All-time best team-seasons, scored out of 100: PPG (25), all-play win % (25), start/sit efficiency (20), elite players rostered — top 10 at each position (15), and a +15 championship bonus. In-progress seasons excluded.</p>
                     <div class="scroll-x"><table id="goat-teams-table" class="data-table"></table></div>
                 </div>
+                <div class="card friv-detail" id="friv-winning" style="display:none">
+                    <h3>Winning Players</h3>
+                    <p class="muted">Players ranked by championship-roster appearances and win % when they were in the starting lineup. Only players with 5+ career starts qualify. Click a player to open their page.</p>
+                    <div class="scroll-x"><table id="winning-table" class="data-table"></table></div>
+                </div>
+                <div class="card friv-detail" id="friv-mia" style="display:none">
+                    <h3>Mia Khalifa's</h3>
+                    <p class="muted">Players passed around the most — ranked by number of unique managers who've ever rostered them. Also shows ownership transitions (every owner change counts).</p>
+                    <div class="row">
+                        <label><input type="checkbox" id="mia-defk-off" checked> Hide K and DEF</label>
+                    </div>
+                    <div class="scroll-x"><table id="mia-table" class="data-table"></table></div>
+                </div>
+                <div class="card friv-detail" id="friv-drops" style="display:none">
+                    <h3>Worst Drops OAT</h3>
+                    <p class="muted">The ones that got away. For each (year, player) we find the biggest drop regret — pts the player went on to score as a starter for OTHER owners the rest of that season after being cut. Trades are excluded.</p>
+                    <div class="scroll-x"><table id="drops-table" class="data-table"></table></div>
+                </div>
                 <div class="card friv-detail" id="friv-odds" style="display:none">
                     <h3>Playoff Odds</h3>
                     <p class="muted">Monte Carlo projection for the in-progress season. Each team's remaining weeks are rolled from their season-to-date scoring distribution (mean + std) against the real schedule, 10,000 simulations. Top 4 by W-L (ties broken on PF) make the playoffs — probabilities sum to 400%.</p>
@@ -305,6 +323,6 @@
         <span id="data-stamp"></span>
     </footer>
 
-    <script src="app.js?v=1793129520"></script>
+    <script src="app.js?v=1793288324"></script>
 </body>
 </html>

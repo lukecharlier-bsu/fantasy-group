@@ -158483,6 +158483,13 @@
           "pos": "QB"
         }
       ],
+      "aGaveKeys": [
+        "RB|chubb|N",
+        "WR|ridley|C"
+      ],
+      "bGaveKeys": [
+        "QB|watson|D"
+      ],
       "aScore": 248.54,
       "bScore": 97.35,
       "aTotal": 248.54,
@@ -158516,6 +158523,14 @@
           "display": "L. Bell",
           "pos": "RB"
         }
+      ],
+      "aGaveKeys": [
+        "QB|mahomes|patrick",
+        "WR|smith-schuster|J"
+      ],
+      "bGaveKeys": [
+        "RB|bell|L",
+        "TE|ebron|E"
       ],
       "aScore": 125.6,
       "bScore": 92.71,
@@ -158555,6 +158570,15 @@
           "pos": "WR"
         }
       ],
+      "aGaveKeys": [
+        "WR|landry|J"
+      ],
+      "bGaveKeys": [
+        "QB|mahomes|patrick",
+        "RB|chubb|N",
+        "WR|hill|T",
+        "WR|hopkins|D"
+      ],
       "aScore": 174.47,
       "bScore": 103.5,
       "aTotal": 303.38,
@@ -158589,6 +158613,14 @@
           "pos": "RB"
         }
       ],
+      "aGaveKeys": [
+        "QB|ryan|M",
+        "WR|sanders|E"
+      ],
+      "bGaveKeys": [
+        "RB|murray|L",
+        "WR|smith-schuster|J"
+      ],
       "aScore": 0.0,
       "bScore": 39.71,
       "aTotal": 0.0,
@@ -158618,6 +158650,13 @@
           "display": "T. Kelce",
           "pos": "TE"
         }
+      ],
+      "aGaveKeys": [
+        "RB|chubb|N",
+        "WR|diggs|stefon"
+      ],
+      "bGaveKeys": [
+        "TE|kelce|travis"
       ],
       "aScore": 121.3,
       "bScore": 104.0,
@@ -158657,6 +158696,15 @@
           "pos": "TE"
         }
       ],
+      "aGaveKeys": [
+        "TE|waller|darren",
+        "WR|smith-schuster|J"
+      ],
+      "bGaveKeys": [
+        "QB|brees|D",
+        "RB|mixon|J",
+        "TE|andrews|mark"
+      ],
       "aScore": 150.24,
       "bScore": 82.8,
       "aTotal": 203.44,
@@ -158687,6 +158735,13 @@
           "pos": "RB"
         }
       ],
+      "aGaveKeys": [
+        "RB|chubb|N",
+        "RB|mixon|J"
+      ],
+      "bGaveKeys": [
+        "RB|elliott|E"
+      ],
       "aScore": 43.7,
       "bScore": 113.1,
       "aTotal": 43.7,
@@ -158712,6 +158767,12 @@
           "display": "C. Ridley",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "RB|taylor|jonathan"
+      ],
+      "bGaveKeys": [
+        "WR|ridley|C"
       ],
       "aScore": 41.7,
       "bScore": 336.7,
@@ -158742,6 +158803,13 @@
           "display": "A. Kamara",
           "pos": "RB"
         }
+      ],
+      "aGaveKeys": [
+        "WR|metcalf|dk",
+        "WR|samuel|deebo"
+      ],
+      "bGaveKeys": [
+        "RB|kamara|alvin"
       ],
       "aScore": 162.5,
       "bScore": 338.0,
@@ -158777,6 +158845,14 @@
           "pos": "TE"
         }
       ],
+      "aGaveKeys": [
+        "RB|chubb|N",
+        "TE|hockenson|T"
+      ],
+      "bGaveKeys": [
+        "RB|mccaffrey|christian",
+        "TE|fant|N"
+      ],
       "aScore": 89.8,
       "bScore": 116.15,
       "aTotal": 110.5,
@@ -158802,6 +158878,12 @@
           "display": "M. Williams",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "RB|edwards-helaire|C"
+      ],
+      "bGaveKeys": [
+        "WR|williams|M"
       ],
       "aScore": 103.6,
       "bScore": 0.0,
@@ -158833,6 +158915,13 @@
           "pos": "RB"
         }
       ],
+      "aGaveKeys": [
+        "RB|barkley|saquon",
+        "WR|allen|keenan"
+      ],
+      "bGaveKeys": [
+        "RB|robinson|J"
+      ],
       "aScore": 43.2,
       "bScore": 77.05,
       "aTotal": 43.2,
@@ -158858,6 +158947,12 @@
           "display": "D. Harris",
           "pos": "RB"
         }
+      ],
+      "aGaveKeys": [
+        "TE|schultz|dalton"
+      ],
+      "bGaveKeys": [
+        "RB|harris|D"
       ],
       "aScore": 17.8,
       "bScore": 92.3,
@@ -158893,6 +158988,14 @@
           "pos": "QB"
         }
       ],
+      "aGaveKeys": [
+        "QB|jackson|lamar",
+        "TE|kittle|george"
+      ],
+      "bGaveKeys": [
+        "QB|brady|T",
+        "TE|fant|N"
+      ],
       "aScore": 154.71,
       "bScore": 185.94,
       "aTotal": 172.86,
@@ -158918,6 +159021,12 @@
           "display": "K. Allen",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "WR|lockett|T"
+      ],
+      "bGaveKeys": [
+        "WR|allen|keenan"
       ],
       "aScore": 75.9,
       "bScore": 30.1,
@@ -158949,6 +159058,13 @@
           "pos": "RB"
         }
       ],
+      "aGaveKeys": [
+        "WR|jefferson|justin"
+      ],
+      "bGaveKeys": [
+        "RB|hunt|K",
+        "RB|mitchell|E"
+      ],
       "aScore": 18.4,
       "bScore": 152.66,
       "aTotal": 19.4,
@@ -158974,6 +159090,12 @@
           "display": "B. Cooks",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "RB|carter|M"
+      ],
+      "bGaveKeys": [
+        "WR|cooks|B"
       ],
       "aScore": 58.2,
       "bScore": 10.0,
@@ -159004,6 +159126,13 @@
           "display": "J. Jacobs",
           "pos": "RB"
         }
+      ],
+      "aGaveKeys": [
+        "RB|elliott|E"
+      ],
+      "bGaveKeys": [
+        "RB|jacobs|josh",
+        "WR|johnson|D"
       ],
       "aScore": 84.75,
       "bScore": 22.3,
@@ -159039,6 +159168,14 @@
           "pos": "RB"
         }
       ],
+      "aGaveKeys": [
+        "QB|jackson|lamar",
+        "TE|pitts|kyle"
+      ],
+      "bGaveKeys": [
+        "RB|jacobs|josh",
+        "WR|hopkins|D"
+      ],
       "aScore": 115.4,
       "bScore": 121.55,
       "aTotal": 143.2,
@@ -159068,6 +159205,13 @@
           "display": "K. Murray",
           "pos": "QB"
         }
+      ],
+      "aGaveKeys": [
+        "WR|hill|T"
+      ],
+      "bGaveKeys": [
+        "QB|murray|kyler",
+        "RB|robinson|B"
       ],
       "aScore": 87.04,
       "bScore": 209.0,
@@ -159103,6 +159247,14 @@
           "pos": "RB"
         }
       ],
+      "aGaveKeys": [
+        "RB|elliott|E",
+        "TE|andrews|mark",
+        "WR|stbrown|amon-ra"
+      ],
+      "bGaveKeys": [
+        "RB|chubb|N"
+      ],
       "aScore": 139.2,
       "bScore": 176.72,
       "aTotal": 139.2,
@@ -159128,6 +159280,12 @@
           "display": "A. Cooper",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "RB|harris|N"
+      ],
+      "bGaveKeys": [
+        "WR|cooper|A"
       ],
       "aScore": 81.3,
       "bScore": 0.0,
@@ -159163,6 +159321,14 @@
           "pos": "WR"
         }
       ],
+      "aGaveKeys": [
+        "RB|patterson|C",
+        "WR|mclaurin|terry"
+      ],
+      "bGaveKeys": [
+        "RB|jacobs|josh",
+        "WR|jeudy|J"
+      ],
       "aScore": 149.3,
       "bScore": 111.35,
       "aTotal": 149.3,
@@ -159192,6 +159358,13 @@
           "display": "T. Lockett",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "TE|kelce|travis"
+      ],
+      "bGaveKeys": [
+        "RB|harris|N",
+        "WR|lockett|T"
       ],
       "aScore": 95.3,
       "bScore": 139.1,
@@ -159227,6 +159400,14 @@
           "pos": "RB"
         }
       ],
+      "aGaveKeys": [
+        "WR|hopkins|D"
+      ],
+      "bGaveKeys": [
+        "QB|herbert|justin",
+        "RB|wilson|J",
+        "WR|smith-schuster|J"
+      ],
       "aScore": 29.48,
       "bScore": 64.1,
       "aTotal": 45.5,
@@ -159256,6 +159437,13 @@
           "display": "Cowboys DEF",
           "pos": "DEF"
         }
+      ],
+      "aGaveKeys": [
+        "RB|henry|derrick"
+      ],
+      "bGaveKeys": [
+        "DEF||cowboys",
+        "RB|kamara|alvin"
       ],
       "aScore": 255.5,
       "bScore": 30.5,
@@ -159287,6 +159475,13 @@
           "pos": "QB"
         }
       ],
+      "aGaveKeys": [
+        "RB|jacobs|josh",
+        "WR|kirk|C"
+      ],
+      "bGaveKeys": [
+        "QB|cousins|kirk"
+      ],
       "aScore": 79.04,
       "bScore": 81.9,
       "aTotal": 79.04,
@@ -159316,6 +159511,13 @@
           "display": "J. Conner",
           "pos": "RB"
         }
+      ],
+      "aGaveKeys": [
+        "WR|godwin|chris"
+      ],
+      "bGaveKeys": [
+        "RB|conner|J",
+        "WR|watson|christian"
       ],
       "aScore": 48.5,
       "bScore": 9.4,
@@ -159355,6 +159557,15 @@
           "pos": "TE"
         }
       ],
+      "aGaveKeys": [
+        "DEF||cowboys",
+        "TE|andrews|mark",
+        "WR|meyers|jakobi"
+      ],
+      "bGaveKeys": [
+        "DEF||steelers",
+        "TE|hockenson|T"
+      ],
       "aScore": 71.8,
       "bScore": 78.85,
       "aTotal": 89.8,
@@ -159388,6 +159599,14 @@
           "display": "A. Thielen",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "RB|etienne|travis",
+        "WR|collins|nico",
+        "WR|kirk|C"
+      ],
+      "bGaveKeys": [
+        "WR|thielen|A"
       ],
       "aScore": 6.7,
       "bScore": 135.05,
@@ -159443,6 +159662,19 @@
           "pos": "TE"
         }
       ],
+      "aGaveKeys": [
+        "QB|jackson|lamar",
+        "RB|white|rachaad",
+        "RB|williams|javonte",
+        "TE|hockenson|T"
+      ],
+      "bGaveKeys": [
+        "QB|prescott|dak",
+        "RB|taylor|jonathan",
+        "TE|mcbride|trey",
+        "WR|chase|ja'marr",
+        "WR|ridley|C"
+      ],
       "aScore": 134.95,
       "bScore": 188.33,
       "aTotal": 222.8,
@@ -159472,6 +159704,13 @@
           "display": "J. Jacobs",
           "pos": "RB"
         }
+      ],
+      "aGaveKeys": [
+        "RB|white|rachaad",
+        "WR|moore|dj"
+      ],
+      "bGaveKeys": [
+        "RB|jacobs|josh"
       ],
       "aScore": 235.8,
       "bScore": 172.25,
@@ -159503,6 +159742,13 @@
           "pos": "TE"
         }
       ],
+      "aGaveKeys": [
+        "RB|hall|breece"
+      ],
+      "bGaveKeys": [
+        "TE|likely|isaiah",
+        "WR|cooper|A"
+      ],
       "aScore": 77.2,
       "bScore": 140.6,
       "aTotal": 79.0,
@@ -159533,6 +159779,13 @@
           "pos": "RB"
         }
       ],
+      "aGaveKeys": [
+        "RB|montgomery|david"
+      ],
+      "bGaveKeys": [
+        "RB|pollard|tony",
+        "WR|olave|chris"
+      ],
       "aScore": 44.75,
       "bScore": 167.22,
       "aTotal": 54.6,
@@ -159562,6 +159815,13 @@
           "display": "J. Waddle",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "RB|williams|javonte"
+      ],
+      "bGaveKeys": [
+        "RB|ekeler|A",
+        "WR|waddle|jaylen"
       ],
       "aScore": 0.0,
       "bScore": 16.2,
@@ -159601,6 +159861,15 @@
           "pos": "WR"
         }
       ],
+      "aGaveKeys": [
+        "WR|hill|T",
+        "WR|pittman|michael"
+      ],
+      "bGaveKeys": [
+        "RB|gibbs|jahmyr",
+        "WR|aiyuk|B",
+        "WR|evans|mike"
+      ],
       "aScore": 332.75,
       "bScore": 154.25,
       "aTotal": 433.9,
@@ -159639,6 +159908,15 @@
           "pos": "WR"
         }
       ],
+      "aGaveKeys": [
+        "RB|chubb|N",
+        "RB|conner|J",
+        "WR|flowers|zay"
+      ],
+      "bGaveKeys": [
+        "WR|london|drake",
+        "WR|metcalf|dk"
+      ],
       "aScore": 108.45,
       "bScore": 147.8,
       "aTotal": 122.3,
@@ -159665,6 +159943,12 @@
           "pos": "RB"
         }
       ],
+      "aGaveKeys": [
+        "WR|johnson|D"
+      ],
+      "bGaveKeys": [
+        "RB|ford|J"
+      ],
       "aScore": 1.4,
       "bScore": 0.0,
       "aTotal": 1.4,
@@ -159690,6 +159974,12 @@
           "display": "C. Hubbard",
           "pos": "RB"
         }
+      ],
+      "aGaveKeys": [
+        "WR|higgins|tee"
+      ],
+      "bGaveKeys": [
+        "RB|hubbard|chuba"
       ],
       "aScore": 110.5,
       "bScore": 82.1,
@@ -159721,6 +160011,13 @@
           "pos": "WR"
         }
       ],
+      "aGaveKeys": [
+        "WR|jefferson|justin"
+      ],
+      "bGaveKeys": [
+        "WR|mclaurin|terry",
+        "WR|wilson|garrett"
+      ],
       "aScore": 185.5,
       "bScore": 173.18,
       "aTotal": 243.5,
@@ -159746,6 +160043,12 @@
           "display": "D. Johnson",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "RB|white|rachaad"
+      ],
+      "bGaveKeys": [
+        "WR|johnson|D"
       ],
       "aScore": 0.0,
       "bScore": 0.0,
@@ -159785,6 +160088,15 @@
           "pos": "RB"
         }
       ],
+      "aGaveKeys": [
+        "QB|stroud|C",
+        "TE|mcbride|trey"
+      ],
+      "bGaveKeys": [
+        "RB|brown|chase",
+        "RB|tracy|T",
+        "WR|metcalf|dk"
+      ],
       "aScore": 108.55,
       "bScore": 113.9,
       "aTotal": 120.5,
@@ -159811,6 +160123,12 @@
           "pos": "WR"
         }
       ],
+      "aGaveKeys": [
+        "TE|kraft|tucker"
+      ],
+      "bGaveKeys": [
+        "WR|dell|tank"
+      ],
       "aScore": 0.0,
       "bScore": 59.7,
       "aTotal": 0.0,
@@ -159836,6 +160154,12 @@
           "display": "K. Shakir",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "TE|laporta|sam"
+      ],
+      "bGaveKeys": [
+        "WR|shakir|khalil"
       ],
       "aScore": 0.0,
       "bScore": 81.7,
@@ -159871,6 +160195,14 @@
           "pos": "WR"
         }
       ],
+      "aGaveKeys": [
+        "RB|pollard|tony",
+        "WR|thomas|brian"
+      ],
+      "bGaveKeys": [
+        "WR|meyers|jakobi",
+        "WR|moore|dj"
+      ],
       "aScore": 16.3,
       "bScore": 90.7,
       "aTotal": 16.3,
@@ -159905,6 +160237,14 @@
           "pos": "RB"
         }
       ],
+      "aGaveKeys": [
+        "RB|henry|derrick",
+        "TE|laporta|sam"
+      ],
+      "bGaveKeys": [
+        "RB|hubbard|chuba",
+        "TE|bowers|brock"
+      ],
       "aScore": 14.7,
       "bScore": 251.2,
       "aTotal": 19.5,
@@ -159930,6 +160270,12 @@
           "display": "T. Etienne",
           "pos": "RB"
         }
+      ],
+      "aGaveKeys": [
+        "WR|odunze|rome"
+      ],
+      "bGaveKeys": [
+        "RB|etienne|travis"
       ],
       "aScore": 44.3,
       "bScore": 22.1,
@@ -159973,6 +160319,16 @@
           "pos": "RB"
         }
       ],
+      "aGaveKeys": [
+        "RB|barkley|saquon",
+        "RB|dobbins|J",
+        "WR|addison|jordan"
+      ],
+      "bGaveKeys": [
+        "RB|skattebo|cam",
+        "RB|williams|kyren",
+        "WR|wilson|garrett"
+      ],
       "aScore": 241.6,
       "bScore": 87.0,
       "aTotal": 295.5,
@@ -160002,6 +160358,13 @@
           "display": "C. Lamb",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "RB|hampton|omarion",
+        "WR|sutton|courtland"
+      ],
+      "bGaveKeys": [
+        "WR|lamb|ceedee"
       ],
       "aScore": 161.3,
       "bScore": 130.85,
@@ -160033,6 +160396,13 @@
           "pos": "WR"
         }
       ],
+      "aGaveKeys": [
+        "TE|bowers|brock"
+      ],
+      "bGaveKeys": [
+        "RB|white|rachaad",
+        "WR|tucker|tre"
+      ],
       "aScore": 57.8,
       "bScore": 118.4,
       "aTotal": 62.9,
@@ -160062,6 +160432,13 @@
           "display": "K. Allen",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "WR|adams|davante"
+      ],
+      "bGaveKeys": [
+        "WR|allen|keenan",
+        "WR|waddle|jaylen"
       ],
       "aScore": 170.37,
       "bScore": 7.9,
@@ -160097,6 +160474,14 @@
           "pos": "TE"
         }
       ],
+      "aGaveKeys": [
+        "RB|pollard|tony",
+        "WR|williams|jameson"
+      ],
+      "bGaveKeys": [
+        "RB|chubb|N",
+        "TE|ertz|Z"
+      ],
       "aScore": 0.0,
       "bScore": 66.1,
       "aTotal": 0.0,
@@ -160126,6 +160511,13 @@
           "display": "Z. Charbonnet",
           "pos": "RB"
         }
+      ],
+      "aGaveKeys": [
+        "WR|egbuka|emeka"
+      ],
+      "bGaveKeys": [
+        "RB|charbonnet|zach",
+        "WR|adams|davante"
       ],
       "aScore": 144.9,
       "bScore": 6.5,
@@ -160165,6 +160557,15 @@
           "pos": "TE"
         }
       ],
+      "aGaveKeys": [
+        "QB|nix|bo",
+        "RB|chubb|N",
+        "TE|ertz|Z"
+      ],
+      "bGaveKeys": [
+        "RB|brown|chase",
+        "TE|andrews|mark"
+      ],
       "aScore": 47.9,
       "bScore": 74.6,
       "aTotal": 51.1,
@@ -160194,6 +160595,13 @@
           "display": "R. Odunze",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "WR|london|drake"
+      ],
+      "bGaveKeys": [
+        "RB|croskey-merritt|jacory",
+        "WR|odunze|rome"
       ],
       "aScore": 36.85,
       "bScore": 49.0,
@@ -160241,6 +160649,17 @@
           "pos": "RB"
         }
       ],
+      "aGaveKeys": [
+        "RB|croskey-merritt|jacory",
+        "RB|etienne|travis",
+        "WR|chase|ja'marr"
+      ],
+      "bGaveKeys": [
+        "RB|barkley|saquon",
+        "RB|dobbins|J",
+        "WR|addison|jordan",
+        "WR|egbuka|emeka"
+      ],
       "aScore": 150.31,
       "bScore": 162.05,
       "aTotal": 225.1,
@@ -160270,6 +160689,13 @@
           "display": "K. Shakir",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "RB|harvey|rj",
+        "TE|andrews|mark"
+      ],
+      "bGaveKeys": [
+        "WR|shakir|khalil"
       ],
       "aScore": 19.2,
       "bScore": 103.3,
@@ -160309,6 +160735,15 @@
           "pos": "RB"
         }
       ],
+      "aGaveKeys": [
+        "RB|brown|chase",
+        "RB|jones|aaron",
+        "WR|collins|nico"
+      ],
+      "bGaveKeys": [
+        "RB|achane|de'von",
+        "RB|demercado|E"
+      ],
       "aScore": 109.3,
       "bScore": 212.68,
       "aTotal": 109.3,
@@ -160325,7 +160760,7 @@
       "teamB": "Matthew",
       "aGave": [
         {
-          "display": "C. Lamb",
+          "display": "CeeDee Lamb",
           "pos": "WR"
         },
         {
@@ -160335,17 +160770,26 @@
       ],
       "bGave": [
         {
-          "display": "C. Hubbard",
+          "display": "Chuba Hubbard",
           "pos": "RB"
         },
         {
-          "display": "G. Wilson",
+          "display": "Garrett Wilson",
           "pos": "WR"
         },
         {
           "display": "L. Burden",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "WR|lamb|ceedee",
+        "WR|meyers|jakobi"
+      ],
+      "bGaveKeys": [
+        "RB|hubbard|chuba",
+        "WR|burden|luther",
+        "WR|wilson|garrett"
       ],
       "aScore": 129.25,
       "bScore": 140.1,
@@ -160363,7 +160807,7 @@
       "teamB": "Alex",
       "aGave": [
         {
-          "display": "S. LaPorta",
+          "display": "Sam LaPorta",
           "pos": "TE"
         }
       ],
@@ -160372,6 +160816,12 @@
           "display": "D. Montgomery",
           "pos": "RB"
         }
+      ],
+      "aGaveKeys": [
+        "TE|laporta|sam"
+      ],
+      "bGaveKeys": [
+        "RB|montgomery|david"
       ],
       "aScore": 12.2,
       "bScore": 52.4,
@@ -160393,7 +160843,7 @@
           "pos": "RB"
         },
         {
-          "display": "S. Barkley",
+          "display": "Saquon Barkley",
           "pos": "RB"
         }
       ],
@@ -160402,6 +160852,13 @@
           "display": "B. Tuten",
           "pos": "RB"
         }
+      ],
+      "aGaveKeys": [
+        "RB|barkley|saquon",
+        "RB|kamara|alvin"
+      ],
+      "bGaveKeys": [
+        "RB|tuten|bhayshul"
       ],
       "aScore": 36.3,
       "bScore": 16.4,
@@ -160429,13 +160886,21 @@
       ],
       "bGave": [
         {
-          "display": "D. Swift",
+          "display": "D'Andre Swift",
           "pos": "RB"
         },
         {
           "display": "O. Hampton",
           "pos": "RB"
         }
+      ],
+      "aGaveKeys": [
+        "RB|lloyd|marshawn",
+        "WR|brown|A"
+      ],
+      "bGaveKeys": [
+        "RB|hampton|omarion",
+        "RB|swift|d'andre"
       ],
       "aScore": 42.0,
       "bScore": 14.0,
@@ -160457,19 +160922,27 @@
           "pos": "RB"
         },
         {
-          "display": "M. Harrison",
+          "display": "Marvin Harrison",
           "pos": "WR"
         }
       ],
       "bGave": [
         {
-          "display": "D. Boston",
+          "display": "D. Moore",
           "pos": "WR"
         },
         {
-          "display": "D. Moore",
+          "display": "Denzel Boston",
           "pos": "WR"
         }
+      ],
+      "aGaveKeys": [
+        "RB|jones|aaron",
+        "WR|harrison|marvin"
+      ],
+      "bGaveKeys": [
+        "WR|boston|denzel",
+        "WR|moore|dj"
       ],
       "aScore": 5.7,
       "bScore": 9.4,
@@ -162039,6 +162512,2576 @@
         2026
       ],
       "espnId": 4685278
+    }
+  ],
+  "winningPlayers": [
+    {
+      "key": "RB|robinson|B",
+      "display": "B. Robinson",
+      "fullName": null,
+      "pos": "RB",
+      "espnId": null,
+      "chipAppearances": 4,
+      "chipYears": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "starts": 63,
+      "wins": 41,
+      "losses": 22,
+      "ties": 0,
+      "winPct": 0.6508,
+      "avgPerStart": 16.52
+    },
+    {
+      "key": "QB|purdy|brock",
+      "display": "B. Purdy",
+      "fullName": "Brock Purdy",
+      "pos": "QB",
+      "espnId": 4361741,
+      "chipAppearances": 4,
+      "chipYears": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "starts": 14,
+      "wins": 9,
+      "losses": 5,
+      "ties": 0,
+      "winPct": 0.6429,
+      "avgPerStart": 21.29
+    },
+    {
+      "key": "TE|waller|darren",
+      "display": "Darren Waller",
+      "fullName": "Darren Waller",
+      "pos": "TE",
+      "espnId": 2576925,
+      "chipAppearances": 4,
+      "chipYears": [
+        2019,
+        2021,
+        2022,
+        2025
+      ],
+      "starts": 48,
+      "wins": 28,
+      "losses": 20,
+      "ties": 0,
+      "winPct": 0.5833,
+      "avgPerStart": 12.72
+    },
+    {
+      "key": "WR|allen|keenan",
+      "display": "K. Allen",
+      "fullName": "Keenan Allen",
+      "pos": "WR",
+      "espnId": 15818,
+      "chipAppearances": 4,
+      "chipYears": [
+        2019,
+        2020,
+        2023,
+        2024
+      ],
+      "starts": 72,
+      "wins": 35,
+      "losses": 37,
+      "ties": 0,
+      "winPct": 0.4861,
+      "avgPerStart": 15.81
+    },
+    {
+      "key": "QB|jackson|lamar",
+      "display": "L. Jackson",
+      "fullName": "Lamar Jackson",
+      "pos": "QB",
+      "espnId": 3916387,
+      "chipAppearances": 3,
+      "chipYears": [
+        2020,
+        2023,
+        2024
+      ],
+      "starts": 82,
+      "wins": 55,
+      "losses": 27,
+      "ties": 0,
+      "winPct": 0.6707,
+      "avgPerStart": 21.96
+    },
+    {
+      "key": "WR|hill|T",
+      "display": "T. Hill",
+      "fullName": null,
+      "pos": "WR",
+      "espnId": null,
+      "chipAppearances": 3,
+      "chipYears": [
+        2022,
+        2023,
+        2025
+      ],
+      "starts": 88,
+      "wins": 56,
+      "losses": 32,
+      "ties": 0,
+      "winPct": 0.6364,
+      "avgPerStart": 18.99
+    },
+    {
+      "key": "K|gould|R",
+      "display": "R. Gould",
+      "fullName": null,
+      "pos": "K",
+      "espnId": null,
+      "chipAppearances": 3,
+      "chipYears": [
+        2019,
+        2020,
+        2021
+      ],
+      "starts": 32,
+      "wins": 20,
+      "losses": 12,
+      "ties": 0,
+      "winPct": 0.625,
+      "avgPerStart": 8.22
+    },
+    {
+      "key": "WR|ridley|C",
+      "display": "C. Ridley",
+      "fullName": "Calvin Ridley",
+      "pos": "WR",
+      "espnId": 3925357,
+      "chipAppearances": 3,
+      "chipYears": [
+        2020,
+        2023,
+        2025
+      ],
+      "starts": 37,
+      "wins": 22,
+      "losses": 15,
+      "ties": 0,
+      "winPct": 0.5946,
+      "avgPerStart": 14.06
+    },
+    {
+      "key": "QB|prescott|dak",
+      "display": "Dak Prescott",
+      "fullName": "Dak Prescott",
+      "pos": "QB",
+      "espnId": 2577417,
+      "chipAppearances": 3,
+      "chipYears": [
+        2021,
+        2022,
+        2023
+      ],
+      "starts": 76,
+      "wins": 43,
+      "losses": 33,
+      "ties": 0,
+      "winPct": 0.5658,
+      "avgPerStart": 19.7
+    },
+    {
+      "key": "WR|robinson|A",
+      "display": "A. Robinson",
+      "fullName": null,
+      "pos": "WR",
+      "espnId": null,
+      "chipAppearances": 3,
+      "chipYears": [
+        2019,
+        2021,
+        2022
+      ],
+      "starts": 32,
+      "wins": 18,
+      "losses": 14,
+      "ties": 0,
+      "winPct": 0.5625,
+      "avgPerStart": 15.41
+    },
+    {
+      "key": "WR|metcalf|dk",
+      "display": "DK Metcalf",
+      "fullName": "DK Metcalf",
+      "pos": "WR",
+      "espnId": 4047650,
+      "chipAppearances": 3,
+      "chipYears": [
+        2019,
+        2020,
+        2021
+      ],
+      "starts": 78,
+      "wins": 42,
+      "losses": 36,
+      "ties": 0,
+      "winPct": 0.5385,
+      "avgPerStart": 13.65
+    },
+    {
+      "key": "RB|williams|javonte",
+      "display": "Javonte Williams",
+      "fullName": "Javonte Williams",
+      "pos": "RB",
+      "espnId": 4361579,
+      "chipAppearances": 3,
+      "chipYears": [
+        2022,
+        2023,
+        2025
+      ],
+      "starts": 44,
+      "wins": 23,
+      "losses": 21,
+      "ties": 0,
+      "winPct": 0.5227,
+      "avgPerStart": 13.93
+    },
+    {
+      "key": "RB|harris|N",
+      "display": "N. Harris",
+      "fullName": "Najee Harris",
+      "pos": "RB",
+      "espnId": 4241457,
+      "chipAppearances": 3,
+      "chipYears": [
+        2021,
+        2023,
+        2024
+      ],
+      "starts": 31,
+      "wins": 16,
+      "losses": 15,
+      "ties": 0,
+      "winPct": 0.5161,
+      "avgPerStart": 16.19
+    },
+    {
+      "key": "TE|hockenson|T",
+      "display": "T. Hockenson",
+      "fullName": "T.J. Hockenson",
+      "pos": "TE",
+      "espnId": 4036133,
+      "chipAppearances": 3,
+      "chipYears": [
+        2020,
+        2023,
+        2025
+      ],
+      "starts": 63,
+      "wins": 25,
+      "losses": 38,
+      "ties": 0,
+      "winPct": 0.3968,
+      "avgPerStart": 11.43
+    },
+    {
+      "key": "WR|smith-schuster|J",
+      "display": "J. Smith-Schuster",
+      "fullName": "JuJu Smith-Schuster",
+      "pos": "WR",
+      "espnId": 3120348,
+      "chipAppearances": 3,
+      "chipYears": [
+        2019,
+        2022,
+        2024
+      ],
+      "starts": 16,
+      "wins": 5,
+      "losses": 11,
+      "ties": 0,
+      "winPct": 0.3125,
+      "avgPerStart": 11.56
+    },
+    {
+      "key": "WR|smith|devonta",
+      "display": "D. Smith",
+      "fullName": "DeVonta Smith",
+      "pos": "WR",
+      "espnId": 4241478,
+      "chipAppearances": 2,
+      "chipYears": [
+        2023,
+        2025
+      ],
+      "starts": 40,
+      "wins": 27,
+      "losses": 13,
+      "ties": 0,
+      "winPct": 0.675,
+      "avgPerStart": 13.47
+    },
+    {
+      "key": "TE|goedert|dallas",
+      "display": "D. Goedert",
+      "fullName": "Dallas Goedert",
+      "pos": "TE",
+      "espnId": 3121023,
+      "chipAppearances": 2,
+      "chipYears": [
+        2021,
+        2023
+      ],
+      "starts": 46,
+      "wins": 30,
+      "losses": 16,
+      "ties": 0,
+      "winPct": 0.6522,
+      "avgPerStart": 12.23
+    },
+    {
+      "key": "RB|johnson|D",
+      "display": "D. Johnson",
+      "fullName": null,
+      "pos": "RB",
+      "espnId": null,
+      "chipAppearances": 2,
+      "chipYears": [
+        2019,
+        2020
+      ],
+      "starts": 20,
+      "wins": 13,
+      "losses": 7,
+      "ties": 0,
+      "winPct": 0.65,
+      "avgPerStart": 13.84
+    },
+    {
+      "key": "K|butker|harrison",
+      "display": "Harrison Butker",
+      "fullName": "Harrison Butker",
+      "pos": "K",
+      "espnId": 3055899,
+      "chipAppearances": 2,
+      "chipYears": [
+        2024,
+        2025
+      ],
+      "starts": 82,
+      "wins": 52,
+      "losses": 30,
+      "ties": 0,
+      "winPct": 0.6341,
+      "avgPerStart": 8.5
+    },
+    {
+      "key": "TE|andrews|mark",
+      "display": "M. Andrews",
+      "fullName": "Mark Andrews",
+      "pos": "TE",
+      "espnId": 3116365,
+      "chipAppearances": 2,
+      "chipYears": [
+        2019,
+        2022
+      ],
+      "starts": 53,
+      "wins": 31,
+      "losses": 22,
+      "ties": 0,
+      "winPct": 0.5849,
+      "avgPerStart": 13.18
+    },
+    {
+      "key": "DEF||chiefs",
+      "display": "Chiefs DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "chipAppearances": 2,
+      "chipYears": [
+        2019,
+        2024
+      ],
+      "starts": 26,
+      "wins": 15,
+      "losses": 11,
+      "ties": 0,
+      "winPct": 0.5769,
+      "avgPerStart": 6.85
+    },
+    {
+      "key": "WR|sutton|courtland",
+      "display": "C. Sutton",
+      "fullName": "Courtland Sutton",
+      "pos": "WR",
+      "espnId": 3128429,
+      "chipAppearances": 2,
+      "chipYears": [
+        2022,
+        2024
+      ],
+      "starts": 28,
+      "wins": 16,
+      "losses": 12,
+      "ties": 0,
+      "winPct": 0.5714,
+      "avgPerStart": 12.01
+    },
+    {
+      "key": "DEF||ravens",
+      "display": "Ravens DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "chipAppearances": 2,
+      "chipYears": [
+        2019,
+        2024
+      ],
+      "starts": 65,
+      "wins": 37,
+      "losses": 28,
+      "ties": 0,
+      "winPct": 0.5692,
+      "avgPerStart": 7.48
+    },
+    {
+      "key": "WR|pickens|george",
+      "display": "G. Pickens",
+      "fullName": "George Pickens",
+      "pos": "WR",
+      "espnId": 4426354,
+      "chipAppearances": 2,
+      "chipYears": [
+        2022,
+        2024
+      ],
+      "starts": 30,
+      "wins": 17,
+      "losses": 13,
+      "ties": 0,
+      "winPct": 0.5667,
+      "avgPerStart": 15.11
+    },
+    {
+      "key": "DEF||bills",
+      "display": "Bills DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "chipAppearances": 2,
+      "chipYears": [
+        2019,
+        2023
+      ],
+      "starts": 78,
+      "wins": 44,
+      "losses": 34,
+      "ties": 0,
+      "winPct": 0.5641,
+      "avgPerStart": 8.06
+    },
+    {
+      "key": "DEF||patriots",
+      "display": "Patriots DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "chipAppearances": 2,
+      "chipYears": [
+        2021,
+        2022
+      ],
+      "starts": 68,
+      "wins": 37,
+      "losses": 31,
+      "ties": 0,
+      "winPct": 0.5441,
+      "avgPerStart": 10.25
+    },
+    {
+      "key": "RB|henry|derrick",
+      "display": "Derrick Henry",
+      "fullName": "Derrick Henry",
+      "pos": "RB",
+      "espnId": 3043078,
+      "chipAppearances": 2,
+      "chipYears": [
+        2019,
+        2020
+      ],
+      "starts": 98,
+      "wins": 53,
+      "losses": 45,
+      "ties": 0,
+      "winPct": 0.5408,
+      "avgPerStart": 18.51
+    },
+    {
+      "key": "WR|hopkins|D",
+      "display": "D. Hopkins",
+      "fullName": null,
+      "pos": "WR",
+      "espnId": null,
+      "chipAppearances": 2,
+      "chipYears": [
+        2023,
+        2024
+      ],
+      "starts": 52,
+      "wins": 28,
+      "losses": 24,
+      "ties": 0,
+      "winPct": 0.5385,
+      "avgPerStart": 16.43
+    },
+    {
+      "key": "DEF||49ers",
+      "display": "49ers DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "chipAppearances": 2,
+      "chipYears": [
+        2021,
+        2024
+      ],
+      "starts": 76,
+      "wins": 40,
+      "losses": 36,
+      "ties": 0,
+      "winPct": 0.5263,
+      "avgPerStart": 7.97
+    },
+    {
+      "key": "TE|kittle|george",
+      "display": "George Kittle",
+      "fullName": "George Kittle",
+      "pos": "TE",
+      "espnId": 3040151,
+      "chipAppearances": 2,
+      "chipYears": [
+        2019,
+        2024
+      ],
+      "starts": 88,
+      "wins": 46,
+      "losses": 42,
+      "ties": 0,
+      "winPct": 0.5227,
+      "avgPerStart": 14.72
+    },
+    {
+      "key": "RB|conner|J",
+      "display": "J. Conner",
+      "fullName": "James Conner",
+      "pos": "RB",
+      "espnId": 3045147,
+      "chipAppearances": 2,
+      "chipYears": [
+        2021,
+        2022
+      ],
+      "starts": 49,
+      "wins": 25,
+      "losses": 24,
+      "ties": 0,
+      "winPct": 0.5102,
+      "avgPerStart": 13.9
+    },
+    {
+      "key": "K|bullock|R",
+      "display": "R. Bullock",
+      "fullName": null,
+      "pos": "K",
+      "espnId": null,
+      "chipAppearances": 2,
+      "chipYears": [
+        2021,
+        2022
+      ],
+      "starts": 6,
+      "wins": 3,
+      "losses": 3,
+      "ties": 0,
+      "winPct": 0.5,
+      "avgPerStart": 5.83
+    },
+    {
+      "key": "K|tucker|J",
+      "display": "J. Tucker",
+      "fullName": "Justin Tucker",
+      "pos": "K",
+      "espnId": 15683,
+      "chipAppearances": 2,
+      "chipYears": [
+        2020,
+        2023
+      ],
+      "starts": 90,
+      "wins": 44,
+      "losses": 46,
+      "ties": 0,
+      "winPct": 0.4889,
+      "avgPerStart": 8.79
+    },
+    {
+      "key": "DEF||cowboys",
+      "display": "Cowboys DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "chipAppearances": 2,
+      "chipYears": [
+        2024,
+        2025
+      ],
+      "starts": 48,
+      "wins": 23,
+      "losses": 25,
+      "ties": 0,
+      "winPct": 0.4792,
+      "avgPerStart": 9.44
+    },
+    {
+      "key": "RB|taylor|jonathan",
+      "display": "Jonathan Taylor",
+      "fullName": "Jonathan Taylor",
+      "pos": "RB",
+      "espnId": 4242335,
+      "chipAppearances": 2,
+      "chipYears": [
+        2023,
+        2024
+      ],
+      "starts": 74,
+      "wins": 35,
+      "losses": 39,
+      "ties": 0,
+      "winPct": 0.473,
+      "avgPerStart": 18.99
+    },
+    {
+      "key": "DEF||buccaneers",
+      "display": "Buccaneers DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "chipAppearances": 2,
+      "chipYears": [
+        2022,
+        2025
+      ],
+      "starts": 49,
+      "wins": 23,
+      "losses": 26,
+      "ties": 0,
+      "winPct": 0.4694,
+      "avgPerStart": 8.2
+    },
+    {
+      "key": "WR|samuel|deebo",
+      "display": "D. Samuel",
+      "fullName": "Deebo Samuel Sr.",
+      "pos": "WR",
+      "espnId": 3126486,
+      "chipAppearances": 2,
+      "chipYears": [
+        2021,
+        2025
+      ],
+      "starts": 60,
+      "wins": 28,
+      "losses": 32,
+      "ties": 0,
+      "winPct": 0.4667,
+      "avgPerStart": 14.91
+    },
+    {
+      "key": "QB|cousins|kirk",
+      "display": "Kirk Cousins",
+      "fullName": "Kirk Cousins",
+      "pos": "QB",
+      "espnId": 14880,
+      "chipAppearances": 2,
+      "chipYears": [
+        2019,
+        2022
+      ],
+      "starts": 20,
+      "wins": 9,
+      "losses": 11,
+      "ties": 0,
+      "winPct": 0.45,
+      "avgPerStart": 16.2
+    },
+    {
+      "key": "DEF||eagles",
+      "display": "Eagles DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "chipAppearances": 2,
+      "chipYears": [
+        2019,
+        2024
+      ],
+      "starts": 67,
+      "wins": 30,
+      "losses": 37,
+      "ties": 0,
+      "winPct": 0.4478,
+      "avgPerStart": 7.18
+    },
+    {
+      "key": "TE|knox|D",
+      "display": "D. Knox",
+      "fullName": "Dawson Knox",
+      "pos": "TE",
+      "espnId": 3930086,
+      "chipAppearances": 2,
+      "chipYears": [
+        2022,
+        2024
+      ],
+      "starts": 9,
+      "wins": 4,
+      "losses": 5,
+      "ties": 0,
+      "winPct": 0.4444,
+      "avgPerStart": 11.79
+    }
+  ],
+  "miaKhalifas": [
+    {
+      "key": "RB|williams|javonte",
+      "display": "Javonte Williams",
+      "fullName": "Javonte Williams",
+      "pos": "RB",
+      "espnId": 4361579,
+      "uniqueOwners": 9,
+      "transitions": 24,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 613.0
+    },
+    {
+      "key": "WR|moore|dj",
+      "display": "D. Moore",
+      "fullName": "DJ Moore",
+      "pos": "WR",
+      "espnId": 3915416,
+      "uniqueOwners": 9,
+      "transitions": 17,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Todd",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 827.18
+    },
+    {
+      "key": "RB|chubb|N",
+      "display": "N. Chubb",
+      "fullName": "Nick Chubb",
+      "pos": "RB",
+      "espnId": 3128720,
+      "uniqueOwners": 9,
+      "transitions": 16,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Todd",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totalPoints": 744.6
+    },
+    {
+      "key": "K|butker|harrison",
+      "display": "Harrison Butker",
+      "fullName": "Harrison Butker",
+      "pos": "K",
+      "espnId": 3055899,
+      "uniqueOwners": 9,
+      "transitions": 15,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 697.0
+    },
+    {
+      "key": "WR|godwin|chris",
+      "display": "Chris Godwin",
+      "fullName": "Chris Godwin Jr.",
+      "pos": "WR",
+      "espnId": 3116165,
+      "uniqueOwners": 9,
+      "transitions": 10,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Sean",
+        "Todd",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 958.8
+    },
+    {
+      "key": "WR|evans|mike",
+      "display": "M. Evans",
+      "fullName": "Mike Evans",
+      "pos": "WR",
+      "espnId": 16737,
+      "uniqueOwners": 9,
+      "transitions": 10,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Todd"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 1123.5
+    },
+    {
+      "key": "WR|lamb|ceedee",
+      "display": "CeeDee Lamb",
+      "fullName": "CeeDee Lamb",
+      "pos": "WR",
+      "espnId": 4241389,
+      "uniqueOwners": 9,
+      "transitions": 9,
+      "owners": [
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Todd",
+        "Ulises"
+      ],
+      "seasons": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 1429.5
+    },
+    {
+      "key": "DEF||49ers",
+      "display": "49ers DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "uniqueOwners": 8,
+      "transitions": 14,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 606.0
+    },
+    {
+      "key": "TE|hockenson|T",
+      "display": "T. Hockenson",
+      "fullName": "T.J. Hockenson",
+      "pos": "TE",
+      "espnId": 4036133,
+      "uniqueOwners": 8,
+      "transitions": 12,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 720.4
+    },
+    {
+      "key": "WR|sutton|courtland",
+      "display": "C. Sutton",
+      "fullName": "Courtland Sutton",
+      "pos": "WR",
+      "espnId": 3128429,
+      "uniqueOwners": 8,
+      "transitions": 10,
+      "owners": [
+        "Alex",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Todd",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 336.32
+    },
+    {
+      "key": "RB|hunt|K",
+      "display": "K. Hunt",
+      "fullName": "Kareem Hunt",
+      "pos": "RB",
+      "espnId": 3059915,
+      "uniqueOwners": 8,
+      "transitions": 10,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totalPoints": 281.8
+    },
+    {
+      "key": "WR|smith|devonta",
+      "display": "D. Smith",
+      "fullName": "DeVonta Smith",
+      "pos": "WR",
+      "espnId": 4241478,
+      "uniqueOwners": 8,
+      "transitions": 8,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 538.9
+    },
+    {
+      "key": "WR|williams|jameson",
+      "display": "Jameson Williams",
+      "fullName": "Jameson Williams",
+      "pos": "WR",
+      "espnId": 4426388,
+      "uniqueOwners": 8,
+      "transitions": 8,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 168.9
+    },
+    {
+      "key": "TE|kelce|travis",
+      "display": "Travis Kelce",
+      "fullName": "Travis Kelce",
+      "pos": "TE",
+      "espnId": 15847,
+      "uniqueOwners": 8,
+      "transitions": 7,
+      "owners": [
+        "Aiden",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 1687.76
+    },
+    {
+      "key": "RB|robinson|B",
+      "display": "B. Robinson",
+      "fullName": null,
+      "pos": "RB",
+      "espnId": null,
+      "uniqueOwners": 7,
+      "transitions": 52,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Justin",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 1040.7
+    },
+    {
+      "key": "WR|allen|keenan",
+      "display": "K. Allen",
+      "fullName": "Keenan Allen",
+      "pos": "WR",
+      "espnId": 15818,
+      "uniqueOwners": 7,
+      "transitions": 13,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 1137.96
+    },
+    {
+      "key": "DEF||chiefs",
+      "display": "Chiefs DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "uniqueOwners": 7,
+      "transitions": 13,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Luke",
+        "Matthew",
+        "Sean"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 184.0
+    },
+    {
+      "key": "WR|smith-schuster|J",
+      "display": "J. Smith-Schuster",
+      "fullName": "JuJu Smith-Schuster",
+      "pos": "WR",
+      "espnId": 3120348,
+      "uniqueOwners": 7,
+      "transitions": 12,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2024
+      ],
+      "totalPoints": 184.9
+    },
+    {
+      "key": "DEF||steelers",
+      "display": "Steelers DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "uniqueOwners": 7,
+      "transitions": 12,
+      "owners": [
+        "Aiden",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Sean",
+        "Todd",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 616.0
+    },
+    {
+      "key": "DEF||eagles",
+      "display": "Eagles DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "uniqueOwners": 7,
+      "transitions": 12,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Joshua",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 481.0
+    },
+    {
+      "key": "WR|meyers|jakobi",
+      "display": "J. Meyers",
+      "fullName": "Jakobi Meyers",
+      "pos": "WR",
+      "espnId": 3916433,
+      "uniqueOwners": 7,
+      "transitions": 12,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Matthew"
+      ],
+      "seasons": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 189.2
+    },
+    {
+      "key": "RB|jacobs|josh",
+      "display": "Josh Jacobs",
+      "fullName": "Josh Jacobs",
+      "pos": "RB",
+      "espnId": 4047365,
+      "uniqueOwners": 7,
+      "transitions": 11,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Ethan",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Matthew"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 1201.8
+    },
+    {
+      "key": "RB|montgomery|david",
+      "display": "D. Montgomery",
+      "fullName": "David Montgomery",
+      "pos": "RB",
+      "espnId": 4035538,
+      "uniqueOwners": 7,
+      "transitions": 11,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 671.14
+    },
+    {
+      "key": "QB|jackson|lamar",
+      "display": "L. Jackson",
+      "fullName": "Lamar Jackson",
+      "pos": "QB",
+      "espnId": 3916387,
+      "uniqueOwners": 7,
+      "transitions": 11,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Matthew",
+        "Sean"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 1801.12
+    },
+    {
+      "key": "WR|kirk|C",
+      "display": "C. Kirk",
+      "fullName": "Christian Kirk",
+      "pos": "WR",
+      "espnId": 3895856,
+      "uniqueOwners": 7,
+      "transitions": 11,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totalPoints": 215.9
+    },
+    {
+      "key": "RB|harris|N",
+      "display": "N. Harris",
+      "fullName": "Najee Harris",
+      "pos": "RB",
+      "espnId": 4241457,
+      "uniqueOwners": 7,
+      "transitions": 11,
+      "owners": [
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totalPoints": 501.8
+    },
+    {
+      "key": "RB|white|rachaad",
+      "display": "R. White",
+      "fullName": "Rachaad White",
+      "pos": "RB",
+      "espnId": 4697815,
+      "uniqueOwners": 7,
+      "transitions": 11,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Ulises"
+      ],
+      "seasons": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 330.4
+    },
+    {
+      "key": "RB|henry|derrick",
+      "display": "Derrick Henry",
+      "fullName": "Derrick Henry",
+      "pos": "RB",
+      "espnId": 3043078,
+      "uniqueOwners": 7,
+      "transitions": 10,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 1814.26
+    },
+    {
+      "key": "WR|hopkins|D",
+      "display": "D. Hopkins",
+      "fullName": null,
+      "pos": "WR",
+      "espnId": null,
+      "uniqueOwners": 7,
+      "transitions": 10,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Matthew",
+        "Sean"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totalPoints": 854.34
+    },
+    {
+      "key": "RB|kamara|alvin",
+      "display": "A. Kamara",
+      "fullName": "Alvin Kamara",
+      "pos": "RB",
+      "espnId": 3054850,
+      "uniqueOwners": 7,
+      "transitions": 10,
+      "owners": [
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 1584.72
+    },
+    {
+      "key": "DEF||saints",
+      "display": "Saints DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "uniqueOwners": 7,
+      "transitions": 10,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Todd"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2023,
+        2024,
+        2025
+      ],
+      "totalPoints": 194.0
+    },
+    {
+      "key": "RB|mostert|R",
+      "display": "R. Mostert",
+      "fullName": "Raheem Mostert",
+      "pos": "RB",
+      "espnId": 2576414,
+      "uniqueOwners": 7,
+      "transitions": 10,
+      "owners": [
+        "Aiden",
+        "Howard",
+        "Joshua",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "totalPoints": 313.0
+    },
+    {
+      "key": "WR|mclaurin|terry",
+      "display": "T. McLaurin",
+      "fullName": "Terry McLaurin",
+      "pos": "WR",
+      "espnId": 3121422,
+      "uniqueOwners": 7,
+      "transitions": 10,
+      "owners": [
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Matthew",
+        "Sean",
+        "Todd",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 875.7
+    },
+    {
+      "key": "DEF||seahawks",
+      "display": "Seahawks DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "uniqueOwners": 7,
+      "transitions": 10,
+      "owners": [
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Matthew",
+        "Sean",
+        "Todd",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2023,
+        2025,
+        2026
+      ],
+      "totalPoints": 190.0
+    },
+    {
+      "key": "TE|ertz|Z",
+      "display": "Z. Ertz",
+      "fullName": "Zach Ertz",
+      "pos": "TE",
+      "espnId": 15835,
+      "uniqueOwners": 7,
+      "transitions": 9,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totalPoints": 349.4
+    },
+    {
+      "key": "QB|mahomes|patrick",
+      "display": "Patrick Mahomes",
+      "fullName": "Patrick Mahomes",
+      "pos": "QB",
+      "espnId": 3139477,
+      "uniqueOwners": 7,
+      "transitions": 9,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 2138.34
+    },
+    {
+      "key": "TE|henry|hunter",
+      "display": "H. Henry",
+      "fullName": "Hunter Henry",
+      "pos": "TE",
+      "espnId": 3046439,
+      "uniqueOwners": 7,
+      "transitions": 9,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Ethan",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Matthew"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2025,
+        2026
+      ],
+      "totalPoints": 317.1
+    },
+    {
+      "key": "DEF||rams",
+      "display": "Rams DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "uniqueOwners": 7,
+      "transitions": 9,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Justin",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2025,
+        2026
+      ],
+      "totalPoints": 221.0
+    },
+    {
+      "key": "RB|mixon|J",
+      "display": "J. Mixon",
+      "fullName": "Joe Mixon",
+      "pos": "RB",
+      "espnId": 3116385,
+      "uniqueOwners": 7,
+      "transitions": 9,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Justin",
+        "Matthew",
+        "Todd",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totalPoints": 1034.9
+    },
+    {
+      "key": "TE|goedert|dallas",
+      "display": "D. Goedert",
+      "fullName": "Dallas Goedert",
+      "pos": "TE",
+      "espnId": 3121023,
+      "uniqueOwners": 7,
+      "transitions": 9,
+      "owners": [
+        "Aiden",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 562.8
+    },
+    {
+      "key": "DEF||broncos",
+      "display": "Broncos DEF",
+      "fullName": null,
+      "pos": "DEF",
+      "espnId": null,
+      "uniqueOwners": 7,
+      "transitions": 9,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Matthew",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 274.0
+    },
+    {
+      "key": "RB|pollard|tony",
+      "display": "Tony Pollard",
+      "fullName": "Tony Pollard",
+      "pos": "RB",
+      "espnId": 3916148,
+      "uniqueOwners": 7,
+      "transitions": 9,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Ulises"
+      ],
+      "seasons": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 538.1
+    },
+    {
+      "key": "K|fairbairn|ka'imi",
+      "display": "Ka'imi Fairbairn",
+      "fullName": "Ka'imi Fairbairn",
+      "pos": "K",
+      "espnId": 2971573,
+      "uniqueOwners": 7,
+      "transitions": 8,
+      "owners": [
+        "Alex",
+        "Ethan",
+        "Howard",
+        "Justin",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 398.0
+    },
+    {
+      "key": "WR|brown|M",
+      "display": "M. Brown",
+      "fullName": null,
+      "pos": "WR",
+      "espnId": null,
+      "uniqueOwners": 7,
+      "transitions": 8,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2025
+      ],
+      "totalPoints": 298.9
+    },
+    {
+      "key": "WR|brown|A",
+      "display": "A. Brown",
+      "fullName": "A.J. Brown",
+      "pos": "WR",
+      "espnId": 4047646,
+      "uniqueOwners": 7,
+      "transitions": 8,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 1254.2
+    },
+    {
+      "key": "RB|taylor|jonathan",
+      "display": "Jonathan Taylor",
+      "fullName": "Jonathan Taylor",
+      "pos": "RB",
+      "espnId": 4242335,
+      "uniqueOwners": 7,
+      "transitions": 8,
+      "owners": [
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Matthew",
+        "Sean",
+        "Todd",
+        "Ulises"
+      ],
+      "seasons": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 1405.6
+    },
+    {
+      "key": "RB|etienne|travis",
+      "display": "T. Etienne",
+      "fullName": "Travis Etienne Jr.",
+      "pos": "RB",
+      "espnId": 4239996,
+      "uniqueOwners": 7,
+      "transitions": 8,
+      "owners": [
+        "Aiden",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean"
+      ],
+      "seasons": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 641.7
+    },
+    {
+      "key": "WR|london|drake",
+      "display": "D. London",
+      "fullName": "Drake London",
+      "pos": "WR",
+      "espnId": 4426502,
+      "uniqueOwners": 7,
+      "transitions": 8,
+      "owners": [
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "totalPoints": 372.6
+    },
+    {
+      "key": "QB|wilson|R",
+      "display": "R. Wilson",
+      "fullName": null,
+      "pos": "QB",
+      "espnId": null,
+      "uniqueOwners": 7,
+      "transitions": 7,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "totalPoints": 712.46
+    },
+    {
+      "key": "WR|cooper|A",
+      "display": "A. Cooper",
+      "fullName": "Amari Cooper",
+      "pos": "WR",
+      "espnId": 2976499,
+      "uniqueOwners": 7,
+      "transitions": 7,
+      "owners": [
+        "Aiden",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "totalPoints": 888.9
+    }
+  ],
+  "worstDrops": [
+    {
+      "key": "RB|robinson|B",
+      "display": "B. Robinson",
+      "fullName": null,
+      "pos": "RB",
+      "espnId": null,
+      "year": 2024,
+      "droppedBy": "Sean",
+      "droppedAfterWeek": 1,
+      "pickedUpBy": "Aiden",
+      "laterPts": 413.6,
+      "laterStarts": 25,
+      "laterOwners": [
+        "Aiden",
+        "Sean"
+      ]
+    },
+    {
+      "key": "RB|robinson|B",
+      "display": "B. Robinson",
+      "fullName": null,
+      "pos": "RB",
+      "espnId": null,
+      "year": 2025,
+      "droppedBy": "Alex",
+      "droppedAfterWeek": 1,
+      "pickedUpBy": "Ulises",
+      "laterPts": 363.5,
+      "laterStarts": 16,
+      "laterOwners": [
+        "Ulises"
+      ]
+    },
+    {
+      "key": "RB|robinson|B",
+      "display": "B. Robinson",
+      "fullName": null,
+      "pos": "RB",
+      "espnId": null,
+      "year": 2023,
+      "droppedBy": "Alex",
+      "droppedAfterWeek": 1,
+      "pickedUpBy": "Matthew",
+      "laterPts": 236.8,
+      "laterStarts": 19,
+      "laterOwners": [
+        "Howard",
+        "Matthew"
+      ]
+    },
+    {
+      "key": "QB|maye|drake",
+      "display": "Drake Maye",
+      "fullName": "Drake Maye",
+      "pos": "QB",
+      "espnId": 4431452,
+      "year": 2025,
+      "droppedBy": "Joshua",
+      "droppedAfterWeek": 1,
+      "pickedUpBy": "Howard",
+      "laterPts": 228.62,
+      "laterStarts": 11,
+      "laterOwners": [
+        "Howard"
+      ]
+    },
+    {
+      "key": "QB|burrow|joe",
+      "display": "Joe Burrow",
+      "fullName": "Joe Burrow",
+      "pos": "QB",
+      "espnId": 3915511,
+      "year": 2021,
+      "droppedBy": "Alex",
+      "droppedAfterWeek": 2,
+      "pickedUpBy": "Aiden",
+      "laterPts": 227.08,
+      "laterStarts": 11,
+      "laterOwners": [
+        "Aiden"
+      ]
+    },
+    {
+      "key": "QB|jackson|lamar",
+      "display": "L. Jackson",
+      "fullName": "Lamar Jackson",
+      "pos": "QB",
+      "espnId": 3916387,
+      "year": 2023,
+      "droppedBy": "Alex",
+      "droppedAfterWeek": 6,
+      "pickedUpBy": "Howard",
+      "laterPts": 218.4,
+      "laterStarts": 10,
+      "laterOwners": [
+        "Howard",
+        "Matthew"
+      ]
+    },
+    {
+      "key": "QB|hurts|jalen",
+      "display": "J. Hurts",
+      "fullName": "Jalen Hurts",
+      "pos": "QB",
+      "espnId": 4040715,
+      "year": 2023,
+      "droppedBy": "Matthew",
+      "droppedAfterWeek": 7,
+      "pickedUpBy": "Luke",
+      "laterPts": 203.98,
+      "laterStarts": 9,
+      "laterOwners": [
+        "Luke"
+      ]
+    },
+    {
+      "key": "QB|prescott|dak",
+      "display": "Dak Prescott",
+      "fullName": "Dak Prescott",
+      "pos": "QB",
+      "espnId": 2577417,
+      "year": 2023,
+      "droppedBy": "Luke",
+      "droppedAfterWeek": 4,
+      "pickedUpBy": "Matthew",
+      "laterPts": 201.62,
+      "laterStarts": 9,
+      "laterOwners": [
+        "Howard",
+        "Matthew"
+      ]
+    },
+    {
+      "key": "RB|mixon|J",
+      "display": "J. Mixon",
+      "fullName": "Joe Mixon",
+      "pos": "RB",
+      "espnId": 3116385,
+      "year": 2023,
+      "droppedBy": "Justin",
+      "droppedAfterWeek": 7,
+      "pickedUpBy": "Matthew",
+      "laterPts": 173.3,
+      "laterStarts": 10,
+      "laterOwners": [
+        "Matthew"
+      ]
+    },
+    {
+      "key": "QB|herbert|justin",
+      "display": "J. Herbert",
+      "fullName": "Justin Herbert",
+      "pos": "QB",
+      "espnId": 4038941,
+      "year": 2020,
+      "droppedBy": "Matthew",
+      "droppedAfterWeek": 5,
+      "pickedUpBy": "Ulises",
+      "laterPts": 169.72,
+      "laterStarts": 8,
+      "laterOwners": [
+        "Ulises"
+      ]
+    },
+    {
+      "key": "WR|hill|T",
+      "display": "T. Hill",
+      "fullName": null,
+      "pos": "WR",
+      "espnId": null,
+      "year": 2023,
+      "droppedBy": "Howard",
+      "droppedAfterWeek": 7,
+      "pickedUpBy": "Matthew",
+      "laterPts": 168.6,
+      "laterStarts": 8,
+      "laterOwners": [
+        "Matthew"
+      ]
+    },
+    {
+      "key": "RB|gibbs|jahmyr",
+      "display": "Jahmyr Gibbs",
+      "fullName": "Jahmyr Gibbs",
+      "pos": "RB",
+      "espnId": 4429795,
+      "year": 2023,
+      "droppedBy": "Howard",
+      "droppedAfterWeek": 5,
+      "pickedUpBy": "Alex",
+      "laterPts": 168.0,
+      "laterStarts": 9,
+      "laterOwners": [
+        "Alex"
+      ]
+    },
+    {
+      "key": "RB|white|rachaad",
+      "display": "R. White",
+      "fullName": "Rachaad White",
+      "pos": "RB",
+      "espnId": 4697815,
+      "year": 2023,
+      "droppedBy": "Alex",
+      "droppedAfterWeek": 6,
+      "pickedUpBy": "Howard",
+      "laterPts": 167.8,
+      "laterStarts": 9,
+      "laterOwners": [
+        "Howard",
+        "Matthew"
+      ]
+    },
+    {
+      "key": "WR|mclaurin|terry",
+      "display": "T. McLaurin",
+      "fullName": "Terry McLaurin",
+      "pos": "WR",
+      "espnId": 3121422,
+      "year": 2024,
+      "droppedBy": "Alex",
+      "droppedAfterWeek": 2,
+      "pickedUpBy": "Matthew",
+      "laterPts": 166.6,
+      "laterStarts": 10,
+      "laterOwners": [
+        "Joshua",
+        "Matthew"
+      ]
+    },
+    {
+      "key": "WR|diggs|stefon",
+      "display": "S. Diggs",
+      "fullName": "Stefon Diggs",
+      "pos": "WR",
+      "espnId": 2976212,
+      "year": 2019,
+      "droppedBy": "Justin",
+      "droppedAfterWeek": 3,
+      "pickedUpBy": "Aiden",
+      "laterPts": 161.5,
+      "laterStarts": 10,
+      "laterOwners": [
+        "Aiden",
+        "Ulises"
+      ]
+    },
+    {
+      "key": "QB|prescott|dak",
+      "display": "Dak Prescott",
+      "fullName": "Dak Prescott",
+      "pos": "QB",
+      "espnId": 2577417,
+      "year": 2022,
+      "droppedBy": "Alex",
+      "droppedAfterWeek": 1,
+      "pickedUpBy": "Ulises",
+      "laterPts": 160.02,
+      "laterStarts": 9,
+      "laterOwners": [
+        "Ulises"
+      ]
+    },
+    {
+      "key": "WR|olave|chris",
+      "display": "Chris Olave",
+      "fullName": "Chris Olave",
+      "pos": "WR",
+      "espnId": 4361370,
+      "year": 2025,
+      "droppedBy": "Justin",
+      "droppedAfterWeek": 2,
+      "pickedUpBy": "Sean",
+      "laterPts": 156.1,
+      "laterStarts": 9,
+      "laterOwners": [
+        "Sean"
+      ]
+    },
+    {
+      "key": "WR|allen|keenan",
+      "display": "K. Allen",
+      "fullName": "Keenan Allen",
+      "pos": "WR",
+      "espnId": 15818,
+      "year": 2023,
+      "droppedBy": "Matthew",
+      "droppedAfterWeek": 7,
+      "pickedUpBy": "Joshua",
+      "laterPts": 144.9,
+      "laterStarts": 9,
+      "laterOwners": [
+        "Joshua"
+      ]
+    },
+    {
+      "key": "QB|brees|D",
+      "display": "D. Brees",
+      "fullName": null,
+      "pos": "QB",
+      "espnId": null,
+      "year": 2019,
+      "droppedBy": "Alex",
+      "droppedAfterWeek": 2,
+      "pickedUpBy": "Sean",
+      "laterPts": 142.36,
+      "laterStarts": 7,
+      "laterOwners": [
+        "Alex",
+        "Sean",
+        "Ulises"
+      ]
+    },
+    {
+      "key": "RB|etienne|travis",
+      "display": "T. Etienne",
+      "fullName": "Travis Etienne Jr.",
+      "pos": "RB",
+      "espnId": 4239996,
+      "year": 2022,
+      "droppedBy": "Howard",
+      "droppedAfterWeek": 3,
+      "pickedUpBy": "Joshua",
+      "laterPts": 142.0,
+      "laterStarts": 10,
+      "laterOwners": [
+        "Joshua"
+      ]
+    },
+    {
+      "key": "RB|pollard|tony",
+      "display": "Tony Pollard",
+      "fullName": "Tony Pollard",
+      "pos": "RB",
+      "espnId": 3916148,
+      "year": 2022,
+      "droppedBy": "Ulises",
+      "droppedAfterWeek": 1,
+      "pickedUpBy": "Matthew",
+      "laterPts": 139.0,
+      "laterStarts": 7,
+      "laterOwners": [
+        "Matthew"
+      ]
+    },
+    {
+      "key": "QB|dart|jaxson",
+      "display": "Jaxson Dart",
+      "fullName": "Jaxson Dart",
+      "pos": "QB",
+      "espnId": 4689114,
+      "year": 2025,
+      "droppedBy": "Howard",
+      "droppedAfterWeek": 4,
+      "pickedUpBy": "Todd",
+      "laterPts": 137.06,
+      "laterStarts": 6,
+      "laterOwners": [
+        "Justin",
+        "Todd"
+      ]
+    },
+    {
+      "key": "WR|moore|dj",
+      "display": "D. Moore",
+      "fullName": "DJ Moore",
+      "pos": "WR",
+      "espnId": 3915416,
+      "year": 2023,
+      "droppedBy": "Luke",
+      "droppedAfterWeek": 7,
+      "pickedUpBy": "Howard",
+      "laterPts": 133.3,
+      "laterStarts": 8,
+      "laterOwners": [
+        "Howard"
+      ]
+    },
+    {
+      "key": "RB|etienne|travis",
+      "display": "T. Etienne",
+      "fullName": "Travis Etienne Jr.",
+      "pos": "RB",
+      "espnId": 4239996,
+      "year": 2023,
+      "droppedBy": "Joshua",
+      "droppedAfterWeek": 7,
+      "pickedUpBy": "Howard",
+      "laterPts": 130.7,
+      "laterStarts": 9,
+      "laterOwners": [
+        "Howard",
+        "Luke"
+      ]
+    },
+    {
+      "key": "QB|murray|kyler",
+      "display": "Kyler Murray",
+      "fullName": "Kyler Murray",
+      "pos": "QB",
+      "espnId": 3917315,
+      "year": 2019,
+      "droppedBy": "Justin",
+      "droppedAfterWeek": 1,
+      "pickedUpBy": "Luke",
+      "laterPts": 128.86,
+      "laterStarts": 8,
+      "laterOwners": [
+        "Luke"
+      ]
     }
   ],
   "playoffOdds": {
