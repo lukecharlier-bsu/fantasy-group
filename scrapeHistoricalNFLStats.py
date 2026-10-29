@@ -78,7 +78,9 @@ def week_game_ids(year, week):
 
 
 def pull_week_stats(year, week):
-    """Return dict {(fi, last): {STAT_FIELDS...}} aggregating all games in the week."""
+    """Return dict {(fi, last, team_abbr): {STAT_FIELDS..., _name}} aggregating
+    all games in the week. Team abbreviation disambiguates players with the
+    same (fi, last) like Bijan vs Brian Robinson."""
     out = {}
     gids = week_game_ids(year, week)
     for gid in gids:
@@ -88,6 +90,7 @@ def pull_week_stats(year, week):
             print(f"    skip game {gid}: {exc}")
             continue
         for team in bs.get("boxscore", {}).get("players", []):
+            team_abbr = (team.get("team", {}).get("abbreviation") or "").upper()
             for group in team.get("statistics", []):
                 cat = group.get("name")
                 if cat not in ("passing", "rushing", "receiving"):
@@ -101,9 +104,10 @@ def pull_week_stats(year, week):
                         continue
                     fi = parts[0][:1].upper()
                     last = _norm_last(parts[1:])
-                    key = (fi, last)
+                    key = (fi, last, team_abbr)
                     stat_vals = a.get("stats", [])
                     rec = out.setdefault(key, {k: 0.0 for k in STAT_FIELDS})
+                    rec["_name"] = name
                     if cat == "passing":
                         cmp, att = _split_catt(stat_vals[idx["C/ATT"]] if "C/ATT" in idx else "")
                         rec["passCmp"] += cmp
@@ -139,10 +143,16 @@ def join_week(year, week):
     if not os.path.isfile(fantasy_csv):
         return 0, 0  # no fantasy data for this week
     nfl_stats = pull_week_stats(year, week)
+    # Also build a (fi, last) index for fallback when the team doesn't match
+    by_fi_last = {}
+    for (fi, last, team_abbr), rec in nfl_stats.items():
+        by_fi_last.setdefault((fi, last), []).append((team_abbr, rec))
     out_dir = os.path.join(HIST_STATS_DIR, str(year))
     os.makedirs(out_dir, exist_ok=True)
     out_path = os.path.join(out_dir, f"{week}.csv")
-    header = ["Owner", "Player", "Position", "Slot", "Points"] + STAT_FIELDS
+    # FullName column lets buildDashboardData's resolution map disambiguate
+    # Bijan vs Brian Robinson (same fi/last, different NFL team).
+    header = ["Owner", "Player", "FullName", "Position", "Slot", "Points"] + STAT_FIELDS
     matched = 0
     total = 0
     with open(fantasy_csv, newline="") as src, open(out_path, "w", newline="") as dst:
@@ -180,12 +190,23 @@ def join_week(year, week):
                     pts = 0.0
                 fi = info.get("fi", "")
                 last = info.get("last", "")
-                stats = nfl_stats.get((fi, last))
+                team = (info.get("team") or "").upper()
+                # Try (fi, last, team) first — unambiguous
+                stats = nfl_stats.get((fi, last, team)) if team else None
+                full_name = ""
+                if stats:
+                    full_name = stats.get("_name", "")
+                else:
+                    # Fallback: unique (fi, last) match → use it but keep full name
+                    candidates = by_fi_last.get((fi, last), [])
+                    if len(candidates) == 1:
+                        stats = candidates[0][1]
+                        full_name = stats.get("_name", "")
                 stat_row = [stats.get(k, 0) if stats else 0 for k in STAT_FIELDS]
                 total += 1
                 if stats:
                     matched += 1
-                w.writerow([owner, info["display"], info["pos"], slot, pts] + stat_row)
+                w.writerow([owner, info["display"], full_name, info["pos"], slot, pts] + stat_row)
     return matched, total
 
 
