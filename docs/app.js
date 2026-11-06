@@ -455,6 +455,117 @@ function initDraftsPanel() {
     detailSel.innerHTML = owners.map(n => `<option value="${n}">${n}</option>`).join("");
     detailSel.addEventListener("change", () => renderDraftOwnerDetail(detailSel.value));
     renderDraftOwnerDetail(owners[0]);
+
+    // Draft Ranker
+    const rankerYrSel = document.getElementById("ranker-year");
+    rankerYrSel.innerHTML = years.map(y => `<option value="${y}">${y}</option>`).join("");
+    rankerYrSel.addEventListener("change", () => renderDraftRanker(rankerYrSel.value));
+    renderDraftRanker(rankerYrSel.value);
+}
+
+function renderDraftRanker(year) {
+    const t = document.getElementById("ranker-table");
+    const picks = STATE.data.drafts[year] || [];
+    const seasonStats = (STATE.data.playersByYear || {})[year] || {};
+    if (!picks.length) {
+        t.innerHTML = `<tbody><tr><td class="muted">No draft data for ${year}.</td></tr></tbody>`;
+        return;
+    }
+    // Match each pick to its season starter points by canonical key
+    const keyFor = (p) => {
+        if (p.position === "DEF") return `DEF||${(p.player || "").toLowerCase()}`;
+        const parts = (p.player || "").split(" ");
+        if (parts.length < 2) return "";
+        const firstNorm = parts[0].toLowerCase().replace(/[.]/g, "")
+            .replace(/^(jr|sr|ii|iii|iv)$/, "");
+        const suffixes = new Set(["jr","sr","ii","iii","iv","jr.","sr."]);
+        const lastParts = parts.slice(1).filter(s => !suffixes.has(s.toLowerCase().replace(/[.]/g, "")));
+        const lastNorm = lastParts.join("").toLowerCase().replace(/[.]/g, "");
+        return `${p.position}|${lastNorm}|${firstNorm}`;
+    };
+    const shortKeyFor = (p) => {
+        if (p.position === "DEF") return `DEF||${(p.player || "").toLowerCase()}`;
+        const parts = (p.player || "").split(" ");
+        if (parts.length < 2) return "";
+        const fi = (parts[0][0] || "").toUpperCase();
+        const suffixes = new Set(["jr","sr","ii","iii","iv","jr.","sr."]);
+        const lastParts = parts.slice(1).filter(s => !suffixes.has(s.toLowerCase().replace(/[.]/g, "")));
+        const lastNorm = lastParts.join("").toLowerCase().replace(/[.]/g, "");
+        return `${p.position}|${lastNorm}|${fi}`;
+    };
+
+    // Aggregate per owner
+    const byOwner = {};
+    for (const p of picks) {
+        const longK = keyFor(p);
+        const shortK = shortKeyFor(p);
+        const stats = seasonStats[longK] || seasonStats[shortK];
+        const pts = stats ? stats.totalPoints : 0;
+        const starts = stats ? stats.starts : 0;
+        const bucket = byOwner[p.manager] || (byOwner[p.manager] = {
+            picks: 0, total: 0, bestPick: null, bestPts: -Infinity, hits: 0,
+            firstRoundPts: 0, firstRoundPick: null, players: [],
+        });
+        bucket.picks += 1;
+        bucket.total += pts;
+        bucket.players.push({ ...p, pts, starts });
+        if (pts > bucket.bestPts) {
+            bucket.bestPts = pts;
+            bucket.bestPick = { ...p, pts };
+        }
+        if (starts >= 3) bucket.hits += 1;
+        if (p.round === 1) {
+            bucket.firstRoundPts = pts;
+            bucket.firstRoundPick = { ...p, pts };
+        }
+    }
+    const rows = Object.entries(byOwner).map(([owner, s]) => ({
+        owner,
+        picks: s.picks,
+        total: Math.round(s.total * 10) / 10,
+        perPick: s.picks ? Math.round((s.total / s.picks) * 10) / 10 : 0,
+        hits: s.hits,
+        hitRate: s.picks ? s.hits / s.picks : 0,
+        bestPick: s.bestPick,
+        firstRound: s.firstRoundPick,
+    })).sort((a, b) => b.total - a.total);
+    const body = rows.map((r, i) => `
+        <tr data-ranker-owner="${r.owner}" style="cursor:pointer" title="Click to jump to ${r.owner}'s draft board">
+            <td class="right">${i + 1}</td>
+            <td><strong>${r.owner}</strong></td>
+            <td class="right"><strong>${fmt(r.total)}</strong></td>
+            <td class="right">${r.picks}</td>
+            <td class="right">${fmt(r.perPick)}</td>
+            <td class="right">${r.hits} <span class="muted">(${(r.hitRate * 100).toFixed(0)}%)</span></td>
+            <td>${r.firstRound ? `R1.${r.firstRound.pick} <strong>${r.firstRound.player}</strong> <span class="muted">${r.firstRound.position} · ${fmt(r.firstRound.pts)}</span>` : "—"}</td>
+            <td>${r.bestPick ? `R${r.bestPick.round}.${r.bestPick.pick} <strong>${r.bestPick.player}</strong> <span class="muted">${r.bestPick.position} · ${fmt(r.bestPick.pts)}</span>` : "—"}</td>
+        </tr>`).join("");
+    t.innerHTML = `
+        <thead><tr>
+            <th class="right">#</th>
+            <th>Owner</th>
+            <th class="right" title="Sum of season starter pts for every player drafted">Total Pts</th>
+            <th class="right">Picks</th>
+            <th class="right" title="Total pts ÷ number of picks">Pts/Pick</th>
+            <th class="right" title="Picks that started 3+ games">Hits</th>
+            <th>R1 Pick</th>
+            <th>Best Pick</th>
+        </tr></thead>
+        <tbody>${body}</tbody>
+    `;
+    // Click-to-jump: set the detail dropdown + draft board to this owner
+    t.querySelectorAll("tr[data-ranker-owner]").forEach(tr => {
+        tr.addEventListener("click", () => {
+            const owner = tr.dataset.rankerOwner;
+            const yr = document.getElementById("ranker-year").value;
+            document.getElementById("draft-year").value = yr;
+            document.getElementById("draft-owner-filter").value = owner;
+            document.getElementById("draft-owner-detail").value = owner;
+            renderDraftBoard();
+            renderDraftOwnerDetail(owner);
+            document.getElementById("draft-board").scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    });
 }
 
 function renderDraftBoard() {

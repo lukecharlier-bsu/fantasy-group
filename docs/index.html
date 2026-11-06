@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League History Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1794001719" />
+    <link rel="stylesheet" href="styles.css?v=1794002191" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -162,6 +162,17 @@
                 <h3>Owner Drafting Profile</h3>
                 <label>Owner <select id="draft-owner-detail"></select></label>
                 <div id="draft-owner-body"></div>
+            </div>
+
+            <div class="card">
+                <h3>Draft Ranker</h3>
+                <p class="muted">Each manager's draft ranked by the total season starter points their picks produced that year. Click a row to open that manager's full draft board.</p>
+                <div class="row">
+                    <label>Year <select id="ranker-year"></select></label>
+                </div>
+                <div class="scroll-x">
+                    <table id="ranker-table" class="data-table"></table>
+                </div>
             </div>
         </section>
 
@@ -337,6 +348,6 @@
         <div id="updated-stamp" title=""></div>
     </footer>
 
-    <script src="app.js?v=1794001719"></script>
+    <script src="app.js?v=1794002191"></script>
 </body>
 </html>
