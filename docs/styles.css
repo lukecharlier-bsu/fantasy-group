@@ -462,3 +462,29 @@ canvas { max-height: 360px; }
     letter-spacing: 0.08em; margin: 1rem 0 0.4rem; }
 [data-goto-player] { cursor: pointer; }
 [data-goto-player]:hover { color: var(--accent); text-decoration: underline; }
+
+#updated-stamp {
+    position: fixed;
+    top: 0.75rem;
+    right: 0.9rem;
+    font-size: 0.72rem;
+    color: var(--muted);
+    background: rgba(17, 24, 39, 0.72);
+    border: 1px solid #1f2937;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+    z-index: 999;
+    backdrop-filter: blur(4px);
+    pointer-events: auto;
+    user-select: none;
+}
+#updated-stamp:empty { display: none; }
+#updated-stamp .dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: #4ade80;
+    border-radius: 50%;
+    margin-right: 0.35rem;
+    vertical-align: 1px;
+}

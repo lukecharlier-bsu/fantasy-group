@@ -19,6 +19,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         `League ${STATE.data.leagueId} · ${STATE.data.years[0]}–${STATE.data.years[STATE.data.years.length - 1]} · ${STATE.data.owners.length} owners`;
     document.getElementById("data-stamp").textContent =
         `Built from ${STATE.data.seasons.length} seasons of scraped NFL.com data.`;
+    const gen = STATE.data.generatedAt;
+    if (gen) {
+        const d = new Date(gen);
+        const now = new Date();
+        const diffMin = Math.max(0, Math.round((now - d) / 60000));
+        let rel;
+        if (diffMin < 60) rel = `${diffMin} min ago`;
+        else if (diffMin < 1440) rel = `${Math.round(diffMin / 60)} hr ago`;
+        else rel = `${Math.round(diffMin / 1440)} d ago`;
+        const stamp = document.getElementById("updated-stamp");
+        stamp.innerHTML = `<span class="dot"></span>Updated ${rel}`;
+        stamp.title = d.toLocaleString();
+    }
 
     Chart.defaults.color = "#94a3b8";
     Chart.defaults.borderColor = "#334155";

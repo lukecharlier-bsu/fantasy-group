@@ -2405,9 +2405,11 @@ def main():
     playoff_odds = build_playoff_odds(seasons, standings, league_ids)
     team_ratings = build_team_ratings(seasons, lineups, drafts, players_by_year)
 
+    import datetime as _dt
     payload = {
         "leagueIds": [str(x) for x in league_ids],
         "leagueId": str(league_ids[0]),
+        "generatedAt": _dt.datetime.now(_dt.timezone.utc).isoformat(timespec="seconds"),
         "playersByOwner": players_by_owner,
         "years": [s["year"] for s in seasons],
         "seasons": seasons,
