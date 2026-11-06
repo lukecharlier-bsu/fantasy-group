@@ -21,9 +21,9 @@ Sean,W. Dissly,Will Dissly,TE,TE,12.8,1.0,7.0,0.0,4.0,81.0,0.0,4.0,0.0,0.0,0.0,0
 Sean,M. Mack,Marlon Mack,RB,W/R,17.8,29.0,132.0,0.0,3.0,16.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
 Sean,Z. Ertz,Zach Ertz,TE,BN,16.7,0.0,0.0,0.0,5.0,57.0,1.0,7.0,0.0,0.0,0.0,0.0,0.0
 Sean,D. Hopkins,DeAndre Hopkins,WR,BN,15.8,0.0,0.0,0.0,7.0,88.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0
-Sean,T. Hill,Taysom Hill,WR,BN,0.0,2.0,14.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,18.0,0.0,0.0
+Sean,T. Hill,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,J. Smith-Schuster,JuJu Smith-Schuster,WR,BN,18.5,0.0,0.0,0.0,7.0,75.0,1.0,7.0,0.0,0.0,0.0,0.0,0.0
-Sean,K. Johnson,KeeSean Johnson,RB,BN,0.0,1.0,3.0,0.0,3.0,22.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0
+Sean,K. Johnson,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,C. Sutton,Courtland Sutton,WR,BN,19.2,0.0,0.0,0.0,4.0,92.0,1.0,7.0,0.0,0.0,0.0,0.0,0.0
 Justin,J. Winston,Jameis Winston,QB,QB,17.46,3.0,13.0,0.0,0.0,0.0,0.0,0.0,27.0,15.0,204.0,2.0,0.0
 Justin,L. Bell,Le'Veon Bell,RB,RB,15.8,15.0,43.0,0.0,7.0,45.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0
@@ -36,7 +36,7 @@ Justin,E. Ebron,Eric Ebron,TE,BN,1.8,0.0,0.0,0.0,1.0,8.0,0.0,4.0,0.0,0.0,0.0,0.0
 Justin,M. Breida,Matt Breida,RB,BN,27.9,11.0,114.0,1.0,3.0,15.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0
 Justin,L. Jackson,Lamar Jackson,QB,BN,11.44,14.0,70.0,0.0,0.0,0.0,0.0,0.0,28.0,19.0,161.0,1.0,3.0
 Justin,C. Kirk,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Justin,M. Brown,Malcolm Brown,WR,BN,11.2,1.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Justin,M. Brown,,WR,BN,11.2,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,C. Wentz,Carson Wentz,QB,QB,12.06,2.0,5.0,0.0,0.0,0.0,0.0,0.0,29.0,17.0,189.0,1.0,0.0
 Luke,J. Conner,James Conner,RB,RB,11.5,14.0,55.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 Luke,A. Jones,Aaron Jones Sr.,RB,RB,49.2,19.0,107.0,4.0,7.0,75.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0
@@ -44,7 +44,7 @@ Luke,A. Thielen,Adam Thielen,WR,WR,32.0,0.0,0.0,0.0,7.0,130.0,2.0,8.0,0.0,0.0,0.
 Luke,M. Thomas,Michael Thomas,WR,WR,41.2,0.0,0.0,0.0,11.0,182.0,2.0,13.0,0.0,0.0,0.0,0.0,0.0
 Luke,J. Cook,Jared Cook,TE,TE,14.1,0.0,0.0,0.0,4.0,41.0,1.0,6.0,0.0,0.0,0.0,0.0,0.0
 Luke,T. Cohen,Tarik Cohen,RB,W/R,10.9,4.0,10.0,0.0,6.0,39.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0
-Luke,M. Sanu,Mohamed Sanu,WR,BN,15.3,1.0,1.0,0.0,5.0,42.0,1.0,5.0,0.0,0.0,0.0,0.0,0.0
+Luke,M. Sanu,,WR,BN,15.3,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,D. Adams,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,J. Goff,Jared Goff,QB,BN,17.9,1.0,1.0,0.0,0.0,0.0,0.0,0.0,49.0,29.0,395.0,1.0,1.0
 Luke,P. Lindsay,Phillip Lindsay,RB,BN,24.7,15.0,114.0,1.0,4.0,33.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
@@ -68,7 +68,7 @@ Aiden,T. Lockett,Tyler Lockett,WR,WR,14.3,1.0,-8.0,0.0,4.0,51.0,1.0,4.0,0.0,0.0,
 Aiden,G. Olsen,Greg Olsen,TE,TE,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
 Aiden,S. Diggs,Stefon Diggs,WR,W/R,7.4,0.0,0.0,0.0,3.0,44.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
 Aiden,J. Edelman,Julian Edelman,WR,BN,25.0,0.0,0.0,0.0,8.0,110.0,1.0,9.0,0.0,0.0,0.0,0.0,0.0
-Aiden,E. Sanders,Emmanuel Sanders,WR,BN,1.9,0.0,0.0,0.0,1.0,9.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Aiden,E. Sanders,,WR,BN,1.9,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,G. Tate,Golden Tate,WR,BN,4.3,0.0,0.0,0.0,3.0,13.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
 Aiden,C. Newton,,QB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,J. Witten,Jason Witten,TE,BN,5.9,0.0,0.0,0.0,3.0,29.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0

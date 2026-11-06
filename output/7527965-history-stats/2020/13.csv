@@ -19,10 +19,10 @@ Sean,T. Boyd,Tyler Boyd,WR,WR,14.2,0.0,0.0,0.0,1.0,72.0,1.0,4.0,1.0,0.0,0.0,0.0,
 Sean,C. Kupp,Cooper Kupp,WR,WR,15.3,0.0,0.0,0.0,8.0,73.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0
 Sean,E. Ebron,Eric Ebron,TE,TE,13.8,0.0,0.0,0.0,7.0,68.0,0.0,11.0,0.0,0.0,0.0,0.0,0.0
 Sean,A. Brown,A.J. Brown,WR,W/R,10.7,0.0,0.0,0.0,4.0,87.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0
-Sean,A. Brown,A.J. Brown,WR,BN,0.0,0.0,0.0,0.0,4.0,87.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0
+Sean,A. Brown,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,C. McCaffrey,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,J. Smith-Schuster,JuJu Smith-Schuster,WR,BN,9.8,0.0,0.0,0.0,7.0,28.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0
-Sean,M. Brown,Malcolm Brown,WR,BN,14.9,3.0,-3.0,0.0,1.0,30.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Sean,M. Brown,,WR,BN,14.9,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,T. Tagovailoa,Tua Tagovailoa,QB,BN,16.14,3.0,3.0,0.0,0.0,0.0,0.0,0.0,39.0,26.0,296.0,1.0,0.0
 Sean,J. Jefferson,Justin Jefferson,WR,BN,27.3,1.0,2.0,0.0,9.0,121.0,1.0,12.0,0.0,0.0,0.0,0.0,0.0
 Justin,D. Watson,Deshaun Watson,QB,QB,19.44,7.0,38.0,1.0,0.0,0.0,0.0,0.0,38.0,26.0,341.0,0.0,1.0
@@ -97,7 +97,7 @@ Ulises,D. Goedert,Dallas Goedert,TE,TE,11.6,0.0,0.0,0.0,5.0,66.0,0.0,7.0,0.0,0.0
 Ulises,N. Chubb,Nick Chubb,RB,W/R,17.6,18.0,80.0,1.0,1.0,26.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
 Ulises,K. Golladay,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Ulises,C. Godwin,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Ulises,D. Moore,David Moore,WR,BN,0.0,0.0,0.0,0.0,1.0,6.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
+Ulises,D. Moore,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Ulises,M. Andrews,,TE,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Ulises,J. Taylor,Jonathan Taylor,RB,BN,22.5,13.0,91.0,0.0,3.0,44.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0
 Ulises,J. Herbert,Justin Herbert,QB,BN,4.36,0.0,0.0,0.0,0.0,0.0,0.0,0.0,53.0,26.0,209.0,0.0,2.0

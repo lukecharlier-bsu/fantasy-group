@@ -21,7 +21,7 @@ Sean,C. Lamb,CeeDee Lamb,WR,W/R,13.4,0.0,0.0,0.0,7.0,64.0,0.0,11.0,0.0,0.0,0.0,0
 Sean,T. Boyd,Tyler Boyd,WR,BN,12.9,1.0,25.0,0.0,5.0,54.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0
 Sean,C. McCaffrey,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,A. Brown,A.J. Brown,WR,BN,22.8,0.0,0.0,0.0,5.0,58.0,2.0,7.0,0.0,0.0,0.0,0.0,0.0
-Sean,M. Brown,Malcolm Brown,WR,BN,9.7,2.0,4.0,0.0,3.0,18.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
+Sean,M. Brown,,WR,BN,9.7,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,D. Singletary,Devin Singletary,RB,BN,5.5,10.0,32.0,0.0,1.0,13.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
 Justin,D. Watson,Deshaun Watson,QB,QB,32.0,4.0,26.0,0.0,0.0,0.0,0.0,0.0,37.0,28.0,335.0,4.0,0.0
 Justin,D. Henderson,Darrell Henderson Jr.,RB,RB,9.2,14.0,88.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -44,7 +44,7 @@ Luke,E. Engram,Evan Engram,TE,TE,5.0,0.0,0.0,0.0,2.0,30.0,0.0,3.0,0.0,0.0,0.0,0.
 Luke,A. Jones,Aaron Jones Sr.,RB,W/R,13.1,10.0,15.0,1.0,3.0,26.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
 Luke,T. Hilton,T.Y. Hilton,WR,BN,2.1,0.0,0.0,0.0,1.0,11.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
 Luke,R. Wilson,,QB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Luke,M. Thomas,Mike Thomas,WR,BN,0.0,0.0,0.0,0.0,1.0,10.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
+Luke,M. Thomas,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,C. Kirk,Christian Kirk,WR,BN,22.6,0.0,0.0,0.0,2.0,86.0,2.0,3.0,0.0,0.0,0.0,0.0,0.0
 Luke,D. Samuel,Deebo Samuel Sr.,WR,BN,18.0,1.0,-6.0,0.0,6.0,66.0,1.0,6.0,0.0,0.0,0.0,0.0,0.0
 Matthew,A. Rodgers,Aaron Rodgers,QB,QB,3.8,2.0,14.0,0.0,0.0,0.0,0.0,0.0,35.0,16.0,160.0,0.0,2.0
@@ -67,7 +67,7 @@ Aiden,J. Edelman,Julian Edelman,WR,WR,4.32,0.0,0.0,0.0,2.0,8.0,0.0,6.0,2.0,2.0,3
 Aiden,C. Ridley,Calvin Ridley,WR,WR,18.9,1.0,8.0,0.0,6.0,61.0,1.0,7.0,0.0,0.0,0.0,0.0,0.0
 Aiden,T. Kelce,Travis Kelce,TE,TE,21.5,0.0,0.0,0.0,5.0,65.0,2.0,7.0,0.0,0.0,0.0,0.0,0.0
 Aiden,B. Cooks,Brandin Cooks,WR,W/R,21.8,0.0,0.0,0.0,9.0,68.0,1.0,9.0,0.0,0.0,0.0,0.0,0.0
-Aiden,K. Allen,Kyle Allen,WR,BN,0.0,2.0,8.0,0.0,0.0,0.0,0.0,0.0,42.0,31.0,280.0,2.0,1.0
+Aiden,K. Allen,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,S. Watkins,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,J. Allen,Josh Allen,QB,BN,15.08,8.0,42.0,0.0,0.0,0.0,0.0,0.0,27.0,14.0,122.0,2.0,1.0
 Aiden,D. Montgomery,David Montgomery,RB,BN,13.7,19.0,58.0,0.0,4.0,39.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0

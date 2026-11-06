@@ -16,7 +16,7 @@ Sean,P. Mahomes,Patrick Mahomes,QB,QB,27.48,6.0,54.0,0.0,0.0,0.0,0.0,0.0,47.0,27
 Sean,R. Mostert,Raheem Mostert,RB,RB,18.7,8.0,92.0,1.0,2.0,15.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
 Sean,C. McCaffrey,Christian McCaffrey,RB,RB,24.8,18.0,59.0,2.0,4.0,29.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
 Sean,E. Sanders,Emmanuel Sanders,WR,WR,2.8,0.0,0.0,0.0,1.0,18.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
-Sean,M. Brown,Malcolm Brown,WR,WR,9.2,11.0,47.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Sean,M. Brown,,WR,WR,9.2,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,L. Thomas,Logan Thomas,TE,TE,6.6,0.0,0.0,0.0,4.0,26.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0
 Sean,C. Lamb,CeeDee Lamb,WR,W/R,17.5,1.0,9.0,0.0,6.0,106.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0
 Sean,R. Gronkowski,Rob Gronkowski,TE,BN,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
@@ -47,7 +47,7 @@ Luke,N. Hines,Nyheim Hines,RB,W/R,1.4,0.0,0.0,0.0,1.0,4.0,0.0,1.0,0.0,0.0,0.0,0.
 Luke,M. Stafford,Matthew Stafford,QB,BN,16.16,1.0,4.0,0.0,0.0,0.0,0.0,0.0,33.0,20.0,244.0,2.0,1.0
 Luke,K. Rudolph,Kyle Rudolph,TE,BN,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
 Luke,M. Ingram,Mark Ingram II,RB,BN,15.7,9.0,55.0,1.0,2.0,22.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
-Luke,M. Thomas,Mike Thomas,WR,BN,0.0,0.0,0.0,0.0,4.0,31.0,1.0,4.0,0.0,0.0,0.0,0.0,0.0
+Luke,M. Thomas,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,C. Kirk,Christian Kirk,WR,BN,8.0,1.0,3.0,0.0,2.0,57.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
 Luke,M. Valdes-Scantling,Marquez Valdes-Scantling,WR,BN,9.4,0.0,0.0,0.0,3.0,64.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0
 Matthew,A. Rodgers,Aaron Rodgers,QB,QB,19.2,2.0,12.0,0.0,1.0,-6.0,0.0,1.0,30.0,18.0,240.0,2.0,0.0

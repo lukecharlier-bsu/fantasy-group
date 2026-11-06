@@ -17,7 +17,7 @@ Sean,C. McCaffrey,Christian McCaffrey,RB,RB,28.5,23.0,97.0,2.0,3.0,38.0,0.0,4.0,
 Sean,C. Kupp,Cooper Kupp,WR,WR,8.0,0.0,0.0,0.0,4.0,40.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
 Sean,A. Brown,A.J. Brown,WR,WR,8.9,0.0,0.0,0.0,5.0,39.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0
 Sean,R. Gronkowski,Rob Gronkowski,TE,TE,3.1,0.0,0.0,0.0,2.0,11.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
-Sean,M. Brown,Malcolm Brown,WR,W/R,15.1,18.0,79.0,2.0,3.0,31.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
+Sean,M. Brown,,WR,W/R,15.1,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,E. Sanders,Emmanuel Sanders,WR,BN,10.5,0.0,0.0,0.0,3.0,15.0,1.0,5.0,0.0,0.0,0.0,0.0,0.0
 Sean,O. Beckham,Odell Beckham Jr.,WR,BN,5.2,0.0,0.0,0.0,3.0,22.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0
 Sean,J. Crowder,Jamison Crowder,WR,BN,24.5,0.0,0.0,0.0,7.0,115.0,1.0,13.0,0.0,0.0,0.0,0.0,0.0
@@ -56,7 +56,7 @@ Matthew,T. Lockett,Tyler Lockett,WR,WR,17.2,0.0,0.0,0.0,8.0,92.0,0.0,8.0,0.0,0.0
 Matthew,T. Hill,Tyreek Hill,WR,WR,15.6,0.0,0.0,0.0,5.0,46.0,1.0,6.0,0.0,0.0,0.0,0.0,0.0
 Matthew,T. Higbee,Tyler Higbee,TE,TE,7.0,0.0,0.0,0.0,3.0,40.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
 Matthew,J. Mixon,Joe Mixon,RB,W/R,6.1,19.0,69.0,0.0,1.0,2.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
-Matthew,L. Bell,Le'Veon Bell,RB,BN,6.6,6.0,14.0,0.0,2.0,32.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
+Matthew,L. Bell,,RB,BN,6.6,0,0,0,0,0,0,0,0,0,0,0,0
 Matthew,D. Waller,Darren Waller,TE,BN,10.5,0.0,0.0,0.0,6.0,45.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0
 Matthew,W. Fuller,,WR,BN,19.2,0,0,0,0,0,0,0,0,0,0,0,0
 Matthew,M. Gallup,Michael Gallup,WR,BN,8.0,0.0,0.0,0.0,3.0,50.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0

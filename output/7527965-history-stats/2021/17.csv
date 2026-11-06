@@ -7,7 +7,7 @@ Alex,T. Hill,,WR,WR,10.2,0,0,0,0,0,0,0,0,0,0,0,0
 Alex,M. Andrews,Mark Andrews,TE,TE,14.9,0.0,0.0,0.0,6.0,89.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
 Alex,D. Moore,DJ Moore,WR,W/R,5.9,0.0,0.0,0.0,3.0,29.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0
 Alex,R. Gronkowski,Rob Gronkowski,TE,BN,18.5,0.0,0.0,0.0,7.0,115.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0
-Alex,C. Kirk,Christian Kirk,WR,BN,13.9,0.0,0.0,0.0,6.0,79.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0
+Alex,C. Kirk,,WR,BN,13.9,0,0,0,0,0,0,0,0,0,0,0,0
 Alex,B. Aiyuk,Brandon Aiyuk,WR,BN,13.4,0.0,0.0,0.0,4.0,94.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
 Alex,A. Gibson,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,J. Allen,Josh Allen,QB,QB,20.9,15.0,81.0,2.0,0.0,0.0,0.0,0.0,26.0,11.0,120.0,0.0,3.0
@@ -19,15 +19,15 @@ Sean,T. Kelce,Travis Kelce,TE,TE,13.4,1.0,-1.0,0.0,5.0,25.0,1.0,7.0,0.0,0.0,0.0,
 Sean,C. Lamb,CeeDee Lamb,WR,W/R,8.1,0.0,0.0,0.0,3.0,51.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
 Sean,K. Allen,Keenan Allen,WR,BN,14.4,0.0,0.0,0.0,4.0,44.0,1.0,9.0,0.0,0.0,0.0,0.0,0.0
 Sean,A. Kamara,Alvin Kamara,RB,BN,21.0,13.0,32.0,0.0,5.0,68.0,1.0,6.0,0.0,0.0,0.0,0.0,0.0
-Sean,R. Jones,Ronald Jones,RB,BN,3.7,10.0,26.0,0.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Sean,R. Jones,,RB,BN,3.7,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,D. Schultz,Dalton Schultz,TE,BN,11.4,0.0,0.0,0.0,6.0,54.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0
 Sean,A. Mattison,Alexander Mattison,RB,BN,5.3,0.0,0.0,0.0,4.0,13.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
 Justin,T. Brady,Tom Brady,QB,QB,26.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,50.0,34.0,410.0,3.0,1.0
 Justin,E. Elliott,Ezekiel Elliott,RB,RB,4.0,9.0,16.0,0.0,1.0,14.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
 Justin,J. Robinson,,RB,RB,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Justin,A. Thielen,,WR,WR,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Justin,R. Gage,Russell Gage Jr.,WR,WR,8.0,0.0,0.0,0.0,3.0,50.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
-Justin,N. Fant,Noah Fant,TE,TE,21.2,0.0,0.0,0.0,6.0,92.0,1.0,7.0,0.0,0.0,0.0,0.0,0.0
+Justin,R. Gage,,WR,WR,8.0,0,0,0,0,0,0,0,0,0,0,0,0
+Justin,N. Fant,,TE,TE,21.2,0,0,0,0,0,0,0,0,0,0,0,0
 Justin,J. Mixon,Joe Mixon,RB,W/R,15.6,12.0,46.0,0.0,7.0,40.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0
 Justin,M. Gordon,Melvin Gordon III,RB,BN,10.2,10.0,43.0,0.0,3.0,29.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
 Justin,C. Sutton,Courtland Sutton,WR,BN,9.0,0.0,0.0,0.0,3.0,60.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
@@ -37,26 +37,26 @@ Justin,M. Pittman,Michael Pittman Jr.,WR,BN,10.7,0.0,0.0,0.0,6.0,47.0,0.0,6.0,0.
 Justin,J. Hurts,Jalen Hurts,QB,BN,12.96,7.0,44.0,0.0,0.0,0.0,0.0,0.0,26.0,17.0,214.0,0.0,0.0
 Luke,P. Mahomes,Patrick Mahomes,QB,QB,20.86,2.0,25.0,0.0,0.0,0.0,0.0,0.0,35.0,26.0,259.0,2.0,0.0
 Luke,D. Freeman,Devonta Freeman,RB,RB,8.7,14.0,76.0,0.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
-Luke,D. Ogunbowale,Dare Ogunbowale,RB,RB,14.8,9.0,36.0,0.0,2.0,32.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0
+Luke,D. Ogunbowale,,RB,RB,14.8,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,A. St. Brown,Amon-Ra St. Brown,WR,WR,35.4,2.0,23.0,1.0,8.0,111.0,1.0,11.0,0.0,0.0,0.0,0.0,0.0
 Luke,J. Waddle,Jaylen Waddle,WR,WR,7.7,0.0,0.0,0.0,3.0,47.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0
 Luke,K. Pitts,Kyle Pitts Sr.,TE,TE,8.9,0.0,0.0,0.0,2.0,69.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
-Luke,A. Cooper,Amari Cooper,WR,W/R,10.8,0.0,0.0,0.0,3.0,18.0,1.0,7.0,0.0,0.0,0.0,0.0,0.0
+Luke,A. Cooper,,WR,W/R,10.8,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,R. Tannehill,Ryan Tannehill,QB,BN,13.5,4.0,7.0,0.0,0.0,0.0,0.0,0.0,18.0,13.0,120.0,2.0,0.0
 Luke,M. Evans,Mike Evans,WR,BN,14.7,0.0,0.0,0.0,4.0,47.0,1.0,7.0,0.0,0.0,0.0,0.0,0.0
 Luke,D. Henry,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Luke,D. Foreman,D'Onta Foreman,RB,BN,19.2,26.0,132.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Luke,D. Foreman,,RB,BN,19.2,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,A. Dillon,AJ Dillon,RB,BN,22.3,14.0,63.0,2.0,2.0,20.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
 Luke,C. Hubbard,Chuba Hubbard,RB,BN,15.8,17.0,55.0,1.0,3.0,13.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
 Matthew,A. Rodgers,Aaron Rodgers,QB,QB,20.32,2.0,8.0,0.0,0.0,0.0,0.0,0.0,38.0,29.0,288.0,2.0,0.0
 Matthew,J. Jacobs,Josh Jacobs,RB,RB,18.0,16.0,63.0,1.0,4.0,17.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
 Matthew,J. Taylor,Jonathan Taylor,RB,RB,18.4,20.0,108.0,1.0,1.0,6.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
-Matthew,D. Adams,Davante Adams,WR,WR,30.6,0.0,0.0,0.0,11.0,136.0,1.0,14.0,0.0,0.0,0.0,0.0,0.0
+Matthew,D. Adams,,WR,WR,30.6,0,0,0,0,0,0,0,0,0,0,0,0
 Matthew,D. Johnson,Diontae Johnson,WR,WR,17.1,0.0,0.0,0.0,8.0,31.0,1.0,15.0,0.0,0.0,0.0,0.0,0.0
 Matthew,G. Kittle,George Kittle,TE,TE,4.5,1.0,6.0,0.0,1.0,29.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
 Matthew,A. Brown,,WR,W/R,6.1,0,0,0,0,0,0,0,0,0,0,0,0
 Matthew,T. Lockett,Tyler Lockett,WR,BN,12.1,1.0,7.0,0.0,3.0,24.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0
-Matthew,G. Everett,Gerald Everett,TE,BN,6.6,0.0,0.0,0.0,3.0,36.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
+Matthew,G. Everett,,TE,BN,6.6,0,0,0,0,0,0,0,0,0,0,0,0
 Matthew,L. Jackson,,QB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Matthew,S. Barkley,Saquon Barkley,RB,BN,10.2,21.0,102.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
 Matthew,J. Williams,Javonte Williams,RB,BN,4.2,14.0,30.0,0.0,1.0,2.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
@@ -67,8 +67,8 @@ Aiden,J. Jones,,WR,WR,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,C. Godwin,,WR,WR,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,B. Cooks,Brandin Cooks,WR,W/R,19.6,0.0,0.0,0.0,7.0,66.0,1.0,11.0,0.0,0.0,0.0,0.0,0.0
 Aiden,M. Ingram,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Aiden,R. Wilson,Russell Wilson,QB,BN,27.84,6.0,24.0,0.0,0.0,0.0,0.0,0.0,29.0,20.0,236.0,4.0,0.0
-Aiden,C. Wentz,Carson Wentz,QB,BN,10.92,3.0,10.0,0.0,0.0,0.0,0.0,0.0,27.0,16.0,148.0,1.0,0.0
+Aiden,R. Wilson,,QB,BN,27.84,0,0,0,0,0,0,0,0,0,0,0,0
+Aiden,C. Wentz,,QB,BN,10.92,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,A. Collins,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,C. Claypool,Chase Claypool,WR,BN,4.7,0.0,0.0,0.0,3.0,17.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0
 Howard,K. Murray,Kyler Murray,QB,QB,22.92,9.0,44.0,0.0,0.0,0.0,0.0,0.0,38.0,26.0,263.0,2.0,0.0
@@ -93,5 +93,5 @@ Ulises,H. Renfrow,Hunter Renfrow,WR,W/R,20.6,0.0,0.0,0.0,7.0,76.0,1.0,9.0,0.0,0.
 Ulises,M. Stafford,Matthew Stafford,QB,BN,14.26,1.0,-1.0,0.0,0.0,0.0,0.0,0.0,35.0,26.0,309.0,2.0,2.0
 Ulises,D. Waller,,TE,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Ulises,J. Conner,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Ulises,C. Edmonds,Chase Edmonds,RB,BN,13.2,18.0,53.0,0.0,5.0,29.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
+Ulises,C. Edmonds,,RB,BN,13.2,0,0,0,0,0,0,0,0,0,0,0,0
 Ulises,D. Metcalf,DK Metcalf,WR,BN,30.9,1.0,6.0,0.0,6.0,63.0,3.0,9.0,0.0,0.0,0.0,0.0,0.0

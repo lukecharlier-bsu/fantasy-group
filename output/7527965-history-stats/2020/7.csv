@@ -17,11 +17,11 @@ Sean,A. Brown,A.J. Brown,WR,WR,27.3,0.0,0.0,0.0,6.0,153.0,1.0,8.0,0.0,0.0,0.0,0.
 Sean,C. Lamb,CeeDee Lamb,WR,WR,0.1,1.0,1.0,0.0,0.0,0.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
 Sean,J. Smith,Jonnu Smith,TE,TE,1.9,0.0,0.0,0.0,1.0,9.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
 Sean,T. Boyd,Tyler Boyd,WR,W/R,27.74,0.0,0.0,0.0,11.0,101.0,1.0,13.0,1.0,1.0,16.0,0.0,0.0
-Sean,A. Brown,A.J. Brown,WR,BN,0.0,0.0,0.0,0.0,6.0,153.0,1.0,8.0,0.0,0.0,0.0,0.0,0.0
+Sean,A. Brown,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,K. Drake,Kenyan Drake,RB,BN,5.1,14.0,34.0,0.0,1.0,7.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
 Sean,C. Kupp,Cooper Kupp,WR,BN,11.9,1.0,16.0,0.0,6.0,43.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
 Sean,C. McCaffrey,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Sean,M. Brown,Malcolm Brown,WR,BN,0.0,10.0,57.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Sean,M. Brown,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,J. Jefferson,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Justin,D. Watson,Deshaun Watson,QB,QB,24.16,7.0,38.0,0.0,0.0,0.0,0.0,0.0,39.0,29.0,309.0,2.0,0.0
 Justin,C. Carson,Chris Carson,RB,RB,5.1,5.0,34.0,0.0,1.0,7.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
@@ -46,7 +46,7 @@ Luke,M. Stafford,Matthew Stafford,QB,BN,18.4,1.0,8.0,0.0,0.0,0.0,0.0,0.0,36.0,25
 Luke,A. Peterson,Adrian Peterson,RB,BN,4.0,11.0,29.0,0.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
 Luke,T. Hilton,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,M. Jones,Marvin Jones Jr.,WR,BN,13.0,0.0,0.0,0.0,5.0,80.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
-Luke,M. Thomas,Mike Thomas,WR,BN,0.0,0.0,0.0,0.0,2.0,54.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
+Luke,M. Thomas,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,A. Jones,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Matthew,A. Rodgers,Aaron Rodgers,QB,QB,27.32,0.0,0.0,0.0,0.0,0.0,0.0,0.0,34.0,23.0,283.0,4.0,0.0
 Matthew,J. Conner,James Conner,RB,RB,14.1,20.0,82.0,0.0,3.0,29.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0

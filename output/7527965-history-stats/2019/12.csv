@@ -7,7 +7,7 @@ Alex,D. Metcalf,DK Metcalf,WR,WR,6.5,0.0,0.0,0.0,3.0,35.0,0.0,6.0,0.0,0.0,0.0,0.
 Alex,G. Kittle,George Kittle,TE,TE,24.9,0.0,0.0,0.0,6.0,129.0,1.0,6.0,0.0,0.0,0.0,0.0,0.0
 Alex,A. Robinson,Allen Robinson,WR,W/R,25.1,0.0,0.0,0.0,6.0,131.0,1.0,10.0,0.0,0.0,0.0,0.0,0.0
 Alex,M. Jones,Marvin Jones Jr.,WR,BN,9.6,0.0,0.0,0.0,5.0,46.0,0.0,11.0,0.0,0.0,0.0,0.0,0.0
-Alex,K. Allen,Kyle Allen,WR,BN,0.0,1.0,9.0,0.0,0.0,0.0,0.0,0.0,36.0,23.0,256.0,3.0,0.0
+Alex,K. Allen,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Alex,J. Garoppolo,Jimmy Garoppolo,QB,BN,18.22,2.0,1.0,0.0,0.0,0.0,0.0,0.0,20.0,14.0,253.0,2.0,0.0
 Alex,T. Coleman,Tevin Coleman,RB,BN,12.9,11.0,39.0,1.0,2.0,10.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
 Alex,J. Mixon,Joe Mixon,RB,BN,7.9,18.0,79.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
@@ -33,7 +33,7 @@ Justin,D. Moore,DJ Moore,WR,W/R,31.4,1.0,8.0,0.0,6.0,126.0,2.0,9.0,0.0,0.0,0.0,0
 Justin,L. Bell,Le'Veon Bell,RB,BN,15.8,12.0,49.0,0.0,5.0,59.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
 Justin,J. Winston,Jameis Winston,QB,BN,24.32,8.0,38.0,0.0,0.0,0.0,0.0,0.0,28.0,18.0,313.0,3.0,2.0
 Justin,E. Engram,,TE,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Justin,M. Brown,Malcolm Brown,WR,BN,21.2,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Justin,M. Brown,,WR,BN,21.2,0,0,0,0,0,0,0,0,0,0,0,0
 Justin,D. Montgomery,David Montgomery,RB,BN,5.1,13.0,22.0,0.0,2.0,9.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
 Luke,K. Murray,,QB,QB,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,J. Conner,,RB,RB,0.0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -68,7 +68,7 @@ Aiden,D. Parker,DeVante Parker,WR,W/R,15.1,0.0,0.0,0.0,6.0,91.0,0.0,11.0,0.0,0.0
 Aiden,D. Hopkins,DeAndre Hopkins,WR,BN,27.4,0.0,0.0,0.0,6.0,94.0,2.0,8.0,0.0,0.0,0.0,0.0,0.0
 Aiden,T. Kelce,,TE,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,M. Gordon,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Aiden,T. Hill,Taysom Hill,WR,BN,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Aiden,T. Hill,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,P. Mahomes,,QB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,A. Ekeler,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Howard,D. Watson,Deshaun Watson,QB,QB,18.92,3.0,10.0,0.0,0.0,0.0,0.0,0.0,30.0,19.0,298.0,2.0,1.0

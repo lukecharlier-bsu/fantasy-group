@@ -13,7 +13,7 @@ Alex,R. Gage,Russell Gage Jr.,WR,BN,3.6,0.0,0.0,0.0,2.0,16.0,0.0,5.0,0.0,0.0,0.0
 Alex,T. Hockenson,,TE,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Alex,J. Burrow,Joe Burrow,QB,BN,4.32,3.0,10.0,0.0,0.0,0.0,0.0,0.0,30.0,19.0,183.0,0.0,1.0
 Sean,P. Mahomes,Patrick Mahomes,QB,QB,29.7,6.0,21.0,1.0,0.0,0.0,0.0,0.0,43.0,22.0,340.0,2.0,1.0
-Sean,L. Bell,Le'Veon Bell,RB,RB,7.7,13.0,60.0,0.0,1.0,7.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Sean,L. Bell,,RB,RB,7.7,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,J. McKinnon,Jerick McKinnon,RB,RB,2.5,1.0,0.0,0.0,2.0,5.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
 Sean,C. Lamb,CeeDee Lamb,WR,WR,20.4,0.0,0.0,0.0,8.0,124.0,0.0,11.0,0.0,0.0,0.0,0.0,0.0
 Sean,J. Jefferson,Justin Jefferson,WR,WR,5.3,0.0,0.0,0.0,3.0,23.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
@@ -23,7 +23,7 @@ Sean,K. Drake,Kenyan Drake,RB,BN,13.2,18.0,60.0,1.0,1.0,2.0,0.0,1.0,0.0,0.0,0.0,
 Sean,T. Boyd,Tyler Boyd,WR,BN,8.2,0.0,0.0,0.0,4.0,42.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
 Sean,C. McCaffrey,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,J. Smith,Jonnu Smith,TE,BN,21.0,0.0,0.0,0.0,5.0,40.0,2.0,7.0,0.0,0.0,0.0,0.0,0.0
-Sean,D. Harris,Demetrius Harris,RB,BN,0.0,0.0,0.0,0.0,1.0,9.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Sean,D. Harris,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,D. Singletary,Devin Singletary,RB,BN,4.3,11.0,25.0,0.0,1.0,8.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
 Justin,D. Watson,Deshaun Watson,QB,QB,24.86,2.0,25.0,0.0,0.0,0.0,0.0,0.0,35.0,25.0,359.0,3.0,2.0
 Justin,D. Cook,Dalvin Cook,RB,RB,19.9,17.0,65.0,1.0,5.0,24.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
@@ -47,7 +47,7 @@ Luke,D. Samuel,Deebo Samuel Sr.,WR,W/R,4.2,1.0,3.0,0.0,2.0,19.0,0.0,8.0,0.0,0.0,
 Luke,M. Stafford,,QB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,T. Hilton,T.Y. Hilton,WR,BN,12.9,0.0,0.0,0.0,6.0,69.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0
 Luke,D. Adams,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Luke,M. Thomas,Mike Thomas,WR,BN,0.0,1.0,1.0,0.0,1.0,6.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Luke,M. Thomas,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,A. Jones,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Matthew,J. Herbert,Justin Herbert,QB,QB,27.36,4.0,8.0,0.0,0.0,0.0,0.0,0.0,34.0,20.0,264.0,4.0,0.0
 Matthew,J. Conner,James Conner,RB,RB,15.3,15.0,44.0,1.0,3.0,19.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0

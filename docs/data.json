@@ -4,7 +4,7 @@
     "1579300904"
   ],
   "leagueId": "7527965",
-  "generatedAt": "2026-11-06T22:01:06+00:00",
+  "generatedAt": "2026-11-06T22:05:34+00:00",
   "playersByOwner": {
     "Alex": [
       {
@@ -545,7 +545,7 @@
         "startPts": 185.9,
         "benchPts": 24.6,
         "starts": 10,
-        "benchApps": 2,
+        "benchApps": 7,
         "avgPerStart": 18.59,
         "seasons": [
           2024,
@@ -651,7 +651,7 @@
       },
       {
         "key": "WR|kupp|cooper",
-        "display": "Cooper Kupp",
+        "display": "C. Kupp",
         "pos": "WR",
         "startPts": 150.9,
         "benchPts": 24.1,
@@ -4038,7 +4038,7 @@
         "bestWeek": null
       },
       {
-        "key": "WR|johnson|D",
+        "key": "WR|johnson|diontae",
         "display": "D. Johnson",
         "pos": "WR",
         "startPts": 0.0,
@@ -4049,7 +4049,9 @@
         "seasons": [
           2023
         ],
-        "bestWeek": null
+        "bestWeek": null,
+        "espnId": 3932905,
+        "fullName": "Diontae Johnson"
       },
       {
         "key": "RB|akers|cam",
@@ -4101,7 +4103,7 @@
       },
       {
         "key": "WR|pickens|george",
-        "display": "George Pickens",
+        "display": "G. Pickens",
         "pos": "WR",
         "startPts": 0.0,
         "benchPts": 51.0,
@@ -4116,20 +4118,20 @@
         "fullName": "George Pickens"
       },
       {
-        "key": "RB|brooks|jalen",
-        "display": "Jalen Brooks",
+        "key": "RB|brooks|jonathon",
+        "display": "Jonathon Brooks",
         "pos": "RB",
         "startPts": 0.0,
-        "benchPts": 0.0,
+        "benchPts": 7.8,
         "starts": 0,
-        "benchApps": 8,
+        "benchApps": 13,
         "avgPerStart": 0.0,
         "seasons": [
           2024
         ],
         "bestWeek": null,
-        "espnId": 4692835,
-        "fullName": "Jalen Brooks"
+        "espnId": 4678008,
+        "fullName": "Jonathon Brooks"
       },
       {
         "key": "RB|chubb|nick",
@@ -4150,7 +4152,7 @@
       },
       {
         "key": "WR|robinson|demarcus",
-        "display": "Demarcus Robinson",
+        "display": "D. Robinson",
         "pos": "WR",
         "startPts": 0.0,
         "benchPts": 4.2,
@@ -4212,20 +4214,6 @@
         "fullName": "Michael Pittman Jr."
       },
       {
-        "key": "RB|brooks|J",
-        "display": "J. Brooks",
-        "pos": "RB",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 3,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2024
-        ],
-        "bestWeek": null
-      },
-      {
         "key": "TE|kraft|tucker",
         "display": "T. Kraft",
         "pos": "TE",
@@ -4256,21 +4244,6 @@
         "bestWeek": null,
         "espnId": 4596448,
         "fullName": "Bucky Irving"
-      },
-      {
-        "key": "WR|evans|M",
-        "display": "M. Evans",
-        "pos": "WR",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 5,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2024,
-          2025
-        ],
-        "bestWeek": null
       },
       {
         "key": "WR|dell|tank",
@@ -4319,22 +4292,6 @@
         "bestWeek": null,
         "espnId": 4361529,
         "fullName": "Isiah Pacheco"
-      },
-      {
-        "key": "RB|brooks|jonathon",
-        "display": "Jonathon Brooks",
-        "pos": "RB",
-        "startPts": 0.0,
-        "benchPts": 7.8,
-        "starts": 0,
-        "benchApps": 2,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2024
-        ],
-        "bestWeek": null,
-        "espnId": 4678008,
-        "fullName": "Jonathon Brooks"
       },
       {
         "key": "TE|engram|evan",
@@ -4787,7 +4744,7 @@
       },
       {
         "key": "WR|hopkins|deandre",
-        "display": "DeAndre Hopkins",
+        "display": "D. Hopkins",
         "pos": "WR",
         "startPts": 255.9,
         "benchPts": 137.0,
@@ -6911,12 +6868,12 @@
       },
       {
         "key": "WR|evans|mike",
-        "display": "Mike Evans",
+        "display": "M. Evans",
         "pos": "WR",
         "startPts": 18.3,
         "benchPts": 13.1,
         "starts": 2,
-        "benchApps": 1,
+        "benchApps": 2,
         "avgPerStart": 9.15,
         "seasons": [
           2019
@@ -7011,7 +6968,7 @@
       },
       {
         "key": "QB|wilson|russell",
-        "display": "Russell Wilson",
+        "display": "R. Wilson",
         "pos": "QB",
         "startPts": 16.02,
         "benchPts": 0.0,
@@ -7741,7 +7698,7 @@
       },
       {
         "key": "WR|cooper|amari",
-        "display": "Amari Cooper",
+        "display": "A. Cooper",
         "pos": "WR",
         "startPts": 7.7,
         "benchPts": 0.0,
@@ -8451,20 +8408,6 @@
         "bestWeek": null
       },
       {
-        "key": "WR|evans|M",
-        "display": "M. Evans",
-        "pos": "WR",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2019
-        ],
-        "bestWeek": null
-      },
-      {
         "key": "RB|dobbins|J",
         "display": "J. Dobbins",
         "pos": "RB",
@@ -8653,7 +8596,7 @@
       },
       {
         "key": "RB|harris|najee",
-        "display": "Najee Harris",
+        "display": "N. Harris",
         "pos": "RB",
         "startPts": 0.0,
         "benchPts": 41.2,
@@ -8733,7 +8676,7 @@
       },
       {
         "key": "WR|kirk|christian",
-        "display": "Christian Kirk",
+        "display": "C. Kirk",
         "pos": "WR",
         "startPts": 0.0,
         "benchPts": 19.7,
@@ -8748,8 +8691,8 @@
         "fullName": "Christian Kirk"
       },
       {
-        "key": "RB|robinson|brian",
-        "display": "Brian Robinson",
+        "key": "RB|robinson|B",
+        "display": "B. Robinson",
         "pos": "RB",
         "startPts": 0.0,
         "benchPts": 0.0,
@@ -8759,9 +8702,7 @@
         "seasons": [
           2024
         ],
-        "bestWeek": null,
-        "espnId": 4241474,
-        "fullName": "Brian Robinson Jr."
+        "bestWeek": null
       },
       {
         "key": "RB|miller|kendre",
@@ -9444,7 +9385,7 @@
       },
       {
         "key": "WR|adams|davante",
-        "display": "Davante Adams",
+        "display": "D. Adams",
         "pos": "WR",
         "startPts": 211.1,
         "benchPts": 9.4,
@@ -9826,7 +9767,7 @@
         "startPts": 134.1,
         "benchPts": 91.3,
         "starts": 9,
-        "benchApps": 6,
+        "benchApps": 8,
         "avgPerStart": 14.9,
         "seasons": [
           2022
@@ -10143,7 +10084,7 @@
       },
       {
         "key": "RB|harris|najee",
-        "display": "Najee Harris",
+        "display": "N. Harris",
         "pos": "RB",
         "startPts": 98.2,
         "benchPts": 69.0,
@@ -11500,12 +11441,12 @@
       },
       {
         "key": "RB|etienne|travis",
-        "display": "Travis Etienne",
+        "display": "T. Etienne",
         "pos": "RB",
         "startPts": 14.8,
-        "benchPts": 0.0,
+        "benchPts": 16.1,
         "starts": 1,
-        "benchApps": 0,
+        "benchApps": 7,
         "avgPerStart": 14.8,
         "seasons": [
           2026
@@ -12158,7 +12099,7 @@
       },
       {
         "key": "RB|mattison|alexander",
-        "display": "Alexander Mattison",
+        "display": "A. Mattison",
         "pos": "RB",
         "startPts": 4.8,
         "benchPts": 0.0,
@@ -12660,20 +12601,6 @@
         "bestWeek": null
       },
       {
-        "key": "WR|evans|M",
-        "display": "M. Evans",
-        "pos": "WR",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 2,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2022
-        ],
-        "bestWeek": null
-      },
-      {
         "key": "WR|campbell|P",
         "display": "P. Campbell",
         "pos": "WR",
@@ -13010,20 +12937,6 @@
         "fullName": "Quentin Johnston"
       },
       {
-        "key": "RB|etienne|T",
-        "display": "T. Etienne",
-        "pos": "RB",
-        "startPts": 0.0,
-        "benchPts": 16.1,
-        "starts": 0,
-        "benchApps": 7,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2026
-        ],
-        "bestWeek": null
-      },
-      {
         "key": "WR|raymond|kalif",
         "display": "K. Raymond",
         "pos": "WR",
@@ -13270,7 +13183,7 @@
         "startPts": 311.3,
         "benchPts": 92.3,
         "starts": 19,
-        "benchApps": 6,
+        "benchApps": 9,
         "avgPerStart": 16.38,
         "seasons": [
           2021,
@@ -14770,7 +14683,7 @@
       },
       {
         "key": "WR|metcalf|dk",
-        "display": "DK Metcalf",
+        "display": "D. Metcalf",
         "pos": "WR",
         "startPts": 43.3,
         "benchPts": 34.8,
@@ -16441,21 +16354,6 @@
         "bestWeek": null
       },
       {
-        "key": "WR|evans|M",
-        "display": "M. Evans",
-        "pos": "WR",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 3,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2021,
-          2023
-        ],
-        "bestWeek": null
-      },
-      {
         "key": "WR|osborn|K",
         "display": "K. Osborn",
         "pos": "WR",
@@ -17249,7 +17147,7 @@
       },
       {
         "key": "WR|metcalf|dk",
-        "display": "DK Metcalf",
+        "display": "D. Metcalf",
         "pos": "WR",
         "startPts": 492.4,
         "benchPts": 64.7,
@@ -17710,7 +17608,7 @@
       },
       {
         "key": "QB|darnold|sam",
-        "display": "Sam Darnold",
+        "display": "S. Darnold",
         "pos": "QB",
         "startPts": 208.08,
         "benchPts": 34.46,
@@ -18193,6 +18091,27 @@
         "fullName": "Chuba Hubbard"
       },
       {
+        "key": "RB|robinson|brian",
+        "display": "Brian Robinson",
+        "pos": "RB",
+        "startPts": 119.3,
+        "benchPts": 20.0,
+        "starts": 10,
+        "benchApps": 2,
+        "avgPerStart": 11.93,
+        "seasons": [
+          2024
+        ],
+        "bestWeek": {
+          "points": 20.3,
+          "year": 2024,
+          "week": 4,
+          "opponent": "Joshua"
+        },
+        "espnId": 4241474,
+        "fullName": "Brian Robinson Jr."
+      },
+      {
         "key": "DEF||broncos",
         "display": "Broncos DEF",
         "pos": "DEF",
@@ -18212,32 +18131,13 @@
         }
       },
       {
-        "key": "RB|robinson|B",
-        "display": "B. Robinson",
-        "pos": "RB",
-        "startPts": 115.9,
-        "benchPts": 20.0,
-        "starts": 9,
-        "benchApps": 2,
-        "avgPerStart": 12.88,
-        "seasons": [
-          2024
-        ],
-        "bestWeek": {
-          "points": 20.3,
-          "year": 2024,
-          "week": 4,
-          "opponent": "Joshua"
-        }
-      },
-      {
         "key": "WR|evans|mike",
         "display": "Mike Evans",
         "pos": "WR",
         "startPts": 111.6,
         "benchPts": 89.7,
         "starts": 7,
-        "benchApps": 3,
+        "benchApps": 4,
         "avgPerStart": 15.94,
         "seasons": [
           2019
@@ -18593,7 +18493,7 @@
         "startPts": 58.1,
         "benchPts": 10.3,
         "starts": 6,
-        "benchApps": 2,
+        "benchApps": 4,
         "avgPerStart": 9.68,
         "seasons": [
           2024
@@ -20081,27 +19981,6 @@
         }
       },
       {
-        "key": "RB|robinson|brian",
-        "display": "Brian Robinson",
-        "pos": "RB",
-        "startPts": 3.4,
-        "benchPts": 0.0,
-        "starts": 1,
-        "benchApps": 0,
-        "avgPerStart": 3.4,
-        "seasons": [
-          2024
-        ],
-        "bestWeek": {
-          "points": 3.4,
-          "year": 2024,
-          "week": 12,
-          "opponent": "Luke"
-        },
-        "espnId": 4241474,
-        "fullName": "Brian Robinson Jr."
-      },
-      {
         "key": "WR|downs|josh",
         "display": "Josh Downs",
         "pos": "WR",
@@ -20247,20 +20126,6 @@
         "benchPts": 5.7,
         "starts": 0,
         "benchApps": 4,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2019
-        ],
-        "bestWeek": null
-      },
-      {
-        "key": "WR|evans|M",
-        "display": "M. Evans",
-        "pos": "WR",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 1,
         "avgPerStart": 0.0,
         "seasons": [
           2019
@@ -20566,29 +20431,13 @@
         "fullName": "Derek Carr"
       },
       {
-        "key": "RB|robinson|bijan",
-        "display": "Bijan Robinson",
+        "key": "RB|robinson|B",
+        "display": "B. Robinson",
         "pos": "RB",
         "startPts": 0.0,
         "benchPts": 0.0,
         "starts": 0,
         "benchApps": 4,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2024
-        ],
-        "bestWeek": null,
-        "espnId": 4430807,
-        "fullName": "Bijan Robinson"
-      },
-      {
-        "key": "RB|etienne|T",
-        "display": "T. Etienne",
-        "pos": "RB",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 2,
         "avgPerStart": 0.0,
         "seasons": [
           2024
@@ -21266,7 +21115,7 @@
         "startPts": 141.6,
         "benchPts": 99.4,
         "starts": 7,
-        "benchApps": 8,
+        "benchApps": 9,
         "avgPerStart": 20.23,
         "seasons": [
           2020
@@ -21562,7 +21411,7 @@
       },
       {
         "key": "RB|mostert|raheem",
-        "display": "Raheem Mostert",
+        "display": "R. Mostert",
         "pos": "RB",
         "startPts": 113.9,
         "benchPts": 58.0,
@@ -22483,7 +22332,7 @@
       },
       {
         "key": "RB|dowdle|rico",
-        "display": "Rico Dowdle",
+        "display": "R. Dowdle",
         "pos": "RB",
         "startPts": 47.9,
         "benchPts": 46.1,
@@ -22546,7 +22395,7 @@
       },
       {
         "key": "RB|elliott|ezekiel",
-        "display": "Ezekiel Elliott",
+        "display": "E. Elliott",
         "pos": "RB",
         "startPts": 44.9,
         "benchPts": 24.8,
@@ -22696,7 +22545,7 @@
         "startPts": 41.2,
         "benchPts": 27.3,
         "starts": 3,
-        "benchApps": 3,
+        "benchApps": 4,
         "avgPerStart": 13.73,
         "seasons": [
           2022,
@@ -23110,6 +22959,28 @@
         "fullName": "Russell Wilson"
       },
       {
+        "key": "WR|johnson|diontae",
+        "display": "D. Johnson",
+        "pos": "WR",
+        "startPts": 28.6,
+        "benchPts": 62.4,
+        "starts": 3,
+        "benchApps": 11,
+        "avgPerStart": 9.53,
+        "seasons": [
+          2023,
+          2024
+        ],
+        "bestWeek": {
+          "points": 22.0,
+          "year": 2023,
+          "week": 9,
+          "opponent": "Joshua"
+        },
+        "espnId": 3932905,
+        "fullName": "Diontae Johnson"
+      },
+      {
         "key": "WR|coker|jalen",
         "display": "J. Coker",
         "pos": "WR",
@@ -23255,26 +23126,6 @@
         },
         "espnId": 3917232,
         "fullName": "Tyler Bass"
-      },
-      {
-        "key": "WR|johnson|D",
-        "display": "D. Johnson",
-        "pos": "WR",
-        "startPts": 24.7,
-        "benchPts": 60.8,
-        "starts": 2,
-        "benchApps": 9,
-        "avgPerStart": 12.35,
-        "seasons": [
-          2023,
-          2024
-        ],
-        "bestWeek": {
-          "points": 22.0,
-          "year": 2023,
-          "week": 9,
-          "opponent": "Joshua"
-        }
       },
       {
         "key": "QB|wentz|carson",
@@ -24897,27 +24748,6 @@
         "fullName": "Phillip Dorsett II"
       },
       {
-        "key": "WR|johnson|diontae",
-        "display": "Diontae Johnson",
-        "pos": "WR",
-        "startPts": 3.9,
-        "benchPts": 1.6,
-        "starts": 1,
-        "benchApps": 2,
-        "avgPerStart": 3.9,
-        "seasons": [
-          2024
-        ],
-        "bestWeek": {
-          "points": 3.9,
-          "year": 2024,
-          "week": 1,
-          "opponent": "Sean"
-        },
-        "espnId": 3932905,
-        "fullName": "Diontae Johnson"
-      },
-      {
         "key": "WR|claypool|chase",
         "display": "Chase Claypool",
         "pos": "WR",
@@ -25434,20 +25264,6 @@
         "bestWeek": null
       },
       {
-        "key": "WR|evans|M",
-        "display": "M. Evans",
-        "pos": "WR",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2020
-        ],
-        "bestWeek": null
-      },
-      {
         "key": "RB|johnson|ty",
         "display": "Ty Johnson",
         "pos": "RB",
@@ -25685,20 +25501,6 @@
         "bestWeek": null,
         "espnId": 3910544,
         "fullName": "Joshua Kelley"
-      },
-      {
-        "key": "RB|etienne|T",
-        "display": "T. Etienne",
-        "pos": "RB",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2023
-        ],
-        "bestWeek": null
       },
       {
         "key": "WR|brown|noah",
@@ -29172,11 +28974,10 @@
         "startPts": 0.0,
         "benchPts": 12.0,
         "starts": 0,
-        "benchApps": 2,
+        "benchApps": 1,
         "avgPerStart": 0.0,
         "seasons": [
-          2022,
-          2025
+          2022
         ],
         "bestWeek": null,
         "espnId": 4241474,
@@ -29307,8 +29108,8 @@
         "fullName": "Elijah Mitchell"
       },
       {
-        "key": "RB|williams|jameson",
-        "display": "Jameson Williams",
+        "key": "RB|robinson|B",
+        "display": "B. Robinson",
         "pos": "RB",
         "startPts": 0.0,
         "benchPts": 0.0,
@@ -29318,9 +29119,21 @@
         "seasons": [
           2025
         ],
-        "bestWeek": null,
-        "espnId": 4426388,
-        "fullName": "Jameson Williams"
+        "bestWeek": null
+      },
+      {
+        "key": "RB|williams|J",
+        "display": "J. Williams",
+        "pos": "RB",
+        "startPts": 0.0,
+        "benchPts": 0.0,
+        "starts": 0,
+        "benchApps": 1,
+        "avgPerStart": 0.0,
+        "seasons": [
+          2025
+        ],
+        "bestWeek": null
       },
       {
         "key": "RB|allgeier|tyler",
@@ -29339,7 +29152,7 @@
         "fullName": "Tyler Allgeier"
       },
       {
-        "key": "RB|brooks|J",
+        "key": "RB|brooks|jonathon",
         "display": "J. Brooks",
         "pos": "RB",
         "startPts": 0.0,
@@ -29350,7 +29163,9 @@
         "seasons": [
           2026
         ],
-        "bestWeek": null
+        "bestWeek": null,
+        "espnId": 4678008,
+        "fullName": "Jonathon Brooks"
       },
       {
         "key": "WR|hunter|travis",
@@ -29678,17 +29493,18 @@
       },
       {
         "key": "WR|johnson|diontae",
-        "display": "Diontae Johnson",
+        "display": "D. Johnson",
         "pos": "WR",
         "startPts": 294.7,
-        "benchPts": 86.4,
+        "benchPts": 108.9,
         "starts": 17,
-        "benchApps": 5,
+        "benchApps": 11,
         "avgPerStart": 17.34,
         "seasons": [
           2020,
           2021,
-          2022
+          2022,
+          2024
         ],
         "bestWeek": {
           "points": 30.5,
@@ -30438,7 +30254,7 @@
       },
       {
         "key": "RB|mason|jordan",
-        "display": "Jordan Mason",
+        "display": "J. Mason",
         "pos": "RB",
         "startPts": 94.2,
         "benchPts": 9.4,
@@ -31009,7 +30825,7 @@
       },
       {
         "key": "QB|smith|geno",
-        "display": "Geno Smith",
+        "display": "G. Smith",
         "pos": "QB",
         "startPts": 42.58,
         "benchPts": 13.32,
@@ -31091,7 +30907,7 @@
       },
       {
         "key": "TE|engram|evan",
-        "display": "Evan Engram",
+        "display": "E. Engram",
         "pos": "TE",
         "startPts": 39.9,
         "benchPts": 22.6,
@@ -32891,21 +32707,6 @@
         "fullName": "Curtis Samuel"
       },
       {
-        "key": "WR|johnson|D",
-        "display": "D. Johnson",
-        "pos": "WR",
-        "startPts": 0.0,
-        "benchPts": 22.5,
-        "starts": 0,
-        "benchApps": 4,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2021,
-          2024
-        ],
-        "bestWeek": null
-      },
-      {
         "key": "WR|kirk|christian",
         "display": "C. Kirk",
         "pos": "WR",
@@ -33251,8 +33052,8 @@
         "fullName": "Rashid Shaheed"
       },
       {
-        "key": "RB|sermon|trey",
-        "display": "Trey Sermon",
+        "key": "RB|sermon|T",
+        "display": "T. Sermon",
         "pos": "RB",
         "startPts": 0.0,
         "benchPts": 2.9,
@@ -33283,22 +33084,6 @@
         "fullName": "Jameson Williams"
       },
       {
-        "key": "WR|johnson|d'ernest",
-        "display": "D'Ernest Johnson",
-        "pos": "WR",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 2,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2024
-        ],
-        "bestWeek": null,
-        "espnId": 3139602,
-        "fullName": "D'Ernest Johnson"
-      },
-      {
         "key": "WR|shakir|khalil",
         "display": "Khalil Shakir",
         "pos": "WR",
@@ -33316,7 +33101,7 @@
       },
       {
         "key": "WR|robinson|demarcus",
-        "display": "Demarcus Robinson",
+        "display": "D. Robinson",
         "pos": "WR",
         "startPts": 0.0,
         "benchPts": 3.3,
@@ -33332,7 +33117,7 @@
       },
       {
         "key": "QB|wilson|russell",
-        "display": "Russell Wilson",
+        "display": "R. Wilson",
         "pos": "QB",
         "startPts": 0.0,
         "benchPts": 6.3,
@@ -33806,7 +33591,7 @@
       },
       {
         "key": "WR|samuel|deebo",
-        "display": "Deebo Samuel",
+        "display": "D. Samuel",
         "pos": "WR",
         "startPts": 334.3,
         "benchPts": 57.8,
@@ -33828,12 +33613,12 @@
       },
       {
         "key": "RB|etienne|travis",
-        "display": "Travis Etienne",
+        "display": "T. Etienne",
         "pos": "RB",
         "startPts": 324.3,
         "benchPts": 0.0,
         "starts": 21,
-        "benchApps": 0,
+        "benchApps": 2,
         "avgPerStart": 15.44,
         "seasons": [
           2022,
@@ -34767,7 +34552,7 @@
         "startPts": 69.6,
         "benchPts": 90.8,
         "starts": 7,
-        "benchApps": 8,
+        "benchApps": 9,
         "avgPerStart": 9.94,
         "seasons": [
           2022
@@ -34988,7 +34773,7 @@
       },
       {
         "key": "WR|lockett|tyler",
-        "display": "Tyler Lockett",
+        "display": "T. Lockett",
         "pos": "WR",
         "startPts": 44.0,
         "benchPts": 50.6,
@@ -35142,7 +34927,7 @@
         "startPts": 34.0,
         "benchPts": 0.0,
         "starts": 4,
-        "benchApps": 0,
+        "benchApps": 3,
         "avgPerStart": 8.5,
         "seasons": [
           2025
@@ -35410,9 +35195,9 @@
         "display": "J. Williams",
         "pos": "RB",
         "startPts": 16.2,
-        "benchPts": 99.6,
+        "benchPts": 110.0,
         "starts": 3,
-        "benchApps": 10,
+        "benchApps": 11,
         "avgPerStart": 5.4,
         "seasons": [
           2024
@@ -35552,12 +35337,12 @@
       },
       {
         "key": "TE|johnson|theo",
-        "display": "Theo Johnson",
+        "display": "T. Johnson",
         "pos": "TE",
         "startPts": 10.7,
         "benchPts": 16.1,
         "starts": 1,
-        "benchApps": 3,
+        "benchApps": 5,
         "avgPerStart": 10.7,
         "seasons": [
           2025
@@ -36044,20 +35829,6 @@
         "fullName": "Cam Akers"
       },
       {
-        "key": "WR|johnson|D",
-        "display": "D. Johnson",
-        "pos": "WR",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2022
-        ],
-        "bestWeek": null
-      },
-      {
         "key": "RB|herbert|khalil",
         "display": "Khalil Herbert",
         "pos": "RB",
@@ -36089,20 +35860,6 @@
         "bestWeek": null,
         "espnId": 3122840,
         "fullName": "Deshaun Watson"
-      },
-      {
-        "key": "RB|etienne|T",
-        "display": "T. Etienne",
-        "pos": "RB",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2022
-        ],
-        "bestWeek": null
       },
       {
         "key": "WR|toney|kadarius",
@@ -36268,22 +36025,6 @@
         "fullName": "Khalil Shakir"
       },
       {
-        "key": "RB|williams|javonte",
-        "display": "Javonte Williams",
-        "pos": "RB",
-        "startPts": 0.0,
-        "benchPts": 10.4,
-        "starts": 0,
-        "benchApps": 1,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2024
-        ],
-        "bestWeek": null,
-        "espnId": 4361579,
-        "fullName": "Javonte Williams"
-      },
-      {
         "key": "WR|williams|jameson",
         "display": "Jameson Williams",
         "pos": "WR",
@@ -36330,22 +36071,6 @@
         "bestWeek": null,
         "espnId": 4431452,
         "fullName": "Drake Maye"
-      },
-      {
-        "key": "WR|evans|mitchell",
-        "display": "Mitchell Evans",
-        "pos": "WR",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 3,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2025
-        ],
-        "bestWeek": null,
-        "espnId": 4683243,
-        "fullName": "Mitchell Evans"
       },
       {
         "key": "QB|rodgers|A",
@@ -36396,22 +36121,6 @@
         "fullName": "Nick Chubb"
       },
       {
-        "key": "RB|etienne|trevor",
-        "display": "Trevor Etienne",
-        "pos": "RB",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2025
-        ],
-        "bestWeek": null,
-        "espnId": 4685350,
-        "fullName": "Trevor Etienne"
-      },
-      {
         "key": "WR|washington|malik",
         "display": "Malik Washington",
         "pos": "WR",
@@ -36428,22 +36137,6 @@
         "fullName": "Malik Washington"
       },
       {
-        "key": "TE|johnson|ty",
-        "display": "Ty Johnson",
-        "pos": "TE",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2025
-        ],
-        "bestWeek": null,
-        "espnId": 3915411,
-        "fullName": "Ty Johnson"
-      },
-      {
         "key": "RB|rodriguez|chris",
         "display": "C. Rodriguez",
         "pos": "RB",
@@ -36458,20 +36151,6 @@
         "bestWeek": null,
         "espnId": 4362619,
         "fullName": "Chris Rodriguez Jr."
-      },
-      {
-        "key": "TE|johnson|T",
-        "display": "T. Johnson",
-        "pos": "TE",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2025
-        ],
-        "bestWeek": null
       },
       {
         "key": "QB|daniels|J",
@@ -37048,6 +36727,27 @@
         "fullName": "Rashee Rice"
       },
       {
+        "key": "WR|evans|mike",
+        "display": "M. Evans",
+        "pos": "WR",
+        "startPts": 47.1,
+        "benchPts": 41.9,
+        "starts": 3,
+        "benchApps": 5,
+        "avgPerStart": 15.7,
+        "seasons": [
+          2026
+        ],
+        "bestWeek": {
+          "points": 26.3,
+          "year": 2026,
+          "week": 5,
+          "opponent": "Ulises"
+        },
+        "espnId": 16737,
+        "fullName": "Mike Evans"
+      },
+      {
         "key": "DEF||seahawks",
         "display": "Seahawks DEF",
         "pos": "DEF",
@@ -37087,27 +36787,6 @@
         },
         "espnId": 3042519,
         "fullName": "Aaron Jones Sr."
-      },
-      {
-        "key": "WR|evans|mike",
-        "display": "Mike Evans",
-        "pos": "WR",
-        "startPts": 38.7,
-        "benchPts": 0.0,
-        "starts": 2,
-        "benchApps": 0,
-        "avgPerStart": 19.35,
-        "seasons": [
-          2026
-        ],
-        "bestWeek": {
-          "points": 26.3,
-          "year": 2026,
-          "week": 5,
-          "opponent": "Ulises"
-        },
-        "espnId": 16737,
-        "fullName": "Mike Evans"
       },
       {
         "key": "WR|lamb|ceedee",
@@ -37425,7 +37104,7 @@
         "startPts": 9.3,
         "benchPts": 40.4,
         "starts": 1,
-        "benchApps": 7,
+        "benchApps": 9,
         "avgPerStart": 9.3,
         "seasons": [
           2025
@@ -37459,25 +37138,6 @@
         },
         "espnId": 4428209,
         "fullName": "Ricky Pearsall"
-      },
-      {
-        "key": "WR|evans|M",
-        "display": "M. Evans",
-        "pos": "WR",
-        "startPts": 8.4,
-        "benchPts": 41.9,
-        "starts": 1,
-        "benchApps": 5,
-        "avgPerStart": 8.4,
-        "seasons": [
-          2026
-        ],
-        "bestWeek": {
-          "points": 8.4,
-          "year": 2026,
-          "week": 2,
-          "opponent": "Howard"
-        }
       },
       {
         "key": "DEF||ravens",
@@ -37801,36 +37461,6 @@
         },
         "espnId": 4426948,
         "fullName": "Luke McCaffrey"
-      },
-      {
-        "key": "WR|johnson|T",
-        "display": "T. Johnson",
-        "pos": "WR",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2025
-        ],
-        "bestWeek": null
-      },
-      {
-        "key": "WR|johnson|ty",
-        "display": "Ty Johnson",
-        "pos": "WR",
-        "startPts": 0.0,
-        "benchPts": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "avgPerStart": 0.0,
-        "seasons": [
-          2025
-        ],
-        "bestWeek": null,
-        "espnId": 3915411,
-        "fullName": "Ty Johnson"
       },
       {
         "key": "RB|dobbins|J",
@@ -44050,7 +43680,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -50796,7 +50426,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -63930,7 +63560,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -69196,7 +68826,7 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 0.0
                 },
                 {
@@ -72743,7 +72373,7 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 0.0
                 }
               ]
@@ -74605,7 +74235,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -80905,7 +80535,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -84366,7 +83996,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -89470,7 +89100,7 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 0.0
                 },
                 {
@@ -91134,7 +90764,7 @@
                   "slot": "BN",
                   "player": "T. Etienne",
                   "pos": "RB",
-                  "key": "RB|etienne|T",
+                  "key": "RB|etienne|travis",
                   "pts": 0.0
                 },
                 {
@@ -91226,7 +90856,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -97356,7 +96986,7 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 7.8
                 },
                 {
@@ -98582,7 +98212,7 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 0.0
                 },
                 {
@@ -101329,7 +100959,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -104105,7 +103735,7 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 16.5
                 },
                 {
@@ -104721,7 +104351,7 @@
                   "slot": "WR",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 22.0
                 },
                 {
@@ -104784,7 +104414,7 @@
                   "slot": "BN",
                   "player": "T. Etienne",
                   "pos": "RB",
-                  "key": "RB|etienne|T",
+                  "key": "RB|etienne|travis",
                   "pts": 0.0
                 },
                 {
@@ -105386,7 +105016,7 @@
                   "slot": "WR",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 2.7
                 },
                 {
@@ -106880,7 +106510,7 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 3.6
                 },
                 {
@@ -107865,7 +107495,7 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 9.0
                 },
                 {
@@ -112505,7 +112135,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Cooper Kupp",
+                  "player": "C. Kupp",
                   "pos": "WR",
                   "key": "WR|kupp|cooper",
                   "pts": 32.0
@@ -112561,7 +112191,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "George Pickens",
+                  "player": "G. Pickens",
                   "pos": "WR",
                   "key": "WR|pickens|george",
                   "pts": 13.5
@@ -112575,9 +112205,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Jalen Brooks",
+                  "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|jalen",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 },
                 {
@@ -112633,7 +112263,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Deebo Samuel",
+                  "player": "D. Samuel",
                   "pos": "WR",
                   "key": "WR|samuel|deebo",
                   "pts": 18.7
@@ -112654,7 +112284,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Evan Engram",
+                  "player": "E. Engram",
                   "pos": "TE",
                   "key": "TE|engram|evan",
                   "pts": 1.5
@@ -112711,7 +112341,7 @@
               "homeLineup": [
                 {
                   "slot": "QB",
-                  "player": "Justin Fields",
+                  "player": "J. Fields",
                   "pos": "QB",
                   "key": "QB|fields|justin",
                   "pts": 11.94
@@ -112732,7 +112362,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Davante Adams",
+                  "player": "D. Adams",
                   "pos": "WR",
                   "key": "WR|adams|davante",
                   "pts": 10.9
@@ -112895,7 +112525,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Christian Kirk",
+                  "player": "C. Kirk",
                   "pos": "WR",
                   "key": "WR|kirk|christian",
                   "pts": 4.0
@@ -113015,7 +112645,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "DK Metcalf",
+                  "player": "D. Metcalf",
                   "pos": "WR",
                   "key": "WR|metcalf|dk",
                   "pts": 5.9
@@ -113066,7 +112696,7 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "Jordan Mason",
+                  "player": "J. Mason",
                   "pos": "RB",
                   "key": "RB|mason|jordan",
                   "pts": 22.2
@@ -113200,14 +112830,14 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Stefon Diggs",
+                  "player": "S. Diggs",
                   "pos": "WR",
                   "key": "WR|diggs|stefon",
                   "pts": 21.9
                 },
                 {
                   "slot": "WR",
-                  "player": "Diontae Johnson",
+                  "player": "D. Johnson",
                   "pos": "WR",
                   "key": "WR|johnson|diontae",
                   "pts": 3.9
@@ -113242,7 +112872,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Ezekiel Elliott",
+                  "player": "E. Elliott",
                   "pos": "RB",
                   "key": "RB|elliott|ezekiel",
                   "pts": 12.9
@@ -113314,7 +112944,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Amari Cooper",
+                  "player": "A. Cooper",
                   "pos": "WR",
                   "key": "WR|cooper|amari",
                   "pts": 3.6
@@ -113363,7 +112993,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Najee Harris",
+                  "player": "N. Harris",
                   "pos": "RB",
                   "key": "RB|harris|najee",
                   "pts": 8.9
@@ -113446,7 +113076,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Cooper Kupp",
+                  "player": "C. Kupp",
                   "pos": "WR",
                   "key": "WR|kupp|cooper",
                   "pts": 7.7
@@ -113502,7 +113132,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "George Pickens",
+                  "player": "G. Pickens",
                   "pos": "WR",
                   "key": "WR|pickens|george",
                   "pts": 4.9
@@ -113516,9 +113146,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Jalen Brooks",
+                  "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|jalen",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 },
                 {
@@ -113609,7 +113239,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "DK Metcalf",
+                  "player": "D. Metcalf",
                   "pos": "WR",
                   "key": "WR|metcalf|dk",
                   "pts": 28.9
@@ -113694,7 +113324,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Deebo Samuel",
+                  "player": "D. Samuel",
                   "pos": "WR",
                   "key": "WR|samuel|deebo",
                   "pts": 18.0
@@ -113715,7 +113345,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Tyler Lockett",
+                  "player": "T. Lockett",
                   "pos": "WR",
                   "key": "WR|lockett|tyler",
                   "pts": 3.5
@@ -113780,7 +113410,7 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "Jordan Mason",
+                  "player": "J. Mason",
                   "pos": "RB",
                   "key": "RB|mason|jordan",
                   "pts": 17.4
@@ -113907,7 +113537,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Davante Adams",
+                  "player": "D. Adams",
                   "pos": "WR",
                   "key": "WR|adams|davante",
                   "pts": 26.0
@@ -114007,7 +113637,7 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "Ezekiel Elliott",
+                  "player": "E. Elliott",
                   "pos": "RB",
                   "key": "RB|elliott|ezekiel",
                   "pts": 5.2
@@ -114021,7 +113651,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Stefon Diggs",
+                  "player": "S. Diggs",
                   "pos": "WR",
                   "key": "WR|diggs|stefon",
                   "pts": 7.7
@@ -114079,7 +113709,7 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 4.5
                 },
                 {
@@ -114134,9 +113764,9 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "B. Robinson",
+                  "player": "Brian Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|B",
+                  "key": "RB|robinson|brian",
                   "pts": 14.6
                 },
                 {
@@ -114190,7 +113820,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Christian Kirk",
+                  "player": "C. Kirk",
                   "pos": "WR",
                   "key": "WR|kirk|christian",
                   "pts": 0.9
@@ -114255,7 +113885,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Amari Cooper",
+                  "player": "A. Cooper",
                   "pos": "WR",
                   "key": "WR|cooper|amari",
                   "pts": 4.1
@@ -114318,7 +113948,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Najee Harris",
+                  "player": "N. Harris",
                   "pos": "RB",
                   "key": "RB|harris|najee",
                   "pts": 8.4
@@ -114422,7 +114052,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Demarcus Robinson",
+                  "player": "D. Robinson",
                   "pos": "WR",
                   "key": "WR|robinson|demarcus",
                   "pts": 4.2
@@ -114443,7 +114073,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "George Pickens",
+                  "player": "G. Pickens",
                   "pos": "WR",
                   "key": "WR|pickens|george",
                   "pts": 10.7
@@ -114457,9 +114087,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Jalen Brooks",
+                  "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|jalen",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 },
                 {
@@ -114480,7 +114110,7 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "Jordan Mason",
+                  "player": "J. Mason",
                   "pos": "RB",
                   "key": "RB|mason|jordan",
                   "pts": 10.8
@@ -114635,7 +114265,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Amari Cooper",
+                  "player": "A. Cooper",
                   "pos": "WR",
                   "key": "WR|cooper|amari",
                   "pts": 27.6
@@ -114749,7 +114379,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "DK Metcalf",
+                  "player": "D. Metcalf",
                   "pos": "WR",
                   "key": "WR|metcalf|dk",
                   "pts": 20.4
@@ -114848,7 +114478,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Davante Adams",
+                  "player": "D. Adams",
                   "pos": "WR",
                   "key": "WR|adams|davante",
                   "pts": 8.0
@@ -115011,7 +114641,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Najee Harris",
+                  "player": "N. Harris",
                   "pos": "RB",
                   "key": "RB|harris|najee",
                   "pts": 13.6
@@ -115075,9 +114705,9 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "B. Robinson",
+                  "player": "Brian Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|B",
+                  "key": "RB|robinson|brian",
                   "pts": 10.7
                 },
                 {
@@ -115138,7 +114768,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Christian Kirk",
+                  "player": "C. Kirk",
                   "pos": "WR",
                   "key": "WR|kirk|christian",
                   "pts": 15.9
@@ -115196,7 +114826,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Stefon Diggs",
+                  "player": "S. Diggs",
                   "pos": "WR",
                   "key": "WR|diggs|stefon",
                   "pts": 19.92
@@ -115391,7 +115021,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "George Pickens",
+                  "player": "G. Pickens",
                   "pos": "WR",
                   "key": "WR|pickens|george",
                   "pts": 16.3
@@ -115400,7 +115030,7 @@
                   "slot": "BN",
                   "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|J",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 },
                 {
@@ -115555,7 +115185,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Amari Cooper",
+                  "player": "A. Cooper",
                   "pos": "WR",
                   "key": "WR|cooper|amari",
                   "pts": 7.5
@@ -115576,7 +115206,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Deebo Samuel",
+                  "player": "D. Samuel",
                   "pos": "WR",
                   "key": "WR|samuel|deebo",
                   "pts": 10.2
@@ -115648,7 +115278,7 @@
               "awayLineup": [
                 {
                   "slot": "QB",
-                  "player": "Sam Darnold",
+                  "player": "S. Darnold",
                   "pos": "QB",
                   "key": "QB|darnold|sam",
                   "pts": 20.5
@@ -115662,9 +115292,9 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "B. Robinson",
+                  "player": "Brian Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|B",
+                  "key": "RB|robinson|brian",
                   "pts": 20.3
                 },
                 {
@@ -115810,7 +115440,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "DK Metcalf",
+                  "player": "D. Metcalf",
                   "pos": "WR",
                   "key": "WR|metcalf|dk",
                   "pts": 15.4
@@ -115903,7 +115533,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Stefon Diggs",
+                  "player": "S. Diggs",
                   "pos": "WR",
                   "key": "WR|diggs|stefon",
                   "pts": 18.5
@@ -115975,7 +115605,7 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 21.3
                 },
                 {
@@ -116044,7 +115674,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Jordan Mason",
+                  "player": "J. Mason",
                   "pos": "RB",
                   "key": "RB|mason|jordan",
                   "pts": 24.0
@@ -116193,7 +115823,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Najee Harris",
+                  "player": "N. Harris",
                   "pos": "RB",
                   "key": "RB|harris|najee",
                   "pts": 10.3
@@ -116318,7 +115948,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "George Pickens",
+                  "player": "G. Pickens",
                   "pos": "WR",
                   "key": "WR|pickens|george",
                   "pts": 5.6
@@ -116339,9 +115969,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Jalen Brooks",
+                  "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|jalen",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 },
                 {
@@ -116418,7 +116048,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Christian Kirk",
+                  "player": "C. Kirk",
                   "pos": "WR",
                   "key": "WR|kirk|christian",
                   "pts": 12.8
@@ -116496,7 +116126,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Amari Cooper",
+                  "player": "A. Cooper",
                   "pos": "WR",
                   "key": "WR|cooper|amari",
                   "pts": 10.0
@@ -116517,7 +116147,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Deebo Samuel",
+                  "player": "D. Samuel",
                   "pos": "WR",
                   "key": "WR|samuel|deebo",
                   "pts": 3.0
@@ -116730,7 +116360,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "DK Metcalf",
+                  "player": "D. Metcalf",
                   "pos": "WR",
                   "key": "WR|metcalf|dk",
                   "pts": 7.5
@@ -116823,7 +116453,7 @@
               "awayLineup": [
                 {
                   "slot": "QB",
-                  "player": "Sam Darnold",
+                  "player": "S. Darnold",
                   "pos": "QB",
                   "key": "QB|darnold|sam",
                   "pts": 4.26
@@ -116865,9 +116495,9 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "B. Robinson",
+                  "player": "Brian Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|B",
+                  "key": "RB|robinson|brian",
                   "pts": 13.8
                 },
                 {
@@ -116957,7 +116587,7 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "Jordan Mason",
+                  "player": "J. Mason",
                   "pos": "RB",
                   "key": "RB|mason|jordan",
                   "pts": 8.8
@@ -117078,7 +116708,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Stefon Diggs",
+                  "player": "S. Diggs",
                   "pos": "WR",
                   "key": "WR|diggs|stefon",
                   "pts": 14.2
@@ -117120,7 +116750,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Raheem Mostert",
+                  "player": "R. Mostert",
                   "pos": "RB",
                   "key": "RB|mostert|raheem",
                   "pts": 11.8
@@ -117143,7 +116773,7 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 5.9
                 },
                 {
@@ -117203,7 +116833,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "DK Metcalf",
+                  "player": "D. Metcalf",
                   "pos": "WR",
                   "key": "WR|metcalf|dk",
                   "pts": 7.8
@@ -117287,9 +116917,9 @@
                 },
                 {
                   "slot": "RES",
-                  "player": "Jalen Brooks",
+                  "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|jalen",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 }
               ],
@@ -117317,7 +116947,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Stefon Diggs",
+                  "player": "S. Diggs",
                   "pos": "WR",
                   "key": "WR|diggs|stefon",
                   "pts": 19.7
@@ -117437,7 +117067,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Amari Cooper",
+                  "player": "A. Cooper",
                   "pos": "WR",
                   "key": "WR|cooper|amari",
                   "pts": 8.2
@@ -117458,7 +117088,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Deebo Samuel",
+                  "player": "D. Samuel",
                   "pos": "WR",
                   "key": "WR|samuel|deebo",
                   "pts": 20.7
@@ -117600,7 +117230,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Christian Kirk",
+                  "player": "C. Kirk",
                   "pos": "WR",
                   "key": "WR|kirk|christian",
                   "pts": 6.9
@@ -117898,7 +117528,7 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "Jordan Mason",
+                  "player": "J. Mason",
                   "pos": "RB",
                   "key": "RB|mason|jordan",
                   "pts": 9.2
@@ -117963,7 +117593,7 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 19.8
                 },
                 {
@@ -117975,9 +117605,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Trey Sermon",
+                  "player": "T. Sermon",
                   "pos": "RB",
-                  "key": "RB|sermon|trey",
+                  "key": "RB|sermon|T",
                   "pts": 2.9
                 },
                 {
@@ -118096,9 +117726,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Bijan Robinson",
+                  "player": "B. Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|bijan",
+                  "key": "RB|robinson|B",
                   "pts": 0.0
                 },
                 {
@@ -118151,7 +117781,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "DK Metcalf",
+                  "player": "D. Metcalf",
                   "pos": "WR",
                   "key": "WR|metcalf|dk",
                   "pts": 19.9
@@ -118230,7 +117860,7 @@
                   "slot": "RES",
                   "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|J",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 }
               ],
@@ -118251,9 +117881,9 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "B. Robinson",
+                  "player": "Brian Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|B",
+                  "key": "RB|robinson|brian",
                   "pts": 13.1
                 },
                 {
@@ -118314,7 +117944,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Sam Darnold",
+                  "player": "S. Darnold",
                   "pos": "QB",
                   "key": "QB|darnold|sam",
                   "pts": 16.26
@@ -118330,7 +117960,7 @@
                   "slot": "BN",
                   "player": "T. Etienne",
                   "pos": "RB",
-                  "key": "RB|etienne|T",
+                  "key": "RB|etienne|travis",
                   "pts": 0.0
                 },
                 {
@@ -118492,7 +118122,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Stefon Diggs",
+                  "player": "S. Diggs",
                   "pos": "WR",
                   "key": "WR|diggs|stefon",
                   "pts": 7.3
@@ -118534,7 +118164,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Raheem Mostert",
+                  "player": "R. Mostert",
                   "pos": "RB",
                   "key": "RB|mostert|raheem",
                   "pts": 3.0
@@ -118612,7 +118242,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Davante Adams",
+                  "player": "D. Adams",
                   "pos": "WR",
                   "key": "WR|adams|davante",
                   "pts": 6.0
@@ -118682,7 +118312,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Najee Harris",
+                  "player": "N. Harris",
                   "pos": "RB",
                   "key": "RB|harris|najee",
                   "pts": 16.2
@@ -118705,7 +118335,7 @@
               "awayLineup": [
                 {
                   "slot": "QB",
-                  "player": "Geno Smith",
+                  "player": "G. Smith",
                   "pos": "QB",
                   "key": "QB|smith|geno",
                   "pts": 17.78
@@ -118740,7 +118370,7 @@
                 },
                 {
                   "slot": "TE",
-                  "player": "Evan Engram",
+                  "player": "E. Engram",
                   "pos": "TE",
                   "key": "TE|engram|evan",
                   "pts": 8.5
@@ -118784,7 +118414,7 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 2.7
                 },
                 {
@@ -118803,7 +118433,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Jordan Mason",
+                  "player": "J. Mason",
                   "pos": "RB",
                   "key": "RB|mason|jordan",
                   "pts": 8.9
@@ -119085,7 +118715,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Cooper Kupp",
+                  "player": "C. Kupp",
                   "pos": "WR",
                   "key": "WR|kupp|cooper",
                   "pts": 16.1
@@ -119129,7 +118759,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -119169,9 +118799,9 @@
                 },
                 {
                   "slot": "RES",
-                  "player": "Jalen Brooks",
+                  "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|jalen",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 }
               ],
@@ -119206,7 +118836,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Deebo Samuel",
+                  "player": "D. Samuel",
                   "pos": "WR",
                   "key": "WR|samuel|deebo",
                   "pts": 12.6
@@ -119340,7 +118970,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Najee Harris",
+                  "player": "N. Harris",
                   "pos": "RB",
                   "key": "RB|harris|najee",
                   "pts": 16.1
@@ -119361,7 +118991,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Davante Adams",
+                  "player": "D. Adams",
                   "pos": "WR",
                   "key": "WR|adams|davante",
                   "pts": 9.4
@@ -119426,9 +119056,9 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "B. Robinson",
+                  "player": "Brian Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|B",
+                  "key": "RB|robinson|brian",
                   "pts": 8.6
                 },
                 {
@@ -119489,7 +119119,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Sam Darnold",
+                  "player": "S. Darnold",
                   "pos": "QB",
                   "key": "QB|darnold|sam",
                   "pts": 18.2
@@ -119505,7 +119135,7 @@
                   "slot": "BN",
                   "player": "T. Etienne",
                   "pos": "RB",
-                  "key": "RB|etienne|T",
+                  "key": "RB|etienne|travis",
                   "pts": 0.0
                 },
                 {
@@ -119681,14 +119311,14 @@
                 },
                 {
                   "slot": "TE",
-                  "player": "Evan Engram",
+                  "player": "E. Engram",
                   "pos": "TE",
                   "key": "TE|engram|evan",
                   "pts": 13.6
                 },
                 {
                   "slot": "W/R",
-                  "player": "Jordan Mason",
+                  "player": "J. Mason",
                   "pos": "RB",
                   "key": "RB|mason|jordan",
                   "pts": 1.8
@@ -119730,9 +119360,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "D'Ernest Johnson",
+                  "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|d'ernest",
+                  "key": "WR|johnson|diontae",
                   "pts": 0.0
                 },
                 {
@@ -119787,7 +119417,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Stefon Diggs",
+                  "player": "S. Diggs",
                   "pos": "WR",
                   "key": "WR|diggs|stefon",
                   "pts": 12.7
@@ -119829,7 +119459,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Raheem Mostert",
+                  "player": "R. Mostert",
                   "pos": "RB",
                   "key": "RB|mostert|raheem",
                   "pts": 16.0
@@ -119908,7 +119538,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "George Pickens",
+                  "player": "G. Pickens",
                   "pos": "WR",
                   "key": "WR|pickens|george",
                   "pts": 11.4
@@ -119943,7 +119573,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "DeAndre Hopkins",
+                  "player": "D. Hopkins",
                   "pos": "WR",
                   "key": "WR|hopkins|deandre",
                   "pts": 4.9
@@ -120026,7 +119656,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Cooper Kupp",
+                  "player": "C. Kupp",
                   "pos": "WR",
                   "key": "WR|kupp|cooper",
                   "pts": 21.4
@@ -120070,7 +119700,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -120110,9 +119740,9 @@
                 },
                 {
                   "slot": "RES",
-                  "player": "Jalen Brooks",
+                  "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|jalen",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 }
               ],
@@ -120337,9 +119967,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Javonte Williams",
+                  "player": "J. Williams",
                   "pos": "RB",
-                  "key": "RB|williams|javonte",
+                  "key": "RB|williams|J",
                   "pts": 10.4
                 },
                 {
@@ -120416,16 +120046,16 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Evan Engram",
+                  "player": "E. Engram",
                   "pos": "TE",
                   "key": "TE|engram|evan",
                   "pts": 11.5
                 },
                 {
                   "slot": "BN",
-                  "player": "D'Ernest Johnson",
+                  "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|d'ernest",
+                  "key": "WR|johnson|diontae",
                   "pts": 0.0
                 },
                 {
@@ -120494,7 +120124,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Davante Adams",
+                  "player": "D. Adams",
                   "pos": "WR",
                   "key": "WR|adams|davante",
                   "pts": 22.1
@@ -120594,7 +120224,7 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "Raheem Mostert",
+                  "player": "R. Mostert",
                   "pos": "RB",
                   "key": "RB|mostert|raheem",
                   "pts": 8.8
@@ -120707,7 +120337,7 @@
               "homeLineup": [
                 {
                   "slot": "QB",
-                  "player": "Sam Darnold",
+                  "player": "S. Darnold",
                   "pos": "QB",
                   "key": "QB|darnold|sam",
                   "pts": 19.0
@@ -120791,9 +120421,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Bijan Robinson",
+                  "player": "B. Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|bijan",
+                  "key": "RB|robinson|B",
                   "pts": 0.0
                 },
                 {
@@ -120884,7 +120514,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "DeAndre Hopkins",
+                  "player": "D. Hopkins",
                   "pos": "WR",
                   "key": "WR|hopkins|deandre",
                   "pts": 28.6
@@ -120967,7 +120597,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Cooper Kupp",
+                  "player": "C. Kupp",
                   "pos": "WR",
                   "key": "WR|kupp|cooper",
                   "pts": 15.0
@@ -121011,7 +120641,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -121051,9 +120681,9 @@
                 },
                 {
                   "slot": "RES",
-                  "player": "Jalen Brooks",
+                  "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|jalen",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 }
               ],
@@ -121095,7 +120725,7 @@
                 },
                 {
                   "slot": "TE",
-                  "player": "Evan Engram",
+                  "player": "E. Engram",
                   "pos": "TE",
                   "key": "TE|engram|evan",
                   "pts": 10.0
@@ -121123,7 +120753,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Demarcus Robinson",
+                  "player": "D. Robinson",
                   "pos": "WR",
                   "key": "WR|robinson|demarcus",
                   "pts": 3.3
@@ -121158,7 +120788,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Jordan Mason",
+                  "player": "J. Mason",
                   "pos": "RB",
                   "key": "RB|mason|jordan",
                   "pts": 0.5
@@ -121222,7 +120852,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Deebo Samuel",
+                  "player": "D. Samuel",
                   "pos": "WR",
                   "key": "WR|samuel|deebo",
                   "pts": 12.6
@@ -121435,7 +121065,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Davante Adams",
+                  "player": "D. Adams",
                   "pos": "WR",
                   "key": "WR|adams|davante",
                   "pts": 9.1
@@ -121456,7 +121086,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Najee Harris",
+                  "player": "N. Harris",
                   "pos": "RB",
                   "key": "RB|harris|najee",
                   "pts": 11.3
@@ -121556,7 +121186,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "George Pickens",
+                  "player": "G. Pickens",
                   "pos": "WR",
                   "key": "WR|pickens|george",
                   "pts": 20.5
@@ -121591,7 +121221,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "DeAndre Hopkins",
+                  "player": "D. Hopkins",
                   "pos": "WR",
                   "key": "WR|hopkins|deandre",
                   "pts": 9.6
@@ -121648,7 +121278,7 @@
               "homeLineup": [
                 {
                   "slot": "QB",
-                  "player": "Sam Darnold",
+                  "player": "S. Darnold",
                   "pos": "QB",
                   "key": "QB|darnold|sam",
                   "pts": 6.44
@@ -121739,9 +121369,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Bijan Robinson",
+                  "player": "B. Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|bijan",
+                  "key": "RB|robinson|B",
                   "pts": 0.0
                 },
                 {
@@ -121839,14 +121469,14 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Diontae Johnson",
+                  "player": "D. Johnson",
                   "pos": "WR",
                   "key": "WR|johnson|diontae",
                   "pts": 1.6
                 },
                 {
                   "slot": "BN",
-                  "player": "Rico Dowdle",
+                  "player": "R. Dowdle",
                   "pos": "RB",
                   "key": "RB|dowdle|rico",
                   "pts": 8.6
@@ -121908,7 +121538,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Cooper Kupp",
+                  "player": "C. Kupp",
                   "pos": "WR",
                   "key": "WR|kupp|cooper",
                   "pts": 28.6
@@ -121952,7 +121582,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -121987,7 +121617,7 @@
                   "slot": "BN",
                   "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|J",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 },
                 {
@@ -122022,7 +121652,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Davante Adams",
+                  "player": "D. Adams",
                   "pos": "WR",
                   "key": "WR|adams|davante",
                   "pts": 13.2
@@ -122043,7 +121673,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Najee Harris",
+                  "player": "N. Harris",
                   "pos": "RB",
                   "key": "RB|harris|najee",
                   "pts": 13.3
@@ -122163,7 +121793,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Deebo Samuel",
+                  "player": "D. Samuel",
                   "pos": "WR",
                   "key": "WR|samuel|deebo",
                   "pts": 6.1
@@ -122235,7 +121865,7 @@
               "awayLineup": [
                 {
                   "slot": "QB",
-                  "player": "Sam Darnold",
+                  "player": "S. Darnold",
                   "pos": "QB",
                   "key": "QB|darnold|sam",
                   "pts": 23.64
@@ -122249,14 +121879,14 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "B. Robinson",
+                  "player": "Brian Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|B",
+                  "key": "RB|robinson|brian",
                   "pts": 14.2
                 },
                 {
                   "slot": "WR",
-                  "player": "DK Metcalf",
+                  "player": "D. Metcalf",
                   "pos": "WR",
                   "key": "WR|metcalf|dk",
                   "pts": 14.0
@@ -122548,12 +122178,12 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 0.0
                 },
                 {
                   "slot": "BN",
-                  "player": "Rico Dowdle",
+                  "player": "R. Dowdle",
                   "pos": "RB",
                   "key": "RB|dowdle|rico",
                   "pts": 5.4
@@ -122624,7 +122254,7 @@
                 },
                 {
                   "slot": "TE",
-                  "player": "Evan Engram",
+                  "player": "E. Engram",
                   "pos": "TE",
                   "key": "TE|engram|evan",
                   "pts": 7.8
@@ -122652,7 +122282,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Russell Wilson",
+                  "player": "R. Wilson",
                   "pos": "QB",
                   "key": "QB|wilson|russell",
                   "pts": 6.3
@@ -122731,7 +122361,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "George Pickens",
+                  "player": "G. Pickens",
                   "pos": "WR",
                   "key": "WR|pickens|george",
                   "pts": 16.9
@@ -122766,7 +122396,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "DeAndre Hopkins",
+                  "player": "D. Hopkins",
                   "pos": "WR",
                   "key": "WR|hopkins|deandre",
                   "pts": 5.9
@@ -122856,7 +122486,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Cooper Kupp",
+                  "player": "C. Kupp",
                   "pos": "WR",
                   "key": "WR|kupp|cooper",
                   "pts": 20.0
@@ -122963,7 +122593,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "George Pickens",
+                  "player": "G. Pickens",
                   "pos": "WR",
                   "key": "WR|pickens|george",
                   "pts": 8.8
@@ -122984,7 +122614,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "DeAndre Hopkins",
+                  "player": "D. Hopkins",
                   "pos": "WR",
                   "key": "WR|hopkins|deandre",
                   "pts": 14.5
@@ -123040,9 +122670,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Brian Robinson",
+                  "player": "B. Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|brian",
+                  "key": "RB|robinson|B",
                   "pts": 0.0
                 },
                 {
@@ -123104,7 +122734,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Deebo Samuel",
+                  "player": "D. Samuel",
                   "pos": "WR",
                   "key": "WR|samuel|deebo",
                   "pts": 3.1
@@ -123218,7 +122848,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Najee Harris",
+                  "player": "N. Harris",
                   "pos": "RB",
                   "key": "RB|harris|najee",
                   "pts": 7.4
@@ -123410,7 +123040,7 @@
               "awayLineup": [
                 {
                   "slot": "QB",
-                  "player": "Sam Darnold",
+                  "player": "S. Darnold",
                   "pos": "QB",
                   "key": "QB|darnold|sam",
                   "pts": 21.1
@@ -123452,7 +123082,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "DK Metcalf",
+                  "player": "D. Metcalf",
                   "pos": "WR",
                   "key": "WR|metcalf|dk",
                   "pts": 9.9
@@ -123530,7 +123160,7 @@
               "homeLineup": [
                 {
                   "slot": "QB",
-                  "player": "Geno Smith",
+                  "player": "G. Smith",
                   "pos": "QB",
                   "key": "QB|smith|geno",
                   "pts": 12.36
@@ -123721,7 +123351,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Diontae Johnson",
+                  "player": "D. Johnson",
                   "pos": "WR",
                   "key": "WR|johnson|diontae",
                   "pts": 0.0
@@ -123735,7 +123365,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Rico Dowdle",
+                  "player": "R. Dowdle",
                   "pos": "RB",
                   "key": "RB|dowdle|rico",
                   "pts": 10.8
@@ -123797,7 +123427,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Cooper Kupp",
+                  "player": "C. Kupp",
                   "pos": "WR",
                   "key": "WR|kupp|cooper",
                   "pts": 4.7
@@ -123955,7 +123585,7 @@
                   "slot": "BN",
                   "player": "D. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|D",
+                  "key": "WR|johnson|diontae",
                   "pts": 0.0
                 },
                 {
@@ -123967,7 +123597,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Rico Dowdle",
+                  "player": "R. Dowdle",
                   "pos": "RB",
                   "key": "RB|dowdle|rico",
                   "pts": 21.3
@@ -124073,7 +123703,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Deebo Samuel",
+                  "player": "D. Samuel",
                   "pos": "WR",
                   "key": "WR|samuel|deebo",
                   "pts": 4.0
@@ -124145,7 +123775,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "George Pickens",
+                  "player": "G. Pickens",
                   "pos": "WR",
                   "key": "WR|pickens|george",
                   "pts": 16.4
@@ -124180,7 +123810,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "DeAndre Hopkins",
+                  "player": "D. Hopkins",
                   "pos": "WR",
                   "key": "WR|hopkins|deandre",
                   "pts": 13.0
@@ -124279,7 +123909,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Davante Adams",
+                  "player": "D. Adams",
                   "pos": "WR",
                   "key": "WR|adams|davante",
                   "pts": 17.6
@@ -124321,7 +123951,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Najee Harris",
+                  "player": "N. Harris",
                   "pos": "RB",
                   "key": "RB|harris|najee",
                   "pts": 24.9
@@ -124471,7 +124101,7 @@
               "homeLineup": [
                 {
                   "slot": "QB",
-                  "player": "Geno Smith",
+                  "player": "G. Smith",
                   "pos": "QB",
                   "key": "QB|smith|geno",
                   "pts": 12.44
@@ -124534,7 +124164,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Evan Engram",
+                  "player": "E. Engram",
                   "pos": "TE",
                   "key": "TE|engram|evan",
                   "pts": 11.1
@@ -124585,7 +124215,7 @@
               "awayLineup": [
                 {
                   "slot": "QB",
-                  "player": "Sam Darnold",
+                  "player": "S. Darnold",
                   "pos": "QB",
                   "key": "QB|darnold|sam",
                   "pts": 19.6
@@ -124655,16 +124285,16 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "DK Metcalf",
+                  "player": "D. Metcalf",
                   "pos": "WR",
                   "key": "WR|metcalf|dk",
                   "pts": 10.6
                 },
                 {
                   "slot": "BN",
-                  "player": "B. Robinson",
+                  "player": "Brian Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|B",
+                  "key": "RB|robinson|brian",
                   "pts": 17.9
                 },
                 {
@@ -124773,7 +124403,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Cooper Kupp",
+                  "player": "C. Kupp",
                   "pos": "WR",
                   "key": "WR|kupp|cooper",
                   "pts": 20.2
@@ -124824,7 +124454,7 @@
               "awayLineup": [
                 {
                   "slot": "QB",
-                  "player": "Sam Darnold",
+                  "player": "S. Darnold",
                   "pos": "QB",
                   "key": "QB|darnold|sam",
                   "pts": 34.58
@@ -124894,7 +124524,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "DK Metcalf",
+                  "player": "D. Metcalf",
                   "pos": "WR",
                   "key": "WR|metcalf|dk",
                   "pts": 8.9
@@ -124908,9 +124538,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Bijan Robinson",
+                  "player": "B. Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|bijan",
+                  "key": "RB|robinson|B",
                   "pts": 0.0
                 },
                 {
@@ -125028,7 +124658,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Deebo Samuel",
+                  "player": "D. Samuel",
                   "pos": "WR",
                   "key": "WR|samuel|deebo",
                   "pts": 5.5
@@ -125072,7 +124702,7 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "Rico Dowdle",
+                  "player": "R. Dowdle",
                   "pos": "RB",
                   "key": "RB|dowdle|rico",
                   "pts": 15.1
@@ -125199,7 +124829,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Davante Adams",
+                  "player": "D. Adams",
                   "pos": "WR",
                   "key": "WR|adams|davante",
                   "pts": 25.9
@@ -125220,7 +124850,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Najee Harris",
+                  "player": "N. Harris",
                   "pos": "RB",
                   "key": "RB|harris|najee",
                   "pts": 11.3
@@ -125355,7 +124985,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Geno Smith",
+                  "player": "G. Smith",
                   "pos": "QB",
                   "key": "QB|smith|geno",
                   "pts": 13.32
@@ -125526,7 +125156,7 @@
               "awayLineup": [
                 {
                   "slot": "QB",
-                  "player": "Russell Wilson",
+                  "player": "R. Wilson",
                   "pos": "QB",
                   "key": "QB|wilson|russell",
                   "pts": 16.02
@@ -125589,7 +125219,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "DeAndre Hopkins",
+                  "player": "D. Hopkins",
                   "pos": "WR",
                   "key": "WR|hopkins|deandre",
                   "pts": 13.2
@@ -125679,7 +125309,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Cooper Kupp",
+                  "player": "C. Kupp",
                   "pos": "WR",
                   "key": "WR|kupp|cooper",
                   "pts": 0.0
@@ -125842,7 +125472,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Deebo Samuel",
+                  "player": "D. Samuel",
                   "pos": "WR",
                   "key": "WR|samuel|deebo",
                   "pts": 4.9
@@ -125906,7 +125536,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Davante Adams",
+                  "player": "D. Adams",
                   "pos": "WR",
                   "key": "WR|adams|davante",
                   "pts": 42.8
@@ -125976,7 +125606,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Najee Harris",
+                  "player": "N. Harris",
                   "pos": "RB",
                   "key": "RB|harris|najee",
                   "pts": 3.1
@@ -125999,7 +125629,7 @@
               "awayLineup": [
                 {
                   "slot": "QB",
-                  "player": "Sam Darnold",
+                  "player": "S. Darnold",
                   "pos": "QB",
                   "key": "QB|darnold|sam",
                   "pts": 11.24
@@ -126041,9 +125671,9 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "B. Robinson",
+                  "player": "Brian Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|B",
+                  "key": "RB|robinson|brian",
                   "pts": 11.7
                 },
                 {
@@ -126069,7 +125699,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "DK Metcalf",
+                  "player": "D. Metcalf",
                   "pos": "WR",
                   "key": "WR|metcalf|dk",
                   "pts": 5.8
@@ -126367,7 +125997,7 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "Rico Dowdle",
+                  "player": "R. Dowdle",
                   "pos": "RB",
                   "key": "RB|dowdle|rico",
                   "pts": 14.9
@@ -126488,7 +126118,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "DeAndre Hopkins",
+                  "player": "D. Hopkins",
                   "pos": "WR",
                   "key": "WR|hopkins|deandre",
                   "pts": 8.6
@@ -126620,7 +126250,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Cooper Kupp",
+                  "player": "C. Kupp",
                   "pos": "WR",
                   "key": "WR|kupp|cooper",
                   "pts": 5.4
@@ -126783,7 +126413,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Deebo Samuel",
+                  "player": "D. Samuel",
                   "pos": "WR",
                   "key": "WR|samuel|deebo",
                   "pts": 25.1
@@ -126847,7 +126477,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Davante Adams",
+                  "player": "D. Adams",
                   "pos": "WR",
                   "key": "WR|adams|davante",
                   "pts": 19.8
@@ -126917,7 +126547,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Najee Harris",
+                  "player": "N. Harris",
                   "pos": "RB",
                   "key": "RB|harris|najee",
                   "pts": 4.2
@@ -127195,7 +126825,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "DeAndre Hopkins",
+                  "player": "D. Hopkins",
                   "pos": "WR",
                   "key": "WR|hopkins|deandre",
                   "pts": 7.7
@@ -127294,7 +126924,7 @@
               "homeLineup": [
                 {
                   "slot": "QB",
-                  "player": "Sam Darnold",
+                  "player": "S. Darnold",
                   "pos": "QB",
                   "key": "QB|darnold|sam",
                   "pts": 22.94
@@ -127364,16 +126994,16 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "DK Metcalf",
+                  "player": "D. Metcalf",
                   "pos": "WR",
                   "key": "WR|metcalf|dk",
                   "pts": 14.7
                 },
                 {
                   "slot": "BN",
-                  "player": "B. Robinson",
+                  "player": "Brian Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|B",
+                  "key": "RB|robinson|brian",
                   "pts": 2.1
                 },
                 {
@@ -127422,7 +127052,7 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "Rico Dowdle",
+                  "player": "R. Dowdle",
                   "pos": "RB",
                   "key": "RB|dowdle|rico",
                   "pts": 8.1
@@ -127596,7 +127226,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Cooper Kupp",
+                  "player": "C. Kupp",
                   "pos": "WR",
                   "key": "WR|kupp|cooper",
                   "pts": 3.9
@@ -127654,7 +127284,7 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "Rico Dowdle",
+                  "player": "R. Dowdle",
                   "pos": "RB",
                   "key": "RB|dowdle|rico",
                   "pts": 9.8
@@ -127830,7 +127460,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Deebo Samuel",
+                  "player": "D. Samuel",
                   "pos": "WR",
                   "key": "WR|samuel|deebo",
                   "pts": 9.1
@@ -127860,16 +127490,16 @@
               "awayLineup": [
                 {
                   "slot": "QB",
-                  "player": "Sam Darnold",
+                  "player": "S. Darnold",
                   "pos": "QB",
                   "key": "QB|darnold|sam",
                   "pts": 24.78
                 },
                 {
                   "slot": "RB",
-                  "player": "B. Robinson",
+                  "player": "Brian Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|B",
+                  "key": "RB|robinson|brian",
                   "pts": 8.9
                 },
                 {
@@ -127930,7 +127560,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "DK Metcalf",
+                  "player": "D. Metcalf",
                   "pos": "WR",
                   "key": "WR|metcalf|dk",
                   "pts": 7.2
@@ -127987,14 +127617,14 @@
                 },
                 {
                   "slot": "RB",
-                  "player": "Alexander Mattison",
+                  "player": "A. Mattison",
                   "pos": "RB",
                   "key": "RB|mattison|alexander",
                   "pts": 4.8
                 },
                 {
                   "slot": "WR",
-                  "player": "Davante Adams",
+                  "player": "D. Adams",
                   "pos": "WR",
                   "key": "WR|adams|davante",
                   "pts": 9.7
@@ -128071,7 +127701,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Najee Harris",
+                  "player": "N. Harris",
                   "pos": "RB",
                   "key": "RB|harris|najee",
                   "pts": 10.1
@@ -128391,7 +128021,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "George Pickens",
+                  "player": "G. Pickens",
                   "pos": "WR",
                   "key": "WR|pickens|george",
                   "pts": 8.0
@@ -128677,7 +128307,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Jakobi Meyers",
+                  "player": "J. Meyers",
                   "pos": "WR",
                   "key": "WR|meyers|jakobi",
                   "pts": 17.7
@@ -129817,7 +129447,7 @@
                 },
                 {
                   "slot": "W/R",
-                  "player": "Jakobi Meyers",
+                  "player": "J. Meyers",
                   "pos": "WR",
                   "key": "WR|meyers|jakobi",
                   "pts": 12.8
@@ -132028,7 +131658,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Jakobi Meyers",
+                  "player": "J. Meyers",
                   "pos": "WR",
                   "key": "WR|meyers|jakobi",
                   "pts": 9.3
@@ -132429,9 +132059,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Mitchell Evans",
+                  "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|mitchell",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -132855,7 +132485,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Jakobi Meyers",
+                  "player": "J. Meyers",
                   "pos": "WR",
                   "key": "WR|meyers|jakobi",
                   "pts": 7.0
@@ -133604,9 +133234,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Mitchell Evans",
+                  "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|mitchell",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -134193,7 +133823,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Jakobi Meyers",
+                  "player": "J. Meyers",
                   "pos": "WR",
                   "key": "WR|meyers|jakobi",
                   "pts": 7.2
@@ -134448,9 +134078,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Brian Robinson",
+                  "player": "B. Robinson",
                   "pos": "RB",
-                  "key": "RB|robinson|brian",
+                  "key": "RB|robinson|B",
                   "pts": 0.0
                 },
                 {
@@ -134772,9 +134402,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Mitchell Evans",
+                  "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|mitchell",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -134851,7 +134481,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Rashid Shaheed",
+                  "player": "R. Shaheed",
                   "pos": "WR",
                   "key": "WR|shaheed|rashid",
                   "pts": 6.8
@@ -135127,7 +134757,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Jakobi Meyers",
+                  "player": "J. Meyers",
                   "pos": "WR",
                   "key": "WR|meyers|jakobi",
                   "pts": 7.9
@@ -136494,7 +136124,7 @@
                 },
                 {
                   "slot": "WR",
-                  "player": "Rashid Shaheed",
+                  "player": "R. Shaheed",
                   "pos": "WR",
                   "key": "WR|shaheed|rashid",
                   "pts": 8.0
@@ -137143,9 +136773,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Trevor Etienne",
+                  "player": "T. Etienne",
                   "pos": "RB",
-                  "key": "RB|etienne|trevor",
+                  "key": "RB|etienne|travis",
                   "pts": 0.0
                 },
                 {
@@ -137952,7 +137582,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Rashid Shaheed",
+                  "player": "R. Shaheed",
                   "pos": "WR",
                   "key": "WR|shaheed|rashid",
                   "pts": 14.5
@@ -138077,7 +137707,7 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Jakobi Meyers",
+                  "player": "J. Meyers",
                   "pos": "WR",
                   "key": "WR|meyers|jakobi",
                   "pts": 6.3
@@ -138675,7 +138305,7 @@
                   "slot": "BN",
                   "player": "T. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|T",
+                  "key": "WR|johnson|tez",
                   "pts": 0.0
                 },
                 {
@@ -139841,9 +139471,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Jameson Williams",
+                  "player": "J. Williams",
                   "pos": "RB",
-                  "key": "RB|williams|jameson",
+                  "key": "RB|williams|J",
                   "pts": 0.0
                 },
                 {
@@ -143982,7 +143612,7 @@
                   "slot": "RES",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 }
               ],
@@ -144087,9 +143717,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Ty Johnson",
+                  "player": "T. Johnson",
                   "pos": "TE",
-                  "key": "TE|johnson|ty",
+                  "key": "TE|johnson|theo",
                   "pts": 0.0
                 },
                 {
@@ -144909,9 +144539,9 @@
                 },
                 {
                   "slot": "BN",
-                  "player": "Ty Johnson",
+                  "player": "T. Johnson",
                   "pos": "WR",
-                  "key": "WR|johnson|ty",
+                  "key": "WR|johnson|tez",
                   "pts": 0.0
                 },
                 {
@@ -148588,7 +148218,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 16.9
                 },
                 {
@@ -148843,7 +148473,7 @@
                   "slot": "BN",
                   "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|J",
+                  "key": "RB|brooks|jonathon",
                   "pts": 7.2
                 },
                 {
@@ -149529,7 +149159,7 @@
                   "slot": "BN",
                   "player": "T. Etienne",
                   "pos": "RB",
-                  "key": "RB|etienne|T",
+                  "key": "RB|etienne|travis",
                   "pts": 7.1
                 },
                 {
@@ -150324,7 +149954,7 @@
                   "slot": "W/R",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 8.4
                 },
                 {
@@ -150600,7 +150230,7 @@
                   "slot": "BN",
                   "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|J",
+                  "key": "RB|brooks|jonathon",
                   "pts": 2.1
                 },
                 {
@@ -150938,7 +150568,7 @@
                   "slot": "BN",
                   "player": "T. Etienne",
                   "pos": "RB",
-                  "key": "RB|etienne|T",
+                  "key": "RB|etienne|travis",
                   "pts": 9.0
                 },
                 {
@@ -151534,7 +151164,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 12.4
                 },
                 {
@@ -151796,7 +151426,7 @@
                   "slot": "RES",
                   "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|J",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 }
               ]
@@ -152127,7 +151757,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 12.6
                 },
                 {
@@ -152389,7 +152019,7 @@
                   "slot": "RES",
                   "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|J",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 }
               ],
@@ -152702,7 +152332,7 @@
                   "slot": "BN",
                   "player": "T. Etienne",
                   "pos": "RB",
-                  "key": "RB|etienne|T",
+                  "key": "RB|etienne|travis",
                   "pts": 0.0
                 },
                 {
@@ -153210,7 +152840,7 @@
                   "slot": "RES",
                   "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|J",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 }
               ]
@@ -153912,7 +153542,7 @@
                   "slot": "RES",
                   "player": "T. Etienne",
                   "pos": "RB",
-                  "key": "RB|etienne|T",
+                  "key": "RB|etienne|travis",
                   "pts": 0.0
                 }
               ]
@@ -154385,7 +154015,7 @@
                   "slot": "RES",
                   "player": "T. Etienne",
                   "pos": "RB",
-                  "key": "RB|etienne|T",
+                  "key": "RB|etienne|travis",
                   "pts": 0.0
                 }
               ]
@@ -155207,7 +154837,7 @@
                   "slot": "RES",
                   "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|J",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 }
               ],
@@ -155879,7 +155509,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -156382,7 +156012,7 @@
                   "slot": "RES",
                   "player": "T. Etienne",
                   "pos": "RB",
-                  "key": "RB|etienne|T",
+                  "key": "RB|etienne|travis",
                   "pts": 0.0
                 }
               ],
@@ -156496,7 +156126,7 @@
                   "slot": "RES",
                   "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|J",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 }
               ]
@@ -156927,7 +156557,7 @@
                   "slot": "BN",
                   "player": "M. Evans",
                   "pos": "WR",
-                  "key": "WR|evans|M",
+                  "key": "WR|evans|mike",
                   "pts": 0.0
                 },
                 {
@@ -157437,7 +157067,7 @@
                   "slot": "RES",
                   "player": "T. Etienne",
                   "pos": "RB",
-                  "key": "RB|etienne|T",
+                  "key": "RB|etienne|travis",
                   "pts": 0.0
                 }
               ]
@@ -157557,7 +157187,7 @@
                   "slot": "RES",
                   "player": "J. Brooks",
                   "pos": "RB",
-                  "key": "RB|brooks|J",
+                  "key": "RB|brooks|jonathon",
                   "pts": 0.0
                 }
               ],
@@ -162435,7 +162065,7 @@
       ],
       "bGave": [
         {
-          "display": "DK Metcalf",
+          "display": "D. Metcalf",
           "pos": "WR"
         },
         {
@@ -162479,7 +162109,7 @@
         }
       ],
       "aGaveKeys": [
-        "WR|johnson|D"
+        "WR|johnson|diontae"
       ],
       "bGaveKeys": [
         "RB|ford|jerome"
@@ -162564,6 +162194,38 @@
     },
     {
       "year": 2024,
+      "week": 10,
+      "teamA": "Howard",
+      "teamB": "Matthew",
+      "aGave": [
+        {
+          "display": "Rachaad White",
+          "pos": "RB"
+        }
+      ],
+      "bGave": [
+        {
+          "display": "D. Johnson",
+          "pos": "WR"
+        }
+      ],
+      "aGaveKeys": [
+        "RB|white|rachaad"
+      ],
+      "bGaveKeys": [
+        "WR|johnson|diontae"
+      ],
+      "aScore": 0.0,
+      "bScore": 0.0,
+      "aTotal": 0.0,
+      "bTotal": 0.0,
+      "aPerPlayer": 0.0,
+      "bPerPlayer": 0.0,
+      "scoreDelta": 0.0,
+      "confidence": "low"
+    },
+    {
+      "year": 2024,
       "week": 11,
       "teamA": "Aiden",
       "teamB": "Alex",
@@ -162583,7 +162245,7 @@
           "pos": "RB"
         },
         {
-          "display": "DK Metcalf",
+          "display": "D. Metcalf",
           "pos": "WR"
         },
         {
@@ -163128,6 +162790,10 @@
         {
           "display": "Ja'Marr Chase",
           "pos": "WR"
+        },
+        {
+          "display": "Travis Etienne",
+          "pos": "RB"
         }
       ],
       "bGave": [
@@ -163150,6 +162816,7 @@
       ],
       "aGaveKeys": [
         "RB|croskey-merritt|jacory",
+        "RB|etienne|travis",
         "WR|chase|ja'marr"
       ],
       "bGaveKeys": [
@@ -163159,12 +162826,12 @@
         "WR|egbuka|emeka"
       ],
       "aScore": 150.31,
-      "bScore": 119.4,
+      "bScore": 162.05,
       "aTotal": 225.1,
-      "bTotal": 119.4,
+      "bTotal": 204.7,
       "aPerPlayer": 56.27,
-      "bPerPlayer": 59.7,
-      "scoreDelta": 30.91,
+      "bPerPlayer": 68.23,
+      "scoreDelta": -11.74,
       "confidence": "high"
     },
     {
@@ -164350,6 +164017,20 @@
       "opponentPts": 122.98
     },
     {
+      "year": 2024,
+      "week": 11,
+      "owner": "Aiden",
+      "offPts": 126.54,
+      "finalPts": 160.54,
+      "touches": 48,
+      "ptsPerTouch": 2.64,
+      "topPlayer": "J. Chase",
+      "topPos": "WR",
+      "topPts": 26.5,
+      "opponent": "Joshua",
+      "opponentPts": 89.44
+    },
+    {
       "year": 2021,
       "week": 1,
       "owner": "Aiden",
@@ -164420,6 +164101,34 @@
       "opponentPts": 116.1
     },
     {
+      "year": 2024,
+      "week": 5,
+      "owner": "Aiden",
+      "offPts": 94.56,
+      "finalPts": 105.56,
+      "touches": 45,
+      "ptsPerTouch": 2.1,
+      "topPlayer": "J. Chase",
+      "topPos": "WR",
+      "topPts": 41.3,
+      "opponent": "Luke",
+      "opponentPts": 93.16
+    },
+    {
+      "year": 2024,
+      "week": 10,
+      "owner": "Aiden",
+      "offPts": 148.24,
+      "finalPts": 160.24,
+      "touches": 71,
+      "ptsPerTouch": 2.09,
+      "topPlayer": "J. Chase",
+      "topPos": "WR",
+      "topPts": 55.4,
+      "opponent": "Howard",
+      "opponentPts": 126.14
+    },
+    {
       "year": 2021,
       "week": 7,
       "owner": "Sean",
@@ -164462,6 +164171,20 @@
       "opponentPts": 81.46
     },
     {
+      "year": 2024,
+      "week": 14,
+      "owner": "Aiden",
+      "offPts": 159.08,
+      "finalPts": 172.08,
+      "touches": 79,
+      "ptsPerTouch": 2.01,
+      "topPlayer": "J. Chase",
+      "topPos": "WR",
+      "topPts": 45.1,
+      "opponent": "Alex",
+      "opponentPts": 171.38
+    },
+    {
       "year": 2023,
       "week": 15,
       "owner": "Ulises",
@@ -164490,6 +164213,20 @@
       "opponentPts": 88.5
     },
     {
+      "year": 2024,
+      "week": 4,
+      "owner": "Aiden",
+      "offPts": 121.6,
+      "finalPts": 133.6,
+      "touches": 63,
+      "ptsPerTouch": 1.93,
+      "topPlayer": "K. Walker",
+      "topPos": "RB",
+      "topPts": 33.6,
+      "opponent": "Joshua",
+      "opponentPts": 76.78
+    },
+    {
       "year": 2021,
       "week": 16,
       "owner": "Luke",
@@ -164502,76 +164239,6 @@
       "topPts": 25.2,
       "opponent": "Aiden",
       "opponentPts": 85.5
-    },
-    {
-      "year": 2021,
-      "week": 5,
-      "owner": "Matthew",
-      "offPts": 147.56,
-      "finalPts": 154.56,
-      "touches": 78,
-      "ptsPerTouch": 1.89,
-      "topPlayer": "D. Adams",
-      "topPos": "WR",
-      "topPts": 37.6,
-      "opponent": "Ulises",
-      "opponentPts": 151.78
-    },
-    {
-      "year": 2020,
-      "week": 12,
-      "owner": "Matthew",
-      "offPts": 139.34,
-      "finalPts": 154.34,
-      "touches": 74,
-      "ptsPerTouch": 1.88,
-      "topPlayer": "T. Hill",
-      "topPos": "WR",
-      "topPts": 57.9,
-      "opponent": "Luke",
-      "opponentPts": 126.9
-    },
-    {
-      "year": 2023,
-      "week": 3,
-      "owner": "Luke",
-      "offPts": 166.66,
-      "finalPts": 192.66,
-      "touches": 89,
-      "ptsPerTouch": 1.87,
-      "topPlayer": "D. Adams",
-      "topPos": "WR",
-      "topPts": 42.2,
-      "opponent": "Aiden",
-      "opponentPts": 147.76
-    },
-    {
-      "year": 2026,
-      "week": 5,
-      "owner": "Ulises",
-      "offPts": 146.64,
-      "finalPts": 153.64,
-      "touches": 79,
-      "ptsPerTouch": 1.86,
-      "topPlayer": "Christian Watson",
-      "topPos": "WR",
-      "topPts": 32.3,
-      "opponent": "Todd",
-      "opponentPts": 125.66
-    },
-    {
-      "year": 2023,
-      "week": 2,
-      "owner": "Justin",
-      "offPts": 129.78,
-      "finalPts": 148.78,
-      "touches": 71,
-      "ptsPerTouch": 1.83,
-      "topPlayer": "T. Hockenson",
-      "topPos": "TE",
-      "topPts": 25.6,
-      "opponent": "Aiden",
-      "opponentPts": 75.74
     }
   ],
   "oneStartClub": [
@@ -164953,7 +164620,7 @@
       "week": 8,
       "owner": "Todd",
       "points": 9.3,
-      "benchApps": 7,
+      "benchApps": 9,
       "seasons": [
         2025
       ],
@@ -164986,27 +164653,6 @@
         2025
       ],
       "espnId": 4429022
-    },
-    {
-      "key": "WR|evans|M",
-      "display": "M. Evans",
-      "pos": "WR",
-      "year": 2026,
-      "week": 2,
-      "owner": "Todd",
-      "points": 8.4,
-      "benchApps": 18,
-      "seasons": [
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025,
-        2026
-      ],
-      "espnId": null
     },
     {
       "key": "WR|cole|keelan",
@@ -165149,6 +164795,20 @@
         2026
       ],
       "espnId": 4870653
+    },
+    {
+      "key": "RB|mcnichols|jeremy",
+      "display": "Jeremy McNichols",
+      "pos": "RB",
+      "year": 2021,
+      "week": 9,
+      "owner": "Luke",
+      "points": 6.5,
+      "benchApps": 1,
+      "seasons": [
+        2021
+      ],
+      "espnId": 3127586
     }
   ],
   "winningPlayers": [
@@ -165191,26 +164851,6 @@
       "ties": 0,
       "winPct": 0.5833,
       "avgPerStart": 12.72
-    },
-    {
-      "key": "RB|robinson|brian",
-      "display": "Brian Robinson",
-      "fullName": "Brian Robinson Jr.",
-      "pos": "RB",
-      "espnId": 4241474,
-      "chipAppearances": 4,
-      "chipYears": [
-        2022,
-        2023,
-        2024,
-        2025
-      ],
-      "starts": 8,
-      "wins": 4,
-      "losses": 4,
-      "ties": 0,
-      "winPct": 0.5,
-      "avgPerStart": 7.62
     },
     {
       "key": "WR|allen|keenan",
@@ -165803,6 +165443,24 @@
       "avgPerStart": 9.44
     },
     {
+      "key": "RB|robinson|brian",
+      "display": "Brian Robinson",
+      "fullName": "Brian Robinson Jr.",
+      "pos": "RB",
+      "espnId": 4241474,
+      "chipAppearances": 2,
+      "chipYears": [
+        2022,
+        2023
+      ],
+      "starts": 17,
+      "wins": 8,
+      "losses": 9,
+      "ties": 0,
+      "winPct": 0.4706,
+      "avgPerStart": 10.41
+    },
+    {
       "key": "DEF||buccaneers",
       "display": "Buccaneers DEF",
       "fullName": null,
@@ -166019,7 +165677,7 @@
     },
     {
       "key": "WR|evans|mike",
-      "display": "Mike Evans",
+      "display": "M. Evans",
       "fullName": "Mike Evans",
       "pos": "WR",
       "espnId": 16737,
@@ -166046,7 +165704,7 @@
         2025,
         2026
       ],
-      "totalPoints": 1115.1
+      "totalPoints": 1123.5
     },
     {
       "key": "WR|lamb|ceedee",
@@ -166393,31 +166051,6 @@
         2026
       ],
       "totalPoints": 189.2
-    },
-    {
-      "key": "RB|robinson|bijan",
-      "display": "Bijan Robinson",
-      "fullName": "Bijan Robinson",
-      "pos": "RB",
-      "espnId": 4430807,
-      "uniqueOwners": 7,
-      "transitions": 13,
-      "owners": [
-        "Aiden",
-        "Howard",
-        "Justin",
-        "Luke",
-        "Matthew",
-        "Sean",
-        "Ulises"
-      ],
-      "seasons": [
-        2023,
-        2024,
-        2025,
-        2026
-      ],
-      "totalPoints": 1020.1
     },
     {
       "key": "WR|smith-schuster|juju",
@@ -166840,7 +166473,7 @@
     },
     {
       "key": "RB|mostert|raheem",
-      "display": "Raheem Mostert",
+      "display": "R. Mostert",
       "fullName": "Raheem Mostert",
       "pos": "RB",
       "espnId": 2576414,
@@ -167062,32 +166695,6 @@
       "totalPoints": 566.8
     },
     {
-      "key": "RB|robinson|brian",
-      "display": "Brian Robinson",
-      "fullName": "Brian Robinson Jr.",
-      "pos": "RB",
-      "espnId": 4241474,
-      "uniqueOwners": 7,
-      "transitions": 9,
-      "owners": [
-        "Aiden",
-        "Alex",
-        "Howard",
-        "Justin",
-        "Matthew",
-        "Sean",
-        "Ulises"
-      ],
-      "seasons": [
-        2022,
-        2023,
-        2024,
-        2025,
-        2026
-      ],
-      "totalPoints": 61.0
-    },
-    {
       "key": "K|fairbairn|ka'imi",
       "display": "Ka'imi Fairbairn",
       "fullName": "Ka'imi Fairbairn",
@@ -167199,35 +166806,8 @@
       "totalPoints": 1412.3
     },
     {
-      "key": "RB|williams|javonte",
-      "display": "Javonte Williams",
-      "fullName": "Javonte Williams",
-      "pos": "RB",
-      "espnId": 4361579,
-      "uniqueOwners": 7,
-      "transitions": 8,
-      "owners": [
-        "Alex",
-        "Howard",
-        "Joshua",
-        "Justin",
-        "Luke",
-        "Matthew",
-        "Ulises"
-      ],
-      "seasons": [
-        2021,
-        2022,
-        2023,
-        2024,
-        2025,
-        2026
-      ],
-      "totalPoints": 477.4
-    },
-    {
       "key": "RB|etienne|travis",
-      "display": "Travis Etienne",
+      "display": "T. Etienne",
       "fullName": "Travis Etienne Jr.",
       "pos": "RB",
       "espnId": 4239996,
@@ -167279,7 +166859,7 @@
     },
     {
       "key": "QB|wilson|russell",
-      "display": "Russell Wilson",
+      "display": "R. Wilson",
       "fullName": "Russell Wilson",
       "pos": "QB",
       "espnId": 14881,
@@ -167303,6 +166883,86 @@
         2024
       ],
       "totalPoints": 712.46
+    },
+    {
+      "key": "WR|cooper|amari",
+      "display": "Amari Cooper",
+      "fullName": "Amari Cooper",
+      "pos": "WR",
+      "espnId": 2976499,
+      "uniqueOwners": 7,
+      "transitions": 7,
+      "owners": [
+        "Aiden",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Sean",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "totalPoints": 888.9
+    },
+    {
+      "key": "TE|engram|evan",
+      "display": "Evan Engram",
+      "fullName": "Evan Engram",
+      "pos": "TE",
+      "espnId": 3051876,
+      "uniqueOwners": 7,
+      "transitions": 7,
+      "owners": [
+        "Alex",
+        "Howard",
+        "Joshua",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "totalPoints": 295.4
+    },
+    {
+      "key": "TE|everett|gerald",
+      "display": "G. Everett",
+      "fullName": "Gerald Everett",
+      "pos": "TE",
+      "espnId": 3918639,
+      "uniqueOwners": 7,
+      "transitions": 7,
+      "owners": [
+        "Aiden",
+        "Alex",
+        "Howard",
+        "Justin",
+        "Luke",
+        "Matthew",
+        "Ulises"
+      ],
+      "seasons": [
+        2019,
+        2021,
+        2022,
+        2023
+      ],
+      "totalPoints": 102.7
     }
   ],
   "worstDrops": [
@@ -167504,7 +167164,7 @@
     },
     {
       "key": "WR|evans|mike",
-      "display": "Mike Evans",
+      "display": "M. Evans",
       "fullName": "Mike Evans",
       "pos": "WR",
       "espnId": 16737,
@@ -167953,9 +167613,9 @@
         "pfScore": 25.0,
         "ppgScore": 20.0,
         "rankScore": 12.7,
-        "ownedScore": 4.63,
+        "ownedScore": 4.43,
         "draftScore": 7.41,
-        "rating": 69.74
+        "rating": 69.54
       },
       {
         "owner": "Aiden",
@@ -167967,14 +167627,14 @@
         "pf": 1737.58,
         "ppg": 124.11,
         "avgPosRank": 10.73,
-        "pctOwned": 0.748,
+        "pctOwned": 0.774,
         "avgDraftPick": 45.1,
         "pfScore": 19.08,
         "ppgScore": 15.26,
         "rankScore": 11.92,
-        "ownedScore": 10.89,
+        "ownedScore": 11.72,
         "draftScore": 8.46,
-        "rating": 65.61
+        "rating": 66.44
       },
       {
         "owner": "Alex",
@@ -167991,9 +167651,9 @@
         "pfScore": 19.05,
         "ppgScore": 15.24,
         "rankScore": 13.73,
-        "ownedScore": 6.11,
+        "ownedScore": 5.93,
         "draftScore": 8.71,
-        "rating": 62.84
+        "rating": 62.66
       },
       {
         "owner": "Ulises",
@@ -168010,9 +167670,9 @@
         "pfScore": 15.63,
         "ppgScore": 12.5,
         "rankScore": 12.2,
-        "ownedScore": 4.09,
+        "ownedScore": 3.88,
         "draftScore": 10.0,
-        "rating": 54.42
+        "rating": 54.21
       },
       {
         "owner": "Ethan",
@@ -168048,9 +167708,9 @@
         "pfScore": 9.86,
         "ppgScore": 7.89,
         "rankScore": 8.72,
-        "ownedScore": 10.96,
+        "ownedScore": 10.84,
         "draftScore": 4.93,
-        "rating": 42.36
+        "rating": 42.24
       },
       {
         "owner": "Howard",
@@ -168067,9 +167727,9 @@
         "pfScore": 15.88,
         "ppgScore": 12.71,
         "rankScore": 6.82,
-        "ownedScore": 2.5,
+        "ownedScore": 2.27,
         "draftScore": 0.0,
-        "rating": 37.91
+        "rating": 37.68
       },
       {
         "owner": "Sean",
@@ -168081,7 +167741,7 @@
         "pf": 1618.5,
         "ppg": 115.61,
         "avgPosRank": 17.13,
-        "pctOwned": 0.447,
+        "pctOwned": 0.454,
         "avgDraftPick": 46.1,
         "pfScore": 13.79,
         "ppgScore": 11.04,
@@ -168178,14 +167838,14 @@
         "pf": 1681.64,
         "ppg": 120.12,
         "avgPosRank": 12.1,
-        "pctOwned": 0.549,
+        "pctOwned": 0.562,
         "avgDraftPick": 40.4,
         "pfScore": 4.48,
         "ppgScore": 3.58,
         "rankScore": 12.43,
-        "ownedScore": 5.67,
+        "ownedScore": 6.55,
         "draftScore": 8.56,
-        "rating": 34.72
+        "rating": 35.6
       },
       {
         "owner": "Ulises",
@@ -168280,9 +167940,9 @@
         "pfScore": 25.0,
         "ppgScore": 20.0,
         "rankScore": 14.39,
-        "ownedScore": 11.39,
+        "ownedScore": 10.66,
         "draftScore": 10.0,
-        "rating": 80.78
+        "rating": 80.05
       },
       {
         "owner": "Matthew",
@@ -168294,14 +167954,14 @@
         "pf": 2091.2,
         "ppg": 139.41,
         "avgPosRank": 10.42,
-        "pctOwned": 0.525,
+        "pctOwned": 0.536,
         "avgDraftPick": 50.7,
         "pfScore": 24.52,
         "ppgScore": 19.61,
         "rankScore": 19.89,
-        "ownedScore": 4.97,
+        "ownedScore": 5.13,
         "draftScore": 5.93,
-        "rating": 74.92
+        "rating": 75.08
       },
       {
         "owner": "Alex",
@@ -168318,9 +167978,9 @@
         "pfScore": 21.85,
         "ppgScore": 17.48,
         "rankScore": 20.56,
-        "ownedScore": 5.45,
+        "ownedScore": 4.21,
         "draftScore": 9.02,
-        "rating": 74.36
+        "rating": 73.12
       },
       {
         "owner": "Justin",
@@ -168356,9 +168016,9 @@
         "pfScore": 10.3,
         "ppgScore": 8.24,
         "rankScore": 12.12,
-        "ownedScore": 17.58,
+        "ownedScore": 17.37,
         "draftScore": 6.07,
-        "rating": 54.31
+        "rating": 54.1
       },
       {
         "owner": "Luke",
@@ -168370,7 +168030,7 @@
         "pf": 1788.2,
         "ppg": 119.21,
         "avgPosRank": 13.41,
-        "pctOwned": 0.484,
+        "pctOwned": 0.497,
         "avgDraftPick": 52.5,
         "pfScore": 12.4,
         "ppgScore": 9.92,
@@ -168394,9 +168054,9 @@
         "pfScore": 0.0,
         "ppgScore": 0.0,
         "rankScore": 0.0,
-        "ownedScore": 10.18,
+        "ownedScore": 9.34,
         "draftScore": 8.21,
-        "rating": 18.39
+        "rating": 17.55
       }
     ],
     "2022": [
@@ -168409,15 +168069,15 @@
         "ties": 0,
         "pf": 2186.32,
         "ppg": 145.75,
-        "avgPosRank": 9.43,
-        "pctOwned": 0.64,
+        "avgPosRank": 9.42,
+        "pctOwned": 0.642,
         "avgDraftPick": 43.5,
         "pfScore": 25.0,
         "ppgScore": 20.0,
-        "rankScore": 23.48,
-        "ownedScore": 18.88,
+        "rankScore": 23.51,
+        "ownedScore": 19.11,
         "draftScore": 3.62,
-        "rating": 90.98
+        "rating": 91.24
       },
       {
         "owner": "Alex",
@@ -168434,9 +168094,9 @@
         "pfScore": 18.03,
         "ppgScore": 14.43,
         "rankScore": 25.0,
-        "ownedScore": 4.84,
+        "ownedScore": 4.46,
         "draftScore": 5.13,
-        "rating": 67.43
+        "rating": 67.05
       },
       {
         "owner": "Aiden",
@@ -168472,9 +168132,9 @@
         "pfScore": 12.81,
         "ppgScore": 10.25,
         "rankScore": 23.28,
-        "ownedScore": 8.57,
+        "ownedScore": 8.28,
         "draftScore": 3.75,
-        "rating": 58.66
+        "rating": 58.37
       },
       {
         "owner": "Luke",
@@ -168491,9 +168151,9 @@
         "pfScore": 12.86,
         "ppgScore": 10.29,
         "rankScore": 15.3,
-        "ownedScore": 13.17,
+        "ownedScore": 12.99,
         "draftScore": 2.63,
-        "rating": 54.25
+        "rating": 54.07
       },
       {
         "owner": "Justin",
@@ -168505,14 +168165,14 @@
         "pf": 1893.86,
         "ppg": 126.26,
         "avgPosRank": 11.78,
-        "pctOwned": 0.488,
+        "pctOwned": 0.499,
         "avgDraftPick": 41.1,
         "pfScore": 12.17,
         "ppgScore": 9.74,
         "rankScore": 16.85,
-        "ownedScore": 0.0,
+        "ownedScore": 0.89,
         "draftScore": 4.69,
-        "rating": 43.45
+        "rating": 44.34
       },
       {
         "owner": "Joshua",
@@ -168524,14 +168184,14 @@
         "pf": 1692.74,
         "ppg": 112.85,
         "avgPosRank": 12.89,
-        "pctOwned": 0.57,
+        "pctOwned": 0.599,
         "avgDraftPick": 44.1,
         "pfScore": 3.34,
         "ppgScore": 2.68,
         "rankScore": 13.73,
-        "ownedScore": 10.19,
+        "ownedScore": 13.63,
         "draftScore": 3.35,
-        "rating": 33.29
+        "rating": 36.73
       },
       {
         "owner": "Howard",
@@ -168543,14 +168203,14 @@
         "pf": 1616.58,
         "ppg": 107.77,
         "avgPosRank": 17.76,
-        "pctOwned": 0.491,
+        "pctOwned": 0.492,
         "avgDraftPick": 51.6,
         "pfScore": 0.0,
         "ppgScore": 0.0,
         "rankScore": 0.0,
-        "ownedScore": 0.37,
+        "ownedScore": 0.0,
         "draftScore": 0.0,
-        "rating": 0.37
+        "rating": 0.0
       }
     ],
     "2023": [
@@ -168564,14 +168224,14 @@
         "pf": 1964.16,
         "ppg": 130.94,
         "avgPosRank": 9.3,
-        "pctOwned": 0.662,
+        "pctOwned": 0.664,
         "avgDraftPick": 45.3,
         "pfScore": 23.62,
         "ppgScore": 18.89,
         "rankScore": 25.0,
-        "ownedScore": 18.87,
+        "ownedScore": 18.89,
         "draftScore": 5.71,
-        "rating": 92.09
+        "rating": 92.11
       },
       {
         "owner": "Ulises",
@@ -168588,9 +168248,9 @@
         "pfScore": 20.15,
         "ppgScore": 16.12,
         "rankScore": 11.56,
-        "ownedScore": 11.69,
+        "ownedScore": 11.53,
         "draftScore": 4.56,
-        "rating": 64.08
+        "rating": 63.92
       },
       {
         "owner": "Alex",
@@ -168626,9 +168286,9 @@
         "pfScore": 5.58,
         "ppgScore": 4.47,
         "rankScore": 15.41,
-        "ownedScore": 19.58,
+        "ownedScore": 19.31,
         "draftScore": 0.2,
-        "rating": 45.24
+        "rating": 44.97
       },
       {
         "owner": "Howard",
@@ -168640,14 +168300,14 @@
         "pf": 1936.28,
         "ppg": 129.09,
         "avgPosRank": 11.95,
-        "pctOwned": 0.536,
+        "pctOwned": 0.544,
         "avgDraftPick": 53.7,
         "pfScore": 21.32,
         "ppgScore": 17.06,
         "rankScore": 3.28,
-        "ownedScore": 1.13,
+        "ownedScore": 2.22,
         "draftScore": 0.0,
-        "rating": 42.79
+        "rating": 43.88
       },
       {
         "owner": "Justin",
@@ -168664,9 +168324,9 @@
         "pfScore": 5.29,
         "ppgScore": 4.23,
         "rankScore": 10.9,
-        "ownedScore": 15.49,
+        "ownedScore": 15.28,
         "draftScore": 5.37,
-        "rating": 41.28
+        "rating": 41.07
       },
       {
         "owner": "Luke",
@@ -168678,14 +168338,14 @@
         "pf": 1739.96,
         "ppg": 116.0,
         "avgPosRank": 12.35,
-        "pctOwned": 0.572,
+        "pctOwned": 0.588,
         "avgDraftPick": 39.0,
         "pfScore": 5.11,
         "ppgScore": 4.09,
         "rankScore": 0.0,
-        "ownedScore": 6.2,
+        "ownedScore": 8.33,
         "draftScore": 10.0,
-        "rating": 25.4
+        "rating": 27.53
       },
       {
         "owner": "Joshua",
@@ -168697,7 +168357,7 @@
         "pf": 1678.08,
         "ppg": 111.87,
         "avgPosRank": 11.93,
-        "pctOwned": 0.67,
+        "pctOwned": 0.672,
         "avgDraftPick": 52.3,
         "pfScore": 0.0,
         "ppgScore": 0.0,
@@ -168719,13 +168379,13 @@
         "ppg": 134.66,
         "avgPosRank": 9.09,
         "pctOwned": 0.685,
-        "avgDraftPick": 50.4,
+        "avgDraftPick": 51.0,
         "pfScore": 23.37,
         "ppgScore": 18.7,
         "rankScore": 25.0,
         "ownedScore": 20.0,
-        "draftScore": 3.13,
-        "rating": 90.2
+        "draftScore": 2.43,
+        "rating": 89.5
       },
       {
         "owner": "Alex",
@@ -168737,14 +168397,14 @@
         "pf": 2039.02,
         "ppg": 135.93,
         "avgPosRank": 10.36,
-        "pctOwned": 0.614,
-        "avgDraftPick": 40.5,
+        "pctOwned": 0.655,
+        "avgDraftPick": 38.7,
         "pfScore": 25.0,
         "ppgScore": 20.0,
         "rankScore": 18.89,
-        "ownedScore": 13.72,
-        "draftScore": 8.21,
-        "rating": 85.82
+        "ownedScore": 17.29,
+        "draftScore": 7.11,
+        "rating": 88.29
       },
       {
         "owner": "Luke",
@@ -168757,13 +168417,13 @@
         "ppg": 124.57,
         "avgPosRank": 11.05,
         "pctOwned": 0.64,
-        "avgDraftPick": 55.1,
+        "avgDraftPick": 54.5,
         "pfScore": 10.44,
         "ppgScore": 8.35,
         "rankScore": 15.58,
-        "ownedScore": 16.02,
-        "draftScore": 0.72,
-        "rating": 51.11
+        "ownedScore": 15.93,
+        "draftScore": 1.1,
+        "rating": 51.4
       },
       {
         "owner": "Sean",
@@ -168775,8 +168435,8 @@
         "pf": 1975.22,
         "ppg": 131.68,
         "avgPosRank": 13.43,
-        "pctOwned": 0.459,
-        "avgDraftPick": 37.0,
+        "pctOwned": 0.464,
+        "avgDraftPick": 31.1,
         "pfScore": 19.55,
         "ppgScore": 15.64,
         "rankScore": 4.13,
@@ -168793,15 +168453,15 @@
         "ties": 0,
         "pf": 1827.52,
         "ppg": 121.83,
-        "avgPosRank": 10.93,
-        "pctOwned": 0.611,
-        "avgDraftPick": 53.2,
+        "avgPosRank": 10.76,
+        "pctOwned": 0.63,
+        "avgDraftPick": 52.7,
         "pfScore": 6.93,
         "ppgScore": 5.54,
-        "rankScore": 16.15,
-        "ownedScore": 13.45,
-        "draftScore": 1.69,
-        "rating": 43.76
+        "rankScore": 16.97,
+        "ownedScore": 15.02,
+        "draftScore": 1.79,
+        "rating": 46.25
       },
       {
         "owner": "Joshua",
@@ -168813,14 +168473,14 @@
         "pf": 1746.4,
         "ppg": 116.43,
         "avgPosRank": 11.17,
-        "pctOwned": 0.664,
+        "pctOwned": 0.684,
         "avgDraftPick": 48.8,
         "pfScore": 0.0,
         "ppgScore": 0.0,
         "rankScore": 15.0,
-        "ownedScore": 18.14,
-        "draftScore": 3.95,
-        "rating": 37.09
+        "ownedScore": 19.91,
+        "draftScore": 3.27,
+        "rating": 38.18
       },
       {
         "owner": "Matthew",
@@ -168832,14 +168492,14 @@
         "pf": 1836.96,
         "ppg": 122.46,
         "avgPosRank": 12.73,
-        "pctOwned": 0.525,
-        "avgDraftPick": 44.3,
+        "pctOwned": 0.544,
+        "avgDraftPick": 43.1,
         "pfScore": 7.74,
         "ppgScore": 6.18,
         "rankScore": 7.5,
-        "ownedScore": 5.84,
-        "draftScore": 6.26,
-        "rating": 33.52
+        "ownedScore": 7.24,
+        "draftScore": 5.44,
+        "rating": 34.1
       },
       {
         "owner": "Howard",
@@ -168851,14 +168511,14 @@
         "pf": 1806.34,
         "ppg": 120.42,
         "avgPosRank": 14.29,
-        "pctOwned": 0.536,
-        "avgDraftPick": 56.5,
+        "pctOwned": 0.553,
+        "avgDraftPick": 57.4,
         "pfScore": 5.12,
         "ppgScore": 4.09,
         "rankScore": 0.0,
-        "ownedScore": 6.81,
+        "ownedScore": 8.05,
         "draftScore": 0.0,
-        "rating": 16.02
+        "rating": 17.26
       }
     ],
     "2025": [
@@ -168872,14 +168532,14 @@
         "pf": 1913.5,
         "ppg": 127.57,
         "avgPosRank": 9.83,
-        "pctOwned": 0.649,
+        "pctOwned": 0.653,
         "avgDraftPick": 47.6,
         "pfScore": 23.15,
         "ppgScore": 18.52,
         "rankScore": 25.0,
-        "ownedScore": 7.88,
+        "ownedScore": 6.79,
         "draftScore": 10.0,
-        "rating": 84.55
+        "rating": 83.46
       },
       {
         "owner": "Luke",
@@ -168896,9 +168556,9 @@
         "pfScore": 22.84,
         "ppgScore": 18.27,
         "rankScore": 16.6,
-        "ownedScore": 15.1,
-        "draftScore": 7.0,
-        "rating": 79.81
+        "ownedScore": 14.51,
+        "draftScore": 6.93,
+        "rating": 79.15
       },
       {
         "owner": "Sean",
@@ -168910,14 +168570,14 @@
         "pf": 1944.6,
         "ppg": 129.64,
         "avgPosRank": 14.54,
-        "pctOwned": 0.59,
+        "pctOwned": 0.591,
         "avgDraftPick": 58.8,
         "pfScore": 25.0,
         "ppgScore": 20.0,
         "rankScore": 8.65,
-        "ownedScore": 2.99,
-        "draftScore": 6.77,
-        "rating": 63.41
+        "ownedScore": 1.02,
+        "draftScore": 6.7,
+        "rating": 61.37
       },
       {
         "owner": "Justin",
@@ -168934,9 +168594,9 @@
         "pfScore": 14.74,
         "ppgScore": 11.79,
         "rankScore": 15.63,
-        "ownedScore": 10.04,
-        "draftScore": 8.93,
-        "rating": 61.13
+        "ownedScore": 8.84,
+        "draftScore": 8.91,
+        "rating": 59.91
       },
       {
         "owner": "Ulises",
@@ -168948,14 +168608,14 @@
         "pf": 1879.26,
         "ppg": 125.28,
         "avgPosRank": 13.08,
-        "pctOwned": 0.611,
-        "avgDraftPick": 68.4,
+        "pctOwned": 0.609,
+        "avgDraftPick": 68.2,
         "pfScore": 21.12,
         "ppgScore": 16.89,
         "rankScore": 13.72,
-        "ownedScore": 4.73,
-        "draftScore": 4.01,
-        "rating": 60.47
+        "ownedScore": 2.7,
+        "draftScore": 3.92,
+        "rating": 58.35
       },
       {
         "owner": "Alex",
@@ -168967,14 +168627,14 @@
         "pf": 1812.52,
         "ppg": 120.83,
         "avgPosRank": 13.48,
-        "pctOwned": 0.573,
-        "avgDraftPick": 57.5,
+        "pctOwned": 0.587,
+        "avgDraftPick": 56.6,
         "pfScore": 17.15,
         "ppgScore": 13.71,
         "rankScore": 12.33,
-        "ownedScore": 1.58,
-        "draftScore": 7.15,
-        "rating": 51.92
+        "ownedScore": 0.65,
+        "draftScore": 7.35,
+        "rating": 51.19
       },
       {
         "owner": "Aiden",
@@ -168987,7 +168647,7 @@
         "ppg": 107.75,
         "avgPosRank": 14.45,
         "pctOwned": 0.795,
-        "avgDraftPick": 82.3,
+        "avgDraftPick": 81.5,
         "pfScore": 5.48,
         "ppgScore": 4.38,
         "rankScore": 8.96,
@@ -169005,14 +168665,33 @@
         "pf": 1738.46,
         "ppg": 115.9,
         "avgPosRank": 17.03,
-        "pctOwned": 0.554,
+        "pctOwned": 0.58,
         "avgDraftPick": 54.9,
         "pfScore": 12.74,
         "ppgScore": 10.2,
         "rankScore": 0.0,
         "ownedScore": 0.0,
-        "draftScore": 7.9,
-        "rating": 30.84
+        "draftScore": 7.85,
+        "rating": 30.79
+      },
+      {
+        "owner": "Joshua",
+        "team": "Bad news bombers",
+        "record": "3-12",
+        "wins": 3,
+        "losses": 12,
+        "ties": 0,
+        "pf": 1524.1,
+        "ppg": 101.61,
+        "avgPosRank": 16.41,
+        "pctOwned": 0.689,
+        "avgDraftPick": 80.9,
+        "pfScore": 0.0,
+        "ppgScore": 0.0,
+        "rankScore": 2.15,
+        "ownedScore": 10.14,
+        "draftScore": 0.18,
+        "rating": 12.47
       },
       {
         "owner": "Howard",
@@ -169029,28 +168708,9 @@
         "pfScore": 2.87,
         "ppgScore": 2.29,
         "rankScore": 2.36,
-        "ownedScore": 2.74,
-        "draftScore": 2.8,
-        "rating": 13.06
-      },
-      {
-        "owner": "Joshua",
-        "team": "Bad news bombers",
-        "record": "3-12",
-        "wins": 3,
-        "losses": 12,
-        "ties": 0,
-        "pf": 1524.1,
-        "ppg": 101.61,
-        "avgPosRank": 16.41,
-        "pctOwned": 0.624,
-        "avgDraftPick": 80.9,
-        "pfScore": 0.0,
-        "ppgScore": 0.0,
-        "rankScore": 2.15,
-        "ownedScore": 5.81,
-        "draftScore": 0.4,
-        "rating": 8.36
+        "ownedScore": 0.65,
+        "draftScore": 2.63,
+        "rating": 10.8
       }
     ],
     "2026": [
@@ -169063,15 +168723,15 @@
         "ties": 0,
         "pf": 1063.52,
         "ppg": 132.94,
-        "avgPosRank": 10.33,
-        "pctOwned": 0.74,
+        "avgPosRank": 10.04,
+        "pctOwned": 0.771,
         "avgDraftPick": 6.4,
         "pfScore": 25.0,
         "ppgScore": 20.0,
-        "rankScore": 21.61,
-        "ownedScore": 12.68,
+        "rankScore": 22.45,
+        "ownedScore": 14.77,
         "draftScore": 3.46,
-        "rating": 82.75
+        "rating": 85.68
       },
       {
         "owner": "Luke",
@@ -169101,15 +168761,15 @@
         "ties": 0,
         "pf": 1057.28,
         "ppg": 132.16,
-        "avgPosRank": 10.5,
+        "avgPosRank": 10.49,
         "pctOwned": 0.647,
         "avgDraftPick": 5.1,
         "pfScore": 24.5,
         "ppgScore": 19.6,
-        "rankScore": 21.13,
+        "rankScore": 21.2,
         "ownedScore": 6.44,
         "draftScore": 8.46,
-        "rating": 80.13
+        "rating": 80.2
       },
       {
         "owner": "Ulises",
@@ -169125,10 +168785,10 @@
         "avgDraftPick": 5.4,
         "pfScore": 17.07,
         "ppgScore": 13.66,
-        "rankScore": 17.29,
+        "rankScore": 17.38,
         "ownedScore": 20.0,
         "draftScore": 7.31,
-        "rating": 75.33
+        "rating": 75.42
       },
       {
         "owner": "Justin",
@@ -169139,15 +168799,15 @@
         "ties": 0,
         "pf": 975.2,
         "ppg": 121.9,
-        "avgPosRank": 11.75,
-        "pctOwned": 0.659,
+        "avgPosRank": 11.74,
+        "pctOwned": 0.683,
         "avgDraftPick": 5.9,
         "pfScore": 17.98,
         "ppgScore": 14.38,
-        "rankScore": 17.63,
-        "ownedScore": 7.25,
+        "rankScore": 17.74,
+        "ownedScore": 8.86,
         "draftScore": 5.38,
-        "rating": 62.62
+        "rating": 64.34
       },
       {
         "owner": "Joshua",
@@ -169158,15 +168818,15 @@
         "ties": 0,
         "pf": 916.9,
         "ppg": 114.61,
-        "avgPosRank": 12.15,
+        "avgPosRank": 12.12,
         "pctOwned": 0.824,
         "avgDraftPick": 7.3,
         "pfScore": 13.35,
         "ppgScore": 10.68,
-        "rankScore": 16.51,
+        "rankScore": 16.69,
         "ownedScore": 18.32,
         "draftScore": 0.0,
-        "rating": 58.86
+        "rating": 59.04
       },
       {
         "owner": "Alex",
@@ -169177,15 +168837,15 @@
         "ties": 0,
         "pf": 892.72,
         "ppg": 111.59,
-        "avgPosRank": 14.01,
+        "avgPosRank": 14.03,
         "pctOwned": 0.646,
         "avgDraftPick": 4.8,
         "pfScore": 11.42,
         "ppgScore": 9.14,
-        "rankScore": 11.29,
+        "rankScore": 11.39,
         "ownedScore": 6.38,
         "draftScore": 9.62,
-        "rating": 47.85
+        "rating": 47.95
       },
       {
         "owner": "Aiden",
@@ -169196,15 +168856,15 @@
         "ties": 0,
         "pf": 942.08,
         "ppg": 117.76,
-        "avgPosRank": 14.78,
+        "avgPosRank": 14.79,
         "pctOwned": 0.65,
         "avgDraftPick": 6.7,
         "pfScore": 15.35,
         "ppgScore": 12.28,
-        "rankScore": 9.14,
+        "rankScore": 9.28,
         "ownedScore": 6.64,
         "draftScore": 2.31,
-        "rating": 45.72
+        "rating": 45.86
       },
       {
         "owner": "Sean",
@@ -169215,15 +168875,15 @@
         "ties": 0,
         "pf": 918.44,
         "ppg": 114.81,
-        "avgPosRank": 17.18,
+        "avgPosRank": 17.14,
         "pctOwned": 0.551,
         "avgDraftPick": 5.5,
         "pfScore": 13.47,
         "ppgScore": 10.78,
-        "rankScore": 2.41,
+        "rankScore": 2.77,
         "ownedScore": 0.0,
         "draftScore": 6.92,
-        "rating": 33.58
+        "rating": 33.94
       },
       {
         "owner": "Howard",
@@ -169234,7 +168894,7 @@
         "ties": 0,
         "pf": 748.98,
         "ppg": 93.62,
-        "avgPosRank": 18.04,
+        "avgPosRank": 18.14,
         "pctOwned": 0.71,
         "avgDraftPick": 4.7,
         "pfScore": 0.0,
@@ -185191,12 +184851,12 @@
       ]
     },
     "WR|evans|mike": {
-      "display": "Mike Evans",
+      "display": "M. Evans",
       "pos": "WR",
       "team": "SF",
-      "totalPoints": 1115.1,
-      "starts": 68,
-      "benchApps": 28,
+      "totalPoints": 1123.5,
+      "starts": 69,
+      "benchApps": 49,
       "weekHigh": 45.0,
       "weekHighInfo": {
         "year": 2019,
@@ -185204,7 +184864,7 @@
         "owner": "Aiden",
         "points": 45.0
       },
-      "avgPerStart": 16.4,
+      "avgPerStart": 16.28,
       "owners": [
         "Aiden",
         "Alex",
@@ -185442,7 +185102,7 @@
       ]
     },
     "QB|wilson|russell": {
-      "display": "Russell Wilson",
+      "display": "R. Wilson",
       "pos": "QB",
       "team": "NYG",
       "totalPoints": 712.46,
@@ -185983,7 +185643,7 @@
       "fullName": "Dak Prescott"
     },
     "RB|elliott|ezekiel": {
-      "display": "Ezekiel Elliott",
+      "display": "E. Elliott",
       "pos": "RB",
       "team": "LAC",
       "totalPoints": 813.16,
@@ -186902,7 +186562,7 @@
       "fullName": "John Ross"
     },
     "RB|mostert|raheem": {
-      "display": "Raheem Mostert",
+      "display": "R. Mostert",
       "pos": "RB",
       "team": "LV",
       "totalPoints": 313.0,
@@ -186992,7 +186652,7 @@
       "fullName": "Zane Gonzalez"
     },
     "WR|robinson|demarcus": {
-      "display": "Demarcus Robinson",
+      "display": "D. Robinson",
       "pos": "WR",
       "team": "SF",
       "totalPoints": 0.0,
@@ -187938,35 +187598,6 @@
       ],
       "espnId": 3121023,
       "fullName": "Dallas Goedert"
-    },
-    "WR|evans|M": {
-      "display": "M. Evans",
-      "pos": "WR",
-      "team": "SF",
-      "totalPoints": 8.4,
-      "starts": 1,
-      "benchApps": 18,
-      "weekHigh": 8.4,
-      "weekHighInfo": {
-        "year": 2026,
-        "week": 2,
-        "owner": "Todd",
-        "points": 8.4
-      },
-      "avgPerStart": 8.4,
-      "owners": [
-        "Todd"
-      ],
-      "seasons": [
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025,
-        2026
-      ]
     },
     "QB|stafford|matthew": {
       "display": "Matthew Stafford",
@@ -189982,7 +189613,7 @@
       "fullName": "Justin Herbert"
     },
     "RB|mattison|alexander": {
-      "display": "Alexander Mattison",
+      "display": "A. Mattison",
       "pos": "RB",
       "team": "MIA",
       "totalPoints": 152.1,
@@ -190512,7 +190143,7 @@
       "team": "DAL",
       "totalPoints": 112.2,
       "starts": 10,
-      "benchApps": 15,
+      "benchApps": 17,
       "weekHigh": 24.4,
       "weekHighInfo": {
         "year": 2022,
@@ -190532,7 +190163,8 @@
         2021,
         2022,
         2023,
-        2024
+        2024,
+        2025
       ]
     },
     "RB|dallas|deejay": {
@@ -190837,12 +190469,12 @@
       ]
     },
     "WR|johnson|diontae": {
-      "display": "Diontae Johnson",
+      "display": "D. Johnson",
       "pos": "WR",
       "team": "CLE",
-      "totalPoints": 368.2,
-      "starts": 25,
-      "benchApps": 15,
+      "totalPoints": 392.9,
+      "starts": 27,
+      "benchApps": 32,
       "weekHigh": 30.5,
       "weekHighInfo": {
         "year": 2021,
@@ -190850,7 +190482,7 @@
         "owner": "Matthew",
         "points": 30.5
       },
-      "avgPerStart": 14.73,
+      "avgPerStart": 14.55,
       "owners": [
         "Howard",
         "Joshua",
@@ -190860,6 +190492,7 @@
         2020,
         2021,
         2022,
+        2023,
         2024
       ],
       "espnId": 3932905,
@@ -190965,7 +190598,7 @@
       "team": "DAL",
       "totalPoints": 477.4,
       "starts": 32,
-      "benchApps": 16,
+      "benchApps": 15,
       "weekHigh": 31.3,
       "weekHighInfo": {
         "year": 2026,
@@ -190985,7 +190618,6 @@
         2021,
         2022,
         2023,
-        2024,
         2025,
         2026
       ],
@@ -191363,31 +190995,6 @@
       ],
       "espnId": 4035687,
       "fullName": "Michael Pittman Jr."
-    },
-    "WR|johnson|D": {
-      "display": "D. Johnson",
-      "pos": "WR",
-      "team": "CLE",
-      "totalPoints": 24.7,
-      "starts": 2,
-      "benchApps": 15,
-      "weekHigh": 22.0,
-      "weekHighInfo": {
-        "year": 2023,
-        "week": 9,
-        "owner": "Howard",
-        "points": 22.0
-      },
-      "avgPerStart": 12.35,
-      "owners": [
-        "Howard"
-      ],
-      "seasons": [
-        2021,
-        2022,
-        2023,
-        2024
-      ]
     },
     "TE|knox|dawson": {
       "display": "Dawson Knox",
@@ -192434,12 +192041,12 @@
       "fullName": "Trey Lance"
     },
     "RB|etienne|travis": {
-      "display": "Travis Etienne",
+      "display": "T. Etienne",
       "pos": "RB",
       "team": "NO",
       "totalPoints": 641.7,
       "starts": 44,
-      "benchApps": 10,
+      "benchApps": 22,
       "weekHigh": 36.4,
       "weekHighInfo": {
         "year": 2023,
@@ -192973,7 +192580,7 @@
       "fullName": "Devin Duvernay"
     },
     "QB|smith|geno": {
-      "display": "Geno Smith",
+      "display": "G. Smith",
       "pos": "QB",
       "team": "LV",
       "totalPoints": 55.68,
@@ -193034,17 +192641,17 @@
       "display": "Brian Robinson",
       "pos": "RB",
       "team": "ATL",
-      "totalPoints": 61.0,
-      "starts": 8,
+      "totalPoints": 176.9,
+      "starts": 17,
       "benchApps": 17,
-      "weekHigh": 20.2,
+      "weekHigh": 20.3,
       "weekHighInfo": {
-        "year": 2023,
-        "week": 11,
-        "owner": "Matthew",
-        "points": 20.2
+        "year": 2024,
+        "week": 4,
+        "owner": "Aiden",
+        "points": 20.3
       },
-      "avgPerStart": 7.62,
+      "avgPerStart": 10.41,
       "owners": [
         "Aiden",
         "Alex",
@@ -193232,24 +192839,6 @@
       ],
       "espnId": 4367209,
       "fullName": "Greg Dulcich"
-    },
-    "RB|etienne|T": {
-      "display": "T. Etienne",
-      "pos": "RB",
-      "team": "NO",
-      "totalPoints": 0.0,
-      "starts": 0,
-      "benchApps": 11,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [],
-      "seasons": [
-        2022,
-        2023,
-        2024,
-        2026
-      ]
     },
     "WR|toney|kadarius": {
       "display": "Kadarius Toney",
@@ -193551,24 +193140,18 @@
       "display": "B. Robinson",
       "pos": "RB",
       "team": "ATL",
-      "totalPoints": 115.9,
-      "starts": 9,
-      "benchApps": 10,
-      "weekHigh": 20.3,
-      "weekHighInfo": {
-        "year": 2024,
-        "week": 4,
-        "owner": "Aiden",
-        "points": 20.3
-      },
-      "avgPerStart": 12.88,
-      "owners": [
-        "Aiden"
-      ],
+      "totalPoints": 0.0,
+      "starts": 0,
+      "benchApps": 14,
+      "weekHigh": 0.0,
+      "weekHighInfo": null,
+      "avgPerStart": 0.0,
+      "owners": [],
       "seasons": [
         2022,
         2023,
         2024,
+        2025,
         2026
       ]
     },
@@ -193723,7 +193306,7 @@
       "team": "ATL",
       "totalPoints": 1020.1,
       "starts": 55,
-      "benchApps": 5,
+      "benchApps": 1,
       "weekHigh": 39.9,
       "weekHighInfo": {
         "year": 2025,
@@ -194691,22 +194274,23 @@
       "espnId": 4361777,
       "fullName": "Zamir White"
     },
-    "RB|brooks|jalen": {
-      "display": "Jalen Brooks",
+    "RB|brooks|jonathon": {
+      "display": "J. Brooks",
       "pos": "RB",
       "team": "CAR",
       "totalPoints": 0.0,
       "starts": 0,
-      "benchApps": 8,
+      "benchApps": 21,
       "weekHigh": 0.0,
       "weekHighInfo": null,
       "avgPerStart": 0.0,
       "owners": [],
       "seasons": [
-        2024
+        2024,
+        2026
       ],
-      "espnId": 4692835,
-      "fullName": "Jalen Brooks"
+      "espnId": 4678008,
+      "fullName": "Jonathon Brooks"
     },
     "DEF||bengals": {
       "display": "Bengals DEF",
@@ -195248,22 +194832,6 @@
       "espnId": 4429025,
       "fullName": "Quentin Johnston"
     },
-    "RB|brooks|J": {
-      "display": "J. Brooks",
-      "pos": "RB",
-      "team": "CAR",
-      "totalPoints": 0.0,
-      "starts": 0,
-      "benchApps": 11,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [],
-      "seasons": [
-        2024,
-        2026
-      ]
-    },
     "QB|darnold|sam": {
       "display": "Sam Darnold",
       "pos": "QB",
@@ -195401,8 +194969,8 @@
       "espnId": 4362238,
       "fullName": "Chase Brown"
     },
-    "RB|sermon|trey": {
-      "display": "Trey Sermon",
+    "RB|sermon|T": {
+      "display": "T. Sermon",
       "pos": "RB",
       "team": "PIT",
       "totalPoints": 0.0,
@@ -195517,23 +195085,6 @@
       ],
       "espnId": 4569587,
       "fullName": "Wan'Dale Robinson"
-    },
-    "WR|johnson|d'ernest": {
-      "display": "D'Ernest Johnson",
-      "pos": "WR",
-      "team": "CLE",
-      "totalPoints": 0.0,
-      "starts": 0,
-      "benchApps": 2,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [],
-      "seasons": [
-        2024
-      ],
-      "espnId": 3139602,
-      "fullName": "D'Ernest Johnson"
     },
     "WR|coleman|keon": {
       "display": "K. Coleman",
@@ -195714,23 +195265,6 @@
       ],
       "espnId": 4369863,
       "fullName": "Cedric Tillman"
-    },
-    "RB|brooks|jonathon": {
-      "display": "Jonathon Brooks",
-      "pos": "RB",
-      "team": "CAR",
-      "totalPoints": 0.0,
-      "starts": 0,
-      "benchApps": 2,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [],
-      "seasons": [
-        2024
-      ],
-      "espnId": 4678008,
-      "fullName": "Jonathon Brooks"
     },
     "QB|daniels|J": {
       "display": "J. Daniels",
@@ -196498,23 +196032,6 @@
       "espnId": 4571557,
       "fullName": "Spencer Shrader"
     },
-    "WR|evans|mitchell": {
-      "display": "Mitchell Evans",
-      "pos": "WR",
-      "team": "TB",
-      "totalPoints": 0.0,
-      "starts": 0,
-      "benchApps": 3,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [],
-      "seasons": [
-        2025
-      ],
-      "espnId": 4683243,
-      "fullName": "Mitchell Evans"
-    },
     "WR|tucker|tre": {
       "display": "T. Tucker",
       "pos": "WR",
@@ -196787,23 +196304,6 @@
       "espnId": 4426948,
       "fullName": "Luke McCaffrey"
     },
-    "RB|etienne|trevor": {
-      "display": "Trevor Etienne",
-      "pos": "RB",
-      "team": "JAX",
-      "totalPoints": 0.0,
-      "starts": 0,
-      "benchApps": 1,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [],
-      "seasons": [
-        2025
-      ],
-      "espnId": 4685350,
-      "fullName": "Trevor Etienne"
-    },
     "K|wright|M": {
       "display": "M. Wright",
       "pos": "K",
@@ -196908,7 +196408,7 @@
       "team": "TB",
       "totalPoints": 9.3,
       "starts": 1,
-      "benchApps": 7,
+      "benchApps": 9,
       "weekHigh": 9.3,
       "weekHighInfo": {
         "year": 2025,
@@ -196951,21 +196451,6 @@
       ],
       "espnId": 4608686,
       "fullName": "Kyle Monangai"
-    },
-    "WR|johnson|T": {
-      "display": "T. Johnson",
-      "pos": "WR",
-      "team": "TB",
-      "totalPoints": 0.0,
-      "starts": 0,
-      "benchApps": 1,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [],
-      "seasons": [
-        2025
-      ]
     },
     "K|little|cam": {
       "display": "Cam Little",
@@ -197018,23 +196503,6 @@
       "espnId": 4432620,
       "fullName": "Parker Washington"
     },
-    "RB|williams|jameson": {
-      "display": "Jameson Williams",
-      "pos": "RB",
-      "team": "DAL",
-      "totalPoints": 0.0,
-      "starts": 0,
-      "benchApps": 1,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [],
-      "seasons": [
-        2025
-      ],
-      "espnId": 4426388,
-      "fullName": "Jameson Williams"
-    },
     "WR|washington|malik": {
       "display": "M. Washington",
       "pos": "WR",
@@ -197078,12 +196546,12 @@
       "fullName": "Joe Flacco"
     },
     "TE|johnson|theo": {
-      "display": "Theo Johnson",
+      "display": "T. Johnson",
       "pos": "TE",
       "team": "NYG",
       "totalPoints": 17.3,
       "starts": 2,
-      "benchApps": 3,
+      "benchApps": 5,
       "weekHigh": 10.7,
       "weekHighInfo": {
         "year": 2025,
@@ -197195,23 +196663,6 @@
       "espnId": 4682652,
       "fullName": "Devin Neal"
     },
-    "TE|johnson|ty": {
-      "display": "Ty Johnson",
-      "pos": "TE",
-      "team": "NYG",
-      "totalPoints": 0.0,
-      "starts": 0,
-      "benchApps": 1,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [],
-      "seasons": [
-        2025
-      ],
-      "espnId": 3915411,
-      "fullName": "Ty Johnson"
-    },
     "QB|sanders|shedeur": {
       "display": "Shedeur Sanders",
       "pos": "QB",
@@ -197235,23 +196686,6 @@
       ],
       "espnId": 4432762,
       "fullName": "Shedeur Sanders"
-    },
-    "WR|johnson|ty": {
-      "display": "Ty Johnson",
-      "pos": "WR",
-      "team": "TB",
-      "totalPoints": 0.0,
-      "starts": 0,
-      "benchApps": 1,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [],
-      "seasons": [
-        2025
-      ],
-      "espnId": 3915411,
-      "fullName": "Ty Johnson"
     },
     "RB|wilson|emanuel": {
       "display": "E. Wilson",
@@ -197303,21 +196737,6 @@
       ],
       "espnId": 4360689,
       "fullName": "Tyler Shough"
-    },
-    "TE|johnson|T": {
-      "display": "T. Johnson",
-      "pos": "TE",
-      "team": "NYG",
-      "totalPoints": 0.0,
-      "starts": 0,
-      "benchApps": 1,
-      "weekHigh": 0.0,
-      "weekHighInfo": null,
-      "avgPerStart": 0.0,
-      "owners": [],
-      "seasons": [
-        2025
-      ]
     },
     "WR|burden|luther": {
       "display": "L. Burden",
@@ -199438,12 +198857,12 @@
         "avgPerStart": 17.04
       },
       "WR|evans|mike": {
-        "display": "Mike Evans",
+        "display": "M. Evans",
         "pos": "WR",
         "team": "TB",
         "totalPoints": 129.9,
         "starts": 9,
-        "benchApps": 4,
+        "benchApps": 6,
         "weekHigh": 45.0,
         "weekHighInfo": {
           "year": 2019,
@@ -201214,18 +200633,6 @@
           "Luke"
         ],
         "avgPerStart": 16.5
-      },
-      "WR|evans|M": {
-        "display": "M. Evans",
-        "pos": "WR",
-        "team": "TB",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 2,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
       },
       "QB|stafford|matthew": {
         "display": "M. Stafford",
@@ -203786,7 +203193,7 @@
         "team": "TB",
         "totalPoints": 141.6,
         "starts": 7,
-        "benchApps": 8,
+        "benchApps": 9,
         "weekHigh": 40.1,
         "weekHighInfo": {
           "year": 2020,
@@ -205911,18 +205318,6 @@
         ],
         "avgPerStart": 8.43
       },
-      "WR|evans|M": {
-        "display": "M. Evans",
-        "pos": "WR",
-        "team": "TB",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
       "QB|cousins|kirk": {
         "display": "Kirk Cousins",
         "pos": "QB",
@@ -206972,7 +206367,7 @@
         "team": "TB",
         "totalPoints": 196.4,
         "starts": 13,
-        "benchApps": 2,
+        "benchApps": 4,
         "weekHigh": 31.6,
         "weekHighInfo": {
           "year": 2021,
@@ -207254,7 +206649,7 @@
         "team": "PIT",
         "totalPoints": 262.3,
         "starts": 15,
-        "benchApps": 0,
+        "benchApps": 2,
         "weekHigh": 30.5,
         "weekHighInfo": {
           "year": 2021,
@@ -208509,18 +207904,6 @@
         ],
         "avgPerStart": 13.41
       },
-      "WR|johnson|D": {
-        "display": "D. Johnson",
-        "pos": "WR",
-        "team": "PIT",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 2,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
       "WR|shepard|sterling": {
         "display": "S. Shepard",
         "pos": "WR",
@@ -209278,18 +208661,6 @@
           "Luke"
         ],
         "avgPerStart": 4.0
-      },
-      "WR|evans|M": {
-        "display": "M. Evans",
-        "pos": "WR",
-        "team": "TB",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 2,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
       },
       "QB|rodgers|A": {
         "display": "A. Rodgers",
@@ -210542,7 +209913,7 @@
         "team": "TB",
         "totalPoints": 134.1,
         "starts": 9,
-        "benchApps": 6,
+        "benchApps": 8,
         "weekHigh": 30.3,
         "weekHighInfo": {
           "year": 2022,
@@ -211176,7 +210547,7 @@
         "team": "PIT",
         "totalPoints": 82.1,
         "starts": 8,
-        "benchApps": 8,
+        "benchApps": 9,
         "weekHigh": 16.4,
         "weekHighInfo": {
           "year": 2022,
@@ -211846,7 +211217,7 @@
         "team": "JAX",
         "totalPoints": 142.0,
         "starts": 10,
-        "benchApps": 3,
+        "benchApps": 4,
         "weekHigh": 26.6,
         "weekHighInfo": {
           "year": 2022,
@@ -212457,18 +211828,6 @@
           "Matthew"
         ],
         "avgPerStart": 10.19
-      },
-      "WR|evans|M": {
-        "display": "M. Evans",
-        "pos": "WR",
-        "team": "TB",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 2,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
       },
       "TE|freiermuth|pat": {
         "display": "Pat Freiermuth",
@@ -213412,18 +212771,6 @@
         ],
         "avgPerStart": 5.6
       },
-      "WR|johnson|D": {
-        "display": "D. Johnson",
-        "pos": "WR",
-        "team": "PIT",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
       "QB|fields|justin": {
         "display": "Justin Fields",
         "pos": "QB",
@@ -213619,18 +212966,6 @@
           "Alex"
         ],
         "avgPerStart": 9.0
-      },
-      "RB|etienne|T": {
-        "display": "T. Etienne",
-        "pos": "RB",
-        "team": "JAX",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
       },
       "WR|toney|kadarius": {
         "display": "Kadarius Toney",
@@ -214254,7 +213589,7 @@
         ],
         "avgPerStart": 24.23
       },
-      "WR|johnson|D": {
+      "WR|johnson|diontae": {
         "display": "D. Johnson",
         "pos": "WR",
         "team": "CAR",
@@ -214395,7 +213730,7 @@
         "team": "JAX",
         "totalPoints": 268.7,
         "starts": 16,
-        "benchApps": 0,
+        "benchApps": 1,
         "weekHigh": 36.4,
         "weekHighInfo": {
           "year": 2023,
@@ -215081,7 +214416,7 @@
         "team": "TB",
         "totalPoints": 224.2,
         "starts": 12,
-        "benchApps": 4,
+        "benchApps": 5,
         "weekHigh": 29.2,
         "weekHighInfo": {
           "year": 2023,
@@ -216975,18 +216310,6 @@
         ],
         "avgPerStart": 2.7
       },
-      "WR|evans|M": {
-        "display": "M. Evans",
-        "pos": "WR",
-        "team": "TB",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
       "WR|brown|M": {
         "display": "M. Brown",
         "pos": "WR",
@@ -217455,18 +216778,6 @@
         "display": "J. Williams",
         "pos": "RB",
         "team": "DEN",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
-      "RB|etienne|T": {
-        "display": "T. Etienne",
-        "pos": "RB",
-        "team": "JAX",
         "totalPoints": 0.0,
         "starts": 0,
         "benchApps": 1,
@@ -218032,7 +217343,7 @@
         "avgPerStart": 12.98
       },
       "WR|kupp|cooper": {
-        "display": "Cooper Kupp",
+        "display": "C. Kupp",
         "pos": "WR",
         "team": "SEA",
         "totalPoints": 150.9,
@@ -218187,7 +217498,7 @@
         "avgPerStart": 16.66
       },
       "WR|pickens|george": {
-        "display": "George Pickens",
+        "display": "G. Pickens",
         "pos": "WR",
         "team": "DAL",
         "totalPoints": 74.0,
@@ -218225,13 +217536,13 @@
         ],
         "avgPerStart": 4.67
       },
-      "RB|brooks|jalen": {
-        "display": "Jalen Brooks",
+      "RB|brooks|jonathon": {
+        "display": "Jonathon Brooks",
         "pos": "RB",
         "team": "CAR",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 8,
+        "benchApps": 13,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -218366,7 +217677,7 @@
         "avgPerStart": 12.7
       },
       "WR|samuel|deebo": {
-        "display": "Deebo Samuel",
+        "display": "D. Samuel",
         "pos": "WR",
         "team": "WAS",
         "totalPoints": 105.0,
@@ -218424,7 +217735,7 @@
         "avgPerStart": 5.9
       },
       "TE|engram|evan": {
-        "display": "Evan Engram",
+        "display": "E. Engram",
         "pos": "TE",
         "team": "DEN",
         "totalPoints": 39.9,
@@ -218558,7 +217869,7 @@
         "avgPerStart": 9.29
       },
       "QB|fields|justin": {
-        "display": "Justin Fields",
+        "display": "J. Fields",
         "pos": "QB",
         "team": "NYJ",
         "totalPoints": 11.94,
@@ -218615,7 +217926,7 @@
         "avgPerStart": 22.21
       },
       "WR|adams|davante": {
-        "display": "Davante Adams",
+        "display": "D. Adams",
         "pos": "WR",
         "team": "LAR",
         "totalPoints": 211.1,
@@ -219033,7 +218344,7 @@
         "avgPerStart": 0.0
       },
       "WR|metcalf|dk": {
-        "display": "DK Metcalf",
+        "display": "D. Metcalf",
         "pos": "WR",
         "team": "PIT",
         "totalPoints": 94.9,
@@ -219124,7 +218435,7 @@
         "avgPerStart": 18.2
       },
       "RB|mason|jordan": {
-        "display": "Jordan Mason",
+        "display": "J. Mason",
         "pos": "RB",
         "team": "MIN",
         "totalPoints": 94.2,
@@ -219168,7 +218479,7 @@
         "team": "TB",
         "totalPoints": 190.0,
         "starts": 10,
-        "benchApps": 3,
+        "benchApps": 7,
         "weekHigh": 36.9,
         "weekHighInfo": {
           "year": 2024,
@@ -219419,7 +218730,7 @@
         "team": "JAX",
         "totalPoints": 58.1,
         "starts": 6,
-        "benchApps": 2,
+        "benchApps": 4,
         "weekHigh": 14.8,
         "weekHighInfo": {
           "year": 2024,
@@ -219587,7 +218898,7 @@
         "avgPerStart": 13.7
       },
       "WR|kirk|christian": {
-        "display": "Christian Kirk",
+        "display": "C. Kirk",
         "pos": "WR",
         "team": "HOU",
         "totalPoints": 0.0,
@@ -219719,7 +219030,7 @@
         "avgPerStart": 16.36
       },
       "WR|diggs|stefon": {
-        "display": "Stefon Diggs",
+        "display": "S. Diggs",
         "pos": "WR",
         "team": "NE",
         "totalPoints": 121.92,
@@ -219738,12 +219049,12 @@
         "avgPerStart": 15.24
       },
       "WR|johnson|diontae": {
-        "display": "Diontae Johnson",
+        "display": "D. Johnson",
         "pos": "WR",
         "team": "CLE",
         "totalPoints": 3.9,
         "starts": 1,
-        "benchApps": 2,
+        "benchApps": 11,
         "weekHigh": 3.9,
         "weekHighInfo": {
           "year": 2024,
@@ -219836,7 +219147,7 @@
         "avgPerStart": 0.33
       },
       "RB|elliott|ezekiel": {
-        "display": "Ezekiel Elliott",
+        "display": "E. Elliott",
         "pos": "RB",
         "team": "LAC",
         "totalPoints": 5.2,
@@ -219988,7 +219299,7 @@
         "team": "ATL",
         "totalPoints": 310.4,
         "starts": 16,
-        "benchApps": 4,
+        "benchApps": 0,
         "weekHigh": 29.4,
         "weekHighInfo": {
           "year": 2024,
@@ -220136,7 +219447,7 @@
         "avgPerStart": 7.5
       },
       "RB|harris|najee": {
-        "display": "Najee Harris",
+        "display": "N. Harris",
         "pos": "RB",
         "team": "LAC",
         "totalPoints": 59.4,
@@ -220199,7 +219510,7 @@
         "avgPerStart": 0.0
       },
       "WR|lockett|tyler": {
-        "display": "Tyler Lockett",
+        "display": "T. Lockett",
         "pos": "WR",
         "team": "TEN",
         "totalPoints": 0.0,
@@ -220286,12 +219597,12 @@
         ],
         "avgPerStart": 20.1
       },
-      "RB|robinson|B": {
-        "display": "B. Robinson",
+      "RB|robinson|brian": {
+        "display": "Brian Robinson",
         "pos": "RB",
         "team": "WAS",
-        "totalPoints": 115.9,
-        "starts": 9,
+        "totalPoints": 119.3,
+        "starts": 10,
         "benchApps": 2,
         "weekHigh": 20.3,
         "weekHighInfo": {
@@ -220303,7 +219614,7 @@
         "owners": [
           "Aiden"
         ],
-        "avgPerStart": 12.88
+        "avgPerStart": 11.93
       },
       "WR|mccloud|ray-ray": {
         "display": "Ray-Ray McCloud",
@@ -220362,18 +219673,6 @@
           "Howard"
         ],
         "avgPerStart": 8.73
-      },
-      "WR|johnson|D": {
-        "display": "D. Johnson",
-        "pos": "WR",
-        "team": "CLE",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 7,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
       },
       "TE|likely|isaiah": {
         "display": "Isaiah Likely",
@@ -220434,7 +219733,7 @@
         "avgPerStart": 1.2
       },
       "WR|robinson|demarcus": {
-        "display": "Demarcus Robinson",
+        "display": "D. Robinson",
         "pos": "WR",
         "team": "SF",
         "totalPoints": 0.0,
@@ -220451,7 +219750,7 @@
         "team": "DAL",
         "totalPoints": 16.2,
         "starts": 3,
-        "benchApps": 11,
+        "benchApps": 12,
         "weekHigh": 9.2,
         "weekHighInfo": {
           "year": 2024,
@@ -220570,7 +219869,7 @@
         "avgPerStart": 0.0
       },
       "RB|mostert|raheem": {
-        "display": "Raheem Mostert",
+        "display": "R. Mostert",
         "pos": "RB",
         "team": "LV",
         "totalPoints": 8.8,
@@ -220657,20 +219956,8 @@
         "owners": [],
         "avgPerStart": 0.0
       },
-      "RB|brooks|J": {
-        "display": "J. Brooks",
-        "pos": "RB",
-        "team": "CAR",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 3,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
       "QB|darnold|sam": {
-        "display": "Sam Darnold",
+        "display": "S. Darnold",
         "pos": "QB",
         "team": "SEA",
         "totalPoints": 208.08,
@@ -220911,8 +220198,8 @@
         ],
         "avgPerStart": 19.32
       },
-      "RB|sermon|trey": {
-        "display": "Trey Sermon",
+      "RB|sermon|T": {
+        "display": "T. Sermon",
         "pos": "RB",
         "team": "PIT",
         "totalPoints": 0.0,
@@ -220941,6 +220228,18 @@
           "Aiden"
         ],
         "avgPerStart": 12.5
+      },
+      "RB|robinson|B": {
+        "display": "B. Robinson",
+        "pos": "RB",
+        "team": "WAS",
+        "totalPoints": 0.0,
+        "starts": 0,
+        "benchApps": 5,
+        "weekHigh": 0.0,
+        "weekHighInfo": null,
+        "owners": [],
+        "avgPerStart": 0.0
       },
       "K|seibert|A": {
         "display": "A. Seibert",
@@ -221072,7 +220371,7 @@
         "avgPerStart": 12.84
       },
       "QB|smith|geno": {
-        "display": "Geno Smith",
+        "display": "G. Smith",
         "pos": "QB",
         "team": "LV",
         "totalPoints": 42.58,
@@ -221109,18 +220408,6 @@
         ],
         "avgPerStart": 6.55
       },
-      "RB|etienne|T": {
-        "display": "T. Etienne",
-        "pos": "RB",
-        "team": "JAX",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 2,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
       "RB|tucker|sean": {
         "display": "Sean Tucker",
         "pos": "RB",
@@ -221140,18 +220427,6 @@
         ],
         "avgPerStart": 4.8
       },
-      "WR|evans|M": {
-        "display": "M. Evans",
-        "pos": "WR",
-        "team": "TB",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 4,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
       "WR|robinson|wan'dale": {
         "display": "W. Robinson",
         "pos": "WR",
@@ -221164,20 +220439,8 @@
         "owners": [],
         "avgPerStart": 0.0
       },
-      "WR|johnson|d'ernest": {
-        "display": "D'Ernest Johnson",
-        "pos": "WR",
-        "team": "CLE",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 2,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
       "WR|hopkins|deandre": {
-        "display": "DeAndre Hopkins",
+        "display": "D. Hopkins",
         "pos": "WR",
         "team": "BAL",
         "totalPoints": 30.8,
@@ -221232,18 +220495,6 @@
           "Alex"
         ],
         "avgPerStart": 15.4
-      },
-      "RB|williams|javonte": {
-        "display": "Javonte Williams",
-        "pos": "RB",
-        "team": "DAL",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
       },
       "DEF||saints": {
         "display": "Saints DEF",
@@ -221421,7 +220672,7 @@
         "avgPerStart": 10.5
       },
       "RB|dowdle|rico": {
-        "display": "Rico Dowdle",
+        "display": "R. Dowdle",
         "pos": "RB",
         "team": "CAR",
         "totalPoints": 47.9,
@@ -221517,7 +220768,7 @@
         "avgPerStart": 9.0
       },
       "QB|wilson|russell": {
-        "display": "Russell Wilson",
+        "display": "R. Wilson",
         "pos": "QB",
         "team": "NYG",
         "totalPoints": 16.02,
@@ -221623,37 +220874,6 @@
           "Alex"
         ],
         "avgPerStart": 11.33
-      },
-      "RB|brooks|jonathon": {
-        "display": "Jonathon Brooks",
-        "pos": "RB",
-        "team": "CAR",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 2,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
-      "RB|robinson|brian": {
-        "display": "Brian Robinson",
-        "pos": "RB",
-        "team": "ATL",
-        "totalPoints": 3.4,
-        "starts": 1,
-        "benchApps": 1,
-        "weekHigh": 3.4,
-        "weekHighInfo": {
-          "year": 2024,
-          "week": 12,
-          "owner": "Aiden",
-          "points": 3.4
-        },
-        "owners": [
-          "Aiden"
-        ],
-        "avgPerStart": 3.4
       },
       "DEF||buccaneers": {
         "display": "Buccaneers DEF",
@@ -221871,7 +221091,7 @@
         "avgPerStart": 0.0
       },
       "RB|mattison|alexander": {
-        "display": "Alexander Mattison",
+        "display": "A. Mattison",
         "pos": "RB",
         "team": "MIA",
         "totalPoints": 4.8,
@@ -222145,10 +221365,10 @@
       "RB|robinson|brian": {
         "display": "Brian Robinson",
         "pos": "RB",
-        "team": "ATL",
+        "team": "SF",
         "totalPoints": 0.0,
         "starts": 0,
-        "benchApps": 2,
+        "benchApps": 1,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -222321,7 +221541,7 @@
         "team": "TB",
         "totalPoints": 60.2,
         "starts": 6,
-        "benchApps": 1,
+        "benchApps": 5,
         "weekHigh": 14.1,
         "weekHighInfo": {
           "year": 2025,
@@ -224156,7 +223376,7 @@
         "team": "JAX",
         "totalPoints": 158.1,
         "starts": 11,
-        "benchApps": 5,
+        "benchApps": 6,
         "weekHigh": 21.2,
         "weekHighInfo": {
           "year": 2025,
@@ -225216,18 +224436,6 @@
         ],
         "avgPerStart": 2.1
       },
-      "WR|evans|mitchell": {
-        "display": "Mitchell Evans",
-        "pos": "WR",
-        "team": "TB",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 3,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
       "TE|henry|hunter": {
         "display": "Hunter Henry",
         "pos": "TE",
@@ -225650,6 +224858,18 @@
         ],
         "avgPerStart": 7.67
       },
+      "RB|robinson|B": {
+        "display": "B. Robinson",
+        "pos": "RB",
+        "team": "ATL",
+        "totalPoints": 0.0,
+        "starts": 0,
+        "benchApps": 1,
+        "weekHigh": 0.0,
+        "weekHighInfo": null,
+        "owners": [],
+        "avgPerStart": 0.0
+      },
       "QB|stafford|matthew": {
         "display": "Matthew Stafford",
         "pos": "QB",
@@ -225907,18 +225127,6 @@
         ],
         "avgPerStart": 7.12
       },
-      "RB|etienne|trevor": {
-        "display": "Trevor Etienne",
-        "pos": "RB",
-        "team": "JAX",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
       "K|wright|M": {
         "display": "M. Wright",
         "pos": "K",
@@ -226014,7 +225222,7 @@
         "team": "TB",
         "totalPoints": 9.3,
         "starts": 1,
-        "benchApps": 7,
+        "benchApps": 9,
         "weekHigh": 9.3,
         "weekHighInfo": {
           "year": 2025,
@@ -226144,18 +225352,6 @@
         ],
         "avgPerStart": 12.06
       },
-      "WR|johnson|T": {
-        "display": "T. Johnson",
-        "pos": "WR",
-        "team": "TB",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
       "K|little|cam": {
         "display": "C. Little",
         "pos": "K",
@@ -226232,8 +225428,8 @@
         ],
         "avgPerStart": 4.0
       },
-      "RB|williams|jameson": {
-        "display": "Jameson Williams",
+      "RB|williams|J": {
+        "display": "J. Williams",
         "pos": "RB",
         "team": "DAL",
         "totalPoints": 0.0,
@@ -226288,12 +225484,12 @@
         "avgPerStart": 9.86
       },
       "TE|johnson|theo": {
-        "display": "Theo Johnson",
+        "display": "T. Johnson",
         "pos": "TE",
         "team": "NYG",
         "totalPoints": 17.3,
         "starts": 2,
-        "benchApps": 3,
+        "benchApps": 5,
         "weekHigh": 10.7,
         "weekHighInfo": {
           "year": 2025,
@@ -226488,18 +225684,6 @@
         ],
         "avgPerStart": 27.14
       },
-      "WR|evans|M": {
-        "display": "M. Evans",
-        "pos": "WR",
-        "team": "TB",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
       "DEF||dolphins": {
         "display": "Dolphins DEF",
         "pos": "DEF",
@@ -226518,18 +225702,6 @@
           "Joshua"
         ],
         "avgPerStart": 6.5
-      },
-      "TE|johnson|ty": {
-        "display": "Ty Johnson",
-        "pos": "TE",
-        "team": "NYG",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
       },
       "QB|sanders|shedeur": {
         "display": "Shedeur Sanders",
@@ -226557,18 +225729,6 @@
         "totalPoints": 0.0,
         "starts": 0,
         "benchApps": 3,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
-      "WR|johnson|ty": {
-        "display": "Ty Johnson",
-        "pos": "WR",
-        "team": "TB",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
         "weekHigh": 0.0,
         "weekHighInfo": null,
         "owners": [],
@@ -226623,18 +225783,6 @@
           "Alex"
         ],
         "avgPerStart": 21.92
-      },
-      "TE|johnson|T": {
-        "display": "T. Johnson",
-        "pos": "TE",
-        "team": "NYG",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 1,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
       }
     },
     "2026": {
@@ -227382,24 +226530,24 @@
         ],
         "avgPerStart": 6.71
       },
-      "WR|evans|M": {
+      "WR|evans|mike": {
         "display": "M. Evans",
         "pos": "WR",
         "team": "SF",
-        "totalPoints": 8.4,
-        "starts": 1,
+        "totalPoints": 47.1,
+        "starts": 3,
         "benchApps": 5,
-        "weekHigh": 8.4,
+        "weekHigh": 26.3,
         "weekHighInfo": {
           "year": 2026,
-          "week": 2,
+          "week": 5,
           "owner": "Todd",
-          "points": 8.4
+          "points": 26.3
         },
         "owners": [
           "Todd"
         ],
-        "avgPerStart": 8.4
+        "avgPerStart": 15.7
       },
       "TE|fannin|harold": {
         "display": "H. Fannin",
@@ -227515,12 +226663,12 @@
         "avgPerStart": 19.16
       },
       "RB|etienne|travis": {
-        "display": "Travis Etienne",
+        "display": "T. Etienne",
         "pos": "RB",
         "team": "NO",
         "totalPoints": 14.8,
         "starts": 1,
-        "benchApps": 0,
+        "benchApps": 7,
         "weekHigh": 14.8,
         "weekHighInfo": {
           "year": 2026,
@@ -227950,7 +227098,7 @@
         ],
         "avgPerStart": 16.67
       },
-      "RB|brooks|J": {
+      "RB|brooks|jonathon": {
         "display": "J. Brooks",
         "pos": "RB",
         "team": "CAR",
@@ -229411,18 +228559,6 @@
         ],
         "avgPerStart": 9.0
       },
-      "RB|etienne|T": {
-        "display": "T. Etienne",
-        "pos": "RB",
-        "team": "NO",
-        "totalPoints": 0.0,
-        "starts": 0,
-        "benchApps": 7,
-        "weekHigh": 0.0,
-        "weekHighInfo": null,
-        "owners": [],
-        "avgPerStart": 0.0
-      },
       "TE|sadiq|kenyon": {
         "display": "K. Sadiq",
         "pos": "TE",
@@ -230077,25 +229213,6 @@
         "weekHighInfo": null,
         "owners": [],
         "avgPerStart": 0.0
-      },
-      "WR|evans|mike": {
-        "display": "Mike Evans",
-        "pos": "WR",
-        "team": "SF",
-        "totalPoints": 38.7,
-        "starts": 2,
-        "benchApps": 0,
-        "weekHigh": 26.3,
-        "weekHighInfo": {
-          "year": 2026,
-          "week": 5,
-          "owner": "Todd",
-          "points": 26.3
-        },
-        "owners": [
-          "Todd"
-        ],
-        "avgPerStart": 19.35
       },
       "WR|coleman|keon": {
         "display": "K. Coleman",
@@ -231871,8 +230988,8 @@
           "actualPoints": 23.1,
           "starts": 2,
           "matched": true,
-          "actualRank": 77,
-          "delta": -60
+          "actualRank": 78,
+          "delta": -61
         },
         {
           "year": 2023,
@@ -231913,8 +231030,8 @@
           "actualPoints": 11.8,
           "starts": 1,
           "matched": true,
-          "actualRank": 82,
-          "delta": -41
+          "actualRank": 83,
+          "delta": -42
         },
         {
           "year": 2023,
@@ -231927,8 +231044,8 @@
           "actualPoints": 0.0,
           "starts": 0,
           "matched": true,
-          "actualRank": 89,
-          "delta": -40
+          "actualRank": 90,
+          "delta": -41
         },
         {
           "year": 2023,
@@ -231960,6 +231077,34 @@
         },
         {
           "year": 2023,
+          "pick": 57,
+          "round": 8,
+          "player": "Dalvin Cook",
+          "position": "RB",
+          "nflTeam": "BAL",
+          "manager": "Matthew",
+          "actualPoints": 0.0,
+          "starts": 0,
+          "matched": true,
+          "actualRank": 91,
+          "delta": -34
+        },
+        {
+          "year": 2023,
+          "pick": 58,
+          "round": 8,
+          "player": "Dameon Pierce",
+          "position": "RB",
+          "nflTeam": "HOU",
+          "manager": "Alex",
+          "actualPoints": 0.0,
+          "starts": 0,
+          "matched": true,
+          "actualRank": 92,
+          "delta": -34
+        },
+        {
+          "year": 2023,
           "pick": 13,
           "round": 2,
           "player": "Derrick Henry",
@@ -231970,34 +231115,6 @@
           "starts": 9,
           "matched": true,
           "actualRank": 46,
-          "delta": -33
-        },
-        {
-          "year": 2023,
-          "pick": 38,
-          "round": 5,
-          "player": "Justin Fields",
-          "position": "QB",
-          "nflTeam": "PIT",
-          "manager": "Luke",
-          "actualPoints": 44.78,
-          "starts": 4,
-          "matched": true,
-          "actualRank": 71,
-          "delta": -33
-        },
-        {
-          "year": 2023,
-          "pick": 43,
-          "round": 6,
-          "player": "Mike Williams",
-          "position": "WR",
-          "nflTeam": "NYJ",
-          "manager": "Luke",
-          "actualPoints": 33.6,
-          "starts": 2,
-          "matched": true,
-          "actualRank": 76,
           "delta": -33
         }
       ],

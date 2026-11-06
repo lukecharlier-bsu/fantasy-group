@@ -36,7 +36,7 @@ Justin,J. Winston,Jameis Winston,QB,BN,12.1,1.0,1.0,0.0,0.0,0.0,0.0,0.0,54.0,30.
 Justin,E. Engram,,TE,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Justin,M. Breida,Matt Breida,RB,BN,10.3,13.0,36.0,0.0,4.0,27.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
 Justin,C. Kirk,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Justin,M. Brown,Malcolm Brown,WR,BN,0.0,11.0,40.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Justin,M. Brown,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,C. Wentz,Carson Wentz,QB,QB,20.54,2.0,23.0,0.0,0.0,0.0,0.0,0.0,40.0,26.0,306.0,2.0,1.0
 Luke,J. Conner,James Conner,RB,RB,30.9,16.0,41.0,1.0,7.0,78.0,1.0,7.0,0.0,0.0,0.0,0.0,0.0
 Luke,A. Jones,Aaron Jones Sr.,RB,RB,8.0,11.0,47.0,0.0,4.0,13.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0
@@ -44,7 +44,7 @@ Luke,A. Thielen,Adam Thielen,WR,WR,17.7,1.0,0.0,0.0,6.0,57.0,1.0,8.0,0.0,0.0,0.0
 Luke,M. Thomas,Michael Thomas,WR,WR,16.9,0.0,0.0,0.0,8.0,89.0,0.0,12.0,0.0,0.0,0.0,0.0,0.0
 Luke,J. Cook,Jared Cook,TE,TE,12.7,0.0,0.0,0.0,3.0,37.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0
 Luke,P. Lindsay,Phillip Lindsay,RB,W/R,15.5,15.0,70.0,1.0,2.0,5.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
-Luke,M. Sanu,Mohamed Sanu,WR,BN,5.9,0.0,0.0,0.0,3.0,29.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
+Luke,M. Sanu,,WR,BN,5.9,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,D. Adams,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,J. Goff,Jared Goff,QB,BN,1.12,1.0,0.0,0.0,0.0,0.0,0.0,0.0,24.0,13.0,78.0,0.0,0.0
 Luke,T. Cohen,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -55,7 +55,7 @@ Ethan,J. Jones,Julio Jones,WR,WR,18.8,0.0,0.0,0.0,8.0,108.0,0.0,9.0,0.0,0.0,0.0,
 Ethan,H. Henry,Hunter Henry,TE,TE,30.0,0.0,0.0,0.0,8.0,100.0,2.0,9.0,0.0,0.0,0.0,0.0,0.0
 Ethan,D. Freeman,Devonta Freeman,RB,W/R,26.8,19.0,88.0,0.0,3.0,30.0,2.0,3.0,0.0,0.0,0.0,0.0,0.0
 Ethan,M. Ingram,Mark Ingram II,RB,BN,15.4,13.0,52.0,1.0,2.0,22.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
-Ethan,K. Drake,Kenyan Drake,RB,BN,13.0,10.0,40.0,0.0,6.0,30.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0
+Ethan,K. Drake,,RB,BN,13.0,0,0,0,0,0,0,0,0,0,0,0,0
 Ethan,R. Anderson,,WR,BN,23.5,0,0,0,0,0,0,0,0,0,0,0,0
 Ethan,D. Njoku,,TE,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Ethan,M. Williams,Mike Williams,WR,BN,12.2,0.0,0.0,0.0,5.0,72.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0
@@ -83,7 +83,7 @@ Howard,C. Sutton,Courtland Sutton,WR,W/R,11.6,0.0,0.0,0.0,4.0,76.0,0.0,8.0,0.0,0
 Howard,D. Walker,Delanie Walker,TE,BN,7.3,0.0,0.0,0.0,3.0,43.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
 Howard,F. Gore,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Howard,T. Hilton,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Howard,J. Brown,Jaron Brown,WR,BN,0.0,0.0,0.0,0.0,3.0,29.0,2.0,5.0,0.0,0.0,0.0,0.0,0.0
+Howard,J. Brown,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Howard,J. Brissett,,QB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Ulises,D. Prescott,Dak Prescott,QB,QB,18.22,3.0,11.0,1.0,0.0,0.0,0.0,0.0,40.0,28.0,278.0,0.0,0.0
 Ulises,E. Elliott,Ezekiel Elliott,RB,RB,26.3,28.0,105.0,1.0,5.0,48.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0

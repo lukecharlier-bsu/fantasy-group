@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League History Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1794002466" />
+    <link rel="stylesheet" href="styles.css?v=1794002734" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -166,7 +166,7 @@
 
             <div class="card">
                 <h3>Draft Ranker</h3>
-                <p class="muted">Each manager's draft scored by <strong>Value Over Expected (VOE)</strong> — the sum of (actual pts − expected pts for that draft slot) across every pick. Expected pts for each slot is the league-wide median across all drafts (normalized by year to account for scoring inflation). High VOE = late-round steals and R1 locks that outperformed; low VOE = early-round flops. Click a row to open that manager's full draft board.</p>
+                <p class="muted">Each manager's draft scored by a composite <strong>Rating</strong> out of 100: <strong>60% raw total pts</strong> (so low-production drafts can't hide) + <strong>40% Value Over Expected</strong> (slot-adjusted — late-round steals rewarded, obvious R1 studs don't dominate). VOE expected baseline is the league-wide median pts at each draft slot, year-scaled. Click a row to open that manager's full draft board.</p>
                 <div class="row">
                     <label>Year <select id="ranker-year"></select></label>
                 </div>
@@ -348,6 +348,6 @@
         <div id="updated-stamp" title=""></div>
     </footer>
 
-    <script src="app.js?v=1794002466"></script>
+    <script src="app.js?v=1794002734"></script>
 </body>
 </html>

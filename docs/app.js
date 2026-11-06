@@ -581,7 +581,7 @@ function renderDraftRanker(year) {
             bucket.firstRound = { ...p, pts, expected, vOverExp };
         }
     }
-    const rows = Object.entries(byOwner).map(([owner, s]) => ({
+    const raw = Object.entries(byOwner).map(([owner, s]) => ({
         owner,
         picks: s.picks,
         total: Math.round(s.total * 10) / 10,
@@ -591,7 +591,19 @@ function renderDraftRanker(year) {
         firstRound: s.firstRound,
         bestSteal: s.bestSteal,
         worstFlop: s.worstFlop,
-    })).sort((a, b) => b.voe - a.voe);
+    }));
+    // Composite rating: 60% raw production (Howard clearly last), 40% VOE
+    // (so slot luck still matters and obvious R1 studs don't dominate).
+    const totals = raw.map(r => r.total);
+    const voes = raw.map(r => r.voe);
+    const minT = Math.min(...totals), maxT = Math.max(...totals);
+    const minV = Math.min(...voes),  maxV = Math.max(...voes);
+    const normT = (v) => maxT === minT ? 50 : ((v - minT) / (maxT - minT)) * 100;
+    const normV = (v) => maxV === minV ? 50 : ((v - minV) / (maxV - minV)) * 100;
+    const rows = raw.map(r => ({
+        ...r,
+        rating: Math.round((0.6 * normT(r.total) + 0.4 * normV(r.voe)) * 10) / 10,
+    })).sort((a, b) => b.rating - a.rating);
 
     const pickCell = (pick, label) => {
         if (!pick) return "—";
@@ -611,8 +623,9 @@ function renderDraftRanker(year) {
         <tr data-ranker-owner="${r.owner}" style="cursor:pointer" title="Click to jump to ${r.owner}'s draft board">
             <td class="right">${i + 1}</td>
             <td><strong>${r.owner}</strong></td>
+            <td class="right" style="color:var(--accent);font-size:1.05rem"><strong>${fmt(r.rating)}</strong></td>
+            <td class="right">${fmt(r.total)}</td>
             <td class="right">${voeCell(r.voe)}</td>
-            <td class="right muted">${fmt(r.total)}</td>
             <td class="right">${r.picks}</td>
             <td class="right">${r.hits} <span class="muted">(${(r.hitRate * 100).toFixed(0)}%)</span></td>
             <td>${pickCell(r.firstRound)}</td>
@@ -623,8 +636,9 @@ function renderDraftRanker(year) {
         <thead><tr>
             <th class="right">#</th>
             <th>Owner</th>
-            <th class="right" title="Value Over Expected: sum of (actual pts − expected pts for that draft slot) across every pick. Higher = overperformed draft slot.">VOE</th>
+            <th class="right" title="Composite rating out of 100: 60% raw total pts + 40% VOE. Blends how much your draft actually produced with how well you did vs slot expectation.">Rating</th>
             <th class="right">Total Pts</th>
+            <th class="right" title="Value Over Expected: sum of (actual pts − expected pts for that draft slot) across every pick.">VOE</th>
             <th class="right">Picks</th>
             <th class="right" title="Picks that started 3+ games">Hits</th>
             <th>R1 Pick</th>

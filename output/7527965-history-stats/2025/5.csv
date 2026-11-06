@@ -20,7 +20,7 @@ Joshua,K. Coleman,Keon Coleman,WR,WR,10.3,0.0,0.0,0.0,4.0,23.0,1.0,7.0,0.0,0.0,0
 Joshua,D. Kincaid,Dalton Kincaid,TE,TE,16.8,0.0,0.0,0.0,6.0,108.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
 Joshua,C. Brown,Chase Brown,RB,W/R,11.8,8.0,27.0,0.0,7.0,21.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0
 Joshua,A. Rodgers,,QB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Joshua,M. Evans,Mitchell Evans,WR,BN,0.0,0.0,0.0,0.0,1.0,4.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0
+Joshua,M. Evans,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Joshua,M. Andrews,Mark Andrews,TE,BN,4.2,0.0,0.0,0.0,2.0,22.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
 Joshua,J. Jennings,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Joshua,D. London,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -74,7 +74,7 @@ Aiden,D. Goedert,Dallas Goedert,TE,TE,10.9,0.0,0.0,0.0,3.0,19.0,1.0,9.0,0.0,0.0,
 Aiden,J. Williams,Jameson Williams,WR,W/R,2.0,1.0,1.0,0.0,1.0,9.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
 Aiden,J. Goff,Jared Goff,QB,BN,20.12,2.0,-2.0,0.0,0.0,0.0,0.0,0.0,23.0,19.0,258.0,3.0,0.0
 Aiden,D. Moore,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
-Aiden,J. Meyers,Jakobi Meyers,WR,BN,7.2,0.0,0.0,0.0,4.0,32.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
+Aiden,J. Meyers,,WR,BN,7.2,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,C. Hubbard,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,W. Robinson,Wan'Dale Robinson,WR,BN,8.2,1.0,2.0,0.0,5.0,30.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0
 Aiden,B. Bowers,,TE,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -130,5 +130,5 @@ Ulises,T. Hockenson,T.J. Hockenson,TE,BN,9.8,0.0,0.0,0.0,6.0,38.0,0.0,6.0,0.0,0.
 Ulises,K. Murray,Kyler Murray,QB,BN,15.3,4.0,25.0,1.0,0.0,0.0,0.0,0.0,31.0,23.0,220.0,0.0,0.0
 Ulises,D. Swift,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Ulises,R. Stevenson,Rhamondre Stevenson,RB,BN,14.7,7.0,14.0,2.0,2.0,13.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
-Ulises,B. Robinson,Brian Robinson Jr.,RB,BN,0.0,5.0,12.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Ulises,B. Robinson,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Ulises,M. Nabers,,WR,RES,0.0,0,0,0,0,0,0,0,0,0,0,0,0

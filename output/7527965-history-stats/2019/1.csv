@@ -44,7 +44,7 @@ Luke,D. Adams,Davante Adams,WR,WR,7.6,0.0,0.0,0.0,4.0,36.0,0.0,8.0,0.0,0.0,0.0,0
 Luke,M. Thomas,Michael Thomas,WR,WR,22.3,0.0,0.0,0.0,10.0,123.0,0.0,13.0,0.0,0.0,0.0,0.0,0.0
 Luke,J. Cook,Jared Cook,TE,TE,5.7,0.0,0.0,0.0,2.0,37.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
 Luke,A. Thielen,Adam Thielen,WR,W/R,13.3,0.0,0.0,0.0,3.0,43.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0
-Luke,M. Sanu,Mohamed Sanu,WR,BN,10.7,0.0,0.0,0.0,5.0,57.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
+Luke,M. Sanu,,WR,BN,10.7,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,C. Wentz,Carson Wentz,QB,BN,25.02,4.0,5.0,0.0,0.0,0.0,0.0,0.0,39.0,28.0,313.0,3.0,0.0
 Luke,A. Jones,Aaron Jones Sr.,RB,BN,4.9,13.0,39.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
 Luke,T. Cohen,Tarik Cohen,RB,BN,12.9,0.0,0.0,0.0,8.0,49.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0
@@ -55,7 +55,7 @@ Ethan,J. Jones,Julio Jones,WR,WR,15.1,0.0,0.0,0.0,6.0,31.0,1.0,11.0,0.0,0.0,0.0,
 Ethan,H. Henry,Hunter Henry,TE,TE,10.0,0.0,0.0,0.0,4.0,60.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
 Ethan,D. Freeman,Devonta Freeman,RB,W/R,4.1,8.0,19.0,0.0,3.0,12.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
 Ethan,M. Ingram,Mark Ingram II,RB,BN,22.7,14.0,107.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-Ethan,K. Drake,Kenyan Drake,RB,BN,4.7,4.0,12.0,0.0,2.0,15.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
+Ethan,K. Drake,,RB,BN,4.7,0,0,0,0,0,0,0,0,0,0,0,0
 Ethan,R. Anderson,,WR,BN,5.3,0,0,0,0,0,0,0,0,0,0,0,0
 Ethan,D. Njoku,David Njoku,TE,BN,13.7,0.0,0.0,0.0,4.0,37.0,1.0,6.0,0.0,0.0,0.0,0.0,0.0
 Ethan,M. Williams,Mike Williams,WR,BN,4.9,0.0,0.0,0.0,2.0,29.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
@@ -67,7 +67,7 @@ Aiden,J. Edelman,Julian Edelman,WR,WR,16.38,1.0,8.0,0.0,6.0,83.0,0.0,11.0,1.0,1.
 Aiden,M. Evans,Mike Evans,WR,WR,4.8,0.0,0.0,0.0,2.0,28.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
 Aiden,G. Olsen,Greg Olsen,TE,TE,7.6,0.0,0.0,0.0,4.0,36.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0
 Aiden,T. Lockett,Tyler Lockett,WR,W/R,11.4,0.0,0.0,0.0,1.0,44.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0
-Aiden,E. Sanders,Emmanuel Sanders,WR,BN,19.6,0.0,0.0,0.0,5.0,86.0,1.0,7.0,0.0,0.0,0.0,0.0,0.0
+Aiden,E. Sanders,,WR,BN,19.6,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,G. Tate,,WR,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,J. Witten,Jason Witten,TE,BN,10.5,0.0,0.0,0.0,3.0,15.0,1.0,4.0,0.0,0.0,0.0,0.0,0.0
 Aiden,T. Benjamin,Travis Benjamin,WR,BN,3.2,0.0,0.0,0.0,2.0,12.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0

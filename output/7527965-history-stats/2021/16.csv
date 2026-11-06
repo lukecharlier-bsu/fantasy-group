@@ -2,10 +2,10 @@ Owner,Player,FullName,Position,Slot,Points,rushAtt,rushYds,rushTds,rec,recYds,re
 Alex,J. Herbert,Justin Herbert,QB,QB,16.94,4.0,15.0,0.0,0.0,0.0,0.0,0.0,35.0,27.0,336.0,1.0,2.0
 Alex,D. Swift,,RB,RB,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Alex,A. Gibson,Antonio Gibson,RB,RB,13.8,6.0,29.0,0.0,2.0,29.0,1.0,4.0,0.0,0.0,0.0,0.0,0.0
-Alex,T. Hill,Tyreek Hill,WR,WR,3.9,0.0,0.0,0.0,2.0,19.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
+Alex,T. Hill,,WR,WR,3.9,0,0,0,0,0,0,0,0,0,0,0,0
 Alex,B. Aiyuk,Brandon Aiyuk,WR,WR,14.0,0.0,0.0,0.0,4.0,40.0,1.0,5.0,0.0,0.0,0.0,0.0,0.0
 Alex,M. Andrews,Mark Andrews,TE,TE,26.5,0.0,0.0,0.0,8.0,125.0,1.0,10.0,0.0,0.0,0.0,0.0,0.0
-Alex,C. Kirk,Christian Kirk,WR,W/R,11.8,0.0,0.0,0.0,7.0,48.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0
+Alex,C. Kirk,,WR,W/R,11.8,0,0,0,0,0,0,0,0,0,0,0,0
 Alex,R. Gronkowski,Rob Gronkowski,TE,BN,3.3,0.0,0.0,0.0,1.0,23.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
 Alex,S. Diggs,Stefon Diggs,WR,BN,21.5,0.0,0.0,0.0,7.0,85.0,1.0,13.0,0.0,0.0,0.0,0.0,0.0
 Alex,D. Cook,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -19,15 +19,15 @@ Sean,D. Schultz,Dalton Schultz,TE,TE,22.2,0.0,0.0,0.0,8.0,82.0,1.0,9.0,0.0,0.0,0
 Sean,K. Allen,Keenan Allen,WR,W/R,7.5,0.0,0.0,0.0,4.0,35.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
 Sean,T. Kelce,,TE,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,A. Kamara,Alvin Kamara,RB,BN,7.9,13.0,52.0,0.0,2.0,7.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
-Sean,R. Jones,Ronald Jones,RB,BN,16.1,20.0,65.0,1.0,2.0,16.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
+Sean,R. Jones,,RB,BN,16.1,0,0,0,0,0,0,0,0,0,0,0,0
 Sean,D. Henderson,Darrell Henderson Jr.,RB,BN,1.7,1.0,17.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 Sean,C. Lamb,CeeDee Lamb,WR,BN,10.4,1.0,-2.0,0.0,4.0,66.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
 Justin,T. Brady,Tom Brady,QB,QB,14.38,1.0,11.0,0.0,0.0,0.0,0.0,0.0,30.0,18.0,232.0,1.0,0.0
 Justin,E. Elliott,Ezekiel Elliott,RB,RB,17.2,9.0,37.0,1.0,1.0,5.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0
 Justin,J. Robinson,James Robinson,RB,RB,1.0,3.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
 Justin,A. Thielen,Adam Thielen,WR,WR,7.0,0.0,0.0,0.0,3.0,40.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
-Justin,R. Gage,Russell Gage Jr.,WR,WR,5.9,0.0,0.0,0.0,4.0,39.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
-Justin,N. Fant,Noah Fant,TE,TE,6.0,0.0,0.0,0.0,3.0,30.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
+Justin,R. Gage,,WR,WR,5.9,0,0,0,0,0,0,0,0,0,0,0,0
+Justin,N. Fant,,TE,TE,6.0,0,0,0,0,0,0,0,0,0,0,0,0
 Justin,J. Mixon,Joe Mixon,RB,W/R,31.5,18.0,65.0,1.0,6.0,70.0,1.0,6.0,0.0,0.0,0.0,0.0,0.0
 Justin,M. Gordon,Melvin Gordon III,RB,BN,1.0,7.0,-4.0,0.0,1.0,4.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
 Justin,C. Sutton,Courtland Sutton,WR,BN,7.3,0.0,0.0,0.0,4.0,33.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0
@@ -37,8 +37,8 @@ Justin,M. Pittman,Michael Pittman Jr.,WR,BN,16.5,1.0,3.0,0.0,8.0,82.0,0.0,12.0,0
 Justin,J. Hurts,Jalen Hurts,QB,BN,16.66,2.0,7.0,0.0,0.0,0.0,0.0,0.0,29.0,17.0,199.0,2.0,0.0
 Luke,P. Mahomes,Patrick Mahomes,QB,QB,22.32,0.0,0.0,0.0,0.0,0.0,0.0,0.0,30.0,23.0,258.0,3.0,0.0
 Luke,D. Freeman,Devonta Freeman,RB,RB,10.0,6.0,17.0,1.0,2.0,3.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
-Luke,D. Foreman,D'Onta Foreman,RB,RB,7.7,9.0,17.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-Luke,A. Cooper,Amari Cooper,WR,WR,21.5,0.0,0.0,0.0,7.0,85.0,1.0,11.0,0.0,0.0,0.0,0.0,0.0
+Luke,D. Foreman,,RB,RB,7.7,0,0,0,0,0,0,0,0,0,0,0,0
+Luke,A. Cooper,,WR,WR,21.5,0,0,0,0,0,0,0,0,0,0,0,0
 Luke,J. Waddle,Jaylen Waddle,WR,WR,25.2,0.0,0.0,0.0,10.0,92.0,1.0,12.0,0.0,0.0,0.0,0.0,0.0
 Luke,K. Pitts,Kyle Pitts Sr.,TE,TE,16.2,0.0,0.0,0.0,6.0,102.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
 Luke,V. Jefferson,Van Jefferson,WR,W/R,1.6,0.0,0.0,0.0,1.0,6.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
@@ -51,11 +51,11 @@ Luke,C. Hubbard,Chuba Hubbard,RB,BN,0.9,6.0,9.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,
 Matthew,A. Rodgers,Aaron Rodgers,QB,QB,19.98,1.0,-1.0,0.0,0.0,0.0,0.0,0.0,34.0,24.0,202.0,3.0,0.0
 Matthew,J. Taylor,Jonathan Taylor,RB,RB,10.8,27.0,108.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
 Matthew,J. Williams,Javonte Williams,RB,RB,10.0,7.0,12.0,1.0,2.0,8.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
-Matthew,D. Adams,Davante Adams,WR,WR,33.4,0.0,0.0,0.0,10.0,114.0,2.0,13.0,0.0,0.0,0.0,0.0,0.0
+Matthew,D. Adams,,WR,WR,33.4,0,0,0,0,0,0,0,0,0,0,0,0
 Matthew,D. Johnson,Diontae Johnson,WR,WR,15.1,0.0,0.0,0.0,6.0,51.0,1.0,9.0,0.0,0.0,0.0,0.0,0.0
 Matthew,G. Kittle,George Kittle,TE,TE,4.1,0.0,0.0,0.0,2.0,21.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0
 Matthew,T. Lockett,Tyler Lockett,WR,W/R,6.0,0.0,0.0,0.0,3.0,30.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
-Matthew,G. Everett,Gerald Everett,TE,BN,16.8,0.0,0.0,0.0,4.0,68.0,1.0,5.0,0.0,0.0,0.0,0.0,0.0
+Matthew,G. Everett,,TE,BN,16.8,0,0,0,0,0,0,0,0,0,0,0,0
 Matthew,L. Jackson,,QB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Matthew,S. Barkley,Saquon Barkley,RB,BN,3.8,15.0,32.0,0.0,1.0,-4.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
 Matthew,A. Brown,,WR,BN,31.5,0,0,0,0,0,0,0,0,0,0,0,0
@@ -67,8 +67,8 @@ Aiden,J. Jones,Julio Jones,WR,WR,1.7,0.0,0.0,0.0,1.0,7.0,0.0,1.0,0.0,0.0,0.0,0.0
 Aiden,C. Godwin,,WR,WR,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,B. Cooks,,WR,W/R,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,M. Ingram,Mark Ingram II,RB,BN,1.7,4.0,17.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
-Aiden,R. Wilson,Russell Wilson,QB,BN,16.54,2.0,13.0,0.0,0.0,0.0,0.0,0.0,27.0,16.0,181.0,2.0,0.0
-Aiden,C. Wentz,Carson Wentz,QB,BN,17.4,2.0,4.0,0.0,0.0,0.0,0.0,0.0,28.0,18.0,225.0,2.0,0.0
+Aiden,R. Wilson,,QB,BN,16.54,0,0,0,0,0,0,0,0,0,0,0,0
+Aiden,C. Wentz,,QB,BN,17.4,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,A. Collins,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Aiden,C. Claypool,Chase Claypool,WR,BN,8.1,0.0,0.0,0.0,4.0,41.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0
 Howard,K. Murray,Kyler Murray,QB,QB,21.9,4.0,74.0,0.0,0.0,7.0,0.0,0.0,43.0,27.0,245.0,1.0,0.0
@@ -85,7 +85,7 @@ Howard,K. Hunt,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Howard,D. Knox,Dawson Knox,TE,BN,9.1,0.0,0.0,0.0,2.0,11.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0
 Howard,E. Mitchell,,RB,BN,0.0,0,0,0,0,0,0,0,0,0,0,0,0
 Ulises,D. Prescott,Dak Prescott,QB,QB,31.3,4.0,21.0,0.0,0.0,0.0,0.0,0.0,39.0,28.0,330.0,4.0,0.0
-Ulises,C. Edmonds,Chase Edmonds,RB,RB,26.7,16.0,56.0,1.0,8.0,71.0,0.0,9.0,0.0,0.0,0.0,0.0,0.0
+Ulises,C. Edmonds,,RB,RB,26.7,0,0,0,0,0,0,0,0,0,0,0,0
 Ulises,N. Harris,Najee Harris,RB,RB,16.0,19.0,93.0,0.0,5.0,17.0,0.0,7.0,0.0,0.0,0.0,0.0,0.0
 Ulises,D. Samuel,Deebo Samuel Sr.,WR,WR,28.1,5.0,32.0,0.0,9.0,159.0,0.0,11.0,0.0,0.0,0.0,0.0,0.0
 Ulises,D. Goedert,Dallas Goedert,TE,TE,4.8,0.0,0.0,0.0,2.0,28.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0
