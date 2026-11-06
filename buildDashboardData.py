@@ -817,6 +817,130 @@ def build_goat_teams(gamecenter_dirs, seasons, n=25):
     return out[:n]
 
 
+def build_team_ratings(seasons, lineups, drafts, players_by_year):
+    """Per-team composite rating out of 100 for every season. Weights:
+      - Total PF           25
+      - PPG                20
+      - Avg position rank  25  (lower rank = better player at that position)
+      - % owned            20  (within-league proxy: how often this team's roster
+                                players were kept on ANY roster across the year)
+      - Avg draft pick     10  (lower pick number = earlier round, better pedigree)
+    Each component is min-max normalized within the season so teams are
+    compared against their own peers."""
+    import statistics
+    out = {}
+    for s in seasons:
+        year = s["year"]
+        weeks_in_season = len(s["weeks"])
+        if weeks_in_season == 0:
+            continue
+
+        # Season-wide position rank by total starter pts (players_by_year
+        # has int year keys in the Python dict)
+        yr_players = players_by_year.get(year) or players_by_year.get(str(year)) or {}
+        by_pos = {}
+        for key, p in yr_players.items():
+            by_pos.setdefault(p.get("pos", ""), []).append((p.get("totalPoints", 0), key))
+        pos_rank = {}
+        for pos, lst in by_pos.items():
+            for rk, (_, key) in enumerate(sorted(lst, reverse=True), start=1):
+                pos_rank[key] = rk
+
+        # How many weeks each player was rostered by ANY team
+        player_weeks = {}
+        for (y, wk, _o), players in lineups.items():
+            if y != year:
+                continue
+            for p in players:
+                k = p.get("key")
+                if k:
+                    player_weeks.setdefault(k, set()).add(wk)
+
+        # Draft pick lookup — (position, player_name_lowercased) → pick number
+        year_drafts = drafts.get(year) or drafts.get(str(year)) or []
+        drafted = {}
+        for pk in year_drafts:
+            drafted[(pk["position"], (pk["player"] or "").lower())] = pk["pick"]
+
+        # Aggregate per owner
+        team_metrics = {}
+        for (y, wk, owner), players in lineups.items():
+            if y != year or not owner:
+                continue
+            tm = team_metrics.setdefault(owner, {
+                "start_ranks": [],
+                "roster_keys": set(),
+                "draft_picks": [],
+            })
+            for p in players:
+                k = p.get("key")
+                if k:
+                    tm["roster_keys"].add(k)
+                    if p["slot"] not in ("BN", "RES") and k in pos_rank:
+                        tm["start_ranks"].append(pos_rank[k])
+                pick = drafted.get((p.get("pos", ""), (p.get("player") or "").lower()))
+                if pick:
+                    tm["draft_picks"].append(pick)
+
+        standings_by_owner = {t["manager"]: t for t in s["standings"]}
+        rows = []
+        for owner, tm in team_metrics.items():
+            team = standings_by_owner.get(owner, {})
+            games = team.get("wins", 0) + team.get("losses", 0) + team.get("ties", 0)
+            ppg = (team.get("pointsFor", 0) / games) if games else 0.0
+            avg_rank = statistics.fmean(tm["start_ranks"]) if tm["start_ranks"] else 100.0
+            pct_vals = []
+            for k in tm["roster_keys"]:
+                wks = player_weeks.get(k, set())
+                pct_vals.append(len(wks) / weeks_in_season)
+            pct_owned = statistics.fmean(pct_vals) if pct_vals else 0.0
+            avg_pick = statistics.fmean(tm["draft_picks"]) if tm["draft_picks"] else 150.0
+            rows.append({
+                "owner": owner,
+                "team": team.get("team", ""),
+                "record": f'{team.get("wins", 0)}-{team.get("losses", 0)}'
+                    + (f'-{team.get("ties", 0)}' if team.get("ties") else ""),
+                "wins": team.get("wins", 0),
+                "losses": team.get("losses", 0),
+                "ties": team.get("ties", 0),
+                "pf": round(team.get("pointsFor", 0), 2),
+                "ppg": round(ppg, 2),
+                "avgPosRank": round(avg_rank, 2),
+                "pctOwned": round(pct_owned, 3),
+                "avgDraftPick": round(avg_pick, 1),
+            })
+        if not rows:
+            continue
+
+        def minmax(vals, invert=False):
+            lo, hi = min(vals), max(vals)
+            span = hi - lo
+            if span == 0:
+                return [50.0] * len(vals)
+            return [100.0 * ((hi - v) if invert else (v - lo)) / span for v in vals]
+
+        pf_n = minmax([r["pf"] for r in rows])
+        ppg_n = minmax([r["ppg"] for r in rows])
+        rank_n = minmax([r["avgPosRank"] for r in rows], invert=True)
+        own_n = minmax([r["pctOwned"] for r in rows])
+        draft_n = minmax([r["avgDraftPick"] for r in rows], invert=True)
+        weights = {"pf": 0.25, "ppg": 0.20, "rank": 0.25, "own": 0.20, "draft": 0.10}
+
+        for i, r in enumerate(rows):
+            r["pfScore"] = round(pf_n[i] * weights["pf"], 2)
+            r["ppgScore"] = round(ppg_n[i] * weights["ppg"], 2)
+            r["rankScore"] = round(rank_n[i] * weights["rank"], 2)
+            r["ownedScore"] = round(own_n[i] * weights["own"], 2)
+            r["draftScore"] = round(draft_n[i] * weights["draft"], 2)
+            r["rating"] = round(
+                r["pfScore"] + r["ppgScore"] + r["rankScore"] + r["ownedScore"] + r["draftScore"],
+                2,
+            )
+        rows.sort(key=lambda r: -r["rating"])
+        out[year] = rows
+    return out
+
+
 def build_playoff_odds(seasons, standings_dict, league_ids,
                        playoff_count=4, sims=10000, seed=42):
     """Monte Carlo playoff odds for the in-progress season.
@@ -2279,6 +2403,7 @@ def main():
     mia_khalifas = build_mia_khalifas(lineups, players_career)
     worst_drops = build_worst_drops(lineups, trades_detected, players_career)
     playoff_odds = build_playoff_odds(seasons, standings, league_ids)
+    team_ratings = build_team_ratings(seasons, lineups, drafts, players_by_year)
 
     payload = {
         "leagueIds": [str(x) for x in league_ids],
@@ -2303,6 +2428,7 @@ def main():
         "miaKhalifas": mia_khalifas,
         "worstDrops": worst_drops,
         "playoffOdds": playoff_odds,
+        "teamRatings": {str(y): rows for y, rows in team_ratings.items()},
         "drafts": drafts,
         "draftOwnerStats": draft_owner_stats,
         "playersCareer": players_career,

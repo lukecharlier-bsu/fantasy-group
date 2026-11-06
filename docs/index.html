@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League History Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1793988304" />
+    <link rel="stylesheet" href="styles.css?v=1793988824" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -24,6 +24,7 @@
             <button class="tab" data-tab="trades">Trades</button>
             <button class="tab" data-tab="games">Game History</button>
             <button class="tab" data-tab="players">Players</button>
+            <button class="tab" data-tab="ratings">Team Ratings</button>
         </nav>
     </header>
 
@@ -279,6 +280,18 @@
             </div>
         </section>
 
+        <!-- TEAM RATINGS -->
+        <section class="panel" id="panel-ratings">
+            <div class="card">
+                <h3>Team Ratings</h3>
+                <p class="muted">Composite rating out of 100 per team-season. Weights: <strong>Points For 25</strong>, <strong>PPG 20</strong>, <strong>Avg Position Rank 25</strong> (how good their starters were at their position), <strong>% Owned 20</strong> (how many weeks their roster players were on any team — a proxy for player value in the league), <strong>Avg Draft Pick 10</strong>. Each metric is min-max normalized within the season.</p>
+                <div class="row">
+                    <label>Season <select id="ratings-year"></select></label>
+                </div>
+                <div class="scroll-x"><table id="ratings-table" class="data-table"></table></div>
+            </div>
+        </section>
+
         <!-- GAME HISTORY -->
         <section class="panel" id="panel-games">
             <div class="card">
@@ -323,6 +336,6 @@
         <span id="data-stamp"></span>
     </footer>
 
-    <script src="app.js?v=1793988304"></script>
+    <script src="app.js?v=1793988824"></script>
 </body>
 </html>

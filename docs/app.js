@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     initTradesPanel();
     initGameHistoryPanel();
     initPlayersPanel();
+    initTeamRatingsPanel();
 });
 
 // ---------- Tabs ----------
@@ -1651,6 +1652,74 @@ function renderWorstDrops() {
             <th class="right">Later Starts</th>
             <th>Picked Up By</th>
         </tr></thead>
+        <tbody>${body}</tbody>
+    `;
+}
+
+// ---------- Team Ratings ----------
+function initTeamRatingsPanel() {
+    const ratings = STATE.data.teamRatings || {};
+    const years = Object.keys(ratings).sort((a, b) => b - a);
+    if (!years.length) return;
+    const yr = document.getElementById("ratings-year");
+    yr.innerHTML = years.map(y => `<option value="${y}">${y}</option>`).join("");
+    yr.addEventListener("change", () => renderTeamRatings(yr.value));
+    renderTeamRatings(yr.value);
+}
+
+function renderTeamRatings(year) {
+    const t = document.getElementById("ratings-table");
+    const rows = (STATE.data.teamRatings || {})[year] || [];
+    if (!rows.length) {
+        t.innerHTML = `<tbody><tr><td class="muted">No ratings for ${year}.</td></tr></tbody>`;
+        return;
+    }
+    const bar = (score, cap) => {
+        const pct = Math.max(0, Math.min(100, (score / cap) * 100));
+        const hue = Math.round((score / cap) * 120);
+        return `<div style="position:relative;background:#1f2937;border-radius:4px;height:14px;min-width:60px"><div style="position:absolute;top:0;left:0;height:100%;width:${pct}%;background:hsl(${hue},70%,45%);border-radius:4px"></div><div style="position:relative;text-align:center;line-height:14px;font-size:0.7rem;font-weight:600">${fmt(score, 1)}</div></div>`;
+    };
+    const body = rows.map((r, i) => `
+        <tr>
+            <td class="right">${i + 1}</td>
+            <td><strong>${r.owner}</strong></td>
+            <td class="muted">${r.team}</td>
+            <td>${r.record}</td>
+            <td class="right">${fmt(r.pf)}</td>
+            <td class="right">${fmt(r.ppg)}</td>
+            <td class="right" title="Average rank at position among all players this season (lower = better)">${fmt(r.avgPosRank)}</td>
+            <td class="right">${(r.pctOwned * 100).toFixed(1)}%</td>
+            <td class="right">${fmt(r.avgDraftPick)}</td>
+            <td style="min-width:40px">${bar(r.pfScore, 25)}</td>
+            <td style="min-width:40px">${bar(r.ppgScore, 20)}</td>
+            <td style="min-width:40px">${bar(r.rankScore, 25)}</td>
+            <td style="min-width:40px">${bar(r.ownedScore, 20)}</td>
+            <td style="min-width:40px">${bar(r.draftScore, 10)}</td>
+            <td class="right" style="font-size:1.1rem;color:var(--accent)"><strong>${fmt(r.rating, 1)}</strong></td>
+        </tr>`).join("");
+    t.innerHTML = `
+        <thead>
+            <tr>
+                <th class="right" rowspan="2">#</th>
+                <th rowspan="2">Owner</th>
+                <th rowspan="2">Team</th>
+                <th rowspan="2">Record</th>
+                <th class="right" rowspan="2">PF</th>
+                <th class="right" rowspan="2">PPG</th>
+                <th class="right" rowspan="2" title="Avg rank at position">Pos Rk</th>
+                <th class="right" rowspan="2" title="% of season weeks their roster players were on any team">% Own</th>
+                <th class="right" rowspan="2">Draft #</th>
+                <th colspan="5" style="text-align:center">Component scores</th>
+                <th class="right" rowspan="2">Rating</th>
+            </tr>
+            <tr>
+                <th class="right" title="Points For score (×0.25)">PF</th>
+                <th class="right" title="PPG score (×0.20)">PPG</th>
+                <th class="right" title="Position rank score (×0.25)">Rank</th>
+                <th class="right" title="% owned score (×0.20)">Own</th>
+                <th class="right" title="Draft pick score (×0.10)">Draft</th>
+            </tr>
+        </thead>
         <tbody>${body}</tbody>
     `;
 }
