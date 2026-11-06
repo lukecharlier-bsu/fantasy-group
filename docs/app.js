@@ -463,6 +463,81 @@ function initDraftsPanel() {
     renderDraftRanker(rankerYrSel.value);
 }
 
+// Canonical key helpers for matching draft picks to season stats
+function _draftLongKey(p) {
+    if (p.position === "DEF") return `DEF||${(p.player || "").toLowerCase()}`;
+    const parts = (p.player || "").split(" ");
+    if (parts.length < 2) return "";
+    const suffixes = new Set(["jr","sr","ii","iii","iv","jr.","sr."]);
+    const firstNorm = parts[0].toLowerCase().replace(/[.]/g, "");
+    const lastParts = parts.slice(1).filter(s => !suffixes.has(s.toLowerCase().replace(/[.]/g, "")));
+    const lastNorm = lastParts.join("").toLowerCase().replace(/[.]/g, "");
+    return `${p.position}|${lastNorm}|${firstNorm}`;
+}
+function _draftShortKey(p) {
+    if (p.position === "DEF") return `DEF||${(p.player || "").toLowerCase()}`;
+    const parts = (p.player || "").split(" ");
+    if (parts.length < 2) return "";
+    const suffixes = new Set(["jr","sr","ii","iii","iv","jr.","sr."]);
+    const fi = (parts[0][0] || "").toUpperCase();
+    const lastParts = parts.slice(1).filter(s => !suffixes.has(s.toLowerCase().replace(/[.]/g, "")));
+    const lastNorm = lastParts.join("").toLowerCase().replace(/[.]/g, "");
+    return `${p.position}|${lastNorm}|${fi}`;
+}
+
+// Points lookup for a draft pick against that season's stats
+function _draftPickPts(p, seasonStats) {
+    const long = seasonStats[_draftLongKey(p)];
+    if (long) return { pts: long.totalPoints, starts: long.starts };
+    const short = seasonStats[_draftShortKey(p)];
+    if (short) return { pts: short.totalPoints, starts: short.starts };
+    return { pts: 0, starts: 0 };
+}
+
+// Build the expected-pts baseline: for each draft slot, the league-wide
+// median of actual season pts across EVERY season. In-season scoring
+// inflation is handled by also computing a per-year scale factor.
+let _EXPECTED_BY_PICK = null;
+let _YEAR_SCALE = null;
+function _ensureExpectedBaseline() {
+    if (_EXPECTED_BY_PICK) return;
+    const perPickSamples = {}; // pick -> [pts, pts, ...] with year attached
+    const yearSamples = {}; // year -> [pts of every pick that year]
+    for (const [yr, picks] of Object.entries(STATE.data.drafts || {})) {
+        const season = (STATE.data.playersByYear || {})[yr] || {};
+        for (const p of picks) {
+            const { pts } = _draftPickPts(p, season);
+            (perPickSamples[p.pick] || (perPickSamples[p.pick] = [])).push({ pts, year: yr });
+            (yearSamples[yr] || (yearSamples[yr] = [])).push(pts);
+        }
+    }
+    // Year scale: avg pts of all picks that year, normalized to league avg
+    const yearAvg = {};
+    const allAvgs = [];
+    for (const [yr, vals] of Object.entries(yearSamples)) {
+        const avg = vals.reduce((a, b) => a + b, 0) / Math.max(vals.length, 1);
+        yearAvg[yr] = avg;
+        allAvgs.push(avg);
+    }
+    const leagueAvg = allAvgs.reduce((a, b) => a + b, 0) / Math.max(allAvgs.length, 1);
+    _YEAR_SCALE = {};
+    for (const [yr, avg] of Object.entries(yearAvg)) {
+        _YEAR_SCALE[yr] = avg > 0 ? leagueAvg / avg : 1;
+    }
+    // Median pts at each pick slot, after normalizing samples by year scale.
+    const median = (arr) => {
+        if (!arr.length) return 0;
+        const s = [...arr].sort((a, b) => a - b);
+        const m = Math.floor(s.length / 2);
+        return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+    };
+    _EXPECTED_BY_PICK = {};
+    for (const [pick, samples] of Object.entries(perPickSamples)) {
+        const normalized = samples.map(s => s.pts * (_YEAR_SCALE[s.year] || 1));
+        _EXPECTED_BY_PICK[pick] = median(normalized);
+    }
+}
+
 function renderDraftRanker(year) {
     const t = document.getElementById("ranker-table");
     const picks = STATE.data.drafts[year] || [];
@@ -471,85 +546,90 @@ function renderDraftRanker(year) {
         t.innerHTML = `<tbody><tr><td class="muted">No draft data for ${year}.</td></tr></tbody>`;
         return;
     }
-    // Match each pick to its season starter points by canonical key
-    const keyFor = (p) => {
-        if (p.position === "DEF") return `DEF||${(p.player || "").toLowerCase()}`;
-        const parts = (p.player || "").split(" ");
-        if (parts.length < 2) return "";
-        const firstNorm = parts[0].toLowerCase().replace(/[.]/g, "")
-            .replace(/^(jr|sr|ii|iii|iv)$/, "");
-        const suffixes = new Set(["jr","sr","ii","iii","iv","jr.","sr."]);
-        const lastParts = parts.slice(1).filter(s => !suffixes.has(s.toLowerCase().replace(/[.]/g, "")));
-        const lastNorm = lastParts.join("").toLowerCase().replace(/[.]/g, "");
-        return `${p.position}|${lastNorm}|${firstNorm}`;
-    };
-    const shortKeyFor = (p) => {
-        if (p.position === "DEF") return `DEF||${(p.player || "").toLowerCase()}`;
-        const parts = (p.player || "").split(" ");
-        if (parts.length < 2) return "";
-        const fi = (parts[0][0] || "").toUpperCase();
-        const suffixes = new Set(["jr","sr","ii","iii","iv","jr.","sr."]);
-        const lastParts = parts.slice(1).filter(s => !suffixes.has(s.toLowerCase().replace(/[.]/g, "")));
-        const lastNorm = lastParts.join("").toLowerCase().replace(/[.]/g, "");
-        return `${p.position}|${lastNorm}|${fi}`;
-    };
+    _ensureExpectedBaseline();
+    const yearScale = _YEAR_SCALE[year] || 1;
 
     // Aggregate per owner
     const byOwner = {};
+    const perPickRows = [];
     for (const p of picks) {
-        const longK = keyFor(p);
-        const shortK = shortKeyFor(p);
-        const stats = seasonStats[longK] || seasonStats[shortK];
-        const pts = stats ? stats.totalPoints : 0;
-        const starts = stats ? stats.starts : 0;
+        const { pts, starts } = _draftPickPts(p, seasonStats);
+        // Expected pts for this draft slot (de-normalize back to this year's scale)
+        const expectedNormalized = _EXPECTED_BY_PICK[p.pick] || 0;
+        const expected = yearScale > 0 ? expectedNormalized / yearScale : expectedNormalized;
+        const vOverExp = pts - expected;
+        perPickRows.push({ ...p, pts, starts, expected, vOverExp });
         const bucket = byOwner[p.manager] || (byOwner[p.manager] = {
-            picks: 0, total: 0, bestPick: null, bestPts: -Infinity, hits: 0,
-            firstRoundPts: 0, firstRoundPick: null, players: [],
+            picks: 0, total: 0, voe: 0, hits: 0,
+            bestSteal: null, bestSteallVOE: -Infinity,
+            worstFlop: null, worstFlopVOE: Infinity,
+            firstRound: null,
         });
         bucket.picks += 1;
         bucket.total += pts;
-        bucket.players.push({ ...p, pts, starts });
-        if (pts > bucket.bestPts) {
-            bucket.bestPts = pts;
-            bucket.bestPick = { ...p, pts };
-        }
+        bucket.voe += vOverExp;
         if (starts >= 3) bucket.hits += 1;
+        if (vOverExp > bucket.bestSteallVOE) {
+            bucket.bestSteallVOE = vOverExp;
+            bucket.bestSteal = { ...p, pts, expected, vOverExp };
+        }
+        if (vOverExp < bucket.worstFlopVOE) {
+            bucket.worstFlopVOE = vOverExp;
+            bucket.worstFlop = { ...p, pts, expected, vOverExp };
+        }
         if (p.round === 1) {
-            bucket.firstRoundPts = pts;
-            bucket.firstRoundPick = { ...p, pts };
+            bucket.firstRound = { ...p, pts, expected, vOverExp };
         }
     }
     const rows = Object.entries(byOwner).map(([owner, s]) => ({
         owner,
         picks: s.picks,
         total: Math.round(s.total * 10) / 10,
-        perPick: s.picks ? Math.round((s.total / s.picks) * 10) / 10 : 0,
+        voe: Math.round(s.voe * 10) / 10,
         hits: s.hits,
         hitRate: s.picks ? s.hits / s.picks : 0,
-        bestPick: s.bestPick,
-        firstRound: s.firstRoundPick,
-    })).sort((a, b) => b.total - a.total);
+        firstRound: s.firstRound,
+        bestSteal: s.bestSteal,
+        worstFlop: s.worstFlop,
+    })).sort((a, b) => b.voe - a.voe);
+
+    const pickCell = (pick, label) => {
+        if (!pick) return "—";
+        const voeStr = (pick.vOverExp >= 0 ? "+" : "") + fmt(pick.vOverExp);
+        const color = pick.vOverExp >= 0 ? "var(--accent)" : "#f87171";
+        return `R${pick.round}.${pick.pick} <strong>${pick.player}</strong> <span class="muted">${pick.position}</span><br>` +
+               `<span class="muted">${fmt(pick.pts)} vs ${fmt(pick.expected)} exp</span> ` +
+               `<span style="color:${color}">${voeStr}</span>`;
+    };
+    const voeCell = (v) => {
+        const sign = v >= 0 ? "+" : "";
+        const color = v >= 0 ? "var(--accent)" : "#f87171";
+        return `<strong style="color:${color}">${sign}${fmt(v)}</strong>`;
+    };
+
     const body = rows.map((r, i) => `
         <tr data-ranker-owner="${r.owner}" style="cursor:pointer" title="Click to jump to ${r.owner}'s draft board">
             <td class="right">${i + 1}</td>
             <td><strong>${r.owner}</strong></td>
-            <td class="right"><strong>${fmt(r.total)}</strong></td>
+            <td class="right">${voeCell(r.voe)}</td>
+            <td class="right muted">${fmt(r.total)}</td>
             <td class="right">${r.picks}</td>
-            <td class="right">${fmt(r.perPick)}</td>
             <td class="right">${r.hits} <span class="muted">(${(r.hitRate * 100).toFixed(0)}%)</span></td>
-            <td>${r.firstRound ? `R1.${r.firstRound.pick} <strong>${r.firstRound.player}</strong> <span class="muted">${r.firstRound.position} · ${fmt(r.firstRound.pts)}</span>` : "—"}</td>
-            <td>${r.bestPick ? `R${r.bestPick.round}.${r.bestPick.pick} <strong>${r.bestPick.player}</strong> <span class="muted">${r.bestPick.position} · ${fmt(r.bestPick.pts)}</span>` : "—"}</td>
+            <td>${pickCell(r.firstRound)}</td>
+            <td>${pickCell(r.bestSteal)}</td>
+            <td>${pickCell(r.worstFlop)}</td>
         </tr>`).join("");
     t.innerHTML = `
         <thead><tr>
             <th class="right">#</th>
             <th>Owner</th>
-            <th class="right" title="Sum of season starter pts for every player drafted">Total Pts</th>
+            <th class="right" title="Value Over Expected: sum of (actual pts − expected pts for that draft slot) across every pick. Higher = overperformed draft slot.">VOE</th>
+            <th class="right">Total Pts</th>
             <th class="right">Picks</th>
-            <th class="right" title="Total pts ÷ number of picks">Pts/Pick</th>
             <th class="right" title="Picks that started 3+ games">Hits</th>
             <th>R1 Pick</th>
-            <th>Best Pick</th>
+            <th>Biggest Steal</th>
+            <th>Worst Flop</th>
         </tr></thead>
         <tbody>${body}</tbody>
     `;
