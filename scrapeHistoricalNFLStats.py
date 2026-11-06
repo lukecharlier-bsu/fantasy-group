@@ -191,13 +191,30 @@ def join_week(year, week):
                 fi = info.get("fi", "")
                 last = info.get("last", "")
                 team = (info.get("team") or "").upper()
-                # Try (fi, last, team) first — unambiguous
-                stats = nfl_stats.get((fi, last, team)) if team else None
+                # Normalize NFL team abbreviations where fantasy and ESPN disagree
+                team_aliases = {
+                    "WAS": "WSH", "WSH": "WAS",
+                    "JAC": "JAX", "JAX": "JAC",
+                    "LA": "LAR",  "LAR": "LA",
+                    "OAK": "LV",  "LV": "OAK",
+                    "SD":  "LAC", "LAC": "SD",
+                    "STL": "LAR",
+                }
+                stats = None
                 full_name = ""
-                if stats:
-                    full_name = stats.get("_name", "")
+                if team:
+                    # Try exact team, then known aliases
+                    stats = nfl_stats.get((fi, last, team))
+                    if not stats and team in team_aliases:
+                        stats = nfl_stats.get((fi, last, team_aliases[team]))
+                    if stats:
+                        full_name = stats.get("_name", "")
+                    # When team was provided but no match, DO NOT fall back to the
+                    # ambiguous (fi, last) lookup — a different-team player with
+                    # the same (fi, last) would be the wrong person (e.g. Bijan
+                    # grabbing Brian's row when Brian sat out).
                 else:
-                    # Fallback: unique (fi, last) match → use it but keep full name
+                    # No team in cell → only safe fallback is a unique (fi, last)
                     candidates = by_fi_last.get((fi, last), [])
                     if len(candidates) == 1:
                         stats = candidates[0][1]

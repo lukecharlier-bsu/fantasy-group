@@ -399,7 +399,7 @@ def load_lineups(gamecenter_dirs, stats_dirs=None):
                             pos = info["pos"] if info else ""
                             # Upgrade via stats resolution when possible.
                             if info and pos != "DEF":
-                                resolved = resolution.get((year, week, owner, slot, round(pts, 2)))
+                                resolved = resolution.get((year, week, owner, slot, round(pts, 2), info["key"]))
                                 if resolved:
                                     full_name, _ = resolved
                                     key = _canonical_key(pos, full_name)
@@ -482,7 +482,7 @@ def load_weekly_rosters(gamecenter_dirs, stats_dirs=None):
                         key = info["key"]
                         display = info["display"]
                         if info["pos"] != "DEF":
-                            resolved = resolution.get((year, week, owner, slot, round(pts, 2)))
+                            resolved = resolution.get((year, week, owner, slot, round(pts, 2), info["key"]))
                             if resolved:
                                 full_name, _ = resolved
                                 key = _canonical_key(info["pos"], full_name)
@@ -1894,7 +1894,18 @@ def load_player_name_resolution(stats_dirs):
                         except ValueError:
                             pts = 0.0
                         pos = row.get("Position") or ""
-                        out[(year, week, owner, slot, pts)] = (name, pos)
+                        # Also derive short identity from the Player column so
+                        # the resolution key is unique across multiple 0-point
+                        # bench players in the same slot.
+                        short_player = (row.get("Player") or name)
+                        s_parts = short_player.split()
+                        if len(s_parts) >= 2:
+                            fi = s_parts[0][:1].upper()
+                            last = _norm_last(s_parts[1:])
+                            short_key = f"{pos}|{last}|{fi}"
+                        else:
+                            short_key = f"{pos}||"
+                        out[(year, week, owner, slot, pts, short_key)] = (name, pos)
     return out
 
 
@@ -2015,7 +2026,7 @@ def load_player_scoring(gamecenter_dirs, stats_dirs=None):
                             pts = 0.0
                         # Upgrade identity when stats resolution is available.
                         if info["pos"] != "DEF":
-                            resolved = resolution.get((year, week, owner, slot, round(pts, 2)))
+                            resolved = resolution.get((year, week, owner, slot, round(pts, 2), info["key"]))
                             if resolved:
                                 full_name, _ = resolved
                                 info["key"] = _canonical_key(info["pos"], full_name)
