@@ -1,0 +1,157 @@
+Owner,Player,Position,Slot,Points,rushAtt,rushYds,rushTds,rec,recYds,recTds,tgts,passAtt,passCmp,passYds,passTds,ints
+Todd,Jonathan Taylor,RB,RB,9.4,13.0,46.0,0,5.0,18.0,0,5.0,0,0,0,0,0
+Todd,Trey McBride,TE,TE,12.4,0,0,0,7.0,54.0,0,8.0,0,0,0,0,0
+Todd,Rashee Rice,WR,WR,9.9,0,0,0,5.0,49.0,0,7.0,0,0,0,0,0
+Todd,Kyren Williams,RB,RB,9.1,15.0,45.0,0,3.0,16.0,0,4.0,0,0,0,0,0
+Todd,Tee Higgins,WR,WR,20.2,0,0,0,5.0,32.0,2.0,6.0,0,0,0,0,0
+Todd,Mike Evans,WR,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Todd,Harold Fannin Jr.,TE,BE,12.2,0,0,0,2.0,42.0,1.0,2.0,0,0,0,0,0
+Todd,Brandon Aubrey,K,K,9.0,0,0,0,0,0,0,0,0,0,0,0,0
+Todd,Seahawks D/ST,D/ST,D/ST,7.0,0,0,0,0,0,0,0,0,0,0,0,0
+Todd,Brock Purdy,QB,QB,25.28,7.0,40.0,1.0,0,0,0,0,25.0,17.0,232.0,2.0,1.0
+Todd,Marvin Harrison Jr.,WR,BE,4.0,0,0,0,2.0,20.0,0,3.0,0,0,0,0,0
+Todd,Rico Dowdle,RB,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Todd,Caleb Douglas,WR,BE,13.0,0,0,0,6.0,70.0,0,8.0,0,0,0,0,0
+Todd,Braelon Allen,RB,RB/WR,5.4,8.0,33.0,0,2.0,21.0,0,2.0,0,0,0,0,0
+Todd,Bryce Young,QB,BE,20.34,1.0,13.0,0,0,0,0,0,39.0,28.0,276.0,3.0,1.0
+Luke,Amon-Ra St. Brown,WR,WR,16.6,0,0,0,8.0,86.0,0,10.0,0,0,0,0,0
+Luke,James Cook III,RB,RB,16.7,31.0,107.0,1.0,0,0,0,1.0,0,0,0,0,0
+Luke,George Pickens,WR,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Luke,Malik Nabers,WR,WR,9.3,0,0,0,5.0,43.0,0,8.0,0,0,0,0,0
+Luke,Tyler Warren,TE,TE,8.4,0,0,0,4.0,44.0,0,7.0,0,0,0,0,0
+Luke,Jordyn Tyson,WR,IR,5.0,0,0,0,4.0,30.0,0,5.0,0,0,0,0,0
+Luke,Tony Pollard,RB,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Luke,Caleb Williams,QB,BE,12.76,5.0,16.0,0,0,0,0,0,37.0,22.0,279.0,2.0,4.0
+Luke,Kyle Monangai,RB,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Luke,Khalil Shakir,WR,BE,9.8,0,0,0,4.0,58.0,0,4.0,0,0,0,0,0
+Luke,Jordan Love,QB,QB,36.18,1.0,13.0,1.0,0,0,0,0,29.0,23.0,372.0,3.0,0
+Luke,Trey Smack,K,K,15.0,0,0,0,0,0,0,0,0,0,0,0,0
+Luke,Vikings D/ST,D/ST,D/ST,6.0,0,0,0,0,0,0,0,0,0,0,0,0
+Luke,Tyler Allgeier,RB,RB/WR,6.6,17.0,46.0,0,2.0,0,0,3.0,0,0,0,0,0
+Luke,Bijan Robinson,RB,RB,26.7,19.0,100.0,1.0,6.0,47.0,0,7.0,0,0,0,0,0
+Luke,Jakobi Meyers,WR,BE,10.5,0,0,0,4.0,65.0,0,6.0,0,0,0,0,0
+Matthew,Jahmyr Gibbs,RB,RB,13.4,20.0,74.0,1.0,0,0,0,1.0,0,0,0,0,0
+Matthew,Chase Brown,RB,RB/WR,10.5,9.0,57.0,0,3.0,18.0,0,3.0,0,0,0,0,0
+Matthew,Lamar Jackson,QB,IR,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Matthew,Tucker Kraft,TE,TE,1.9,2.0,8.0,0,1.0,1.0,0,3.0,0,0,0,0,0
+Matthew,Rhamondre Stevenson,RB,RB,14.8,6.0,32.0,0,3.0,46.0,1.0,4.0,0,0,0,0,0
+Matthew,Zach Charbonnet,RB,BE,9.6,16.0,77.0,0,1.0,9.0,0,2.0,0,0,0,0,0
+Matthew,CeeDee Lamb,WR,WR,33.5,0,0,0,10.0,195.0,1.0,16.0,0,0,0,0,0
+Matthew,Will Reichard,K,K,8.0,0,0,0,0,0,0,0,0,0,0,0,0
+Matthew,J.K. Dobbins,RB,BE,3.2,4.0,18.0,0,1.0,4.0,0,1.0,0,0,0,0,0
+Matthew,Kyle Pitts Sr.,TE,BE,5.3,0,0,0,3.0,23.0,0,5.0,0,0,0,0,0
+Matthew,Alvin Kamara,RB,BE,7.9,6.0,32.0,0,3.0,17.0,0,4.0,0,0,0,0,0
+Matthew,Puka Nacua,WR,WR,35.0,2.0,20.0,0,14.0,150.0,1.0,19.0,0,0,0,0,0
+Matthew,Jaguars D/ST,D/ST,D/ST,10.0,0,0,0,0,0,0,0,0,0,0,0,0
+Matthew,Bo Nix,QB,BE,15.68,5.0,2.0,0,0,0,0,0,37.0,25.0,237.0,2.0,1.0
+Matthew,Aaron Jones Sr.,RB,BE,3.1,5.0,16.0,0,1.0,5.0,0,1.0,0,0,0,0,0
+Matthew,Drake Maye,QB,QB,18.26,1.0,3.0,0,0,0,0,0,38.0,21.0,299.0,3.0,3.0
+Howard,Justin Jefferson,WR,WR,8.8,0,0,0,3.0,58.0,0,11.0,0,0,0,0,0
+Howard,Emeka Egbuka,WR,BE,6.9,1.0,1.0,0,3.0,38.0,0,5.0,0,0,0,0,0
+Howard,T.J. Hockenson,TE,TE,7.3,0,0,0,4.0,33.0,0,7.0,0,0,0,0,0
+Howard,Deebo Samuel Sr.,WR,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Howard,Jordan Mason,RB,RB/WR,6.2,6.0,35.0,0,2.0,7.0,0,3.0,0,0,0,0,0
+Howard,Spencer Shrader,K,K,15.0,0,0,0,0,0,0,0,0,0,0,0,0
+Howard,Jalen Coker,WR,BE,6.6,1.0,-3.0,0,4.0,29.0,0,5.0,0,0,0,0,0
+Howard,D'Andre Swift,RB,RB,3.1,12.0,31.0,0,0,0,0,1.0,0,0,0,0,0
+Howard,C.J. Stroud,QB,BE,35.36,2.0,20.0,0,0,0,0,0,35.0,21.0,384.0,5.0,1.0
+Howard,Bengals D/ST,D/ST,D/ST,3.0,0,0,0,0,0,0,0,0,0,0,0,0
+Howard,Jaylen Waddle,WR,BE,3.2,0,0,0,1.0,22.0,0,1.0,0,0,0,0,0
+Howard,Kirk Cousins,QB,QB,12.64,2.0,0,1.0,0,0,0,0,32.0,22.0,216.0,1.0,3.0
+Howard,Keenan Allen,WR,BE,6.6,0,0,0,4.0,26.0,0,8.0,0,0,0,0,0
+Howard,Adonai Mitchell,WR,WR,0.0,0,0,0,0,0,0,7.0,0,0,0,0,0
+Howard,Kenny Gainwell,RB,RB,10.6,5.0,16.0,0,3.0,60.0,0,3.0,0,0,0,0,0
+Aiden,Jaxon Smith-Njigba,WR,WR,12.1,0,0,0,7.0,51.0,0,10.0,0,0,0,0,0
+Aiden,Josh Jacobs,RB,RB,0.5,4.0,5.0,0,0,0,0,0,0,0,0,0,0
+Aiden,DeVonta Smith,WR,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Aiden,Dak Prescott,QB,BE,19.5,2.0,1.0,0,0,0,0,0,34.0,21.0,335.0,2.0,0
+Aiden,Michael Wilson,WR,RB/WR,12.0,0,0,0,6.0,60.0,0,7.0,0,0,0,0,0
+Aiden,Isaiah Likely,TE,TE,16.3,0,0,0,5.0,53.0,1.0,6.0,0,0,0,0,0
+Aiden,Xavier Worthy,WR,BE,10.8,0,0,0,6.0,48.0,0,6.0,0,0,0,0,0
+Aiden,Patriots D/ST,D/ST,D/ST,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Aiden,Stefon Diggs,WR,WR,8.1,0,0,0,3.0,51.0,0,5.0,0,0,0,0,0
+Aiden,David Montgomery,RB,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Aiden,Woody Marks,RB,RB,8.4,18.0,70.0,0,1.0,4.0,0,4.0,0,0,0,0,0
+Aiden,Trevor Lawrence,QB,QB,13.58,1.0,-1.0,0,0,0,0,0,26.0,16.0,242.0,1.0,0
+Aiden,Harrison Butker,K,K,5.0,0,0,0,0,0,0,0,0,0,0,0,0
+Aiden,Dalton Kincaid,TE,BE,5.8,0,0,0,3.0,28.0,0,3.0,0,0,0,0,0
+Aiden,Samaje Perine,RB,BE,4.3,11.0,43.0,0,0,0,0,0,0,0,0,0,0
+Ulises,Christian McCaffrey,RB,RB,22.7,18.0,68.0,1.0,2.0,19.0,1.0,3.0,0,0,0,0,0
+Ulises,Brock Bowers,TE,TE,22.3,1.0,2.0,0,7.0,111.0,1.0,8.0,0,0,0,0,0
+Ulises,Javonte Williams,RB,RB,22.4,20.0,101.0,1.0,4.0,23.0,0,5.0,0,0,0,0,0
+Ulises,Tetairoa McMillan,WR,WR,15.6,0,0,0,4.0,56.0,1.0,6.0,0,0,0,0,0
+Ulises,Jameson Williams,WR,WR,5.0,1.0,9.0,0,1.0,31.0,0,2.0,0,0,0,0,0
+Ulises,Jadarian Price,RB,BE,11.8,9.0,24.0,0,4.0,54.0,0,4.0,0,0,0,0,0
+Ulises,Justin Herbert,QB,BE,10.42,1.0,7.0,0,0,0,0,0,23.0,13.0,193.0,1.0,1.0
+Ulises,Christian Watson,WR,RB/WR,30.1,0,0,0,7.0,171.0,1.0,8.0,0,0,0,0,0
+Ulises,Jonathon Brooks,RB,IR,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Ulises,Rachaad White,RB,BE,6.9,7.0,28.0,0,2.0,41.0,0,3.0,0,0,0,0,0
+Ulises,Cairo Santos,K,K,9.0,0,0,0,0,0,0,0,0,0,0,0,0
+Ulises,Jared Goff,QB,QB,5.3,4.0,5.0,0,0,0,0,0,25.0,17.0,170.0,0,1.0
+Ulises,Chris Godwin Jr.,WR,BE,4.8,1.0,12.0,0,2.0,16.0,0,3.0,0,0,0,0,0
+Ulises,Bears D/ST,D/ST,D/ST,14.0,0,0,0,0,0,0,0,0,0,0,0,0
+Ulises,Ryan Flournoy,WR,BE,7.3,0,0,0,2.0,53.0,0,3.0,0,0,0,0,0
+Ulises,Mike Washington Jr.,RB,BE,-0.3,6.0,-3.0,0,0,0,0,0,0,0,0,0,0
+Justin,Drake London,WR,WR,11.8,0,0,0,5.0,68.0,0,5.0,0,0,0,0,0
+Justin,Breece Hall,RB,BE,11.7,15.0,61.0,0,3.0,26.0,0,4.0,0,0,0,0,0
+Justin,Chris Olave,WR,RB/WR,16.8,0,0,0,7.0,98.0,0,12.0,0,0,0,0,0
+Justin,Travis Etienne Jr.,RB,IR,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Justin,Carnell Tate,WR,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Justin,George Kittle,TE,TE,9.8,0,0,0,4.0,58.0,0,7.0,0,0,0,0,0
+Justin,DK Metcalf,WR,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Justin,Steelers D/ST,D/ST,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Justin,Ollie Gordon II,RB,RB,7.4,16.0,55.0,0,1.0,9.0,0,1.0,0,0,0,0,0
+Justin,Brian Robinson Jr.,RB,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Justin,Matthew Stafford,QB,QB,11.22,1.0,1.0,0,0,0,0,0,43.0,26.0,228.0,1.0,1.0
+Justin,Hunter Henry,TE,BE,6.5,0,0,0,3.0,35.0,0,3.0,0,0,0,0,0
+Justin,Matthew Golden,WR,WR,32.4,0,0,0,10.0,164.0,1.0,10.0,0,0,0,0,0
+Justin,Bucky Irving,RB,RB,28.5,20.0,97.0,2.0,4.0,28.0,0,5.0,0,0,0,0,0
+Justin,Buccaneers D/ST,D/ST,D/ST,12.0,0,0,0,0,0,0,0,0,0,0,0,0
+Justin,Tyler Bass,K,K,13.0,0,0,0,0,0,0,0,0,0,0,0,0
+Alex,Ja'Marr Chase,WR,WR,31.5,0,0,0,10.0,155.0,1.0,12.0,0,0,0,0,0
+Alex,Derrick Henry,RB,RB,5.58,17.0,57.0,0,0,0,0,0,1.0,1.0,-3.0,0,0
+Alex,Davante Adams,WR,IR,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Alex,Patrick Mahomes,QB,BE,16.48,2.0,8.0,0,0,0,0,0,31.0,23.0,242.0,2.0,0
+Alex,Bhayshul Tuten,RB,RB,8.9,12.0,29.0,1.0,0,0,0,0,0,0,0,0,0
+Alex,DJ Moore,WR,BE,6.6,1.0,11.0,0,3.0,25.0,0,5.0,0,0,0,0,0
+Alex,Matt Gay,K,K,7.0,0,0,0,0,0,0,0,0,0,0,0,0
+Alex,Omarion Hampton,RB,BE,6.0,13.0,60.0,0,0,0,0,0,0,0,0,0,0
+Alex,Quinshon Judkins,RB,RB/WR,5.5,15.0,43.0,0,1.0,2.0,0,1.0,0,0,0,0,0
+Alex,Nico Collins,WR,WR,15.5,0,0,0,4.0,55.0,1.0,4.0,0,0,0,0,0
+Alex,Jayden Daniels,QB,QB,14.56,4.0,16.0,0,0,0,0,0,35.0,24.0,274.0,1.0,0
+Alex,Texans D/ST,D/ST,D/ST,12.0,0,0,0,0,0,0,0,0,0,0,0,0
+Alex,Travis Kelce,TE,TE,17.3,1.0,1.0,1.0,4.0,72.0,0,6.0,0,0,0,0,0
+Alex,Cam Skattebo,RB,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Alex,Malik Washington,WR,BE,4.1,1.0,0,0,2.0,21.0,0,3.0,0,0,0,0,0
+Alex,Jordan Addison,WR,BE,4.8,0,0,0,2.0,28.0,0,3.0,0,0,0,0,0
+Joshua,Josh Allen,QB,QB,12.86,6.0,15.0,0,0,0,0,0,31.0,21.0,234.0,1.0,1.0
+Joshua,Alec Pierce,WR,IR,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Joshua,Broncos D/ST,D/ST,D/ST,8.0,0,0,0,0,0,0,0,0,0,0,0,0
+Joshua,Jake Bates,K,K,13.0,0,0,0,0,0,0,0,0,0,0,0,0
+Joshua,Chuba Hubbard,RB,RB,13.6,16.0,79.0,0,4.0,17.0,0,5.0,0,0,0,0,0
+Joshua,Luther Burden III,WR,RB/WR,20.7,0,0,0,7.0,97.0,1.0,9.0,0,0,0,0,0
+Joshua,Garrett Wilson,WR,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Joshua,Saquon Barkley,RB,BE,8.2,13.0,22.0,1.0,0,0,0,1.0,0,0,0,0,0
+Joshua,Pat Freiermuth,TE,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Joshua,Zay Flowers,WR,WR,5.3,3.0,17.0,0,3.0,6.0,0,6.0,0,0,0,0,0
+Joshua,Ashton Jeanty,RB,RB,7.0,6.0,25.0,0,5.0,-5.0,0,7.0,0,0,0,0,0
+Joshua,Dallas Goedert,TE,BE,10.0,0,0,0,5.0,50.0,0,6.0,0,0,0,0,0
+Joshua,Sam LaPorta,TE,TE,7.2,0,0,0,4.0,32.0,0,5.0,0,0,0,0,0
+Joshua,Tre Tucker,WR,BE,9.5,0,0,0,4.0,55.0,0,8.0,0,0,0,0,0
+Joshua,Blake Corum,RB,BE,11.8,11.0,58.0,1.0,0,0,0,2.0,0,0,0,0,0
+Joshua,Denzel Boston,WR,WR,15.8,0,0,0,6.0,98.0,0,7.0,0,0,0,0,0
+Sean,Kenneth Walker III,RB,RB,36.3,18.0,102.0,1.0,4.0,41.0,2.0,4.0,0,0,0,0,0
+Sean,Colston Loveland,TE,TE,9.4,0,0,0,4.0,54.0,0,6.0,0,0,0,0,0
+Sean,Ladd McConkey,WR,WR,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Sean,Parker Washington,WR,WR,14.1,0,0,0,2.0,61.0,1.0,7.0,0,0,0,0,0
+Sean,Joe Burrow,QB,QB,29.54,3.0,7.0,1.0,0,0,0,0,29.0,24.0,271.0,3.0,0
+Sean,Jaylen Warren,RB,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Sean,Jonah Coleman,RB,RB,18.8,17.0,57.0,1.0,4.0,31.0,0,4.0,0,0,0,0,0
+Sean,Evan McPherson,K,K,12.0,0,0,0,0,0,0,0,0,0,0,0,0
+Sean,KC Concepcion,WR,BE,18.8,1.0,3.0,0,4.0,85.0,1.0,6.0,0,0,0,0,0
+Sean,A.J. Brown,WR,BE,0.0,0,0,0,0,0,0,0,0,0,0,0,0
+Sean,Tyler Shough,QB,BE,19.7,10.0,51.0,0,0,0,0,0,35.0,21.0,265.0,1.0,0
+Sean,Omar Cooper Jr.,WR,BE,13.8,0,0,0,8.0,58.0,0,11.0,0,0,0,0,0
+Sean,Makai Lemon,WR,BE,12.1,0,0,0,6.0,61.0,0,9.0,0,0,0,0,0
+Sean,Antonio Williams,WR,RB/WR,5.5,0,0,0,3.0,25.0,0,6.0,0,0,0,0,0
+Sean,Chiefs D/ST,D/ST,D/ST,10.0,0,0,0,0,0,0,0,0,0,0,0,0
