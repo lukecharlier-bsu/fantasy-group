@@ -1040,20 +1040,29 @@ def build_playoff_odds(seasons, standings_dict, league_ids,
         projs = projections.get(owner) or []
         base_projection = current_projection.get(owner) or (
             statistics.fmean(acts) if acts else league_mean)
-        # Residual adjustment + variance from (actual − projected)
+        # Residual adjustment + variance from (actual − projected).
+        # Weekly fantasy std is typically 25-35 in reality; a tight floor
+        # here made the sims overconfident (100% playoff odds with weeks
+        # of actual football left). Floor at 30 so blowouts stay plausible.
+        STD_FLOOR = 30.0
         if len(acts) >= 2 and len(projs) == len(acts) and sum(projs) > 0:
             residuals = [a - p for a, p in zip(acts, projs)]
             res_mean = statistics.fmean(residuals)
-            res_std = max(statistics.pstdev(residuals), 15.0)
+            res_std = max(statistics.pstdev(residuals), STD_FLOOR)
         elif acts:
             res_mean = 0.0
-            res_std = max(statistics.pstdev(acts) if len(acts) >= 2 else league_std, 15.0)
+            res_std = max(statistics.pstdev(acts) if len(acts) >= 2 else league_std, STD_FLOOR)
         else:
             res_mean = 0.0
-            res_std = max(league_std, 15.0)
+            res_std = max(league_std, STD_FLOOR)
         # First-remaining-week penalty for current injuries/byes (one-time)
         penalty = 4.0 * out_now.get(owner, 0) + 8.0 * bye_now.get(owner, 0)
-        dist[owner] = (base_projection + res_mean, res_std, penalty)
+        # Uncertainty in our estimate of the team's TRUE mean. SE of the mean
+        # from n games = std / sqrt(n). Capture it so the sim acknowledges we
+        # might have the whole forecast wrong, not just individual weeks.
+        n_games = max(len(acts), 1)
+        mean_uncertainty = res_std / (n_games ** 0.5) if n_games else res_std
+        dist[owner] = (base_projection + res_mean, res_std, penalty, mean_uncertainty)
 
     # Remaining schedule — only weeks we haven't played yet
     played_weeks = {wk["week"] for wk in in_progress["weeks"]}
@@ -1086,18 +1095,24 @@ def build_playoff_odds(seasons, standings_dict, league_ids,
         sim_losses = {o: teams[o]["losses"] for o in owners}
         sim_ties = {o: teams[o]["ties"] for o in owners}
         sim_pf = {o: teams[o]["pf"] for o in owners}
+        # Per-sim team mean: draw once from the mean-estimate uncertainty so
+        # the whole rest of the season moves with it. This captures "maybe
+        # Luke's true mean is actually lower than we estimate" scenarios.
+        sim_mean = {o: rng.gauss(dist[o][0], dist[o][3]) for o in owners}
         for (wk, h, a) in remaining:
-            mu_h, sd_h, pen_h = dist[h]
-            mu_a, sd_a, pen_a = dist[a]
-            # Current-week-only injury/bye penalty (ESPN only gives us the
-            # current roster; we can't project out byes 8 weeks).
+            mu_h = sim_mean[h]
+            mu_a = sim_mean[a]
+            sd_h, pen_h = dist[h][1], dist[h][2]
+            sd_a, pen_a = dist[a][1], dist[a][2]
             if wk == first_remaining_week:
                 mu_h -= pen_h
                 mu_a -= pen_a
-            score_h = rng.gauss(mu_h, max(sd_h, 5.0))
-            score_a = rng.gauss(mu_a, max(sd_a, 5.0))
-            if score_h < 20: score_h = 20
-            if score_a < 20: score_a = 20
+            score_h = rng.gauss(mu_h, sd_h)
+            score_a = rng.gauss(mu_a, sd_a)
+            # Soft floor at 0 — real fantasy scores can be near-zero in
+            # blowout bye-week scenarios; previous hard 20 floor killed tails.
+            if score_h < 0: score_h = 0
+            if score_a < 0: score_a = 0
             sim_pf[h] += score_h
             sim_pf[a] += score_a
             if score_h > score_a:

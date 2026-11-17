@@ -4,7 +4,7 @@
     "1579300904"
   ],
   "leagueId": "7527965",
-  "generatedAt": "2026-11-17T15:41:47+00:00",
+  "generatedAt": "2026-11-17T15:46:42+00:00",
   "playersByOwner": {
     "Alex": [
       {
@@ -170344,16 +170344,16 @@
         "ppg": 128.4,
         "projWeek": 133.65,
         "forecastMean": 137.48,
-        "forecastStd": 26.35,
+        "forecastStd": 30.0,
         "residualMean": 3.83,
         "injuredStarters": 0,
         "outStarters": 0,
         "byeStarters": 0,
         "penalty": 0.0,
-        "playoffPct": 0.9999,
-        "oneSeedPct": 0.911,
-        "projWins": 12.28,
-        "projPF": 1971.59
+        "playoffPct": 0.9989,
+        "oneSeedPct": 0.844,
+        "projWins": 12.01,
+        "projPF": 1971.69
       },
       {
         "owner": "Sean",
@@ -170365,16 +170365,16 @@
         "ppg": 119.08,
         "projWeek": 96.13,
         "forecastMean": 98.74,
-        "forecastStd": 19.15,
+        "forecastStd": 30.0,
         "residualMean": 2.61,
         "injuredStarters": 1,
         "outStarters": 0,
         "byeStarters": 1,
         "penalty": 8.0,
-        "playoffPct": 0.999,
-        "oneSeedPct": 0.083,
-        "projWins": 11.37,
-        "projPF": 1676.52
+        "playoffPct": 0.9869,
+        "oneSeedPct": 0.1229,
+        "projWins": 11.11,
+        "projPF": 1677.66
       },
       {
         "owner": "Matthew",
@@ -170386,16 +170386,16 @@
         "ppg": 132.71,
         "projWeek": 123.94,
         "forecastMean": 119.06,
-        "forecastStd": 22.4,
+        "forecastStd": 30.0,
         "residualMean": -4.88,
         "injuredStarters": 1,
         "outStarters": 0,
         "byeStarters": 0,
         "penalty": 0.0,
-        "playoffPct": 0.8041,
-        "oneSeedPct": 0.0051,
-        "projWins": 8.72,
-        "projPF": 1922.58
+        "playoffPct": 0.7748,
+        "oneSeedPct": 0.0244,
+        "projWins": 8.9,
+        "projPF": 1922.76
       },
       {
         "owner": "Alex",
@@ -170407,37 +170407,16 @@
         "ppg": 118.64,
         "projWeek": 141.01,
         "forecastMean": 133.05,
-        "forecastStd": 26.68,
+        "forecastStd": 30.0,
         "residualMean": -7.96,
         "injuredStarters": 0,
         "outStarters": 0,
         "byeStarters": 0,
         "penalty": 0.0,
-        "playoffPct": 0.6933,
-        "oneSeedPct": 0.0004,
-        "projWins": 8.28,
-        "projPF": 1851.8
-      },
-      {
-        "owner": "Todd",
-        "team": "Wet Grandma",
-        "wins": 4,
-        "losses": 6,
-        "ties": 0,
-        "pf": 1280.26,
-        "ppg": 128.03,
-        "projWeek": 97.2,
-        "forecastMean": 99.09,
-        "forecastStd": 21.5,
-        "residualMean": 1.89,
-        "injuredStarters": 0,
-        "outStarters": 0,
-        "byeStarters": 2,
-        "penalty": 16.0,
-        "playoffPct": 0.2642,
-        "oneSeedPct": 0.0,
-        "projWins": 7.49,
-        "projPF": 1759.71
+        "playoffPct": 0.5784,
+        "oneSeedPct": 0.0014,
+        "projWins": 8.1,
+        "projPF": 1850.79
       },
       {
         "owner": "Ulises",
@@ -170449,16 +170428,37 @@
         "ppg": 122.65,
         "projWeek": 103.8,
         "forecastMean": 102.89,
-        "forecastStd": 22.25,
+        "forecastStd": 30.0,
         "residualMean": -0.91,
         "injuredStarters": 1,
         "outStarters": 0,
         "byeStarters": 2,
         "penalty": 16.0,
-        "playoffPct": 0.2184,
-        "oneSeedPct": 0.0005,
-        "projWins": 7.72,
-        "projPF": 1725.68
+        "playoffPct": 0.3703,
+        "oneSeedPct": 0.0073,
+        "projWins": 7.99,
+        "projPF": 1724.36
+      },
+      {
+        "owner": "Todd",
+        "team": "Wet Grandma",
+        "wins": 4,
+        "losses": 6,
+        "ties": 0,
+        "pf": 1280.26,
+        "ppg": 128.03,
+        "projWeek": 97.2,
+        "forecastMean": 99.09,
+        "forecastStd": 30.0,
+        "residualMean": 1.89,
+        "injuredStarters": 0,
+        "outStarters": 0,
+        "byeStarters": 2,
+        "penalty": 16.0,
+        "playoffPct": 0.2319,
+        "oneSeedPct": 0.0,
+        "projWins": 7.19,
+        "projPF": 1758.96
       },
       {
         "owner": "Aiden",
@@ -170476,10 +170476,10 @@
         "outStarters": 0,
         "byeStarters": 3,
         "penalty": 24.0,
-        "playoffPct": 0.0208,
+        "playoffPct": 0.0572,
         "oneSeedPct": 0.0,
-        "projWins": 6.63,
-        "projPF": 1434.12
+        "projWins": 6.89,
+        "projPF": 1426.26
       },
       {
         "owner": "Justin",
@@ -170491,16 +170491,16 @@
         "ppg": 122.15,
         "projWeek": 73.32,
         "forecastMean": 68.88,
-        "forecastStd": 23.54,
+        "forecastStd": 30.0,
         "residualMean": -4.44,
         "injuredStarters": 0,
         "outStarters": 0,
         "byeStarters": 3,
         "penalty": 24.0,
-        "playoffPct": 0.0003,
+        "playoffPct": 0.0014,
         "oneSeedPct": 0.0,
-        "projWins": 4.3,
-        "projPF": 1544.46
+        "projWins": 4.69,
+        "projPF": 1543.18
       },
       {
         "owner": "Joshua",
@@ -170512,16 +170512,16 @@
         "ppg": 113.18,
         "projWeek": 96.2,
         "forecastMean": 86.36,
-        "forecastStd": 17.69,
+        "forecastStd": 30.0,
         "residualMean": -9.84,
         "injuredStarters": 0,
         "outStarters": 0,
         "byeStarters": 2,
         "penalty": 16.0,
-        "playoffPct": 0.0,
+        "playoffPct": 0.0002,
         "oneSeedPct": 0.0,
-        "projWins": 5.7,
-        "projPF": 1547.0
+        "projWins": 5.31,
+        "projPF": 1546.8
       },
       {
         "owner": "Howard",
@@ -170533,7 +170533,7 @@
         "ppg": 90.35,
         "projWeek": 96.41,
         "forecastMean": 79.89,
-        "forecastStd": 21.02,
+        "forecastStd": 30.0,
         "residualMean": -16.52,
         "injuredStarters": 1,
         "outStarters": 0,
@@ -170541,8 +170541,8 @@
         "penalty": 0.0,
         "playoffPct": 0.0,
         "oneSeedPct": 0.0,
-        "projWins": 2.51,
-        "projPF": 1303.1
+        "projWins": 2.81,
+        "projPF": 1302.97
       }
     ]
   },
