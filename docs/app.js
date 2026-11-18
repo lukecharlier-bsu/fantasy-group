@@ -954,6 +954,10 @@ const FRIVOLITIES = [
       desc: "The ones you let get away for free. Trades excluded.",
       preview: (d) => (d.worstDrops || [])[0],
       previewText: (r) => `<strong>${r.droppedBy}</strong> cut ${r.display} ${r.year} wk${r.droppedAfterWeek} → ${fmt(r.laterPts)} pts elsewhere` },
+    { id: "bench",    title: "Bench Disasters",    icon: "🪑",
+      desc: "Points left rotting on the bench — worst start/sit misses.",
+      preview: (d) => (d.benchDisasters && d.benchDisasters.byPlayer) ? d.benchDisasters.byPlayer[0] : null,
+      previewText: (r) => `${r.year} wk${r.week} <strong>${r.owner}</strong> — benched ${r.benchPlayer} (${fmt(r.benchPts)}) for ${r.startedPlayer} (${fmt(r.startedPts)})` },
     { id: "odds",     title: "Playoff Odds",       icon: "🎲",
       desc: "Live Monte Carlo projection for the in-progress season.",
       preview: (d) => (d.playoffOdds && d.playoffOdds.teams) ? d.playoffOdds.teams[0] : null,
@@ -976,6 +980,7 @@ function initFrivolitiesPanel() {
     renderWinningPlayers();
     renderMiaKhalifas();
     renderWorstDrops();
+    renderBenchDisasters();
 
     // Build the nav grid
     const nav = document.getElementById("frivolities-nav");
@@ -1938,6 +1943,79 @@ function renderTeamRatings(year) {
                 <th class="right" title="Draft pick score (×0.10)">Draft</th>
             </tr>
         </thead>
+        <tbody>${body}</tbody>
+    `;
+}
+
+const BENCH_STATE = { view: "player" };
+function renderBenchDisasters() {
+    const sel = document.getElementById("bench-view");
+    if (sel && !sel.dataset.wired) {
+        sel.addEventListener("change", () => {
+            BENCH_STATE.view = sel.value;
+            renderBenchDisasters();
+        });
+        sel.dataset.wired = "1";
+    }
+    const t = document.getElementById("bench-table");
+    const data = STATE.data.benchDisasters || {};
+    if (BENCH_STATE.view === "team") {
+        const rows = data.byTeam || [];
+        if (!rows.length) { t.innerHTML = `<tbody><tr><td class="muted">no data</td></tr></tbody>`; return; }
+        const body = rows.map((r, i) => `
+            <tr>
+                <td class="right">${i + 1}</td>
+                <td><strong>${r.owner}</strong></td>
+                <td class="right"><strong>${fmt(r.totalRegret)}</strong></td>
+                <td class="right">${fmt(r.perWeek)}</td>
+                <td class="right">${r.weeks}</td>
+                <td class="right">${(r.efficiency * 100).toFixed(1)}%</td>
+                <td class="right">${fmt(r.actual)}</td>
+                <td class="right muted">${fmt(r.optimal)}</td>
+            </tr>`).join("");
+        t.innerHTML = `
+            <thead><tr>
+                <th class="right">#</th>
+                <th>Manager</th>
+                <th class="right" title="Career total of (optimal lineup − actual lineup) pts across every week">Total Regret</th>
+                <th class="right">Per Week</th>
+                <th class="right">Weeks</th>
+                <th class="right" title="Actual lineup pts / optimal lineup pts">Efficiency</th>
+                <th class="right">Actual Pts</th>
+                <th class="right">Optimal Pts</th>
+            </tr></thead>
+            <tbody>${body}</tbody>
+        `;
+        return;
+    }
+    const rows = data.byPlayer || [];
+    if (!rows.length) { t.innerHTML = `<tbody><tr><td class="muted">no data</td></tr></tbody>`; return; }
+    const body = rows.map((r, i) => `
+        <tr data-goto-game data-game-year="${r.year}" data-game-week="${r.week}" data-game-a="${r.owner}">
+            <td class="right">${i + 1}</td>
+            <td>${r.year}</td>
+            <td>${r.week}</td>
+            <td><strong>${r.owner}</strong></td>
+            <td>${r.benchPlayer} <span class="muted">${r.benchPos}</span></td>
+            <td class="right">${fmt(r.benchPts)}</td>
+            <td>${r.startedPlayer} <span class="muted">${r.startedSlot}</span></td>
+            <td class="right">${fmt(r.startedPts)}</td>
+            <td class="right" style="color:#f87171"><strong>+${fmt(r.diff)}</strong></td>
+            <td>${r.won === true ? '<span style="color:var(--accent)">W</span>' : r.won === false ? '<span style="color:#f87171">L</span>' : '<span class="muted">T</span>'}</td>
+        </tr>`).join("");
+    t.innerHTML = `
+        <thead><tr>
+            <th class="right">#</th>
+            <th>Year</th>
+            <th>Wk</th>
+            <th>Manager</th>
+            <th>Benched</th>
+            <th class="right">Bench Pts</th>
+            <th>Started Instead</th>
+            <th class="right">Starter Pts</th>
+            <th class="right" title="Pts the bench player beat the starter by">Diff</th>
+            <th>Result</th>
+        </tr></thead>
         <tbody>${body}</tbody>
     `;
 }

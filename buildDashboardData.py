@@ -1405,6 +1405,154 @@ def build_worst_drops(lineups, trades, players_career, n=25, trade_window=2):
     return deduped[:n]
 
 
+def build_bench_disasters(gamecenter_dirs, seasons, n_player=25, min_diff=10):
+    """Points left on the bench. Two outputs:
+      - byTeam: per-manager career total (optimal lineup - actual) + per-week avg
+      - byPlayer: individual "benched a stud" moments ranked by how much the
+        benched player beat the starter they could have replaced (same position
+        or FLEX for RB/WR/TE)."""
+    if isinstance(gamecenter_dirs, str):
+        gamecenter_dirs = [gamecenter_dirs]
+    BENCH_SLOTS = {"BN", "RES"}
+
+    won_map = {}
+    for s in seasons:
+        for wk in s["weeks"]:
+            for m in wk["matchups"]:
+                h, hp, a, ap = m["home"], m["homePts"], m["away"], m["awayPts"]
+                if hp > ap:
+                    won_map[(s["year"], wk["week"], h)] = True
+                    won_map[(s["year"], wk["week"], a)] = False
+                elif ap > hp:
+                    won_map[(s["year"], wk["week"], a)] = True
+                    won_map[(s["year"], wk["week"], h)] = False
+                else:
+                    won_map[(s["year"], wk["week"], h)] = None
+                    won_map[(s["year"], wk["week"], a)] = None
+
+    year_paths = {}
+    for d in gamecenter_dirs:
+        if not os.path.isdir(d):
+            continue
+        for yn in sorted(os.listdir(d)):
+            yp = os.path.join(d, yn)
+            if os.path.isdir(yp):
+                year_paths[yn] = yp
+
+    player_disasters = []
+    team_totals = {}
+
+    for yn in sorted(year_paths):
+        year = int(yn)
+        for fn in sorted(os.listdir(year_paths[yn]),
+                         key=lambda n: int(n[:-4]) if n.endswith(".csv") else 999):
+            if not fn.endswith(".csv"):
+                continue
+            week = int(fn[:-4])
+            with open(os.path.join(year_paths[yn], fn), newline="") as f:
+                reader = csv.reader(f)
+                header = next(reader, None)
+                if not header:
+                    continue
+                slot_cols = []
+                i = 0
+                while i < len(header):
+                    h = header[i]
+                    if h in {"Owner", "Rank", "Total", "Opponent", "Opponent Total", "Points"}:
+                        i += 1
+                        continue
+                    if i + 1 < len(header) and header[i + 1] == "Points":
+                        slot_cols.append((h, i, i + 1))
+                        i += 2
+                    else:
+                        i += 1
+                for row in reader:
+                    if not row or len(row) < 2:
+                        continue
+                    owner = (row[0] or "").strip()
+                    starters, bench = [], []
+                    actual_total = 0.0
+                    for slot, ni, pi in slot_cols:
+                        if ni >= len(row):
+                            continue
+                        info = parse_gc_player(row[ni])
+                        try:
+                            pts = float((row[pi] or "0").replace(",", "")) \
+                                if pi < len(row) else 0.0
+                        except ValueError:
+                            pts = 0.0
+                        entry = {
+                            "slot": slot,
+                            "pos": info["pos"] if info else "",
+                            "pts": pts,
+                            "player": info["display"] if info else "-",
+                        }
+                        if slot in BENCH_SLOTS:
+                            bench.append(entry)
+                        else:
+                            starters.append(entry)
+                            actual_total += pts
+                    if not starters:
+                        continue
+                    # Optimal lineup from ALL players on the roster
+                    opt = _optimal_lineup_pts(
+                        [{"pos": p["pos"], "pts": p["pts"]} for p in starters + bench]
+                    )
+                    regret = opt - actual_total
+                    t = team_totals.setdefault(owner, {
+                        "regret": 0.0, "weeks": 0, "optimal": 0.0, "actual": 0.0,
+                    })
+                    t["regret"] += regret
+                    t["optimal"] += opt
+                    t["actual"] += actual_total
+                    t["weeks"] += 1
+                    # Per-player: find each bench player's "best replaced starter"
+                    won = won_map.get((year, week, owner))
+                    for bp in bench:
+                        if not bp["pos"] or bp["player"] == "-":
+                            continue
+                        pos = bp["pos"]
+                        if pos == "QB":
+                            eligible = [s for s in starters if s["slot"] == "QB"]
+                        elif pos in ("RB", "WR", "TE"):
+                            eligible = [s for s in starters
+                                        if s["slot"] == pos or s["slot"] == "W/R"]
+                        elif pos == "K":
+                            eligible = [s for s in starters if s["slot"] == "K"]
+                        elif pos == "DEF":
+                            eligible = [s for s in starters if s["slot"] == "DEF"]
+                        else:
+                            eligible = []
+                        if not eligible:
+                            continue
+                        worst = min(eligible, key=lambda s: s["pts"])
+                        diff = bp["pts"] - worst["pts"]
+                        if diff < min_diff or bp["pts"] <= 0:
+                            continue
+                        player_disasters.append({
+                            "year": year, "week": week, "owner": owner,
+                            "benchPlayer": bp["player"], "benchPos": bp["pos"],
+                            "benchPts": round(bp["pts"], 2),
+                            "startedPlayer": worst["player"], "startedPos": worst["pos"],
+                            "startedSlot": worst["slot"],
+                            "startedPts": round(worst["pts"], 2),
+                            "diff": round(diff, 2),
+                            "won": won,
+                        })
+    player_disasters.sort(key=lambda r: -r["diff"])
+    team_list = [{
+        "owner": o,
+        "weeks": v["weeks"],
+        "totalRegret": round(v["regret"], 2),
+        "perWeek": round(v["regret"] / v["weeks"], 2) if v["weeks"] else 0,
+        "optimal": round(v["optimal"], 2),
+        "actual": round(v["actual"], 2),
+        "efficiency": round((v["actual"] / v["optimal"]) if v["optimal"] else 0, 4),
+    } for o, v in team_totals.items()]
+    team_list.sort(key=lambda r: -r["totalRegret"])
+    return {"byTeam": team_list, "byPlayer": player_disasters[:n_player]}
+
+
 def build_one_start_club(players_career, n=40):
     """Players started exactly once by any manager in league history. We lean
     on weekHighInfo from load_player_scoring — for a one-start player it IS
@@ -2425,6 +2573,7 @@ def main():
     bust_riser = compute_busts_and_risers(drafts, players_by_year)
     enrich_with_espn_ids(players_by_owner, players_career, drafts)
     one_start_club = build_one_start_club(players_career)
+    bench_disasters = build_bench_disasters(gamecenter_dirs, seasons)
     winning_players = build_winning_players(seasons, lineups, players_career)
     mia_khalifas = build_mia_khalifas(lineups, players_career)
     worst_drops = build_worst_drops(lineups, trades_detected, players_career)
@@ -2452,6 +2601,7 @@ def main():
         "mostEvenGames": most_even,
         "mostEfficientWins": most_efficient,
         "oneStartClub": one_start_club,
+        "benchDisasters": bench_disasters,
         "winningPlayers": winning_players,
         "miaKhalifas": mia_khalifas,
         "worstDrops": worst_drops,

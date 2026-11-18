@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League History Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1794930402" />
+    <link rel="stylesheet" href="styles.css?v=1794966991" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -254,6 +254,19 @@
                     <p class="muted">The ones that got away. For each (year, player) we find the biggest drop regret — pts the player went on to score as a starter for OTHER owners the rest of that season after being cut. Trades are excluded.</p>
                     <div class="scroll-x"><table id="drops-table" class="data-table"></table></div>
                 </div>
+                <div class="card friv-detail" id="friv-bench" style="display:none">
+                    <h3>Bench Disasters</h3>
+                    <p class="muted">Points left rotting on the bench — the worst start/sit decisions across history. <strong>By Player</strong> surfaces individual "benched a 50 while starting a 2" moments. <strong>By Team</strong> ranks managers by total career bench regret (optimal lineup pts − actual lineup pts).</p>
+                    <div class="row">
+                        <label>View
+                            <select id="bench-view">
+                                <option value="player">By Player</option>
+                                <option value="team">By Team</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="scroll-x"><table id="bench-table" class="data-table"></table></div>
+                </div>
                 <div class="card friv-detail" id="friv-odds" style="display:none">
                     <h3>Playoff Odds</h3>
                     <p class="muted">Monte Carlo over the remaining regular season. Each team's forecast mean = ESPN's current-week team projection (reflects their actual current roster) + their historical residual (how much they typically beat or miss projection — manager skill). Variance = std of (actual − projected). First remaining week also takes a one-time injury/bye penalty (−4 per OUT starter, −8 per starter on bye). 10,000 sims; top 4 by W-L (PF tiebreak) make playoffs. Probabilities sum to 400%.</p>
@@ -348,6 +361,6 @@
         <div id="updated-stamp" title=""></div>
     </footer>
 
-    <script src="app.js?v=1794930402"></script>
+    <script src="app.js?v=1794966991"></script>
 </body>
 </html>
