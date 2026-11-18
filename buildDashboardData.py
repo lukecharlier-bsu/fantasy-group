@@ -1441,6 +1441,7 @@ def build_bench_disasters(gamecenter_dirs, seasons, n_player=25, min_diff=10):
 
     player_disasters = []
     team_totals = {}
+    worst_weeks = []  # per-team per-week regret records
 
     for yn in sorted(year_paths):
         year = int(yn)
@@ -1508,6 +1509,9 @@ def build_bench_disasters(gamecenter_dirs, seasons, n_player=25, min_diff=10):
                     t["weeks"] += 1
                     # Per-player: find each bench player's "best replaced starter"
                     won = won_map.get((year, week, owner))
+                    # Collect per-player diffs for this specific week so the
+                    # worst-weeks list can also report which bench calls hurt.
+                    week_disasters = []
                     for bp in bench:
                         if not bp["pos"] or bp["player"] == "-":
                             continue
@@ -1529,7 +1533,7 @@ def build_bench_disasters(gamecenter_dirs, seasons, n_player=25, min_diff=10):
                         diff = bp["pts"] - worst["pts"]
                         if diff < min_diff or bp["pts"] <= 0:
                             continue
-                        player_disasters.append({
+                        record = {
                             "year": year, "week": week, "owner": owner,
                             "benchPlayer": bp["player"], "benchPos": bp["pos"],
                             "benchPts": round(bp["pts"], 2),
@@ -1538,6 +1542,18 @@ def build_bench_disasters(gamecenter_dirs, seasons, n_player=25, min_diff=10):
                             "startedPts": round(worst["pts"], 2),
                             "diff": round(diff, 2),
                             "won": won,
+                        }
+                        player_disasters.append(record)
+                        week_disasters.append(record)
+                    if regret >= 10:
+                        worst_weeks.append({
+                            "year": year, "week": week, "owner": owner,
+                            "actual": round(actual_total, 2),
+                            "optimal": round(opt, 2),
+                            "regret": round(regret, 2),
+                            "benchMisses": len(week_disasters),
+                            "won": won,
+                            "topMisses": sorted(week_disasters, key=lambda r: -r["diff"])[:3],
                         })
     player_disasters.sort(key=lambda r: -r["diff"])
     team_list = [{
@@ -1550,7 +1566,12 @@ def build_bench_disasters(gamecenter_dirs, seasons, n_player=25, min_diff=10):
         "efficiency": round((v["actual"] / v["optimal"]) if v["optimal"] else 0, 4),
     } for o, v in team_totals.items()]
     team_list.sort(key=lambda r: -r["totalRegret"])
-    return {"byTeam": team_list, "byPlayer": player_disasters[:n_player]}
+    worst_weeks.sort(key=lambda r: -r["regret"])
+    return {
+        "byTeam": team_list,
+        "byPlayer": player_disasters[:n_player],
+        "worstWeeks": worst_weeks[:25],
+    }
 
 
 def build_one_start_club(players_career, n=40):

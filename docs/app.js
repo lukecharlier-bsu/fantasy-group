@@ -1973,6 +1973,27 @@ function renderBenchDisasters() {
                 <td class="right">${fmt(r.actual)}</td>
                 <td class="right muted">${fmt(r.optimal)}</td>
             </tr>`).join("");
+        const weekRows = (data.worstWeeks || []).map((r, i) => {
+            const result = r.won === true ? '<span style="color:var(--accent)">W</span>' :
+                           r.won === false ? '<span style="color:#f87171">L</span>' :
+                           '<span class="muted">T</span>';
+            const misses = (r.topMisses || []).map(m =>
+                `${m.benchPlayer} <span class="muted">(${m.benchPos})</span> ${fmt(m.benchPts)} <span class="muted">over</span> ${m.startedPlayer} ${fmt(m.startedPts)}`
+            ).join("<br>");
+            return `
+                <tr data-goto-game data-game-year="${r.year}" data-game-week="${r.week}" data-game-a="${r.owner}">
+                    <td class="right">${i + 1}</td>
+                    <td>${r.year}</td>
+                    <td>${r.week}</td>
+                    <td><strong>${r.owner}</strong></td>
+                    <td class="right"><strong style="color:#f87171">${fmt(r.regret)}</strong></td>
+                    <td class="right">${r.benchMisses}</td>
+                    <td class="right">${fmt(r.actual)}</td>
+                    <td class="right muted">${fmt(r.optimal)}</td>
+                    <td>${result}</td>
+                    <td>${misses}</td>
+                </tr>`;
+        }).join("");
         t.innerHTML = `
             <thead><tr>
                 <th class="right">#</th>
@@ -1986,8 +2007,37 @@ function renderBenchDisasters() {
             </tr></thead>
             <tbody>${body}</tbody>
         `;
+        // Append a second table for the worst single-week disasters
+        const second = document.createElement("div");
+        second.innerHTML = `
+            <h4 style="margin:1.5rem 0 0.5rem">Worst Single-Week Disasters</h4>
+            <p class="muted" style="margin-bottom:0.5rem">Weeks where a manager had multiple bad bench calls — ranked by total regret for that week.</p>
+            <div class="scroll-x"><table class="data-table">
+                <thead><tr>
+                    <th class="right">#</th>
+                    <th>Year</th>
+                    <th>Wk</th>
+                    <th>Manager</th>
+                    <th class="right" title="Total pts left on the bench this week">Regret</th>
+                    <th class="right" title="Number of bench players who beat an eligible starter">Misses</th>
+                    <th class="right">Actual</th>
+                    <th class="right">Optimal</th>
+                    <th>Result</th>
+                    <th>Top Misses</th>
+                </tr></thead>
+                <tbody>${weekRows}</tbody>
+            </table></div>
+        `;
+        // Replace any prior appended block so toggling doesn't stack them
+        const existing = document.getElementById("bench-worst-weeks");
+        if (existing) existing.remove();
+        second.id = "bench-worst-weeks";
+        t.parentElement.after(second);
         return;
     }
+    // Clear the worst-weeks block when switching back to Player view
+    const stray = document.getElementById("bench-worst-weeks");
+    if (stray) stray.remove();
     const rows = data.byPlayer || [];
     if (!rows.length) { t.innerHTML = `<tbody><tr><td class="muted">no data</td></tr></tbody>`; return; }
     const body = rows.map((r, i) => `
