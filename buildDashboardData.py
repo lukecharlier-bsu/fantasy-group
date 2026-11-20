@@ -1157,11 +1157,12 @@ def build_playoff_odds(seasons, standings_dict, league_ids,
             "projWeek": round(current_projection.get(o, 0), 2),
             "forecastMean": round(dist[o][0], 2),
             "forecastStd": round(dist[o][1], 2),
+            "meanUncertainty": round(dist[o][3], 2),
+            "penalty": round(dist[o][2], 2),
             "residualMean": round(residual_mean, 2),
             "injuredStarters": inj_now.get(o, 0),
             "outStarters": out_now.get(o, 0),
             "byeStarters": bye_now.get(o, 0),
-            "penalty": round(dist[o][2], 2),
             "playoffPct": round(playoff_counts[o] / sims, 4),
             "oneSeedPct": round(best_seed_counts[o] / sims, 4),
             "projWins": round(sum_final_wins[o] / sims, 2),
@@ -1175,6 +1176,15 @@ def build_playoff_odds(seasons, standings_dict, league_ids,
         "regSeasonWeeks": max(played_weeks | {wk for wk, _, _ in remaining}, default=0),
         "weeksPlayed": max(played_weeks, default=0),
         "teams": rows,
+        # Remaining schedule so the dashboard's what-if simulator can let the
+        # user force winners and re-run odds client-side.
+        "remainingSchedule": [{"week": wk, "home": h, "away": a}
+                              for (wk, h, a) in sorted(remaining)],
+        "currentStandings": {o: {"wins": teams[o]["wins"],
+                                 "losses": teams[o]["losses"],
+                                 "ties": teams[o]["ties"],
+                                 "pf": round(teams[o]["pf"], 2)}
+                             for o in owners},
     }
 
 

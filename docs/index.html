@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>League History Dashboard</title>
-    <link rel="stylesheet" href="styles.css?v=1794967414" />
+    <link rel="stylesheet" href="styles.css?v=1795197207" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -272,6 +272,13 @@
                     <p class="muted">Monte Carlo over the remaining regular season. Each team's forecast mean = ESPN's current-week team projection (reflects their actual current roster) + their historical residual (how much they typically beat or miss projection — manager skill). Variance = std of (actual − projected). First remaining week also takes a one-time injury/bye penalty (−4 per OUT starter, −8 per starter on bye). 10,000 sims; top 4 by W-L (PF tiebreak) make playoffs. Probabilities sum to 400%.</p>
                     <div id="odds-summary" class="muted" style="margin-bottom:0.5rem"></div>
                     <div class="scroll-x"><table id="odds-table" class="data-table"></table></div>
+                    <h4 style="margin-top:1.25rem">What-If Simulator</h4>
+                    <p class="muted">Click a team in any remaining matchup to force that winner; click the arrow to swap; click again to leave it unresolved. Odds above resim client-side with 3,000 sims after each pick. "Reset" clears all picks.</p>
+                    <div class="row" style="margin-bottom:0.5rem">
+                        <button id="whatif-reset" class="back-btn">Reset picks</button>
+                        <span id="whatif-summary" class="muted" style="margin-left:0.5rem"></span>
+                    </div>
+                    <div id="whatif-grid"></div>
                 </div>
                 <div class="card friv-detail" id="friv-onestart" style="display:none">
                     <h3>The One Start Club</h3>
@@ -361,6 +368,6 @@
         <div id="updated-stamp" title=""></div>
     </footer>
 
-    <script src="app.js?v=1794967414"></script>
+    <script src="app.js?v=1795197207"></script>
 </body>
 </html>

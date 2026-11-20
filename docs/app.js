@@ -1723,14 +1723,28 @@ document.addEventListener("click", (e) => {
     openPlayer(key);
 });
 
-function renderPlayoffOdds() {
+const WHATIF_STATE = { picks: {} };  // "year-week-home-away" -> "home" | "away" | undefined
+
+function renderPlayoffOdds(odds) {
     const t = document.getElementById("odds-table");
     const summary = document.getElementById("odds-summary");
-    const odds = STATE.data.playoffOdds;
+    odds = odds || STATE.data.playoffOdds;
     if (!odds || !odds.teams || !odds.teams.length) {
         if (t) t.innerHTML = `<tbody><tr><td class="muted">No in-progress season — playoff odds don't apply until the regular season is live.</td></tr></tbody>`;
         if (summary) summary.textContent = "";
         return;
+    }
+    // On the first render, wire up the what-if simulator and cache base odds.
+    if (!WHATIF_STATE.wired) {
+        WHATIF_STATE.wired = true;
+        WHATIF_STATE.base = STATE.data.playoffOdds;
+        renderWhatIfGrid();
+        const reset = document.getElementById("whatif-reset");
+        if (reset) reset.addEventListener("click", () => {
+            WHATIF_STATE.picks = {};
+            renderWhatIfGrid();
+            renderPlayoffOdds(WHATIF_STATE.base);  // show base odds
+        });
     }
     const total = odds.teams.reduce((s, r) => s + r.playoffPct, 0);
     summary.textContent = `${odds.year} season, through week ${odds.weeksPlayed} of ${odds.regSeasonWeeks} · ${odds.sims.toLocaleString()} simulations · top ${odds.playoffCount} make playoffs · total odds = ${(total * 100).toFixed(1)}%`;
@@ -2068,4 +2082,147 @@ function renderBenchDisasters() {
         </tr></thead>
         <tbody>${body}</tbody>
     `;
+}
+
+// ---------- What-If Simulator ----------
+function _pickKey(g) {
+    return `${g.week}|${g.home}|${g.away}`;
+}
+
+function renderWhatIfGrid() {
+    const host = document.getElementById("whatif-grid");
+    const base = WHATIF_STATE.base || STATE.data.playoffOdds;
+    if (!base || !base.remainingSchedule) { host.innerHTML = ""; return; }
+    const byWeek = {};
+    for (const g of base.remainingSchedule) {
+        (byWeek[g.week] || (byWeek[g.week] = [])).push(g);
+    }
+    const weeks = Object.keys(byWeek).map(Number).sort((a, b) => a - b);
+    host.innerHTML = weeks.map(w => {
+        const games = byWeek[w].map(g => {
+            const key = _pickKey(g);
+            const pick = WHATIF_STATE.picks[key];
+            const homeCls = pick === "home" ? "picked" : (pick === "away" ? "loser" : "");
+            const awayCls = pick === "away" ? "picked" : (pick === "home" ? "loser" : "");
+            return `
+                <div class="whatif-game">
+                    <div class="whatif-pick ${homeCls}" data-pk="${key}" data-side="home">${g.home}</div>
+                    <span class="swap">vs</span>
+                    <div class="whatif-pick ${awayCls}" data-pk="${key}" data-side="away">${g.away}</div>
+                </div>`;
+        }).join("");
+        return `<div class="whatif-week"><div class="week-label">Week ${w}</div><div class="games">${games}</div></div>`;
+    }).join("");
+    host.querySelectorAll(".whatif-pick").forEach(el => {
+        el.addEventListener("click", () => {
+            const key = el.dataset.pk;
+            const side = el.dataset.side;
+            if (WHATIF_STATE.picks[key] === side) {
+                delete WHATIF_STATE.picks[key];
+            } else {
+                WHATIF_STATE.picks[key] = side;
+            }
+            renderWhatIfGrid();
+            runWhatIfSim();
+        });
+    });
+    updateWhatIfSummary();
+}
+
+function updateWhatIfSummary() {
+    const n = Object.keys(WHATIF_STATE.picks).length;
+    const s = document.getElementById("whatif-summary");
+    if (!s) return;
+    s.textContent = n ? `${n} game${n === 1 ? "" : "s"} locked in — resim running` : "";
+}
+
+// Box-Muller gauss sample
+function _gauss(mean, std) {
+    let u = 0, v = 0;
+    while (u === 0) u = Math.random();
+    while (v === 0) v = Math.random();
+    return mean + std * Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+}
+
+function runWhatIfSim(sims = 3000) {
+    const base = WHATIF_STATE.base || STATE.data.playoffOdds;
+    if (!base) return;
+    const teamsByOwner = {};
+    for (const t of base.teams) teamsByOwner[t.owner] = t;
+    const owners = base.teams.map(t => t.owner);
+    const playoffCount = base.playoffCount || 4;
+    const schedule = base.remainingSchedule || [];
+    const standings = base.currentStandings || {};
+
+    const playoffCounts = {}, seedCounts = {}, winsSum = {}, pfSum = {};
+    owners.forEach(o => { playoffCounts[o] = 0; seedCounts[o] = 0; winsSum[o] = 0; pfSum[o] = 0; });
+
+    for (let s = 0; s < sims; s++) {
+        const simMean = {};
+        const simWins = {}, simLosses = {}, simTies = {}, simPF = {};
+        for (const o of owners) {
+            simMean[o] = _gauss(teamsByOwner[o].forecastMean, teamsByOwner[o].meanUncertainty || 8);
+            const st = standings[o] || {};
+            simWins[o] = st.wins || 0;
+            simLosses[o] = st.losses || 0;
+            simTies[o] = st.ties || 0;
+            simPF[o] = st.pf || 0;
+        }
+        const firstWk = schedule.length ? schedule[0].week : null;
+        for (const g of schedule) {
+            const h = g.home, a = g.away;
+            let muH = simMean[h], muA = simMean[a];
+            const sdH = teamsByOwner[h].forecastStd, sdA = teamsByOwner[a].forecastStd;
+            if (g.week === firstWk) {
+                muH -= teamsByOwner[h].penalty || 0;
+                muA -= teamsByOwner[a].penalty || 0;
+            }
+            let scoreH = _gauss(muH, sdH);
+            let scoreA = _gauss(muA, sdA);
+            if (scoreH < 0) scoreH = 0;
+            if (scoreA < 0) scoreA = 0;
+            simPF[h] += scoreH;
+            simPF[a] += scoreA;
+            const forced = WHATIF_STATE.picks[_pickKey(g)];
+            let hWon;
+            if (forced === "home") hWon = true;
+            else if (forced === "away") hWon = false;
+            else hWon = scoreH > scoreA ? true : (scoreA > scoreH ? false : null);
+            if (hWon === true)  { simWins[h] += 1; simLosses[a] += 1; }
+            else if (hWon === false) { simWins[a] += 1; simLosses[h] += 1; }
+            else { simTies[h] += 1; simTies[a] += 1; }
+        }
+        const ranked = [...owners].sort((o1, o2) => {
+            const w1 = simWins[o1] + 0.5 * simTies[o1];
+            const w2 = simWins[o2] + 0.5 * simTies[o2];
+            if (w2 !== w1) return w2 - w1;
+            if (simPF[o2] !== simPF[o1]) return simPF[o2] - simPF[o1];
+            return Math.random() - 0.5;
+        });
+        ranked.forEach((o, i) => {
+            winsSum[o] += simWins[o] + 0.5 * simTies[o];
+            pfSum[o] += simPF[o];
+            if (i < playoffCount) playoffCounts[o] += 1;
+            if (i === 0) seedCounts[o] += 1;
+        });
+    }
+
+    // Build a shadow odds object with same shape as the server one
+    const shadow = JSON.parse(JSON.stringify(base));
+    shadow.sims = sims;
+    shadow.teams = base.teams.map(t => {
+        const o = t.owner;
+        return {
+            ...t,
+            playoffPct: Math.round((playoffCounts[o] / sims) * 10000) / 10000,
+            oneSeedPct: Math.round((seedCounts[o] / sims) * 10000) / 10000,
+            projWins: Math.round((winsSum[o] / sims) * 100) / 100,
+            projPF: Math.round((pfSum[o] / sims) * 100) / 100,
+        };
+    }).sort((a, b) => b.playoffPct - a.playoffPct);
+    renderPlayoffOdds(shadow);
+    updateWhatIfSummary();
+    const s = document.getElementById("whatif-summary");
+    const n = Object.keys(WHATIF_STATE.picks).length;
+    if (s) s.textContent = n ? `${n} game${n === 1 ? "" : "s"} locked — odds re-simulated (${sims.toLocaleString()} sims)` : "";
 }

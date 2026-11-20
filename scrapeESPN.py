@@ -341,30 +341,29 @@ def write_projections(league, year):
 
 def write_schedule(league, year):
     """Full regular-season schedule (every pairing, played or not).
-    Writes output/<espnLeagueID>-schedule/<year>.csv so buildDashboardData can
-    simulate the remaining games for playoff odds."""
+    Uses team.schedule (ESPN's per-team opponent list — accurate for future
+    weeks); box_scores(week=N) for future N returns the CURRENT week's
+    matchups and was giving us a duplicated schedule."""
     os.makedirs(espn_schedule_directory, exist_ok=True)
     reg = league.settings.reg_season_count or 14
     out_path = os.path.join(espn_schedule_directory, f"{year}.csv")
     seen = set()
     rows = []
-    for week in range(1, reg + 1):
-        try:
-            matchups = league.box_scores(week)
-        except Exception as exc:
-            print(f"    sched wk{week}: skip ({exc})")
-            continue
-        for m in matchups:
-            if not m.away_team:
-                continue  # bye week
-            home = _owner(m.home_team)
-            away = _owner(m.away_team)
-            # Dedupe pair direction isn't needed — each matchup lists each team once
-            key = (week, home, away)
-            if key in seen:
+    for team in league.teams:
+        home = _owner(team)
+        for wk_idx, opp in enumerate(team.schedule[:reg], start=1):
+            if opp is None:
                 continue
-            seen.add(key)
-            rows.append([week, home, away])
+            away = _owner(opp)
+            if home == away:
+                continue
+            # Dedupe each matchup regardless of which side the API lists first
+            pair_key = (wk_idx, tuple(sorted([home, away])))
+            if pair_key in seen:
+                continue
+            seen.add(pair_key)
+            rows.append([wk_idx, home, away])
+    rows.sort(key=lambda r: (r[0], r[1]))
     with open(out_path, "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["Week", "Home", "Away"])

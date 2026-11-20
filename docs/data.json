@@ -4,7 +4,7 @@
     "1579300904"
   ],
   "leagueId": "7527965",
-  "generatedAt": "2026-11-18T02:03:33+00:00",
+  "generatedAt": "2026-11-20T17:53:27+00:00",
   "playersByOwner": {
     "Alex": [
       {
@@ -148249,7 +148249,7 @@
           "ties": 0,
           "pointsFor": 1226.54,
           "pointsAgainst": 1116.94,
-          "moves": 15,
+          "moves": 19,
           "trades": 0,
           "draftPosition": 8,
           "madePlayoffs": false,
@@ -148266,7 +148266,7 @@
           "ties": 0,
           "pointsFor": 1190.84,
           "pointsAgainst": 1122.16,
-          "moves": 79,
+          "moves": 83,
           "trades": 1,
           "draftPosition": 10,
           "madePlayoffs": false,
@@ -148283,7 +148283,7 @@
           "ties": 0,
           "pointsFor": 1146.94,
           "pointsAgainst": 1095.68,
-          "moves": 28,
+          "moves": 32,
           "trades": 1,
           "draftPosition": 4,
           "madePlayoffs": false,
@@ -148300,7 +148300,7 @@
           "ties": 0,
           "pointsFor": 1186.38,
           "pointsAgainst": 1215.84,
-          "moves": 55,
+          "moves": 57,
           "trades": 7,
           "draftPosition": 6,
           "madePlayoffs": false,
@@ -148317,7 +148317,7 @@
           "ties": 0,
           "pointsFor": 1280.26,
           "pointsAgainst": 1201.54,
-          "moves": 14,
+          "moves": 16,
           "trades": 2,
           "draftPosition": 5,
           "madePlayoffs": false,
@@ -148334,7 +148334,7 @@
           "ties": 0,
           "pointsFor": 1221.48,
           "pointsAgainst": 1318.4,
-          "moves": 26,
+          "moves": 29,
           "trades": 1,
           "draftPosition": 2,
           "madePlayoffs": false,
@@ -148368,7 +148368,7 @@
           "ties": 0,
           "pointsFor": 903.5,
           "pointsAgainst": 1232.74,
-          "moves": 32,
+          "moves": 34,
           "trades": 3,
           "draftPosition": 9,
           "madePlayoffs": false,
@@ -160139,7 +160139,7 @@
       "ties": 0,
       "pointsFor": 14110.9,
       "pointsAgainst": 13891.04,
-      "moves": 194,
+      "moves": 197,
       "trades": 10,
       "championships": 0,
       "playoffs": 5,
@@ -160314,7 +160314,7 @@
       "ties": 0,
       "pointsFor": 14501.66,
       "pointsAgainst": 13524.34,
-      "moves": 279,
+      "moves": 281,
       "trades": 25,
       "championships": 1,
       "playoffs": 5,
@@ -160489,7 +160489,7 @@
       "ties": 0,
       "pointsFor": 12660.5,
       "pointsAgainst": 14092.24,
-      "moves": 322,
+      "moves": 324,
       "trades": 30,
       "championships": 0,
       "playoffs": 2,
@@ -160713,7 +160713,7 @@
       "ties": 0,
       "pointsFor": 13587.24,
       "pointsAgainst": 14049.0,
-      "moves": 108,
+      "moves": 112,
       "trades": 16,
       "championships": 1,
       "playoffs": 2,
@@ -160888,7 +160888,7 @@
       "ties": 0,
       "pointsFor": 12298.54,
       "pointsAgainst": 11818.28,
-      "moves": 174,
+      "moves": 178,
       "trades": 11,
       "championships": 3,
       "playoffs": 5,
@@ -161045,7 +161045,7 @@
       "ties": 0,
       "pointsFor": 10441.82,
       "pointsAgainst": 10017.3,
-      "moves": 336,
+      "moves": 340,
       "trades": 18,
       "championships": 1,
       "playoffs": 3,
@@ -161637,7 +161637,7 @@
       "ties": 0,
       "pointsFor": 3018.72,
       "pointsAgainst": 2892.98,
-      "moves": 43,
+      "moves": 45,
       "trades": 4,
       "championships": 0,
       "playoffs": 1,
@@ -171946,27 +171946,6 @@
     "weeksPlayed": 10,
     "teams": [
       {
-        "owner": "Luke",
-        "team": "The Crooglefuggs",
-        "wins": 8,
-        "losses": 2,
-        "ties": 0,
-        "pf": 1284.02,
-        "ppg": 128.4,
-        "projWeek": 133.65,
-        "forecastMean": 137.48,
-        "forecastStd": 30.0,
-        "residualMean": 3.83,
-        "injuredStarters": 0,
-        "outStarters": 0,
-        "byeStarters": 0,
-        "penalty": 0.0,
-        "playoffPct": 0.9989,
-        "oneSeedPct": 0.844,
-        "projWins": 12.01,
-        "projPF": 1971.69
-      },
-      {
         "owner": "Sean",
         "team": "Houston Stars",
         "wins": 7,
@@ -171974,18 +171953,41 @@
         "ties": 0,
         "pf": 1190.84,
         "ppg": 119.08,
-        "projWeek": 96.13,
-        "forecastMean": 98.74,
+        "projWeek": 128.67,
+        "forecastMean": 131.28,
         "forecastStd": 30.0,
+        "meanUncertainty": 9.49,
+        "penalty": 0.0,
         "residualMean": 2.61,
-        "injuredStarters": 1,
+        "injuredStarters": 0,
         "outStarters": 0,
-        "byeStarters": 1,
-        "penalty": 8.0,
-        "playoffPct": 0.9869,
-        "oneSeedPct": 0.1229,
-        "projWins": 11.11,
-        "projPF": 1677.66
+        "byeStarters": 0,
+        "playoffPct": 0.9588,
+        "oneSeedPct": 0.2966,
+        "projWins": 10.64,
+        "projPF": 1847.59
+      },
+      {
+        "owner": "Luke",
+        "team": "The Crooglefuggs",
+        "wins": 8,
+        "losses": 2,
+        "ties": 0,
+        "pf": 1284.02,
+        "ppg": 117.02,
+        "projWeek": 127.99,
+        "forecastMean": 120.13,
+        "forecastStd": 44.7,
+        "meanUncertainty": 13.48,
+        "penalty": 0.0,
+        "residualMean": -7.86,
+        "injuredStarters": 0,
+        "outStarters": 0,
+        "byeStarters": 0,
+        "playoffPct": 0.9522,
+        "oneSeedPct": 0.4414,
+        "projWins": 10.81,
+        "projPF": 1886.25
       },
       {
         "owner": "Matthew",
@@ -171995,39 +171997,19 @@
         "ties": 0,
         "pf": 1327.06,
         "ppg": 132.71,
-        "projWeek": 123.94,
-        "forecastMean": 119.06,
+        "projWeek": 123.95,
+        "forecastMean": 119.07,
         "forecastStd": 30.0,
+        "meanUncertainty": 9.49,
+        "penalty": 0.0,
         "residualMean": -4.88,
         "injuredStarters": 1,
         "outStarters": 0,
         "byeStarters": 0,
-        "penalty": 0.0,
-        "playoffPct": 0.7748,
-        "oneSeedPct": 0.0244,
-        "projWins": 8.9,
-        "projPF": 1922.76
-      },
-      {
-        "owner": "Alex",
-        "team": "Team Cruz",
-        "wins": 5,
-        "losses": 5,
-        "ties": 0,
-        "pf": 1186.38,
-        "ppg": 118.64,
-        "projWeek": 141.01,
-        "forecastMean": 133.05,
-        "forecastStd": 30.0,
-        "residualMean": -7.96,
-        "injuredStarters": 0,
-        "outStarters": 0,
-        "byeStarters": 0,
-        "penalty": 0.0,
-        "playoffPct": 0.5784,
-        "oneSeedPct": 0.0014,
-        "projWins": 8.1,
-        "projPF": 1850.79
+        "playoffPct": 0.8769,
+        "oneSeedPct": 0.1756,
+        "projWins": 9.77,
+        "projPF": 1921.66
       },
       {
         "owner": "Ulises",
@@ -172036,40 +172018,42 @@
         "losses": 3,
         "ties": 0,
         "pf": 1226.54,
-        "ppg": 122.65,
-        "projWeek": 103.8,
-        "forecastMean": 102.89,
-        "forecastStd": 30.0,
-        "residualMean": -0.91,
+        "ppg": 112.05,
+        "projWeek": 118.13,
+        "forecastMean": 107.11,
+        "forecastStd": 38.37,
+        "meanUncertainty": 11.57,
+        "penalty": 0.0,
+        "residualMean": -11.02,
         "injuredStarters": 1,
         "outStarters": 0,
-        "byeStarters": 2,
-        "penalty": 16.0,
-        "playoffPct": 0.3703,
-        "oneSeedPct": 0.0073,
-        "projWins": 7.99,
-        "projPF": 1724.36
+        "byeStarters": 0,
+        "playoffPct": 0.7579,
+        "oneSeedPct": 0.0793,
+        "projWins": 9.56,
+        "projPF": 1760.99
       },
       {
-        "owner": "Todd",
-        "team": "Wet Grandma",
-        "wins": 4,
-        "losses": 6,
+        "owner": "Alex",
+        "team": "Team Cruz",
+        "wins": 5,
+        "losses": 5,
         "ties": 0,
-        "pf": 1280.26,
-        "ppg": 128.03,
-        "projWeek": 97.2,
-        "forecastMean": 99.09,
-        "forecastStd": 30.0,
-        "residualMean": 1.89,
-        "injuredStarters": 0,
+        "pf": 1186.38,
+        "ppg": 110.11,
+        "projWeek": 145.02,
+        "forecastMean": 126.86,
+        "forecastStd": 41.09,
+        "meanUncertainty": 12.39,
+        "penalty": 0.0,
+        "residualMean": -18.16,
+        "injuredStarters": 1,
         "outStarters": 0,
-        "byeStarters": 2,
-        "penalty": 16.0,
-        "playoffPct": 0.2319,
-        "oneSeedPct": 0.0,
-        "projWins": 7.19,
-        "projPF": 1758.96
+        "byeStarters": 0,
+        "playoffPct": 0.3658,
+        "oneSeedPct": 0.007,
+        "projWins": 8.09,
+        "projPF": 1819.35
       },
       {
         "owner": "Aiden",
@@ -172078,19 +172062,42 @@
         "losses": 4,
         "ties": 0,
         "pf": 1146.94,
-        "ppg": 114.69,
-        "projWeek": 62.53,
-        "forecastMean": 59.93,
-        "forecastStd": 30.81,
-        "residualMean": -2.6,
+        "ppg": 105.83,
+        "projWeek": 92.77,
+        "forecastMean": 83.53,
+        "forecastStd": 36.1,
+        "meanUncertainty": 10.88,
+        "penalty": 8.0,
+        "residualMean": -9.24,
         "injuredStarters": 1,
         "outStarters": 0,
-        "byeStarters": 3,
-        "penalty": 24.0,
-        "playoffPct": 0.0572,
+        "byeStarters": 1,
+        "playoffPct": 0.0492,
+        "oneSeedPct": 0.0001,
+        "projWins": 7.17,
+        "projPF": 1556.77
+      },
+      {
+        "owner": "Todd",
+        "team": "Wet Grandma",
+        "wins": 4,
+        "losses": 6,
+        "ties": 0,
+        "pf": 1280.26,
+        "ppg": 117.0,
+        "projWeek": 103.42,
+        "forecastMean": 96.34,
+        "forecastStd": 34.99,
+        "meanUncertainty": 10.55,
+        "penalty": 0.0,
+        "residualMean": -7.08,
+        "injuredStarters": 1,
+        "outStarters": 0,
+        "byeStarters": 0,
+        "playoffPct": 0.0291,
         "oneSeedPct": 0.0,
-        "projWins": 6.89,
-        "projPF": 1426.26
+        "projWins": 5.93,
+        "projPF": 1761.72
       },
       {
         "owner": "Justin",
@@ -172100,18 +172107,19 @@
         "ties": 0,
         "pf": 1221.48,
         "ppg": 122.15,
-        "projWeek": 73.32,
-        "forecastMean": 68.88,
+        "projWeek": 115.13,
+        "forecastMean": 110.69,
         "forecastStd": 30.0,
+        "meanUncertainty": 9.49,
+        "penalty": 0.0,
         "residualMean": -4.44,
         "injuredStarters": 0,
         "outStarters": 0,
-        "byeStarters": 3,
-        "penalty": 24.0,
-        "playoffPct": 0.0014,
+        "byeStarters": 0,
+        "playoffPct": 0.0097,
         "oneSeedPct": 0.0,
-        "projWins": 4.69,
-        "projPF": 1543.18
+        "projWins": 5.81,
+        "projPF": 1775.88
       },
       {
         "owner": "Joshua",
@@ -172121,18 +172129,19 @@
         "ties": 0,
         "pf": 1131.8,
         "ppg": 113.18,
-        "projWeek": 96.2,
-        "forecastMean": 86.36,
+        "projWeek": 125.31,
+        "forecastMean": 115.47,
         "forecastStd": 30.0,
+        "meanUncertainty": 9.49,
+        "penalty": 0.0,
         "residualMean": -9.84,
         "injuredStarters": 0,
         "outStarters": 0,
-        "byeStarters": 2,
-        "penalty": 16.0,
-        "playoffPct": 0.0002,
+        "byeStarters": 0,
+        "playoffPct": 0.0004,
         "oneSeedPct": 0.0,
-        "projWins": 5.31,
-        "projPF": 1546.8
+        "projWins": 5.07,
+        "projPF": 1708.74
       },
       {
         "owner": "Howard",
@@ -172141,21 +172150,211 @@
         "losses": 9,
         "ties": 0,
         "pf": 903.5,
-        "ppg": 90.35,
-        "projWeek": 96.41,
-        "forecastMean": 79.89,
-        "forecastStd": 30.0,
-        "residualMean": -16.52,
+        "ppg": 82.41,
+        "projWeek": 100.33,
+        "forecastMean": 76.46,
+        "forecastStd": 30.68,
+        "meanUncertainty": 9.25,
+        "penalty": 0.0,
+        "residualMean": -23.87,
         "injuredStarters": 1,
         "outStarters": 0,
         "byeStarters": 0,
-        "penalty": 0.0,
         "playoffPct": 0.0,
         "oneSeedPct": 0.0,
-        "projWins": 2.81,
-        "projPF": 1302.97
+        "projWins": 2.14,
+        "projPF": 1286.19
       }
-    ]
+    ],
+    "remainingSchedule": [
+      {
+        "week": 11,
+        "home": "Aiden",
+        "away": "Sean"
+      },
+      {
+        "week": 11,
+        "home": "Alex",
+        "away": "Matthew"
+      },
+      {
+        "week": 11,
+        "home": "Howard",
+        "away": "Todd"
+      },
+      {
+        "week": 11,
+        "home": "Joshua",
+        "away": "Justin"
+      },
+      {
+        "week": 11,
+        "home": "Luke",
+        "away": "Ulises"
+      },
+      {
+        "week": 12,
+        "home": "Alex",
+        "away": "Sean"
+      },
+      {
+        "week": 12,
+        "home": "Joshua",
+        "away": "Ulises"
+      },
+      {
+        "week": 12,
+        "home": "Justin",
+        "away": "Howard"
+      },
+      {
+        "week": 12,
+        "home": "Luke",
+        "away": "Aiden"
+      },
+      {
+        "week": 12,
+        "home": "Matthew",
+        "away": "Todd"
+      },
+      {
+        "week": 13,
+        "home": "Alex",
+        "away": "Todd"
+      },
+      {
+        "week": 13,
+        "home": "Howard",
+        "away": "Ulises"
+      },
+      {
+        "week": 13,
+        "home": "Joshua",
+        "away": "Aiden"
+      },
+      {
+        "week": 13,
+        "home": "Justin",
+        "away": "Matthew"
+      },
+      {
+        "week": 13,
+        "home": "Luke",
+        "away": "Sean"
+      },
+      {
+        "week": 14,
+        "home": "Alex",
+        "away": "Joshua"
+      },
+      {
+        "week": 14,
+        "home": "Howard",
+        "away": "Sean"
+      },
+      {
+        "week": 14,
+        "home": "Justin",
+        "away": "Aiden"
+      },
+      {
+        "week": 14,
+        "home": "Luke",
+        "away": "Matthew"
+      },
+      {
+        "week": 14,
+        "home": "Todd",
+        "away": "Ulises"
+      },
+      {
+        "week": 15,
+        "home": "Alex",
+        "away": "Aiden"
+      },
+      {
+        "week": 15,
+        "home": "Joshua",
+        "away": "Howard"
+      },
+      {
+        "week": 15,
+        "home": "Justin",
+        "away": "Luke"
+      },
+      {
+        "week": 15,
+        "home": "Matthew",
+        "away": "Ulises"
+      },
+      {
+        "week": 15,
+        "home": "Sean",
+        "away": "Todd"
+      }
+    ],
+    "currentStandings": {
+      "Luke": {
+        "wins": 8,
+        "losses": 2,
+        "ties": 0,
+        "pf": 1284.02
+      },
+      "Matthew": {
+        "wins": 7,
+        "losses": 3,
+        "ties": 0,
+        "pf": 1327.06
+      },
+      "Ulises": {
+        "wins": 7,
+        "losses": 3,
+        "ties": 0,
+        "pf": 1226.54
+      },
+      "Sean": {
+        "wins": 7,
+        "losses": 3,
+        "ties": 0,
+        "pf": 1190.84
+      },
+      "Aiden": {
+        "wins": 6,
+        "losses": 4,
+        "ties": 0,
+        "pf": 1146.94
+      },
+      "Alex": {
+        "wins": 5,
+        "losses": 5,
+        "ties": 0,
+        "pf": 1186.38
+      },
+      "Todd": {
+        "wins": 4,
+        "losses": 6,
+        "ties": 0,
+        "pf": 1280.26
+      },
+      "Justin": {
+        "wins": 3,
+        "losses": 7,
+        "ties": 0,
+        "pf": 1221.48
+      },
+      "Joshua": {
+        "wins": 2,
+        "losses": 8,
+        "ties": 0,
+        "pf": 1131.8
+      },
+      "Howard": {
+        "wins": 1,
+        "losses": 9,
+        "ties": 0,
+        "pf": 903.5
+      }
+    }
   },
   "teamRatings": {
     "2019": [
